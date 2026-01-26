@@ -1,4 +1,5 @@
 "use client";
+import Button from "@/ui/shared/Button";
 import { useMemo, useState } from "react";
 
 type ProductKey = "autogestion" | "recuperacion";
@@ -106,9 +107,7 @@ export const Products = () => {
               <p className="text-slate-700 mt-2 leading-5">
                 {active.description}
               </p>
-              <button className="mt-5 bg-blue-600 text-white px-5 py-2 rounded-full">
-                {active.cta}
-              </button>
+              <Button text={active.cta} className="mt-5"/>
             </div>
           </div>
         </div>

@@ -1,3 +1,4 @@
+import { Footer } from "../layout/Footer";
 import { Header } from "../layout/Header";
 import { CallToAction } from "./sections/CallToAction/CallToAction";
 import { Clients } from "./sections/Clients";
@@ -9,10 +10,16 @@ import { Products } from "./sections/Products";
 
 export const HomePage = () => {
   return (
-    <div>
-      <div className="bg-linear-to-bl from-orange-300 to-orange-500">
-        <Header />
-        <Hero />
+    <div className="min-h-screen flex flex-col">
+      <div className="grow">
+        <div className="bg-linear-to-bl from-orange-300 to-orange-500">
+          <Header />
+          <Hero />
+        </div>
+        <Clients />
+        <Products />
+        <KeyFeatures />
+        <HowItWorks />
       </div>
       <Clients />
       <Products />
@@ -20,6 +27,7 @@ export const HomePage = () => {
       <HowItWorks />
       <PricingPlans />
       <CallToAction />
+      <Footer />
     </div>
   );
 };
