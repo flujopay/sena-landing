@@ -1,8 +1,10 @@
 import { Header } from "../layout/Header";
+import { CallToAction } from "./sections/CallToAction/CallToAction";
 import { Clients } from "./sections/Clients";
 import { Hero } from "./sections/Hero";
 import { HowItWorks } from "./sections/HowItWorks";
 import { KeyFeatures } from "./sections/KeyFeatures/KeyFeatures";
+import { PricingPlans } from "./sections/PricingPlans/PricingPlans";
 import { Products } from "./sections/Products";
 
 export const HomePage = () => {
@@ -16,6 +18,8 @@ export const HomePage = () => {
       <Products />
       <KeyFeatures />
       <HowItWorks />
+      <PricingPlans />
+      <CallToAction />
     </div>
   );
 };
