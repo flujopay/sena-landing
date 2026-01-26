@@ -1,3 +1,5 @@
+import Button from "@/ui/shared/Button";
+
 export const Hero = () => {
   return (
     <div className="flex flex-col gap-2">
@@ -14,12 +16,8 @@ export const Hero = () => {
             tecnología, inteligencia artificial y personas expertas.
           </p>
           <div className="flex items-center gap-2 pt-6">
-            <button className="bg-blue-500 text-white px-4 py-2 rounded">
-              Agenda una demo
-            </button>
-            <button className="bg-white-500 text-white px-4 py-2 rounded">
-              Ver com o funciona
-            </button>
+               <Button  text="Agenda una demo"/>
+               <Button  text="Ver cómo funciona" variant="primaryInvertedOutlined" />
           </div>
         </div>
         <div className="w-2/3">
