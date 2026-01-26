@@ -1,4 +1,5 @@
 import { AssetIcon } from "@/lib/utils/assets/icon";
+import { AssetImage } from "@/lib/utils/assets/image";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -8,7 +9,7 @@ export const Footer = () => {
       <div className="max-w-7xl mx-auto">
         <div className="flex justify-center mb-10 md:mb-12">
           <Image
-            src="/logo.svg"
+            src={AssetImage.logoBlack}
             alt="Sena Logo"
             width={200}
             height={80}
@@ -21,17 +22,17 @@ export const Footer = () => {
             <h3 className="font-bold text-xs md:text-sm mb-3 md:mb-4 uppercase tracking-wide">EMPRESA</h3>
             <ul className="space-y-2 md:space-y-3 text-sm md:text-base">
               <li>
-                <Link href="/sobre-nosotros" className="hover:text-orange-500 transition-colors duration-200">
+                <Link href="/sobre-nosotros" className="hover:text-blue-500 transition-colors duration-200">
                   Sobre nosotros
                 </Link>
               </li>
               <li>
-                <Link href="/sobre-recsa" className="hover:text-orange-500 transition-colors duration-200">
+                <Link href="/sobre-recsa" className="hover:text-blue-500 transition-colors duration-200">
                   Sobre Recsa
                 </Link>
               </li>
               <li>
-                <Link href="/faqs" className="hover:text-orange-500 transition-colors duration-200">
+                <Link href="/faqs" className="hover:text-blue-500 transition-colors duration-200">
                   FAQs
                 </Link>
               </li>
@@ -42,17 +43,17 @@ export const Footer = () => {
             <h3 className="font-bold text-xs md:text-sm mb-3 md:mb-4 uppercase tracking-wide">DESCUBRIR</h3>
             <ul className="space-y-2 md:space-y-3 text-sm md:text-base">
               <li>
-                <Link href="/productos" className="hover:text-orange-500 transition-colors duration-200">
+                <Link href="/productos" className="hover:text-blue-500 transition-colors duration-200">
                   Productos
                 </Link>
               </li>
               <li>
-                <Link href="/como-funciona" className="hover:text-orange-500 transition-colors duration-200">
+                <Link href="/como-funciona" className="hover:text-blue-500 transition-colors duration-200">
                   Cómo funciona
                 </Link>
               </li>
               <li>
-                <Link href="/preguntas-frecuentes" className="hover:text-orange-500 transition-colors duration-200">
+                <Link href="/preguntas-frecuentes" className="hover:text-blue-500 transition-colors duration-200">
                   Preguntas frecuentes
                 </Link>
               </li>
@@ -63,12 +64,12 @@ export const Footer = () => {
             <h3 className="font-bold text-xs md:text-sm mb-3 md:mb-4 uppercase tracking-wide">CONTACTO</h3>
             <ul className="space-y-2 md:space-y-3 text-sm md:text-base">
               <li>
-                <a href="mailto:contacto@seniocobranza.com" className="hover:text-orange-500 transition-colors duration-200 break-all">
+                <a href="mailto:contacto@seniocobranza.com" className="hover:text-blue-500 transition-colors duration-200 break-all">
                   contacto@seniocobranza.com
                 </a>
               </li>
               <li>
-                <a href="tel:+56962499909" className="hover:text-orange-500 transition-colors duration-200">
+                <a href="tel:+56962499909" className="hover:text-blue-500 transition-colors duration-200">
                   +56962499909
                 </a>
               </li>
@@ -79,21 +80,21 @@ export const Footer = () => {
             <h3 className="font-bold text-xs md:text-sm mb-3 md:mb-4 uppercase tracking-wide">LEGAL</h3>
             <ul className="space-y-2 md:space-y-3 text-sm md:text-base">
               <li>
-                <Link href="/terminos" className="hover:text-orange-500 transition-colors duration-200">
+                <Link href="/terminos" className="hover:text-blue-500 transition-colors duration-200">
                   Términos y condiciones
                 </Link>
               </li>
               <li>
-                <Link href="/politicas-cookies" className="hover:text-orange-500 transition-colors duration-200">
+                <Link href="/politicas-cookies" className="hover:text-blue-500 transition-colors duration-200">
                   Políticas de cookies
                 </Link>
               </li>
               <li>
-                <Link href="/configuracion-cookies" className="hover:text-orange-500 transition-colors duration-200">
+                <Link href="/configuracion-cookies" className="hover:text-blue-500 transition-colors duration-200">
                   Actualizar configuración de cookies
                 </Link>
               </li>
-            </ul>1
+            </ul>
           </div>
 
           <div className="sm:col-span-2 lg:col-span-1">
@@ -134,7 +135,7 @@ export const Footer = () => {
               href="https://instagram.com" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="hover:text-orange-500 transition-colors duration-200"
+              className="hover:text-blue-500 transition-colors duration-200"
               aria-label="Instagram"
             >
               <AssetIcon.instagram width={22} height={22}/>
@@ -143,7 +144,7 @@ export const Footer = () => {
               href="https://linkedin.com" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="hover:text-orange-500 transition-colors duration-200"
+              className="hover:text-blue-500 transition-colors duration-200"
               aria-label="LinkedIn"
             >
               <AssetIcon.linkedin width={22} height={22}/>
@@ -152,7 +153,7 @@ export const Footer = () => {
               href="https://youtube.com" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="hover:text-orange-500 transition-colors duration-200"
+              className="hover:text-blue-500 transition-colors duration-200"
               aria-label="YouTube"
             >
               <AssetIcon.youtube width={22} height={22}/>

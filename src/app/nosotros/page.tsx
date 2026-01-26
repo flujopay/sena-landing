@@ -1,5 +1,7 @@
+import { NosotrosPage } from "@/ui/nosotros/NosotrosPage";
+
 const Page = () => {
-  return <div>page</div>;
+  return <NosotrosPage />;
 };
 
 export default Page;
