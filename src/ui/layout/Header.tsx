@@ -1,6 +1,17 @@
+import { AssetImage } from "@/lib/utils/assets/image";
+import Image from "next/image";
 import Button from "../shared/Button";
 
-export const Header = () => {
+type Props = {
+  variant: "primary" | "secondary";
+};
+
+export const Header = ({ variant }: Props) => {
+  const logo =
+    variant === "primary" ? AssetImage.logoBlack : AssetImage.logoBlack;
+
+  const color = variant === "primary" ? "white" : "black";
+
   const sectiosnNavbar = [
     {
       id: 1,
@@ -21,8 +32,10 @@ export const Header = () => {
   ];
 
   return (
-    <div className="flex items-center gap-2 justify-between p-4">
-      <div>Sena</div>
+    <div className="flex items-center gap-2 justify-between p-4 ">
+      <div>
+        <Image src={logo} alt="Logo" className="w-36" />
+      </div>
       <div className="flex items-center justify-between gap-12">
         {sectiosnNavbar.map((section, index) => {
           return (
@@ -32,7 +45,7 @@ export const Header = () => {
           );
         })}
       </div>
-      <Button size="sm" text="Comenzar ahora" variant="primaryFilled"/>
+      <Button size="sm" text="Comenzar ahora" variant="primaryFilled" />
     </div>
   );
 };

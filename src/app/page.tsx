@@ -2,7 +2,7 @@ import { HomePage } from "@/ui/home/HomePage";
 
 export default function Home() {
   return (
-    <div>
+    <div className="w-full">
       <HomePage />
     </div>
   );

@@ -31,7 +31,7 @@ export const Products = () => {
   const active = products.find((p) => p.key === activeKey) ?? products[0];
 
   return (
-    <section className="px-3 py-10">
+    <section className="px-3 py-10 max-w-[1440px] mx-auto">
       <div className="bg-slate-100 rounded-3xl p-6 md:p-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
           <div className="flex flex-col gap-6">

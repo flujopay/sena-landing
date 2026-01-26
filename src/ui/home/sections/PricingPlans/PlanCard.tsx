@@ -1,3 +1,5 @@
+import Button from "@/ui/shared/Button";
+
 export type TPlan = {
   name: string;
   price: number;
@@ -43,12 +45,6 @@ export const PlanCard = ({ plan }: { plan: TPlan }) => {
     : isEnterprise
       ? "text-blue-600"
       : "text-orange-600";
-
-  const buttonClass = isStarter
-    ? "mt-8 w-full rounded-full bg-blue-600 text-white py-2 font-bold"
-    : isEnterprise
-      ? "mt-8 w-full rounded-full bg-orange-500 text-white py-2 font-bold"
-      : "mt-8 w-full rounded-full bg-orange-500 text-white py-2 font-bold";
 
   return (
     <div className={wrapperClass}>
@@ -103,9 +99,10 @@ export const PlanCard = ({ plan }: { plan: TPlan }) => {
         </ul>
       </div>
 
-      <button className={buttonClass} type="button">
-        {plan.cta}
-      </button>
+      <Button
+        variant={isStarter ? "primaryFilled" : "secondaryFilled"}
+        text={plan.cta}
+      />
     </div>
   );
 };

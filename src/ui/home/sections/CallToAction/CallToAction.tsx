@@ -1,6 +1,8 @@
+import Button from "@/ui/shared/Button";
+
 export const CallToAction = () => {
   return (
-    <section className="px-4 md:px-12 py-14">
+    <section className="px-4 md:px-12 py-14 max-w-[1440px] mx-auto">
       <div className="rounded-2xl overflow-hidden bg-linear-to-r from-indigo-950 via-blue-900 to-indigo-900">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           <div className="px-8 md:px-12 py-10">
@@ -18,18 +20,8 @@ export const CallToAction = () => {
             </p>
 
             <div className="mt-10 flex flex-wrap gap-4">
-              <button
-                type="button"
-                className="rounded-full bg-white text-blue-700 font-bold px-8 py-3"
-              >
-                Agenda una demo
-              </button>
-              <button
-                type="button"
-                className="rounded-full bg-orange-500 text-white font-bold px-10 py-3"
-              >
-                Hablemos
-              </button>
+              <Button variant="primaryInvertedFilled" text="Agenda una demo" />
+              <Button variant="secondaryFilled" text="Hablemos" />
             </div>
           </div>
 
