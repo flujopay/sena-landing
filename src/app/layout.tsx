@@ -4,24 +4,19 @@ import { Suspense } from "react";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Flujolink - El mejor CRM de cobranza y pagos B2B",
-  icons: {
-    icon: "/favicon.ico",
-  },
+  title: "Sena - El mejor CRM de cobranza y pagos B2B",
   description:
-    "Optimiza tu gestión de cobranza y pagos de facturas con Flujolink, el CRM B2B que simplifica procesos, mejora la eficiencia y acelera tus ingresos.",
+    "Optimiza tu gestión de cobranza y pagos de facturas con Sena, el CRM B2B que simplifica procesos, mejora la eficiencia y acelera tus ingresos.",
   keywords:
-    "CRM cobranza, pagos B2B, facturación, gestión de pagos, CRM empresas, automatización de cobranza, Flujolink",
-  authors: [{ name: "Flujolink" }],
+    "CRM cobranza, pagos B2B, facturación, gestión de pagos, CRM empresas, automatización de cobranza, Sena",
+  authors: [{ name: "Sena" }],
   robots: { index: true, follow: true },
   openGraph: {
-    title: "Flujolink - El mejor CRM de cobranza y pagos B2B",
+    title: "Sena - El mejor CRM de cobranza y pagos B2B",
     description:
-      "Con Flujolink, simplifica y acelera la gestión de tus cobros y pagos. Una solución para empresas enfocada en eficiencia y resultados.",
-    url: "https://flujolink.com",
-    images: ["https://flujolink.com/flujolink-crm-lite.webp"],
+      "Con Sena, simplifica y acelera la gestión de tus cobros y pagos. Una solución para empresas enfocada en eficiencia y resultados.",
     type: "website",
-    siteName: "Flujolink",
+    siteName: "Sena",
     locale: "es_PE",
   },
   other: {
