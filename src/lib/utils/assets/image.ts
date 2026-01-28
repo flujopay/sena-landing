@@ -1,5 +1,34 @@
+import aomLogo from "@/public/images/aom_logo.png";
+import aquariusConsultingLogo from "@/public/images/aquarius_consulting_logo.png";
+import cientificaLogo from "@/public/images/cientifica_logo.png";
+import conciliator1 from "@/public/images/conciliator1.png";
+import conciliatorNavbar from "@/public/images/conciliator_navbar.jpg";
+import home1 from "@/public/images/home1.png";
+import home2 from "@/public/images/home2.png";
 import logoBlack from "@/public/images/logo_black.png";
+import maruzLogo from "@/public/images/maruz_logo.png";
+import nosotros1 from "@/public/images/nosotros1.png";
+import proweldLogo from "@/public/images/proweld_logo.jpeg";
+import rioSena from "@/public/images/rio_sena.jpg";
+import senaLogoOrange from "@/public/images/sena_logo_orange.png";
+import telefonicaLogo from "@/public/images/telefonica_logo.png";
+import topSpaceLogo from "@/public/images/top_space_logo.png";
 
 export class AssetImage {
   static logoBlack = logoBlack;
+  static home1 = home1
+  static home2 = home2
+  static nosotros1 = nosotros1
+  static rioSena = rioSena
+  static senaLogoOrange = senaLogoOrange
+  static conciliator1 = conciliator1
+  static conciliatorNavbar = conciliatorNavbar
+  static cientificaLogo = cientificaLogo
+  static proweldLogo = proweldLogo
+  static aquariusConsultingLogo = aquariusConsultingLogo
+  static telefonicaLogo = telefonicaLogo
+  static maruzLogo = maruzLogo
+  static aomLogo = aomLogo
+  static topSpaceLogo = topSpaceLogo
+
 }

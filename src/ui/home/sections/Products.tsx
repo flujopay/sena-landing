@@ -4,6 +4,49 @@ import { useMemo, useState } from "react";
 
 type ProductKey = "autogestion" | "recuperacion";
 
+const ProductCard = ({
+  label,
+  title,
+  description,
+  cta,
+}: {
+  label: string;
+  title: string;
+  description: string;
+  cta: string;
+}) => (
+  <div className="bg-blue-50 rounded-2xl overflow-hidden">
+    <p className="text-blue-600 font-bold text-xl text-center py-4 whitespace-pre-line">
+      {label}
+    </p>
+    <div className="bg-blue-600 p-4">
+      <div className="bg-white rounded-xl h-40 flex items-center justify-center">
+        <div className="relative w-full h-full rounded-xl overflow-hidden">
+          <div className="absolute inset-0 bg-slate-50" />
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="w-14 h-14 rounded-full bg-slate-200/70 flex items-center justify-center">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M9 7.5V16.5L16.5 12L9 7.5Z" fill="#64748B" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div className="p-4 bg-blue-50">
+      <p className="text-black font-extrabold text-sm">{title}</p>
+      <p className="text-slate-700 mt-2 text-sm leading-5">{description}</p>
+      <Button text={cta} className="mt-4" size="sm" />
+    </div>
+  </div>
+);
+
 export const Products = () => {
   const products = useMemo(
     () => [
@@ -17,7 +60,7 @@ export const Products = () => {
       },
       {
         key: "recuperacion" as const,
-        label: "Servicio de\nrecuperación con\nequipo humano",
+        label: "Servicio de recuperación con\nequipo humano",
         title: "Recupera pagos con apoyo experto",
         description:
           "Combina tecnología y un equipo especializado para gestionar casos complejos y mejorar tu tasa de recuperación.",
@@ -32,7 +75,26 @@ export const Products = () => {
 
   return (
     <section className="px-3 py-10 max-w-[1440px] mx-auto">
-      <div className="bg-slate-100 rounded-3xl p-6 md:p-10">
+      {/* Mobile Layout */}
+      <div className="md:hidden">
+        <p className="text-black font-extrabold tracking-wide text-center mb-6">
+          NUESTROS PRODUCTOS
+        </p>
+        <div className="flex flex-col gap-6 px-2">
+          {products.map((p) => (
+            <ProductCard
+              key={p.key}
+              label={p.label}
+              title={p.title}
+              description={p.description}
+              cta={p.cta}
+            />
+          ))}
+        </div>
+      </div>
+
+      {/* Desktop Layout */}
+      <div className="hidden md:block bg-slate-100 rounded-3xl p-6 md:p-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
           <div className="flex flex-col gap-6">
             <p className="text-black font-extrabold tracking-wide">
@@ -107,7 +169,7 @@ export const Products = () => {
               <p className="text-slate-700 mt-2 leading-5">
                 {active.description}
               </p>
-              <Button text={active.cta} className="mt-5"/>
+              <Button text={active.cta} className="mt-5" />
             </div>
           </div>
         </div>

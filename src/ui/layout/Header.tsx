@@ -85,16 +85,19 @@ export const Header = ({ variant }: Props) => {
           <Button size="sm" text="Comenzar ahora" variant={ variant === "primary" ? "primaryFilled" : "secondaryFilled" } />
         </div>
 
-        {/* Mobile Menu Button */}
-        <button 
-          onClick={toggleMenu}
-          className="lg:hidden p-2 z-50"
-          aria-label={isMenuOpen ? "Cerrar menú" : "Abrir menú"}
-        >
-          {
-            isMenuOpen ? <AssetIcon.xMark width={28} height={28} className="text-orange-500" /> : <AssetIcon.menu width={28} height={28} />
-          }
-        </button>
+        {/* Mobile: Button + Menu */}
+        <div className="lg:hidden flex items-center gap-2">
+          <Button size="sm" text="Comienza Ahora" variant="secondaryFilled" className="text-xs px-3 py-1.5" />
+          <button 
+            onClick={toggleMenu}
+            className="p-2 z-50"
+            aria-label={isMenuOpen ? "Cerrar menú" : "Abrir menú"}
+          >
+            {
+              isMenuOpen ? <AssetIcon.xMark width={28} height={28} className="text-orange-500" /> : <AssetIcon.menu width={28} height={28} />
+            }
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu Overlay */}

@@ -67,9 +67,9 @@ export const HowItWorks = () => {
         </div>
       </div>
 
-      <div className="mt-10 px-4 md:px-12">
+      <div className="mt-10 px-4 md:px-12 max-w-5xl mx-auto">
         <div className="bg-slate-100 rounded-2xl p-5 md:p-8">
-          <div className="bg-blue-600 rounded-xl p-2 md:p-2.5 flex flex-wrap gap-2 justify-between">
+          <div className="bg-blue-600 rounded-xl p-2 md:p-2.5 flex overflow-x-auto gap-2 justify-start md:justify-between">
             {steps.map((s) => {
               const isActive = s.key === activeKey;
               return (
@@ -79,8 +79,8 @@ export const HowItWorks = () => {
                   onClick={() => setActiveKey(s.key)}
                   className={
                     isActive
-                      ? "px-6 py-2 rounded-lg bg-white text-blue-600 font-extrabold text-sm tracking-wide"
-                      : "px-6 py-2 rounded-lg bg-blue-600 text-white font-extrabold text-sm tracking-wide"
+                      ? "shrink-0 px-4 md:px-6 py-2 rounded-lg bg-white text-blue-600 font-extrabold text-xs md:text-sm tracking-wide"
+                      : "shrink-0 px-4 md:px-6 py-2 rounded-lg bg-blue-600 text-white font-extrabold text-xs md:text-sm tracking-wide"
                   }
                 >
                   {s.label}

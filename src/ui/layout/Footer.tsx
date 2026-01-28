@@ -17,7 +17,28 @@ export const Footer = () => {
           />
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-6 mb-12 md:mb-16">
+        {/* Newsletter - Mobile first */}
+        <div className="md:hidden mb-8">
+          <h3 className="font-bold text-xs mb-4 uppercase tracking-wide">SUSCRÍBETE A NUESTRO NEWSLETTER</h3>
+          <form>
+            <div className="relative border-b-2 border-gray-400 transition-colors duration-200">
+              <input
+                type="email"
+                placeholder="Tu email"
+                required
+                className="w-full px-0 py-3 pr-28 text-sm bg-transparent border-none focus:outline-none placeholder:text-gray-500"
+              />
+              <button
+                type="submit"
+                className="cursor-pointer absolute right-0 top-1/2 -translate-y-1/2 text-sm font-bold text-orange-500 hover:text-orange-600 transition-colors duration-200 uppercase tracking-wide"
+              >
+                Suscríbete
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-6 mb-12 md:mb-16">
           <div className="space-y-3">
             <h3 className="font-bold text-xs md:text-sm mb-3 md:mb-4 uppercase tracking-wide">EMPRESA</h3>
             <ul className="space-y-2 md:space-y-3 text-sm md:text-base">
@@ -97,19 +118,20 @@ export const Footer = () => {
             </ul>
           </div>
 
-          <div className="sm:col-span-2 lg:col-span-1">
-            <h3 className="font-bold text-xs md:text-sm mb-4 md:mb-6 uppercase tracking-wide">SUSCRÍBETE A NUESTRO NEWSLETTER</h3>
+          {/* Newsletter - Desktop */}
+          <div className="hidden md:block col-span-2 lg:col-span-1">
+            <h3 className="font-bold text-sm mb-6 uppercase tracking-wide">SUSCRÍBETE A NUESTRO NEWSLETTER</h3>
             <form>
               <div className="relative border-b-2 border-gray-400 transition-colors duration-200">
                 <input
                   type="email"
                   placeholder="Tu email"
                   required
-                  className="w-full px-0 py-3 pr-32 text-sm md:text-base bg-transparent border-none focus:outline-none placeholder:text-gray-500"
+                  className="w-full px-0 py-3 pr-32 text-base bg-transparent border-none focus:outline-none placeholder:text-gray-500"
                 />
                 <button
                   type="submit"
-                  className="cursor-pointer absolute right-0 top-1/2 -translate-y-1/2 text-sm md:text-base font-bold text-orange-500 hover:text-orange-600 transition-colors duration-200 uppercase tracking-wide"
+                  className="cursor-pointer absolute right-0 top-1/2 -translate-y-1/2 text-base font-bold text-orange-500 hover:text-orange-600 transition-colors duration-200 uppercase tracking-wide"
                 >
                   Suscríbete
                 </button>

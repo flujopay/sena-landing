@@ -28,16 +28,16 @@ const teamMembers: TeamMember[] = [
 
 export const OurTeam = () => {
   return (
-    <section className="bg-white py-16 md:py-24">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-2xl font-extrabold tracking-wide text-gray-900 text-center mb-12">
+    <section className="bg-white py-12 md:py-24">
+      <div className="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8">
+        <h2 className="text-lg md:text-2xl font-extrabold tracking-wide text-gray-900 text-center mb-8 md:mb-12">
           NUESTRO EQUIPO
         </h2>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-12 max-w-md md:max-w-none mx-auto">
           {teamMembers.map((member, index) => (
             <div key={index} className="flex flex-col items-center text-center">
-              <div className="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-4 bg-blue-400">
+              <div className="w-20 h-20 md:w-32 md:h-32 rounded-full overflow-hidden mb-3 md:mb-4 bg-blue-400 ring-4 ring-blue-400">
                 {member.image ? (
                   <Image
                     src={member.image}
@@ -50,10 +50,10 @@ export const OurTeam = () => {
                   <div className="w-full h-full bg-blue-400" />
                 )}
               </div>
-              <h3 className="text-xs md:text-sm font-bold text-gray-900 uppercase">
+              <h3 className="text-[10px] md:text-sm font-bold text-gray-900 uppercase">
                 {member.name}
               </h3>
-              <p className="text-xs md:text-sm text-gray-600 italic">
+              <p className="text-[10px] md:text-sm text-gray-600 italic">
                 {member.role}
               </p>
             </div>

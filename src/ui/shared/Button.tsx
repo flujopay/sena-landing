@@ -29,13 +29,13 @@ const baseStyles =
 
 const variantStyles: Record<ButtonVariant, string> = {
   primaryFilled:
-    'bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-600',
+    'bg-[#3771d1] text-white hover:bg-[#3771d1]/90 focus:ring-[#3771d1]',
 
   primaryOutlined:
-    'border border-blue-600 text-blue-600 hover:bg-blue-50 focus:ring-blue-600',
+    'border border-[#3771d1] text-[#3771d1] hover:bg-[#3771d1]/10 focus:ring-[#3771d1]',
 
   primaryInvertedFilled:
-    'bg-white text-blue-600 hover:bg-white/90 focus:ring-white',
+    'bg-white text-[#3771d1] hover:bg-white/90 focus:ring-white',
 
   primaryInvertedOutlined:
    'border border-2 border-white text-white hover:bg-white/10 focus:ring-white',

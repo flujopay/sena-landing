@@ -1,78 +1,157 @@
+"use client";
+
+import { AssetImage } from "@/lib/utils/assets/image";
 import Button from "@/ui/shared/Button";
+import { useCallback, useEffect, useState } from "react";
+
+const rotatingWords = ["bien.", "con criterio.", "a tiempo.", "con cuidado."];
 
 export const Hero = () => {
+  const [displayText, setDisplayText] = useState("");
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  const typeSpeed = 100;
+  const deleteSpeed = 50;
+  const pauseTime = 2000;
+
+  const tick = useCallback(() => {
+    const currentWord = rotatingWords[currentIndex];
+
+    if (!isDeleting) {
+      setDisplayText(currentWord.substring(0, displayText.length + 1));
+
+      if (displayText === currentWord) {
+        setTimeout(() => setIsDeleting(true), pauseTime);
+        return;
+      }
+    } else {
+      setDisplayText(currentWord.substring(0, displayText.length - 1));
+
+      if (displayText === "") {
+        setIsDeleting(false);
+        setCurrentIndex((prev) => (prev + 1) % rotatingWords.length);
+        return;
+      }
+    }
+  }, [currentIndex, displayText, isDeleting]);
+
+  useEffect(() => {
+    const speed = isDeleting ? deleteSpeed : typeSpeed;
+    const timer = setTimeout(tick, speed);
+    return () => clearTimeout(timer);
+  }, [tick, isDeleting]);
+
   return (
-    <div className="flex flex-col gap-2">
-      <div className="flex items-center gap-2 pt-24 px-12">
-        <div className="w-2/3 flex flex-col gap-4">
-          <h1 className="pl-2 text-7xl font-bold">
+    <div className="flex flex-col">
+      {/* Desktop Layout */}
+      <div className="hidden lg:flex flex-row items-start gap-8 pt-20 px-12">
+        <div className="w-[45%] flex flex-col gap-4">
+          <h1 className="text-7xl font-extrabold">
             El arte de <br /> cobrar{" "}
-            <span className="text-blue-500 font-semibold italic">bien.</span>
+            <span className="text-[#3771d1] font-semibold italic">
+              {displayText}
+              <span className="animate-pulse">|</span>
+            </span>
           </h1>
-          <p className="text-black text-md leading-5 font-normal max-w-[70%]">
+          <p className="text-black text-xl font-normal max-w-[90%]">
             Sena es una plataforma web de gestión de cuentas por cobrar que
             incluye entre sus funcionalidades un servicio de cobranza. Sena te
             ayuda a ordenar, automatizar y recuperar pagos combinando
             tecnología, inteligencia artificial y personas expertas.
           </p>
-          <div className="flex items-center gap-2 pt-6">
-            <Button text="Agenda una demo" />
+          <div className="flex flex-row items-start gap-2 pt-6">
+            <Button text="Agenda una demo" size="lg" />
             <Button
               text="Ver cómo funciona"
               variant="primaryInvertedOutlined"
+              size="lg"
             />
           </div>
         </div>
-        <div className="w-2/3">
-          <div className="w-full max-w-xl ml-auto">
-            <div className="rounded-2xl border border-white/40 bg-white/15 backdrop-blur-sm shadow-lg overflow-hidden">
-              <div className="h-10 bg-white/25 flex items-center gap-2 px-4">
-                <div className="w-2.5 h-2.5 rounded-full bg-white/60" />
-                <div className="w-2.5 h-2.5 rounded-full bg-white/60" />
-                <div className="w-2.5 h-2.5 rounded-full bg-white/60" />
-                <div className="ml-3 h-3 w-40 rounded bg-white/30" />
-              </div>
 
-              <div className="h-72 bg-linear-to-br from-blue-50/70 to-white/10 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="mx-auto w-16 h-16 rounded-full bg-white/60 flex items-center justify-center">
-                    <svg
-                      width="28"
-                      height="28"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M4 6.5C4 5.12 5.12 4 6.5 4H17.5C18.88 4 20 5.12 20 6.5V17.5C20 18.88 18.88 20 17.5 20H6.5C5.12 20 4 18.88 4 17.5V6.5Z"
-                        stroke="#2563EB"
-                        strokeWidth="1.8"
-                      />
-                      <path
-                        d="M8 14L10.5 11.5L13 14L15.5 12L18 14.5"
-                        stroke="#2563EB"
-                        strokeWidth="1.8"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                      <path
-                        d="M9 9.2C9 8.54 9.54 8 10.2 8C10.86 8 11.4 8.54 11.4 9.2C11.4 9.86 10.86 10.4 10.2 10.4C9.54 10.4 9 9.86 9 9.2Z"
-                        fill="#2563EB"
-                      />
-                    </svg>
-                  </div>
-                  <p className="mt-4 text-blue-700 font-bold">
-                    Imagen / mockup
-                  </p>
-                  <p className="mt-1 text-blue-900/60 text-sm">...</p>
-                </div>
-              </div>
+        <div className="w-[55%]">
+          <div className="grid grid-cols-10 grid-rows-8 w-full">
+            <div className="col-start-2 col-span-8 row-start-1 row-span-7">
+              <img
+                src={AssetImage.home1.src}
+                alt="Personas trabajando"
+                className="w-full h-full rounded-2xl shadow-lg object-cover"
+              />
+            </div>
+            <div className="col-start-1 col-span-4 row-start-4 row-span-7 z-10">
+              <img
+                src={AssetImage.conciliatorNavbar.src}
+                alt="Sena navbar"
+                className="w-[124px] rounded-lg shadow-xl object-cover border border-[#3771d1]"
+              />
+            </div>
+            <div className="col-start-7 col-span-9 row-start-5 row-span-7 z-20">
+              <img
+                src={AssetImage.conciliator1.src}
+                alt="Conciliator dashboard"
+                className="w-[350px] rounded-lg shadow-xl object-cover border border-[#3771d1]"
+              />
             </div>
           </div>
         </div>
       </div>
-      <div className="flex justify-end p-3">
-        <p className="text-white text-sm">
+
+      {/* Mobile Layout */}
+      <div className="flex lg:hidden flex-col items-center gap-6 pt-8 px-6">
+        <h1 className="text-4xl sm:text-5xl font-extrabold text-center">
+          El arte de <br /> cobrar{" "}
+          <span className="text-[#3771d1] font-semibold italic">
+            {displayText}
+            <span className="animate-pulse">|</span>
+          </span>
+        </h1>
+
+        {/* Imágenes mobile */}
+        <div className="relative w-full max-w-[340px] mx-auto">
+          {/* Imagen principal - personas */}
+          <img
+            src={AssetImage.home1.src}
+            alt="Personas trabajando"
+            className="w-full rounded-2xl shadow-lg object-cover"
+          />
+          {/* Navbar superpuesto izquierda */}
+          <img
+            src={AssetImage.conciliatorNavbar.src}
+            alt="Sena navbar"
+            className="absolute -bottom-8 -left-2 w-[100px] rounded-lg shadow-xl object-cover border border-[#3771d1]"
+          />
+          {/* Conciliator superpuesto abajo */}
+          <img
+            src={AssetImage.conciliator1.src}
+            alt="Conciliator dashboard"
+            className="absolute -bottom-16 right-0 w-[200px] rounded-lg shadow-xl object-cover border border-[#3771d1]"
+          />
+        </div>
+
+        {/* Espacio para las imágenes superpuestas */}
+        <div className="h-16" />
+
+        <p className="text-black text-sm font-normal text-center px-2">
+          Sena es una plataforma web de gestión de cuentas por cobrar que
+          incluye entre sus funcionalidades un servicio de cobranza. Sena te
+          ayuda a ordenar, automatizar y recuperar pagos combinando
+          tecnología, inteligencia artificial y personas expertas.
+        </p>
+
+        <div className="flex sm:flex-row items-center gap-3 w-full justify-center">
+          <Button text="Agenda una demo" size="md" className="w-auto" />
+          <Button
+            text="Ver cómo funciona"
+            variant="primaryInvertedOutlined"
+            size="md"
+            className="w-auto "
+          />
+        </div>
+      </div>
+
+      <div className="flex justify-center lg:justify-end px-6 lg:px-12 py-3 mt-4 lg:mt-0">
+        <p className="text-white text-xs lg:text-sm text-center lg:text-right">
           Respaldados por Recsa, con más de 40 años de experiencia en cobranza y
           presencia en 15 países de Latinoamérica.
         </p>
