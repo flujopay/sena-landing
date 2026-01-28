@@ -7,7 +7,7 @@ import { FeatureCard, type FeatureCardProps } from "./FeatureCard";
 const Icon = ({ children }: { children: ReactNode }) => {
   return (
     <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center">
-      <div className="text-orange-500">{children}</div>
+      <div className="text-[#f6793a]">{children}</div>
     </div>
   );
 };

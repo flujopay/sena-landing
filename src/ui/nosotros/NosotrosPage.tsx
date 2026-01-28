@@ -9,7 +9,7 @@ export const NosotrosPage = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <div className="grow">
-        <div className="bg-blue-500 max-w-[1440px] mx-auto">
+        <div className="bg-[#3771d1] max-w-[1440px] mx-auto">
           <Header variant="secondary"/>
         </div>
         <Hero />

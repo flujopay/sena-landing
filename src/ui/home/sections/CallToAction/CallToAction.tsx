@@ -2,8 +2,8 @@ import Button from "@/ui/shared/Button";
 
 export const CallToAction = () => {
   return (
-    <section className="px-4 md:px-12 py-14 max-w-[1440px] mx-auto">
-      <div className="rounded-2xl overflow-hidden bg-[url('/images/home2.png')] h-auto md:h-[700px] bg-cover bg-center bg-no-repeat">
+    <section className="md:px-12 pb-14 max-w-[1440px] mx-auto">
+      <div className="md:rounded-2xl overflow-hidden bg-[url('/images/home2.png')] h-auto md:h-[700px] bg-cover bg-center bg-no-repeat">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center h-full">
           <div className="px-6 md:px-12 py-8 md:py-10">
             <p className="text-white text-xl md:text-4xl font-extrabold leading-tight">

@@ -28,7 +28,7 @@ const teamMembers: TeamMember[] = [
 
 export const OurTeam = () => {
   return (
-    <section className="bg-white py-12 md:py-24">
+    <section className="bg-white pb-12 md:py-24">
       <div className="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8">
         <h2 className="text-lg md:text-2xl font-extrabold tracking-wide text-gray-900 text-center mb-8 md:mb-12">
           NUESTRO EQUIPO

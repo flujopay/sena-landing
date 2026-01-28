@@ -78,23 +78,28 @@ export const PricingPlans = () => {
 
       {/* Mobile: Selector + Card */}
       <div className="md:hidden mt-8 px-4">
-        <div className="bg-white rounded-2xl border border-slate-200 p-4 shadow-sm">
+        <div className="bg-white rounded-2xl border-2 border-[#3771d1] shadow-sm overflow-hidden">
           {plans.map((plan, index) => (
             <button
               key={plan.variant}
               type="button"
               onClick={() => setSelectedPlan(index)}
-              className={`w-full flex items-center gap-3 p-3 rounded-xl transition-colors ${
-                selectedPlan === index ? "bg-blue-50 border border-blue-200" : "border border-transparent"
-              }`}
+              className={`
+                w-full flex items-center gap-3 p-4
+                transition-colors
+                ${index === 1 ? "border-t-2 border-b-2 border-[#3771d1]" : ""}
+                ${selectedPlan === index ? "bg-blue-50" : ""}
+              `}
             >
               <div
-                className={`w-5 h-5 rounded-full border-2 flex items-center justify-center ${
-                  selectedPlan === index ? "border-blue-600" : "border-slate-300"
+                className={`w-6 h-6 rounded-full border-2 flex items-center justify-center ${
+                  selectedPlan === index ? "border-[#3771d1] bg-white" : "border-slate-300"
                 }`}
               >
                 {selectedPlan === index && (
-                  <div className="w-2.5 h-2.5 rounded-full bg-blue-600" />
+                  <svg className="w-4 h-4 text-[#3771d1]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
                 )}
               </div>
               <div className="flex-1 text-left">
@@ -102,7 +107,7 @@ export const PricingPlans = () => {
                 <p className="text-xs text-slate-500">{plan.subtitle}</p>
               </div>
               {plan.popular && (
-                <span className="bg-blue-600 text-white text-[10px] font-bold px-2 py-1 rounded">
+                <span className="text-sm h-9 px-4 inline-flex items-center justify-center gap-2 rounded-full font-bold transition-all bg-[#3771d1] text-white">
                   MAS POPULAR
                 </span>
               )}

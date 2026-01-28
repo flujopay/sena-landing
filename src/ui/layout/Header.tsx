@@ -47,13 +47,15 @@ export const Header = ({ variant }: Props) => {
   const getActiveClass = (href: string) => {
     if (!isActive(href)) return "";
     return variant === "primary" 
-      ? "underline decoration-blue-500 text-blue-500 underline-offset-4" 
-      : "underline decoration-orange-500 text-orange-500 underline-offset-4";
+      ? "underline decoration-[#3771d1] !text-[#3771d1] underline-offset-4" 
+      : "underline decoration-[#f6793a] !text-[#f6793a] underline-offset-4";
   };
 
   const getMobileActiveClass = (href: string) => {
     if (!isActive(href)) return "";
-    return "text-orange-500 underline decoration-orange-500 underline-offset-4";
+    return variant === "primary" 
+      ? "underline decoration-[#3771d1] !text-[#3771d1] underline-offset-4" 
+      : "underline decoration-[#f6793a] !text-[#f6793a] underline-offset-4";
   };
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
@@ -94,7 +96,7 @@ export const Header = ({ variant }: Props) => {
             aria-label={isMenuOpen ? "Cerrar menú" : "Abrir menú"}
           >
             {
-              isMenuOpen ? <AssetIcon.xMark width={28} height={28} className="text-orange-500" /> : <AssetIcon.menu width={28} height={28} />
+              isMenuOpen ? <AssetIcon.xMark width={28} height={28} className="text-[#f6793a]" /> : <AssetIcon.menu width={28} height={28} />
             }
           </button>
         </div>
@@ -121,7 +123,7 @@ export const Header = ({ variant }: Props) => {
               }`}
               style={{ transitionDelay: isMenuOpen ? `${index * 100}ms` : "0ms" }}
             >
-              <p className={`text-3xl font-bold text-blue-500 hover:text-orange-500 transition-colors ${getMobileActiveClass(section.href)}`}>
+              <p className={`text-3xl font-bold text-blue-500 hover:text-[#f6793a] transition-colors ${getMobileActiveClass(section.href)}`}>
                 {section.name}
               </p>
             </Link>

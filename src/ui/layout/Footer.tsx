@@ -30,7 +30,7 @@ export const Footer = () => {
               />
               <button
                 type="submit"
-                className="cursor-pointer absolute right-0 top-1/2 -translate-y-1/2 text-sm font-bold text-orange-500 hover:text-orange-600 transition-colors duration-200 uppercase tracking-wide"
+                className="cursor-pointer absolute right-0 top-1/2 -translate-y-1/2 text-sm font-bold text-[#f6793a] hover:text-orange-600 transition-colors duration-200 uppercase tracking-wide"
               >
                 Suscríbete
               </button>
@@ -131,7 +131,7 @@ export const Footer = () => {
                 />
                 <button
                   type="submit"
-                  className="cursor-pointer absolute right-0 top-1/2 -translate-y-1/2 text-base font-bold text-orange-500 hover:text-orange-600 transition-colors duration-200 uppercase tracking-wide"
+                  className="cursor-pointer absolute right-0 top-1/2 -translate-y-1/2 text-base font-bold text-[#f6793a] hover:text-orange-600 transition-colors duration-200 uppercase tracking-wide"
                 >
                   Suscríbete
                 </button>
@@ -148,7 +148,7 @@ export const Footer = () => {
               href="https://facebook.com" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="hover:text-orange-500 transition-colors duration-200"
+              className="hover:text-[#f6793a] transition-colors duration-200"
               aria-label="Facebook"
             >
               <AssetIcon.facebook width={22} height={22}/>

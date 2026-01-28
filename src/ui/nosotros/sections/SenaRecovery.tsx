@@ -1,7 +1,7 @@
 export const SenaRecovery = () => {
   return (
-    <section className="px-4 md:px-12 py-8 md:py-14 max-w-[1440px] mx-auto">
-      <div className="rounded-2xl overflow-hidden bg-[url('/images/nosotros1.png')] h-[300px] md:h-[700px] bg-cover bg-top">
+    <section className="md:px-12 py-8 md:py-14 max-w-[1440px] mx-auto">
+      <div className="md:rounded-2xl overflow-hidden bg-[url('/images/nosotros1.png')] h-[300px] md:h-[700px] bg-cover bg-top">
         <div className="flex flex-col lg:flex-row items-center h-full">
           <div className="px-6 md:px-12 py-8 md:py-10 w-full z-10 flex items-center h-full">
             <h2 className="text-2xl md:text-5xl lg:text-6xl font-extrabold leading-tight">

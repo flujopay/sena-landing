@@ -44,7 +44,7 @@ const variantStyles: Record<ButtonVariant, string> = {
     'bg-orange-500 text-white hover:bg-orange-600 focus:ring-orange-500',
 
   secondaryOutlined:
-    'border border-orange-500 text-orange-500 hover:bg-orange-50 focus:ring-orange-500',
+    'border border-orange-500 text-[#f6793a] hover:bg-orange-50 focus:ring-orange-500',
 
   ghost:
     'text-gray-700 hover:bg-gray-100 focus:ring-gray-400',

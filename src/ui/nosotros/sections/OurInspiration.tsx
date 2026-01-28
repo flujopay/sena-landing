@@ -41,7 +41,7 @@ export const OurInspiration = () => {
 
             <p>
               Sena. El arte de cobrar{" "}
-              <span className="text-orange-500 italic">bien.</span>
+              <span className="text-[#f6793a] italic">bien.</span>
             </p>
 
             <img 
@@ -84,7 +84,7 @@ export const OurInspiration = () => {
 
               <p>
                 Sena. El arte de cobrar{" "}
-                <span className="text-orange-500 italic">bien.</span>
+                <span className="text-[#f6793a] italic">bien.</span>
               </p>
             </div>
           </div>
