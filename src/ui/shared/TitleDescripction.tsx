@@ -1,13 +1,17 @@
 type Props = {
   title: string;
+  subtitle?: string;
   description: string;
 };
 
-export const TitleDescripction = ({ title, description }: Props) => {
+export const TitleDescripction = ({ title, subtitle, description }: Props) => {
   return (
     <div className="flex flex-col gap-2">
-      <p className="font-adobe text-black text-xl sm:text-4xl font-black">{title}</p>
-      <p className="font-adobe text-[#f6793a] mt-2 text-lg font-bold leading-5">
+      <div className="flex flex-col gap-0.5">
+        <p className="font-adobe text-brand-primary-dark text-xl sm:text-4xl font-black">{title}</p>
+        <p className="font-adobe text-brand-primary-dark text-xl sm:text-4xl font-black">{subtitle}</p>
+      </div>
+      <p className="font-adobe text-black mt-2 text-lg leading-5">
         {description}
       </p>
     </div>

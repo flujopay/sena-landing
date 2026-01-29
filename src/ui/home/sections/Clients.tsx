@@ -52,9 +52,9 @@ export const Clients = () => {
   }));
 
   return (
-    <div className="flex flex-col items-center gap-4 md:pt-20 md:px-20 px-2 py-8">
-      <p className="text-black font-extrabold text-xl sm:text-4xl text-center px-4">
-        NUESTRA TRAYECTORIA Y NUESTROS CLIENTES NOS AVALAN.
+    <div className="mx-auto max-w-[1280px] flex flex-col items-center gap-4 md:pt-20  px-2 py-8">
+      <p className="text-brand-primary-dark font-extrabold text-xl sm:text-4xl text-center px-4">
+        Nuestra trayectoria y nuestros clientes nos avalan.
       </p>
 
       {/* Desktop: logos en fila */}

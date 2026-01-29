@@ -47,22 +47,22 @@ export const Header = ({ variant }: Props) => {
   const getActiveClass = (href: string) => {
     if (!isActive(href)) return "";
     return variant === "primary" 
-      ? "underline decoration-[#3771d1] !text-[#3771d1] underline-offset-4" 
-      : "underline decoration-[#f6793a] !text-[#f6793a] underline-offset-4";
+      ? "underline decoration-brand-secondary !text-brand-primary underline-offset-4" 
+      : "underline decoration-brand-secondary !text-brand-primary underline-offset-4";
   };
 
   const getMobileActiveClass = (href: string) => {
     if (!isActive(href)) return "";
     return variant === "primary" 
-      ? "underline decoration-[#3771d1] !text-[#3771d1] underline-offset-4" 
-      : "underline decoration-[#f6793a] !text-[#f6793a] underline-offset-4";
+      ? "underline decoration-brand-secondary !text-brand-primary underline-offset-4" 
+      : "underline decoration-brand-secondary !text-brand-primary underline-offset-4";
   };
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
     <>
-      <div className={`flex items-center gap-2 justify-between p-4 ${variant === "primary" ? "transparent" : "bg-white"}`}>
+      <div className={`mx-auto max-w-[1280px] flex items-center gap-2 justify-between p-4 ${variant === "primary" ? "bg-white" : "bg-white"}`}>
         <div>
           <Link href="/">
             <Image src={logo} alt="Logo" className="w-36" />
@@ -74,7 +74,7 @@ export const Header = ({ variant }: Props) => {
           {sectiosnNavbar.map((section) => {
             return (
               <Link key={section.id} href={section.href}>
-                <p className={`${variant === "primary" ? "text-white" : "text-blue-500"} font-semibold ${getActiveClass(section.href)}`}>
+                <p className={`${variant === "primary" ? "text-brand-primary-dark" : "text-blue-500"} font-semibold ${getActiveClass(section.href)}`}>
                   {section.name}
                 </p>
               </Link>
@@ -84,12 +84,12 @@ export const Header = ({ variant }: Props) => {
 
         {/* Desktop CTA Button */}
         <div className="hidden lg:block">
-          <Button size="sm" text="Comenzar ahora" variant={ variant === "primary" ? "primaryFilled" : "secondaryFilled" } />
+          <Button size="md" text="Contáctanos" variant={ variant === "primary" ? "primaryFilled" : "secondaryFilled" } className="text-xl"/>
         </div>
 
         {/* Mobile: Button + Menu */}
         <div className="lg:hidden flex items-center gap-2">
-          <Button size="sm" text="Comienza Ahora" variant="secondaryFilled" className="text-xs px-3 py-1.5" />
+          <Button size="sm" text="Contáctanos" variant="secondaryFilled" className="text-xs px-3 py-1.5" />
           <button 
             onClick={toggleMenu}
             className="p-2 z-50"

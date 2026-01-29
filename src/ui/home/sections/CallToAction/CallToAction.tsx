@@ -1,31 +1,37 @@
+import { AssetImage } from "@/lib/utils/assets/image";
 import Button from "@/ui/shared/Button";
 
 export const CallToAction = () => {
   return (
-    <section className="md:px-12 pb-14 max-w-[1440px] mx-auto">
-      <div className="md:rounded-2xl overflow-hidden bg-[url('/images/home2.png')] h-auto md:h-[700px] bg-cover bg-center bg-no-repeat">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center h-full">
-          <div className="px-6 md:px-12 py-8 md:py-10">
-            <p className="text-white text-xl md:text-4xl font-extrabold leading-tight">
-              Cobrar también es una forma de{" "}
-              <span className="text-orange-400 italic">cuidar</span>.
-            </p>
+   <section className="max-w-[1280px] mx-auto">
+      <div className="rounded-2xl overflow-hidden">
+        <div className="flex flex-row items-center justify-center">
+          
+          {/* Image */}
+          <div className="md:shrink-0">
+            <img
+              src={AssetImage.home3.src}
+              alt="Mujer con teléfono"
+              className="w-full max-w-[420px] md:h-[500px] object-contain"
+            />
+          </div>
 
-            <p className="mt-4 md:mt-6 text-white text-xl md:text-4xl font-extrabold leading-tight">
-              Cuidar <span className="text-orange-400 italic">el pago</span>,
-              <br />
-              cuidar <span className="text-orange-400 italic">la relación</span>
-              <br />y cuidar a tus{" "}
-              <span className="text-orange-400 italic">clientes</span>.
-            </p>
+          {/* Content */}
+          <div className="max-w-xl px-4 py-8 text-left">
+         <h2 className="text-brand-primary-dark text-3xl md:text-6xl font-extrabold leading-tight">
+              Cobrar bien hace la{" "}
+              <span className="text-brand-primary font-caslon">diferencia</span>
+              <span className="text-brand-secondary">.</span>
+            </h2>
 
-            <div className="mt-8 md:mt-48 flex flex-row gap-3 md:gap-4">
-              <Button variant="primaryInvertedFilled" text="Agenda una demo" size="md" className="flex-1 md:flex-none text-sm md:text-base"/>
-              <Button variant="secondaryFilled" text="Hablemos" size="md" className="flex-1 md:flex-none text-sm md:text-base"/>
+            <div className="mt-8 flex gap-2 justify-start flex-wrap">
+                  <Button variant="primaryFilled" text="Agenda una demo" className="h-8 px-6 text-sm md:h-13 md:px-8 md:text-base" />
+                  <Button variant="primaryDarkOutlined" text="Contáctanos" className="h-8 px-6 text-sm md:h-13 md:px-8 md:text-base" />
             </div>
           </div>
+
         </div>
-      </div> 
+      </div>
     </section>
   );
 };

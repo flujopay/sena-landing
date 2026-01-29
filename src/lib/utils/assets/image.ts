@@ -5,9 +5,13 @@ import conciliator1 from "@/public/images/conciliator1.png";
 import conciliatorNavbar from "@/public/images/conciliator_navbar.jpg";
 import home1 from "@/public/images/home1.png";
 import home2 from "@/public/images/home2.png";
+import home3 from "@/public/images/home3.png";
+import home4 from "@/public/images/home4.png";
 import logoBlack from "@/public/images/logo_black.png";
+import logoBlanco from "@/public/images/logo_blanco.png";
 import maruzLogo from "@/public/images/maruz_logo.png";
 import nosotros1 from "@/public/images/nosotros1.png";
+import nosotros2 from "@/public/images/nosotros2.png";
 import proweldLogo from "@/public/images/proweld_logo.jpeg";
 import rioSena from "@/public/images/rio_sena.jpg";
 import senaLogoOrange from "@/public/images/sena_logo_orange.png";
@@ -30,5 +34,9 @@ export class AssetImage {
   static maruzLogo = maruzLogo
   static aomLogo = aomLogo
   static topSpaceLogo = topSpaceLogo
+  static home3 = home3
+  static logoBlanco = logoBlanco
+  static nosotros2 = nosotros2
+  static home4 = home4
 
 }

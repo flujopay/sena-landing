@@ -5,15 +5,15 @@ import Link from "next/link";
 
 export const Footer = () => {
   return (
-    <footer className="bg-[#E8E9F0] py-12 md:py-16 px-4 sm:px-6 lg:px-8">
+    <footer className="bg-[#2270D0] text-white py-12 md:py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="flex justify-center mb-10 md:mb-12">
           <Image
-            src={AssetImage.logoBlack}
+            src={AssetImage.logoBlanco}
             alt="Sena Logo"
             width={200}
             height={80}
-            className="h-auto w-40 md:w-52"
+            className="h-auto w-40 md:w-72"
           />
         </div>
 
@@ -26,7 +26,7 @@ export const Footer = () => {
                 type="email"
                 placeholder="Tu email"
                 required
-                className="w-full px-0 py-3 pr-28 text-sm bg-transparent border-none focus:outline-none placeholder:text-gray-500"
+                className="w-full px-0 py-3 pr-28 text-sm bg-transparent border-none focus:outline-none placeholder:text-white"
               />
               <button
                 type="submit"
@@ -127,7 +127,7 @@ export const Footer = () => {
                   type="email"
                   placeholder="Tu email"
                   required
-                  className="w-full px-0 py-3 pr-32 text-base bg-transparent border-none focus:outline-none placeholder:text-gray-500"
+                  className="w-full px-0 py-3 pr-32 text-base bg-transparent border-none focus:outline-none placeholder:white"
                 />
                 <button
                   type="submit"
@@ -141,7 +141,7 @@ export const Footer = () => {
         </div>
 
         <div className="flex flex-col md:flex-row justify-between items-center pt-6 md:pt-8 gap-4">
-          <p className="text-xs md:text-sm text-gray-600 order-2 md:order-1">© NILO SE 2026</p>
+          <p className="text-xs md:text-sm  order-2 md:order-1">© NILO SE 2026</p>
           
           <div className="flex gap-5 md:gap-6 order-1 md:order-2">
             <a 

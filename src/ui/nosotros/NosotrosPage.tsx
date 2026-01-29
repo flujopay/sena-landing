@@ -9,8 +9,8 @@ export const NosotrosPage = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <div className="grow">
-        <div className="bg-[#3771d1] max-w-[1440px] mx-auto">
-          <Header variant="secondary"/>
+        <div className="bg-white max-w-[1280px] mx-auto">
+          <Header variant="primary"/>
         </div>
         <Hero />
         <OurInspiration />

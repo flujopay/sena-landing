@@ -6,8 +6,8 @@ import { FeatureCard, type FeatureCardProps } from "./FeatureCard";
 
 const Icon = ({ children }: { children: ReactNode }) => {
   return (
-    <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center">
-      <div className="text-[#f6793a]">{children}</div>
+    <div className="w-10 h-10 rounded-full bg-brand-secondary-dark flex items-center justify-center">
+      <div className="text-white">{children}</div>
     </div>
   );
 };
@@ -17,27 +17,27 @@ export const KeyFeatures = () => {
     {
       title: "Plataforma unificada\nde cobranza",
       description:
-        "Centraliza facturas, clientes, gestiones y pagos en un solo lugar, sin planillas ni sistemas paralelos.",
+        <p><span className="text-black font-bold">Centraliza</span> facturas, clientes, gestiones y pagos en un solo lugar, sin planillas ni sistemas paralelos.</p>,
       icon: (
         <Icon>
-          <AssetIcon.rings width="32" height="32" color="#f6793a"/>
+          <AssetIcon.rings width="32" height="32" color="white"/>
         </Icon>
       ),
     },
     {
       title: "Gestión multicanal\nintegrada",
       description:
-        "Administra WhatsApp, email y SMS desde una sola plataforma, con historial completo de cada interacción.",
+        <p><span className="text-black font-bold">Administra</span> WhatsApp, email y SMS <span className="text-black font-bold">desde una sola plataforma</span>, con historial completo de cada interacción.</p>,
       icon: (
         <Icon>
-          <AssetIcon.nodes width="24" height="24" color="#f6793a"/>
+          <AssetIcon.nodes width="24" height="24" color="white"/>
         </Icon>
       ),
     },
     {
       title: "Automatización\ninteligente",
       description:
-        "Automatiza recordatorios y seguimientos con reglas claras, manteniendo siempre un tono humano en la comunicación con tus clientes.",
+        <p><span className="text-black font-bold">Automatiza</span> recordatorios y seguimientos con reglas claras, manteniendo siempre un tono humano en la <span className="text-black font-bold">comunicación con tus clientes</span>.</p>,
       icon: (
         <Icon>
           <svg
@@ -66,17 +66,17 @@ export const KeyFeatures = () => {
     {
       title: "Control y reportería\nen tiempo real",
       description:
-        "Visualiza estados de pago, mora y desempeño de tus gestiones con información siempre actualizada.",
+        <p>Visualiza estados de pago, mora y desempeño de tus gestiones con <span className="text-black font-bold">información siempre actualizada.</span></p>,
       icon: (
         <Icon>
-          <AssetIcon.monitoring width="24" height="24" color="#f6793a"/>
+          <AssetIcon.monitoring width="24" height="24" color="white"/>
         </Icon>
       ),
     },
     {
       title: "Gestión humana\nespecializada",
       description:
-        "Cuando la automatización no basta, entra el equipo experto de Recsa para gestionar los casos complejos que requieren criterio humano.",
+        <p>Cuando la automatización no basta, entra el <span className="text-black font-bold">equipo experto de Recsa</span> para gestionar los casos complejos que requieren criterio humano.</p>,
       icon: (
         <Icon>
           <svg
@@ -104,27 +104,26 @@ export const KeyFeatures = () => {
     {
       title: "Arquitectura\nescalable",
       description:
-        "Una solución pensada para startups, pymes y grandes empresas, que se adapta a tu volumen, complejidad y etapa de negocio.",
+        <p>Una solución pensada para startups, pymes y grandes empresas, que se <span className="text-black font-bold">adapta a tu volumen</span>, complejidad y etapa de negocio.</p>,
       icon: (
         <Icon>
-          <AssetIcon.architecture width="24" height="24" color="#f6793a"/>
+          <AssetIcon.architecture width="24" height="24" color="white"/>
         </Icon>
       ),
     },
   ];
 
   return (
-    <section className="py-12">
-      <div className="px-6 md:px-12 text-center">
-        <div className="flex justify-center">
+    <section className="py-12 mx-auto max-w-[1280px]">
+      <div className="px-6 md:px-12 text-left">
           <TitleDescripction
-            title="FUNCIONALIDADES CLAVES"
+            title="Funcionalidades"
+            subtitle="claves"
             description="Un sistema completo que combina automatización, control y criterio humano."
           />
-        </div>
       </div>
 
-      <div className="mt-10 bg-blue-600">
+      <div className="mt-10">
         <div className="py-12">
           {/* Desktop: grid */}
           <div className="hidden md:block px-6 md:px-12">

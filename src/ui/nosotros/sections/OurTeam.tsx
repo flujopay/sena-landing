@@ -1,3 +1,4 @@
+import { TitleDescripction } from "@/ui/shared/TitleDescripction";
 import Image from "next/image";
 
 type TeamMember = {
@@ -28,13 +29,11 @@ const teamMembers: TeamMember[] = [
 
 export const OurTeam = () => {
   return (
-    <section className="bg-white pb-12 md:py-24">
-      <div className="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8">
-        <h2 className="font-adobe  text-lg md:text-4xl font-black tracking-wide text-gray-900 text-center mb-8 md:mb-12">
-          NUESTRO EQUIPO
-        </h2>
+    <section className="bg-white pb-12 max-w-[1280px] mx-auto">
+      <div className="px-4 md:px-8">
+        <TitleDescripction title="Nuestro" subtitle="equipo" description=""/>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-12 max-w-md md:max-w-none mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-12 max-w-md md:max-w-none mx-auto mt-8">
           {teamMembers.map((member, index) => (
             <div key={index} className="flex flex-col items-center text-center">
               <div className="w-20 h-20 md:w-32 md:h-32 rounded-full overflow-hidden mb-3 md:mb-4 bg-blue-400 ring-4 ring-blue-400">

@@ -56,7 +56,7 @@ export const Products = () => {
         title: "Para el día a día de tu cobranza",
         description:
           "Organiza facturas, automatiza recordatorios y controla todo tu ciclo de cobranza desde un solo lugar.",
-        cta: "Empieza ahora",
+        cta: "Agenda una demo",
       },
       {
         key: "recuperacion" as const,
@@ -74,11 +74,13 @@ export const Products = () => {
   const active = products.find((p) => p.key === activeKey) ?? products[0];
 
   return (
-    <section className="px-3 py-10 max-w-[1440px] mx-auto">
+    <section className="px-3 py-10 max-w-[1280px] mx-auto">
       {/* Mobile Layout */}
       <div className="md:hidden">
-        <p className="text-black text-xl sm:text-4xl font-extrabold tracking-wide text-center mb-6">
-          NUESTROS PRODUCTOS
+        <p className="text-left text-brand-primary-dark text-xl sm:text-4xl font-extrabold tracking-wide mb-6">
+          Nuestros
+          <br />
+          productos
         </p>
         <div className="flex flex-col gap-6 px-2">
           {products.map((p) => (
@@ -97,15 +99,17 @@ export const Products = () => {
       <div className="hidden md:block bg-slate-100 rounded-3xl p-6 md:p-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
           <div className="flex flex-col gap-6">
-            <p className="text-black font-extrabold tracking-wide  text-xl sm:text-4xl">
-              NUESTROS PRODUCTOS
+            <p className="text-left text-brand-primary-dark  font-extrabold tracking-wide  text-xl sm:text-4xl">
+              Nuestros
+              <br/>
+              productos
             </p>
 
             <div className="flex gap-6">
               <div className="relative w-1">
                 <div className="absolute left-0 top-0 h-full w-1 rounded bg-slate-300" />
                 <div
-                  className="absolute left-0 top-0 w-1 rounded bg-blue-600 transition-all"
+                  className="absolute left-0 top-0 w-1 rounded bg-brand-secondary transition-all"
                   style={{
                     height: activeKey === "autogestion" ? "50%" : "50%",
                     transform:
@@ -124,12 +128,12 @@ export const Products = () => {
                       key={p.key}
                       type="button"
                       onClick={() => setActiveKey(p.key)}
-                      className="text-left"
+                      className="text-left cursor-pointer"
                     >
                       <p
                         className={
                           isActive
-                            ? "text-blue-600 font-bold text-3xl leading-tight whitespace-pre-line"
+                            ? "text-black font-bold text-3xl leading-tight whitespace-pre-line"
                             : "text-slate-400 font-bold text-3xl leading-tight whitespace-pre-line"
                         }
                       >

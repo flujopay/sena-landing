@@ -20,7 +20,7 @@ export const PricingPlans = () => {
         "Soporte por email",
       ],
       variant: "starter",
-      cta: "Comenzar Ahora",
+      cta: "Agenda una demo",
     },
     {
       name: "Plan Growth",
@@ -40,13 +40,13 @@ export const PricingPlans = () => {
       ],
       variant: "growth",
       popular: true,
-      cta: "Comenzar Ahora",
+      cta: "Agenda una demo",
     },
     {
       name: "Plan Enterprise",
       subtitle: "Para alto volumen y operaciones críticas",
       price: 799,
-      includedClients: "Hasta 100+",
+      includedClients: "100+",
       invoicesPerMonth: "Desde 500",
       features: [
         "Todo lo de Growth, más:",
@@ -59,18 +59,19 @@ export const PricingPlans = () => {
         "Account Manager dedicado",
       ],
       variant: "enterprise",
-      cta: "Contactar Ventas",
+      cta: "Habla con ventas",
     },
   ];
 
   const [selectedPlan, setSelectedPlan] = useState(0);
 
   return (
-    <section className="py-14">
-      <div className="px-6 md:px-12 text-center">
-        <div className="flex justify-center">
+    <section className="py-14 max-w-[1280px] mx-auto">
+      <div className="px-6 md:px-12 text-left">
+        <div className="flex justify-start">
           <TitleDescripction
-            title="PLANES DISEÑADOS PARA TU EMPRESA"
+            title="Planes diseñados"
+            subtitle="para tu empresa"
             description="Desde startups hasta empresas establecidas, tenemos el plan perfecto para ti"
           />
         </div>
@@ -124,9 +125,9 @@ export const PricingPlans = () => {
       <div className="hidden md:block mt-10 px-6 md:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-end max-w-6xl mx-auto">
           <PlanCard plan={plans[0]} />
-          <div className="lg:-translate-y-3">
-            <PlanCard plan={plans[1]} />
-          </div>
+
+          <PlanCard plan={plans[1]} />
+        
           <PlanCard plan={plans[2]} />
         </div>
       </div>

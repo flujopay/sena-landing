@@ -5,7 +5,7 @@ export type ButtonVariant =
   | 'primaryFilled'
   | 'primaryOutlined'
   | 'primaryInvertedFilled'
-  | 'primaryInvertedOutlined'
+  | 'primaryDarkOutlined'
   | 'secondaryFilled'
   | 'secondaryOutlined'
   | 'ghost'
@@ -29,22 +29,22 @@ const baseStyles =
 
 const variantStyles: Record<ButtonVariant, string> = {
   primaryFilled:
-    'bg-[#3771d1] text-white hover:bg-[#3771d1]/90 focus:ring-[#3771d1]',
+    'bg-brand-primary text-white hover:bg-brand-primary/90 focus:ring-brand-primary',
 
   primaryOutlined:
-    'border border-[#3771d1] text-[#3771d1] hover:bg-[#3771d1]/10 focus:ring-[#3771d1]',
+    'border border-3 border-brand-primary text-brand-primary hover:bg-brand-primary/10 focus:ring-brand-primary',
 
   primaryInvertedFilled:
-    'bg-white text-[#3771d1] hover:bg-white/90 focus:ring-white',
+    'bg-white text-brand-primary hover:bg-white/90 focus:ring-white',
 
-  primaryInvertedOutlined:
-   'border border-2 border-white text-white hover:bg-white/10 focus:ring-white',
+  primaryDarkOutlined:
+   'border border-3 border-brand-primary-dark text-brand-primary-dark hover:bg-brand-primary-dark/10 focus:ring-brand-primary-dark',
 
   secondaryFilled:
-    'bg-orange-500 text-white hover:bg-orange-600 focus:ring-orange-500',
+    'bg-brand-secondary text-white hover:bg-brand-secondary/90 focus:ring-brand-secondary',
 
   secondaryOutlined:
-    'border border-orange-500 text-[#f6793a] hover:bg-orange-50 focus:ring-orange-500',
+    'border border-3 border-brand-secondary text-brand-secondary hover:bg-brand-secondary/10 focus:ring-brand-secondary',
 
   ghost:
     'text-gray-700 hover:bg-gray-100 focus:ring-gray-400',

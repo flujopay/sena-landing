@@ -12,8 +12,8 @@ export const HomePage = () => {
   return (
     <div className="min-h-screen flex flex-col ">
       <div className="grow">
-        <div className="bg-linear-to-bl from-orange-300 to-orange-500">
-          <div className="max-w-[1440px] mx-auto">
+        <div className="bg-white">
+          <div className="max-w-[1280px] mx-auto">
             <Header variant="primary" />
             <Hero />
           </div>

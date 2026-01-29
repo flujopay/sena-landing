@@ -10,43 +10,46 @@ export const HowItWorks = () => {
     () => [
       {
         key: "prepara" as const,
-        label: "PREPARA",
+        label: "1. Prepara",
         number: 1,
-        title: "PREPARA",
+        title: "1. Prepara",
+        subtitle: "Ordena facturas, contactos y montos automáticamente.",
         description:
-          "Ordena facturas, contactos y montos automáticamente. El sistema estructura toda la información para una gestión eficiente.",
+          "El sistema estructura toda la información para una gestión eficiente.",
       },
       {
         key: "cobra" as const,
-        label: "COBRA",
+        label: "2. Cobra",
         number: 2,
-        title: "COBRA",
-        description:
-          "CRM multicanal con WhatsApp, email y SMS. Secuencias inteligentes segmentadas por vencimiento, monto y comportamiento.",
+        title: "2. Cobra",
+        subtitle: "CRM multicanal con WhatsApp, email y SMS.",
+        description:"Secuencias inteligentes segmentadas por vencimiento, monto y comportamiento.",
       },
       {
         key: "evalua" as const,
-        label: "EVALUA",
+        label: "3. Evalua",
         number: 3,
-        title: "EVALUA",
+        title: "3. Evalua",
+        subtitle: "Métricas de conversión, aperturas y rendimiento por canal.",
         description:
-          "Métricas de conversión, aperturas y rendimiento por canal. Mejora tu estrategia con datos reales.",
+          "Mejora tu estrategia con datos reales.",
       },
       {
         key: "recupera" as const,
-        label: "RECUPERA",
+        label: "4. Recupera",
         number: 4,
-        title: "RECUPERA",
+        title: "4. Recupera",
         description:
           "Cuando hace falta entra el equipo humano de Recsa, quienes cuidando tu marca y relación con el cliente, realizan las gestiones de recupero, lo que llevamos haciendo por más de 40 años.",
       },
       {
         key: "concilia" as const,
-        label: "CONCILIA",
+        label: "5. Concilia",
         number: 5,
-        title: "CONCILIA",
+        title: "5. Concilia",
+        subtitle: "Registro automático de pagos recibidos.",
         description:
-          "Registro automático de pagos recibidos. Cierre de facturas sin trabajo manual ni errores.",
+          "Cierre de facturas sin trabajo manual ni errores.",
       },
     ],
     [],
@@ -57,19 +60,20 @@ export const HowItWorks = () => {
   const active = steps[activeIndex] ?? steps[0];
 
   return (
-    <section className="py-12">
-      <div className="px-6 md:px-12 text-center">
-        <div className="flex justify-center">
+    <section className="py-12 max-w-[1280px] mx-auto">
+      <div className="px-6 md:px-12 text-left">
+        <div className="flex justify-start">
           <TitleDescripction
-            title="CÓMO FUNCIONA"
+            title="Cómo"
+            subtitle="funciona"
             description="Cinco pasos para transformar tu cobranza"
           />
         </div>
       </div>
 
-      <div className="mt-10 px-4 md:px-12 max-w-5xl mx-auto">
-        <div className="bg-slate-100 rounded-2xl p-5 md:p-8">
-          <div className="bg-blue-600 rounded-xl p-2 md:p-2.5 flex overflow-x-auto gap-2 justify-start md:justify-between">
+      <div className="mt-10 px-4 md:px-12 mx-auto">
+        <div className="rounded-2xl pb-5 md:pb-8">
+          <div className="rounded-2xl p-2 md:p-2.5 flex overflow-x-auto gap-2 justify-start md:justify-between">
             {steps.map((s) => {
               const isActive = s.key === activeKey;
               return (
@@ -79,8 +83,8 @@ export const HowItWorks = () => {
                   onClick={() => setActiveKey(s.key)}
                   className={
                     isActive
-                      ? "shrink-0 px-4 md:px-6 py-2 rounded-lg bg-white text-blue-600 font-extrabold text-xs md:text-sm tracking-wide"
-                      : "shrink-0 px-4 md:px-6 py-2 rounded-lg bg-blue-600 text-white font-extrabold text-xs md:text-sm tracking-wide"
+                      ? "shrink-0 px-4 md:px-8 py-3 rounded-full bg-brand-primary text-white font-extrabold text-xs md:text-xl tracking-wide"
+                      : "shrink-0 px-4 md:px-8 py-3 rounded-full bg-white text-brand-primary font-extrabold text-xs md:text-xl tracking-wide cursor-pointer"
                   }
                 >
                   {s.label}
@@ -89,22 +93,8 @@ export const HowItWorks = () => {
             })}
           </div>
 
-          <div className="mt-6 md:mt-8 bg-blue-600 rounded-xl shadow-md">
+          <div className="mt-6 md:mt-8 rounded-xl bg-[#EDEDED]">
             <div className="p-6 md:p-10 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-              <div className="text-white">
-                <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-full bg-white text-blue-600 font-extrabold flex items-center justify-center">
-                    {active.number}
-                  </div>
-                  <p className="text-3xl md:text-4xl font-extrabold tracking-wide">
-                    {active.title}
-                  </p>
-                </div>
-                <p className="mt-6 text-white/95 leading-6 max-w-md">
-                  {active.description}
-                </p>
-              </div>
-
               <div className="bg-white rounded-xl h-56 md:h-64 flex items-center justify-center justify-self-center w-full max-w-xl">
                 <div className="relative w-full h-full rounded-xl overflow-hidden">
                   <div className="absolute inset-0 bg-slate-50" />
@@ -123,6 +113,23 @@ export const HowItWorks = () => {
                   </div>
                 </div>
               </div>
+
+              <div className="flex flex-col gap-2">
+                <div className="bg-brand-primary text-white  rounded-full flex items-center gap-3 w-fit px-8 py-2">
+                  <p className="text-2xl md:text-sm font-bold tracking-wide">
+                    {active.title}
+                  </p>
+                </div>
+                <div>
+                  <p className="text-brand-primary-dark text-xl md:text-2xl font-bold tracking-wide">
+                    {active.subtitle}
+                  </p>
+                </div>
+                <p className="mt-2 text-black/95 leading-6 max-w-md">
+                  {active.description}
+                </p>
+              </div>
+
             </div>
           </div>
 

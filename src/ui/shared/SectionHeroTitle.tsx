@@ -10,11 +10,12 @@ export const SectionHeroTitle = ({
   orangeItalicText,
 }: Props) => {
   return (
-    <section className={`${bgColor} py-16 md:py-28 h-auto md:h-[500px] flex items-center justify-center`}>
-      <div className="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8">
+    <section className={`${bgColor} md:h-[200px] flex items-center justify-center mt-12 mb-8 max-w-[1280px] mx-auto`}>
+      <div className="px-4 md:px-10">
         <h1 className="font-canaro text-5xl md:text-5xl lg:text-7xl font-extrabold text-center max-w-[650px] mx-auto">
-          <span className="text-white">{whiteText}</span>{" "}
-          <span className="text-orange-400 italic">{orangeItalicText}</span>
+          <span className="text-brand-primary-dark">{whiteText}</span>{" "}
+          <span className="text-brand-primary font-caslon">{orangeItalicText}</span>
+          <span className="text-brand-secondary">.</span>
         </h1>
       </div>
     </section>

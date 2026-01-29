@@ -38,3 +38,16 @@ export const adobeCleanFont = localFont({
   variable: '--font-adobe',
   display: 'swap',
 })
+
+
+export const caslonFont = localFont({
+  src: [
+    {
+      path: '../../public/fonts/caslon-graphique.otf',
+      weight: '400',
+      style: 'normal',
+    },
+  ],
+  variable: '--font-caslon',
+  display: 'swap',
+})
