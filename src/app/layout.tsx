@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import { Suspense } from "react";
+import { adobeCleanFont, canaroFont } from "./fonts";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -47,7 +48,7 @@ export default function RootLayout({
                         `}
         </Script>
       </head>
-      <body className={`antialiased`}>
+      <body className={`${canaroFont.variable} ${adobeCleanFont.variable} antialiased font-adobe`}>
         {/* Deshabilitar debugger statements */}
         <Script id="disable-debugger" strategy="beforeInteractive">
           {`

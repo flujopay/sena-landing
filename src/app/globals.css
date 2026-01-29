@@ -1,1 +1,6 @@
 @import "tailwindcss";
+
+@theme {
+  --font-canaro: var(--font-canaro);
+  --font-adobe: var(--font-adobe);
+}

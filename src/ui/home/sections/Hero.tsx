@@ -47,14 +47,14 @@ export const Hero = () => {
       {/* Desktop Layout */}
       <div className="hidden lg:flex flex-row items-start gap-8 pt-20 px-12">
         <div className="w-[45%] flex flex-col gap-4">
-          <h1 className="text-7xl font-extrabold">
+          <h1 className="font-canaro text-7xl font-extrabold">
             El arte de <br /> cobrar{" "}
             <span className="text-[#3771d1] font-semibold italic">
               {displayText}
               <span className="animate-pulse">|</span>
             </span>
           </h1>
-          <p className="text-black text-xl font-normal max-w-[90%]">
+          <p className="font-adobe text-black text-xl  max-w-[90%]">
             Sena es una plataforma web de gestión de cuentas por cobrar que
             incluye entre sus funcionalidades un servicio de cobranza. Sena te
             ayuda a ordenar, automatizar y recuperar pagos combinando
@@ -99,7 +99,7 @@ export const Hero = () => {
 
       {/* Mobile Layout */}
       <div className="flex lg:hidden flex-col items-center gap-6 pt-8 px-6">
-        <h1 className="text-4xl sm:text-5xl font-extrabold text-center">
+        <h1 className="font-canaro text-4xl sm:text-5xl font-extrabold text-center">
           El arte de <br /> cobrar{" "}
           <span className="text-[#3771d1] font-semibold italic">
             {displayText}

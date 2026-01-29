@@ -6,7 +6,7 @@ export const OurInspiration = () => {
       <div className="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8">
         {/* Mobile Layout */}
         <div className="lg:hidden relative">
-          <h2 className="text-lg font-extrabold uppercase tracking-wide text-gray-900 lg:mb-6 text-center">
+          <h2 className="font-adobe text-lg font-black uppercase tracking-wide text-gray-900 lg:mb-6 text-center">
             NUESTRA INSPIRACIÓN
           </h2>
 
@@ -55,7 +55,7 @@ export const OurInspiration = () => {
         {/* Desktop Layout */}
         <div className="hidden lg:flex flex-row gap-16 items-start">
           <div className="w-1/2 space-y-6">
-            <h2 className="text-2xl font-extrabold uppercase tracking-wide text-gray-900 mb-12">
+            <h2 className="font-adobe text-4xl font-black uppercase tracking-wide text-gray-900 mb-12">
               NUESTRA INSPIRACIÓN
             </h2>
 

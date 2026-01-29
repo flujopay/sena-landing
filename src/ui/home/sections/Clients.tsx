@@ -52,8 +52,8 @@ export const Clients = () => {
   }));
 
   return (
-    <div className="flex flex-col items-center gap-4 md:p-8 px-2 py-8">
-      <p className="text-black font-extrabold text-base sm:text-xl text-center px-4">
+    <div className="flex flex-col items-center gap-4 md:pt-20 md:px-20 px-2 py-8">
+      <p className="text-black font-extrabold text-xl sm:text-4xl text-center px-4">
         NUESTRA TRAYECTORIA Y NUESTROS CLIENTES NOS AVALAN.
       </p>
 

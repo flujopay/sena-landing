@@ -77,7 +77,7 @@ export const Products = () => {
     <section className="px-3 py-10 max-w-[1440px] mx-auto">
       {/* Mobile Layout */}
       <div className="md:hidden">
-        <p className="text-black font-extrabold tracking-wide text-center mb-6">
+        <p className="text-black text-xl sm:text-4xl font-extrabold tracking-wide text-center mb-6">
           NUESTROS PRODUCTOS
         </p>
         <div className="flex flex-col gap-6 px-2">
@@ -97,7 +97,7 @@ export const Products = () => {
       <div className="hidden md:block bg-slate-100 rounded-3xl p-6 md:p-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
           <div className="flex flex-col gap-6">
-            <p className="text-black font-extrabold tracking-wide">
+            <p className="text-black font-extrabold tracking-wide  text-xl sm:text-4xl">
               NUESTROS PRODUCTOS
             </p>
 
