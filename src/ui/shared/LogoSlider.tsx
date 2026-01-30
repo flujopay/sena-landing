@@ -51,7 +51,7 @@ export const LogoSlider = ({ items, className = "" }: LogoSliderProps) => {
         type="button"
         onClick={() => scroll("left")}
         disabled={!canScrollLeft}
-        className={`shrink-0 w-8 h-8 flex items-center justify-center rounded-full text-[#3771d1] transition-opacity ${
+        className={`shrink-0 w-8 h-8 flex items-center justify-center rounded-full text-brand-primary-dark transition-opacity ${
           canScrollLeft ? "opacity-100" : "opacity-30 cursor-not-allowed"
         }`}
         aria-label="Anterior"

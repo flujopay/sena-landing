@@ -23,7 +23,7 @@ export const Header = ({ variant }: Props) => {
     { id: 1, name: "Productos", href: "/productos", link: false },
     { id: 2, name: "Precios", href: "/precios", link: false },
     { id: 3, name: "Nosotros", href: "/nosotros", link: true },
-    { id: 4, name: "Contacto", href: "/contacto", link: false },
+    { id: 4, name: "Blog", href: "/blog", link: false },
   ];
 
   const isActive = (href: string) => pathname === href;
@@ -47,7 +47,7 @@ export const Header = ({ variant }: Props) => {
   return (
     <>
       <div
-        className={`mx-auto max-w-[1280px] flex items-center gap-2 justify-between p-4 ${variant === "primary" ? "bg-white" : "bg-white"}`}
+        className={`mx-auto max-w-[1280px] flex items-center gap-2 justify-between p-4 ${variant === "primary" ? "" : ""}`}
       >
         <div>
           <Link href="/">
@@ -82,14 +82,20 @@ export const Header = ({ variant }: Props) => {
         </div>
 
         {/* Desktop CTA Button */}
-        <div className="hidden lg:block">
+        <div className="hidden lg:flex items-center gap-2">
           <Button
             size="md"
-            text="Contáctanos"
+            text="Iniciar sesión"
+            variant="ghost"
+            className="text-md"
+          />
+          <Button
+            size="md"
+            text="Habla con ventas"
             variant={
               variant === "primary" ? "primaryFilled" : "secondaryFilled"
             }
-            className="text-xl"
+            className="text-md"
           />
         </div>
 
@@ -97,7 +103,7 @@ export const Header = ({ variant }: Props) => {
         <div className="lg:hidden flex items-center gap-2">
           <Button
             size="sm"
-            text="Contáctanos"
+            text="Habla con ventas"
             variant="secondaryFilled"
             className="text-xs px-3 py-1.5"
           />

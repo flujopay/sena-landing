@@ -28,7 +28,7 @@ export const PlanCard = ({ plan }: { plan: TPlan }) => {
             </p>
           </div>
           {plan.popular && (
-            <span className="ml-auto bg-brand-primary text-white text-xs font-bold px-3 py-1 rounded-full">
+            <span className="ml-auto bg-brand-secondary text-white text-xs font-bold px-3 py-1 rounded-full">
               Más popular
             </span>
           )}

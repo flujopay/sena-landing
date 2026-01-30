@@ -20,7 +20,7 @@ export const PricingPlans = () => {
         "Soporte por email",
       ],
       variant: "starter",
-      cta: "Agenda una demo",
+      cta: "Contrata ahora",
     },
     {
       name: "Plan Growth",
@@ -40,7 +40,7 @@ export const PricingPlans = () => {
       ],
       variant: "growth",
       popular: true,
-      cta: "Agenda una demo",
+      cta: "Contrata ahora",
     },
     {
       name: "Plan Enterprise",
@@ -67,7 +67,7 @@ export const PricingPlans = () => {
 
   return (
     <section className="py-14 max-w-[1280px] mx-auto">
-      <div className="px-6 md:px-12 text-left">
+      <div className="px-4 md:px-12 text-left">
         <div className="flex justify-start">
           <TitleDescripction
             title="Planes diseñados"
@@ -108,8 +108,8 @@ export const PricingPlans = () => {
                 <p className="text-xs text-slate-500">{plan.subtitle}</p>
               </div>
               {plan.popular && (
-                <span className="text-sm h-9 px-4 inline-flex items-center justify-center gap-2 rounded-full font-bold transition-all bg-[#3771d1] text-white">
-                  MAS POPULAR
+                <span className="text-sm h-9 px-4 inline-flex items-center justify-center gap-2 rounded-full font-bold transition-all bg-brand-secondary text-white">
+                  Más popular
                 </span>
               )}
             </button>

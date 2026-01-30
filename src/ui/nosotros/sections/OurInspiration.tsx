@@ -2,7 +2,7 @@ import { AssetImage } from "@/lib/utils/assets/image";
 
 export const OurInspiration = () => {
   return (
-    <section className="bg-white py-12 md:py-24 max-w-[1280px] mx-auto">
+    <section className="bg-white pb-12 md:pb-24 max-w-[1280px] mx-auto">
       <div className="px-4 md:px-8">
         <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-center">
           {/* Text Content */}
@@ -41,7 +41,7 @@ export const OurInspiration = () => {
 
               <p>
                 Sena. El arte de cobrar{" "}
-                <span className="text-brand-secondary italic">bien.</span>
+                <span className="text-brand-secondary">bien.</span>
               </p>
             </div>
           </div>

@@ -1,19 +1,16 @@
 import { AssetIcon } from "@/lib/utils/assets/icon";
 import { AssetImage } from "@/lib/utils/assets/image";
-import Image from "next/image";
-import Link from "next/link";
 
 export const Footer = () => {
   return (
     <footer className="bg-[#2270D0] text-white py-12 md:py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="flex justify-center mb-10 md:mb-12">
-          <Image
-            src={AssetImage.logoBlanco}
+          <img
+            src={AssetImage.logoBlanco.src}
             alt="Sena Logo"
-            width={200}
-            height={80}
-            className="h-auto w-40 md:w-72"
+            className="w-64 md:w-100"
+
           />
         </div>
 
@@ -110,10 +107,10 @@ export const Footer = () => {
             <ul className="space-y-2 md:space-y-3 text-sm md:text-base">
               <li>
                 <a
-                  href="mailto:contacto@seniocobranza.com"
+                  href="mailto:contacto@somossena.com"
                   className="hover:text-blue-500 transition-colors duration-200 break-all"
                 >
-                  contacto@seniocobranza.com
+                  contacto@somossena.com
                 </a>
               </li>
               <li>
@@ -121,7 +118,7 @@ export const Footer = () => {
                   href="tel:+56962499909"
                   className="hover:text-blue-500 transition-colors duration-200"
                 >
-                  +56962499909
+                  +56944489673
                 </a>
               </li>
             </ul>

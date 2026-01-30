@@ -15,12 +15,12 @@ const ProductCard = ({
   description: string;
   cta: string;
 }) => (
-  <div className="bg-blue-50 rounded-2xl overflow-hidden">
-    <p className="text-blue-600 font-bold text-xl text-center py-4 whitespace-pre-line">
+  <div className="rounded-2xl overflow-hidden">
+    <p className="font-bold text-xl text-left py-4">
       {label}
     </p>
-    <div className="bg-blue-600 p-4">
-      <div className="bg-white rounded-xl h-40 flex items-center justify-center">
+    <div className="bg-brand-primary p-4 rounded-t-2xl">
+      <div className="bg-white rounded-2xl h-40 flex items-center justify-center">
         <div className="relative w-full h-full rounded-xl overflow-hidden">
           <div className="absolute inset-0 bg-slate-50" />
           <div className="absolute inset-0 flex items-center justify-center">
@@ -39,7 +39,7 @@ const ProductCard = ({
         </div>
       </div>
     </div>
-    <div className="p-4 bg-blue-50">
+    <div className="p-4 bg-white">
       <p className="text-black font-extrabold text-sm">{title}</p>
       <p className="text-slate-700 mt-2 text-sm leading-5">{description}</p>
       <Button text={cta} className="mt-4" size="sm" />
@@ -74,10 +74,10 @@ export const Products = () => {
   const active = products.find((p) => p.key === activeKey) ?? products[0];
 
   return (
-    <section className="px-3 py-10 max-w-[1280px] mx-auto">
+    <section className="max-w-[1280px] mx-auto">
       {/* Mobile Layout */}
-      <div className="md:hidden">
-        <p className="text-left text-brand-primary-dark text-xl sm:text-4xl font-extrabold tracking-wide mb-6">
+      <div className="md:hidden bg-[#F7F7F7] px-4 py-10">
+        <p className="text-left text-brand-primary-dark text-2xl sm:text-4xl font-extrabold tracking-wide mb-6">
           Nuestros
           <br />
           productos
@@ -96,7 +96,7 @@ export const Products = () => {
       </div>
 
       {/* Desktop Layout */}
-      <div className="hidden md:block bg-slate-100 rounded-3xl p-6 md:p-10">
+      <div className="hidden md:block bg-[#F7F7F7] rounded-3xl p-6 md:p-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
           <div className="flex flex-col gap-6">
             <p className="text-left text-brand-primary-dark  font-extrabold tracking-wide  text-xl sm:text-4xl">
@@ -147,7 +147,7 @@ export const Products = () => {
           </div>
 
           <div className="bg-white rounded-2xl overflow-hidden shadow-sm">
-            <div className="bg-blue-600 p-6 md:p-8">
+            <div className="bg-brand-primary p-6 md:p-8">
               <div className="bg-white rounded-xl h-48 md:h-56 flex items-center justify-center">
                 <div className="relative w-full h-full rounded-xl overflow-hidden">
                   <div className="absolute inset-0 bg-slate-50" />

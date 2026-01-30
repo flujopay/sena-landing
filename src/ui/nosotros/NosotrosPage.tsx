@@ -9,10 +9,12 @@ export const NosotrosPage = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <div className="grow">
-        <div className="bg-white max-w-[1280px] mx-auto">
-          <Header variant="primary"/>
-        </div>
-        <Hero />
+        <div className="bg-[#F9F9F9]">
+           <div className="max-w-[1280px] mx-auto">
+             <Header variant="primary" />
+             <Hero />
+           </div>
+         </div>
         <OurInspiration />
         <OurTeam />
         <SenaRecovery />

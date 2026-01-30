@@ -115,7 +115,7 @@ export const KeyFeatures = () => {
 
   return (
     <section className="py-12 mx-auto max-w-[1280px]">
-      <div className="px-6 md:px-12 text-left">
+      <div className="px-4 md:px-12 text-left">
           <TitleDescripction
             title="Funcionalidades"
             subtitle="claves"
@@ -124,7 +124,7 @@ export const KeyFeatures = () => {
       </div>
 
       <div className="mt-10">
-        <div className="py-12">
+        <div className="md:py-12">
           {/* Desktop: grid */}
           <div className="hidden md:block px-6 md:px-12">
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -140,7 +140,7 @@ export const KeyFeatures = () => {
           </div>
 
           {/* Mobile: slider */}
-          <div className="md:hidden px-2">
+          <div className="md:hidden">
             <Carousel
               dots={false}
               infinite={false}

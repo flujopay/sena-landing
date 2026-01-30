@@ -115,13 +115,13 @@ export const Carousel = ({
 
   return (
     <div className={`relative ${className}`}>
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-2 px-4">
         {isMovable && (
           <button
             type="button"
             onClick={prev}
             disabled={!cfg.infinite && current === 0}
-            className={`shrink-0 w-8 h-8 flex items-center justify-center rounded-full bg-white shadow-lg text-blue-600 transition-opacity ${
+            className={`shrink-0 w-7 h-7 flex items-center justify-center rounded-full bg-brand-primary-dark shadow-lg text-white transition-opacity ${
               !cfg.infinite && current === 0 ? "opacity-30 cursor-not-allowed" : "opacity-100 cursor-pointer"
             }`}
             aria-label="Anterior"
@@ -162,7 +162,7 @@ export const Carousel = ({
             type="button"
             onClick={next}
             disabled={!cfg.infinite && current === maxIndex}
-            className={`shrink-0 w-8 h-8 flex items-center justify-center rounded-full bg-white shadow-lg text-blue-600 transition-opacity ${
+            className={`shrink-0 w-7 h-7 flex items-center justify-center rounded-full bg-brand-primary-dark shadow-lg text-white transition-opacity ${
               !cfg.infinite && current === maxIndex ? "opacity-30 cursor-not-allowed" : "opacity-100 cursor-pointer"
             }`}
             aria-label="Siguiente"
@@ -181,7 +181,7 @@ export const Carousel = ({
               key={i}
               type="button"
               className={`w-2 h-2 rounded-full transition-colors ${
-                i === activeDot ? "bg-blue-600" : "bg-slate-300"
+                i === activeDot ? "bg-brand-primary-dark" : "bg-slate-300"
               }`}
               onClick={() => setCurrent(Math.min(i * cfg.slidesToScroll, maxIndex))}
               aria-label={`Ir a la página ${i + 1}`}
