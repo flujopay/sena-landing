@@ -19,7 +19,9 @@ export const Footer = () => {
 
         {/* Newsletter - Mobile first */}
         <div className="md:hidden mb-8">
-          <h3 className="font-bold text-xs mb-4 uppercase tracking-wide">SUSCRÍBETE A NUESTRO NEWSLETTER</h3>
+          <h3 className="font-bold text-xs mb-4 uppercase tracking-wide">
+            SUSCRÍBETE A NUESTRO NEWSLETTER
+          </h3>
           <form>
             <div className="relative border-b-2 border-gray-400 transition-colors duration-200">
               <input
@@ -40,57 +42,85 @@ export const Footer = () => {
 
         <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-6 mb-12 md:mb-16">
           <div className="space-y-3">
-            <h3 className="font-bold text-xs md:text-sm mb-3 md:mb-4 uppercase tracking-wide">EMPRESA</h3>
+            <h3 className="font-bold text-xs md:text-sm mb-3 md:mb-4 uppercase tracking-wide">
+              EMPRESA
+            </h3>
             <ul className="space-y-2 md:space-y-3 text-sm md:text-base">
               <li>
-                <Link href="/sobre-nosotros" className="hover:text-blue-500 transition-colors duration-200">
+                {/* <Link href="/sobre-nosotros" className="hover:text-blue-500 transition-colors duration-200"> */}
+                <p className="hover:text-blue-500 transition-colors duration-200">
                   Sobre nosotros
-                </Link>
+                </p>
               </li>
               <li>
-                <Link href="/sobre-recsa" className="hover:text-blue-500 transition-colors duration-200">
+                <p
+                  // href="/sobre-recsa"
+                  className="hover:text-blue-500 transition-colors duration-200"
+                >
                   Sobre Recsa
-                </Link>
+                </p>
               </li>
               <li>
-                <Link href="/faqs" className="hover:text-blue-500 transition-colors duration-200">
+                <p
+                  // href="/faqs"
+                  className="hover:text-blue-500 transition-colors duration-200"
+                >
                   FAQs
-                </Link>
+                </p>
               </li>
             </ul>
           </div>
 
           <div className="space-y-3">
-            <h3 className="font-bold text-xs md:text-sm mb-3 md:mb-4 uppercase tracking-wide">DESCUBRIR</h3>
+            <h3 className="font-bold text-xs md:text-sm mb-3 md:mb-4 uppercase tracking-wide">
+              DESCUBRIR
+            </h3>
             <ul className="space-y-2 md:space-y-3 text-sm md:text-base">
               <li>
-                <Link href="/productos" className="hover:text-blue-500 transition-colors duration-200">
+                <p
+                  // href="/productos"
+                  className="hover:text-blue-500 transition-colors duration-200"
+                >
                   Productos
-                </Link>
+                </p>
               </li>
               <li>
-                <Link href="/como-funciona" className="hover:text-blue-500 transition-colors duration-200">
+                <p
+                  // href="/como-funciona"
+                  className="hover:text-blue-500 transition-colors duration-200"
+                >
                   Cómo funciona
-                </Link>
+                </p>
               </li>
               <li>
-                <Link href="/preguntas-frecuentes" className="hover:text-blue-500 transition-colors duration-200">
+                <p
+                  // href="/preguntas-frecuentes"
+                  className="hover:text-blue-500 transition-colors duration-200"
+                >
                   Preguntas frecuentes
-                </Link>
+                </p>
               </li>
             </ul>
           </div>
 
           <div className="space-y-3">
-            <h3 className="font-bold text-xs md:text-sm mb-3 md:mb-4 uppercase tracking-wide">CONTACTO</h3>
+            <h3 className="font-bold text-xs md:text-sm mb-3 md:mb-4 uppercase tracking-wide">
+              CONTACTO
+            </h3>
             <ul className="space-y-2 md:space-y-3 text-sm md:text-base">
               <li>
-                <a href="mailto:contacto@seniocobranza.com" className="hover:text-blue-500 transition-colors duration-200 break-all">
+                <a
+                  href="mailto:contacto@seniocobranza.com"
+                  className="hover:text-blue-500 transition-colors duration-200 break-all"
+                >
                   contacto@seniocobranza.com
                 </a>
               </li>
               <li>
-                <a href="tel:+56962499909" className="hover:text-blue-500 transition-colors duration-200">
+                <a
+                  href="tel:+56962499909"
+                  className="hover:text-blue-500 transition-colors duration-200"
+                >
                   +56962499909
                 </a>
               </li>
@@ -98,29 +128,42 @@ export const Footer = () => {
           </div>
 
           <div className="space-y-3">
-            <h3 className="font-bold text-xs md:text-sm mb-3 md:mb-4 uppercase tracking-wide">LEGAL</h3>
+            <h3 className="font-bold text-xs md:text-sm mb-3 md:mb-4 uppercase tracking-wide">
+              LEGAL
+            </h3>
             <ul className="space-y-2 md:space-y-3 text-sm md:text-base">
               <li>
-                <Link href="/terminos" className="hover:text-blue-500 transition-colors duration-200">
+                <p
+                  // href="/terminos"
+                  className="hover:text-blue-500 transition-colors duration-200"
+                >
                   Términos y condiciones
-                </Link>
+                </p>
               </li>
               <li>
-                <Link href="/politicas-cookies" className="hover:text-blue-500 transition-colors duration-200">
+                <p
+                  // href="/politicas-cookies"
+                  className="hover:text-blue-500 transition-colors duration-200"
+                >
                   Políticas de cookies
-                </Link>
+                </p>
               </li>
               <li>
-                <Link href="/configuracion-cookies" className="hover:text-blue-500 transition-colors duration-200">
+                <p
+                  // href="/configuracion-cookies"
+                  className="hover:text-blue-500 transition-colors duration-200"
+                >
                   Actualizar configuración de cookies
-                </Link>
+                </p>
               </li>
             </ul>
           </div>
 
           {/* Newsletter - Desktop */}
           <div className="hidden md:block col-span-2 lg:col-span-1">
-            <h3 className="font-bold text-sm mb-6 uppercase tracking-wide">SUSCRÍBETE A NUESTRO NEWSLETTER</h3>
+            <h3 className="font-bold text-sm mb-6 uppercase tracking-wide">
+              SUSCRÍBETE A NUESTRO NEWSLETTER
+            </h3>
             <form>
               <div className="relative border-b-2 border-gray-400 transition-colors duration-200">
                 <input
@@ -141,44 +184,46 @@ export const Footer = () => {
         </div>
 
         <div className="flex flex-col md:flex-row justify-between items-center pt-6 md:pt-8 gap-4">
-          <p className="text-xs md:text-sm  order-2 md:order-1">© NILO SE 2026</p>
-          
+          <p className="text-xs md:text-sm  order-2 md:order-1">
+            © NILO SE 2026
+          </p>
+
           <div className="flex gap-5 md:gap-6 order-1 md:order-2">
-            <a 
-              href="https://facebook.com" 
-              target="_blank" 
-              rel="noopener noreferrer" 
+            <a
+              href="https://facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
               className="hover:text-[#f6793a] transition-colors duration-200"
               aria-label="Facebook"
             >
-              <AssetIcon.facebook width={22} height={22}/>
+              <AssetIcon.facebook width={22} height={22} />
             </a>
-            <a 
-              href="https://instagram.com" 
-              target="_blank" 
-              rel="noopener noreferrer" 
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
               className="hover:text-blue-500 transition-colors duration-200"
               aria-label="Instagram"
             >
-              <AssetIcon.instagram width={22} height={22}/>
+              <AssetIcon.instagram width={22} height={22} />
             </a>
-            <a 
-              href="https://linkedin.com" 
-              target="_blank" 
-              rel="noopener noreferrer" 
+            <a
+              href="https://linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer"
               className="hover:text-blue-500 transition-colors duration-200"
               aria-label="LinkedIn"
             >
-              <AssetIcon.linkedin width={22} height={22}/>
+              <AssetIcon.linkedin width={22} height={22} />
             </a>
-            <a 
-              href="https://youtube.com" 
-              target="_blank" 
-              rel="noopener noreferrer" 
+            <a
+              href="https://youtube.com"
+              target="_blank"
+              rel="noopener noreferrer"
               className="hover:text-blue-500 transition-colors duration-200"
               aria-label="YouTube"
             >
-              <AssetIcon.youtube width={22} height={22}/>
+              <AssetIcon.youtube width={22} height={22} />
             </a>
           </div>
         </div>
@@ -186,4 +231,3 @@ export const Footer = () => {
     </footer>
   );
 };
-
