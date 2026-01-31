@@ -1,7 +1,12 @@
 "use client";
 
+import { useModalStore } from "@/lib/store/modalStore";
+import { AssetImage } from "@/lib/utils/assets/image";
+import { AssetVideo } from "@/lib/utils/assets/video";
+import Image from "next/image";
 import { useMemo, useState } from "react";
 import { TitleDescripction } from "../../shared/TitleDescripction";
+import { VideoModal } from "../../shared/VideoModal";
 
 type StepKey = "prepara" | "cobra" | "evalua" | "recupera" | "concilia";
 
@@ -23,7 +28,8 @@ export const HowItWorks = () => {
         number: 2,
         title: "2. Cobra",
         subtitle: "CRM multicanal con WhatsApp, email y SMS.",
-        description:"Secuencias inteligentes segmentadas por vencimiento, monto y comportamiento.",
+        description:
+          "Secuencias inteligentes segmentadas por vencimiento, monto y comportamiento.",
       },
       {
         key: "evalua" as const,
@@ -31,8 +37,7 @@ export const HowItWorks = () => {
         number: 3,
         title: "3. Evalua",
         subtitle: "Métricas de conversión, aperturas y rendimiento por canal.",
-        description:
-          "Mejora tu estrategia con datos reales.",
+        description: "Mejora tu estrategia con datos reales.",
       },
       {
         key: "recupera" as const,
@@ -48,8 +53,9 @@ export const HowItWorks = () => {
         number: 5,
         title: "5. Concilia",
         subtitle: "Registro automático de pagos recibidos.",
-        description:
-          "Cierre de facturas sin trabajo manual ni errores.",
+        description: "Cierre de facturas sin trabajo manual ni errores.",
+        image: AssetImage.conciliator1,
+        video: AssetVideo.conciliar,
       },
     ],
     [],
@@ -58,19 +64,38 @@ export const HowItWorks = () => {
   const [activeKey, setActiveKey] = useState<StepKey>(steps[0].key);
   const activeIndex = steps.findIndex((s) => s.key === activeKey);
   const active = steps[activeIndex] ?? steps[0];
+  const { showModal } = useModalStore();
+
+  const handleVideoClick = () => {
+    const stepWithVideo = active as any;
+    if (stepWithVideo.video && window.innerWidth >= 768) {
+      showModal({
+        content: (
+          <VideoModal
+            videoSrc={stepWithVideo.video}
+            title={"Concilia con Sena"}
+          />
+        ),
+        width: "690px",
+        showCloseButton: true,
+        showHeader: false,
+        closeOnOutsideClick: true,
+      });
+    }
+  };
 
   return (
     <section className="bg-[#F9F9F9]">
-      <div  className="py-12 max-w-[1280px] mx-auto">
+      <div className="py-12 max-w-[1280px] mx-auto">
         <div className="px-4 md:px-12 text-left">
-              <div className="flex justify-start">
-                <TitleDescripction
-                  title="Cómo"
-                  subtitle="funciona"
-                  description="Cinco pasos para transformar tu cobranza"
-                />
-              </div>
-            </div>
+          <div className="flex justify-start">
+            <TitleDescripction
+              title="Cómo"
+              subtitle="funciona"
+              description="Cinco pasos para transformar tu cobranza"
+            />
+          </div>
+        </div>
 
         <div className="mt-10 px-4 md:px-12 mx-auto">
           <div className="rounded-2xl pb-5 md:pb-8">
@@ -95,23 +120,96 @@ export const HowItWorks = () => {
             </div>
 
             <div className="mt-6 md:mt-8 rounded-xl bg-[#EDEDED]">
-              <div className="p-6 md:p-10 grid grid-cols-2 gap-8 items-center">
-                <div className="bg-white rounded-xl h-56 md:h-64 flex items-center justify-center justify-self-center w-full max-w-xl">
-                  <div className="relative w-full h-full rounded-xl overflow-hidden">
-                    <div className="absolute inset-0 bg-slate-50" />
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="w-16 h-16 rounded-full bg-slate-200/70 flex items-center justify-center">
-                        <svg
-                          width="28"
-                          height="28"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
+              <div className="p-6 md:p-10 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                <div className="bg-linear-to-br from-slate-50 to-slate-100 rounded-xl h-56 md:h-80 flex items-center justify-center justify-self-center w-full max-w-xl shadow-lg">
+                  <div
+                    className="relative w-full h-full rounded-xl overflow-hidden group"
+                    onClick={handleVideoClick}
+                  >
+                    {active.image ? (
+                      <>
+                        <Image
+                          src={active.image}
+                          alt={active.title}
+                          fill
+                          className="object-cover"
+                        />
+                        <div className="absolute inset-0 bg-linear-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                        <div className="hidden md:flex absolute inset-0 items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                          <div className="w-16 h-16 cursor-pointer rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center shadow-xl">
+                            <svg
+                              width="32"
+                              height="32"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path d="M8 5V19L19 12L8 5Z" fill="#1E40AF" />
+                            </svg>
+                          </div>
+                        </div>
+                        <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                          <div className="bg-white/90 backdrop-blur-sm rounded-full px-3 py-1.5 text-xs font-semibold text-brand-primary shadow-lg">
+                            {active.label}
+                          </div>
+                        </div>
+                      </>
+                    ) : (active as any).video ? (
+                      <>
+                        <video
+                          key={active.key}
+                          className="absolute inset-0 w-full h-full object-cover md:cursor-pointer"
+                          autoPlay
+                          loop
+                          muted
+                          playsInline
                         >
-                          <path d="M9 7.5V16.5L16.5 12L9 7.5Z" fill="#64748B" />
-                        </svg>
-                      </div>
-                    </div>
+                          <source
+                            src={(active as any).video}
+                            type="video/mp4"
+                          />
+                        </video>
+                        <div className="absolute inset-0 bg-linear-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                        <div className="hidden md:flex absolute inset-0 items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                          <div className="w-16 h-16 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center shadow-xl">
+                            <svg
+                              width="32"
+                              height="32"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path d="M8 5V19L19 12L8 5Z" fill="#1E40AF" />
+                            </svg>
+                          </div>
+                        </div>
+                        <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                          <div className="bg-white/90 backdrop-blur-sm rounded-full px-3 py-1.5 text-xs font-semibold text-brand-primary shadow-lg">
+                            {active.label}
+                          </div>
+                        </div>
+                      </>
+                    ) : (
+                      <>
+                        <div className="absolute inset-0 bg-slate-50" />
+                        <div className="absolute inset-0 flex items-center justify-center">
+                          <div className="w-16 h-16 rounded-full bg-slate-200/70 flex items-center justify-center">
+                            <svg
+                              width="28"
+                              height="28"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M9 7.5V16.5L16.5 12L9 7.5Z"
+                                fill="#64748B"
+                              />
+                            </svg>
+                          </div>
+                        </div>
+                      </>
+                    )}
                   </div>
                 </div>
 
@@ -130,7 +228,6 @@ export const HowItWorks = () => {
                     {active.description}
                   </p>
                 </div>
-
               </div>
             </div>
 
@@ -155,8 +252,6 @@ export const HowItWorks = () => {
           </div>
         </div>
       </div>
-
-     
     </section>
   );
 };

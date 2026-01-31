@@ -3,6 +3,7 @@ import Script from "next/script";
 import { Suspense } from "react";
 import { adobeCleanFont, canaroFont, caslonFont } from "./fonts";
 import "./globals.css";
+import { ModalRenderer } from "@/ui/shared/ModalRender";
 
 export const metadata: Metadata = {
   title: "Sena - El mejor CRM de cobranza y pagos B2B",
@@ -48,7 +49,9 @@ export default function RootLayout({
                         `}
         </Script>
       </head>
-      <body className={`${canaroFont.variable} ${adobeCleanFont.variable} ${caslonFont.variable} antialiased font-adobe`}>
+      <body
+        className={`${canaroFont.variable} ${adobeCleanFont.variable} ${caslonFont.variable} antialiased font-adobe`}
+      >
         {/* Deshabilitar debugger statements */}
         <Script id="disable-debugger" strategy="beforeInteractive">
           {`
@@ -71,6 +74,7 @@ export default function RootLayout({
           ></iframe>
         </noscript>
         <Suspense>{children}</Suspense>
+        <ModalRenderer />
       </body>
     </html>
   );

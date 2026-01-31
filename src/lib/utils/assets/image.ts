@@ -17,6 +17,7 @@ import rioSena from "@/public/images/rio_sena.jpg";
 import senaLogoOrange from "@/public/images/sena_logo_orange.png";
 import telefonicaLogo from "@/public/images/telefonica_logo.png";
 import topSpaceLogo from "@/public/images/top_space_logo.png";
+import conciliar from "@/public/images/concilia.png";
 
 export class AssetImage {
   static logoBlack = logoBlack;

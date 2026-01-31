@@ -6,9 +6,11 @@ import linkedin from "@/public/icons/linkedin.svg"
 import menu from "@/public/icons/menu.svg"
 import monitoring from "@/public/icons/monitoring.svg"
 import nodes from "@/public/icons/nodes.svg"
+import plus from "@/public/icons/plus.svg"
 import rings from "@/public/icons/rings.svg"
 import xMark from "@/public/icons/x-mark.svg"
 import youtube from "@/public/icons/youtube.svg"
+
 export class AssetIcon { 
       static facebook = facebook
       static instagram = instagram
@@ -20,4 +22,5 @@ export class AssetIcon {
       static nodes = nodes
       static monitoring = monitoring
       static architecture = architecture
+      static plus = plus
 }
