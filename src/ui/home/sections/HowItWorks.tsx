@@ -52,7 +52,7 @@ export const HowItWorks = () => {
         label: "5. Concilia",
         number: 5,
         title: "5. Concilia",
-        subtitle: "Registro automático de pagos recibidos.",
+        subtitle: "Registro automático de tus pagos.",
         description: "Cierre de facturas sin trabajo manual ni errores.",
         image: AssetImage.conciliator1,
         video: AssetVideo.conciliar,
