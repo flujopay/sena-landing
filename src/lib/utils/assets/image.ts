@@ -17,27 +17,26 @@ import rioSena from "@/public/images/rio_sena.jpg";
 import senaLogoOrange from "@/public/images/sena_logo_orange.png";
 import telefonicaLogo from "@/public/images/telefonica_logo.png";
 import topSpaceLogo from "@/public/images/top_space_logo.png";
-import conciliar from "@/public/images/concilia.png";
-
+import sincroniza from "@/public/images/sincroniza.png";
 export class AssetImage {
   static logoBlack = logoBlack;
-  static home1 = home1
-  static home2 = home2
-  static nosotros1 = nosotros1
-  static rioSena = rioSena
-  static senaLogoOrange = senaLogoOrange
-  static conciliator1 = conciliator1
-  static conciliatorNavbar = conciliatorNavbar
-  static cientificaLogo = cientificaLogo
-  static proweldLogo = proweldLogo
-  static aquariusConsultingLogo = aquariusConsultingLogo
-  static telefonicaLogo = telefonicaLogo
-  static maruzLogo = maruzLogo
-  static aomLogo = aomLogo
-  static topSpaceLogo = topSpaceLogo
-  static home3 = home3
-  static logoBlanco = logoBlanco
-  static nosotros2 = nosotros2
-  static home4 = home4
-
+  static home1 = home1;
+  static home2 = home2;
+  static nosotros1 = nosotros1;
+  static rioSena = rioSena;
+  static senaLogoOrange = senaLogoOrange;
+  static conciliator1 = conciliator1;
+  static conciliatorNavbar = conciliatorNavbar;
+  static cientificaLogo = cientificaLogo;
+  static proweldLogo = proweldLogo;
+  static aquariusConsultingLogo = aquariusConsultingLogo;
+  static telefonicaLogo = telefonicaLogo;
+  static maruzLogo = maruzLogo;
+  static aomLogo = aomLogo;
+  static topSpaceLogo = topSpaceLogo;
+  static home3 = home3;
+  static logoBlanco = logoBlanco;
+  static nosotros2 = nosotros2;
+  static home4 = home4;
+  static sincroniza = sincroniza;
 }

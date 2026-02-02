@@ -16,9 +16,7 @@ const ProductCard = ({
   cta: string;
 }) => (
   <div className="rounded-2xl overflow-hidden">
-    <p className="font-bold text-xl text-left py-4">
-      {label}
-    </p>
+    <p className="font-bold text-xl text-left py-4">{label}</p>
     <div className="bg-brand-primary p-4 rounded-t-2xl">
       <div className="bg-white rounded-2xl h-40 flex items-center justify-center">
         <div className="relative w-full h-full rounded-xl overflow-hidden">
@@ -74,7 +72,7 @@ export const Products = () => {
   const active = products.find((p) => p.key === activeKey) ?? products[0];
 
   return (
-    <section className="max-w-[1280px] mx-auto">
+    <section id="productos" className="max-w-[1280px] mx-auto">
       {/* Mobile Layout */}
       <div className="md:hidden bg-[#F7F7F7] px-4 py-10">
         <p className="text-left text-brand-primary-dark text-2xl sm:text-4xl font-extrabold tracking-wide mb-6">
@@ -101,7 +99,7 @@ export const Products = () => {
           <div className="flex flex-col gap-6">
             <p className="text-left text-brand-primary-dark  font-extrabold tracking-wide  text-xl sm:text-4xl">
               Nuestros
-              <br/>
+              <br />
               productos
             </p>
 

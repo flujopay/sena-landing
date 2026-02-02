@@ -66,7 +66,7 @@ export const PricingPlans = () => {
   const [selectedPlan, setSelectedPlan] = useState(0);
 
   return (
-    <section className="py-14 max-w-[1280px] mx-auto">
+    <section id="precios" className="py-14 max-w-[1280px] mx-auto">
       <div className="px-4 md:px-12 text-left">
         <div className="flex justify-start">
           <TitleDescripction
@@ -94,17 +94,31 @@ export const PricingPlans = () => {
             >
               <div
                 className={`w-6 h-6 rounded-full border-2 flex items-center justify-center ${
-                  selectedPlan === index ? "border-[#3771d1] bg-white" : "border-slate-300"
+                  selectedPlan === index
+                    ? "border-[#3771d1] bg-white"
+                    : "border-slate-300"
                 }`}
               >
                 {selectedPlan === index && (
-                  <svg className="w-4 h-4 text-[#3771d1]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                  <svg
+                    className="w-4 h-4 text-[#3771d1]"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth={3}
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M5 13l4 4L19 7"
+                    />
                   </svg>
                 )}
               </div>
               <div className="flex-1 text-left">
-                <p className="font-bold text-sm text-black">{plan.name.toUpperCase()}</p>
+                <p className="font-bold text-sm text-black">
+                  {plan.name.toUpperCase()}
+                </p>
                 <p className="text-xs text-slate-500">{plan.subtitle}</p>
               </div>
               {plan.popular && (
@@ -127,7 +141,7 @@ export const PricingPlans = () => {
           <PlanCard plan={plans[0]} />
 
           <PlanCard plan={plans[1]} />
-        
+
           <PlanCard plan={plans[2]} />
         </div>
       </div>

@@ -57,17 +57,19 @@ export const Hero = () => {
           </h1>
           <p className="font-adobe text-black text-xl max-w-[90%]">
             Sena es una plataforma web de{" "}
-            <span className="font-bold">gestión de cuentas por cobrar</span>{" "}
-            que incluye un servicio de cobranza. Sena te ayuda a{" "}
-            <span className="font-bold">ordenar, automatizar y recuperar pagos</span>{" "}
+            <span className="font-bold">gestión de cuentas por cobrar</span> que
+            incluye un servicio de cobranza. Sena te ayuda a{" "}
+            <span className="font-bold">
+              ordenar, automatizar y recuperar pagos
+            </span>{" "}
             combinando tecnología, inteligencia artificial y personas expertas.
           </p>
         </div>
         <div className="w-[40%] flex justify-end">
-          <img 
-            src={AssetImage.home4.src} 
-            alt="home" 
-            className="w-full max-h-[340px] object-contain" 
+          <img
+            src={AssetImage.home4.src}
+            alt="home"
+            className="w-full max-h-[340px] object-contain"
           />
         </div>
       </div>
@@ -87,35 +89,37 @@ export const Hero = () => {
         {/* Título arriba */}
         <div className="flex ">
           <div className="flex flex-col gap-4">
-                <h1 className="text-brand-primary-dark font-canaro text-3xl font-extrabold">
-                  El arte de <br /> cobrar{" "}
-                  <span className="text-brand-primary font-semibold font-caslon">
-                    {displayText}
-                    <span className="animate-pulse">|</span>
-                    <span className="text-brand-secondary">.</span>
-                  </span>
-                </h1>
+            <h1 className="text-brand-primary-dark font-canaro text-3xl font-extrabold">
+              El arte de <br /> cobrar{" "}
+              <span className="text-brand-primary font-semibold font-caslon">
+                {displayText}
+                <span className="animate-pulse">|</span>
+                <span className="text-brand-secondary">.</span>
+              </span>
+            </h1>
 
-              {/* Descripción + Imagen en fila */}
-                <div className="flex flex-row gap-2">
-                  <p className="font-adobe text-black text-md xs:text-xs flex-1">
-                    Sena es una plataforma web de{" "}
-                    <span className="font-bold">gestión de cuentas por cobrar</span>{" "}
-                    que incluye un servicio de cobranza. Sena te ayuda a{" "}
-                    <span className="font-bold">ordenar, automatizar y recuperar pagos</span>{" "}
-                    combinando tecnología, inteligencia artificial y personas expertas.
-                  </p>
-                </div>
-              </div>
-              
+            {/* Descripción + Imagen en fila */}
+            <div className="flex flex-row gap-2">
+              <p className="font-adobe text-black text-md xs:text-xs flex-1">
+                Sena es una plataforma web de{" "}
+                <span className="font-bold">gestión de cuentas por cobrar</span>{" "}
+                que incluye un servicio de cobranza. Sena te ayuda a{" "}
+                <span className="font-bold">
+                  ordenar, automatizar y recuperar pagos
+                </span>{" "}
+                combinando tecnología, inteligencia artificial y personas
+                expertas.
+              </p>
+            </div>
+          </div>
 
-              <img 
-                src={AssetImage.home4.src} 
-                alt="home" 
-                className="flex-1 my-auto max-h-[200px] object-contain" 
-              />
+          <img
+            src={AssetImage.home4.src}
+            alt="home"
+            className="flex-1 my-auto max-h-[200px] object-contain"
+          />
         </div>
-     
+
         {/* Botones abajo */}
         <div className="flex flex-row items-start gap-2">
           <Button text="Agenda una demo" size="sm" className="text-xs" />

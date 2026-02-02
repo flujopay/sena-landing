@@ -8,9 +8,14 @@ import Button from "./Button";
 type VideoModalProps = {
   videoSrc: string;
   title: string;
+  description: string;
 };
 
-export const VideoModal: React.FC<VideoModalProps> = ({ videoSrc, title }) => {
+export const VideoModal: React.FC<VideoModalProps> = ({
+  videoSrc,
+  title,
+  description,
+}) => {
   const { hideModal } = useModalStore();
   const [isLoading, setIsLoading] = useState(true);
 
@@ -29,10 +34,7 @@ export const VideoModal: React.FC<VideoModalProps> = ({ videoSrc, title }) => {
             onClick={hideModal}
           />
         </div>
-        <p className="text-[#4B5675] text-md leading-[16px]">
-          Administra y crea conciliaciones para mantener el control entre tus
-          pagos y documentos.
-        </p>
+        <p className="text-[#4B5675] text-md leading-[16px]">{description}</p>
       </div>
       <div className="flex-1 rounded-xl overflow-hidden shadow-lg relative bg-white min-h-[315px] flex items-center justify-center">
         {isLoading && (
@@ -97,7 +99,7 @@ export const VideoModal: React.FC<VideoModalProps> = ({ videoSrc, title }) => {
         <p className="text-[#4B5675] text-md leading-[16px]">
           <span className="font-bold">Sena</span>, el arte de cobrar bien
         </p>
-        <Button text="Agenda tu demo" onClick={hideModal} />
+        <Button text="Agenda tu demo" onClick={() => {}} />
       </div>
     </div>
   );

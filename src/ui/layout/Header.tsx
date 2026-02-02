@@ -20,10 +20,10 @@ export const Header = ({ variant }: Props) => {
     variant === "primary" ? AssetImage.logoBlack : AssetImage.logoBlack;
 
   const sectiosnNavbar = [
-    { id: 1, name: "Productos", href: "/productos", link: false },
-    { id: 2, name: "Precios", href: "/precios", link: false },
-    { id: 3, name: "Nosotros", href: "/nosotros", link: true },
-    { id: 4, name: "Blog", href: "/blog", link: false },
+    { id: 1, name: "Productos", href: "#productos", type: "scroll" as const },
+    { id: 2, name: "Precios", href: "#precios", type: "scroll" as const },
+    { id: 3, name: "Nosotros", href: "/nosotros", type: "redirect" as const },
+    { id: 4, name: "Blog", href: "/blog", type: "redirect" as const },
   ];
 
   const isActive = (href: string) => pathname === href;
@@ -44,6 +44,24 @@ export const Header = ({ variant }: Props) => {
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
+  const handleScrollToSection = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    sectionId: string,
+  ) => {
+    e.preventDefault();
+    setIsMenuOpen(false);
+
+    if (pathname !== "/") {
+      window.location.href = `/#${sectionId}`;
+      return;
+    }
+
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
   return (
     <>
       <div
@@ -57,28 +75,50 @@ export const Header = ({ variant }: Props) => {
 
         {/* Desktop Navigation */}
         <div className="hidden lg:flex items-center justify-between gap-12">
-          {sectiosnNavbar.map((section) =>
-            section.link ? (
-              <Link key={section.id} href={section.href}>
-                <p
+          {sectiosnNavbar.map((section) => {
+            if (section.type === "redirect") {
+              return (
+                <Link key={section.id} href={section.href}>
+                  <p
+                    className={`${
+                      variant === "primary"
+                        ? "text-brand-primary-dark"
+                        : "text-blue-500"
+                    } font-semibold ${getActiveClass(section.href)}`}
+                  >
+                    {section.name}
+                  </p>
+                </Link>
+              );
+            }
+
+            if (section.type === "scroll") {
+              const sectionId = section.href.replace("#", "");
+              return (
+                <a
+                  key={section.id}
+                  href={section.href}
+                  onClick={(e) => handleScrollToSection(e, sectionId)}
                   className={`${
                     variant === "primary"
                       ? "text-brand-primary-dark"
                       : "text-blue-500"
-                  } font-semibold ${getActiveClass(section.href)}`}
+                  } font-semibold cursor-pointer hover:opacity-80 transition-opacity`}
                 >
                   {section.name}
-                </p>
-              </Link>
-            ) : (
-              <p
-                key={section.id}
-                className="font-semibold text-gray-400 cursor-default"
-              >
-                {section.name}
-              </p>
-            ),
-          )}
+                </a>
+              );
+            }
+
+            // return (
+            //   <p
+            //     key={section.id}
+            //     className="font-semibold text-gray-400 cursor-default"
+            //   >
+            //     {section.name}
+            //   </p>
+            // );
+          })}
         </div>
 
         {/* Desktop CTA Button */}
@@ -134,28 +174,59 @@ export const Header = ({ variant }: Props) => {
         }`}
       >
         <div className="flex flex-col items-center justify-center h-full gap-8 px-6">
-          {sectiosnNavbar.map((section, index) => (
-            <Link
-              key={section.id}
-              href={section.href}
-              onClick={() => setIsMenuOpen(false)}
-              className={`transform transition-all duration-500 ease-out ${
-                isMenuOpen
-                  ? "translate-y-0 opacity-100"
-                  : "translate-y-8 opacity-0"
-              }`}
-              style={{
-                transitionDelay: isMenuOpen ? `${index * 100}ms` : "0ms",
-              }}
-            >
-              <p
-                className={`text-3xl font-bold text-blue-500 hover:text-[#f6793a] transition-colors ${getMobileActiveClass(section.href)}`}
-              >
-                {section.name}
-              </p>
-            </Link>
-          ))}
+          {sectiosnNavbar.map((section, index) => {
+            const baseClasses = `transform transition-all duration-500 ease-out ${
+              isMenuOpen
+                ? "translate-y-0 opacity-100"
+                : "translate-y-8 opacity-0"
+            }`;
+            const baseStyle = {
+              transitionDelay: isMenuOpen ? `${index * 100}ms` : "0ms",
+            };
 
+            if (section.type === "scroll") {
+              const sectionId = section.href.replace("#", "");
+              return (
+                <a
+                  key={section.id}
+                  href={section.href}
+                  onClick={(e) => handleScrollToSection(e, sectionId)}
+                  className={baseClasses}
+                  style={baseStyle}
+                >
+                  <p className="text-3xl font-bold text-blue-500 hover:text-[#f6793a] transition-colors">
+                    {section.name}
+                  </p>
+                </a>
+              );
+            }
+
+            if (section.type === "redirect") {
+              return (
+                <Link
+                  key={section.id}
+                  href={section.href}
+                  onClick={() => setIsMenuOpen(false)}
+                  className={baseClasses}
+                  style={baseStyle}
+                >
+                  <p
+                    className={`text-3xl font-bold text-blue-500 hover:text-[#f6793a] transition-colors ${getMobileActiveClass(section.href)}`}
+                  >
+                    {section.name}
+                  </p>
+                </Link>
+              );
+            }
+
+            // return (
+            //   <div key={section.id} className={baseClasses} style={baseStyle}>
+            //     <p className="text-3xl font-bold text-gray-400 cursor-default">
+            //       {section.name}
+            //     </p>
+            //   </div>
+            // );
+          })}
           <div
             className={`mt-8 transform transition-all duration-500 ease-out ${
               isMenuOpen

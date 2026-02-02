@@ -8,22 +8,24 @@ import { useMemo, useState } from "react";
 import { TitleDescripction } from "../../shared/TitleDescripction";
 import { VideoModal } from "../../shared/VideoModal";
 
-type StepKey = "prepara" | "cobra" | "evalua" | "recupera" | "concilia";
+type StepKey = "Prepara" | "Cobra" | "Evalua" | "Recupera" | "Concilia";
 
 export const HowItWorks = () => {
   const steps = useMemo(
     () => [
       {
-        key: "prepara" as const,
+        key: "Prepara" as const,
         label: "1. Prepara",
         number: 1,
         title: "1. Prepara",
         subtitle: "Ordena facturas, contactos y montos automáticamente.",
         description:
           "El sistema estructura toda la información para una gestión eficiente.",
+        image: AssetImage.sincroniza,
+        video: AssetVideo.prepara,
       },
       {
-        key: "cobra" as const,
+        key: "Cobra" as const,
         label: "2. Cobra",
         number: 2,
         title: "2. Cobra",
@@ -32,7 +34,7 @@ export const HowItWorks = () => {
           "Secuencias inteligentes segmentadas por vencimiento, monto y comportamiento.",
       },
       {
-        key: "evalua" as const,
+        key: "Evalua" as const,
         label: "3. Evalua",
         number: 3,
         title: "3. Evalua",
@@ -40,7 +42,7 @@ export const HowItWorks = () => {
         description: "Mejora tu estrategia con datos reales.",
       },
       {
-        key: "recupera" as const,
+        key: "Recupera" as const,
         label: "4. Recupera",
         number: 4,
         title: "4. Recupera",
@@ -48,7 +50,7 @@ export const HowItWorks = () => {
           "Cuando hace falta entra el equipo humano de Recsa, quienes cuidando tu marca y relación con el cliente, realizan las gestiones de recupero, lo que llevamos haciendo por más de 40 años.",
       },
       {
-        key: "concilia" as const,
+        key: "Concilia" as const,
         label: "5. Concilia",
         number: 5,
         title: "5. Concilia",
@@ -73,7 +75,8 @@ export const HowItWorks = () => {
         content: (
           <VideoModal
             videoSrc={stepWithVideo.video}
-            title={"Concilia con Sena"}
+            title={`${stepWithVideo.label} con Sena`}
+            description={stepWithVideo.description}
           />
         ),
         width: "690px",
