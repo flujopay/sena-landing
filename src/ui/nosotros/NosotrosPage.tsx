@@ -1,5 +1,6 @@
 import { Footer } from "@/ui/layout/Footer";
 import { Header } from "@/ui/layout/Header";
+import Whatsapp from "../shared/WhatsApp";
 import { Hero } from "./sections/Hero";
 import { OurInspiration } from "./sections/OurInspiration";
 import { OurTeam } from "./sections/OurTeam";
@@ -11,15 +12,19 @@ export const NosotrosPage = () => {
       <Header variant="primary" />
       <div className="grow">
         <div className="bg-[#F9F9F9]">
-           <div className="max-w-[1280px] mx-auto">
-             <Hero />
-           </div>
-         </div>
+          <div className="max-w-[1280px] mx-auto">
+            <Hero />
+          </div>
+        </div>
         <OurInspiration />
         <OurTeam />
         <SenaRecovery />
       </div>
       <Footer />
+      <Whatsapp
+        message="Hola, vi su web y quiero saber más sobre Flujolink y cómo funciona."
+        animated
+      />
     </div>
   );
 };

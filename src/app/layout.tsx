@@ -1,10 +1,13 @@
+import { getIpInfoServer } from "@/lib/services/ipConfigService.server";
 import { ModalRenderer } from "@/ui/shared/ModalRender";
+import { Toast } from "@/ui/shared/Toast";
 import type { Metadata } from "next";
 import Script from "next/script";
 import { Suspense } from "react";
 import { adobeCleanFont, canaroFont, caslonFont } from "./fonts";
 import "./globals.css";
 import Providers from "./providers";
+import { getCountriesServer } from "@/lib/services/countryService.server";
 
 export const metadata: Metadata = {
   title: "Sena - El mejor CRM de cobranza y pagos B2B",
@@ -27,13 +30,19 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const [ipInfo, countries] = await Promise.all([
+    getIpInfoServer(),
+    getCountriesServer(),
+  ]);
+  const country = ipInfo?.country || null;
+
   return (
-    <Providers>
+    <Providers country={country} countries={countries}>
       <html lang="es" dir="ltr">
         <head>
           {/* Google Tag Manager Script (carga diferida) */}
@@ -77,6 +86,7 @@ export default function RootLayout({
           </noscript>
           <Suspense>{children}</Suspense>
           <ModalRenderer />
+          <Toast />
         </body>
       </html>
     </Providers>

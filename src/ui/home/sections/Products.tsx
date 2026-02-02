@@ -186,7 +186,7 @@ export const Products = () => {
                   <Image
                     src={active.image}
                     alt={active.title}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover rounded-xl"
                   />
                 </div>
               )}

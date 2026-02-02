@@ -32,3 +32,11 @@ export type TModal = {
   parentModalIdentifier?: string;
   elementId?: number | string;
 };
+
+export type TToastProps = {
+  message: string;
+  subMessage?: string;
+  iconType: "success" | "error" | "warning";
+  actionUrl?: { label: string; url?: string; handleButton?: () => void };
+  width?: string;
+};

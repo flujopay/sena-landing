@@ -49,6 +49,7 @@ export const HowItWorks = () => {
         label: "4. Recupera",
         number: 4,
         title: "4. Recupera",
+        subtitle: "Equipo humano especializado en recuperación de deuda.",
         description:
           "Cuando hace falta entra el equipo humano de Recsa, quienes cuidando tu marca y relación con el cliente, realizan las gestiones de recupero, lo que llevamos haciendo por más de 40 años.",
       },
@@ -132,7 +133,24 @@ export const HowItWorks = () => {
                     className="relative w-full h-full rounded-xl overflow-hidden group"
                     onClick={handleVideoClick}
                   >
-                    {active.image ? (
+                    {activeKey === "Recupera" ? (
+                      <div className="bg-white w-full mx-auto rounded-xl h-full flex items-center justify-center overflow-visible relative">
+                        <div className="w-[280px] h-full mr-20 rounded-xl overflow-hidden">
+                          <Image
+                            src={AssetImage.home3}
+                            alt={active.title}
+                            className="w-full h-full object-cover object-top"
+                          />
+                        </div>
+                        <div className="absolute bottom-4 right-10 w-28 md:h-64 rounded-lg overflow-hidden shadow-xl border-2 border-white">
+                          <Image
+                            src={AssetImage.conciliatorNavbar}
+                            alt="Dashboard"
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                      </div>
+                    ) : active.image ? (
                       <>
                         <Image
                           src={active.image}
