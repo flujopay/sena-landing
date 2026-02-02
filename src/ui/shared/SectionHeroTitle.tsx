@@ -10,7 +10,7 @@ export const SectionHeroTitle = ({
   orangeItalicText,
 }: Props) => {
   return (
-    <section className={`${bgColor} flex items-center justify-center mt-12 mb-8 max-w-[1280px] mx-auto pb-24`}>
+    <section className={`${bgColor} flex items-center justify-center pt-12 mb-8 max-w-[1280px] mx-auto pb-24`}>
       <div className="p-4 md:px-10">
         <h1 className="font-canaro text-5xl md:text-5xl lg:text-7xl font-extrabold text-center max-w-[650px] mx-auto">
           <span className="text-brand-primary-dark">{whiteText}</span>{" "}
