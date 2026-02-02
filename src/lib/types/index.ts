@@ -1,5 +1,12 @@
 import { ReactNode } from "react";
 
+export type TCountry = {
+  id: number;
+  country: string;
+  country_code: string;
+  icon: string;
+};
+
 export type TModal = {
   content: ReactNode;
   modalClassName?: string;
