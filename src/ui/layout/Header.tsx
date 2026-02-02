@@ -12,8 +12,6 @@ type Props = {
   variant: "primary" | "secondary";
 };
 
-const HEADER_HEIGHT = 72;
-
 export const Header = ({ variant }: Props) => {
   const pathname = usePathname();
   const router = useRouter();
@@ -38,17 +36,18 @@ export const Header = ({ variant }: Props) => {
       : "underline decoration-brand-secondary !text-brand-primary underline-offset-4";
   };
 
-  const handleNavClick = (section: typeof sectiosnNavbar[0]) => {
+  const handleNavClick = (section: (typeof sectiosnNavbar)[0]) => {
     hideModal();
     if (section.type === "scroll") {
+      const sectionId = section.href.replace("#", "");
       if (pathname === "/") {
-        const element = document.getElementById(section.scrollTo);
+        const element = document.getElementById(sectionId);
         if (element) {
-          const top = element.offsetTop - HEADER_HEIGHT;
+          const top = element.offsetTop;
           window.scrollTo({ top, behavior: "smooth" });
         }
       } else {
-        router.push(section.href);
+        window.location.href = `/#${sectionId}`;
       }
     } else if (section.type === "redirect") {
       router.push(section.href);
@@ -77,14 +76,10 @@ export const Header = ({ variant }: Props) => {
               <button
                 key={section.id}
                 onClick={() => handleNavClick(section)}
-                className={`py-4 border-b border-gray-100 text-left ${
-                  section.type === "redirect" ? "cursor-pointer" : "cursor-default"
-                }`}
+                className="py-4 border-b border-gray-100 text-left cursor-pointer"
               >
                 <span
-                  className={`text-lg font-bold ${
-                    section.type === "redirect" ? "text-black" : "text-gray-400"
-                  } ${getActiveClass(section.href)}`}
+                  className={`text-lg font-bold text-black ${getActiveClass(section.href)}`}
                 >
                   {section.name}
                 </span>
@@ -145,50 +140,19 @@ export const Header = ({ variant }: Props) => {
 
         {/* Desktop Navigation */}
         <div className="hidden lg:flex items-center justify-between gap-12">
-          {sectiosnNavbar.map((section) => {
-            if (section.type === "redirect") {
-              return (
-              <button
-                key={section.id}
-                onClick={() => handleNavClick(section)}
-                className={`${
-                  variant === "primary"
-                    ? "text-brand-primary-dark"
-                    : "text-blue-500"
-                } font-semibold cursor-pointer ${getActiveClass(section.href)}`}
-              >
-                {section.name}
-              </button>
-              );
-            }
-
-            if (section.type === "scroll") {
-              const sectionId = section.href.replace("#", "");
-              return (
-                <a
-                  key={section.id}
-                  href={section.href}
-                  onClick={(e) => handleScrollToSection(e, sectionId)}
-                  className={`${
-                    variant === "primary"
-                      ? "text-brand-primary-dark"
-                      : "text-blue-500"
-                  } font-semibold cursor-pointer hover:opacity-80 transition-opacity`}
-                >
-                  {section.name}
-                </a>
-              );
-            }
-
-            // return (
-            //   <p
-            //     key={section.id}
-            //     className="font-semibold text-gray-400 cursor-default"
-            //   >
-            //     {section.name}
-            //   </p>
-            // );
-          })}
+          {sectiosnNavbar.map((section) => (
+            <button
+              key={section.id}
+              onClick={() => handleNavClick(section)}
+              className={`${
+                variant === "primary"
+                  ? "text-brand-primary-dark"
+                  : "text-blue-500"
+              } font-semibold cursor-pointer ${getActiveClass(section.href)}`}
+            >
+              {section.name}
+            </button>
+          ))}
         </div>
 
         {/* Desktop CTA Button */}

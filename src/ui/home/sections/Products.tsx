@@ -72,7 +72,7 @@ export const Products = () => {
   const active = products.find((p) => p.key === activeKey) ?? products[0];
 
   return (
-    <section id="productos" className="max-w-[1280px] mx-auto">
+    <section id="productos" className="max-w-[1280px] mx-auto pt-28">
       {/* Mobile Layout */}
       <div className="md:hidden bg-[#F7F7F7] px-4 py-10">
         <p className="text-left text-brand-primary-dark text-2xl sm:text-4xl font-extrabold tracking-wide mb-6">

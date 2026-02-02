@@ -88,8 +88,8 @@ export const HowItWorks = () => {
   };
 
   return (
-    <section className="bg-[#F9F9F9]">
-      <div className="py-12 max-w-[1280px] mx-auto">
+    <section id="como-funciona" className="bg-[#F9F9F9] pt-28 ">
+      <div className="max-w-[1280px] mx-auto">
         <div className="px-4 md:px-12 text-left">
           <div className="flex justify-start">
             <TitleDescripction

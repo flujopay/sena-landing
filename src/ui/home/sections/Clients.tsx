@@ -52,7 +52,7 @@ export const Clients = () => {
   }));
 
   return (
-    <div className="mx-auto max-w-[1280px] flex flex-col items-center gap-4 md:pt-20  px-2 py-8">
+    <div className="mx-auto max-w-[1280px] flex flex-col items-center gap-4 md:pt-20  px-2 pt-8">
       <p className="text-brand-primary-dark font-extrabold text-xl sm:text-4xl text-center px-4">
         Nuestra trayectoria y nuestros clientes nos avalan
       </p>

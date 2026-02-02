@@ -81,6 +81,12 @@ export const Hero = () => {
           variant="primaryDarkOutlined"
           size="md"
           className="text-xl"
+          onClick={() => {
+            const element = document.getElementById("como-funciona");
+            if (element) {
+              element.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
+          }}
         />
       </div>
 
@@ -128,6 +134,12 @@ export const Hero = () => {
             variant="primaryDarkOutlined"
             size="sm"
             className="text-xs"
+            onClick={() => {
+              const element = document.getElementById("como-funciona");
+              if (element) {
+                element.scrollIntoView({ behavior: "smooth", block: "start" });
+              }
+            }}
           />
         </div>
       </div>

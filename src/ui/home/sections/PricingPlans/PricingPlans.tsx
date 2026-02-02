@@ -66,7 +66,7 @@ export const PricingPlans = () => {
   const [selectedPlan, setSelectedPlan] = useState(0);
 
   return (
-    <section id="precios" className="py-14 max-w-[1280px] mx-auto">
+    <section id="precios" className="py-14 max-w-[1280px] mx-auto pt-28">
       <div className="px-4 md:px-12 text-left">
         <div className="flex justify-start">
           <TitleDescripction
