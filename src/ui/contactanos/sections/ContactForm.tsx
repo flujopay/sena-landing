@@ -1,18 +1,54 @@
 "use client";
 
+import { useCountries } from "@/lib/services/countryService";
 import Button from "@/ui/shared/Button";
 import { Input } from "@/ui/shared/Input";
-import { useState } from "react";
+import SimpleCountrySelect, { OptionSelect } from "@/ui/shared/SimpleCountrySelect";
+import { useMemo, useState } from "react";
 
 export const ContactForm = () => {
+  const { data: countries = [] } = useCountries();
+
+  console.log('countries',countries)
+
   const [formData, setFormData] = useState({
     nombreCompleto: "",
     apellido: "",
     email: "",
+    countryCode: "+51",
     celular: "",
     nombreEmpresa: "",
     comoLlegaste: "",
   });
+
+  const countryOptions = useMemo(() => {
+    if (!countries.length) return [];
+
+    const priorityCountries = ['+51', '+56', '+57', '+593', '+52'];
+    const priorityItems: OptionSelect[] = [];
+    const otherItems: OptionSelect[] = [];
+
+    countries.forEach((item) => {
+      const option: OptionSelect = {
+        id: item.country,
+        label: item.country,
+        icon: item.icon,
+        subValue: item.country,
+      };
+
+      if (priorityCountries.includes(item.country)) {
+        priorityItems.push(option);
+      } else {
+        otherItems.push(option);
+      }
+    });
+
+    priorityItems.sort((a, b) => {
+      return priorityCountries.indexOf(a.id) - priorityCountries.indexOf(b.id);
+    });
+
+    return [...priorityItems, ...otherItems];
+  }, [countries]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -78,6 +114,14 @@ export const ContactForm = () => {
                     value={formData.celular}
                     onChange={handleChange}
                     required
+                    placeholder="Número"
+                    leftElement={
+                      <SimpleCountrySelect
+                        value={formData.countryCode}
+                        onChange={(code) => setFormData((prev) => ({ ...prev, countryCode: code }))}
+                        options={countryOptions}
+                      />
+                    }
                   />
                 </div>
 
