@@ -3,6 +3,7 @@ import aquariusConsultingLogo from "@/public/images/aquarius_consulting_logo.png
 import cientificaLogo from "@/public/images/cientifica_logo.png";
 import conciliator1 from "@/public/images/conciliator1.png";
 import conciliatorNavbar from "@/public/images/conciliator_navbar.jpg";
+import contactanos1 from "@/public/images/contactanos1.png";
 import home1 from "@/public/images/home1.png";
 import home2 from "@/public/images/home2.png";
 import home3 from "@/public/images/home3.png";
@@ -17,8 +18,7 @@ import rioSena from "@/public/images/rio_sena.jpg";
 import senaLogoOrange from "@/public/images/sena_logo_orange.png";
 import telefonicaLogo from "@/public/images/telefonica_logo.png";
 import topSpaceLogo from "@/public/images/top_space_logo.png";
-import conciliar from "@/public/images/concilia.png";
-
+  
 export class AssetImage {
   static logoBlack = logoBlack;
   static home1 = home1
@@ -39,5 +39,5 @@ export class AssetImage {
   static logoBlanco = logoBlanco
   static nosotros2 = nosotros2
   static home4 = home4
-
+  static contactanos1 = contactanos1
 }

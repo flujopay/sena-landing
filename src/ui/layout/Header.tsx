@@ -1,29 +1,32 @@
 "use client";
 
+import { useModalStore } from "@/lib/store/modalStore";
 import { AssetIcon } from "@/lib/utils/assets/icon";
 import { AssetImage } from "@/lib/utils/assets/image";
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { usePathname, useRouter } from "next/navigation";
 import Button from "../shared/Button";
 
 type Props = {
   variant: "primary" | "secondary";
 };
 
+const HEADER_HEIGHT = 72;
+
 export const Header = ({ variant }: Props) => {
   const pathname = usePathname();
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const router = useRouter();
+  const { showModal, hideModal } = useModalStore();
 
   const logo =
     variant === "primary" ? AssetImage.logoBlack : AssetImage.logoBlack;
 
   const sectiosnNavbar = [
-    { id: 1, name: "Productos", href: "/productos", link: false },
-    { id: 2, name: "Precios", href: "/precios", link: false },
-    { id: 3, name: "Nosotros", href: "/nosotros", link: true },
-    { id: 4, name: "Blog", href: "/blog", link: false },
+    { id: 1, name: "Productos", href: "/#productos", link: true, scrollTo: "productos" },
+    { id: 2, name: "Precios", href: "/#precios", link: true, scrollTo: "precios" },
+    { id: 3, name: "Nosotros", href: "/nosotros", link: true, scrollTo: null },
+    { id: 4, name: "Blog", href: "/blog", link: false, scrollTo: null },
   ];
 
   const isActive = (href: string) => pathname === href;
@@ -35,17 +38,85 @@ export const Header = ({ variant }: Props) => {
       : "underline decoration-brand-secondary !text-brand-primary underline-offset-4";
   };
 
-  const getMobileActiveClass = (href: string) => {
-    if (!isActive(href)) return "";
-    return variant === "primary"
-      ? "underline decoration-brand-secondary !text-brand-primary underline-offset-4"
-      : "underline decoration-brand-secondary !text-brand-primary underline-offset-4";
+  const handleNavClick = (section: typeof sectiosnNavbar[0]) => {
+    hideModal();
+    if (section.scrollTo) {
+      if (pathname === "/") {
+        const element = document.getElementById(section.scrollTo);
+        if (element) {
+          const top = element.offsetTop - HEADER_HEIGHT;
+          window.scrollTo({ top, behavior: "smooth" });
+        }
+      } else {
+        router.push(section.href);
+      }
+    } else if (section.link) {
+      router.push(section.href);
+    }
   };
 
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  const openMobileMenu = () => {
+    showModal({
+      content: (
+        <div className="flex flex-col h-full bg-white">
+          <div className="flex items-center justify-between p-4 border-b border-gray-100">
+            <Link href="/" onClick={() => hideModal()}>
+              <Image src={logo} alt="Logo" className="w-36" />
+            </Link>
+            <button
+              onClick={() => hideModal()}
+              className="p-2"
+              aria-label="Cerrar menú"
+            >
+              <AssetIcon.xMark width={24} height={24} className="text-black" />
+            </button>
+          </div>
+
+          <div className="flex flex-col px-6 py-4">
+            {sectiosnNavbar.map((section) => (
+              <button
+                key={section.id}
+                onClick={() => handleNavClick(section)}
+                disabled={!section.link}
+                className={`py-4 border-b border-gray-100 text-left ${
+                  section.link ? "cursor-pointer" : "cursor-default"
+                }`}
+              >
+                <span
+                  className={`text-lg font-bold ${
+                    section.link ? "text-black" : "text-gray-400"
+                  } ${getActiveClass(section.href)}`}
+                >
+                  {section.name}
+                </span>
+              </button>
+            ))}
+          </div>
+
+          <div className="px-6 mt-4">
+            <Button
+              size="md"
+              text="Habla con ventas"
+              variant="primaryFilled"
+              className="w-[200px]"
+              onClick={() => {
+                hideModal();
+                router.push("/contactanos");
+              }}
+            />
+          </div>
+        </div>
+      ),
+      showHeader: false,
+      width: "100%",
+      height: "100vh",
+      modalClassName: "lg:hidden",
+      contentClassName: "!rounded-none !max-h-full",
+    });
+  };
 
   return (
-    <>
+    <header className="sticky top-0 z-50 bg-[#f9f9f9]">
       <div
         className={`mx-auto max-w-[1280px] flex items-center gap-2 justify-between p-4 ${variant === "primary" ? "" : ""}`}
       >
@@ -59,17 +130,17 @@ export const Header = ({ variant }: Props) => {
         <div className="hidden lg:flex items-center justify-between gap-12">
           {sectiosnNavbar.map((section) =>
             section.link ? (
-              <Link key={section.id} href={section.href}>
-                <p
-                  className={`${
-                    variant === "primary"
-                      ? "text-brand-primary-dark"
-                      : "text-blue-500"
-                  } font-semibold ${getActiveClass(section.href)}`}
-                >
-                  {section.name}
-                </p>
-              </Link>
+              <button
+                key={section.id}
+                onClick={() => handleNavClick(section)}
+                className={`${
+                  variant === "primary"
+                    ? "text-brand-primary-dark"
+                    : "text-blue-500"
+                } font-semibold cursor-pointer ${getActiveClass(section.href)}`}
+              >
+                {section.name}
+              </button>
             ) : (
               <p
                 key={section.id}
@@ -96,6 +167,7 @@ export const Header = ({ variant }: Props) => {
               variant === "primary" ? "primaryFilled" : "secondaryFilled"
             }
             className="text-md"
+            onClick={() => router.push("/contactanos")}
           />
         </div>
 
@@ -106,72 +178,17 @@ export const Header = ({ variant }: Props) => {
             text="Habla con ventas"
             variant="secondaryFilled"
             className="text-xs px-3 py-1.5"
+            onClick={() => router.push("/contactanos")}
           />
           <button
-            onClick={toggleMenu}
+            onClick={openMobileMenu}
             className="p-2 z-50"
-            aria-label={isMenuOpen ? "Cerrar menú" : "Abrir menú"}
+            aria-label="Abrir menú"
           >
-            {isMenuOpen ? (
-              <AssetIcon.xMark
-                width={28}
-                height={28}
-                className="text-[#f6793a]"
-              />
-            ) : (
-              <AssetIcon.menu width={28} height={28} />
-            )}
+            <AssetIcon.menu width={28} height={28} />
           </button>
         </div>
       </div>
-
-      {/* Mobile Menu Overlay */}
-      <div
-        className={`fixed inset-0 bg-white z-40 lg:hidden transition-all duration-500 ease-in-out ${
-          isMenuOpen
-            ? "opacity-100 translate-y-0"
-            : "opacity-0 -translate-y-full pointer-events-none"
-        }`}
-      >
-        <div className="flex flex-col items-center justify-center h-full gap-8 px-6">
-          {sectiosnNavbar.map((section, index) => (
-            <Link
-              key={section.id}
-              href={section.href}
-              onClick={() => setIsMenuOpen(false)}
-              className={`transform transition-all duration-500 ease-out ${
-                isMenuOpen
-                  ? "translate-y-0 opacity-100"
-                  : "translate-y-8 opacity-0"
-              }`}
-              style={{
-                transitionDelay: isMenuOpen ? `${index * 100}ms` : "0ms",
-              }}
-            >
-              <p
-                className={`text-3xl font-bold text-blue-500 hover:text-[#f6793a] transition-colors ${getMobileActiveClass(section.href)}`}
-              >
-                {section.name}
-              </p>
-            </Link>
-          ))}
-
-          <div
-            className={`mt-8 transform transition-all duration-500 ease-out ${
-              isMenuOpen
-                ? "translate-y-0 opacity-100"
-                : "translate-y-8 opacity-0"
-            }`}
-            style={{
-              transitionDelay: isMenuOpen
-                ? `${sectiosnNavbar.length * 100}ms`
-                : "0ms",
-            }}
-          >
-            <Button size="md" text="Comenzar ahora" variant="secondaryFilled" />
-          </div>
-        </div>
-      </div>
-    </>
+    </header>
   );
 };

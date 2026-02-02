@@ -6,7 +6,6 @@ export const SenaRecovery = () => {
      <section className="max-w-[1280px] mx-auto px-4 pb-12">
           <div className="rounded-2xl overflow-hidden">
             <div className="flex flex-row items-center justify-center">
-              
               {/* Image */}
               <div className="md:shrink-0 ">
                 <img
@@ -27,7 +26,6 @@ export const SenaRecovery = () => {
                       <Button variant="primaryDarkOutlined" text="Habla con ventas" className="h-8 px-6 text-sm md:h-13 md:px-8 md:text-base" />
                 </div>
               </div>
-    
             </div>
           </div>
         </section>

@@ -11,10 +11,10 @@ import { Products } from "./sections/Products";
 export const HomePage = () => {
   return (
     <div className="min-h-screen flex flex-col ">
+      <Header variant="primary" />
       <div className="grow">
         <div className="bg-[#F9F9F9]">
           <div className="max-w-[1280px] mx-auto">
-            <Header variant="primary" />
             <Hero />
           </div>
         </div>
