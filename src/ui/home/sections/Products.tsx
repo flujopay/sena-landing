@@ -1,5 +1,7 @@
 "use client";
+import { AssetImage } from "@/lib/utils/assets/image";
 import Button from "@/ui/shared/Button";
+import Image, { StaticImageData } from "next/image";
 import { useMemo, useState } from "react";
 
 type ProductKey = "autogestion" | "recuperacion";
@@ -9,32 +11,44 @@ const ProductCard = ({
   title,
   description,
   cta,
+  image,
+  productKey,
 }: {
   label: string;
   title: string;
   description: string;
   cta: string;
+  image: StaticImageData;
+  productKey: ProductKey;
 }) => (
   <div className="rounded-2xl overflow-hidden">
     <p className="font-bold text-xl text-left py-4">{label}</p>
     <div className="bg-brand-primary p-4 rounded-t-2xl">
-      <div className="bg-white rounded-2xl h-40 flex items-center justify-center">
-        <div className="relative w-full h-full rounded-xl overflow-hidden">
-          <div className="absolute inset-0 bg-slate-50" />
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="w-14 h-14 rounded-full bg-slate-200/70 flex items-center justify-center">
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="M9 7.5V16.5L16.5 12L9 7.5Z" fill="#64748B" />
-              </svg>
+      <div className="bg-white rounded-2xl h-40 flex items-center justify-center overflow-visible relative">
+        {productKey === "recuperacion" ? (
+          <>
+            <div className="w-[85%] h-full rounded-xl overflow-hidden">
+              <Image
+                src={AssetImage.home3}
+                alt={title}
+                className="w-full h-full object-cover object-top"
+              />
             </div>
-          </div>
-        </div>
+            <div className="absolute bottom-2 right-0 w-28 h-24 rounded-lg overflow-hidden shadow-xl border-2 border-white">
+              <Image
+                src={AssetImage.conciliatorNavbar}
+                alt="Dashboard"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </>
+        ) : (
+          <Image
+            src={image}
+            alt={title}
+            className="w-full h-full object-cover"
+          />
+        )}
       </div>
     </div>
     <div className="p-4 bg-white">
@@ -55,6 +69,7 @@ export const Products = () => {
         description:
           "Organiza facturas, automatiza recordatorios y controla todo tu ciclo de cobranza desde un solo lugar.",
         cta: "Agenda una demo",
+        image: AssetImage.autogestion,
       },
       {
         key: "recuperacion" as const,
@@ -63,6 +78,7 @@ export const Products = () => {
         description:
           "Combina tecnología y un equipo especializado para gestionar casos complejos y mejorar tu tasa de recuperación.",
         cta: "Conoce más",
+        image: AssetImage.recuperaGirl,
       },
     ],
     [],
@@ -88,6 +104,8 @@ export const Products = () => {
               title={p.title}
               description={p.description}
               cta={p.cta}
+              image={p.image}
+              productKey={p.key}
             />
           ))}
         </div>
@@ -146,24 +164,32 @@ export const Products = () => {
 
           <div className="bg-white rounded-2xl overflow-hidden shadow-sm">
             <div className="bg-brand-primary p-6 md:p-8">
-              <div className="bg-white rounded-xl h-48 md:h-56 flex items-center justify-center">
-                <div className="relative w-full h-full rounded-xl overflow-hidden">
-                  <div className="absolute inset-0 bg-slate-50" />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-16 h-16 rounded-full bg-slate-200/70 flex items-center justify-center">
-                      <svg
-                        width="28"
-                        height="28"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path d="M9 7.5V16.5L16.5 12L9 7.5Z" fill="#64748B" />
-                      </svg>
-                    </div>
+              {activeKey === "recuperacion" ? (
+                <div className="bg-white w-[80%] mx-auto rounded-xl h-48 md:h-56 flex items-center justify-center overflow-visible relative">
+                  <div className="w-[160px] ml-16 h-full rounded-xl overflow-hidden">
+                    <Image
+                      src={AssetImage.home3}
+                      alt={active.title}
+                      className="w-full h-full object-cover object-top"
+                    />
+                  </div>
+                  <div className="absolute bottom-4 -right-10 w-22 h-48 rounded-lg overflow-hidden shadow-xl border-2 border-white">
+                    <Image
+                      src={AssetImage.conciliatorNavbar}
+                      alt="Dashboard"
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                 </div>
-              </div>
+              ) : (
+                <div className="bg-white rounded-xl h-48 md:h-56 flex items-center justify-center overflow-visible relative">
+                  <Image
+                    src={active.image}
+                    alt={active.title}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              )}
             </div>
 
             <div className="p-6 md:p-8 bg-slate-100">

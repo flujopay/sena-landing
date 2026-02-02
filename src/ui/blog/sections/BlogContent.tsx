@@ -89,6 +89,9 @@ export const BlogContent = ({ featuredPost, otherPosts }: BlogContentProps) => {
               src={featuredPost.image}
               width={800}
               height={500}
+              sizes="(max-width: 768px) 100vw, 40vw"
+              priority
+              loading="eager"
               className="w-full h-full object-cover"
             />
           </div>
@@ -138,6 +141,7 @@ export const BlogContent = ({ featuredPost, otherPosts }: BlogContentProps) => {
                 src={post.image}
                 alt={post.title}
                 fill
+                sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover"
               />
             </div>

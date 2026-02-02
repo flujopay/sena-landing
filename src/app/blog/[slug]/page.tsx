@@ -1,5 +1,5 @@
 import { blogPosts } from "@/lib/data/blogPosts";
-import SinglePostPage from "@/ui/blog/SinglePostPage";
+import { SinglePostPage } from "@/ui/blog/SinglePostPage";
 import { notFound } from "next/navigation";
 
 type Params = Promise<{ slug: string }>;

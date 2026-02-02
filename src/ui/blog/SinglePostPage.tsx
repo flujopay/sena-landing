@@ -108,7 +108,8 @@ const renderContentBlock = (block: any, index: number) => {
             alt="Contenido del blog"
             width={900}
             height={500}
-            className="w-full rounded-xl"
+            className="w-full h-auto rounded-xl"
+            sizes="100vw"
           />
         </div>
       );
@@ -118,7 +119,7 @@ const renderContentBlock = (block: any, index: number) => {
   }
 };
 
-const SinglePostPage = ({ post }: { post: BlogPost }) => {
+export const SinglePostPage = ({ post }: { post: BlogPost }) => {
   const [email, setEmail] = useState("");
 
   const relatedPosts = blogPosts
@@ -132,7 +133,7 @@ const SinglePostPage = ({ post }: { post: BlogPost }) => {
   return (
     <div className="min-h-screen flex flex-col">
       <Header variant="primary" />
-      <section className="bg-white px-4 md:px-10 lg:px-52 pt-36 pb-32 font-adobe">
+      <section className="bg-white px-4 md:px-10 lg:px-52 py-6 font-adobe">
         {/* Cabecera */}
         <div className="max-w-[900px] mx-auto">
           <Link
@@ -161,13 +162,16 @@ const SinglePostPage = ({ post }: { post: BlogPost }) => {
             <span>{post.date}</span>
           </div>
 
-          <Image
-            src={post.image}
-            alt={`Sena - ${post.title}`}
-            width={1000}
-            height={500}
-            className="w-full rounded-2xl object-cover mb-10"
-          />
+          <div className="relative w-full h-[380px] rounded-2xl overflow-hidden mb-10">
+            <Image
+              src={post.image}
+              alt={`Sena - ${post.title}`}
+              fill
+              priority
+              sizes="(max-width: 768px) 100vw, 900px"
+              className="object-cover"
+            />
+          </div>
         </div>
 
         {/* Contenido */}
@@ -253,5 +257,3 @@ const SinglePostPage = ({ post }: { post: BlogPost }) => {
     </div>
   );
 };
-
-export default SinglePostPage;

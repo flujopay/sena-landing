@@ -1,519 +1,520 @@
 import { BlogPost } from "../types/blog";
+import { AssetImageBlog } from "../utils/assets/imageBlog";
 import { parseSpanishDate, slug } from "../utils/blog";
 
 export const featuredPostId = 1;
 
 export const blogPosts: BlogPost[] = [
-  {
-    id: 1,
-    slug: slug(
-      "¿Cómo evitar fraudes en pagos? Elude facturas falsas y logra la protección de tu empresa",
-    ),
-    title:
-      "¿Cómo evitar fraudes en pagos? Elude facturas falsas y logra la protección de tu empresa",
-    intro:
-      "Las facturas falsas pueden presentarse de diversas formas, ya que pueden derivarse de facturas ideológicamente falsas, que no corresponden a transacciones reales y se presentan para obtener financiamiento de empresas de factoring; corrupción interna por empleados que estén ejerciendo prácticas fraudulentas o redes de corrupción, es decir, que se amplía llegando a involucrar a inversionistas o fondos completos de inversión que terminan asumiendo pérdidas. ",
-    date: "5 de marzo 2025",
-    author: "Flujolink",
-    tags: ["Prensa"],
-    image: "/images/blog/blog1/main.jpg",
-    content: [
-      {
-        type: "quote",
-        text: "El Servicio de Impuestos Internos (SII) detectó el uso de facturas falsas que habrían permitido una defraudación de más de $440 mil millones entre 2023 y 2024, produciendo que en este último año se bloquearan temporalmente las claves tributarias de al menos 27 mil RUT de empresas.",
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "text",
-            text: "Las facturas falsas pueden presentarse de diversas formas, ya que pueden derivarse de facturas ideológicamente falsas, que no corresponden a transacciones reales y se presentan para obtener financiamiento de empresas de factoring; corrupción interna por empleados que estén ejerciendo prácticas fraudulentas o redes de corrupción, es decir, que se amplía llegando a involucrar a inversionistas o fondos completos de inversión que terminan asumiendo pérdidas.",
-          },
-        ],
-      },
+  // {
+  //   id: 1,
+  //   slug: slug(
+  //     "¿Cómo evitar fraudes en pagos? Elude facturas falsas y logra la protección de tu empresa",
+  //   ),
+  //   title:
+  //     "¿Cómo evitar fraudes en pagos? Elude facturas falsas y logra la protección de tu empresa",
+  //   intro:
+  //     "Las facturas falsas pueden presentarse de diversas formas, ya que pueden derivarse de facturas ideológicamente falsas, que no corresponden a transacciones reales y se presentan para obtener financiamiento de empresas de factoring; corrupción interna por empleados que estén ejerciendo prácticas fraudulentas o redes de corrupción, es decir, que se amplía llegando a involucrar a inversionistas o fondos completos de inversión que terminan asumiendo pérdidas. ",
+  //   date: "5 de marzo 2025",
+  //   author: "Sena",
+  //   tags: ["Prensa"],
+  //   image: AssetImageBlog.blog_1_main.src,
+  //   content: [
+  //     {
+  //       type: "quote",
+  //       text: "El Servicio de Impuestos Internos (SII) detectó el uso de facturas falsas que habrían permitido una defraudación de más de $440 mil millones entre 2023 y 2024, produciendo que en este último año se bloquearan temporalmente las claves tributarias de al menos 27 mil RUT de empresas.",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       fragments: [
+  //         {
+  //           type: "text",
+  //           text: "Las facturas falsas pueden presentarse de diversas formas, ya que pueden derivarse de facturas ideológicamente falsas, que no corresponden a transacciones reales y se presentan para obtener financiamiento de empresas de factoring; corrupción interna por empleados que estén ejerciendo prácticas fraudulentas o redes de corrupción, es decir, que se amplía llegando a involucrar a inversionistas o fondos completos de inversión que terminan asumiendo pérdidas.",
+  //         },
+  //       ],
+  //     },
 
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "text",
-            text: "Un informe sobre emisión de facturas, que fue publicado en septiembre del año pasado, dio a conocer que ",
-          },
-          {
-            type: "bold",
-            text: "las facturas fraudulentas han aumentado hasta en un 92% en 2024, alcanzando un monto superior a los $38 mil millones.",
-          },
-        ],
-      },
-      {
-        type: "quote",
-        text: "“Este incremento en el país se debe a una mayor sofisticación de los esquemas fraudulentos, principalmente la evolución de las redes de fraude, como empresas de papel y patrones de comportamiento tributario agresivo en evasión de controles”, indica Giovanni Medrano Ríos, CEO de Flujolink.",
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "text",
-            text: "También, son vulnerados sectores específicos con mayor frecuencia, tales como: industrias de construcción y servicios, lo que se debe por la complejidad de sus operaciones y la gestión de grandes montos de dinero que, junto con un ciclo económico negativo, genera desaceleración económica, desprotegiendo a las empresas, exponiéndolas a prácticas ilícitas.",
-          },
-          {
-            type: "bold",
-            text: " que, junto con un ciclo económico negativo, genera desaceleración económica, desprotegiendo a las empresas, exponiéndolas a prácticas ilícitas.",
-          },
-        ],
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "text",
-            text: "Para combatir estas malas  prácticas se necesita utilizar mecanismos más seguros como la digitalización de las aprobaciones y validación temprana de la información.",
-          },
-        ],
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "bold",
-            text: "La digitalización sugiere el uso de softwares que gestionen facturas posterior a su emisión, ",
-          },
-          {
-            type: "text",
-            text: "porque estos permiten automatizar la recepción, añadido clasificación y validación de estos documentos en tiempo real, reduciendo errores humanos y el riesgo de fraudes. Además,",
-          },
-          {
-            type: "bold",
-            text: "la integración  con sistemas ERP conecta los procesos de cuentas por pagar, ",
-          },
-          {
-            type: "text",
-            text: "garantizando que las facturas coincidan con órdenes de compra.",
-          },
-        ],
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "text",
-            text: "Por otro lado,",
-          },
-          {
-            type: "bold",
-            text: "la validación temprana, contiene la verificación de autenticidad",
-          },
-          {
-            type: "text",
-            text: "de los emisores mediante cruces automáticos con bases de datos de clientes propios y/o contra bases de datos oficiales, como el SII; en esta línea, la ",
-          },
-          {
-            type: "bold",
-            text: "trazabilidad con tecnología blockchain ",
-          },
-          {
-            type: "text",
-            text: "podría asegurar que las facturas no hayan sido alteradas desde su emisión ",
-          },
-          {
-            type: "bold",
-            text: "y la revisión cruzada ",
-          },
-          {
-            type: "text",
-            text: "para comparar facturas, contratos y órdenes de compra para identificar inconsistencias o emisiones no autorizadas.",
-          },
-        ],
-      },
-      {
-        type: "quote",
-        text: "La implementación de estas prácticas preventivas no solo fortalece la transparencia y eficiencia en la gestión de facturas, sino que también refuerza la confianza entre las partes involucradas, contribuyendo a un ecosistema financiero más seguro y confiable”, finaliza Medrano.",
-      },
-    ],
-  },
-  {
-    id: 2,
-    slug: slug("Evita-retrasos-mejora-pagos-protege-tu- negocio-Flujolink"),
-    title:
-      "La digitalización de pagos y cobranzas: clave para la estabilidad financiera de las empresas peruanas.",
-    intro:
-      "En el Perú, los retrasos en los pagos de facturas no solo afectan la liquidez de las empresas, sino que generan una cadena de consecuencias que pueden impactar seriamente la sostenibilidad del negocio. Muchas veces, estos retrasos no se deben a la falta de fondos, sino a procesos internos mal integrados, sistemas dispersos y aprobaciones burocráticas.",
-    date: "10 de marzo 2025",
-    author: "Antonella Hernandez",
-    tags: ["Prensa"],
-    image: "/images/blog/blog2/main.jpg",
-    content: [
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "text",
-            text: "En el Perú, los retrasos en los pagos de facturas no solo afectan la liquidez de las empresas, sino que generan una cadena de consecuencias que pueden impactar seriamente la sostenibilidad del negocio. Muchas veces, estos retrasos no se deben a la falta de fondos, sino a procesos internos mal integrados, sistemas dispersos y aprobaciones burocráticas.",
-          },
-        ],
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "text",
-            text: "Este problema fue analizado por nuestro CEO, ",
-          },
-          {
-            type: "bold",
-            text: "Giovanni Medrano Ríos",
-          },
-          {
-            type: "text",
-            text: ", en una entrevista publicada en ",
-          },
-          {
-            type: "link",
-            text: "Ecommerce News Perú",
-            href: "https://www.ecommercenews.pe/pagos-online/2025/la-digitalizacion-de-pagos-y-cobranzas-clave-para-la-estabilidad-financiera-de-las-empresas-peruanas.html/",
-          },
-          {
-            type: "text",
-            text: ", donde se abordó la importancia de adoptar tecnologías que digitalicen y automaticen los flujos de pagos y cobranzas.",
-          },
-        ],
-      },
-      {
-        type: "subtitle",
-        text: "El verdadero costo de los retrasos en pagos",
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "text",
-            text: "Cuando una empresa no gestiona correctamente sus cuentas por pagar, puede enfrentar:",
-          },
-        ],
-      },
-      {
-        type: "list",
-        items: [
-          [
-            {
-              type: "bold",
-              text: "Sobrecarga operativa",
-            },
-            {
-              type: "text",
-              text: ": El manejo manual de facturas en múltiples plataformas eleva los tiempos, errores y riesgo de fraude.",
-            },
-          ],
-          [
-            {
-              type: "bold",
-              text: "Relaciones comerciales deterioradas",
-            },
-            {
-              type: "text",
-              text: ": El incumplimiento constante debilita la confianza de proveedores y afecta futuras condiciones comerciales.",
-            },
-          ],
-          [
-            {
-              type: "bold",
-              text: "Problemas legales y reputacionales",
-            },
-            {
-              type: "text",
-              text: ": En casos extremos, los impagos pueden escalar a acciones judiciales o perjudicar la imagen empresarial.",
-            },
-          ],
-          [
-            {
-              type: "bold",
-              text: "Pérdida de visibilidad",
-            },
-            {
-              type: "text",
-              text: ": La falta de centralización impide anticipar salidas de caja y coordinar pagos a tiempo.",
-            },
-          ],
-        ],
-      },
-      {
-        type: "image",
-        link: "https://drive.google.com/uc?export=view&id=18qzaPCpuuCAQywXfb8IxMCZmwX7IJy75",
-      },
-      {
-        type: "subtitle",
-        text: "¿Cómo puede ayudar la digitalización?",
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "text",
-            text: "Para evitar este tipo de escenarios, es fundamental que las empresas modernicen su cadena de pagos. Desde Flujolink, recomendamos:",
-          },
-        ],
-      },
-      {
-        type: "subtitle",
-        text: "1. Visibilidad en tiempo real",
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "text",
-            text: "Involucrar a todas las áreas clave (Finanzas, Compras, Tesorería) en un sistema que centralice la información y reduzca errores o fraudes.",
-          },
-        ],
-      },
-      {
-        type: "subtitle",
-        text: "2. Aprobaciones digitales ágiles",
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "text",
-            text: "Implementar flujos de validación seguros que reduzcan la burocracia, sin perder control sobre las decisiones financieras.",
-          },
-        ],
-      },
-      {
-        type: "subtitle",
-        text: "3. Integración de procesos",
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "text",
-            text: "Concentrar en una única plataforma todo el ciclo: recepción, revisión, aprobación y pago de facturas.",
-          },
-        ],
-      },
-      {
-        type: "subtitle",
-        text: "4. Alertas y automatización",
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "text",
-            text: "Activar recordatorios de vencimientos y pagos pendientes para evitar retrasos innecesarios.",
-          },
-        ],
-      },
-      {
-        type: "quote",
-        text: "“Muchas veces el problema no es la falta de dinero, sino la falta de control. Con herramientas como Flujolink, las empresas pueden anticiparse a los retrasos, gestionar sus flujos de pago con precisión y reducir el desgaste operativo”, comentó Medrano.",
-      },
-      {
-        type: "subtitle",
-        text: "📎 Lee la nota completa en Ecommerce News",
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "text",
-            text: "Para conocer más sobre este enfoque, te invitamos a revisar la publicación original en ",
-          },
-          {
-            type: "link",
-            text: "Ecommerce News Perú",
-            href: "https://www.ecommercenews.pe/pagos-online/2025/la-digitalizacion-de-pagos-y-cobranzas-clave-para-la-estabilidad-financiera-de-las-empresas-peruanas.html/",
-          },
-          {
-            type: "text",
-            text: ", donde compartimos nuestra visión sobre cómo la tecnología puede transformar las finanzas empresariales.",
-          },
-        ],
-      },
-    ],
-  },
-  {
-    id: 3,
-    slug: slug(
-      "crisis silenciosa de empresas peruanas, digitalizacion financiera, automatiza",
-    ),
-    title:
-      "La crisis silenciosa de las empresas peruanas:  la clave está en la digitalización de pagos y cobranzas",
-    intro:
-      "Aunque Perú ha registrado un crecimiento notable en el uso de herramientas digitales para transacciones, muchas empresas aún enfrentan un gran obstáculo: la falta de digitalización en sus procesos financieros internos. Esta brecha no solo pone en riesgo su liquidez, sino que también debilita su capacidad para tomar decisiones estratégicas, prevenir moras y sostener relaciones comerciales sanas.",
-    date: "20 de marzo 2025",
-    author: "Fernanda Hurtado",
-    tags: ["Prensa"],
-    image: "/images/blog/blog3/main.jpg",
-    content: [
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "text",
-            text: "Aunque Perú ha registrado un crecimiento notable en el uso de herramientas digitales para transacciones, muchas empresas aún enfrentan un gran obstáculo: la falta de digitalización en sus procesos financieros internos. Esta brecha no solo pone en riesgo su liquidez, sino que también debilita su capacidad para tomar decisiones estratégicas, prevenir moras y sostener relaciones comerciales sanas.",
-          },
-        ],
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "text",
-            text: "De acuerdo con el Banco Central de Reserva del Perú (BCRP), en el primer semestre del 2024 se registraron ",
-          },
-          {
-            type: "bold",
-            text: "688 millones de transacciones digitales.",
-          },
-          {
-            type: "text",
-            text: ". Sin embargo, muchas compañías aún operan con baja visibilidad de su flujo de caja y del comportamiento financiero de sus clientes y proveedores, lo cual genera vulnerabilidades críticas.",
-          },
-        ],
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "text",
-            text: "Los datos son claros: la tasa de morosidad en sectores como ",
-          },
-          {
-            type: "bold",
-            text: "construcción (13,4%), alojamiento y restaurantes (8,6%), y comercio (8,1%)",
-          },
-          {
-            type: "text",
-            text: " muestra que esta no es solo una amenaza para las pymes. Incluso las grandes empresas enfrentan efectos negativos cuando los pagos no fluyen: se frena la inversión, se pierde capacidad operativa y se arriesga la estabilidad del ecosistema económico completo.",
-          },
-        ],
-      },
-      {
-        type: "quote",
-        text: "“Miles de empresas cierran cada año no solo por falta de ventas, sino porque no logran gestionar adecuadamente su flujo de caja”, señaló Giovanni Medrano Ríos, CEO de Flujolink, en una reciente cobertura de medios.",
-      },
-      {
-        type: "subtitle",
-        text: "Flujolink: la red financiera que cambia el juego",
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "text",
-            text: "Frente a esta realidad, ",
-          },
-          {
-            type: "bold",
-            text: "Flujolink",
-          },
-          {
-            type: "text",
-            text: " propone una transformación estructural: la creación de la primera ",
-          },
-          {
-            type: "bold",
-            text: "red financiera empresarial del país",
-          },
-          {
-            type: "text",
-            text: ", enfocada en digitalizar y automatizar cuentas por cobrar y por pagar, con información en tiempo real.",
-          },
-        ],
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "text",
-            text: "Esta red: ",
-          },
-        ],
-      },
-      {
-        type: "list",
-        items: [
-          [
-            {
-              type: "text",
-              text: "Conecta empresas entre sí para facilitar relaciones comerciales más seguras.",
-            },
-          ],
-          [
-            {
-              type: "text",
-              text: "Entrega visibilidad financiera y control de flujo de caja.",
-            },
-          ],
-          [
-            {
-              type: "text",
-              text: "Automatiza tareas operativas y minimiza riesgos de mora.",
-            },
-          ],
-          [
-            {
-              type: "text",
-              text: "Integra recordatorios inteligentes y portales de autogestión para acelerar pagos.",
-            },
-          ],
-        ],
-      },
-      {
-        type: "quote",
-        text: "“Nuestra solución no solo ayuda a cobrar mejor, también permite pagar mejor. Genera orden, previsión y confianza en toda la cadena empresarial”, explica Giovanni Medrano.",
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "text",
-            text: "Este enfoque innovador de Flujolink ha sido destacado recientemente en diversos medios especializados. Revisa los artículos originales aquí:",
-          },
-        ],
-      },
-      {
-        type: "list",
-        items: [
-          [
-            {
-              type: "link",
-              text: "Revista Economía",
-              href: "https://www.revistaeconomia.com/la-crisis-silenciosa-de-las-empresas-peruanas-la-clave-esta-en-la-digitalizacion-de-pagos-y-cobranzas-2/",
-            },
-          ],
-          [
-            {
-              type: "link",
-              text: "Lima al Día",
-              href: "https://limaaldia.pe/la-crisis-silenciosa-de-las-empresas-peruanas-la-clave-esta-en-la-digitalizacion-de-pagos-y-cobranzas/",
-            },
-          ],
-          [
-            {
-              type: "link",
-              text: "Altavoz.pe",
-              href: "https://www.altavoz.pe/economia/la-crisis-silenciosa-de-las-empresas-peruanas-la-clave-esta-en-la-digitalizacion-de-pagos-y-cobranzas/",
-            },
-          ],
-        ],
-      },
-    ],
-  },
+  //     {
+  //       type: "paragraph",
+  //       fragments: [
+  //         {
+  //           type: "text",
+  //           text: "Un informe sobre emisión de facturas, que fue publicado en septiembre del año pasado, dio a conocer que ",
+  //         },
+  //         {
+  //           type: "bold",
+  //           text: "las facturas fraudulentas han aumentado hasta en un 92% en 2024, alcanzando un monto superior a los $38 mil millones.",
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       type: "quote",
+  //       text: "“Este incremento en el país se debe a una mayor sofisticación de los esquemas fraudulentos, principalmente la evolución de las redes de fraude, como empresas de papel y patrones de comportamiento tributario agresivo en evasión de controles”, indica Giovanni Medrano Ríos, CEO de Sena.",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       fragments: [
+  //         {
+  //           type: "text",
+  //           text: "También, son vulnerados sectores específicos con mayor frecuencia, tales como: industrias de construcción y servicios, lo que se debe por la complejidad de sus operaciones y la gestión de grandes montos de dinero que, junto con un ciclo económico negativo, genera desaceleración económica, desprotegiendo a las empresas, exponiéndolas a prácticas ilícitas.",
+  //         },
+  //         {
+  //           type: "bold",
+  //           text: " que, junto con un ciclo económico negativo, genera desaceleración económica, desprotegiendo a las empresas, exponiéndolas a prácticas ilícitas.",
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       fragments: [
+  //         {
+  //           type: "text",
+  //           text: "Para combatir estas malas  prácticas se necesita utilizar mecanismos más seguros como la digitalización de las aprobaciones y validación temprana de la información.",
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       fragments: [
+  //         {
+  //           type: "bold",
+  //           text: "La digitalización sugiere el uso de softwares que gestionen facturas posterior a su emisión, ",
+  //         },
+  //         {
+  //           type: "text",
+  //           text: "porque estos permiten automatizar la recepción, añadido clasificación y validación de estos documentos en tiempo real, reduciendo errores humanos y el riesgo de fraudes. Además,",
+  //         },
+  //         {
+  //           type: "bold",
+  //           text: "la integración  con sistemas ERP conecta los procesos de cuentas por pagar, ",
+  //         },
+  //         {
+  //           type: "text",
+  //           text: "garantizando que las facturas coincidan con órdenes de compra.",
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       fragments: [
+  //         {
+  //           type: "text",
+  //           text: "Por otro lado,",
+  //         },
+  //         {
+  //           type: "bold",
+  //           text: "la validación temprana, contiene la verificación de autenticidad",
+  //         },
+  //         {
+  //           type: "text",
+  //           text: "de los emisores mediante cruces automáticos con bases de datos de clientes propios y/o contra bases de datos oficiales, como el SII; en esta línea, la ",
+  //         },
+  //         {
+  //           type: "bold",
+  //           text: "trazabilidad con tecnología blockchain ",
+  //         },
+  //         {
+  //           type: "text",
+  //           text: "podría asegurar que las facturas no hayan sido alteradas desde su emisión ",
+  //         },
+  //         {
+  //           type: "bold",
+  //           text: "y la revisión cruzada ",
+  //         },
+  //         {
+  //           type: "text",
+  //           text: "para comparar facturas, contratos y órdenes de compra para identificar inconsistencias o emisiones no autorizadas.",
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       type: "quote",
+  //       text: "La implementación de estas prácticas preventivas no solo fortalece la transparencia y eficiencia en la gestión de facturas, sino que también refuerza la confianza entre las partes involucradas, contribuyendo a un ecosistema financiero más seguro y confiable”, finaliza Medrano.",
+  //     },
+  //   ],
+  // },
+  // {
+  //   id: 2,
+  //   slug: slug("Evita-retrasos-mejora-pagos-protege-tu- negocio-Sena"),
+  //   title:
+  //     "La digitalización de pagos y cobranzas: clave para la estabilidad financiera de las empresas peruanas.",
+  //   intro:
+  //     "En el Perú, los retrasos en los pagos de facturas no solo afectan la liquidez de las empresas, sino que generan una cadena de consecuencias que pueden impactar seriamente la sostenibilidad del negocio. Muchas veces, estos retrasos no se deben a la falta de fondos, sino a procesos internos mal integrados, sistemas dispersos y aprobaciones burocráticas.",
+  //   date: "10 de marzo 2025",
+  //   author: "Antonella Hernandez",
+  //   tags: ["Prensa"],
+  //   image: AssetImageBlog.blog_2_main.src,
+  //   content: [
+  //     {
+  //       type: "paragraph",
+  //       fragments: [
+  //         {
+  //           type: "text",
+  //           text: "En el Perú, los retrasos en los pagos de facturas no solo afectan la liquidez de las empresas, sino que generan una cadena de consecuencias que pueden impactar seriamente la sostenibilidad del negocio. Muchas veces, estos retrasos no se deben a la falta de fondos, sino a procesos internos mal integrados, sistemas dispersos y aprobaciones burocráticas.",
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       fragments: [
+  //         {
+  //           type: "text",
+  //           text: "Este problema fue analizado por nuestro CEO, ",
+  //         },
+  //         {
+  //           type: "bold",
+  //           text: "Giovanni Medrano Ríos",
+  //         },
+  //         {
+  //           type: "text",
+  //           text: ", en una entrevista publicada en ",
+  //         },
+  //         {
+  //           type: "link",
+  //           text: "Ecommerce News Perú",
+  //           href: "https://www.ecommercenews.pe/pagos-online/2025/la-digitalizacion-de-pagos-y-cobranzas-clave-para-la-estabilidad-financiera-de-las-empresas-peruanas.html/",
+  //         },
+  //         {
+  //           type: "text",
+  //           text: ", donde se abordó la importancia de adoptar tecnologías que digitalicen y automaticen los flujos de pagos y cobranzas.",
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       type: "subtitle",
+  //       text: "El verdadero costo de los retrasos en pagos",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       fragments: [
+  //         {
+  //           type: "text",
+  //           text: "Cuando una empresa no gestiona correctamente sus cuentas por pagar, puede enfrentar:",
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       type: "list",
+  //       items: [
+  //         [
+  //           {
+  //             type: "bold",
+  //             text: "Sobrecarga operativa",
+  //           },
+  //           {
+  //             type: "text",
+  //             text: ": El manejo manual de facturas en múltiples plataformas eleva los tiempos, errores y riesgo de fraude.",
+  //           },
+  //         ],
+  //         [
+  //           {
+  //             type: "bold",
+  //             text: "Relaciones comerciales deterioradas",
+  //           },
+  //           {
+  //             type: "text",
+  //             text: ": El incumplimiento constante debilita la confianza de proveedores y afecta futuras condiciones comerciales.",
+  //           },
+  //         ],
+  //         [
+  //           {
+  //             type: "bold",
+  //             text: "Problemas legales y reputacionales",
+  //           },
+  //           {
+  //             type: "text",
+  //             text: ": En casos extremos, los impagos pueden escalar a acciones judiciales o perjudicar la imagen empresarial.",
+  //           },
+  //         ],
+  //         [
+  //           {
+  //             type: "bold",
+  //             text: "Pérdida de visibilidad",
+  //           },
+  //           {
+  //             type: "text",
+  //             text: ": La falta de centralización impide anticipar salidas de caja y coordinar pagos a tiempo.",
+  //           },
+  //         ],
+  //       ],
+  //     },
+  //     {
+  //       type: "image",
+  //       link: "https://drive.google.com/uc?export=view&id=18qzaPCpuuCAQywXfb8IxMCZmwX7IJy75",
+  //     },
+  //     {
+  //       type: "subtitle",
+  //       text: "¿Cómo puede ayudar la digitalización?",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       fragments: [
+  //         {
+  //           type: "text",
+  //           text: "Para evitar este tipo de escenarios, es fundamental que las empresas modernicen su cadena de pagos. Desde Sena, recomendamos:",
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       type: "subtitle",
+  //       text: "1. Visibilidad en tiempo real",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       fragments: [
+  //         {
+  //           type: "text",
+  //           text: "Involucrar a todas las áreas clave (Finanzas, Compras, Tesorería) en un sistema que centralice la información y reduzca errores o fraudes.",
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       type: "subtitle",
+  //       text: "2. Aprobaciones digitales ágiles",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       fragments: [
+  //         {
+  //           type: "text",
+  //           text: "Implementar flujos de validación seguros que reduzcan la burocracia, sin perder control sobre las decisiones financieras.",
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       type: "subtitle",
+  //       text: "3. Integración de procesos",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       fragments: [
+  //         {
+  //           type: "text",
+  //           text: "Concentrar en una única plataforma todo el ciclo: recepción, revisión, aprobación y pago de facturas.",
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       type: "subtitle",
+  //       text: "4. Alertas y automatización",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       fragments: [
+  //         {
+  //           type: "text",
+  //           text: "Activar recordatorios de vencimientos y pagos pendientes para evitar retrasos innecesarios.",
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       type: "quote",
+  //       text: "“Muchas veces el problema no es la falta de dinero, sino la falta de control. Con herramientas como Sena, las empresas pueden anticiparse a los retrasos, gestionar sus flujos de pago con precisión y reducir el desgaste operativo”, comentó Medrano.",
+  //     },
+  //     {
+  //       type: "subtitle",
+  //       text: "📎 Lee la nota completa en Ecommerce News",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       fragments: [
+  //         {
+  //           type: "text",
+  //           text: "Para conocer más sobre este enfoque, te invitamos a revisar la publicación original en ",
+  //         },
+  //         {
+  //           type: "link",
+  //           text: "Ecommerce News Perú",
+  //           href: "https://www.ecommercenews.pe/pagos-online/2025/la-digitalizacion-de-pagos-y-cobranzas-clave-para-la-estabilidad-financiera-de-las-empresas-peruanas.html/",
+  //         },
+  //         {
+  //           type: "text",
+  //           text: ", donde compartimos nuestra visión sobre cómo la tecnología puede transformar las finanzas empresariales.",
+  //         },
+  //       ],
+  //     },
+  //   ],
+  // },
+  // {
+  //   id: 3,
+  //   slug: slug(
+  //     "crisis silenciosa de empresas peruanas, digitalizacion financiera, automatiza",
+  //   ),
+  //   title:
+  //     "La crisis silenciosa de las empresas peruanas:  la clave está en la digitalización de pagos y cobranzas",
+  //   intro:
+  //     "Aunque Perú ha registrado un crecimiento notable en el uso de herramientas digitales para transacciones, muchas empresas aún enfrentan un gran obstáculo: la falta de digitalización en sus procesos financieros internos. Esta brecha no solo pone en riesgo su liquidez, sino que también debilita su capacidad para tomar decisiones estratégicas, prevenir moras y sostener relaciones comerciales sanas.",
+  //   date: "20 de marzo 2025",
+  //   author: "Fernanda Hurtado",
+  //   tags: ["Prensa"],
+  //   image: AssetImageBlog.blog_3_main.src,
+  //   content: [
+  //     {
+  //       type: "paragraph",
+  //       fragments: [
+  //         {
+  //           type: "text",
+  //           text: "Aunque Perú ha registrado un crecimiento notable en el uso de herramientas digitales para transacciones, muchas empresas aún enfrentan un gran obstáculo: la falta de digitalización en sus procesos financieros internos. Esta brecha no solo pone en riesgo su liquidez, sino que también debilita su capacidad para tomar decisiones estratégicas, prevenir moras y sostener relaciones comerciales sanas.",
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       fragments: [
+  //         {
+  //           type: "text",
+  //           text: "De acuerdo con el Banco Central de Reserva del Perú (BCRP), en el primer semestre del 2024 se registraron ",
+  //         },
+  //         {
+  //           type: "bold",
+  //           text: "688 millones de transacciones digitales.",
+  //         },
+  //         {
+  //           type: "text",
+  //           text: ". Sin embargo, muchas compañías aún operan con baja visibilidad de su flujo de caja y del comportamiento financiero de sus clientes y proveedores, lo cual genera vulnerabilidades críticas.",
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       fragments: [
+  //         {
+  //           type: "text",
+  //           text: "Los datos son claros: la tasa de morosidad en sectores como ",
+  //         },
+  //         {
+  //           type: "bold",
+  //           text: "construcción (13,4%), alojamiento y restaurantes (8,6%), y comercio (8,1%)",
+  //         },
+  //         {
+  //           type: "text",
+  //           text: " muestra que esta no es solo una amenaza para las pymes. Incluso las grandes empresas enfrentan efectos negativos cuando los pagos no fluyen: se frena la inversión, se pierde capacidad operativa y se arriesga la estabilidad del ecosistema económico completo.",
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       type: "quote",
+  //       text: "“Miles de empresas cierran cada año no solo por falta de ventas, sino porque no logran gestionar adecuadamente su flujo de caja”, señaló Giovanni Medrano Ríos, CEO de Sena, en una reciente cobertura de medios.",
+  //     },
+  //     {
+  //       type: "subtitle",
+  //       text: "Sena: la red financiera que cambia el juego",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       fragments: [
+  //         {
+  //           type: "text",
+  //           text: "Frente a esta realidad, ",
+  //         },
+  //         {
+  //           type: "bold",
+  //           text: "Sena",
+  //         },
+  //         {
+  //           type: "text",
+  //           text: " propone una transformación estructural: la creación de la primera ",
+  //         },
+  //         {
+  //           type: "bold",
+  //           text: "red financiera empresarial del país",
+  //         },
+  //         {
+  //           type: "text",
+  //           text: ", enfocada en digitalizar y automatizar cuentas por cobrar y por pagar, con información en tiempo real.",
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       fragments: [
+  //         {
+  //           type: "text",
+  //           text: "Esta red: ",
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       type: "list",
+  //       items: [
+  //         [
+  //           {
+  //             type: "text",
+  //             text: "Conecta empresas entre sí para facilitar relaciones comerciales más seguras.",
+  //           },
+  //         ],
+  //         [
+  //           {
+  //             type: "text",
+  //             text: "Entrega visibilidad financiera y control de flujo de caja.",
+  //           },
+  //         ],
+  //         [
+  //           {
+  //             type: "text",
+  //             text: "Automatiza tareas operativas y minimiza riesgos de mora.",
+  //           },
+  //         ],
+  //         [
+  //           {
+  //             type: "text",
+  //             text: "Integra recordatorios inteligentes y portales de autogestión para acelerar pagos.",
+  //           },
+  //         ],
+  //       ],
+  //     },
+  //     {
+  //       type: "quote",
+  //       text: "“Nuestra solución no solo ayuda a cobrar mejor, también permite pagar mejor. Genera orden, previsión y confianza en toda la cadena empresarial”, explica Giovanni Medrano.",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       fragments: [
+  //         {
+  //           type: "text",
+  //           text: "Este enfoque innovador de Sena ha sido destacado recientemente en diversos medios especializados. Revisa los artículos originales aquí:",
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       type: "list",
+  //       items: [
+  //         [
+  //           {
+  //             type: "link",
+  //             text: "Revista Economía",
+  //             href: "https://www.revistaeconomia.com/la-crisis-silenciosa-de-las-empresas-peruanas-la-clave-esta-en-la-digitalizacion-de-pagos-y-cobranzas-2/",
+  //           },
+  //         ],
+  //         [
+  //           {
+  //             type: "link",
+  //             text: "Lima al Día",
+  //             href: "https://limaaldia.pe/la-crisis-silenciosa-de-las-empresas-peruanas-la-clave-esta-en-la-digitalizacion-de-pagos-y-cobranzas/",
+  //           },
+  //         ],
+  //         [
+  //           {
+  //             type: "link",
+  //             text: "Altavoz.pe",
+  //             href: "https://www.altavoz.pe/economia/la-crisis-silenciosa-de-las-empresas-peruanas-la-clave-esta-en-la-digitalizacion-de-pagos-y-cobranzas/",
+  //           },
+  //         ],
+  //       ],
+  //     },
+  //   ],
+  // },
   {
     id: 4,
     slug: slug(
       "omnicanalidad e inteligencia artificial para optimizar tu cobranza",
     ),
     title:
-      "Cómo Flujolink combina omnicanalidad e inteligencia artificial para optimizar tu cobranza",
+      "Cómo Sena combina omnicanalidad e inteligencia artificial para optimizar tu cobranza",
     intro:
-      "Gestionar cuentas por cobrar no tiene por qué ser una tarea lenta ni desgastante. Con Flujolink, las empresas pueden reducir la morosidad y mejorar su flujo de caja usando herramientas que combinan automatización, contacto inteligente y tecnología de vanguardia. ",
+      "Gestionar cuentas por cobrar no tiene por qué ser una tarea lenta ni desgastante. Con Sena, las empresas pueden reducir la morosidad y mejorar su flujo de caja usando herramientas que combinan automatización, contacto inteligente y tecnología de vanguardia. ",
     date: "20 de marzo 2025",
     author: "Fernanda Hurtado",
-    tags: ["Flujolink", "IA"],
+    tags: ["Sena", "IA"],
     image:
       "https://lh7-rt.googleusercontent.com/docsz/AD_4nXcp5aWPPhubM2pDplaKNFiNYuvmmg9kzjXOSUp7OsvqX577TfFJPQ9K7U-Q4iQVjtm2bS6csBdUAJJOhrD4fO7KUeUEL5TZC9klvgQ5_kQQE9uzqYHNPj2CgzsvINDGQeW_bzzEWQ?key=Z63nbao0Z_MUHrbOnmsjiw",
     content: [
@@ -522,7 +523,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: "text",
-            text: "Gestionar cuentas por cobrar no tiene por qué ser una tarea lenta ni desgastante. Con Flujolink, las empresas pueden reducir la morosidad y mejorar su flujo de caja usando herramientas que combinan automatización, contacto inteligente y tecnología de vanguardia.",
+            text: "Gestionar cuentas por cobrar no tiene por qué ser una tarea lenta ni desgastante. Con Sena, las empresas pueden reducir la morosidad y mejorar su flujo de caja usando herramientas que combinan automatización, contacto inteligente y tecnología de vanguardia.",
           },
         ],
       },
@@ -535,13 +536,13 @@ export const blogPosts: BlogPost[] = [
           },
         ],
       },
-      { type: "title", text: "¿Qué hace diferente a Flujolink? " },
+      { type: "title", text: "¿Qué hace diferente a Sena? " },
       {
         type: "paragraph",
         fragments: [
           {
             type: "text",
-            text: "Flujolink es mucho más que un ",
+            text: "Sena es mucho más que un ",
           },
           {
             type: "bold",
@@ -554,7 +555,7 @@ export const blogPosts: BlogPost[] = [
           {
             type: "link",
             text: "software para empresas ",
-            href: "https://flujolink.com/software-cuentas-por-cobrar",
+            href: "",
           },
           {
             type: "text",
@@ -588,7 +589,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: "text",
-            text: "Flujolink utiliza ",
+            text: "Sena utiliza ",
           },
           {
             type: "bold",
@@ -602,7 +603,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "quote",
-        text: "“Muchas veces el problema no es el cliente, sino el canal. Flujolink adapta el mensaje y la vía según el comportamiento de cada pagador”, explica Sebastián Gajardo, Product Manager de Flujolink.",
+        text: "“Muchas veces el problema no es el cliente, sino el canal. Sena adapta el mensaje y la vía según el comportamiento de cada pagador”, explica Sebastián Gajardo, Product Manager de Sena.",
       },
       { type: "title", text: "Integración real con tu operación " },
       {
@@ -610,7 +611,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: "text",
-            text: "¿Ya usas un ERP o un sistema de facturación? No hay problema. Flujolink se conecta fácilmente con tus herramientas actuales, transformándose en un software de gestión que potencia tus procesos sin exigir que cambies lo que ya funciona. ",
+            text: "¿Ya usas un ERP o un sistema de facturación? No hay problema. Sena se conecta fácilmente con tus herramientas actuales, transformándose en un software de gestión que potencia tus procesos sin exigir que cambies lo que ya funciona. ",
           },
         ],
       },
@@ -628,20 +629,20 @@ export const blogPosts: BlogPost[] = [
   {
     id: 5,
     slug: slug(
-      "Flujolink: Optimiza la gestión financiera con cobranzas digitalizadas eficaces",
+      "Sena: Optimiza la gestión financiera con cobranzas digitalizadas eficaces",
     ),
     title:
-      "Flujolink: Optimiza la gestión financiera con cobranzas digitalizadas eficaces",
+      "Sena: Optimiza la gestión financiera con cobranzas digitalizadas eficaces",
     intro:
-      "En el mundo empresarial moderno, gestionar las cuentas por cobrar y pagar de manera eficiente es fundamental para mantener un flujo de efectivo saludable. Sin embargo, muchas empresas aún enfrentan desafíos con la automatización y organización de estos procesos clave. Ahí es donde entra Flujolink.",
+      "En el mundo empresarial moderno, gestionar las cuentas por cobrar y pagar de manera eficiente es fundamental para mantener un flujo de efectivo saludable. Sin embargo, muchas empresas aún enfrentan desafíos con la automatización y organización de estos procesos clave. Ahí es donde entra Sena.",
     date: "24 de abril 2025 ",
     author: "Antonella Hernandez",
     tags: ["Cobranza"],
-    image: "/images/blog/blog5/main.jpg",
+    image: AssetImageBlog.blog_5_main.src,
     content: [
       {
         type: "title",
-        text: "Flujolink: Optimiza la gestión financiera con cobranzas digitalizadas eficaces ",
+        text: "Sena: Optimiza la gestión financiera con cobranzas digitalizadas eficaces ",
       },
       {
         type: "paragraph",
@@ -652,7 +653,7 @@ export const blogPosts: BlogPost[] = [
           },
           {
             type: "bold",
-            text: "Flujolink. ",
+            text: "Sena. ",
           },
         ],
       },
@@ -661,7 +662,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: "bold",
-            text: "“Flujolink” ",
+            text: "Sena ",
           },
           {
             type: "text",
@@ -687,7 +688,7 @@ export const blogPosts: BlogPost[] = [
           },
           {
             type: "bold",
-            text: "Flujolink, ",
+            text: "Sena, ",
           },
           {
             type: "text",
@@ -695,7 +696,7 @@ export const blogPosts: BlogPost[] = [
           },
         ],
       },
-      { type: "subtitle", text: "¿Qué hace Flujolink por tu empresa?" },
+      { type: "subtitle", text: "¿Qué hace Sena por tu empresa?" },
       {
         type: "paragraph",
         fragments: [
@@ -703,7 +704,7 @@ export const blogPosts: BlogPost[] = [
             type: "text",
             text: "La gestión de las cobranzas y los pagos es uno de los aspectos más críticos de cualquier negocio. Un retraso en los cobros o un error en los pagos puede generar consecuencias financieras importantes. ",
           },
-          { type: "bold", text: "Flujolink " },
+          { type: "bold", text: "Sena " },
           {
             type: "text",
             text: "te ofrece una solución integral que no solo te ayuda a mantener tus cuentas en orden, sino que también te permite ",
@@ -740,7 +741,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: "text",
-            text: "Flujolink digitalizalos procesos de cobranzas y pagos, eliminando la necesidad de realizar tareas repetitivas manualmente. Al integrar nuestras soluciones a tu sistema contable y financiero podrás: ",
+            text: "Sena digitalizalos procesos de cobranzas y pagos, eliminando la necesidad de realizar tareas repetitivas manualmente. Al integrar nuestras soluciones a tu sistema contable y financiero podrás: ",
           },
         ],
       },
@@ -787,7 +788,7 @@ export const blogPosts: BlogPost[] = [
             type: "text",
             text: "La visibilidad es crucial para tomar decisiones acertadas y oportunas en tu negocio. Con ",
           },
-          { type: "bold", text: "Flujolink, " },
+          { type: "bold", text: "Sena, " },
           { type: "text", text: "obtienes " },
           { type: "bold", text: "informes en tiempo real " },
           {
@@ -832,11 +833,11 @@ export const blogPosts: BlogPost[] = [
           },
         ],
       },
-      { type: "subtitle", text: "¿Qué puedes lograr con Flujolink? " },
+      { type: "subtitle", text: "¿Qué puedes lograr con Sena? " },
       {
         type: "paragraph",
         fragments: [
-          { type: "bold", text: "Flujolink " },
+          { type: "bold", text: "Sena " },
           {
             type: "text",
             text: "está diseñado para ayudar a las empresas a gestionar su flujo de efectivo de manera más eficiente, independientemente del tamaño o la industria. Con nuestra plataforma, podrás: ",
@@ -872,7 +873,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: "text",
-            text: "Flujolink no es solo una herramienta avanzada de gestión financiera, sino que también cuenta con el respaldo de ",
+            text: "Sena no es solo una herramienta avanzada de gestión financiera, sino que también cuenta con el respaldo de ",
           },
           {
             type: "link",
@@ -896,7 +897,7 @@ export const blogPosts: BlogPost[] = [
         ],
       },
       /*   { type: 'image', link: '/images/blog/blog5/3.jpg' }, */
-      { type: "subtitle", text: "¿Por qué elegir Flujolink? " },
+      { type: "subtitle", text: "¿Por qué elegir Sena? " },
       {
         type: "list",
         items: [
@@ -906,7 +907,7 @@ export const blogPosts: BlogPost[] = [
               type: "text",
               text: "Al digitalizar procesos, automatizar  recordatorios y centralizar procesos, ",
             },
-            { type: "bold", text: "Flujolink " },
+            { type: "bold", text: "Sena " },
             {
               type: "text",
               text: "te ayuda a optimizar los recursos de tu empresa, permitiendo que tu equipo se enfoque en actividades más estratégicas. ",
@@ -940,7 +941,7 @@ export const blogPosts: BlogPost[] = [
         type: "paragraph",
         fragments: [
           { type: "text", text: "En " },
-          { type: "bold", text: "Flujolink, " },
+          { type: "bold", text: "Sena, " },
           {
             type: "text",
             text: "entendemos que cada empresa tiene necesidades diferentes. Por eso, nuestras soluciones están diseñadas para ser ",
@@ -950,7 +951,7 @@ export const blogPosts: BlogPost[] = [
             type: "text",
             text: "adaptándose a la medida de cada cliente. Ya sea que estés comenzando o buscando mejorar los procesos de cobranzas y pagos de tu empresa, ",
           },
-          { type: "bold", text: "Flujolink " },
+          { type: "bold", text: "Sena " },
           {
             type: "text",
             text: "te proporciona las herramientas que necesitas para mejorar tu eficiencia financiera y asegurarte de que tu flujo de efectivo siempre esté optimizado. ",
@@ -960,7 +961,7 @@ export const blogPosts: BlogPost[] = [
       {
         type: "paragraph",
         fragments: [
-          { type: "bold", text: "Flujolink " },
+          { type: "bold", text: "Sena " },
           { type: "text", text: "te ofrece una " },
           {
             type: "bold",
@@ -968,7 +969,7 @@ export const blogPosts: BlogPost[] = [
           },
           {
             type: "text",
-            text: "para optimizar tus operaciones financieras. Si estás buscando una forma fácil y eficiente de controlar y automatizar el proceso de cobro y pago de tus facturas, ¡Flujolink es la solución ideal para tu empresa! ",
+            text: "para optimizar tus operaciones financieras. Si estás buscando una forma fácil y eficiente de controlar y automatizar el proceso de cobro y pago de tus facturas, Sena es la solución ideal para tu empresa! ",
           },
         ],
       },
@@ -977,18 +978,18 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: 6,
-    slug: slug("¿Tienes una factura impaga? Flujolink la recupera por ti"),
-    title: "¿Tienes una factura impaga? Flujolink la recupera por ti",
+    slug: slug("¿Tienes una factura impaga? Sena la recupera por ti"),
+    title: "¿Tienes una factura impaga? Sena la recupera por ti",
     intro:
-      "Cuando una factura vence y el pago no llega, no solo se retrasa un ingreso: se altera toda la operación financiera de tu empresa. En Flujolink, te ofrecemos una solución eficaz y sin riesgos, es el servicio de 'Recupera Plus'.",
+      "Cuando una factura vence y el pago no llega, no solo se retrasa un ingreso: se altera toda la operación financiera de tu empresa. En Sena, te ofrecemos una solución eficaz y sin riesgos, es el servicio de 'Recupera Plus'.",
     date: "25 de abril 2025",
     author: "Fernanda Hurtado",
-    tags: ["Cobranza", "Flujolink"],
-    image: "/images/blog/blog6/main.jpg",
+    tags: ["Cobranza", "Sena"],
+    image: AssetImageBlog.blog_6_main.src,
     content: [
       {
         type: "title",
-        text: "¿Tienes una factura impaga? Flujolink la recupera por ti",
+        text: "¿Tienes una factura impaga? Sena la recupera por ti",
       },
       {
         type: "paragraph",
@@ -997,7 +998,7 @@ export const blogPosts: BlogPost[] = [
             type: "text",
             text: "Cuando una factura vence y el pago no llega, no solo se retrasa un ingreso: se altera toda la operación financiera de tu empresa. En ",
           },
-          { type: "bold", text: "Flujolink, " },
+          { type: "bold", text: "Sena, " },
           {
             type: "text",
             text: "te ofrecemos una solución eficaz y sin riesgos, es el servicio de “Recupera Plus”. ",
@@ -1022,7 +1023,7 @@ export const blogPosts: BlogPost[] = [
           },
         ],
       },
-      { type: "subtitle", text: "No es factoring. Es Flujolink" },
+      { type: "subtitle", text: "No es factoring. Es Sena" },
       {
         type: "paragraph",
         fragments: [
@@ -1034,7 +1035,7 @@ export const blogPosts: BlogPost[] = [
           { type: "bold", text: "factoring online, " },
           {
             type: "text",
-            text: "en Flujolink no compramos tus facturas ni te adelantamos dinero. No estás contratando una empresa que financia tu cartera, sino un equipo que ",
+            text: "en Sena no compramos tus facturas ni te adelantamos dinero. No estás contratando una empresa que financia tu cartera, sino un equipo que ",
           },
           {
             type: "bold",
@@ -1061,7 +1062,7 @@ export const blogPosts: BlogPost[] = [
           { type: "bold", text: "freight factoring companies " },
           {
             type: "text",
-            text: "te ofrecen liquidez inmediata con descuentos, intereses o cesión de documentos. En cambio, Flujolink es una alternativa al factoring te permite mantener la propiedad total sobre tus facturas y cobrar exactamente lo que te deben. ",
+            text: "te ofrecen liquidez inmediata con descuentos, intereses o cesión de documentos. En cambio, Sena es una alternativa al factoring te permite mantener la propiedad total sobre tus facturas y cobrar exactamente lo que te deben. ",
           },
         ],
       },
@@ -1071,7 +1072,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "subtitle",
-        text: "¿Cómo funciona el servicio de Flujolink 'Recupera Plus'?",
+        text: "¿Cómo funciona el servicio de Sena 'Recupera Plus'?",
       },
       {
         type: "list",
@@ -1081,11 +1082,11 @@ export const blogPosts: BlogPost[] = [
               type: "text",
               text: "Dejas tus datos en el formulario: ",
             },
-            {
-              type: "link",
-              text: "https://flujolink.com/recuperacion-de-deudas",
-              href: "https://flujolink.com/recuperacion-de-deudas",
-            },
+            // {
+            //   type: "link",
+            //   text: "https://sena.com/recuperacion-de-deudas",
+            //   href: "https://sena.com/recuperacion-de-deudas",
+            // },
           ],
           "Nos contactaremos contigo para definir las facturas impagas, montos y todos los detalles del servicio. Una vez aclarados todos los puntos, te solicitaremos el envío de las facturas impagas en nuestra plataforma.",
           "Iniciamos la gestión de cobranza con tecnología y respaldo profesional.",
@@ -1142,7 +1143,7 @@ export const blogPosts: BlogPost[] = [
           { type: "bold", text: "recuperar lo que te deben, " },
           {
             type: "text",
-            text: "Flujolink es la opción más segura, transparente y efectiva.",
+            text: "Sena es la opción más segura, transparente y efectiva.",
           },
         ],
       },
@@ -1156,7 +1157,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: "text",
-            text: "En Flujolink, creemos que recuperar un pago no debería representar un nuevo gasto. Por eso, ",
+            text: "En Sena, creemos que recuperar un pago no debería representar un nuevo gasto. Por eso, ",
           },
           {
             type: "text",
@@ -1173,35 +1174,35 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: "bold",
-            text: "Recupera tus pagos. Gana control. Optimiza tus finanzas. Todo con Flujolink.",
+            text: "Recupera tus pagos. Gana control. Optimiza tus finanzas. Todo con Sena.",
           },
         ],
       },
-      { type: "image", link: "/images/blog/blog6/3.jpg" },
+      { type: "image", link: AssetImageBlog.blog_6_3.src },
     ],
   },
   {
     id: 7,
-    slug: slug("Recupera ese dinero con Flujolink sin factoring"),
+    slug: slug("Recupera ese dinero con Sena sin factoring"),
     title:
-      "¿Tu cliente aún no paga? Recupera ese dinero con Flujolink, sin Factoring ni adelantos de dinero",
+      "¿Tu cliente aún no paga? Recupera ese dinero con Sena, sin Factoring ni adelantos de dinero",
     intro:
-      "Tener facturas vencidas no sólo genera estrés, también frena tu crecimiento. En Flujolink entendemos el impacto que tiene una cuenta por cobrar sin resolver, y por eso diseñamos una solución concreta: recuperamos tus pagos vencidos de forma profesional, sin que adelantes dinero y sin que cedas tus derechos o pierdas dinero.",
+      "Tener facturas vencidas no sólo genera estrés, también frena tu crecimiento. En Sena entendemos el impacto que tiene una cuenta por cobrar sin resolver, y por eso diseñamos una solución concreta: recuperamos tus pagos vencidos de forma profesional, sin que adelantes dinero y sin que cedas tus derechos o pierdas dinero.",
     date: "26 de abril 2025",
     author: "Fernanda Hurtado",
-    tags: ["Flujolink", "Cobranza", "Educación Financiera"],
-    image: "/images/blog/blog7/main.jpg",
+    tags: ["Sena", "Cobranza", "Educación Financiera"],
+    image: AssetImageBlog.blog_7_main.src,
     content: [
       {
         type: "title",
-        text: "¿Tu cliente aún no paga? Recupera ese dinero con Flujolink, sin Factoring ni adelantos de dinero",
+        text: "¿Tu cliente aún no paga? Recupera ese dinero con Sena, sin Factoring ni adelantos de dinero",
       },
       {
         type: "paragraph",
         fragments: [
           {
             type: "text",
-            text: "Tener facturas vencidas no sólo genera estrés, también frena tu crecimiento. En Flujolink entendemos el impacto que tiene una cuenta por cobrar sin resolver, y por eso diseñamos una solución concreta: recuperamos tus pagos vencidos de forma profesional, sin que adelantes dinero y sin que cedas tus derechos o pierdas dinero.",
+            text: "Tener facturas vencidas no sólo genera estrés, también frena tu crecimiento. En Sena entendemos el impacto que tiene una cuenta por cobrar sin resolver, y por eso diseñamos una solución concreta: recuperamos tus pagos vencidos de forma profesional, sin que adelantes dinero y sin que cedas tus derechos o pierdas dinero.",
           },
         ],
       },
@@ -1227,13 +1228,13 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: "text",
-            text: "A diferencia del factoring, en Flujolink con el servicio ",
+            text: "A diferencia del factoring, en Sena con el servicio ",
           },
-          {
-            type: "link",
-            text: "“Recupera Plus” ",
-            href: "/recuperacion-de-deudas",
-          },
+          // {
+          //   type: "link",
+          //   text: "“Recupera Plus” ",
+          //   href: "/recuperacion-de-deudas",
+          // },
           {
             type: "text",
             text: "no compramos tus facturas ni te damos préstamos. Tampoco pierdes valor al ceder tu cartera. Tu factura sigue siendo tuya, y nosotros nos encargamos de recuperarla directamente con tu cliente.",
@@ -1261,7 +1262,7 @@ export const blogPosts: BlogPost[] = [
         type: "image",
         link: "https://lh7-rt.googleusercontent.com/docsz/AD_4nXfSdjWiLw2HnwccLjaJ1-Ps3SonCHVFWLzXB-zCo1U2T04NSBJ_B_hSC6Hsu4fMezwTDyCfmLyDHblGvW64ll-OEwviwNmWsyoympvetH8pj0WsdD3drd814206dNNn8_o8O_Zp42usY4MsCSUKTjI?key=vXGcwwMqEuun1PDHDhkzYg",
       },
-      { type: "subtitle", text: "¿Cómo funciona Flujolink Recupera?" },
+      { type: "subtitle", text: "¿Cómo funciona Sena Recupera?" },
       {
         type: "list",
         items: [
@@ -1270,11 +1271,11 @@ export const blogPosts: BlogPost[] = [
               type: "text",
               text: "Dejas tus datos en el formulario: ",
             },
-            {
-              type: "link",
-              text: "https://flujolink.com/recuperacion-de-deudas",
-              href: "https://flujolink.com/recuperacion-de-deudas",
-            },
+            // {
+            //   type: "link",
+            //   text: "https://sena.com/recuperacion-de-deudas",
+            //   href: "https://sena.com/recuperacion-de-deudas",
+            // },
           ],
           "Nos contactaremos contigo para definir las facturas impagas, montos y todos los detalles del servicio. Una vez aclarado todos los puntos, te solicitaremos el envío de las facturas impagas en nuestra plataforma.",
           "Iniciamos la gestión de cobranza con tecnología y respaldo profesional.",
@@ -1321,7 +1322,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: "text",
-            text: "Ya sea que estés considerando opciones de factoring empresas, freight factoring companies, o soluciones de factoraje financiero, Flujolink es la alternativa sin letra chica: recuperamos tu factura cuando nadie más puede, sin que pongas nada por adelantado.",
+            text: "Ya sea que estés considerando opciones de factoring empresas, freight factoring companies, o soluciones de factoraje financiero, Sena es la alternativa sin letra chica: recuperamos tu factura cuando nadie más puede, sin que pongas nada por adelantado.",
           },
         ],
       },
@@ -1334,7 +1335,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: "text",
-            text: "Flujolink es la forma más eficiente de recuperar pagos vencidos. Sin complicaciones, sin papeleo innecesario y sin poner en riesgo tus finanzas. Solo si recuperas tu dinero, nuestro trabajo se da por hecho.",
+            text: "Sena es la forma más eficiente de recuperar pagos vencidos. Sin complicaciones, sin papeleo innecesario y sin poner en riesgo tus finanzas. Solo si recuperas tu dinero, nuestro trabajo se da por hecho.",
           },
         ],
       },
@@ -1350,563 +1351,562 @@ export const blogPosts: BlogPost[] = [
       /*  { type: 'image', link: '/images/blog/blog7/3.jpg' }, */
     ],
   },
-  {
-    id: 8,
-    slug: slug(
-      "¿Cómo evitar fraudes en pagos? Protege tu empresa y evita facturas falsas",
-    ),
-    title:
-      "¿Cómo evitar fraudes en pagos? Protege tu empresa y evita facturas falsas",
-    intro:
-      "En los últimos años, el fraude con facturas falsas se ha convertido en una amenaza real para miles de empresas en el país. Solo entre 2023 y 2024, el Servicio de Impuestos Internos (SII) en Chile detectó un esquema que habría permitido defraudar más de $440 mil millones, afectando a más de 27 mil empresas.",
-    date: "26 de abril 2025",
-    author: "Antonella Hernandez",
-    tags: ["Flujolink", "Educación Financiera"],
-    image: "/images/blog/blog1/main.jpg",
-    content: [
-      {
-        type: "title",
-        text: "¿Cómo evitar fraudes en pagos? Protege tu empresa y evita facturas falsas",
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "text",
-            text: "En los últimos años, el fraude con facturas falsas se ha convertido en una amenaza real para miles de empresas en el país. Solo entre 2023 y 2024, el Servicio de Impuestos Internos (SII) en Chile detectó un esquema que habría permitido defraudar más de $440 mil millones. Como resultado, más de 27 mil empresas vieron bloqueadas sus claves tributarias. ¿La causa? Facturas que no correspondían a transacciones reales. ",
-          },
-        ],
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "text",
-            text: "Por otro lado, en Perú; la Policía Nacional del Perú (PNP), en el último año se registraron más de 31,000 denuncias por estafas, reflejando un preocupante aumento en modalidades delictivas como aplicaciones de pago fraudulentas, facturación falsa y esquemas de inversión engañosos. Estas prácticas no solo afectan la economía del país, sino que ponen en riesgo la estabilidad financiera de negocios y consumidores. ",
-          },
-        ],
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "text",
-            text: "Si nos enfocamos en las facturas falsas,  estas se presentan de diversas formas, ya que pueden derivarse de facturas ideológicamente falsas, que no corresponden a transacciones reales y se presentan para obtener financiamiento de empresas de factoring; corrupción interna por empleados que estén ejerciendo prácticas fraudulentas o redes de corrupción, es decir, que se amplía llegando a involucrar a inversionistas o fondos completos de inversión que terminan asumiendo pérdidas. ",
-          },
-        ],
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "text",
-            text: "Este tipo de fraude puede darse de varias formas: desde documentos emitidos con información falsa para obtener financiamiento, hasta redes organizadas que involucran a empleados, empresas de papel e incluso fondos de inversión. Las industrias más golpeadas han sido la construcción y los servicios, sectores que por su complejidad y volumen de operaciones son especialmente vulnerables. ",
-          },
-        ],
-      },
-      {
-        type: "subtitle",
-        text: "¿Por qué está aumentando este problema?",
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "text",
-            text: "Según un informe reciente, el uso de facturas fraudulentas ha crecido un 92 % solo en 2024. La razón principal: la evolución de los esquemas de fraude, cada vez más sofisticados. Esto incluye el uso de empresas falsas, patrones de comportamiento tributario sospechosos y sistemas poco protegidos frente a irregularidades. ",
-          },
-        ],
-      },
-      {
-        type: "quote",
-        text: "“Este crecimiento se debe a una mayor sofisticación de las redes de fraude y a la falta de controles adecuados en muchas empresas”, explica Giovanni Medrano Ríos, CEO de Flujolink. ",
-      },
-      {
-        type: "image",
-        link: "https://drive.usercontent.google.com/download?id=1XWdL7JSRCJMVqsYhUp808aDV32qMQyCG&export=view&authuser=0",
-      },
-      {
-        type: "subtitle",
-        text: "¿Cómo proteger tu empresa? Del caos al control",
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "text",
-            text: "Hoy más que nunca, la innovación financiera para anticiparse al riesgo y proteger tu empresa del fraude y la morosidad  es clave, ya que la tecnología y los datos están transformando la gestión del riesgo y fraude, para tomar control y acción temprana. Es por eso que ",
-          },
-          { type: "link", text: "Flujolink ", href: "/" },
-          {
-            type: "text",
-            text: "contribuye a esto, digitalizando el proceso de pagos y cobros con verdadera trazabilidad e identificación para evitar caer en estas trampas. Herramientas como Flujolink permiten: ",
-          },
-        ],
-      },
-      {
-        type: "list",
-        items: [
-          "Validar la autenticidad de las facturas en tiempo real.",
-          "Automatizar la recepción y validación de documentos.",
-          "Conectar el flujo de pagos con tus sistemas de gestión (ERP).",
-          "Comparar facturas con órdenes de compra y contratos para detectar inconsistencias.",
-        ],
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "text",
-            text: "Además, se pueden implementar tecnologías como blockchain para asegurar que las facturas no hayan sido alteradas desde su emisión, y sistemas de validación cruzada con bases oficiales como la del SII ( Chile) o Sunal (Perú).",
-          },
-        ],
-      },
-      {
-        type: "image",
-        link: "https://lh7-rt.googleusercontent.com/docsz/AD_4nXeaEcLziniDmnE-gJtWsGxEFE4eiS1t5stVz6J4cVIHIpmxAgthTT7BTU9SA4bNYjuSJX_PfEQkEHFweQgb0jKJFRCU5RBLWumM6BfnuWJXnvkTBCoPpGD9qUZ9_PdwYGxVv1R46mRudJoFY-hI_j4?key=mLWCzQYgIU_v3wO2OcOsnw",
-      },
-      {
-        type: "subtitle",
-        text: "🔒 La prevención es el mejor escudo ",
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "text",
-            text: "Digitalizar tus procesos no solo mejora la eficiencia, también fortalece la confianza con tus clientes y proveedores. ",
-          },
-          {
-            type: "bold",
-            text: "Estás protegiendo tu empresa y contribuyendo a un ecosistema financiero más seguro para todos. ",
-          },
-        ],
-      },
-      {
-        type: "quote",
-        text: "“La implementación de estas prácticas no solo mejora la transparencia, también genera seguridad y respaldo en todas las etapas del proceso”, agrega Medrano.",
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "text",
-            text: "Toda esta información y mucho más se desarrollará en el conversatorio ",
-          },
-          { type: "bold", text: "“B2B Risk & Innovation Day“, " },
-          { type: "text", text: "organizado por " },
-          { type: "bold", text: "Ciclo de Riesgo Chile,  " },
-          { type: "text", text: "a realizarse en  la " },
-          { type: "bold", text: "V Región Viña del Mar, Chile. " },
-          {
-            type: "text",
-            text: "En la cual se abordarán distintos temas más allá de la cobranza, abarcando todo el mundo de servicios BPO. Este evento está orientado a un público de diferentes industrias. ",
-          },
-        ],
-      },
-    ],
-  },
-  {
-    id: 9,
-    slug: slug("como evitar fraudes en los pagos que recibe su empresa"),
-    title:
-      "¿Cómo evitar fraudes en pagos? La digitalización como escudo ante facturas falsas",
-    intro:
-      "Los fraudes financieros están en aumento, y uno de los más peligrosos para las empresas es el uso de facturas falsas. Solo en el periodo 2023-2024, el Servicio de Impuestos Internos (SII) detectó una defraudación de más de $440 mil millones en Chile. Como consecuencia, se bloquearon las claves tributarias de más de 27 mil empresas. ¿Qué pueden hacer las organizaciones para no formar parte de estas cifras?",
-    date: "06 de junio 2025",
-    author: "Antonella Hernandez",
-    tags: ["Prensa"],
-    image: "/images/blog/blog9/image1.png",
-    content: [
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "text",
-            text: "Los fraudes financieros están en aumento, y uno de los más peligrosos para las empresas es el uso de ",
-          },
-          { type: "bold", text: "facturas falsas. " },
-          {
-            type: "text",
-            text: "Solo en el periodo 2023-2024, el Servicio de Impuestos Internos (SII) detectó una defraudación de más de $440 mil millones en Chile. Como consecuencia, se bloquearon las claves tributarias de más de 27 mil empresas. ¿Qué pueden hacer las organizaciones para no formar parte de estas cifras?",
-          },
-        ],
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "text",
-            text: "Este tema fue analizado por nuestro CEO, Giovanni Medrano Ríos, en una reciente nota publicada por ",
-          },
-          {
-            type: "link",
-            text: "Serperuano.com",
-            href: "https://www.serperuano.com/2025/04/como-evitar-fraudes-en-pagos-evita-facturas-falsas-y-logra-la-proteccion-de-tu-empresa/",
-          },
-          {
-            type: "text",
-            text: " donde se abordaron los mecanismos más eficaces para evitar caer en redes de fraude fiscal.",
-          },
-        ],
-      },
-      {
-        type: "subtitle",
-        text: "🧾 ¿Cómo se presentan las facturas falsas?",
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "text",
-            text: "Los esquemas fraudulentos se han vuelto más sofisticados. Ya no solo se trata de empresas “fantasma”, sino de redes más complejas que incluyen:",
-          },
-        ],
-      },
-      {
-        type: "list",
-        items: [
-          [
-            {
-              type: "bold",
-              text: "Facturas ideológicamente falsas, ",
-            },
-            {
-              type: "text",
-              text: "sin transacción real de por medio.",
-            },
-          ],
-          [
-            {
-              type: "bold",
-              text: "Corrupción interna ",
-            },
-            {
-              type: "text",
-              text: "de empleados vinculados a prácticas ilícitas.",
-            },
-          ],
-          [
-            {
-              type: "bold",
-              text: "Inversionistas afectados ",
-            },
-            {
-              type: "text",
-              text: "que terminan asumiendo pérdidas sin saberlo.",
-            },
-          ],
-        ],
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "text",
-            text: "En sectores como construcción y servicios, donde hay operaciones complejas y grandes flujos de dinero, el riesgo es aún mayor.",
-          },
-        ],
-      },
-      {
-        type: "image",
-        link: "/images/blog/blog9/image1.png",
-      },
-      {
-        type: "subtitle",
-        text: "Estrategias para prevenir fraudes en facturación",
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "text",
-            text: "Desde Flujolink, identificamos dos pilares clave para protegerse:",
-          },
-        ],
-      },
-      {
-        type: "subtitle",
-        text: "1. Digitalización del proceso de cuentas por pagar",
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "text",
-            text: "Implementar soluciones que automaticen la recepción y validación de facturas permite:",
-          },
-        ],
-      },
-      {
-        type: "list",
-        items: [
-          [
-            {
-              type: "text",
-              text: "Reducir errores humanos.",
-            },
-          ],
-          [
-            {
-              type: "text",
-              text: "Validar datos en tiempo real.",
-            },
-          ],
-          [
-            {
-              type: "text",
-              text: "Integrar el flujo con sistemas ERP y órdenes de compra.",
-            },
-          ],
-        ],
-      },
-      {
-        type: "subtitle",
-        text: "2. Validación temprana de emisores",
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "text",
-            text: "Implementar soluciones que automaticen la recepción y validación de facturas permite:",
-          },
-        ],
-      },
-      {
-        type: "list",
-        items: [
-          [
-            {
-              type: "text",
-              text: "La ",
-            },
-            {
-              type: "bold",
-              text: "autenticidad ",
-            },
-            {
-              type: "text",
-              text: "de la factura.",
-            },
-          ],
-          [
-            {
-              type: "text",
-              text: "La ",
-            },
-            {
-              type: "bold",
-              text: "trazabilidad ",
-            },
-            {
-              type: "text",
-              text: "del documento.",
-            },
-          ],
-          [
-            {
-              type: "text",
-              text: "La ",
-            },
-            {
-              type: "bold",
-              text: "detección inmediata de inconsistencias",
-            },
-          ],
-        ],
-      },
-      {
-        type: "subtitle",
-        text: "📎 Lee la nota completa",
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          { type: "text", text: "Puedes leer la publicación completa en " },
-          {
-            type: "link",
-            text: "Serperuano.com",
-            href: "https://www.serperuano.com/2025/04/como-evitar-fraudes-en-pagos-evita-facturas-falsas-y-logra-la-proteccion-de-tu-empresa/",
-          },
-          {
-            type: "text",
-            text: ", donde exploramos más a fondo los riesgos y soluciones frente al uso de facturas fraudulentas.",
-          },
-        ],
-      },
-    ],
-  },
-  {
-    id: 10,
-    slug: slug("Consecuencias de pagar facturas fuera de fecha"),
-    title: "¿Cuáles son las consecuencias de pagar facturas fuera de fecha?",
-    intro:
-      "La demora en el pago de facturas se ha convertido en un desafío común para muchos negocios en el Perú. Más allá de la falta de liquidez por ventas o cobros pendientes, existen factores internos que suelen alargar el proceso de pago, como la alta burocracia en aprobaciones, la participación de múltiples roles y la dispersión de información en diferentes plataformas.",
-    date: "05 de junio 2025",
-    author: "Antonella Hernandez",
-    tags: ["Prensa"],
-    image: "/images/blog/blog10/main.jpg",
-    content: [
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "text",
-            text: "La demora en el pago de facturas se ha convertido en un desafío común para muchos negocios en el Perú. Más allá de la falta de liquidez por ventas o cobros pendientes, existen factores internos que suelen alargar el proceso de pago, como la alta burocracia en aprobaciones, la participación de múltiples roles y la dispersión de información en diferentes plataformas.",
-          },
-        ],
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "text",
-            text: "Esta situación no sólo genera complicaciones en el flujo de caja interno, sino que también entorpece el de los proveedores, generando inconvenientes en la cadena comercial y afectando directamente la operatividad. Así, los negocios terminan expuestos a riesgos judiciales, cobranza coactiva, deterioro de relaciones y daños reputacionales, difíciles de revertir en una economía cada vez más interconectada.",
-          },
-        ],
-      },
-      {
-        type: "image",
-        link: "/images/blog/blog10/image1.png",
-      },
-      {
-        type: "quote",
-        text: "“Frecuentemente, los retrasos en los pagos de facturas entre empresas no se deben siempre a la imposibilidad de pagar, sino a la carencia de procesos integrados y digitalizados que permitan un manejo fluido y seguro de la información. Esto puede provocar un efecto dominó: desde la sobrecarga operativa hasta el deterioro de las relaciones comerciales”, comenta Giovanni Medrano Ríos, CEO de Flujolink.",
-      },
-      {
-        type: "quote",
-        text: "“Por ello, la visibilidad total del proceso, la capacidad de aprobar facturas de manera informada y la posibilidad de integrar todas las etapas de la cadena de pagos son factores críticos para cualquier compañía moderna”, añade.",
-      },
-      {
-        type: "image",
-        link: "/images/blog/blog10/main.jpg",
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "text",
-            text: "Aunque pocos casos escalan a instancias legales, existen consecuencias puntuales que las empresas deben tener en cuenta cuando no gestionan adecuadamente sus cuentas por pagar:",
-          },
-        ],
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "bold",
-            text: "- Sobrecarga de recursos y costos operativos: ",
-          },
-          {
-            type: "text",
-            text: "Manejar manualmente facturas y aprobaciones en distintas plataformas eleva el tiempo invertido, el riesgo de errores y fraudes.",
-          },
-        ],
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          { type: "bold", text: "- Deterioro de la relación con proveedores:" },
-          {
-            type: "text",
-            text: "Los retrasos continuados pueden debilitar la confianza y provocar condiciones de pago menos favorables en el futuro.",
-          },
-        ],
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          { type: "bold", text: "- Riesgos legales o reputacionales: " },
-          {
-            type: "text",
-            text: "En situaciones extremas de mora o incumplimiento, pueden surgir acciones judiciales, embargos o un impacto negativo en la imagen de la empresa.",
-          },
-        ],
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          { type: "bold", text: "- Pérdida de visibilidad y control:" },
-          {
-            type: "text",
-            text: "Sin un sistema que unifique la información, se vuelve complejo anticipar salidas de caja y coordinar pagos de manera oportuna.",
-          },
-        ],
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "text",
-            text: "Para contrarrestar estos problemas, la adopción de herramientas tecnológicas se vuelve imprescindible. Según el vocero de Flujolink, la mayoría de las compañías podrían revertir esta situación mediante:",
-          },
-        ],
-      },
+  // {
+  //   id: 8,
+  //   slug: slug(
+  //     "¿Cómo evitar fraudes en pagos? Protege tu empresa y evita facturas falsas",
+  //   ),
+  //   title:
+  //     "¿Cómo evitar fraudes en pagos? Protege tu empresa y evita facturas falsas",
+  //   intro:
+  //     "En los últimos años, el fraude con facturas falsas se ha convertido en una amenaza real para miles de empresas en el país. Solo entre 2023 y 2024, el Servicio de Impuestos Internos (SII) en Chile detectó un esquema que habría permitido defraudar más de $440 mil millones, afectando a más de 27 mil empresas.",
+  //   date: "26 de abril 2025",
+  //   author: "Antonella Hernandez",
+  //   tags: ["Sena", "Educación Financiera"],
+  //   image: AssetImageBlog.blog_1_main.src,
+  //   content: [
+  //     {
+  //       type: "title",
+  //       text: "¿Cómo evitar fraudes en pagos? Protege tu empresa y evita facturas falsas",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       fragments: [
+  //         {
+  //           type: "text",
+  //           text: "En los últimos años, el fraude con facturas falsas se ha convertido en una amenaza real para miles de empresas en el país. Solo entre 2023 y 2024, el Servicio de Impuestos Internos (SII) en Chile detectó un esquema que habría permitido defraudar más de $440 mil millones. Como resultado, más de 27 mil empresas vieron bloqueadas sus claves tributarias. ¿La causa? Facturas que no correspondían a transacciones reales. ",
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       fragments: [
+  //         {
+  //           type: "text",
+  //           text: "Por otro lado, en Perú; la Policía Nacional del Perú (PNP), en el último año se registraron más de 31,000 denuncias por estafas, reflejando un preocupante aumento en modalidades delictivas como aplicaciones de pago fraudulentas, facturación falsa y esquemas de inversión engañosos. Estas prácticas no solo afectan la economía del país, sino que ponen en riesgo la estabilidad financiera de negocios y consumidores. ",
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       fragments: [
+  //         {
+  //           type: "text",
+  //           text: "Si nos enfocamos en las facturas falsas,  estas se presentan de diversas formas, ya que pueden derivarse de facturas ideológicamente falsas, que no corresponden a transacciones reales y se presentan para obtener financiamiento de empresas de factoring; corrupción interna por empleados que estén ejerciendo prácticas fraudulentas o redes de corrupción, es decir, que se amplía llegando a involucrar a inversionistas o fondos completos de inversión que terminan asumiendo pérdidas. ",
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       fragments: [
+  //         {
+  //           type: "text",
+  //           text: "Este tipo de fraude puede darse de varias formas: desde documentos emitidos con información falsa para obtener financiamiento, hasta redes organizadas que involucran a empleados, empresas de papel e incluso fondos de inversión. Las industrias más golpeadas han sido la construcción y los servicios, sectores que por su complejidad y volumen de operaciones son especialmente vulnerables. ",
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       type: "subtitle",
+  //       text: "¿Por qué está aumentando este problema?",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       fragments: [
+  //         {
+  //           type: "text",
+  //           text: "Según un informe reciente, el uso de facturas fraudulentas ha crecido un 92 % solo en 2024. La razón principal: la evolución de los esquemas de fraude, cada vez más sofisticados. Esto incluye el uso de empresas falsas, patrones de comportamiento tributario sospechosos y sistemas poco protegidos frente a irregularidades. ",
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       type: "quote",
+  //       text: "“Este crecimiento se debe a una mayor sofisticación de las redes de fraude y a la falta de controles adecuados en muchas empresas”, explica Giovanni Medrano Ríos, CEO de Sena. ",
+  //     },
+  //     {
+  //       type: "image",
+  //       link: "https://drive.usercontent.google.com/download?id=1XWdL7JSRCJMVqsYhUp808aDV32qMQyCG&export=view&authuser=0",
+  //     },
+  //     {
+  //       type: "subtitle",
+  //       text: "¿Cómo proteger tu empresa? Del caos al control",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       fragments: [
+  //         {
+  //           type: "text",
+  //           text: "Hoy más que nunca, la innovación financiera para anticiparse al riesgo y proteger tu empresa del fraude y la morosidad  es clave, ya que la tecnología y los datos están transformando la gestión del riesgo y fraude, para tomar control y acción temprana. Es por eso que ",
+  //         },
+  //         { type: "link", text: "Sena ", href: "/" },
+  //         {
+  //           type: "text",
+  //           text: "contribuye a esto, digitalizando el proceso de pagos y cobros con verdadera trazabilidad e identificación para evitar caer en estas trampas. Herramientas como Sena permiten: ",
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       type: "list",
+  //       items: [
+  //         "Validar la autenticidad de las facturas en tiempo real.",
+  //         "Automatizar la recepción y validación de documentos.",
+  //         "Conectar el flujo de pagos con tus sistemas de gestión (ERP).",
+  //         "Comparar facturas con órdenes de compra y contratos para detectar inconsistencias.",
+  //       ],
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       fragments: [
+  //         {
+  //           type: "text",
+  //           text: "Además, se pueden implementar tecnologías como blockchain para asegurar que las facturas no hayan sido alteradas desde su emisión, y sistemas de validación cruzada con bases oficiales como la del SII ( Chile) o Sunal (Perú).",
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       type: "image",
+  //       link: "https://lh7-rt.googleusercontent.com/docsz/AD_4nXeaEcLziniDmnE-gJtWsGxEFE4eiS1t5stVz6J4cVIHIpmxAgthTT7BTU9SA4bNYjuSJX_PfEQkEHFweQgb0jKJFRCU5RBLWumM6BfnuWJXnvkTBCoPpGD9qUZ9_PdwYGxVv1R46mRudJoFY-hI_j4?key=mLWCzQYgIU_v3wO2OcOsnw",
+  //     },
+  //     {
+  //       type: "subtitle",
+  //       text: "🔒 La prevención es el mejor escudo ",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       fragments: [
+  //         {
+  //           type: "text",
+  //           text: "Digitalizar tus procesos no solo mejora la eficiencia, también fortalece la confianza con tus clientes y proveedores. ",
+  //         },
+  //         {
+  //           type: "bold",
+  //           text: "Estás protegiendo tu empresa y contribuyendo a un ecosistema financiero más seguro para todos. ",
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       type: "quote",
+  //       text: "“La implementación de estas prácticas no solo mejora la transparencia, también genera seguridad y respaldo en todas las etapas del proceso”, agrega Medrano.",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       fragments: [
+  //         {
+  //           type: "text",
+  //           text: "Toda esta información y mucho más se desarrollará en el conversatorio ",
+  //         },
+  //         { type: "bold", text: "“B2B Risk & Innovation Day“, " },
+  //         { type: "text", text: "organizado por " },
+  //         { type: "bold", text: "Ciclo de Riesgo Chile,  " },
+  //         { type: "text", text: "a realizarse en  la " },
+  //         { type: "bold", text: "V Región Viña del Mar, Chile. " },
+  //         {
+  //           type: "text",
+  //           text: "En la cual se abordarán distintos temas más allá de la cobranza, abarcando todo el mundo de servicios BPO. Este evento está orientado a un público de diferentes industrias. ",
+  //         },
+  //       ],
+  //     },
+  //   ],
+  // },
+  // {
+  //   id: 9,
+  //   slug: slug("como evitar fraudes en los pagos que recibe su empresa"),
+  //   title:
+  //     "¿Cómo evitar fraudes en pagos? La digitalización como escudo ante facturas falsas",
+  //   intro:
+  //     "Los fraudes financieros están en aumento, y uno de los más peligrosos para las empresas es el uso de facturas falsas. Solo en el periodo 2023-2024, el Servicio de Impuestos Internos (SII) detectó una defraudación de más de $440 mil millones en Chile. Como consecuencia, se bloquearon las claves tributarias de más de 27 mil empresas. ¿Qué pueden hacer las organizaciones para no formar parte de estas cifras?",
+  //   date: "06 de junio 2025",
+  //   author: "Antonella Hernandez",
+  //   tags: ["Prensa"],
+  //   image: AssetImageBlog.blog_9_main.src,
+  //   content: [
+  //     {
+  //       type: "paragraph",
+  //       fragments: [
+  //         {
+  //           type: "text",
+  //           text: "Los fraudes financieros están en aumento, y uno de los más peligrosos para las empresas es el uso de ",
+  //         },
+  //         { type: "bold", text: "facturas falsas. " },
+  //         {
+  //           type: "text",
+  //           text: "Solo en el periodo 2023-2024, el Servicio de Impuestos Internos (SII) detectó una defraudación de más de $440 mil millones en Chile. Como consecuencia, se bloquearon las claves tributarias de más de 27 mil empresas. ¿Qué pueden hacer las organizaciones para no formar parte de estas cifras?",
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       fragments: [
+  //         {
+  //           type: "text",
+  //           text: "Este tema fue analizado por nuestro CEO, Giovanni Medrano Ríos, en una reciente nota publicada por ",
+  //         },
+  //         {
+  //           type: "link",
+  //           text: "Serperuano.com",
+  //           href: "https://www.serperuano.com/2025/04/como-evitar-fraudes-en-pagos-evita-facturas-falsas-y-logra-la-proteccion-de-tu-empresa/",
+  //         },
+  //         {
+  //           type: "text",
+  //           text: " donde se abordaron los mecanismos más eficaces para evitar caer en redes de fraude fiscal.",
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       type: "subtitle",
+  //       text: "🧾 ¿Cómo se presentan las facturas falsas?",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       fragments: [
+  //         {
+  //           type: "text",
+  //           text: "Los esquemas fraudulentos se han vuelto más sofisticados. Ya no solo se trata de empresas “fantasma”, sino de redes más complejas que incluyen:",
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       type: "list",
+  //       items: [
+  //         [
+  //           {
+  //             type: "bold",
+  //             text: "Facturas ideológicamente falsas, ",
+  //           },
+  //           {
+  //             type: "text",
+  //             text: "sin transacción real de por medio.",
+  //           },
+  //         ],
+  //         [
+  //           {
+  //             type: "bold",
+  //             text: "Corrupción interna ",
+  //           },
+  //           {
+  //             type: "text",
+  //             text: "de empleados vinculados a prácticas ilícitas.",
+  //           },
+  //         ],
+  //         [
+  //           {
+  //             type: "bold",
+  //             text: "Inversionistas afectados ",
+  //           },
+  //           {
+  //             type: "text",
+  //             text: "que terminan asumiendo pérdidas sin saberlo.",
+  //           },
+  //         ],
+  //       ],
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       fragments: [
+  //         {
+  //           type: "text",
+  //           text: "En sectores como construcción y servicios, donde hay operaciones complejas y grandes flujos de dinero, el riesgo es aún mayor.",
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       type: "image",
+  //       link: AssetImageBlog.blog_9_main.src,
+  //     },
+  //     {
+  //       type: "subtitle",
+  //       text: "Estrategias para prevenir fraudes en facturación",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       fragments: [
+  //         {
+  //           type: "text",
+  //           text: "Desde Sena, identificamos dos pilares clave para protegerse:",
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       type: "subtitle",
+  //       text: "1. Digitalización del proceso de cuentas por pagar",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       fragments: [
+  //         {
+  //           type: "text",
+  //           text: "Implementar soluciones que automaticen la recepción y validación de facturas permite:",
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       type: "list",
+  //       items: [
+  //         [
+  //           {
+  //             type: "text",
+  //             text: "Reducir errores humanos.",
+  //           },
+  //         ],
+  //         [
+  //           {
+  //             type: "text",
+  //             text: "Validar datos en tiempo real.",
+  //           },
+  //         ],
+  //         [
+  //           {
+  //             type: "text",
+  //             text: "Integrar el flujo con sistemas ERP y órdenes de compra.",
+  //           },
+  //         ],
+  //       ],
+  //     },
+  //     {
+  //       type: "subtitle",
+  //       text: "2. Validación temprana de emisores",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       fragments: [
+  //         {
+  //           type: "text",
+  //           text: "Implementar soluciones que automaticen la recepción y validación de facturas permite:",
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       type: "list",
+  //       items: [
+  //         [
+  //           {
+  //             type: "text",
+  //             text: "La ",
+  //           },
+  //           {
+  //             type: "bold",
+  //             text: "autenticidad ",
+  //           },
+  //           {
+  //             type: "text",
+  //             text: "de la factura.",
+  //           },
+  //         ],
+  //         [
+  //           {
+  //             type: "text",
+  //             text: "La ",
+  //           },
+  //           {
+  //             type: "bold",
+  //             text: "trazabilidad ",
+  //           },
+  //           {
+  //             type: "text",
+  //             text: "del documento.",
+  //           },
+  //         ],
+  //         [
+  //           {
+  //             type: "text",
+  //             text: "La ",
+  //           },
+  //           {
+  //             type: "bold",
+  //             text: "detección inmediata de inconsistencias",
+  //           },
+  //         ],
+  //       ],
+  //     },
+  //     {
+  //       type: "subtitle",
+  //       text: "📎 Lee la nota completa",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       fragments: [
+  //         { type: "text", text: "Puedes leer la publicación completa en " },
+  //         {
+  //           type: "link",
+  //           text: "Serperuano.com",
+  //           href: "https://www.serperuano.com/2025/04/como-evitar-fraudes-en-pagos-evita-facturas-falsas-y-logra-la-proteccion-de-tu-empresa/",
+  //         },
+  //         {
+  //           type: "text",
+  //           text: ", donde exploramos más a fondo los riesgos y soluciones frente al uso de facturas fraudulentas.",
+  //         },
+  //       ],
+  //     },
+  //   ],
+  // },
+  // {
+  //   id: 10,
+  //   slug: slug("Consecuencias de pagar facturas fuera de fecha"),
+  //   title: "¿Cuáles son las consecuencias de pagar facturas fuera de fecha?",
+  //   intro:
+  //     "La demora en el pago de facturas se ha convertido en un desafío común para muchos negocios en el Perú. Más allá de la falta de liquidez por ventas o cobros pendientes, existen factores internos que suelen alargar el proceso de pago, como la alta burocracia en aprobaciones, la participación de múltiples roles y la dispersión de información en diferentes plataformas.",
+  //   date: "05 de junio 2025",
+  //   author: "Antonella Hernandez",
+  //   tags: ["Prensa"],
+  //   image: AssetImageBlog.blog_10_main.src,
+  //   content: [
+  //     {
+  //       type: "paragraph",
+  //       fragments: [
+  //         {
+  //           type: "text",
+  //           text: "La demora en el pago de facturas se ha convertido en un desafío común para muchos negocios en el Perú. Más allá de la falta de liquidez por ventas o cobros pendientes, existen factores internos que suelen alargar el proceso de pago, como la alta burocracia en aprobaciones, la participación de múltiples roles y la dispersión de información en diferentes plataformas.",
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       fragments: [
+  //         {
+  //           type: "text",
+  //           text: "Esta situación no sólo genera complicaciones en el flujo de caja interno, sino que también entorpece el de los proveedores, generando inconvenientes en la cadena comercial y afectando directamente la operatividad. Así, los negocios terminan expuestos a riesgos judiciales, cobranza coactiva, deterioro de relaciones y daños reputacionales, difíciles de revertir en una economía cada vez más interconectada.",
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       type: "image",
+  //       link: AssetImageBlog.blog_10_1.src,
+  //     },
+  //     {
+  //       type: "quote",
+  //       text: "“Frecuentemente, los retrasos en los pagos de facturas entre empresas no se deben siempre a la imposibilidad de pagar, sino a la carencia de procesos integrados y digitalizados que permitan un manejo fluido y seguro de la información. Esto puede provocar un efecto dominó: desde la sobrecarga operativa hasta el deterioro de las relaciones comerciales”, comenta Giovanni Medrano Ríos, CEO de Sena.",
+  //     },
+  //     {
+  //       type: "quote",
+  //       text: "“Por ello, la visibilidad total del proceso, la capacidad de aprobar facturas de manera informada y la posibilidad de integrar todas las etapas de la cadena de pagos son factores críticos para cualquier compañía moderna”, añade.",
+  //     },
+  //     {
+  //       type: "image",
+  //       link: AssetImageBlog.blog_10_main.src,
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       fragments: [
+  //         {
+  //           type: "text",
+  //           text: "Aunque pocos casos escalan a instancias legales, existen consecuencias puntuales que las empresas deben tener en cuenta cuando no gestionan adecuadamente sus cuentas por pagar:",
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       fragments: [
+  //         {
+  //           type: "bold",
+  //           text: "- Sobrecarga de recursos y costos operativos: ",
+  //         },
+  //         {
+  //           type: "text",
+  //           text: "Manejar manualmente facturas y aprobaciones en distintas plataformas eleva el tiempo invertido, el riesgo de errores y fraudes.",
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       fragments: [
+  //         { type: "bold", text: "- Deterioro de la relación con proveedores:" },
+  //         {
+  //           type: "text",
+  //           text: "Los retrasos continuados pueden debilitar la confianza y provocar condiciones de pago menos favorables en el futuro.",
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       fragments: [
+  //         { type: "bold", text: "- Riesgos legales o reputacionales: " },
+  //         {
+  //           type: "text",
+  //           text: "En situaciones extremas de mora o incumplimiento, pueden surgir acciones judiciales, embargos o un impacto negativo en la imagen de la empresa.",
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       fragments: [
+  //         { type: "bold", text: "- Pérdida de visibilidad y control:" },
+  //         {
+  //           type: "text",
+  //           text: "Sin un sistema que unifique la información, se vuelve complejo anticipar salidas de caja y coordinar pagos de manera oportuna.",
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       fragments: [
+  //         {
+  //           type: "text",
+  //           text: "Para contrarrestar estos problemas, la adopción de herramientas tecnológicas se vuelve imprescindible. Según el vocero de Sena, la mayoría de las compañías podrían revertir esta situación mediante:",
+  //         },
+  //       ],
+  //     },
 
-      {
-        type: "paragraph",
-        fragments: [
-          { type: "bold", text: "1. Visibilidad integral de las facturas:  " },
-          {
-            type: "text",
-            text: "Permitir a todas las áreas involucradas –desde Finanzas hasta Compras– acceder a la información en tiempo real para evitar fraudes, duplicidad de datos o confusiones.",
-          },
-        ],
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          { type: "bold", text: "2. Aprobaciones rápidas y seguras: " },
-          {
-            type: "text",
-            text: "Contar con flujos de aprobación digitales que reduzcan la burocracia sin sacrificar el control; cada responsable puede supervisar y validar pagos con confianza.",
-          },
-        ],
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "bold",
-            text: "3. Digitalización e integración de procesos: ",
-          },
-          {
-            type: "text",
-            text: "Agrupar en una sola plataforma las etapas de recepción, revisión, confirmación y pago de facturas, evitando la dispersión en múltiples sistemas.",
-          },
-        ],
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          { type: "bold", text: "4. Alertas y recordatorios automáticos: " },
-          {
-            type: "text",
-            text: "Mantener un sistema de seguimiento constante de los plazos de vencimiento y enviar notificaciones cuando sea necesario, contribuyendo a una mayor tasa de pago puntual.",
-          },
-        ],
-      },
-    ],
-  },
+  //     {
+  //       type: "paragraph",
+  //       fragments: [
+  //         { type: "bold", text: "1. Visibilidad integral de las facturas:  " },
+  //         {
+  //           type: "text",
+  //           text: "Permitir a todas las áreas involucradas –desde Finanzas hasta Compras– acceder a la información en tiempo real para evitar fraudes, duplicidad de datos o confusiones.",
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       fragments: [
+  //         { type: "bold", text: "2. Aprobaciones rápidas y seguras: " },
+  //         {
+  //           type: "text",
+  //           text: "Contar con flujos de aprobación digitales que reduzcan la burocracia sin sacrificar el control; cada responsable puede supervisar y validar pagos con confianza.",
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       fragments: [
+  //         {
+  //           type: "bold",
+  //           text: "3. Digitalización e integración de procesos: ",
+  //         },
+  //         {
+  //           type: "text",
+  //           text: "Agrupar en una sola plataforma las etapas de recepción, revisión, confirmación y pago de facturas, evitando la dispersión en múltiples sistemas.",
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       fragments: [
+  //         { type: "bold", text: "4. Alertas y recordatorios automáticos: " },
+  //         {
+  //           type: "text",
+  //           text: "Mantener un sistema de seguimiento constante de los plazos de vencimiento y enviar notificaciones cuando sea necesario, contribuyendo a una mayor tasa de pago puntual.",
+  //         },
+  //       ],
+  //     },
+  //   ],
+  // },
   {
     id: 11,
-    slug: slug("flujolink nacio para transformar las finanzas de las empresas"),
-    title:
-      "¿Por qué Flujolink nació para transformar las finanzas de las empresas?",
+    slug: slug("Sena nacio para transformar las finanzas de las empresas"),
+    title: "¿Por qué Sena nació para transformar las finanzas de las empresas?",
     intro:
-      "En Flujolink no solo creamos una herramienta financiera. Creamos una solución pensada en la realidad de quienes llevan adelante sus negocios todos los días. Nacimos con un propósito claro: ordenar, simplificar y dar control a las finanzas de las empresas que más lo necesitan.",
+      "En Sena no solo creamos una herramienta financiera. Creamos una solución pensada en la realidad de quienes llevan adelante sus negocios todos los días. Nacimos con un propósito claro: ordenar, simplificar y dar control a las finanzas de las empresas que más lo necesitan.",
     date: "11 de junio 2025",
     author: "Fernanda Hurtado",
-    tags: ["Flujolink", "Blog"],
-    image: "/images/blog/blog11/main.png",
+    tags: ["Sena", "Blog"],
+    image: AssetImageBlog.blog_11_main.src,
     content: [
       {
         type: "paragraph",
         fragments: [
           {
             type: "text",
-            text: "En Flujolink no solo creamos una herramienta financiera. Creamos una solución pensada en la realidad de quienes llevan adelante sus negocios todos los días. Nacimos con un propósito claro: ",
+            text: "En Sena no solo creamos una herramienta financiera. Creamos una solución pensada en la realidad de quienes llevan adelante sus negocios todos los días. Nacimos con un propósito claro: ",
           },
           {
             type: "bold",
@@ -1977,7 +1977,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: "text",
-            text: "Flujolink nació tras cientos de conversaciones con personas que día a día luchan por mantener su negocio a flote. Nos contaron lo difícil que es tener claridad sobre lo que entra y lo que sale, y cómo eso afecta todo: desde el crecimiento hasta el descanso mental.",
+            text: "Sena nació tras cientos de conversaciones con personas que día a día luchan por mantener su negocio a flote. Nos contaron lo difícil que es tener claridad sobre lo que entra y lo que sale, y cómo eso afecta todo: desde el crecimiento hasta el descanso mental.",
           },
         ],
       },
@@ -1999,7 +1999,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: "text",
-            text: "Flujolink fue diseñado para adaptarse al ritmo real de las empresas.",
+            text: "Sena fue diseñado para adaptarse al ritmo real de las empresas.",
           },
         ],
       },
@@ -2024,7 +2024,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "image",
-        link: "/images/blog/blog11/main.png",
+        link: AssetImageBlog.blog_11_main.src,
       },
       {
         type: "paragraph",
@@ -2068,7 +2068,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: "text",
-            text: "Flujolink no es solo una plataforma. Es una nueva forma de relacionarse con el dinero que entra y sale del negocio.",
+            text: "Sena no es solo una plataforma. Es una nueva forma de relacionarse con el dinero que entra y sale del negocio.",
           },
         ],
       },
@@ -2083,7 +2083,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: "text",
-            text: "Seguimos construyendo junto a nuestros usuarios. Cada mejora que lanzamos nace de la experiencia real de quienes usan Flujolink todos los días.",
+            text: "Seguimos construyendo junto a nuestros usuarios. Cada mejora que lanzamos nace de la experiencia real de quienes usan Sena todos los días.",
           },
         ],
       },
@@ -2100,244 +2100,244 @@ export const blogPosts: BlogPost[] = [
       //*! aca abajo no */
     ],
   },
-  {
-    id: 12,
-    slug: slug("que pasa con los acreedores cuando una empresa quiebra"),
-    title:
-      "¿Qué pasa con los acreedores cuando una empresa quiebra? Nuestra participación en Revista Economía?",
-    intro:
-      "Cuando una empresa atraviesa una crisis financiera y entra en quiebra, no solo se afecta su operación interna: los efectos se extienden a toda su cadena de valor. En especial, a los acreedores.",
-    date: "24 de junio 2025",
-    author: "Fernanda Hurtado",
-    tags: ["Prensa"],
-    image: "/images/blog/blog12/main.jpg",
-    content: [
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "text",
-            text: "Cuando una empresa atraviesa una crisis financiera y entra en quiebra, no solo se afecta su operación interna: los efectos se extienden a toda su cadena de valor. En especial, a los acreedores. ",
-          },
-        ],
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          { type: "text", text: "En una reciente entrevista para  " },
-          {
-            type: "link",
-            text: "Revista Economía",
-            href: "https://www.revistaeconomia.com/quiebre-de-empresas-en-peru-como-repercute-en-los-acreedores-y-cadena-completa/",
-          },
-          {
-            type: "text",
-            text: " Giovanni Medrano Ríos, CEO de Flujolink, abordó las implicancias que tiene la quiebra de una empresa en la recuperación de pagos por parte de los acreedores y qué estrategias deben aplicarse para reducir el riesgo de incobrabilidad.",
-          },
-        ],
-      },
-      {
-        type: "subtitle",
-        text: "🔍 ¿Qué sucede legalmente cuando una empresa quiebra?",
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "text",
-            text: "Según la Ley General del Sistema Concursal (Ley N° 27809), existen dos tipos de procedimientos:",
-          },
-        ],
-      },
-      {
-        type: "list",
-        items: [
-          [
-            {
-              type: "bold",
-              text: "Concurso ordinario",
-            },
-            {
-              type: "text",
-              text: ", cuando una empresa ya se encuentra en situación de insolvencia.",
-            },
-          ],
-          [
-            {
-              type: "bold",
-              text: "Concurso preventivo",
-            },
-            {
-              type: "text",
-              text: ", cuando prevé problemas financieros y busca llegar a acuerdos anticipados con sus acreedores.",
-            },
-          ],
-        ],
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "text",
-            text: "En ambos casos, los acreedores deben suspender sus acciones individuales y canalizar sus reclamos a través del proceso concursal.",
-          },
-        ],
-      },
-      {
-        type: "image",
-        link: "/images/blog/blog12/main.jpg",
-      },
-      {
-        type: "subtitle",
-        text: "🛑 ¿Cómo anticiparse como acreedor?",
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "text",
-            text: "Giovanni Medrano explicó que antes de que una empresa llegue a la quiebra, suele haber señales claras:",
-          },
-        ],
-      },
-      {
-        type: "list",
-        items: [
-          [
-            {
-              type: "text",
-              text: "Morosidades crecientes",
-            },
-          ],
-          [
-            {
-              type: "text",
-              text: "Cambios bruscos en la administración",
-            },
-          ],
-          [
-            {
-              type: "text",
-              text: "Pedidos inusuales de crédito o ampliación de plazos",
-            },
-          ],
-          [
-            {
-              type: "text",
-              text: "Falta de comunicación o transparencia financiera",
-            },
-          ],
-        ],
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "text",
-            text: "Detectar estas señales a tiempo puede marcar la diferencia entre recuperar tu dinero o perderlo completamente.",
-          },
-        ],
-      },
-      {
-        type: "subtitle",
-        text: "✅ Recomendaciones clave de Flujolink para acreedores",
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "bold",
-            text: "1. Prevención desde antes de la venta",
-          },
-        ],
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "text",
-            text: "Evalúa la solvencia del cliente, diversifica tu cartera, exige garantías y monitorea el comportamiento de pago.",
-          },
-        ],
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "bold",
-            text: "2. Reaccionar ante señales de alerta",
-          },
-        ],
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "text",
-            text: "Ajusta las condiciones comerciales a tiempo: solicita pagos anticipados o reduce líneas de crédito.",
-          },
-        ],
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "bold",
-            text: "3. Formaliza siempre los acuerdos",
-          },
-        ],
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "text",
-            text: "Antes de refinanciar o dar facilidades, asegúrate de comprender la situación del deudor y respáldate legalmente.",
-          },
-        ],
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "bold",
-            text: "4. Consulta con expertos",
-          },
-        ],
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "text",
-            text: "La asesoría profesional en cobranza puede evitar acuerdos perjudiciales y maximizar tus posibilidades de recuperación.",
-          },
-        ],
-      },
-      {
-        type: "subtitle",
-        text: "📰 ¿Quieres leer el artículo completo?",
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "text",
-            text: "Te invitamos a revisar la publicación original en ",
-          },
-          {
-            type: "link",
-            text: "Revista Economía",
-            href: "https://www.revistaeconomia.com/quiebre-de-empresas-en-peru-como-repercute-en-los-acreedores-y-cadena-completa/",
-          },
-          {
-            type: "text",
-            text: ", donde compartimos nuestra visión sobre cómo proteger la salud financiera de tu negocio frente a la quiebra de clientes o aliados estratégicos.",
-          },
-        ],
-      },
-    ],
-  },
+  // {
+  //   id: 12,
+  //   slug: slug("que pasa con los acreedores cuando una empresa quiebra"),
+  //   title:
+  //     "¿Qué pasa con los acreedores cuando una empresa quiebra? Nuestra participación en Revista Economía?",
+  //   intro:
+  //     "Cuando una empresa atraviesa una crisis financiera y entra en quiebra, no solo se afecta su operación interna: los efectos se extienden a toda su cadena de valor. En especial, a los acreedores.",
+  //   date: "24 de junio 2025",
+  //   author: "Fernanda Hurtado",
+  //   tags: ["Prensa"],
+  //   image: AssetImageBlog.blog_12_main.src,
+  //   content: [
+  //     {
+  //       type: "paragraph",
+  //       fragments: [
+  //         {
+  //           type: "text",
+  //           text: "Cuando una empresa atraviesa una crisis financiera y entra en quiebra, no solo se afecta su operación interna: los efectos se extienden a toda su cadena de valor. En especial, a los acreedores. ",
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       fragments: [
+  //         { type: "text", text: "En una reciente entrevista para  " },
+  //         {
+  //           type: "link",
+  //           text: "Revista Economía",
+  //           href: "https://www.revistaeconomia.com/quiebre-de-empresas-en-peru-como-repercute-en-los-acreedores-y-cadena-completa/",
+  //         },
+  //         {
+  //           type: "text",
+  //           text: " Giovanni Medrano Ríos, CEO de Sena, abordó las implicancias que tiene la quiebra de una empresa en la recuperación de pagos por parte de los acreedores y qué estrategias deben aplicarse para reducir el riesgo de incobrabilidad.",
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       type: "subtitle",
+  //       text: "🔍 ¿Qué sucede legalmente cuando una empresa quiebra?",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       fragments: [
+  //         {
+  //           type: "text",
+  //           text: "Según la Ley General del Sistema Concursal (Ley N° 27809), existen dos tipos de procedimientos:",
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       type: "list",
+  //       items: [
+  //         [
+  //           {
+  //             type: "bold",
+  //             text: "Concurso ordinario",
+  //           },
+  //           {
+  //             type: "text",
+  //             text: ", cuando una empresa ya se encuentra en situación de insolvencia.",
+  //           },
+  //         ],
+  //         [
+  //           {
+  //             type: "bold",
+  //             text: "Concurso preventivo",
+  //           },
+  //           {
+  //             type: "text",
+  //             text: ", cuando prevé problemas financieros y busca llegar a acuerdos anticipados con sus acreedores.",
+  //           },
+  //         ],
+  //       ],
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       fragments: [
+  //         {
+  //           type: "text",
+  //           text: "En ambos casos, los acreedores deben suspender sus acciones individuales y canalizar sus reclamos a través del proceso concursal.",
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       type: "image",
+  //       link: AssetImageBlog.blog_12_main.src,
+  //     },
+  //     {
+  //       type: "subtitle",
+  //       text: "🛑 ¿Cómo anticiparse como acreedor?",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       fragments: [
+  //         {
+  //           type: "text",
+  //           text: "Giovanni Medrano explicó que antes de que una empresa llegue a la quiebra, suele haber señales claras:",
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       type: "list",
+  //       items: [
+  //         [
+  //           {
+  //             type: "text",
+  //             text: "Morosidades crecientes",
+  //           },
+  //         ],
+  //         [
+  //           {
+  //             type: "text",
+  //             text: "Cambios bruscos en la administración",
+  //           },
+  //         ],
+  //         [
+  //           {
+  //             type: "text",
+  //             text: "Pedidos inusuales de crédito o ampliación de plazos",
+  //           },
+  //         ],
+  //         [
+  //           {
+  //             type: "text",
+  //             text: "Falta de comunicación o transparencia financiera",
+  //           },
+  //         ],
+  //       ],
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       fragments: [
+  //         {
+  //           type: "text",
+  //           text: "Detectar estas señales a tiempo puede marcar la diferencia entre recuperar tu dinero o perderlo completamente.",
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       type: "subtitle",
+  //       text: "✅ Recomendaciones clave de Sena para acreedores",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       fragments: [
+  //         {
+  //           type: "bold",
+  //           text: "1. Prevención desde antes de la venta",
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       fragments: [
+  //         {
+  //           type: "text",
+  //           text: "Evalúa la solvencia del cliente, diversifica tu cartera, exige garantías y monitorea el comportamiento de pago.",
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       fragments: [
+  //         {
+  //           type: "bold",
+  //           text: "2. Reaccionar ante señales de alerta",
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       fragments: [
+  //         {
+  //           type: "text",
+  //           text: "Ajusta las condiciones comerciales a tiempo: solicita pagos anticipados o reduce líneas de crédito.",
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       fragments: [
+  //         {
+  //           type: "bold",
+  //           text: "3. Formaliza siempre los acuerdos",
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       fragments: [
+  //         {
+  //           type: "text",
+  //           text: "Antes de refinanciar o dar facilidades, asegúrate de comprender la situación del deudor y respáldate legalmente.",
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       fragments: [
+  //         {
+  //           type: "bold",
+  //           text: "4. Consulta con expertos",
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       fragments: [
+  //         {
+  //           type: "text",
+  //           text: "La asesoría profesional en cobranza puede evitar acuerdos perjudiciales y maximizar tus posibilidades de recuperación.",
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       type: "subtitle",
+  //       text: "📰 ¿Quieres leer el artículo completo?",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       fragments: [
+  //         {
+  //           type: "text",
+  //           text: "Te invitamos a revisar la publicación original en ",
+  //         },
+  //         {
+  //           type: "link",
+  //           text: "Revista Economía",
+  //           href: "https://www.revistaeconomia.com/quiebre-de-empresas-en-peru-como-repercute-en-los-acreedores-y-cadena-completa/",
+  //         },
+  //         {
+  //           type: "text",
+  //           text: ", donde compartimos nuestra visión sobre cómo proteger la salud financiera de tu negocio frente a la quiebra de clientes o aliados estratégicos.",
+  //         },
+  //       ],
+  //     },
+  //   ],
+  // },
   {
     id: 13,
     slug: slug(
@@ -2350,7 +2350,7 @@ export const blogPosts: BlogPost[] = [
     date: "26 de junio 2025",
     author: "Fernanda Hurtado",
     tags: ["Prensa"],
-    image: "/images/blog/blog13/main.png",
+    image: AssetImageBlog.blog_13_main.src,
     content: [
       {
         type: "paragraph",
@@ -2388,7 +2388,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "quote",
-        text: "“Aunque legalmente el plazo de pago es de 30 días, muchas pymes reciben su dinero después de 60, 90 o incluso 120 días. Esto se da especialmente en sectores como construcción, donde el retraso ya es una norma no escrita. Las pequeñas empresas temen perder contratos si exigen sus pagos a tiempo. En Perú, hablar de cobranzas aún es visto como algo negativo”, comenta Juan Córdova, Subgerente de Venta B2B en Flujolink, en entrevista para PQS.pe.",
+        text: "“Aunque legalmente el plazo de pago es de 30 días, muchas pymes reciben su dinero después de 60, 90 o incluso 120 días. Esto se da especialmente en sectores como construcción, donde el retraso ya es una norma no escrita. Las pequeñas empresas temen perder contratos si exigen sus pagos a tiempo. En Perú, hablar de cobranzas aún es visto como algo negativo”, comenta Juan Córdova, Subgerente de Venta B2B en Sena, en entrevista para PQS.pe.",
       },
       {
         type: "paragraph",
@@ -2409,7 +2409,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "image",
-        link: "/images/blog/blog13/main.png",
+        link: AssetImageBlog.blog_13_main.src,
       },
       {
         type: "subtitle",
@@ -2420,7 +2420,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: "text",
-            text: "Desde Flujolink, promovemos una nueva visión de la cobranza: ",
+            text: "Desde Sena, promovemos una nueva visión de la cobranza: ",
           },
           {
             type: "bold",
@@ -2525,7 +2525,7 @@ export const blogPosts: BlogPost[] = [
     date: "22 de julio 2025",
     author: "Antonella Hernandez",
     tags: ["Blog"],
-    image: "/images/blog/blog14/main.png",
+    image: AssetImageBlog.blog_14_main.src,
     content: [
       {
         type: "paragraph",
@@ -2549,20 +2549,20 @@ export const blogPosts: BlogPost[] = [
           },
           {
             type: "text",
-            text: " Si aún dependes de Excel, recordatorios manuales o correos improvisados, tu sistema está fallando. Hoy, el diferencial competitivo está en la eficiencia, y eso significa automatizar. En Flujolink, ayudamos a empresas a digitalizar completamente su gestión de cuentas por cobrar, con recordatorios automáticos, trazabilidad en tiempo real y reportes que te permiten tomar decisiones con data, no con intuición.",
+            text: " Si aún dependes de Excel, recordatorios manuales o correos improvisados, tu sistema está fallando. Hoy, el diferencial competitivo está en la eficiencia, y eso significa automatizar. En Sena, ayudamos a empresas a digitalizar completamente su gestión de cuentas por cobrar, con recordatorios automáticos, trazabilidad en tiempo real y reportes que te permiten tomar decisiones con data, no con intuición.",
           },
         ],
       },
       {
         type: "image",
-        link: "/images/blog/blog14/main.png",
+        link: AssetImageBlog.blog_14_main.src,
       },
       {
         type: "paragraph",
         fragments: [
           {
             type: "text",
-            text: "Pero automatizar no solo es eficiencia. Es prevención. Las empresas que usan Flujolink han logrado reducir su morosidad hasta en un 35% en los primeros 90 días. ¿Cómo? Aplicando flujos inteligentes de comunicación vía WhatsApp, email o llamadas automáticas, activados según el comportamiento de pago de cada cliente. No todos pagan igual, y por eso no todos deberían recibir el mismo seguimiento.",
+            text: "Pero automatizar no solo es eficiencia. Es prevención. Las empresas que usan Sena han logrado reducir su morosidad hasta en un 35% en los primeros 90 días. ¿Cómo? Aplicando flujos inteligentes de comunicación vía WhatsApp, email o llamadas automáticas, activados según el comportamiento de pago de cada cliente. No todos pagan igual, y por eso no todos deberían recibir el mismo seguimiento.",
           },
         ],
       },
@@ -2622,7 +2622,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: "text",
-            text: "👉 No necesitas más planillas, más excusas ni más meses con ingresos retenidos. Necesitas estructura, visibilidad y seguimiento. Automatiza tu cobranza con Flujolink, y empieza a recuperar lo que es tuyo.",
+            text: "👉 No necesitas más planillas, más excusas ni más meses con ingresos retenidos. Necesitas estructura, visibilidad y seguimiento. Automatiza tu cobranza con Sena, y empieza a recuperar lo que es tuyo.",
           },
         ],
       },
@@ -2640,7 +2640,7 @@ export const blogPosts: BlogPost[] = [
     date: "24 de julio 2025",
     author: "Fernanda Hurtado",
     tags: ["Blog"],
-    image: "/images/blog/blog15/main.jpg",
+    image: AssetImageBlog.blog_15_main.src,
     content: [
       {
         type: "paragraph",
@@ -2665,7 +2665,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: "text",
-            text: "En Flujolink, después de analizar cientos de casos, identificamos que el impago no siempre es por falta de dinero. A menudo responde a tres causas principales:",
+            text: "En Sena, después de analizar cientos de casos, identificamos que el impago no siempre es por falta de dinero. A menudo responde a tres causas principales:",
           },
         ],
       },
@@ -2731,7 +2731,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "image",
-        link: "/images/blog/blog15/main.jpg",
+        link: AssetImageBlog.blog_15_main.src,
       },
       {
         type: "paragraph",
@@ -2756,7 +2756,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: "text",
-            text: "Por eso es clave tener una gestión robusta de cobranza desde el primer día. Si tu empresa aún gestiona sus cuentas por cobrar en Excel o de forma manual, estás expuesto a errores, olvidos y falta de seguimiento. Con Flujolink puedes automatizar recordatorios, visualizar todo el historial de cobranza y actuar con tiempo, no con urgencia.",
+            text: "Por eso es clave tener una gestión robusta de cobranza desde el primer día. Si tu empresa aún gestiona sus cuentas por cobrar en Excel o de forma manual, estás expuesto a errores, olvidos y falta de seguimiento. Con Sena puedes automatizar recordatorios, visualizar todo el historial de cobranza y actuar con tiempo, no con urgencia.",
           },
         ],
       },
@@ -2836,7 +2836,7 @@ export const blogPosts: BlogPost[] = [
     date: "01 de agosto 2025",
     author: "Antonella Hernandez",
     tags: ["Blog"],
-    image: "/images/blog/blog16/main.jpg",
+    image: AssetImageBlog.blog_16_main.src,
     content: [
       {
         type: "paragraph",
@@ -2927,7 +2927,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: "text",
-            text: "Flujolink puede ayudarte a digitalizar y profesionalizar tu gestión de cuentas por cobrar, sin fricciones, sin complicaciones, y con resultados visibles en semanas.",
+            text: "Sena puede ayudarte a digitalizar y profesionalizar tu gestión de cuentas por cobrar, sin fricciones, sin complicaciones, y con resultados visibles en semanas.",
           },
         ],
       },
@@ -2945,7 +2945,7 @@ export const blogPosts: BlogPost[] = [
     date: "04 de agosto 2025",
     author: "Fernanda Hurtado",
     tags: ["Blog"],
-    image: "/images/blog/blog17/main.jpg",
+    image: AssetImageBlog.blog_17_main.src,
     content: [
       {
         type: "paragraph",
@@ -3012,7 +3012,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: "text",
-            text: "Con Flujolink, puedes digitalizar tu gestión de cuentas por cobrar, automatizando recordatorios por WhatsApp, correo o llamada, generando reportes de riesgo por cliente y organizando todo el proceso en una sola plataforma. Así, reduces la morosidad sin esfuerzo operativo, y mantienes la relación comercial intacta, porque el cliente se siente acompañado, no presionado.",
+            text: "Con Sena, puedes digitalizar tu gestión de cuentas por cobrar, automatizando recordatorios por WhatsApp, correo o llamada, generando reportes de riesgo por cliente y organizando todo el proceso en una sola plataforma. Así, reduces la morosidad sin esfuerzo operativo, y mantienes la relación comercial intacta, porque el cliente se siente acompañado, no presionado.",
           },
         ],
       },
@@ -3056,7 +3056,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: "text",
-            text: "Para estos casos, Flujolink ofrece ",
+            text: "Para estos casos, Sena ofrece ",
           },
           {
             type: "bold",
@@ -3130,7 +3130,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: "text",
-            text: "No sigas normalizando los pagos vencidos. Elige eficiencia, elige orden, elige Flujolink.",
+            text: "No sigas normalizando los pagos vencidos. Elige eficiencia, elige orden, elige Sena.",
           },
         ],
       },
@@ -3138,15 +3138,15 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: 18,
-    slug: "si-no-haces-seguimiento-no-cobras-como-flujolink-profesionaliza-el-seguimiento-y-recupera-tu-dinero",
+    slug: "si-no-haces-seguimiento-no-cobras-como-Sena-profesionaliza-el-seguimiento-y-recupera-tu-dinero",
     title:
-      "Si no haces seguimiento, no cobras: cómo Flujolink profesionaliza el seguimiento y recupera tu dinero",
+      "Si no haces seguimiento, no cobras: cómo Sena profesionaliza el seguimiento y recupera tu dinero",
     intro:
       "Hiciste el cálculo. Ahora sabes cuánto dinero tienes atrapado en tu cartera vencida. ¿Y ahora qué?\n\nEl mayor error que cometen las empresas con deudas activas no es no saber cuánto les deben —ese paso ya lo diste—, sino **no hacer seguimiento constante, estratégico y profesional para recuperar ese dinero**. No basta con una llamada. No basta con reenviar la factura. Si no hay estructura, el cliente posterga, ignora… y tú sigues perdiendo.",
     date: "07 de agosto 2025",
     author: "Antonella Hernandez",
     tags: ["Blog"],
-    image: "/images/blog/blog18/main.jpg",
+    image: AssetImageBlog.blog_18_main.src,
     content: [
       {
         type: "paragraph",
@@ -3239,13 +3239,13 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: "text",
-            text: "Con Recupera Plus, Flujolink se encarga de todo el seguimiento por ti. Diseñamos flujos inteligentes que combinan llamadas, emails y WhatsApps según el comportamiento del cliente. Cada acción queda registrada, cada avance se reporta, y tú tienes visibilidad completa del proceso. Nuestro enfoque es ético, profesional y centrado en resultados.",
+            text: "Con Recupera Plus, Sena se encarga de todo el seguimiento por ti. Diseñamos flujos inteligentes que combinan llamadas, emails y WhatsApps según el comportamiento del cliente. Cada acción queda registrada, cada avance se reporta, y tú tienes visibilidad completa del proceso. Nuestro enfoque es ético, profesional y centrado en resultados.",
           },
         ],
       },
       {
         type: "image",
-        link: "/images/blog/blog18/main.jpg",
+        link: AssetImageBlog.blog_18_main.src,
       },
       {
         type: "paragraph",
@@ -3297,7 +3297,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: "text",
-            text: "Deja que Flujolink se encargue del seguimiento profesional y empieza a recuperar lo que ya sabes que te pertenece.",
+            text: "Deja que Sena se encargue del seguimiento profesional y empieza a recuperar lo que ya sabes que te pertenece.",
           },
         ],
       },
@@ -3312,179 +3312,179 @@ export const blogPosts: BlogPost[] = [
       },
     ],
   },
-  {
-    id: 19,
-    slug: "descubre-cuanton-dinero-estas-dejando-en-la-mesa-por-no-cobrar-tus-deudas-activas",
-    title:
-      "¿Sabes cuánto dinero podrías recuperar este mes? Conoce la nueva Calculadora Flujolink Recupera",
-    intro:
-      "Si sabes que te deben, pero no sabes cuánto podrías recuperar ni cómo empezar… no estás solo. Muchas empresas enfrentan este mismo escenario: tienen una cartera vencida, saben que hay dinero pendiente, pero no tienen visibilidad, estrategia ni recursos para hacer algo al respecto. Mientras tanto, ese capital sigue estancado, afectando el flujo de caja, frenando inversiones y desgastando al equipo.",
-    date: "14 de agosto 2025",
-    author: "Antonella Hernandez",
-    tags: ["Blog"],
-    image: "/images/blog/blog19/main.png",
-    content: [
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "text",
-            text: "Si sabes que te deben, pero no sabes cuánto podrías recuperar ni cómo empezar… no estás solo. Muchas empresas enfrentan este mismo escenario: tienen una ",
-          },
-          {
-            type: "bold",
-            text: "cartera vencida",
-          },
-          {
-            type: "text",
-            text: ", saben que hay dinero pendiente, pero no tienen visibilidad, estrategia ni recursos para hacer algo al respecto. Mientras tanto, ese capital sigue estancado, afectando el flujo de caja, frenando inversiones y desgastando al equipo.",
-          },
-        ],
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "text",
-            text: "Para cambiar esta realidad, creamos la ",
-          },
-          {
-            type: "link",
-            text: "Calculadora Flujolink Recupera",
-            href: "https://flujolink.com/calculadora/steps",
-          },
-          {
-            type: "text",
-            text: ": una herramienta gratuita, rápida y precisa que te permite estimar cuánta plata podrías recuperar en el corto plazo. Solo necesitas ingresar dos datos: el total de deuda y el número de clientes morosos. El sistema te dará una proyección clara, basada en métricas reales de recuperación.",
-          },
-        ],
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "bold",
-            text: "¿Por qué es tan importante saber tu potencial de recuperación?",
-          },
-        ],
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "text",
-            text: "Porque lo que no se ve, no se gestiona. Si no tienes claridad sobre lo que puedes recuperar, lo más probable es que sigas postergando decisiones importantes: contratar un equipo, tercerizar la cobranza, o simplemente tomar acción. El resultado es el mismo: el tiempo sigue pasando, y la deuda sigue creciendo.",
-          },
-        ],
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "text",
-            text: "Con nuestra calculadora, el problema toma forma. Ya no es una sensación, es un número. Y con ese número en la mano, puedes decidir si estás dispuesto a dejarlo ir... o a recuperarlo con ayuda de expertos.",
-          },
-        ],
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "bold",
-            text: "¿Y qué pasa si no tienes un equipo de cobranza?",
-          },
-        ],
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "text",
-            text: "Ahí entra nuestro servicio ",
-          },
-          {
-            type: "link",
-            text: "Recupera Plus",
-            href: "https://flujolink.com/recuperacion-de-deudas",
-          },
-          {
-            type: "text",
-            text: ". Está diseñado específicamente para ",
-          },
-          {
-            type: "bold",
-            text: "empresas que ya identificaron una deuda activa, pero no cuentan con procesos avanzados ni equipo especializado para cobrar",
-          },
-          {
-            type: "text",
-            text: ".",
-          },
-        ],
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "text",
-            text: "Con Recupera Plus, Flujolink se convierte en tu equipo de cobranza externalizado. Aplicamos flujos efectivos de recuperación, sin agredir la relación comercial, con trazabilidad total y comunicaciones éticas. Tú solo tienes que compartir tu cartera vencida y nosotros nos encargamos del resto. Sin contratar personal adicional. Sin implementar herramientas complejas. Sin fricción.",
-          },
-        ],
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "bold",
-            text: "Una decisión simple, un impacto directo",
-          },
-        ],
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "text",
-            text: "La mayoría de empresas que usan nuestra calculadora descubren que tienen entre ",
-          },
-          {
-            type: "bold",
-            text: "S/20,000 y S/80,000 retenidos",
-          },
-          {
-            type: "text",
-            text: " que podrían volver a su caja en pocas semanas. Y una vez que toman acción, ese dinero se convierte en inversión, liquidez y crecimiento.",
-          },
-        ],
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "bold",
-            text: "¿Cuánto podrías recuperar tú?",
-          },
-        ],
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "text",
-            text: "Haz la prueba ahora con la ",
-          },
-          {
-            type: "link",
-            text: "Calculadora Flujolink Recupera",
-            href: "https://flujolink.com/recuperacion-de-deudas",
-          },
-          {
-            type: "text",
-            text: ". Solo te tomará 30 segundos.",
-          },
-        ],
-      },
-    ],
-  },
+  // {
+  //   id: 19,
+  //   slug: "descubre-cuanton-dinero-estas-dejando-en-la-mesa-por-no-cobrar-tus-deudas-activas",
+  //   title:
+  //     "¿Sabes cuánto dinero podrías recuperar este mes? Conoce la nueva Calculadora Sena Recupera",
+  //   intro:
+  //     "Si sabes que te deben, pero no sabes cuánto podrías recuperar ni cómo empezar… no estás solo. Muchas empresas enfrentan este mismo escenario: tienen una cartera vencida, saben que hay dinero pendiente, pero no tienen visibilidad, estrategia ni recursos para hacer algo al respecto. Mientras tanto, ese capital sigue estancado, afectando el flujo de caja, frenando inversiones y desgastando al equipo.",
+  //   date: "14 de agosto 2025",
+  //   author: "Antonella Hernandez",
+  //   tags: ["Blog"],
+  //   image: AssetImageBlog.blog_19_main.src,
+  //   content: [
+  //     {
+  //       type: "paragraph",
+  //       fragments: [
+  //         {
+  //           type: "text",
+  //           text: "Si sabes que te deben, pero no sabes cuánto podrías recuperar ni cómo empezar… no estás solo. Muchas empresas enfrentan este mismo escenario: tienen una ",
+  //         },
+  //         {
+  //           type: "bold",
+  //           text: "cartera vencida",
+  //         },
+  //         {
+  //           type: "text",
+  //           text: ", saben que hay dinero pendiente, pero no tienen visibilidad, estrategia ni recursos para hacer algo al respecto. Mientras tanto, ese capital sigue estancado, afectando el flujo de caja, frenando inversiones y desgastando al equipo.",
+  //         },
+  //       ],
+  //     },
+  // {
+  //   type: "paragraph",
+  //   fragments: [
+  //     {
+  //       type: "text",
+  //       text: "Para cambiar esta realidad, creamos la ",
+  //     },
+  //     {
+  //       type: "link",
+  //       text: "Calculadora Sena Recupera",
+  //       href: "https://sena.com/calculadora/steps",
+  //     },
+  //     {
+  //       type: "text",
+  //       text: ": una herramienta gratuita, rápida y precisa que te permite estimar cuánta plata podrías recuperar en el corto plazo. Solo necesitas ingresar dos datos: el total de deuda y el número de clientes morosos. El sistema te dará una proyección clara, basada en métricas reales de recuperación.",
+  //     },
+  //   ],
+  // },
+  //     {
+  //       type: "paragraph",
+  //       fragments: [
+  //         {
+  //           type: "bold",
+  //           text: "¿Por qué es tan importante saber tu potencial de recuperación?",
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       fragments: [
+  //         {
+  //           type: "text",
+  //           text: "Porque lo que no se ve, no se gestiona. Si no tienes claridad sobre lo que puedes recuperar, lo más probable es que sigas postergando decisiones importantes: contratar un equipo, tercerizar la cobranza, o simplemente tomar acción. El resultado es el mismo: el tiempo sigue pasando, y la deuda sigue creciendo.",
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       fragments: [
+  //         {
+  //           type: "text",
+  //           text: "Con nuestra calculadora, el problema toma forma. Ya no es una sensación, es un número. Y con ese número en la mano, puedes decidir si estás dispuesto a dejarlo ir... o a recuperarlo con ayuda de expertos.",
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       fragments: [
+  //         {
+  //           type: "bold",
+  //           text: "¿Y qué pasa si no tienes un equipo de cobranza?",
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       fragments: [
+  //         {
+  //           type: "text",
+  //           text: "Ahí entra nuestro servicio ",
+  //         },
+  //         {
+  //           type: "link",
+  //           text: "Recupera Plus",
+  //           href: "",
+  //         },
+  //         {
+  //           type: "text",
+  //           text: ". Está diseñado específicamente para ",
+  //         },
+  //         {
+  //           type: "bold",
+  //           text: "empresas que ya identificaron una deuda activa, pero no cuentan con procesos avanzados ni equipo especializado para cobrar",
+  //         },
+  //         {
+  //           type: "text",
+  //           text: ".",
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       fragments: [
+  //         {
+  //           type: "text",
+  //           text: "Con Recupera Plus, Sena se convierte en tu equipo de cobranza externalizado. Aplicamos flujos efectivos de recuperación, sin agredir la relación comercial, con trazabilidad total y comunicaciones éticas. Tú solo tienes que compartir tu cartera vencida y nosotros nos encargamos del resto. Sin contratar personal adicional. Sin implementar herramientas complejas. Sin fricción.",
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       fragments: [
+  //         {
+  //           type: "bold",
+  //           text: "Una decisión simple, un impacto directo",
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       fragments: [
+  //         {
+  //           type: "text",
+  //           text: "La mayoría de empresas que usan nuestra calculadora descubren que tienen entre ",
+  //         },
+  //         {
+  //           type: "bold",
+  //           text: "S/20,000 y S/80,000 retenidos",
+  //         },
+  //         {
+  //           type: "text",
+  //           text: " que podrían volver a su caja en pocas semanas. Y una vez que toman acción, ese dinero se convierte en inversión, liquidez y crecimiento.",
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       fragments: [
+  //         {
+  //           type: "bold",
+  //           text: "¿Cuánto podrías recuperar tú?",
+  //         },
+  //       ],
+  //     },
+  // {
+  //   type: "paragraph",
+  //   fragments: [
+  //     {
+  //       type: "text",
+  //       text: "Haz la prueba ahora con la ",
+  //     },
+  //     {
+  //       type: "link",
+  //       text: "Calculadora Sena Recupera",
+  //       href: "https://sena.com/recuperacion-de-deudas",
+  //     },
+  //     {
+  //       type: "text",
+  //       text: ". Solo te tomará 30 segundos.",
+  //     },
+  //   ],
+  // },
+  //   ],
+  // },
   {
     id: 20,
     slug: "descubre-como-salir-de-infocorp-consultar-tus-deudas-y-limpiar-tu-historial-financiero-para-recuperar-acceso-a-credito",
@@ -3494,7 +3494,7 @@ export const blogPosts: BlogPost[] = [
     date: "17 de septiembre 2025",
     author: "Antonella Hernandez",
     tags: ["Blog"],
-    image: "/images/blog/blog20/main.jpg",
+    image: AssetImageBlog.blog_20_main.src,
     content: [
       {
         type: "paragraph",
@@ -3903,8 +3903,8 @@ export const blogPosts: BlogPost[] = [
           },
           {
             type: "link",
-            text: "Flujolink",
-            href: "https://flujolink.com/",
+            text: "Sena",
+            href: "https://somossena.com/",
           },
           {
             type: "text",
@@ -3948,8 +3948,8 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: "link",
-            text: "Al implementar Flujolink",
-            href: "http://www.flujolink.com/software-cuentas-por-cobrar",
+            text: "Al implementar Sena",
+            href: "",
           },
           {
             type: "text",
@@ -4026,7 +4026,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: "text",
-            text: "Lo más importante, sin embargo, es prevenir. Con una gestión financiera ordenada y herramientas profesionales como Flujolink, no solo puedes limpiar tu historial, sino también evitar volver a caer.",
+            text: "Lo más importante, sin embargo, es prevenir. Con una gestión financiera ordenada y herramientas profesionales como Sena, no solo puedes limpiar tu historial, sino también evitar volver a caer.",
           },
         ],
       },
@@ -4039,8 +4039,8 @@ export const blogPosts: BlogPost[] = [
           },
           {
             type: "link",
-            text: "Descubre cómo Flujolink puede ayudarte a tener liquidez sin fricciones",
-            href: "https://flujolink.com/",
+            text: "Descubre cómo Sena puede ayudarte a tener liquidez sin fricciones",
+            href: "https://somossena.com/",
           },
           {
             type: "text",
@@ -4059,7 +4059,7 @@ export const blogPosts: BlogPost[] = [
     date: "19 de septiembre 2025",
     author: "Antonella Hernandez",
     tags: ["Blog"],
-    image: "/images/blog/blog21/main.jpg",
+    image: AssetImageBlog.blog_21_main.src,
     content: [
       {
         type: "paragraph",
@@ -4214,7 +4214,7 @@ export const blogPosts: BlogPost[] = [
           {
             type: "link",
             text: "4. Centraliza tu gestión financiera",
-            href: "http://www.flujolink.com/software-cuentas-por-cobrar",
+            href: "",
           },
         ],
       },
@@ -4268,8 +4268,8 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: "link",
-            text: "7. Usa herramientas de cobranza como Flujolink",
-            href: "http://www.flujolink.com",
+            text: "7. Usa herramientas de cobranza como Sena",
+            href: "http://www.somossena.com",
           },
         ],
       },
@@ -4278,7 +4278,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: "text",
-            text: "La liquidez depende en gran medida de que tus clientes paguen a tiempo. Con Flujolink, puedes:",
+            text: "La liquidez depende en gran medida de que tus clientes paguen a tiempo. Con Sena, puedes:",
           },
         ],
       },
@@ -4354,7 +4354,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: "text",
-            text: "Ejemplo real: Una pyme de servicios de consultoría redujo en 30% su DSO (días promedio de cobranza) al implementar Flujolink. En tres meses, pasó de un score “riesgoso” a “aceptable” y obtuvo la aprobación de una nueva línea de crédito para expandirse.",
+            text: "Ejemplo real: Una pyme de servicios de consultoría redujo en 30% su DSO (días promedio de cobranza) al implementar Sena. En tres meses, pasó de un score “riesgoso” a “aceptable” y obtuvo la aprobación de una nueva línea de crédito para expandirse.",
           },
         ],
       },
@@ -4425,8 +4425,8 @@ export const blogPosts: BlogPost[] = [
           },
           {
             type: "link",
-            text: "Descubre cómo Flujolink puede ayudarte a crecer sin fricciones",
-            href: "https://flujolink.com/",
+            text: "Descubre cómo Sena puede ayudarte a crecer sin fricciones",
+            href: "https://somossena.com/",
           },
           {
             type: "text",
@@ -4446,7 +4446,7 @@ export const blogPosts: BlogPost[] = [
     date: "07 de octubre 2025",
     author: "Antonella Hernandez",
     tags: ["Blog", "Visión Financiera", "Educación Financiera"],
-    image: "/images/blog/blog22/main.jpg",
+    image: AssetImageBlog.blog_22_main.src,
     content: [
       {
         type: "paragraph",
@@ -4605,7 +4605,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: "bold",
-            text: "La calculadora ROI de Flujolink",
+            text: "La calculadora ROI de Sena",
           },
         ],
       },
@@ -4614,7 +4614,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: "text",
-            text: "Flujolink va más allá de la teoría. Su plataforma incluye una calculadora ROI diseñada para mostrar, en tiempo real, cuánto tiempo y dinero ahorra la empresa al automatizar la cobranza.",
+            text: "Sena va más allá de la teoría. Su plataforma incluye una calculadora ROI diseñada para mostrar, en tiempo real, cuánto tiempo y dinero ahorra la empresa al automatizar la cobranza.",
           },
         ],
       },
@@ -4685,7 +4685,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: "text",
-            text: "Con Flujolink, este proceso es aún más sencillo gracias a su calculadora de ROI: una herramienta que conecta indicadores como DSO, tasa de recuperación y flujo de caja con el impacto financiero directo de la automatización.",
+            text: "Con Sena, este proceso es aún más sencillo gracias a su calculadora de ROI: una herramienta que conecta indicadores como DSO, tasa de recuperación y flujo de caja con el impacto financiero directo de la automatización.",
           },
         ],
       },
@@ -4698,8 +4698,8 @@ export const blogPosts: BlogPost[] = [
           },
           {
             type: "link",
-            text: "Prueba la calculadora ROI de Flujolink.",
-            href: "https://flujolink.com/calculadora",
+            text: "Prueba la calculadora ROI de Sena.",
+            href: "https://somossena.com/calculadora",
           },
         ],
       },
@@ -4711,11 +4711,11 @@ export const blogPosts: BlogPost[] = [
     title:
       "¿Qué software de cobranza me ayuda a automatizar las cobranzas en mi pyme?",
     intro:
-      "Muchas pymes todavía dependen de hojas de Excel y recordatorios manuales para gestionar las cuentas por cobrar. Este enfoque no solo consume tiempo, también aumenta el riesgo de errores y afecta el flujo de caja. La buena noticia es que existen soluciones digitales pensadas para automatizar el proceso y mejorar la eficiencia. En este blog revisaremos qué software de cobranza puede ayudarte a salir del Excel, qué funciones debes buscar y cómo Flujolink se convierte en un aliado estratégico para crecer sin fricciones.",
+      "Muchas pymes todavía dependen de hojas de Excel y recordatorios manuales para gestionar las cuentas por cobrar. Este enfoque no solo consume tiempo, también aumenta el riesgo de errores y afecta el flujo de caja. La buena noticia es que existen soluciones digitales pensadas para automatizar el proceso y mejorar la eficiencia. En este blog revisaremos qué software de cobranza puede ayudarte a salir del Excel, qué funciones debes buscar y cómo Sena se convierte en un aliado estratégico para crecer sin fricciones.",
     date: "09 de octubre 2025",
     author: "Antonella Hernandez",
     tags: ["Blog", "Producto", "Servicio"],
-    image: "/images/blog/blog23/main.jpg",
+    image: AssetImageBlog.blog_23_main.src,
     content: [
       {
         type: "paragraph",
@@ -4738,7 +4738,7 @@ export const blogPosts: BlogPost[] = [
           },
           {
             type: "text",
-            text: " puede ayudarte a salir del Excel, qué funciones debes buscar y cómo Flujolink se convierte en un aliado estratégico para crecer sin fricciones.",
+            text: " puede ayudarte a salir del Excel, qué funciones debes buscar y cómo Sena se convierte en un aliado estratégico para crecer sin fricciones.",
           },
         ],
       },
@@ -5142,7 +5142,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: "bold",
-            text: "Caso Flujolink: automatización enfocada en resultados",
+            text: "Caso Sena: automatización enfocada en resultados",
           },
         ],
       },
@@ -5151,7 +5151,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: "text",
-            text: "Flujolink no es solo un ",
+            text: "Sena no es solo un ",
           },
           {
             type: "bold",
@@ -5258,7 +5258,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: "text",
-            text: "Flujolink, además, convierte los datos en decisiones estratégicas al vigilar indicadores como DSO, tasa de recuperación y eficiencia operativa.",
+            text: "Sena, además, convierte los datos en decisiones estratégicas al vigilar indicadores como DSO, tasa de recuperación y eficiencia operativa.",
           },
         ],
       },
@@ -5271,8 +5271,8 @@ export const blogPosts: BlogPost[] = [
           },
           {
             type: "link",
-            text: "Conoce Flujolink y transforma tu gestión financiera",
-            href: "https://flujolink.com/",
+            text: "Conoce Sena y transforma tu gestión financiera",
+            href: "https://somossena.com/",
           },
           {
             type: "text",
@@ -5292,7 +5292,7 @@ export const blogPosts: BlogPost[] = [
     date: "14 de octubre 2025",
     author: "Antonella Hernandez",
     tags: ["Blog", "Visión Financiera", "Educación Financiera"],
-    image: "/images/blog/blog24/main.jpg",
+    image: AssetImageBlog.blog_24_main.src,
     content: [
       {
         type: "paragraph",
@@ -5496,7 +5496,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: "text",
-            text: "Con plataformas como Flujolink puedes:",
+            text: "Con plataformas como Sena puedes:",
           },
         ],
       },
@@ -5536,8 +5536,8 @@ export const blogPosts: BlogPost[] = [
           },
           {
             type: "link",
-            text: "Descubre cómo Flujolink puede ayudarte a transformar tu gestión",
-            href: "https://flujolink.com/",
+            text: "Descubre cómo Sena puede ayudarte a transformar tu gestión",
+            href: "https://somossena.com/",
           },
           {
             type: "text",
@@ -5549,22 +5549,22 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: 25,
-    slug: "descubre-como-flujolink-mide-el-exito-de-sus-automatizaciones-con-KPIs-de-cobranza-clave-para-optimizar-liquidez-y-eficiencia",
+    slug: "descubre-como-sena-mide-el-exito-de-sus-automatizaciones-con-KPIs-de-cobranza-clave-para-optimizar-liquidez-y-eficiencia",
     title:
-      "¿Cómo mide Flujolink el éxito de sus automatizaciones? ¿Qué KPIs de automatización de cobranza vigilan?",
+      "¿Cómo mide Sena el éxito de sus automatizaciones? ¿Qué KPIs de automatización de cobranza vigilan?",
     intro:
-      "Automatizar la cobranza no basta: lo que marca la diferencia es saber qué KPIs automatización cobranza se están cumpliendo. En Flujolink, el éxito se mide con indicadores concretos que muestran si la empresa cobra más rápido, mejora su flujo de caja y reduce la carga manual del equipo.",
+      "Automatizar la cobranza no basta: lo que marca la diferencia es saber qué KPIs automatización cobranza se están cumpliendo. En Sena, el éxito se mide con indicadores concretos que muestran si la empresa cobra más rápido, mejora su flujo de caja y reduce la carga manual del equipo.",
     date: "16 de octubre 2025",
     author: "Antonella Hernandez",
     tags: ["Blog", "Visión Financiera", "Educación Financiera"],
-    image: "/images/blog/blog25/main.jpg",
+    image: AssetImageBlog.blog_25_main.src,
     content: [
       {
         type: "paragraph",
         fragments: [
           {
             type: "text",
-            text: "Automatizar la cobranza no basta: lo que marca la diferencia es saber qué KPIs automatización cobranza se están cumpliendo. En Flujolink, el éxito se mide con indicadores concretos que muestran si la empresa cobra más rápido, mejora su flujo de caja y reduce la carga manual del equipo.",
+            text: "Automatizar la cobranza no basta: lo que marca la diferencia es saber qué KPIs automatización cobranza se están cumpliendo. En Sena, el éxito se mide con indicadores concretos que muestran si la empresa cobra más rápido, mejora su flujo de caja y reduce la carga manual del equipo.",
           },
         ],
       },
@@ -5573,7 +5573,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: "bold",
-            text: "Medir el éxito de la automatización: la filosofía Flujolink",
+            text: "Medir el éxito de la automatización: la filosofía Sena",
           },
         ],
       },
@@ -5591,7 +5591,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: "text",
-            text: "Flujolink conecta cada flujo automatizado con métricas de cuentas por cobrar visibles en tiempo real. Así, el éxito no se mide por la cantidad de correos enviados, sino por cómo mejoran el DSO, el aging de cartera y la tasa de recuperación.",
+            text: "Sena conecta cada flujo automatizado con métricas de cuentas por cobrar visibles en tiempo real. Así, el éxito no se mide por la cantidad de correos enviados, sino por cómo mejoran el DSO, el aging de cartera y la tasa de recuperación.",
           },
         ],
       },
@@ -5600,7 +5600,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: "bold",
-            text: "KPIs automatización cobranza que Flujolink vigila",
+            text: "KPIs automatización cobranza que Sena vigila",
           },
         ],
       },
@@ -5636,7 +5636,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: "text",
-            text: "Flujolink clasifica de forma automática las facturas según su antigüedad. Este KPI revela la proporción de facturas en 30, 60 o 90 días de mora y permite enfocar la gestión en clientes críticos.",
+            text: "Sena clasifica de forma automática las facturas según su antigüedad. Este KPI revela la proporción de facturas en 30, 60 o 90 días de mora y permite enfocar la gestión en clientes críticos.",
           },
         ],
       },
@@ -5690,7 +5690,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: "text",
-            text: "Flujolink mide el impacto de las automatizaciones en el tiempo y esfuerzo del equipo. Menos horas en tareas manuales significa más capacidad para trabajar en estrategias financieras de valor.",
+            text: "Sena mide el impacto de las automatizaciones en el tiempo y esfuerzo del equipo. Menos horas en tareas manuales significa más capacidad para trabajar en estrategias financieras de valor.",
           },
         ],
       },
@@ -5699,7 +5699,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: "bold",
-            text: "Cómo Flujolink conecta automatización y KPIs",
+            text: "Cómo Sena conecta automatización y KPIs",
           },
         ],
       },
@@ -5735,7 +5735,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: "text",
-            text: "Los gerentes financieros necesitan más que percepciones: requieren reportes confiables para tomar decisiones. Con Flujolink pueden:",
+            text: "Los gerentes financieros necesitan más que percepciones: requieren reportes confiables para tomar decisiones. Con Sena pueden:",
           },
         ],
       },
@@ -5762,7 +5762,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: "text",
-            text: "Automatizar la cobranza solo tiene valor cuando se traduce en mejores indicadores financieros. Flujolink mide el éxito de sus flujos con KPIs claros: DSO, aging de cartera, tasa de recuperación, flujo de caja proyectado y eficiencia operativa.",
+            text: "Automatizar la cobranza solo tiene valor cuando se traduce en mejores indicadores financieros. Sena mide el éxito de sus flujos con KPIs claros: DSO, aging de cartera, tasa de recuperación, flujo de caja proyectado y eficiencia operativa.",
           },
         ],
       },
@@ -5775,8 +5775,8 @@ export const blogPosts: BlogPost[] = [
           },
           {
             type: "link",
-            text: "Descubre cómo Flujolink transforma la cobranza con KPIs en tiempo real",
-            href: "https://flujolink.com/",
+            text: "Descubre cómo Sena transforma la cobranza con KPIs en tiempo real",
+            href: "https://somossena.com/",
           },
           {
             type: "text",
@@ -5795,7 +5795,7 @@ export const blogPosts: BlogPost[] = [
     date: "21 de octubre 2025",
     author: "Antonella Hernandez",
     tags: ["Blog", "Cobranza"],
-    image: "/images/blog/blog26/main.jpg",
+    image: AssetImageBlog.blog_26_main.src,
     content: [
       {
         type: "paragraph",
@@ -6165,7 +6165,7 @@ export const blogPosts: BlogPost[] = [
           },
           {
             type: "bold",
-            text: "Flujolink",
+            text: "Sena",
           },
           {
             type: "text",
@@ -6196,7 +6196,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: "text",
-            text: "Con Flujolink, por ejemplo, las pymes pueden:",
+            text: "Con Sena, por ejemplo, las pymes pueden:",
           },
         ],
       },
@@ -6316,8 +6316,8 @@ export const blogPosts: BlogPost[] = [
           },
           {
             type: "link",
-            text: "Descubre cómo Flujolink puede ayudarte a optimizar tu cobranza",
-            href: "https://flujolink.com/",
+            text: "Descubre cómo Sena puede ayudarte a optimizar tu cobranza",
+            href: "https://somossena.com/",
           },
           {
             type: "text",
@@ -6338,7 +6338,7 @@ export const blogPosts: BlogPost[] = [
     date: "28 de octubre 2025",
     author: "Antonella Hernandez",
     tags: ["Blog", "Producto", "Servicio"],
-    image: "/images/blog/blog27/main.jpg",
+    image: AssetImageBlog.blog_27_main.src,
     content: [
       {
         type: "paragraph",
@@ -6465,7 +6465,7 @@ export const blogPosts: BlogPost[] = [
           },
           {
             type: "text",
-            text: " surge como la respuesta moderna a los límites de un CRM o ERP. Estas plataformas, como Flujolink, están diseñadas específicamente para digitalizar la cobranza y ofrecer ",
+            text: " surge como la respuesta moderna a los límites de un CRM o ERP. Estas plataformas, como Sena, están diseñadas específicamente para digitalizar la cobranza y ofrecer ",
           },
           {
             type: "bold",
@@ -6709,7 +6709,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: "bold",
-            text: "Flujolink: el SaaS que combina automatización y resultados",
+            text: "Sena: el SaaS que combina automatización y resultados",
           },
         ],
       },
@@ -6718,7 +6718,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: "text",
-            text: "Flujolink se posiciona como un ",
+            text: "Sena se posiciona como un ",
           },
           {
             type: "bold",
@@ -6780,7 +6780,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: "text",
-            text: "En comparación con un CRM cobranza o un ERP cobranza, Flujolink integra lo mejor de ambos mundos, con la fuerza de un ",
+            text: "En comparación con un CRM cobranza o un ERP cobranza, Sena integra lo mejor de ambos mundos, con la fuerza de un ",
           },
           {
             type: "bold",
@@ -6818,8 +6818,8 @@ export const blogPosts: BlogPost[] = [
           },
           {
             type: "link",
-            text: "Descubre Flujolink y su plataforma de cobranza",
-            href: "https://flujolink.com/",
+            text: "Descubre Sena y su plataforma de cobranza",
+            href: "https://somossena.com/",
           },
           {
             type: "text",
@@ -6837,11 +6837,11 @@ export const blogPosts: BlogPost[] = [
     title:
       "¿Tu ERP de cobranza se queda corto? 7 señales de que necesitas una plataforma dedicada",
     intro:
-      "Un ERP de cobranza puede centralizar procesos básicos de facturación y cuentas por cobrar, pero ¿realmente es suficiente para una pyme en crecimiento? Cuando el sistema no ofrece indicadores financieros claros ni herramientas de automatización, es probable que se esté quedando corto. En este blog te compartimos 7 señales para detectar esas limitaciones y cómo una plataforma especializada como Flujolink puede marcar la diferencia.",
+      "Un ERP de cobranza puede centralizar procesos básicos de facturación y cuentas por cobrar, pero ¿realmente es suficiente para una pyme en crecimiento? Cuando el sistema no ofrece indicadores financieros claros ni herramientas de automatización, es probable que se esté quedando corto. En este blog te compartimos 7 señales para detectar esas limitaciones y cómo una plataforma especializada como Sena puede marcar la diferencia.",
     date: "30 de octubre 2025",
     author: "Antonella Hernandez",
     tags: ["Blog"],
-    image: "/images/blog/blog28/main.jpg",
+    image: AssetImageBlog.blog_28_main.src,
     content: [
       {
         type: "paragraph",
@@ -6856,7 +6856,7 @@ export const blogPosts: BlogPost[] = [
           },
           {
             type: "text",
-            text: " puede centralizar procesos básicos de facturación y cuentas por cobrar, pero ¿realmente es suficiente para una pyme en crecimiento? Cuando el sistema no ofrece indicadores financieros claros ni herramientas de automatización, es probable que se esté quedando corto. En este blog te compartimos 7 señales para detectar esas limitaciones y cómo una plataforma especializada como Flujolink puede marcar la diferencia.",
+            text: " puede centralizar procesos básicos de facturación y cuentas por cobrar, pero ¿realmente es suficiente para una pyme en crecimiento? Cuando el sistema no ofrece indicadores financieros claros ni herramientas de automatización, es probable que se esté quedando corto. En este blog te compartimos 7 señales para detectar esas limitaciones y cómo una plataforma especializada como Sena puede marcar la diferencia.",
           },
         ],
       },
@@ -7251,7 +7251,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: "bold",
-            text: "Flujolink: más allá del ERP de cobranza",
+            text: "Sena: más allá del ERP de cobranza",
           },
         ],
       },
@@ -7260,7 +7260,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: "text",
-            text: "Flujolink no reemplaza tu ",
+            text: "Sena no reemplaza tu ",
           },
           {
             type: "bold",
@@ -7368,8 +7368,8 @@ export const blogPosts: BlogPost[] = [
           },
           {
             type: "link",
-            text: "Conoce Flujolink, la plataforma de cobranza SaaS diseñada para pymes en crecimiento",
-            href: "https://flujolink.com/",
+            text: "Conoce Sena, la plataforma de cobranza SaaS diseñada para pymes en crecimiento",
+            href: "https://somossena.com/",
           },
           {
             type: "text",
@@ -7386,18 +7386,18 @@ export const blogPosts: BlogPost[] = [
     ),
     title: "¿Cómo puedo recuperar una factura vencida sin perder al cliente?",
     intro:
-      "Las facturas vencidas son uno de los mayores dolores de cabeza para las pymes. No solo afectan la liquidez, también ponen en riesgo la relación con los clientes. Sin embargo, con un enfoque profesional y herramientas adecuadas, es posible recuperar una factura vencida sin dañar la confianza comercial. En este artículo veremos estrategias prácticas para el cobro de facturas vencidas, cuándo actuar y cómo una plataforma como Flujolink puede ayudarte a mantener el control.",
+      "Las facturas vencidas son uno de los mayores dolores de cabeza para las pymes. No solo afectan la liquidez, también ponen en riesgo la relación con los clientes. Sin embargo, con un enfoque profesional y herramientas adecuadas, es posible recuperar una factura vencida sin dañar la confianza comercial. En este artículo veremos estrategias prácticas para el cobro de facturas vencidas, cuándo actuar y cómo una plataforma como Sena puede ayudarte a mantener el control.",
     date: "03 de noviembre 2025",
     author: "Antonella Hernandez",
     tags: ["Producto", "Servicio"],
-    image: "/images/blog/blog29/main.jpg",
+    image: AssetImageBlog.blog_29_main.src,
     content: [
       {
         type: "paragraph",
         fragments: [
           {
             type: "text",
-            text: "Las facturas vencidas son uno de los mayores dolores de cabeza para las pymes. No solo afectan la liquidez, también ponen en riesgo la relación con los clientes. Sin embargo, con un enfoque profesional y herramientas adecuadas, es posible recuperar una factura vencida sin dañar la confianza comercial. En este artículo veremos estrategias prácticas para el cobro de facturas vencidas, cuándo actuar y cómo una plataforma como Flujolink puede ayudarte a mantener el control.",
+            text: "Las facturas vencidas son uno de los mayores dolores de cabeza para las pymes. No solo afectan la liquidez, también ponen en riesgo la relación con los clientes. Sin embargo, con un enfoque profesional y herramientas adecuadas, es posible recuperar una factura vencida sin dañar la confianza comercial. En este artículo veremos estrategias prácticas para el cobro de facturas vencidas, cuándo actuar y cómo una plataforma como Sena puede ayudarte a mantener el control.",
           },
         ],
       },
@@ -7594,7 +7594,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: "text",
-            text: "Las herramientas digitales hacen la diferencia entre un proceso caótico y una gestión profesional. Con Flujolink puedes:",
+            text: "Las herramientas digitales hacen la diferencia entre un proceso caótico y una gestión profesional. Con Sena puedes:",
           },
         ],
       },
@@ -7634,8 +7634,8 @@ export const blogPosts: BlogPost[] = [
           },
           {
             type: "link",
-            text: "Conoce Flujolink y su solución para la gestión de facturas vencidas",
-            href: "https://flujolink.com/",
+            text: "Conoce Sena y su solución para la gestión de facturas vencidas",
+            href: "https://somosena.com/",
           },
           {
             type: "text",
@@ -7657,7 +7657,7 @@ export const blogPosts: BlogPost[] = [
     date: "05 de noviembre 2025",
     author: "Antonella Hernandez",
     tags: ["Blog"],
-    image: "/images/blog/blog30/main.jpg",
+    image: AssetImageBlog.blog_30_main.src,
     content: [
       {
         type: "paragraph",
@@ -8040,7 +8040,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: "bold",
-            text: "Flujolink: una solución frente a los riesgos de morosidad",
+            text: "Sena: una solución frente a los riesgos de morosidad",
           },
         ],
       },
@@ -8049,7 +8049,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: "text",
-            text: "Para una pyme, depender únicamente de planillas o de un ERP genérico puede resultar insuficiente. Flujolink surge como un ",
+            text: "Para una pyme, depender únicamente de planillas o de un ERP genérico puede resultar insuficiente. Sena surge como un ",
           },
           {
             type: "bold",
@@ -8161,7 +8161,7 @@ export const blogPosts: BlogPost[] = [
             },
             {
               type: "text",
-              text: " implementa Flujolink, automatiza la cobranza y segmenta clientes por riesgo. Resultado: reduce su DSO en 30%, recupera liquidez y logra invertir en crecimiento.",
+              text: " implementa Sena, automatiza la cobranza y segmenta clientes por riesgo. Resultado: reduce su DSO en 30%, recupera liquidez y logra invertir en crecimiento.",
             },
           ],
         ],
@@ -8210,8 +8210,8 @@ export const blogPosts: BlogPost[] = [
           },
           {
             type: "link",
-            text: "Conoce Flujolink y transforma tu cobranza en un proceso automatizado y estratégico",
-            href: "https://flujolink.com/",
+            text: "Conoce Sena y transforma tu cobranza en un proceso automatizado y estratégico",
+            href: "https://somosena.com/",
           },
           {
             type: "text",

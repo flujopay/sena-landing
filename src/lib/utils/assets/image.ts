@@ -1,9 +1,12 @@
 import aomLogo from "@/public/images/aom_logo.png";
 import aquariusConsultingLogo from "@/public/images/aquarius_consulting_logo.png";
+import autogestion from "@/public/images/autogestion.png";
 import cientificaLogo from "@/public/images/cientifica_logo.png";
+import cobra from "@/public/images/cobra.png";
 import conciliator1 from "@/public/images/conciliator1.png";
 import conciliatorNavbar from "@/public/images/conciliator_navbar.jpg";
 import contactanos1 from "@/public/images/contactanos1.png";
+import evalua from "@/public/images/evalua.png";
 import home1 from "@/public/images/home1.png";
 import home2 from "@/public/images/home2.png";
 import home3 from "@/public/images/home3.png";
@@ -14,11 +17,13 @@ import maruzLogo from "@/public/images/maruz_logo.png";
 import nosotros1 from "@/public/images/nosotros1.png";
 import nosotros2 from "@/public/images/nosotros2.png";
 import proweldLogo from "@/public/images/proweld_logo.jpeg";
+import recuperaGirl from "@/public/images/recupera_girl.jpeg";
 import rioSena from "@/public/images/rio_sena.jpg";
 import senaLogoOrange from "@/public/images/sena_logo_orange.png";
 import sincroniza from "@/public/images/sincroniza.png";
 import telefonicaLogo from "@/public/images/telefonica_logo.png";
 import topSpaceLogo from "@/public/images/top_space_logo.png";
+
 export class AssetImage {
   static logoBlack = logoBlack;
   static home1 = home1;
@@ -41,4 +46,8 @@ export class AssetImage {
   static home4 = home4;
   static sincroniza = sincroniza;
   static contactanos1 = contactanos1;
+  static cobra = cobra;
+  static evalua = evalua;
+  static autogestion = autogestion;
+  static recuperaGirl = recuperaGirl;
 }

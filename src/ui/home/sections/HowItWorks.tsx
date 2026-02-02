@@ -32,6 +32,8 @@ export const HowItWorks = () => {
         subtitle: "CRM multicanal con WhatsApp, email y SMS.",
         description:
           "Secuencias inteligentes segmentadas por vencimiento, monto y comportamiento.",
+        image: AssetImage.cobra,
+        video: AssetVideo.cobra,
       },
       {
         key: "Evalua" as const,
@@ -40,6 +42,7 @@ export const HowItWorks = () => {
         title: "3. Evalua",
         subtitle: "Métricas de conversión, aperturas y rendimiento por canal.",
         description: "Mejora tu estrategia con datos reales.",
+        image: AssetImage.evalua,
       },
       {
         key: "Recupera" as const,
