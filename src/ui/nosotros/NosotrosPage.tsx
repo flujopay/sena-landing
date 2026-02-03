@@ -21,10 +21,7 @@ export const NosotrosPage = () => {
         <SenaRecovery />
       </div>
       <Footer />
-      <Whatsapp
-        message="Hola, vi su web y quiero saber más sobre Flujolink y cómo funciona."
-        animated
-      />
+     
     </div>
   );
 };

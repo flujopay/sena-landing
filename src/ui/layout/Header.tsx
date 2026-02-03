@@ -1,6 +1,7 @@
 "use client";
 
 import { useModalStore } from "@/lib/store/modalStore";
+import { useCurrencyStore } from "@/lib/store/useCurrencyStore";
 import { AssetIcon } from "@/lib/utils/assets/icon";
 import { AssetImage } from "@/lib/utils/assets/image";
 import Image from "next/image";
@@ -16,6 +17,7 @@ export const Header = ({ variant }: Props) => {
   const pathname = usePathname();
   const router = useRouter();
   const { showModal, hideModal } = useModalStore();
+  const { ipCurrency } = useCurrencyStore();
 
   const logo =
     variant === "primary" ? AssetImage.logoBlack : AssetImage.logoBlack;
@@ -109,22 +111,9 @@ export const Header = ({ variant }: Props) => {
     });
   };
 
-  const handleScrollToSection = (
-    e: React.MouseEvent<HTMLAnchorElement>,
-    sectionId: string,
-  ) => {
-    e.preventDefault();
-    hideModal();
-
-    if (pathname !== "/") {
-      window.location.href = `/#${sectionId}`;
-      return;
-    }
-
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
+  const redirectLogin = () => {
+    const url = ipCurrency === "PEN" ? "pe" : "";
+    router.push(`https://app.flujolink.com/login?l=${url}&origin=main`);
   };
 
   return (
@@ -161,6 +150,7 @@ export const Header = ({ variant }: Props) => {
             size="md"
             text="Iniciar sesión"
             variant="ghost"
+            onClick={redirectLogin}
             className="text-md"
           />
           <Button

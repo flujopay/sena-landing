@@ -10,6 +10,7 @@ import { Input } from "@/ui/shared/Input";
 import SimpleCountrySelect, {
   OptionSelect,
 } from "@/ui/shared/SimpleCountrySelect";
+import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
 import { Controller, useForm } from "react-hook-form";
@@ -399,13 +400,19 @@ export const ContactForm = () => {
 
             <p className="text-xs mb-4">
               Al hacer click en enviar, aceptas los{" "}
-              <span className="text-brand-primary font-semibold">
-                Términos y Condiciones
-              </span>{" "}
+              <Link
+                href="/term"
+                className="text-brand-primary cursor-pointer font-semibold"
+              >
+                Términos y Condiciones {" "}
+              </Link>
               y la{" "}
-              <span className="text-brand-primary font-semibold">
+              <Link
+                href="/privacy"
+                className="text-brand-primary font-semibold"
+              >
                 Política de Privacidad
-              </span>
+              </Link>
             </p>
 
             <Button

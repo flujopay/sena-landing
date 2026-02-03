@@ -51,3 +51,4 @@ export class AssetImage {
   static autogestion = autogestion;
   static recuperaGirl = recuperaGirl;
 }
+

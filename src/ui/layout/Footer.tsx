@@ -1,7 +1,29 @@
+"use client";
 import { AssetIcon } from "@/lib/utils/assets/icon";
 import { AssetImage } from "@/lib/utils/assets/image";
+import { usePathname, useRouter } from "next/navigation";
 
 export const Footer = () => {
+  const router = useRouter();
+  const pathname = usePathname();
+
+  const handleNavClick = (type: string, route: string) => {
+    if (type === "scroll") {
+      const sectionId = route.replace("#", "");
+      if (pathname === "/") {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          const top = element.offsetTop;
+          window.scrollTo({ top, behavior: "smooth" });
+        }
+      } else {
+        window.location.href = `/#${sectionId}`;
+      }
+    } else if (type === "redirect") {
+      router.push(route);
+    }
+  };
+
   return (
     <footer className="bg-[#2270D0] text-white py-12 md:py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
@@ -10,7 +32,6 @@ export const Footer = () => {
             src={AssetImage.logoBlanco.src}
             alt="Sena Logo"
             className="w-64 md:w-100"
-
           />
         </div>
 
@@ -45,17 +66,22 @@ export const Footer = () => {
             <ul className="space-y-2 md:space-y-3 text-sm md:text-base">
               <li>
                 {/* <Link href="/sobre-nosotros" className="hover:text-blue-500 transition-colors duration-200"> */}
-                <p className="hover:text-blue-500 transition-colors duration-200">
+                <button
+                  onClick={() => handleNavClick("redirect", "/nosotros")}
+                  className="hover:text-blue-500 cursor-pointer transition-colors duration-200"
+                >
                   Sobre nosotros
-                </p>
+                </button>
               </li>
               <li>
-                <p
+                <button
+                  disabled
+                  // onClick={() => router.push("/sobre-recsa")}
                   // href="/sobre-recsa"
                   className="hover:text-blue-500 transition-colors duration-200"
                 >
                   Sobre Recsa
-                </p>
+                </button>
               </li>
               <li>
                 <p
@@ -74,28 +100,34 @@ export const Footer = () => {
             </h3>
             <ul className="space-y-2 md:space-y-3 text-sm md:text-base">
               <li>
-                <p
+                <button
+                  onClick={() => handleNavClick("scroll", "#productos")}
                   // href="/productos"
-                  className="hover:text-blue-500 transition-colors duration-200"
+                  className="hover:text-blue-500 cursor-pointer transition-colors duration-200"
                 >
                   Productos
-                </p>
+                </button>
               </li>
               <li>
-                <p
+                <button
+                  onClick={() => handleNavClick("scroll", "#como-funciona")}
                   // href="/como-funciona"
-                  className="hover:text-blue-500 transition-colors duration-200"
+                  className="hover:text-blue-500 cursor-pointer transition-colors duration-200"
                 >
                   Cómo funciona
-                </p>
+                </button>
               </li>
               <li>
-                <p
+                <button
+                  disabled
+                  onClick={() =>
+                    handleNavClick("scroll", "#preguntas-frecuentes")
+                  }
                   // href="/preguntas-frecuentes"
-                  className="hover:text-blue-500 transition-colors duration-200"
+                  className="hover:text-blue-500  transition-colors duration-200"
                 >
                   Preguntas frecuentes
-                </p>
+                </button>
               </li>
             </ul>
           </div>
@@ -130,28 +162,31 @@ export const Footer = () => {
             </h3>
             <ul className="space-y-2 md:space-y-3 text-sm md:text-base">
               <li>
-                <p
+                <button
+                  onClick={() => handleNavClick("redirect", "/term")}
                   // href="/terminos"
-                  className="hover:text-blue-500 transition-colors duration-200"
+                  className="hover:text-blue-500 cursor-pointer transition-colors duration-200"
                 >
                   Términos y condiciones
-                </p>
+                </button>
               </li>
               <li>
-                <p
+                <button
+                  onClick={() => handleNavClick("redirect", "/privacy")}
                   // href="/politicas-cookies"
-                  className="hover:text-blue-500 transition-colors duration-200"
+                  className="hover:text-blue-500 cursor-pointer transition-colors duration-200"
                 >
-                  Políticas de cookies
-                </p>
+                  Políticas de privacidad
+                </button>
               </li>
               <li>
-                <p
+                <button
+                  disabled
                   // href="/configuracion-cookies"
                   className="hover:text-blue-500 transition-colors duration-200"
                 >
                   Actualizar configuración de cookies
-                </p>
+                </button>
               </li>
             </ul>
           </div>

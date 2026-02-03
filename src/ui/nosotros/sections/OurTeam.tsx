@@ -1,3 +1,4 @@
+import { AssetUsImage } from "@/lib/utils/assets/imageUs";
 import { TitleDescripction } from "@/ui/shared/TitleDescripction";
 import Image from "next/image";
 
@@ -11,19 +12,30 @@ const teamMembers: TeamMember[] = [
   {
     name: "JAZMÍN JORQUERA",
     role: "CEO Sena",
-    image: "",
+    image: AssetUsImage.jazmin.src,
   },
   {
     name: "SEBASTIÁN GAJARDO",
     role: "Product Manager",
-  },
-  {
-    name: "JUAN CORDOVA",
-    role: "Sales Manager",
+    image: AssetUsImage.seba.src,
   },
   {
     name: "FRANCISCO ORTEGA",
-    role: "Account Executive",
+    role: "Sales Manager",
+    image: AssetUsImage.francisco.src,
+  },
+  {
+    name: "RENILDO CHAVEZ",
+    role: "Full Stack Developer",
+  },
+  {
+    name: "DIEGO MATEO",
+    role: "Full Stack Developer",
+  },
+  {
+    name: "ERICK VILLALOBOS",
+    role: "Full Stack Developer",
+    image: AssetUsImage.erick.src,
   },
 ];
 
@@ -31,7 +43,7 @@ export const OurTeam = () => {
   return (
     <section className="bg-white pb-12 max-w-[1280px] mx-auto">
       <div className="px-4 md:px-8">
-        <TitleDescripction title="Nuestro" subtitle="equipo" description=""/>
+        <TitleDescripction title="Nuestro" subtitle="equipo" description="" />
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-12 max-w-md md:max-w-none mx-auto mt-8">
           {teamMembers.map((member, index) => (

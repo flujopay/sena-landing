@@ -8,6 +8,7 @@ import { adobeCleanFont, canaroFont, caslonFont } from "./fonts";
 import "./globals.css";
 import Providers from "./providers";
 import { getCountriesServer } from "@/lib/services/countryService.server";
+import Whatsapp from "@/ui/shared/WhatsApp";
 
 export const metadata: Metadata = {
   title: "Sena - El mejor CRM de cobranza y pagos B2B",
@@ -87,6 +88,10 @@ export default async function RootLayout({
           <Suspense>{children}</Suspense>
           <ModalRenderer />
           <Toast />
+          <Whatsapp
+            message="Hola, vi su web y quiero saber más sobre Flujolink y cómo funciona."
+            animated
+          />
         </body>
       </html>
     </Providers>

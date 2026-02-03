@@ -3,7 +3,6 @@
 import { useEffect } from "react";
 import { Footer } from "../layout/Footer";
 import { Header } from "../layout/Header";
-import Whatsapp from "../shared/WhatsApp";
 import { CallToAction } from "./sections/CallToAction/CallToAction";
 import { Clients } from "./sections/Clients";
 import { Hero } from "./sections/Hero";
@@ -45,10 +44,6 @@ export const HomePage = () => {
         <CallToAction />
         <Footer />
       </div>
-      <Whatsapp
-        message="Hola, vi su web y quiero saber más sobre Flujolink y cómo funciona."
-        animated
-      />
     </div>
   );
 };

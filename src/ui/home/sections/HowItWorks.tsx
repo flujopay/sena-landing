@@ -74,22 +74,22 @@ export const HowItWorks = () => {
 
   const handleVideoClick = () => {
     const stepWithVideo = active as any;
-    if (stepWithVideo.video && window.innerWidth >= 768) {
-      showModal({
-        content: (
-          <VideoModal
-            videoSrc={stepWithVideo.video}
-            title={`${stepWithVideo.label} con Sena`}
-            description={stepWithVideo.description}
-          />
-        ),
-        width: "690px",
-        showCloseButton: true,
-        showHeader: false,
-        closeOnOutsideClick: true,
-      });
-    }
+    showModal({
+      content: (
+        <VideoModal
+          videoSrc={stepWithVideo.video}
+          title={`${stepWithVideo.label} con Sena`}
+          description={stepWithVideo.description}
+        />
+      ),
+      width: "690px",
+      showCloseButton: true,
+      showHeader: false,
+      closeOnOutsideClick: true,
+    });
   };
+
+  const hasVideo = Boolean((active as any).video);
 
   return (
     <section id="como-funciona" className="bg-[#F9F9F9] pt-28 ">
@@ -158,25 +158,31 @@ export const HowItWorks = () => {
                           fill
                           className="object-cover"
                         />
-                        <div className="absolute inset-0 bg-linear-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                        <div className="hidden md:flex absolute inset-0 items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                          <div className="w-16 h-16 cursor-pointer rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center shadow-xl">
-                            <svg
-                              width="32"
-                              height="32"
-                              viewBox="0 0 24 24"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path d="M8 5V19L19 12L8 5Z" fill="#1E40AF" />
-                            </svg>
-                          </div>
-                        </div>
-                        <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                          <div className="bg-white/90 backdrop-blur-sm rounded-full px-3 py-1.5 text-xs font-semibold text-brand-primary shadow-lg">
-                            {active.label}
-                          </div>
-                        </div>
+                        {hasVideo && (
+                          <>
+                            <div className="absolute inset-0 bg-linear-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+                            <div className="hidden md:flex absolute inset-0 items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                              <div className="w-16 h-16 cursor-pointer rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center shadow-xl">
+                                <svg
+                                  width="32"
+                                  height="32"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path d="M8 5V19L19 12L8 5Z" fill="#1E40AF" />
+                                </svg>
+                              </div>
+                            </div>
+
+                            <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                              <div className="bg-white/90 backdrop-blur-sm rounded-full px-3 py-1.5 text-xs font-semibold text-brand-primary shadow-lg">
+                                {active.label}
+                              </div>
+                            </div>
+                          </>
+                        )}
                       </>
                     ) : (active as any).video ? (
                       <>
