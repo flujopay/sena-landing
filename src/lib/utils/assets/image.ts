@@ -16,7 +16,7 @@ import logoBlanco from "@/public/images/logo_blanco.png";
 import maruzLogo from "@/public/images/maruz_logo.png";
 import nosotros1 from "@/public/images/nosotros1.png";
 import nosotros2 from "@/public/images/nosotros2.png";
-import proweldLogo from "@/public/images/proweld_logo.jpeg";
+import proweldLogo from "@/public/images/proweld_logo.png";
 import recuperaGirl from "@/public/images/recupera_girl.jpeg";
 import rioSena from "@/public/images/rio_sena.jpg";
 import senaLogoOrange from "@/public/images/sena_logo_orange.png";
@@ -51,4 +51,3 @@ export class AssetImage {
   static autogestion = autogestion;
   static recuperaGirl = recuperaGirl;
 }
-
