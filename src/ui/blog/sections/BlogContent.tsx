@@ -52,7 +52,7 @@ export const BlogContent = ({ featuredPost, otherPosts }: BlogContentProps) => {
             </div>
 
             <div className="flex items-center gap-2 text-gray-200 text-sm mb-4">
-              <p className="font-medium">{featuredPost.author}</p>
+              {/* <p className="font-medium">{featuredPost.author}</p> */}
               <span>|</span>
               <svg
                 width="16"
@@ -156,8 +156,8 @@ export const BlogContent = ({ featuredPost, otherPosts }: BlogContentProps) => {
               ))}
             </div>
             <div className="flex items-center gap-2 text-sm text-gray-500 mb-2">
-              <span>{post.author}</span>
-              <span>|</span>
+              {/* <span>{post.author}</span> */}
+              {/* <span>|</span> */}
               <span>{post.date}</span>
             </div>
             <h3 className="text-xl font-extrabold text-brand-primary mb-2">

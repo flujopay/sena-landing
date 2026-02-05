@@ -5,6 +5,11 @@ import { useRouter } from "next/navigation";
 
 export const CallToAction = () => {
   const router = useRouter();
+
+  const onRedirectHubspot = () => {
+    window.open("https://meetings.hubspot.com/francisco472", "_blank");
+  };
+
   return (
     <section className="max-w-[1280px] mx-auto">
       <div className="rounded-2xl overflow-hidden">
@@ -30,11 +35,12 @@ export const CallToAction = () => {
               <Button
                 variant="primaryFilled"
                 text="Agenda una demo"
+                onClick={onRedirectHubspot}
                 className="h-8 px-6 text-sm md:h-13 md:px-8 md:text-base"
               />
               <Button
                 variant="primaryDarkOutlined"
-                text="Habla con ventas"
+                text="Contáctanos"
                 onClick={() => router.push("/contactanos")}
                 className="h-8 px-6 text-sm md:h-13 md:px-8 md:text-base"
               />

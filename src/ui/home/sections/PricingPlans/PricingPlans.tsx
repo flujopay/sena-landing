@@ -60,6 +60,9 @@ export const PricingPlans = () => {
       ],
       variant: "enterprise",
       cta: "Habla con ventas",
+      onCtaClick: () => {
+        window.open("https://meetings.hubspot.com/francisco472", "_blank");
+      },
     },
   ];
 
@@ -84,7 +87,10 @@ export const PricingPlans = () => {
             <button
               key={plan.variant}
               type="button"
-              onClick={() => setSelectedPlan(index)}
+              onClick={() => {
+                setSelectedPlan(index);
+                plan.onCtaClick?.();
+              }}
               className={`
                 w-full flex items-center gap-3 p-4
                 transition-colors

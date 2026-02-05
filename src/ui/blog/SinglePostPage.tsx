@@ -156,7 +156,7 @@ export const SinglePostPage = ({ post }: { post: BlogPost }) => {
               </span>
             ))}
             <span>|</span>
-            <span>{post.author}</span>
+            {/* <span>{post.author}</span> */}
             <span>|</span>
             <Calendar className="w-4 h-4" />
             <span>{post.date}</span>

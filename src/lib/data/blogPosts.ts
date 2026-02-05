@@ -5,504 +5,6 @@ import { parseSpanishDate, slug } from "../utils/blog";
 export const featuredPostId = 1;
 
 export const blogPosts: BlogPost[] = [
-  // {
-  //   id: 1,
-  //   slug: slug(
-  //     "¿Cómo evitar fraudes en pagos? Elude facturas falsas y logra la protección de tu empresa",
-  //   ),
-  //   title:
-  //     "¿Cómo evitar fraudes en pagos? Elude facturas falsas y logra la protección de tu empresa",
-  //   intro:
-  //     "Las facturas falsas pueden presentarse de diversas formas, ya que pueden derivarse de facturas ideológicamente falsas, que no corresponden a transacciones reales y se presentan para obtener financiamiento de empresas de factoring; corrupción interna por empleados que estén ejerciendo prácticas fraudulentas o redes de corrupción, es decir, que se amplía llegando a involucrar a inversionistas o fondos completos de inversión que terminan asumiendo pérdidas. ",
-  //   date: "5 de marzo 2025",
-  //   author: "Sena",
-  //   tags: ["Prensa"],
-  //   image: AssetImageBlog.blog_1_main.src,
-  //   content: [
-  //     {
-  //       type: "quote",
-  //       text: "El Servicio de Impuestos Internos (SII) detectó el uso de facturas falsas que habrían permitido una defraudación de más de $440 mil millones entre 2023 y 2024, produciendo que en este último año se bloquearan temporalmente las claves tributarias de al menos 27 mil RUT de empresas.",
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       fragments: [
-  //         {
-  //           type: "text",
-  //           text: "Las facturas falsas pueden presentarse de diversas formas, ya que pueden derivarse de facturas ideológicamente falsas, que no corresponden a transacciones reales y se presentan para obtener financiamiento de empresas de factoring; corrupción interna por empleados que estén ejerciendo prácticas fraudulentas o redes de corrupción, es decir, que se amplía llegando a involucrar a inversionistas o fondos completos de inversión que terminan asumiendo pérdidas.",
-  //         },
-  //       ],
-  //     },
-
-  //     {
-  //       type: "paragraph",
-  //       fragments: [
-  //         {
-  //           type: "text",
-  //           text: "Un informe sobre emisión de facturas, que fue publicado en septiembre del año pasado, dio a conocer que ",
-  //         },
-  //         {
-  //           type: "bold",
-  //           text: "las facturas fraudulentas han aumentado hasta en un 92% en 2024, alcanzando un monto superior a los $38 mil millones.",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "quote",
-  //       text: "“Este incremento en el país se debe a una mayor sofisticación de los esquemas fraudulentos, principalmente la evolución de las redes de fraude, como empresas de papel y patrones de comportamiento tributario agresivo en evasión de controles”, indica Giovanni Medrano Ríos, CEO de Sena.",
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       fragments: [
-  //         {
-  //           type: "text",
-  //           text: "También, son vulnerados sectores específicos con mayor frecuencia, tales como: industrias de construcción y servicios, lo que se debe por la complejidad de sus operaciones y la gestión de grandes montos de dinero que, junto con un ciclo económico negativo, genera desaceleración económica, desprotegiendo a las empresas, exponiéndolas a prácticas ilícitas.",
-  //         },
-  //         {
-  //           type: "bold",
-  //           text: " que, junto con un ciclo económico negativo, genera desaceleración económica, desprotegiendo a las empresas, exponiéndolas a prácticas ilícitas.",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       fragments: [
-  //         {
-  //           type: "text",
-  //           text: "Para combatir estas malas  prácticas se necesita utilizar mecanismos más seguros como la digitalización de las aprobaciones y validación temprana de la información.",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       fragments: [
-  //         {
-  //           type: "bold",
-  //           text: "La digitalización sugiere el uso de softwares que gestionen facturas posterior a su emisión, ",
-  //         },
-  //         {
-  //           type: "text",
-  //           text: "porque estos permiten automatizar la recepción, añadido clasificación y validación de estos documentos en tiempo real, reduciendo errores humanos y el riesgo de fraudes. Además,",
-  //         },
-  //         {
-  //           type: "bold",
-  //           text: "la integración  con sistemas ERP conecta los procesos de cuentas por pagar, ",
-  //         },
-  //         {
-  //           type: "text",
-  //           text: "garantizando que las facturas coincidan con órdenes de compra.",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       fragments: [
-  //         {
-  //           type: "text",
-  //           text: "Por otro lado,",
-  //         },
-  //         {
-  //           type: "bold",
-  //           text: "la validación temprana, contiene la verificación de autenticidad",
-  //         },
-  //         {
-  //           type: "text",
-  //           text: "de los emisores mediante cruces automáticos con bases de datos de clientes propios y/o contra bases de datos oficiales, como el SII; en esta línea, la ",
-  //         },
-  //         {
-  //           type: "bold",
-  //           text: "trazabilidad con tecnología blockchain ",
-  //         },
-  //         {
-  //           type: "text",
-  //           text: "podría asegurar que las facturas no hayan sido alteradas desde su emisión ",
-  //         },
-  //         {
-  //           type: "bold",
-  //           text: "y la revisión cruzada ",
-  //         },
-  //         {
-  //           type: "text",
-  //           text: "para comparar facturas, contratos y órdenes de compra para identificar inconsistencias o emisiones no autorizadas.",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "quote",
-  //       text: "La implementación de estas prácticas preventivas no solo fortalece la transparencia y eficiencia en la gestión de facturas, sino que también refuerza la confianza entre las partes involucradas, contribuyendo a un ecosistema financiero más seguro y confiable”, finaliza Medrano.",
-  //     },
-  //   ],
-  // },
-  // {
-  //   id: 2,
-  //   slug: slug("Evita-retrasos-mejora-pagos-protege-tu- negocio-Sena"),
-  //   title:
-  //     "La digitalización de pagos y cobranzas: clave para la estabilidad financiera de las empresas peruanas.",
-  //   intro:
-  //     "En el Perú, los retrasos en los pagos de facturas no solo afectan la liquidez de las empresas, sino que generan una cadena de consecuencias que pueden impactar seriamente la sostenibilidad del negocio. Muchas veces, estos retrasos no se deben a la falta de fondos, sino a procesos internos mal integrados, sistemas dispersos y aprobaciones burocráticas.",
-  //   date: "10 de marzo 2025",
-  //   author: "Antonella Hernandez",
-  //   tags: ["Prensa"],
-  //   image: AssetImageBlog.blog_2_main.src,
-  //   content: [
-  //     {
-  //       type: "paragraph",
-  //       fragments: [
-  //         {
-  //           type: "text",
-  //           text: "En el Perú, los retrasos en los pagos de facturas no solo afectan la liquidez de las empresas, sino que generan una cadena de consecuencias que pueden impactar seriamente la sostenibilidad del negocio. Muchas veces, estos retrasos no se deben a la falta de fondos, sino a procesos internos mal integrados, sistemas dispersos y aprobaciones burocráticas.",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       fragments: [
-  //         {
-  //           type: "text",
-  //           text: "Este problema fue analizado por nuestro CEO, ",
-  //         },
-  //         {
-  //           type: "bold",
-  //           text: "Giovanni Medrano Ríos",
-  //         },
-  //         {
-  //           type: "text",
-  //           text: ", en una entrevista publicada en ",
-  //         },
-  //         {
-  //           type: "link",
-  //           text: "Ecommerce News Perú",
-  //           href: "https://www.ecommercenews.pe/pagos-online/2025/la-digitalizacion-de-pagos-y-cobranzas-clave-para-la-estabilidad-financiera-de-las-empresas-peruanas.html/",
-  //         },
-  //         {
-  //           type: "text",
-  //           text: ", donde se abordó la importancia de adoptar tecnologías que digitalicen y automaticen los flujos de pagos y cobranzas.",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "subtitle",
-  //       text: "El verdadero costo de los retrasos en pagos",
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       fragments: [
-  //         {
-  //           type: "text",
-  //           text: "Cuando una empresa no gestiona correctamente sus cuentas por pagar, puede enfrentar:",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "list",
-  //       items: [
-  //         [
-  //           {
-  //             type: "bold",
-  //             text: "Sobrecarga operativa",
-  //           },
-  //           {
-  //             type: "text",
-  //             text: ": El manejo manual de facturas en múltiples plataformas eleva los tiempos, errores y riesgo de fraude.",
-  //           },
-  //         ],
-  //         [
-  //           {
-  //             type: "bold",
-  //             text: "Relaciones comerciales deterioradas",
-  //           },
-  //           {
-  //             type: "text",
-  //             text: ": El incumplimiento constante debilita la confianza de proveedores y afecta futuras condiciones comerciales.",
-  //           },
-  //         ],
-  //         [
-  //           {
-  //             type: "bold",
-  //             text: "Problemas legales y reputacionales",
-  //           },
-  //           {
-  //             type: "text",
-  //             text: ": En casos extremos, los impagos pueden escalar a acciones judiciales o perjudicar la imagen empresarial.",
-  //           },
-  //         ],
-  //         [
-  //           {
-  //             type: "bold",
-  //             text: "Pérdida de visibilidad",
-  //           },
-  //           {
-  //             type: "text",
-  //             text: ": La falta de centralización impide anticipar salidas de caja y coordinar pagos a tiempo.",
-  //           },
-  //         ],
-  //       ],
-  //     },
-  //     {
-  //       type: "image",
-  //       link: "https://drive.google.com/uc?export=view&id=18qzaPCpuuCAQywXfb8IxMCZmwX7IJy75",
-  //     },
-  //     {
-  //       type: "subtitle",
-  //       text: "¿Cómo puede ayudar la digitalización?",
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       fragments: [
-  //         {
-  //           type: "text",
-  //           text: "Para evitar este tipo de escenarios, es fundamental que las empresas modernicen su cadena de pagos. Desde Sena, recomendamos:",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "subtitle",
-  //       text: "1. Visibilidad en tiempo real",
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       fragments: [
-  //         {
-  //           type: "text",
-  //           text: "Involucrar a todas las áreas clave (Finanzas, Compras, Tesorería) en un sistema que centralice la información y reduzca errores o fraudes.",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "subtitle",
-  //       text: "2. Aprobaciones digitales ágiles",
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       fragments: [
-  //         {
-  //           type: "text",
-  //           text: "Implementar flujos de validación seguros que reduzcan la burocracia, sin perder control sobre las decisiones financieras.",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "subtitle",
-  //       text: "3. Integración de procesos",
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       fragments: [
-  //         {
-  //           type: "text",
-  //           text: "Concentrar en una única plataforma todo el ciclo: recepción, revisión, aprobación y pago de facturas.",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "subtitle",
-  //       text: "4. Alertas y automatización",
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       fragments: [
-  //         {
-  //           type: "text",
-  //           text: "Activar recordatorios de vencimientos y pagos pendientes para evitar retrasos innecesarios.",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "quote",
-  //       text: "“Muchas veces el problema no es la falta de dinero, sino la falta de control. Con herramientas como Sena, las empresas pueden anticiparse a los retrasos, gestionar sus flujos de pago con precisión y reducir el desgaste operativo”, comentó Medrano.",
-  //     },
-  //     {
-  //       type: "subtitle",
-  //       text: "📎 Lee la nota completa en Ecommerce News",
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       fragments: [
-  //         {
-  //           type: "text",
-  //           text: "Para conocer más sobre este enfoque, te invitamos a revisar la publicación original en ",
-  //         },
-  //         {
-  //           type: "link",
-  //           text: "Ecommerce News Perú",
-  //           href: "https://www.ecommercenews.pe/pagos-online/2025/la-digitalizacion-de-pagos-y-cobranzas-clave-para-la-estabilidad-financiera-de-las-empresas-peruanas.html/",
-  //         },
-  //         {
-  //           type: "text",
-  //           text: ", donde compartimos nuestra visión sobre cómo la tecnología puede transformar las finanzas empresariales.",
-  //         },
-  //       ],
-  //     },
-  //   ],
-  // },
-  // {
-  //   id: 3,
-  //   slug: slug(
-  //     "crisis silenciosa de empresas peruanas, digitalizacion financiera, automatiza",
-  //   ),
-  //   title:
-  //     "La crisis silenciosa de las empresas peruanas:  la clave está en la digitalización de pagos y cobranzas",
-  //   intro:
-  //     "Aunque Perú ha registrado un crecimiento notable en el uso de herramientas digitales para transacciones, muchas empresas aún enfrentan un gran obstáculo: la falta de digitalización en sus procesos financieros internos. Esta brecha no solo pone en riesgo su liquidez, sino que también debilita su capacidad para tomar decisiones estratégicas, prevenir moras y sostener relaciones comerciales sanas.",
-  //   date: "20 de marzo 2025",
-  //   author: "Fernanda Hurtado",
-  //   tags: ["Prensa"],
-  //   image: AssetImageBlog.blog_3_main.src,
-  //   content: [
-  //     {
-  //       type: "paragraph",
-  //       fragments: [
-  //         {
-  //           type: "text",
-  //           text: "Aunque Perú ha registrado un crecimiento notable en el uso de herramientas digitales para transacciones, muchas empresas aún enfrentan un gran obstáculo: la falta de digitalización en sus procesos financieros internos. Esta brecha no solo pone en riesgo su liquidez, sino que también debilita su capacidad para tomar decisiones estratégicas, prevenir moras y sostener relaciones comerciales sanas.",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       fragments: [
-  //         {
-  //           type: "text",
-  //           text: "De acuerdo con el Banco Central de Reserva del Perú (BCRP), en el primer semestre del 2024 se registraron ",
-  //         },
-  //         {
-  //           type: "bold",
-  //           text: "688 millones de transacciones digitales.",
-  //         },
-  //         {
-  //           type: "text",
-  //           text: ". Sin embargo, muchas compañías aún operan con baja visibilidad de su flujo de caja y del comportamiento financiero de sus clientes y proveedores, lo cual genera vulnerabilidades críticas.",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       fragments: [
-  //         {
-  //           type: "text",
-  //           text: "Los datos son claros: la tasa de morosidad en sectores como ",
-  //         },
-  //         {
-  //           type: "bold",
-  //           text: "construcción (13,4%), alojamiento y restaurantes (8,6%), y comercio (8,1%)",
-  //         },
-  //         {
-  //           type: "text",
-  //           text: " muestra que esta no es solo una amenaza para las pymes. Incluso las grandes empresas enfrentan efectos negativos cuando los pagos no fluyen: se frena la inversión, se pierde capacidad operativa y se arriesga la estabilidad del ecosistema económico completo.",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "quote",
-  //       text: "“Miles de empresas cierran cada año no solo por falta de ventas, sino porque no logran gestionar adecuadamente su flujo de caja”, señaló Giovanni Medrano Ríos, CEO de Sena, en una reciente cobertura de medios.",
-  //     },
-  //     {
-  //       type: "subtitle",
-  //       text: "Sena: la red financiera que cambia el juego",
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       fragments: [
-  //         {
-  //           type: "text",
-  //           text: "Frente a esta realidad, ",
-  //         },
-  //         {
-  //           type: "bold",
-  //           text: "Sena",
-  //         },
-  //         {
-  //           type: "text",
-  //           text: " propone una transformación estructural: la creación de la primera ",
-  //         },
-  //         {
-  //           type: "bold",
-  //           text: "red financiera empresarial del país",
-  //         },
-  //         {
-  //           type: "text",
-  //           text: ", enfocada en digitalizar y automatizar cuentas por cobrar y por pagar, con información en tiempo real.",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       fragments: [
-  //         {
-  //           type: "text",
-  //           text: "Esta red: ",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "list",
-  //       items: [
-  //         [
-  //           {
-  //             type: "text",
-  //             text: "Conecta empresas entre sí para facilitar relaciones comerciales más seguras.",
-  //           },
-  //         ],
-  //         [
-  //           {
-  //             type: "text",
-  //             text: "Entrega visibilidad financiera y control de flujo de caja.",
-  //           },
-  //         ],
-  //         [
-  //           {
-  //             type: "text",
-  //             text: "Automatiza tareas operativas y minimiza riesgos de mora.",
-  //           },
-  //         ],
-  //         [
-  //           {
-  //             type: "text",
-  //             text: "Integra recordatorios inteligentes y portales de autogestión para acelerar pagos.",
-  //           },
-  //         ],
-  //       ],
-  //     },
-  //     {
-  //       type: "quote",
-  //       text: "“Nuestra solución no solo ayuda a cobrar mejor, también permite pagar mejor. Genera orden, previsión y confianza en toda la cadena empresarial”, explica Giovanni Medrano.",
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       fragments: [
-  //         {
-  //           type: "text",
-  //           text: "Este enfoque innovador de Sena ha sido destacado recientemente en diversos medios especializados. Revisa los artículos originales aquí:",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "list",
-  //       items: [
-  //         [
-  //           {
-  //             type: "link",
-  //             text: "Revista Economía",
-  //             href: "https://www.revistaeconomia.com/la-crisis-silenciosa-de-las-empresas-peruanas-la-clave-esta-en-la-digitalizacion-de-pagos-y-cobranzas-2/",
-  //           },
-  //         ],
-  //         [
-  //           {
-  //             type: "link",
-  //             text: "Lima al Día",
-  //             href: "https://limaaldia.pe/la-crisis-silenciosa-de-las-empresas-peruanas-la-clave-esta-en-la-digitalizacion-de-pagos-y-cobranzas/",
-  //           },
-  //         ],
-  //         [
-  //           {
-  //             type: "link",
-  //             text: "Altavoz.pe",
-  //             href: "https://www.altavoz.pe/economia/la-crisis-silenciosa-de-las-empresas-peruanas-la-clave-esta-en-la-digitalizacion-de-pagos-y-cobranzas/",
-  //           },
-  //         ],
-  //       ],
-  //     },
-  //   ],
-  // },
   {
     id: 4,
     slug: slug(
@@ -513,7 +15,6 @@ export const blogPosts: BlogPost[] = [
     intro:
       "Gestionar cuentas por cobrar no tiene por qué ser una tarea lenta ni desgastante. Con Sena, las empresas pueden reducir la morosidad y mejorar su flujo de caja usando herramientas que combinan automatización, contacto inteligente y tecnología de vanguardia. ",
     date: "20 de marzo 2025",
-    author: "Fernanda Hurtado",
     tags: ["Sena", "IA"],
     image:
       "https://lh7-rt.googleusercontent.com/docsz/AD_4nXcp5aWPPhubM2pDplaKNFiNYuvmmg9kzjXOSUp7OsvqX577TfFJPQ9K7U-Q4iQVjtm2bS6csBdUAJJOhrD4fO7KUeUEL5TZC9klvgQ5_kQQE9uzqYHNPj2CgzsvINDGQeW_bzzEWQ?key=Z63nbao0Z_MUHrbOnmsjiw",
@@ -636,7 +137,6 @@ export const blogPosts: BlogPost[] = [
     intro:
       "En el mundo empresarial moderno, gestionar las cuentas por cobrar y pagar de manera eficiente es fundamental para mantener un flujo de efectivo saludable. Sin embargo, muchas empresas aún enfrentan desafíos con la automatización y organización de estos procesos clave. Ahí es donde entra Sena.",
     date: "24 de abril 2025 ",
-    author: "Antonella Hernandez",
     tags: ["Cobranza"],
     image: AssetImageBlog.blog_5_main.src,
     content: [
@@ -983,7 +483,6 @@ export const blogPosts: BlogPost[] = [
     intro:
       "Cuando una factura vence y el pago no llega, no solo se retrasa un ingreso: se altera toda la operación financiera de tu empresa. En Sena, te ofrecemos una solución eficaz y sin riesgos, es el servicio de 'Recupera Plus'.",
     date: "25 de abril 2025",
-    author: "Fernanda Hurtado",
     tags: ["Cobranza", "Sena"],
     image: AssetImageBlog.blog_6_main.src,
     content: [
@@ -1189,7 +688,6 @@ export const blogPosts: BlogPost[] = [
     intro:
       "Tener facturas vencidas no sólo genera estrés, también frena tu crecimiento. En Sena entendemos el impacto que tiene una cuenta por cobrar sin resolver, y por eso diseñamos una solución concreta: recuperamos tus pagos vencidos de forma profesional, sin que adelantes dinero y sin que cedas tus derechos o pierdas dinero.",
     date: "26 de abril 2025",
-    author: "Fernanda Hurtado",
     tags: ["Sena", "Cobranza", "Educación Financiera"],
     image: AssetImageBlog.blog_7_main.src,
     content: [
@@ -1351,545 +849,6 @@ export const blogPosts: BlogPost[] = [
       /*  { type: 'image', link: '/images/blog/blog7/3.jpg' }, */
     ],
   },
-  // {
-  //   id: 8,
-  //   slug: slug(
-  //     "¿Cómo evitar fraudes en pagos? Protege tu empresa y evita facturas falsas",
-  //   ),
-  //   title:
-  //     "¿Cómo evitar fraudes en pagos? Protege tu empresa y evita facturas falsas",
-  //   intro:
-  //     "En los últimos años, el fraude con facturas falsas se ha convertido en una amenaza real para miles de empresas en el país. Solo entre 2023 y 2024, el Servicio de Impuestos Internos (SII) en Chile detectó un esquema que habría permitido defraudar más de $440 mil millones, afectando a más de 27 mil empresas.",
-  //   date: "26 de abril 2025",
-  //   author: "Antonella Hernandez",
-  //   tags: ["Sena", "Educación Financiera"],
-  //   image: AssetImageBlog.blog_1_main.src,
-  //   content: [
-  //     {
-  //       type: "title",
-  //       text: "¿Cómo evitar fraudes en pagos? Protege tu empresa y evita facturas falsas",
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       fragments: [
-  //         {
-  //           type: "text",
-  //           text: "En los últimos años, el fraude con facturas falsas se ha convertido en una amenaza real para miles de empresas en el país. Solo entre 2023 y 2024, el Servicio de Impuestos Internos (SII) en Chile detectó un esquema que habría permitido defraudar más de $440 mil millones. Como resultado, más de 27 mil empresas vieron bloqueadas sus claves tributarias. ¿La causa? Facturas que no correspondían a transacciones reales. ",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       fragments: [
-  //         {
-  //           type: "text",
-  //           text: "Por otro lado, en Perú; la Policía Nacional del Perú (PNP), en el último año se registraron más de 31,000 denuncias por estafas, reflejando un preocupante aumento en modalidades delictivas como aplicaciones de pago fraudulentas, facturación falsa y esquemas de inversión engañosos. Estas prácticas no solo afectan la economía del país, sino que ponen en riesgo la estabilidad financiera de negocios y consumidores. ",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       fragments: [
-  //         {
-  //           type: "text",
-  //           text: "Si nos enfocamos en las facturas falsas,  estas se presentan de diversas formas, ya que pueden derivarse de facturas ideológicamente falsas, que no corresponden a transacciones reales y se presentan para obtener financiamiento de empresas de factoring; corrupción interna por empleados que estén ejerciendo prácticas fraudulentas o redes de corrupción, es decir, que se amplía llegando a involucrar a inversionistas o fondos completos de inversión que terminan asumiendo pérdidas. ",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       fragments: [
-  //         {
-  //           type: "text",
-  //           text: "Este tipo de fraude puede darse de varias formas: desde documentos emitidos con información falsa para obtener financiamiento, hasta redes organizadas que involucran a empleados, empresas de papel e incluso fondos de inversión. Las industrias más golpeadas han sido la construcción y los servicios, sectores que por su complejidad y volumen de operaciones son especialmente vulnerables. ",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "subtitle",
-  //       text: "¿Por qué está aumentando este problema?",
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       fragments: [
-  //         {
-  //           type: "text",
-  //           text: "Según un informe reciente, el uso de facturas fraudulentas ha crecido un 92 % solo en 2024. La razón principal: la evolución de los esquemas de fraude, cada vez más sofisticados. Esto incluye el uso de empresas falsas, patrones de comportamiento tributario sospechosos y sistemas poco protegidos frente a irregularidades. ",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "quote",
-  //       text: "“Este crecimiento se debe a una mayor sofisticación de las redes de fraude y a la falta de controles adecuados en muchas empresas”, explica Giovanni Medrano Ríos, CEO de Sena. ",
-  //     },
-  //     {
-  //       type: "image",
-  //       link: "https://drive.usercontent.google.com/download?id=1XWdL7JSRCJMVqsYhUp808aDV32qMQyCG&export=view&authuser=0",
-  //     },
-  //     {
-  //       type: "subtitle",
-  //       text: "¿Cómo proteger tu empresa? Del caos al control",
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       fragments: [
-  //         {
-  //           type: "text",
-  //           text: "Hoy más que nunca, la innovación financiera para anticiparse al riesgo y proteger tu empresa del fraude y la morosidad  es clave, ya que la tecnología y los datos están transformando la gestión del riesgo y fraude, para tomar control y acción temprana. Es por eso que ",
-  //         },
-  //         { type: "link", text: "Sena ", href: "/" },
-  //         {
-  //           type: "text",
-  //           text: "contribuye a esto, digitalizando el proceso de pagos y cobros con verdadera trazabilidad e identificación para evitar caer en estas trampas. Herramientas como Sena permiten: ",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "list",
-  //       items: [
-  //         "Validar la autenticidad de las facturas en tiempo real.",
-  //         "Automatizar la recepción y validación de documentos.",
-  //         "Conectar el flujo de pagos con tus sistemas de gestión (ERP).",
-  //         "Comparar facturas con órdenes de compra y contratos para detectar inconsistencias.",
-  //       ],
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       fragments: [
-  //         {
-  //           type: "text",
-  //           text: "Además, se pueden implementar tecnologías como blockchain para asegurar que las facturas no hayan sido alteradas desde su emisión, y sistemas de validación cruzada con bases oficiales como la del SII ( Chile) o Sunal (Perú).",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "image",
-  //       link: "https://lh7-rt.googleusercontent.com/docsz/AD_4nXeaEcLziniDmnE-gJtWsGxEFE4eiS1t5stVz6J4cVIHIpmxAgthTT7BTU9SA4bNYjuSJX_PfEQkEHFweQgb0jKJFRCU5RBLWumM6BfnuWJXnvkTBCoPpGD9qUZ9_PdwYGxVv1R46mRudJoFY-hI_j4?key=mLWCzQYgIU_v3wO2OcOsnw",
-  //     },
-  //     {
-  //       type: "subtitle",
-  //       text: "🔒 La prevención es el mejor escudo ",
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       fragments: [
-  //         {
-  //           type: "text",
-  //           text: "Digitalizar tus procesos no solo mejora la eficiencia, también fortalece la confianza con tus clientes y proveedores. ",
-  //         },
-  //         {
-  //           type: "bold",
-  //           text: "Estás protegiendo tu empresa y contribuyendo a un ecosistema financiero más seguro para todos. ",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "quote",
-  //       text: "“La implementación de estas prácticas no solo mejora la transparencia, también genera seguridad y respaldo en todas las etapas del proceso”, agrega Medrano.",
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       fragments: [
-  //         {
-  //           type: "text",
-  //           text: "Toda esta información y mucho más se desarrollará en el conversatorio ",
-  //         },
-  //         { type: "bold", text: "“B2B Risk & Innovation Day“, " },
-  //         { type: "text", text: "organizado por " },
-  //         { type: "bold", text: "Ciclo de Riesgo Chile,  " },
-  //         { type: "text", text: "a realizarse en  la " },
-  //         { type: "bold", text: "V Región Viña del Mar, Chile. " },
-  //         {
-  //           type: "text",
-  //           text: "En la cual se abordarán distintos temas más allá de la cobranza, abarcando todo el mundo de servicios BPO. Este evento está orientado a un público de diferentes industrias. ",
-  //         },
-  //       ],
-  //     },
-  //   ],
-  // },
-  // {
-  //   id: 9,
-  //   slug: slug("como evitar fraudes en los pagos que recibe su empresa"),
-  //   title:
-  //     "¿Cómo evitar fraudes en pagos? La digitalización como escudo ante facturas falsas",
-  //   intro:
-  //     "Los fraudes financieros están en aumento, y uno de los más peligrosos para las empresas es el uso de facturas falsas. Solo en el periodo 2023-2024, el Servicio de Impuestos Internos (SII) detectó una defraudación de más de $440 mil millones en Chile. Como consecuencia, se bloquearon las claves tributarias de más de 27 mil empresas. ¿Qué pueden hacer las organizaciones para no formar parte de estas cifras?",
-  //   date: "06 de junio 2025",
-  //   author: "Antonella Hernandez",
-  //   tags: ["Prensa"],
-  //   image: AssetImageBlog.blog_9_main.src,
-  //   content: [
-  //     {
-  //       type: "paragraph",
-  //       fragments: [
-  //         {
-  //           type: "text",
-  //           text: "Los fraudes financieros están en aumento, y uno de los más peligrosos para las empresas es el uso de ",
-  //         },
-  //         { type: "bold", text: "facturas falsas. " },
-  //         {
-  //           type: "text",
-  //           text: "Solo en el periodo 2023-2024, el Servicio de Impuestos Internos (SII) detectó una defraudación de más de $440 mil millones en Chile. Como consecuencia, se bloquearon las claves tributarias de más de 27 mil empresas. ¿Qué pueden hacer las organizaciones para no formar parte de estas cifras?",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       fragments: [
-  //         {
-  //           type: "text",
-  //           text: "Este tema fue analizado por nuestro CEO, Giovanni Medrano Ríos, en una reciente nota publicada por ",
-  //         },
-  //         {
-  //           type: "link",
-  //           text: "Serperuano.com",
-  //           href: "https://www.serperuano.com/2025/04/como-evitar-fraudes-en-pagos-evita-facturas-falsas-y-logra-la-proteccion-de-tu-empresa/",
-  //         },
-  //         {
-  //           type: "text",
-  //           text: " donde se abordaron los mecanismos más eficaces para evitar caer en redes de fraude fiscal.",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "subtitle",
-  //       text: "🧾 ¿Cómo se presentan las facturas falsas?",
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       fragments: [
-  //         {
-  //           type: "text",
-  //           text: "Los esquemas fraudulentos se han vuelto más sofisticados. Ya no solo se trata de empresas “fantasma”, sino de redes más complejas que incluyen:",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "list",
-  //       items: [
-  //         [
-  //           {
-  //             type: "bold",
-  //             text: "Facturas ideológicamente falsas, ",
-  //           },
-  //           {
-  //             type: "text",
-  //             text: "sin transacción real de por medio.",
-  //           },
-  //         ],
-  //         [
-  //           {
-  //             type: "bold",
-  //             text: "Corrupción interna ",
-  //           },
-  //           {
-  //             type: "text",
-  //             text: "de empleados vinculados a prácticas ilícitas.",
-  //           },
-  //         ],
-  //         [
-  //           {
-  //             type: "bold",
-  //             text: "Inversionistas afectados ",
-  //           },
-  //           {
-  //             type: "text",
-  //             text: "que terminan asumiendo pérdidas sin saberlo.",
-  //           },
-  //         ],
-  //       ],
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       fragments: [
-  //         {
-  //           type: "text",
-  //           text: "En sectores como construcción y servicios, donde hay operaciones complejas y grandes flujos de dinero, el riesgo es aún mayor.",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "image",
-  //       link: AssetImageBlog.blog_9_main.src,
-  //     },
-  //     {
-  //       type: "subtitle",
-  //       text: "Estrategias para prevenir fraudes en facturación",
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       fragments: [
-  //         {
-  //           type: "text",
-  //           text: "Desde Sena, identificamos dos pilares clave para protegerse:",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "subtitle",
-  //       text: "1. Digitalización del proceso de cuentas por pagar",
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       fragments: [
-  //         {
-  //           type: "text",
-  //           text: "Implementar soluciones que automaticen la recepción y validación de facturas permite:",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "list",
-  //       items: [
-  //         [
-  //           {
-  //             type: "text",
-  //             text: "Reducir errores humanos.",
-  //           },
-  //         ],
-  //         [
-  //           {
-  //             type: "text",
-  //             text: "Validar datos en tiempo real.",
-  //           },
-  //         ],
-  //         [
-  //           {
-  //             type: "text",
-  //             text: "Integrar el flujo con sistemas ERP y órdenes de compra.",
-  //           },
-  //         ],
-  //       ],
-  //     },
-  //     {
-  //       type: "subtitle",
-  //       text: "2. Validación temprana de emisores",
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       fragments: [
-  //         {
-  //           type: "text",
-  //           text: "Implementar soluciones que automaticen la recepción y validación de facturas permite:",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "list",
-  //       items: [
-  //         [
-  //           {
-  //             type: "text",
-  //             text: "La ",
-  //           },
-  //           {
-  //             type: "bold",
-  //             text: "autenticidad ",
-  //           },
-  //           {
-  //             type: "text",
-  //             text: "de la factura.",
-  //           },
-  //         ],
-  //         [
-  //           {
-  //             type: "text",
-  //             text: "La ",
-  //           },
-  //           {
-  //             type: "bold",
-  //             text: "trazabilidad ",
-  //           },
-  //           {
-  //             type: "text",
-  //             text: "del documento.",
-  //           },
-  //         ],
-  //         [
-  //           {
-  //             type: "text",
-  //             text: "La ",
-  //           },
-  //           {
-  //             type: "bold",
-  //             text: "detección inmediata de inconsistencias",
-  //           },
-  //         ],
-  //       ],
-  //     },
-  //     {
-  //       type: "subtitle",
-  //       text: "📎 Lee la nota completa",
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       fragments: [
-  //         { type: "text", text: "Puedes leer la publicación completa en " },
-  //         {
-  //           type: "link",
-  //           text: "Serperuano.com",
-  //           href: "https://www.serperuano.com/2025/04/como-evitar-fraudes-en-pagos-evita-facturas-falsas-y-logra-la-proteccion-de-tu-empresa/",
-  //         },
-  //         {
-  //           type: "text",
-  //           text: ", donde exploramos más a fondo los riesgos y soluciones frente al uso de facturas fraudulentas.",
-  //         },
-  //       ],
-  //     },
-  //   ],
-  // },
-  // {
-  //   id: 10,
-  //   slug: slug("Consecuencias de pagar facturas fuera de fecha"),
-  //   title: "¿Cuáles son las consecuencias de pagar facturas fuera de fecha?",
-  //   intro:
-  //     "La demora en el pago de facturas se ha convertido en un desafío común para muchos negocios en el Perú. Más allá de la falta de liquidez por ventas o cobros pendientes, existen factores internos que suelen alargar el proceso de pago, como la alta burocracia en aprobaciones, la participación de múltiples roles y la dispersión de información en diferentes plataformas.",
-  //   date: "05 de junio 2025",
-  //   author: "Antonella Hernandez",
-  //   tags: ["Prensa"],
-  //   image: AssetImageBlog.blog_10_main.src,
-  //   content: [
-  //     {
-  //       type: "paragraph",
-  //       fragments: [
-  //         {
-  //           type: "text",
-  //           text: "La demora en el pago de facturas se ha convertido en un desafío común para muchos negocios en el Perú. Más allá de la falta de liquidez por ventas o cobros pendientes, existen factores internos que suelen alargar el proceso de pago, como la alta burocracia en aprobaciones, la participación de múltiples roles y la dispersión de información en diferentes plataformas.",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       fragments: [
-  //         {
-  //           type: "text",
-  //           text: "Esta situación no sólo genera complicaciones en el flujo de caja interno, sino que también entorpece el de los proveedores, generando inconvenientes en la cadena comercial y afectando directamente la operatividad. Así, los negocios terminan expuestos a riesgos judiciales, cobranza coactiva, deterioro de relaciones y daños reputacionales, difíciles de revertir en una economía cada vez más interconectada.",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "image",
-  //       link: AssetImageBlog.blog_10_1.src,
-  //     },
-  //     {
-  //       type: "quote",
-  //       text: "“Frecuentemente, los retrasos en los pagos de facturas entre empresas no se deben siempre a la imposibilidad de pagar, sino a la carencia de procesos integrados y digitalizados que permitan un manejo fluido y seguro de la información. Esto puede provocar un efecto dominó: desde la sobrecarga operativa hasta el deterioro de las relaciones comerciales”, comenta Giovanni Medrano Ríos, CEO de Sena.",
-  //     },
-  //     {
-  //       type: "quote",
-  //       text: "“Por ello, la visibilidad total del proceso, la capacidad de aprobar facturas de manera informada y la posibilidad de integrar todas las etapas de la cadena de pagos son factores críticos para cualquier compañía moderna”, añade.",
-  //     },
-  //     {
-  //       type: "image",
-  //       link: AssetImageBlog.blog_10_main.src,
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       fragments: [
-  //         {
-  //           type: "text",
-  //           text: "Aunque pocos casos escalan a instancias legales, existen consecuencias puntuales que las empresas deben tener en cuenta cuando no gestionan adecuadamente sus cuentas por pagar:",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       fragments: [
-  //         {
-  //           type: "bold",
-  //           text: "- Sobrecarga de recursos y costos operativos: ",
-  //         },
-  //         {
-  //           type: "text",
-  //           text: "Manejar manualmente facturas y aprobaciones en distintas plataformas eleva el tiempo invertido, el riesgo de errores y fraudes.",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       fragments: [
-  //         { type: "bold", text: "- Deterioro de la relación con proveedores:" },
-  //         {
-  //           type: "text",
-  //           text: "Los retrasos continuados pueden debilitar la confianza y provocar condiciones de pago menos favorables en el futuro.",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       fragments: [
-  //         { type: "bold", text: "- Riesgos legales o reputacionales: " },
-  //         {
-  //           type: "text",
-  //           text: "En situaciones extremas de mora o incumplimiento, pueden surgir acciones judiciales, embargos o un impacto negativo en la imagen de la empresa.",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       fragments: [
-  //         { type: "bold", text: "- Pérdida de visibilidad y control:" },
-  //         {
-  //           type: "text",
-  //           text: "Sin un sistema que unifique la información, se vuelve complejo anticipar salidas de caja y coordinar pagos de manera oportuna.",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       fragments: [
-  //         {
-  //           type: "text",
-  //           text: "Para contrarrestar estos problemas, la adopción de herramientas tecnológicas se vuelve imprescindible. Según el vocero de Sena, la mayoría de las compañías podrían revertir esta situación mediante:",
-  //         },
-  //       ],
-  //     },
-
-  //     {
-  //       type: "paragraph",
-  //       fragments: [
-  //         { type: "bold", text: "1. Visibilidad integral de las facturas:  " },
-  //         {
-  //           type: "text",
-  //           text: "Permitir a todas las áreas involucradas –desde Finanzas hasta Compras– acceder a la información en tiempo real para evitar fraudes, duplicidad de datos o confusiones.",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       fragments: [
-  //         { type: "bold", text: "2. Aprobaciones rápidas y seguras: " },
-  //         {
-  //           type: "text",
-  //           text: "Contar con flujos de aprobación digitales que reduzcan la burocracia sin sacrificar el control; cada responsable puede supervisar y validar pagos con confianza.",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       fragments: [
-  //         {
-  //           type: "bold",
-  //           text: "3. Digitalización e integración de procesos: ",
-  //         },
-  //         {
-  //           type: "text",
-  //           text: "Agrupar en una sola plataforma las etapas de recepción, revisión, confirmación y pago de facturas, evitando la dispersión en múltiples sistemas.",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       fragments: [
-  //         { type: "bold", text: "4. Alertas y recordatorios automáticos: " },
-  //         {
-  //           type: "text",
-  //           text: "Mantener un sistema de seguimiento constante de los plazos de vencimiento y enviar notificaciones cuando sea necesario, contribuyendo a una mayor tasa de pago puntual.",
-  //         },
-  //       ],
-  //     },
-  //   ],
-  // },
   {
     id: 11,
     slug: slug("Sena nacio para transformar las finanzas de las empresas"),
@@ -1897,7 +856,6 @@ export const blogPosts: BlogPost[] = [
     intro:
       "En Sena no solo creamos una herramienta financiera. Creamos una solución pensada en la realidad de quienes llevan adelante sus negocios todos los días. Nacimos con un propósito claro: ordenar, simplificar y dar control a las finanzas de las empresas que más lo necesitan.",
     date: "11 de junio 2025",
-    author: "Fernanda Hurtado",
     tags: ["Sena", "Blog"],
     image: AssetImageBlog.blog_11_main.src,
     content: [
@@ -2100,244 +1058,6 @@ export const blogPosts: BlogPost[] = [
       //*! aca abajo no */
     ],
   },
-  // {
-  //   id: 12,
-  //   slug: slug("que pasa con los acreedores cuando una empresa quiebra"),
-  //   title:
-  //     "¿Qué pasa con los acreedores cuando una empresa quiebra? Nuestra participación en Revista Economía?",
-  //   intro:
-  //     "Cuando una empresa atraviesa una crisis financiera y entra en quiebra, no solo se afecta su operación interna: los efectos se extienden a toda su cadena de valor. En especial, a los acreedores.",
-  //   date: "24 de junio 2025",
-  //   author: "Fernanda Hurtado",
-  //   tags: ["Prensa"],
-  //   image: AssetImageBlog.blog_12_main.src,
-  //   content: [
-  //     {
-  //       type: "paragraph",
-  //       fragments: [
-  //         {
-  //           type: "text",
-  //           text: "Cuando una empresa atraviesa una crisis financiera y entra en quiebra, no solo se afecta su operación interna: los efectos se extienden a toda su cadena de valor. En especial, a los acreedores. ",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       fragments: [
-  //         { type: "text", text: "En una reciente entrevista para  " },
-  //         {
-  //           type: "link",
-  //           text: "Revista Economía",
-  //           href: "https://www.revistaeconomia.com/quiebre-de-empresas-en-peru-como-repercute-en-los-acreedores-y-cadena-completa/",
-  //         },
-  //         {
-  //           type: "text",
-  //           text: " Giovanni Medrano Ríos, CEO de Sena, abordó las implicancias que tiene la quiebra de una empresa en la recuperación de pagos por parte de los acreedores y qué estrategias deben aplicarse para reducir el riesgo de incobrabilidad.",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "subtitle",
-  //       text: "🔍 ¿Qué sucede legalmente cuando una empresa quiebra?",
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       fragments: [
-  //         {
-  //           type: "text",
-  //           text: "Según la Ley General del Sistema Concursal (Ley N° 27809), existen dos tipos de procedimientos:",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "list",
-  //       items: [
-  //         [
-  //           {
-  //             type: "bold",
-  //             text: "Concurso ordinario",
-  //           },
-  //           {
-  //             type: "text",
-  //             text: ", cuando una empresa ya se encuentra en situación de insolvencia.",
-  //           },
-  //         ],
-  //         [
-  //           {
-  //             type: "bold",
-  //             text: "Concurso preventivo",
-  //           },
-  //           {
-  //             type: "text",
-  //             text: ", cuando prevé problemas financieros y busca llegar a acuerdos anticipados con sus acreedores.",
-  //           },
-  //         ],
-  //       ],
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       fragments: [
-  //         {
-  //           type: "text",
-  //           text: "En ambos casos, los acreedores deben suspender sus acciones individuales y canalizar sus reclamos a través del proceso concursal.",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "image",
-  //       link: AssetImageBlog.blog_12_main.src,
-  //     },
-  //     {
-  //       type: "subtitle",
-  //       text: "🛑 ¿Cómo anticiparse como acreedor?",
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       fragments: [
-  //         {
-  //           type: "text",
-  //           text: "Giovanni Medrano explicó que antes de que una empresa llegue a la quiebra, suele haber señales claras:",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "list",
-  //       items: [
-  //         [
-  //           {
-  //             type: "text",
-  //             text: "Morosidades crecientes",
-  //           },
-  //         ],
-  //         [
-  //           {
-  //             type: "text",
-  //             text: "Cambios bruscos en la administración",
-  //           },
-  //         ],
-  //         [
-  //           {
-  //             type: "text",
-  //             text: "Pedidos inusuales de crédito o ampliación de plazos",
-  //           },
-  //         ],
-  //         [
-  //           {
-  //             type: "text",
-  //             text: "Falta de comunicación o transparencia financiera",
-  //           },
-  //         ],
-  //       ],
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       fragments: [
-  //         {
-  //           type: "text",
-  //           text: "Detectar estas señales a tiempo puede marcar la diferencia entre recuperar tu dinero o perderlo completamente.",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "subtitle",
-  //       text: "✅ Recomendaciones clave de Sena para acreedores",
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       fragments: [
-  //         {
-  //           type: "bold",
-  //           text: "1. Prevención desde antes de la venta",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       fragments: [
-  //         {
-  //           type: "text",
-  //           text: "Evalúa la solvencia del cliente, diversifica tu cartera, exige garantías y monitorea el comportamiento de pago.",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       fragments: [
-  //         {
-  //           type: "bold",
-  //           text: "2. Reaccionar ante señales de alerta",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       fragments: [
-  //         {
-  //           type: "text",
-  //           text: "Ajusta las condiciones comerciales a tiempo: solicita pagos anticipados o reduce líneas de crédito.",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       fragments: [
-  //         {
-  //           type: "bold",
-  //           text: "3. Formaliza siempre los acuerdos",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       fragments: [
-  //         {
-  //           type: "text",
-  //           text: "Antes de refinanciar o dar facilidades, asegúrate de comprender la situación del deudor y respáldate legalmente.",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       fragments: [
-  //         {
-  //           type: "bold",
-  //           text: "4. Consulta con expertos",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       fragments: [
-  //         {
-  //           type: "text",
-  //           text: "La asesoría profesional en cobranza puede evitar acuerdos perjudiciales y maximizar tus posibilidades de recuperación.",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "subtitle",
-  //       text: "📰 ¿Quieres leer el artículo completo?",
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       fragments: [
-  //         {
-  //           type: "text",
-  //           text: "Te invitamos a revisar la publicación original en ",
-  //         },
-  //         {
-  //           type: "link",
-  //           text: "Revista Economía",
-  //           href: "https://www.revistaeconomia.com/quiebre-de-empresas-en-peru-como-repercute-en-los-acreedores-y-cadena-completa/",
-  //         },
-  //         {
-  //           type: "text",
-  //           text: ", donde compartimos nuestra visión sobre cómo proteger la salud financiera de tu negocio frente a la quiebra de clientes o aliados estratégicos.",
-  //         },
-  //       ],
-  //     },
-  //   ],
-  // },
   {
     id: 13,
     slug: slug(
@@ -2348,7 +1068,6 @@ export const blogPosts: BlogPost[] = [
     intro:
       "Las pequeñas y medianas empresas (pymes) conforman más del 99% del tejido empresarial del Perú. Sin embargo, siguen siendo las principales víctimas de un problema crónico que rara vez se discute abiertamente: los retrasos en pagos.",
     date: "26 de junio 2025",
-    author: "Fernanda Hurtado",
     tags: ["Prensa"],
     image: AssetImageBlog.blog_13_main.src,
     content: [
@@ -2523,7 +1242,6 @@ export const blogPosts: BlogPost[] = [
     intro:
       "En las empresas B2B, el flujo de caja puede verse afectado incluso cuando las ventas van bien. ¿La razón? La morosidad silenciosa: clientes que postergan pagos, olvidan sus compromisos o simplemente no responden. Y mientras tanto, tu empresa sigue operando con ingresos pendientes que nunca llegan. Este desequilibrio se convierte en un cuello de botella para crecer, invertir y proyectar tu negocio con solidez.",
     date: "22 de julio 2025",
-    author: "Antonella Hernandez",
     tags: ["Blog"],
     image: AssetImageBlog.blog_14_main.src,
     content: [
@@ -2638,7 +1356,6 @@ export const blogPosts: BlogPost[] = [
     intro:
       "En todo negocio B2B existe un momento incómodo que se repite: un cliente no paga a tiempo. Y no hablamos de uno o dos días, sino semanas o incluso meses sin respuesta. El área de ventas se frustra, finanzas pierde visibilidad y dirección comienza a sentir la presión en la caja. Pero, ¿por qué ocurre esto con tanta frecuencia? Y más importante aún: ¿cómo puedes solucionarlo sin desgastar la relación comercial?",
     date: "24 de julio 2025",
-    author: "Fernanda Hurtado",
     tags: ["Blog"],
     image: AssetImageBlog.blog_15_main.src,
     content: [
@@ -2834,7 +1551,6 @@ export const blogPosts: BlogPost[] = [
     intro:
       "En el mundo de los negocios B2B, el éxito no depende únicamente de vender más. Depende de cobrar mejor. Y para lograrlo, el primer paso no está en contratar a un equipo más grande ni en perseguir a los clientes, sino en algo mucho más profundo: educación financiera.",
     date: "01 de agosto 2025",
-    author: "Antonella Hernandez",
     tags: ["Blog"],
     image: AssetImageBlog.blog_16_main.src,
     content: [
@@ -2943,7 +1659,6 @@ export const blogPosts: BlogPost[] = [
     intro:
       "Muchas empresas temen profesionalizar su proceso de cobranza por miedo a “espantar” a sus clientes. La realidad es todo lo contrario: un proceso profesional transmite orden, seriedad y respeto. No hay nada más dañino que perseguir a un cliente sin estructura, sin consistencia y sin tacto. Eso es lo que realmente deteriora relaciones.",
     date: "04 de agosto 2025",
-    author: "Fernanda Hurtado",
     tags: ["Blog"],
     image: AssetImageBlog.blog_17_main.src,
     content: [
@@ -3144,7 +1859,6 @@ export const blogPosts: BlogPost[] = [
     intro:
       "Hiciste el cálculo. Ahora sabes cuánto dinero tienes atrapado en tu cartera vencida. ¿Y ahora qué?\n\nEl mayor error que cometen las empresas con deudas activas no es no saber cuánto les deben —ese paso ya lo diste—, sino **no hacer seguimiento constante, estratégico y profesional para recuperar ese dinero**. No basta con una llamada. No basta con reenviar la factura. Si no hay estructura, el cliente posterga, ignora… y tú sigues perdiendo.",
     date: "07 de agosto 2025",
-    author: "Antonella Hernandez",
     tags: ["Blog"],
     image: AssetImageBlog.blog_18_main.src,
     content: [
@@ -3312,179 +2026,6 @@ export const blogPosts: BlogPost[] = [
       },
     ],
   },
-  // {
-  //   id: 19,
-  //   slug: "descubre-cuanton-dinero-estas-dejando-en-la-mesa-por-no-cobrar-tus-deudas-activas",
-  //   title:
-  //     "¿Sabes cuánto dinero podrías recuperar este mes? Conoce la nueva Calculadora Sena Recupera",
-  //   intro:
-  //     "Si sabes que te deben, pero no sabes cuánto podrías recuperar ni cómo empezar… no estás solo. Muchas empresas enfrentan este mismo escenario: tienen una cartera vencida, saben que hay dinero pendiente, pero no tienen visibilidad, estrategia ni recursos para hacer algo al respecto. Mientras tanto, ese capital sigue estancado, afectando el flujo de caja, frenando inversiones y desgastando al equipo.",
-  //   date: "14 de agosto 2025",
-  //   author: "Antonella Hernandez",
-  //   tags: ["Blog"],
-  //   image: AssetImageBlog.blog_19_main.src,
-  //   content: [
-  //     {
-  //       type: "paragraph",
-  //       fragments: [
-  //         {
-  //           type: "text",
-  //           text: "Si sabes que te deben, pero no sabes cuánto podrías recuperar ni cómo empezar… no estás solo. Muchas empresas enfrentan este mismo escenario: tienen una ",
-  //         },
-  //         {
-  //           type: "bold",
-  //           text: "cartera vencida",
-  //         },
-  //         {
-  //           type: "text",
-  //           text: ", saben que hay dinero pendiente, pero no tienen visibilidad, estrategia ni recursos para hacer algo al respecto. Mientras tanto, ese capital sigue estancado, afectando el flujo de caja, frenando inversiones y desgastando al equipo.",
-  //         },
-  //       ],
-  //     },
-  // {
-  //   type: "paragraph",
-  //   fragments: [
-  //     {
-  //       type: "text",
-  //       text: "Para cambiar esta realidad, creamos la ",
-  //     },
-  //     {
-  //       type: "link",
-  //       text: "Calculadora Sena Recupera",
-  //       href: "https://sena.com/calculadora/steps",
-  //     },
-  //     {
-  //       type: "text",
-  //       text: ": una herramienta gratuita, rápida y precisa que te permite estimar cuánta plata podrías recuperar en el corto plazo. Solo necesitas ingresar dos datos: el total de deuda y el número de clientes morosos. El sistema te dará una proyección clara, basada en métricas reales de recuperación.",
-  //     },
-  //   ],
-  // },
-  //     {
-  //       type: "paragraph",
-  //       fragments: [
-  //         {
-  //           type: "bold",
-  //           text: "¿Por qué es tan importante saber tu potencial de recuperación?",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       fragments: [
-  //         {
-  //           type: "text",
-  //           text: "Porque lo que no se ve, no se gestiona. Si no tienes claridad sobre lo que puedes recuperar, lo más probable es que sigas postergando decisiones importantes: contratar un equipo, tercerizar la cobranza, o simplemente tomar acción. El resultado es el mismo: el tiempo sigue pasando, y la deuda sigue creciendo.",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       fragments: [
-  //         {
-  //           type: "text",
-  //           text: "Con nuestra calculadora, el problema toma forma. Ya no es una sensación, es un número. Y con ese número en la mano, puedes decidir si estás dispuesto a dejarlo ir... o a recuperarlo con ayuda de expertos.",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       fragments: [
-  //         {
-  //           type: "bold",
-  //           text: "¿Y qué pasa si no tienes un equipo de cobranza?",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       fragments: [
-  //         {
-  //           type: "text",
-  //           text: "Ahí entra nuestro servicio ",
-  //         },
-  //         {
-  //           type: "link",
-  //           text: "Recupera Plus",
-  //           href: "",
-  //         },
-  //         {
-  //           type: "text",
-  //           text: ". Está diseñado específicamente para ",
-  //         },
-  //         {
-  //           type: "bold",
-  //           text: "empresas que ya identificaron una deuda activa, pero no cuentan con procesos avanzados ni equipo especializado para cobrar",
-  //         },
-  //         {
-  //           type: "text",
-  //           text: ".",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       fragments: [
-  //         {
-  //           type: "text",
-  //           text: "Con Recupera Plus, Sena se convierte en tu equipo de cobranza externalizado. Aplicamos flujos efectivos de recuperación, sin agredir la relación comercial, con trazabilidad total y comunicaciones éticas. Tú solo tienes que compartir tu cartera vencida y nosotros nos encargamos del resto. Sin contratar personal adicional. Sin implementar herramientas complejas. Sin fricción.",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       fragments: [
-  //         {
-  //           type: "bold",
-  //           text: "Una decisión simple, un impacto directo",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       fragments: [
-  //         {
-  //           type: "text",
-  //           text: "La mayoría de empresas que usan nuestra calculadora descubren que tienen entre ",
-  //         },
-  //         {
-  //           type: "bold",
-  //           text: "S/20,000 y S/80,000 retenidos",
-  //         },
-  //         {
-  //           type: "text",
-  //           text: " que podrían volver a su caja en pocas semanas. Y una vez que toman acción, ese dinero se convierte en inversión, liquidez y crecimiento.",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       fragments: [
-  //         {
-  //           type: "bold",
-  //           text: "¿Cuánto podrías recuperar tú?",
-  //         },
-  //       ],
-  //     },
-  // {
-  //   type: "paragraph",
-  //   fragments: [
-  //     {
-  //       type: "text",
-  //       text: "Haz la prueba ahora con la ",
-  //     },
-  //     {
-  //       type: "link",
-  //       text: "Calculadora Sena Recupera",
-  //       href: "https://sena.com/recuperacion-de-deudas",
-  //     },
-  //     {
-  //       type: "text",
-  //       text: ". Solo te tomará 30 segundos.",
-  //     },
-  //   ],
-  // },
-  //   ],
-  // },
   {
     id: 20,
     slug: "descubre-como-salir-de-infocorp-consultar-tus-deudas-y-limpiar-tu-historial-financiero-para-recuperar-acceso-a-credito",
@@ -3492,7 +2033,6 @@ export const blogPosts: BlogPost[] = [
     intro:
       "Estar en Infocorp representa una de las mayores preocupaciones para personas y pymes que buscan acceder a créditos, financiamiento o cerrar contratos importantes. Un historial negativo puede convertirse en un obstáculo significativo, pero no es permanente. Con los pasos adecuados, es posible salir de Infocorp, limpiar tu historial crediticio y recuperar la confianza financiera. En este artículo explicaremos cómo funciona este sistema, qué acciones tomar y qué alternativas existen para evitar reincidencias.",
     date: "17 de septiembre 2025",
-    author: "Antonella Hernandez",
     tags: ["Blog"],
     image: AssetImageBlog.blog_20_main.src,
     content: [
@@ -4057,7 +2597,6 @@ export const blogPosts: BlogPost[] = [
     intro:
       "El score crediticio se ha convertido en una de las métricas más influyentes a la hora de evaluar la solidez financiera de una empresa. Para una pyme, un puntaje bajo puede significar el cierre de puertas a nuevas oportunidades de crédito, proveedores desconfiados o incluso mayores tasas de interés. Sin embargo, mejorar este indicador no es una tarea imposible. Con disciplina, estrategia y acciones enfocadas, es posible subir el score crediticio de una pyme en tan solo 90 días.",
     date: "19 de septiembre 2025",
-    author: "Antonella Hernandez",
     tags: ["Blog"],
     image: AssetImageBlog.blog_21_main.src,
     content: [
@@ -4444,7 +2983,6 @@ export const blogPosts: BlogPost[] = [
     intro:
       "¿Vale la pena pagar por un software de cobranza? La mejor forma de responder no es con percepciones, sino con datos. En este artículo aprenderás a calcular ROI en solo 15 minutos y a descubrir cómo la automatización de procesos transforma la cobranza en un motor de ahorro y eficiencia.",
     date: "07 de octubre 2025",
-    author: "Antonella Hernandez",
     tags: ["Blog", "Visión Financiera", "Educación Financiera"],
     image: AssetImageBlog.blog_22_main.src,
     content: [
@@ -4713,7 +3251,6 @@ export const blogPosts: BlogPost[] = [
     intro:
       "Muchas pymes todavía dependen de hojas de Excel y recordatorios manuales para gestionar las cuentas por cobrar. Este enfoque no solo consume tiempo, también aumenta el riesgo de errores y afecta el flujo de caja. La buena noticia es que existen soluciones digitales pensadas para automatizar el proceso y mejorar la eficiencia. En este blog revisaremos qué software de cobranza puede ayudarte a salir del Excel, qué funciones debes buscar y cómo Sena se convierte en un aliado estratégico para crecer sin fricciones.",
     date: "09 de octubre 2025",
-    author: "Antonella Hernandez",
     tags: ["Blog", "Producto", "Servicio"],
     image: AssetImageBlog.blog_23_main.src,
     content: [
@@ -5290,7 +3827,6 @@ export const blogPosts: BlogPost[] = [
     intro:
       "Medir la efectividad de la cobranza no significa únicamente revisar cuánto dinero ingresa a caja. Para un CFO o controller, lo que realmente importa es analizar los KPIs de cobranza, es decir, los indicadores que muestran la eficiencia del proceso, anticipan riesgos y permiten justificar decisiones estratégicas ante la gerencia.",
     date: "14 de octubre 2025",
-    author: "Antonella Hernandez",
     tags: ["Blog", "Visión Financiera", "Educación Financiera"],
     image: AssetImageBlog.blog_24_main.src,
     content: [
@@ -5555,7 +4091,6 @@ export const blogPosts: BlogPost[] = [
     intro:
       "Automatizar la cobranza no basta: lo que marca la diferencia es saber qué KPIs automatización cobranza se están cumpliendo. En Sena, el éxito se mide con indicadores concretos que muestran si la empresa cobra más rápido, mejora su flujo de caja y reduce la carga manual del equipo.",
     date: "16 de octubre 2025",
-    author: "Antonella Hernandez",
     tags: ["Blog", "Visión Financiera", "Educación Financiera"],
     image: AssetImageBlog.blog_25_main.src,
     content: [
@@ -5793,7 +4328,6 @@ export const blogPosts: BlogPost[] = [
     intro:
       "El DSO es una de las métricas financieras más influyentes para la salud de cualquier empresa, especialmente en pymes que dependen de un flujo de caja estable para crecer. Si no lo mides, puedes estar perdiendo liquidez sin darte cuenta. En este blog conocerás qué es, cómo calcularlo y las mejores estrategias para reducirlo de forma práctica.",
     date: "21 de octubre 2025",
-    author: "Antonella Hernandez",
     tags: ["Blog", "Cobranza"],
     image: AssetImageBlog.blog_26_main.src,
     content: [
@@ -6336,7 +4870,6 @@ export const blogPosts: BlogPost[] = [
     intro:
       "La gestión de cuentas por cobrar es uno de los grandes retos de cualquier pyme en crecimiento. Mientras algunas empresas confían en un CRM de cobranza, otras dependen de su ERP de cobranza, y muchas ya evalúan migrar hacia un SaaS financiero especializado. Pero, ¿cuál es la mejor opción para asegurar liquidez, automatización y control? En este artículo te mostraremos las diferencias más importantes y cómo elegir el sistema de gestión adecuado.",
     date: "28 de octubre 2025",
-    author: "Antonella Hernandez",
     tags: ["Blog", "Producto", "Servicio"],
     image: AssetImageBlog.blog_27_main.src,
     content: [
@@ -6839,7 +5372,6 @@ export const blogPosts: BlogPost[] = [
     intro:
       "Un ERP de cobranza puede centralizar procesos básicos de facturación y cuentas por cobrar, pero ¿realmente es suficiente para una pyme en crecimiento? Cuando el sistema no ofrece indicadores financieros claros ni herramientas de automatización, es probable que se esté quedando corto. En este blog te compartimos 7 señales para detectar esas limitaciones y cómo una plataforma especializada como Sena puede marcar la diferencia.",
     date: "30 de octubre 2025",
-    author: "Antonella Hernandez",
     tags: ["Blog"],
     image: AssetImageBlog.blog_28_main.src,
     content: [
@@ -7388,7 +5920,6 @@ export const blogPosts: BlogPost[] = [
     intro:
       "Las facturas vencidas son uno de los mayores dolores de cabeza para las pymes. No solo afectan la liquidez, también ponen en riesgo la relación con los clientes. Sin embargo, con un enfoque profesional y herramientas adecuadas, es posible recuperar una factura vencida sin dañar la confianza comercial. En este artículo veremos estrategias prácticas para el cobro de facturas vencidas, cuándo actuar y cómo una plataforma como Sena puede ayudarte a mantener el control.",
     date: "03 de noviembre 2025",
-    author: "Antonella Hernandez",
     tags: ["Producto", "Servicio"],
     image: AssetImageBlog.blog_29_main.src,
     content: [
@@ -7655,7 +6186,6 @@ export const blogPosts: BlogPost[] = [
     intro:
       "Retrasar la cobranza puede parecer un detalle menor, pero los riesgos de no cobrar una deuda se acumulan y terminan poniendo en jaque la estabilidad financiera de cualquier pyme. Con frecuencia, los dueños de negocio piensan que esperar un poco más no traerá consecuencias; sin embargo, lo que realmente ocurre es que el flujo de caja se deteriora, las pérdidas aumentan y las relaciones con los clientes se tensan.",
     date: "05 de noviembre 2025",
-    author: "Antonella Hernandez",
     tags: ["Blog"],
     image: AssetImageBlog.blog_30_main.src,
     content: [

@@ -10,6 +10,7 @@ export type TPlan = {
   variant: "starter" | "growth" | "enterprise";
   popular?: boolean;
   cta: string;
+  onCtaClick?: () => void;
 };
 
 export const PlanCard = ({ plan }: { plan: TPlan }) => {
@@ -59,6 +60,7 @@ export const PlanCard = ({ plan }: { plan: TPlan }) => {
           variant={"primaryFilled"}
           text={plan.cta}
           size="sm"
+          onClick={plan.onCtaClick}
         />
       </div>
 

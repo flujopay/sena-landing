@@ -42,6 +42,10 @@ export const Hero = () => {
     return () => clearTimeout(timer);
   }, [tick, isDeleting]);
 
+  const onRedirectHubspot = () => {
+    window.open("https://meetings.hubspot.com/francisco472", "_blank");
+  };
+
   return (
     <div className="flex flex-col mx-auto max-w-[1280px] px-4 md:px-10 py-10">
       {/* Desktop Layout */}
@@ -75,7 +79,12 @@ export const Hero = () => {
       </div>
 
       <div className="md:flex hidden flex-row items-start gap-2 mt-4">
-        <Button text="Agenda una demo" size="md" className="text-xl" />
+        <Button
+          text="Agenda una demo"
+          size="md"
+          className="text-xl"
+          onClick={onRedirectHubspot}
+        />
         <Button
           text="Ver cómo funciona"
           variant="primaryDarkOutlined"
@@ -128,7 +137,12 @@ export const Hero = () => {
 
         {/* Botones abajo */}
         <div className="flex flex-row items-start gap-2">
-          <Button text="Agenda una demo" size="sm" className="text-xs" />
+          <Button
+            text="Agenda una demo"
+            size="sm"
+            className="text-xs"
+            onClick={onRedirectHubspot}
+          />
           <Button
             text="Ver cómo funciona"
             variant="primaryDarkOutlined"

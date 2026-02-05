@@ -89,7 +89,7 @@ export default async function RootLayout({
           <ModalRenderer />
           <Toast />
           <Whatsapp
-            message="Hola, vi su web y quiero saber más sobre Flujolink y cómo funciona."
+            message="Hola, vi su web y quiero saber más sobre Sena y cómo funciona."
             animated
           />
         </body>

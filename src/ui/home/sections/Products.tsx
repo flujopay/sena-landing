@@ -13,6 +13,7 @@ const ProductCard = ({
   cta,
   image,
   productKey,
+  onCtaClick,
 }: {
   label: string;
   title: string;
@@ -20,6 +21,7 @@ const ProductCard = ({
   cta: string;
   image: StaticImageData;
   productKey: ProductKey;
+  onCtaClick: () => void;
 }) => (
   <div className="rounded-2xl overflow-hidden">
     <p className="font-bold text-xl text-left py-4">{label}</p>
@@ -54,7 +56,7 @@ const ProductCard = ({
     <div className="p-4 bg-white">
       <p className="text-black font-extrabold text-sm">{title}</p>
       <p className="text-slate-700 mt-2 text-sm leading-5">{description}</p>
-      <Button text={cta} className="mt-4" size="sm" />
+      <Button text={cta} className="mt-4" size="sm" onClick={onCtaClick} />
     </div>
   </div>
 );
@@ -70,6 +72,9 @@ export const Products = () => {
           "Organiza facturas, automatiza recordatorios y controla todo tu ciclo de cobranza desde un solo lugar.",
         cta: "Agenda una demo",
         image: AssetImage.autogestion,
+        onCtaClick: () => {
+          window.open("https://meetings.hubspot.com/francisco472", "_blank");
+        },
       },
       {
         key: "recuperacion" as const,
@@ -79,6 +84,7 @@ export const Products = () => {
           "Combina tecnología y un equipo especializado para gestionar casos complejos y mejorar tu tasa de recuperación.",
         cta: "Conoce más",
         image: AssetImage.recuperaGirl,
+        onCtaClick: () => {},
       },
     ],
     [],
@@ -106,6 +112,7 @@ export const Products = () => {
               cta={p.cta}
               image={p.image}
               productKey={p.key}
+              onCtaClick={p.onCtaClick}
             />
           ))}
         </div>
@@ -197,7 +204,7 @@ export const Products = () => {
               <p className="text-slate-700 mt-2 leading-5">
                 {active.description}
               </p>
-              <Button text={active.cta} className="mt-5" />
+              <Button text={active.cta} className="mt-5" onClick={active.onCtaClick} />
             </div>
           </div>
         </div>

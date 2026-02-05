@@ -19,6 +19,10 @@ export const VideoModal: React.FC<VideoModalProps> = ({
   const { hideModal } = useModalStore();
   const [isLoading, setIsLoading] = useState(true);
 
+  const onRedirectHubspot = () => {
+    window.open("https://meetings.hubspot.com/francisco472", "_blank");
+  };
+
   return (
     <div className="w-full h-full flex flex-col gap-8 p-6">
       <div className="flex flex-col gap-2">
@@ -99,7 +103,7 @@ export const VideoModal: React.FC<VideoModalProps> = ({
         <p className="text-[#4B5675] text-md leading-[16px]">
           <span className="font-bold">Sena</span>, el arte de cobrar bien
         </p>
-        <Button text="Agenda tu demo" onClick={() => {}} />
+        <Button text="Agenda tu demo" onClick={onRedirectHubspot} />
       </div>
     </div>
   );

@@ -19,7 +19,7 @@ export interface BlogPost {
   title: string;
   intro: string;
   date: string;
-  author: string;
+  // author: string;
   tags: string[];
   image: string;
   content: BlogContentBlock[];

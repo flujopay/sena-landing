@@ -92,7 +92,7 @@ export const Header = ({ variant }: Props) => {
           <div className="px-6 mt-4">
             <Button
               size="md"
-              text="Habla con ventas"
+              text="Contáctanos"
               variant="primaryFilled"
               className="w-[200px]"
               onClick={() => {
@@ -155,7 +155,7 @@ export const Header = ({ variant }: Props) => {
           />
           <Button
             size="md"
-            text="Habla con ventas"
+            text="Contáctanos"
             variant={
               variant === "primary" ? "primaryFilled" : "secondaryFilled"
             }
@@ -168,7 +168,7 @@ export const Header = ({ variant }: Props) => {
         <div className="lg:hidden flex items-center gap-2">
           <Button
             size="sm"
-            text="Habla con ventas"
+            text="Contáctanos"
             variant="secondaryFilled"
             className="text-xs px-3 py-1.5"
             onClick={() => router.push("/contactanos")}
