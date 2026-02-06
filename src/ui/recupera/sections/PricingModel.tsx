@@ -87,70 +87,19 @@ export const PricingModel = () => {
             </div>
           </div>
 
-          {/* CTA Card */}
-          <div
-            className="rounded-3xl p-8 md:p-12 text-white"
-            style={{
-              background: "linear-gradient(to bottom right, #1e3a5f, #2563eb)",
-            }}
-          >
-            <div className="relative z-10">
-              <div className="text-center mb-8">
-                <p className="text-xl md:text-2xl font-bold mb-2">
-                  ¿Listo para recuperar tu cartera?
-                </p>
-                <p className="text-white/90">
-                  La comisión varía según volumen, antigüedad y complejidad
-                </p>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center">
-                  <div className="text-4xl font-extrabold mb-2">$0</div>
-                  <div className="text-white/80 text-sm">Evaluación</div>
-                </div>
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center">
-                  <div className="text-4xl font-extrabold mb-2">$0</div>
-                  <div className="text-white/80 text-sm">Setup</div>
-                </div>
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center">
-                  <div className="text-4xl font-extrabold mb-2">%</div>
-                  <div className="text-white/80 text-sm">
-                    Solo sobre recuperado
-                  </div>
-                </div>
-              </div>
-
-              <div className="flex flex-wrap justify-center gap-4 mb-8">
-                <div className="flex items-center gap-2">
-                  <CheckCircle className="h-5 w-5" />
-                  <span className="text-sm">Intereses 100% alineados</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle className="h-5 w-5" />
-                  <span className="text-sm">ROI garantizado</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle className="h-5 w-5" />
-                  <span className="text-sm">Transparencia total</span>
-                </div>
-              </div>
-
-              <div className="text-center">
-                <Button
-                  text="Solicita tu Cotización Personalizada"
-                  variant="secondaryFilled"
-                  size="lg"
-                  onClick={scrollToContact}
-                  rightIcon={<ArrowRight className="h-5 w-5" />}
-                />
-                <p className="text-white/70 text-sm mt-4">
-                  La comisión varía según volumen, antigüedad y complejidad.
-                  <br />
-                  Respuesta en 24h.
-                </p>
-              </div>
-            </div>
+          <div className="text-center">
+            <Button
+              text="Solicita tu Cotización Personalizada"
+              variant="secondaryFilled"
+              size="lg"
+              onClick={scrollToContact}
+              rightIcon={<ArrowRight className="h-5 w-5" />}
+            />
+            <p className="italic text-sm mt-4">
+              La comisión varía según volumen, antigüedad y complejidad.
+              <br />
+              Respuesta en 24h.
+            </p>
           </div>
         </div>
       </div>

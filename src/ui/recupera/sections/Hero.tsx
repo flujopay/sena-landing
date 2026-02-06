@@ -25,10 +25,8 @@ export const Hero = () => {
           "linear-gradient(to bottom right, #1e3a5f, #2563eb, #3b82f6)",
       }}
     >
-      <div className="absolute inset-0 bg-[url('/images/flujo-landing/grid-pattern.svg')] opacity-10"></div>
-
-      <div className="max-w-[1280px] mx-auto px-4 py-16 md:py-24 relative z-10">
-        <div className="text-center max-w-4xl mx-auto">
+      <div className="max-w-[1280px] mx-auto px-4 py-16 md:pt-12 md:pb-8 relative z-10">
+        <div className="text-center mx-auto">
           <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
             <span className="text-white font-semibold text-sm">
               Recupera • Powered by Recsa
@@ -65,32 +63,30 @@ export const Hero = () => {
       </div>
 
       {/* Stats Bar - sobresale del Hero hacia la siguiente sección */}
-      <div className="relative z-20 -mb-12 md:-mb-16 pb-4">
-        <div className="max-w-[900px] mx-auto px-4 py-4">
-          <div className="flex bg-white rounded-2xl shadow-xl overflow-hidden">
-            <div className="flex-1 p-4 md:p-8 text-center">
-              <div className="text-xl md:text-4xl font-extrabold text-brand-primary mb-1">
-                +85%
-              </div>
-              <div className="text-slate-600 text-[10px] md:text-sm font-medium">
-                Tasa de recuperación
-              </div>
+      <div className="max-w-[900px] mx-auto px-4 py-4 pb-12">
+        <div className="flex bg-white rounded-2xl shadow-xl overflow-hidden">
+          <div className="flex-1 p-4 md:p-8 text-center">
+            <div className="text-xl md:text-4xl font-extrabold text-brand-primary mb-1">
+              +85%
             </div>
-            <div className="flex-1 p-4 md:p-8 text-center border-l border-r border-slate-200">
-              <div className="text-xl md:text-4xl font-extrabold text-brand-primary mb-1">
-                15 países
-              </div>
-              <div className="text-slate-600 text-[10px] md:text-sm font-medium">
-                Presencia LATAM
-              </div>
+            <div className="text-slate-600 text-[10px] md:text-sm font-medium">
+              Tasa de recuperación
             </div>
-            <div className="flex-1 p-4 md:p-8 text-center">
-              <div className="text-xl md:text-4xl font-extrabold text-brand-primary mb-1">
-                40+ años
-              </div>
-              <div className="text-slate-600 text-[10px] md:text-sm font-medium">
-                Experiencia Recsa
-              </div>
+          </div>
+          <div className="flex-1 p-4 md:p-8 text-center border-l border-r border-slate-200">
+            <div className="text-xl md:text-4xl font-extrabold text-brand-primary mb-1">
+              15 países
+            </div>
+            <div className="text-slate-600 text-[10px] md:text-sm font-medium">
+              Presencia LATAM
+            </div>
+          </div>
+          <div className="flex-1 p-4 md:p-8 text-center">
+            <div className="text-xl md:text-4xl font-extrabold text-brand-primary mb-1">
+              40+ años
+            </div>
+            <div className="text-slate-600 text-[10px] md:text-sm font-medium">
+              Experiencia Recsa
             </div>
           </div>
         </div>

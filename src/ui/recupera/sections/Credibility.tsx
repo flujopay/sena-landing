@@ -1,4 +1,11 @@
-import { Award, Globe, PhoneCall, TrendingUp, Users, Zap } from "lucide-react";
+import {
+  Award,
+  DollarSign,
+  Globe,
+  PhoneCall,
+  TrendingUp,
+  Zap,
+} from "lucide-react";
 
 const stats = [
   {
@@ -22,14 +29,14 @@ const stats = [
     icon: Award,
   },
   {
-    value: "+85%",
-    label: "tasa promedio de recuperación",
-    icon: TrendingUp,
+    value: "$XXM",
+    label: "recuperados mensualmente",
+    icon: DollarSign,
   },
   {
-    value: "1000+",
-    label: "empresas confían en nosotros",
-    icon: Users,
+    value: "XX%",
+    label: "tasa promedio de recuperación",
+    icon: TrendingUp,
   },
 ];
 

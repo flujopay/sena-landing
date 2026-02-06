@@ -40,7 +40,9 @@ export const Testimonials = () => {
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star
                       key={i}
-                      className="h-5 w-5 fill-brand-primary text-brand-primary"
+                      className="h-5 w-5 "
+                      fill="currentColor"
+                      color="text-yellow-400"
                     />
                   ))}
                 </div>
