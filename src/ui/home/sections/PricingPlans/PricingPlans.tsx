@@ -21,6 +21,9 @@ export const PricingPlans = () => {
       ],
       variant: "starter",
       cta: "Contrata ahora",
+      onCtaClick: () => {
+        window.open("https://app.flujolink.com/signup?origin=main", "_blank");
+      },
     },
     {
       name: "Plan Growth",
