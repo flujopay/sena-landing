@@ -257,6 +257,29 @@ export const HowItWorks = () => {
                   <p className="mt-2 text-black/95 leading-6 max-w-md">
                     {active.description}
                   </p>
+                  {activeKey === "Recupera" && (
+                    <a
+                      href="/recupera"
+                      className="mt-4 inline-flex items-center gap-2 bg-brand-secondary hover:bg-brand-secondary-dark text-white font-bold px-6 py-3 rounded-full transition-colors w-fit"
+                    >
+                      Conocer más sobre Recupera
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M5 12H19M19 12L12 5M19 12L12 19"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </a>
+                  )}
                 </div>
               </div>
             </div>
