@@ -19,11 +19,7 @@ export const Hero = () => {
 
   return (
     <div
-      className="relative overflow-hidden"
-      style={{
-        background:
-          "linear-gradient(to bottom right, #1e3a5f, #2563eb, #3b82f6)",
-      }}
+      className="relative overflow-hidden hover:shadow-xl transition-all hover:cursor-pointer  gap-6 bg-linear-to-br from-brand-primary to-brand-primary-dark p-6"
     >
       <div className="max-w-[1280px] mx-auto px-4 py-16 md:pt-12 md:pb-8 relative z-10">
         <div className="text-center mx-auto">

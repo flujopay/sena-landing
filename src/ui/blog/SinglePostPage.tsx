@@ -5,9 +5,11 @@ import { BlogPost } from "@/lib/types/blog";
 import { ArrowLeft, Calendar } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { Footer } from "../layout/Footer";
 import { Header } from "../layout/Header";
+import Button from "../shared/Button";
 
 const renderContentBlock = (block: any, index: number) => {
   switch (block.type) {
@@ -121,6 +123,7 @@ const renderContentBlock = (block: any, index: number) => {
 
 export const SinglePostPage = ({ post }: { post: BlogPost }) => {
   const [email, setEmail] = useState("");
+  const router = useRouter();
 
   const relatedPosts = blogPosts
     .filter(
@@ -150,12 +153,12 @@ export const SinglePostPage = ({ post }: { post: BlogPost }) => {
             {post.tags.map((tag, idx) => (
               <span
                 key={idx}
-                className="flex items-center w-fit text-xs font-bold text-brand-primary bg-brand-secondary rounded-full px-3 pt-1.5 pb-1"
+                className="flex items-center w-fit text-xs font-medium text-white bg-brand-secondary rounded-full px-3 pt-1.5 pb-1"
               >
                 {tag}
               </span>
             ))}
-            <span>|</span>
+            {/* <span>|</span> */}
             {/* <span>{post.author}</span> */}
             <span>|</span>
             <Calendar className="w-4 h-4" />
@@ -175,7 +178,7 @@ export const SinglePostPage = ({ post }: { post: BlogPost }) => {
         </div>
 
         {/* Contenido */}
-        <div className="max-w-[900px] mx-auto text-[17px] leading-relaxed text-gray-800 space-y-6">
+        <div className="max-w-[900px] mx-auto text-[17px] leading-relaxed text-slate-700 space-y-6">
           {post.content.map((block, index) => renderContentBlock(block, index))}
         </div>
 
@@ -196,9 +199,12 @@ export const SinglePostPage = ({ post }: { post: BlogPost }) => {
               onChange={(e) => setEmail(e.target.value)}
               className="px-4 pt-2.5 pb-2 border border-gray-300 rounded-full w-full sm:w-[300px]"
             />
-            <button className="bg-brand-primary text-white font-bold px-6 py-2 rounded-full hover:bg-brand-primary-dark transition">
-              Suscribirme
-            </button>
+            <Button
+              size="md"
+              text="Suscribirme"
+              variant={"primaryFilled"}
+              className="text-md"
+            />
           </div>
         </div>
 
@@ -227,7 +233,7 @@ export const SinglePostPage = ({ post }: { post: BlogPost }) => {
                       {rel.tags.map((tag, idx) => (
                         <span
                           key={idx}
-                          className="flex items-center w-fit text-xs font-bold text-brand-primary bg-brand-secondary rounded-full px-3 pt-1.5 pb-1"
+                          className="flex items-center w-fit text-xs font-medium text-white bg-brand-secondary-light rounded-full px-3 pt-1.5 pb-1"
                         >
                           {tag}
                         </span>
@@ -244,13 +250,14 @@ export const SinglePostPage = ({ post }: { post: BlogPost }) => {
           </div>
         )}
 
-        <div className="w-full max-w-[900px] mx-auto">
-          <Link
-            href="/blog"
-            className="hover:scale-105 transition-all hover:cursor-pointer px-4 py-1 max-w-[900px] text-lg font-bold bg-brand-secondary rounded-full w-fit text-brand-primary flex gap-1 items-center mt-12"
-          >
-            <ArrowLeft className="w-4 h-4" strokeWidth={3} /> Regresar al Blog
-          </Link>
+        <div className="w-full max-w-[900px] mx-auto py-12">
+          <Button
+            size="md"
+            text="Regresar al Blog"
+            variant={"primaryFilled"}
+            className="text-md"
+            onClick={() => router.push("/blog")}
+          />
         </div>
       </section>
       <Footer />

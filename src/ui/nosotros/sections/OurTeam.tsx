@@ -27,6 +27,7 @@ const teamMembers: TeamMember[] = [
   {
     name: "RENILDO CHAVEZ",
     role: "Full Stack Developer",
+    image: AssetUsImage.renildo.src,
   },
   {
     name: "DIEGO MATEO",

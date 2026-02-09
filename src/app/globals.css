@@ -10,9 +10,10 @@
   --color-brand-primary-dark: #1e2c50;
 
   --color-brand-secondary: #f6793a;
-  --color-brand-secondary-light: #f6793a;
+  --color-brand-secondary-light: #f79243;
   --color-brand-secondary-dark: #f6793a;
 }
+
 .btn-floating-whatsapp {
   width: 60px;
   height: 60px;

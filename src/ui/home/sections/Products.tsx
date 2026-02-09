@@ -36,7 +36,7 @@ const ProductCard = ({
                 className="w-full h-full object-cover object-top"
               />
             </div>
-            <div className="absolute bottom-2 right-0 w-28 h-24 rounded-lg overflow-hidden shadow-xl border-2 border-white">
+            <div className="absolute bottom-0 right-0 w-16 h-[80%] rounded-lg overflow-hidden shadow-xl border-2 border-white">
               <Image
                 src={AssetImage.conciliatorNavbar}
                 alt="Dashboard"
@@ -204,7 +204,11 @@ export const Products = () => {
               <p className="text-slate-700 mt-2 leading-5">
                 {active.description}
               </p>
-              <Button text={active.cta} className="mt-5" onClick={active.onCtaClick} />
+              <Button
+                text={active.cta}
+                className="mt-5"
+                onClick={active.onCtaClick}
+              />
             </div>
           </div>
         </div>

@@ -45,7 +45,7 @@ export const HowItWorks = () => {
   return (
     <div
       id="como-funciona"
-      className="bg-[#F9F9F9] pt-16 md:pt-28 pb-12 md:pb-20"
+      className="bg-[#F9F9F9]  pb-12 md:pb-20"
     >
       <div className="max-w-[1280px] mx-auto px-4">
         <div className="text-center py-12">

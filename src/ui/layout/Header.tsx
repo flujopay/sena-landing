@@ -26,16 +26,15 @@ export const Header = ({ variant }: Props) => {
     { id: 1, name: "Productos", href: "#productos", type: "scroll" as const },
     { id: 2, name: "Precios", href: "#precios", type: "scroll" as const },
     { id: 3, name: "Nosotros", href: "/nosotros", type: "redirect" as const },
-    { id: 4, name: "Blog", href: "/blog", type: "redirect" as const },
+    { id: 4, name: "Recupera", href: "/recupera", type: "redirect" as const },
+    { id: 5, name: "Blog", href: "/blog", type: "redirect" as const },
   ];
 
   const isActive = (href: string) => pathname === href;
 
   const getActiveClass = (href: string) => {
     if (!isActive(href)) return "";
-    return variant === "primary"
-      ? "underline decoration-brand-secondary !text-brand-primary underline-offset-4"
-      : "underline decoration-brand-secondary !text-brand-primary underline-offset-4";
+    return "inline-block border-b-2 border-brand-secondary !text-brand-primary pb-[2px]";
   };
 
   const handleNavClick = (section: (typeof sectiosnNavbar)[0]) => {
@@ -78,11 +77,13 @@ export const Header = ({ variant }: Props) => {
               <button
                 key={section.id}
                 onClick={() => handleNavClick(section)}
-                className="py-4 border-b border-gray-100 text-left cursor-pointer"
+                className={`${
+                  variant === "primary"
+                    ? "text-brand-primary-dark"
+                    : "text-blue-500"
+                } font-semibold cursor-pointer`}
               >
-                <span
-                  className={`text-lg font-bold text-black ${getActiveClass(section.href)}`}
-                >
+                <span className={getActiveClass(section.href)}>
                   {section.name}
                 </span>
               </button>

@@ -1,6 +1,7 @@
 "use client";
 
 import { BlogPost } from "@/lib/types/blog";
+import Button from "@/ui/shared/Button";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -24,12 +25,12 @@ export const BlogContent = ({ featuredPost, otherPosts }: BlogContentProps) => {
 
   return (
     <section className="py-12 md:py-16 px-4 md:px-12">
-      <h1 className="text-4xl md:text-6xl font-extrabold text-brand-primary mb-4">
+      <h1 className="text-4xl md:text-6xl font-extrabold text-brand-primary-dark mb-4">
         Blog
       </h1>
-      <div className="inline-block bg-[#00D9A3] rounded-full px-6 py-2 mb-12">
+      <div className="inline-block bg-brand-secondary-light rounded-full px-6 py-2 mb-12">
         <p className="text-white font-bold text-lg md:text-xl">
-          últimas novedades
+          Últimas novedades
         </p>
       </div>
 
@@ -44,7 +45,7 @@ export const BlogContent = ({ featuredPost, otherPosts }: BlogContentProps) => {
               {featuredPost.tags.map((tag, idx) => (
                 <span
                   key={idx}
-                  className="flex items-center w-fit text-xs font-bold text-brand-primary bg-[#00D9A3] rounded-full px-3 py-1.5"
+                  className="flex items-center w-fit text-xs font-bold text-white bg-brand-secondary-light rounded-full px-3 py-1.5"
                 >
                   {tag}
                 </span>
@@ -53,7 +54,7 @@ export const BlogContent = ({ featuredPost, otherPosts }: BlogContentProps) => {
 
             <div className="flex items-center gap-2 text-gray-200 text-sm mb-4">
               {/* <p className="font-medium">{featuredPost.author}</p> */}
-              <span>|</span>
+              {/* <span>|</span> */}
               <svg
                 width="16"
                 height="16"
@@ -149,7 +150,7 @@ export const BlogContent = ({ featuredPost, otherPosts }: BlogContentProps) => {
               {post.tags.map((tag, idx) => (
                 <span
                   key={idx}
-                  className="flex items-center w-fit text-xs font-bold text-brand-primary bg-[#00D9A3] rounded-full px-3 py-1.5"
+                  className="flex items-center w-fit text-xs font-medium text-white bg-brand-secondary-light rounded-full px-3 py-1.5"
                 >
                   {tag}
                 </span>
@@ -163,7 +164,7 @@ export const BlogContent = ({ featuredPost, otherPosts }: BlogContentProps) => {
             <h3 className="text-xl font-extrabold text-brand-primary mb-2">
               {post.title}
             </h3>
-            <p className="text-sm text-gray-700 leading-relaxed">
+            <p className="text-sm text-slate-700  leading-relaxed">
               {post.intro}
             </p>
           </a>
@@ -172,12 +173,14 @@ export const BlogContent = ({ featuredPost, otherPosts }: BlogContentProps) => {
 
       {visibleCount < filteredPosts.length && (
         <div className="flex justify-center mt-12">
-          <button
+          <Button
+            size="lg"
+            text="Cargar más"
+            variant={"primaryFilled"}
+            className="text-lg"
             onClick={handleLoadMore}
-            className="bg-brand-primary cursor-pointer text-white font-bold px-8 py-3 rounded-full hover:bg-brand-primary-dark transition-colors"
-          >
-            Cargar más
-          </button>
+          />
+        
         </div>
       )}
     </section>
