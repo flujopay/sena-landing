@@ -9,6 +9,7 @@ export type ContactFormRequest = {
   representaEmpresa?: string;
   nombreEmpresa?: string;
   mensaje: string;
+  howFound: string
   utmSource?: string;
   utmMedium?: string;
   utmCampaign?: string;
