@@ -5,128 +5,128 @@ import { parseSpanishDate, slug } from "../utils/blog";
 export const featuredPostId = 1;
 
 export const blogPosts: BlogPost[] = [
-  {
-    id: 4,
-    slug: slug(
-      "omnicanalidad e inteligencia artificial para optimizar tu cobranza",
-    ),
-    title:
-      "Cómo Sena combina omnicanalidad e inteligencia artificial para optimizar tu cobranza",
-    intro:
-      "Gestionar cuentas por cobrar no tiene por qué ser una tarea lenta ni desgastante. Con Sena, las empresas pueden reducir la morosidad y mejorar su flujo de caja usando herramientas que combinan automatización, contacto inteligente y tecnología de vanguardia. ",
-    date: "20 de marzo 2025",
-    tags: ["Sena", "IA"],
-    image:
-      "https://lh7-rt.googleusercontent.com/docsz/AD_4nXcp5aWPPhubM2pDplaKNFiNYuvmmg9kzjXOSUp7OsvqX577TfFJPQ9K7U-Q4iQVjtm2bS6csBdUAJJOhrD4fO7KUeUEL5TZC9klvgQ5_kQQE9uzqYHNPj2CgzsvINDGQeW_bzzEWQ?key=Z63nbao0Z_MUHrbOnmsjiw",
-    content: [
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "text",
-            text: "Gestionar cuentas por cobrar no tiene por qué ser una tarea lenta ni desgastante. Con Sena, las empresas pueden reducir la morosidad y mejorar su flujo de caja usando herramientas que combinan automatización, contacto inteligente y tecnología de vanguardia.",
-          },
-        ],
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "text",
-            text: "No se trata solo de enviar recordatorios. Se trata de hacerlo bien. ",
-          },
-        ],
-      },
-      { type: "title", text: "¿Qué hace diferente a Sena? " },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "text",
-            text: "Sena es mucho más que un ",
-          },
-          {
-            type: "bold",
-            text: "software contable. ",
-          },
-          {
-            type: "text",
-            text: "Es un ",
-          },
-          {
-            type: "link",
-            text: "software para empresas ",
-            href: "",
-          },
-          {
-            type: "text",
-            text: "que conecta tus sistemas de facturación, tus canales de comunicación y tus equipos de finanzas en un solo lugar. Todo, sin fricciones. ",
-          },
-        ],
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "text",
-            text: "Gracias a su enfoque omnicanal, puedes contactar a tus clientes vía correo, WhatsApp, SMS o incluso desde un ",
-          },
-          {
-            type: "bold",
-            text: "CRM ",
-          },
-          {
-            type: "text",
-            text: "integrado, dependiendo de cómo prefieran comunicarse. Así, los recordatorios de pago dejan de ser correos perdidos y se convierten en conversaciones reales. ",
-          },
-        ],
-      },
-      {
-        type: "title",
-        text: "IA aplicada a la cobranza (sin complicarte la vida) ",
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "text",
-            text: "Sena utiliza ",
-          },
-          {
-            type: "bold",
-            text: " inteligencia artificial ",
-          },
-          {
-            type: "text",
-            text: "para analizar patrones de pago y ayudarte a definir el mejor tipo de contacto para cada cliente. No necesitas ser técnico: solo verás sugerencias claras que aumentan la probabilidad de cobro sin afectar la relación comercial. ",
-          },
-        ],
-      },
-      {
-        type: "quote",
-        text: "“Muchas veces el problema no es el cliente, sino el canal. Sena adapta el mensaje y la vía según el comportamiento de cada pagador”, explica Sebastián Gajardo, Product Manager de Sena.",
-      },
-      { type: "title", text: "Integración real con tu operación " },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "text",
-            text: "¿Ya usas un ERP o un sistema de facturación? No hay problema. Sena se conecta fácilmente con tus herramientas actuales, transformándose en un software de gestión que potencia tus procesos sin exigir que cambies lo que ya funciona. ",
-          },
-        ],
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "bold",
-            text: "¿El resultado? Menos correos sin respuesta, más pagos realizados y un equipo financiero con más tiempo para lo importante. ",
-          },
-        ],
-      },
-    ],
-  },
+  // {
+  //   id: 4,
+  //   slug: slug(
+  //     "omnicanalidad e inteligencia artificial para optimizar tu cobranza",
+  //   ),
+  //   title:
+  //     "Cómo Sena combina omnicanalidad e inteligencia artificial para optimizar tu cobranza",
+  //   intro:
+  //     "Gestionar cuentas por cobrar no tiene por qué ser una tarea lenta ni desgastante. Con Sena, las empresas pueden reducir la morosidad y mejorar su flujo de caja usando herramientas que combinan automatización, contacto inteligente y tecnología de vanguardia. ",
+  //   date: "20 de marzo 2025",
+  //   tags: ["Sena", "IA"],
+  //   image:
+  //     "https://lh7-rt.googleusercontent.com/docsz/AD_4nXcp5aWPPhubM2pDplaKNFiNYuvmmg9kzjXOSUp7OsvqX577TfFJPQ9K7U-Q4iQVjtm2bS6csBdUAJJOhrD4fO7KUeUEL5TZC9klvgQ5_kQQE9uzqYHNPj2CgzsvINDGQeW_bzzEWQ?key=Z63nbao0Z_MUHrbOnmsjiw",
+  //   content: [
+  //     {
+  //       type: "paragraph",
+  //       fragments: [
+  //         {
+  //           type: "text",
+  //           text: "Gestionar cuentas por cobrar no tiene por qué ser una tarea lenta ni desgastante. Con Sena, las empresas pueden reducir la morosidad y mejorar su flujo de caja usando herramientas que combinan automatización, contacto inteligente y tecnología de vanguardia.",
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       fragments: [
+  //         {
+  //           type: "text",
+  //           text: "No se trata solo de enviar recordatorios. Se trata de hacerlo bien. ",
+  //         },
+  //       ],
+  //     },
+  //     { type: "title", text: "¿Qué hace diferente a Sena? " },
+  //     {
+  //       type: "paragraph",
+  //       fragments: [
+  //         {
+  //           type: "text",
+  //           text: "Sena es mucho más que un ",
+  //         },
+  //         {
+  //           type: "bold",
+  //           text: "software contable. ",
+  //         },
+  //         {
+  //           type: "text",
+  //           text: "Es un ",
+  //         },
+  //         {
+  //           type: "link",
+  //           text: "software para empresas ",
+  //           href: "",
+  //         },
+  //         {
+  //           type: "text",
+  //           text: "que conecta tus sistemas de facturación, tus canales de comunicación y tus equipos de finanzas en un solo lugar. Todo, sin fricciones. ",
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       fragments: [
+  //         {
+  //           type: "text",
+  //           text: "Gracias a su enfoque omnicanal, puedes contactar a tus clientes vía correo, WhatsApp, SMS o incluso desde un ",
+  //         },
+  //         {
+  //           type: "bold",
+  //           text: "CRM ",
+  //         },
+  //         {
+  //           type: "text",
+  //           text: "integrado, dependiendo de cómo prefieran comunicarse. Así, los recordatorios de pago dejan de ser correos perdidos y se convierten en conversaciones reales. ",
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       type: "title",
+  //       text: "IA aplicada a la cobranza (sin complicarte la vida) ",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       fragments: [
+  //         {
+  //           type: "text",
+  //           text: "Sena utiliza ",
+  //         },
+  //         {
+  //           type: "bold",
+  //           text: " inteligencia artificial ",
+  //         },
+  //         {
+  //           type: "text",
+  //           text: "para analizar patrones de pago y ayudarte a definir el mejor tipo de contacto para cada cliente. No necesitas ser técnico: solo verás sugerencias claras que aumentan la probabilidad de cobro sin afectar la relación comercial. ",
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       type: "quote",
+  //       text: "“Muchas veces el problema no es el cliente, sino el canal. Sena adapta el mensaje y la vía según el comportamiento de cada pagador”, explica Sebastián Gajardo, Product Manager de Sena.",
+  //     },
+  //     { type: "title", text: "Integración real con tu operación " },
+  //     {
+  //       type: "paragraph",
+  //       fragments: [
+  //         {
+  //           type: "text",
+  //           text: "¿Ya usas un ERP o un sistema de facturación? No hay problema. Sena se conecta fácilmente con tus herramientas actuales, transformándose en un software de gestión que potencia tus procesos sin exigir que cambies lo que ya funciona. ",
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       fragments: [
+  //         {
+  //           type: "bold",
+  //           text: "¿El resultado? Menos correos sin respuesta, más pagos realizados y un equipo financiero con más tiempo para lo importante. ",
+  //         },
+  //       ],
+  //     },
+  //   ],
+  // },
   {
     id: 5,
     slug: slug(

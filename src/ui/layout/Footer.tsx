@@ -15,16 +15,16 @@ export const Footer = () => {
   const pathname = usePathname();
 
   const handleNavClick = (type: string, route: string) => {
-    if (type === "scroll") {
+    if (type === "external") {
+      window.location.href = route;
+    } else if (type === "scroll") {
       const sectionId = route.replace("#", "");
-      if (pathname === "/") {
-        const element = document.getElementById(sectionId);
-        if (element) {
-          const top = element.offsetTop;
-          window.scrollTo({ top, behavior: "smooth" });
-        }
-      } else {
-        window.location.href = `/#${sectionId}`;
+      const element = document.getElementById(sectionId);
+      if (element) {
+        const offset = 72;
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - offset;
+        window.scrollTo({ top: offsetPosition, behavior: "smooth" });
       }
     } else if (type === "redirect") {
       router.push(route);
@@ -67,16 +67,40 @@ export const Footer = () => {
 
         {/* Social Icons - Mobile (after newsletter) */}
         <div className="md:hidden flex gap-5 mb-8">
-          <a href={SOCIAL_LINKS.facebook} target="_blank" rel="noopener noreferrer" className="hover:text-[#f6793a] transition-colors duration-200" aria-label="Facebook">
+          <a
+            href={SOCIAL_LINKS.facebook}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-[#f6793a] transition-colors duration-200"
+            aria-label="Facebook"
+          >
             <AssetIcon.facebook width={22} height={22} />
           </a>
-          <a href={SOCIAL_LINKS.instagram} target="_blank" rel="noopener noreferrer" className="hover:text-blue-500 transition-colors duration-200" aria-label="Instagram">
+          <a
+            href={SOCIAL_LINKS.instagram}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-blue-500 transition-colors duration-200"
+            aria-label="Instagram"
+          >
             <AssetIcon.instagram width={22} height={22} />
           </a>
-          <a href={SOCIAL_LINKS.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-blue-500 transition-colors duration-200" aria-label="LinkedIn">
+          <a
+            href={SOCIAL_LINKS.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-blue-500 transition-colors duration-200"
+            aria-label="LinkedIn"
+          >
             <AssetIcon.linkedin width={22} height={22} />
           </a>
-          <a href={SOCIAL_LINKS.youtube} target="_blank" rel="noopener noreferrer" className="hover:text-blue-500 transition-colors duration-200" aria-label="YouTube">
+          <a
+            href={SOCIAL_LINKS.youtube}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-blue-500 transition-colors duration-200"
+            aria-label="YouTube"
+          >
             <AssetIcon.youtube width={22} height={22} />
           </a>
         </div>
@@ -84,15 +108,23 @@ export const Footer = () => {
         {/* Mobile: Single column sections */}
         <div className="md:hidden flex flex-col gap-8 mb-8">
           <div className="space-y-3">
-            <h3 className="font-bold text-xs uppercase tracking-wide">CONTACTO</h3>
+            <h3 className="font-bold text-xs uppercase tracking-wide">
+              CONTACTO
+            </h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href={`mailto:${CONTACT_INFO.email}`} className="hover:text-blue-300 transition-colors duration-200">
+                <a
+                  href={`mailto:${CONTACT_INFO.email}`}
+                  className="hover:text-blue-300 transition-colors duration-200"
+                >
                   {CONTACT_INFO.email}
                 </a>
               </li>
               <li>
-                <a href={`tel:${CONTACT_INFO.phone}`} className="hover:text-blue-300 transition-colors duration-200">
+                <a
+                  href={`tel:${CONTACT_INFO.phone}`}
+                  className="hover:text-blue-300 transition-colors duration-200"
+                >
                   {CONTACT_INFO.phone}
                 </a>
               </li>
@@ -100,14 +132,18 @@ export const Footer = () => {
           </div>
 
           <div className="space-y-3">
-            <h3 className="font-bold text-xs uppercase tracking-wide">EMPRESA</h3>
+            <h3 className="font-bold text-xs uppercase tracking-wide">
+              EMPRESA
+            </h3>
             <ul className="space-y-2 text-sm">
               {FOOTER_EMPRESA.map((item) => (
                 <li key={item.label}>
                   <button
                     disabled={item.disabled}
-                    onClick={() => !item.disabled && handleNavClick(item.type, item.href)}
-                    className={`${item.disabled ? '' : 'hover:text-blue-300 cursor-pointer'} transition-colors duration-200`}
+                    onClick={() =>
+                      !item.disabled && handleNavClick(item.type, item.href)
+                    }
+                    className={`${item.disabled ? "" : "hover:text-blue-300 cursor-pointer"} transition-colors duration-200`}
                   >
                     {item.label}
                   </button>
@@ -117,14 +153,18 @@ export const Footer = () => {
           </div>
 
           <div className="space-y-3">
-            <h3 className="font-bold text-xs uppercase tracking-wide">DESCUBRIR</h3>
+            <h3 className="font-bold text-xs uppercase tracking-wide">
+              DESCUBRIR
+            </h3>
             <ul className="space-y-2 text-sm">
               {FOOTER_DESCUBRIR.map((item) => (
                 <li key={item.label}>
                   <button
                     disabled={item.disabled}
-                    onClick={() => !item.disabled && handleNavClick(item.type, item.href)}
-                    className={`${item.disabled ? '' : 'hover:text-blue-300 cursor-pointer'} transition-colors duration-200`}
+                    onClick={() =>
+                      !item.disabled && handleNavClick(item.type, item.href)
+                    }
+                    className={`${item.disabled ? "" : "hover:text-blue-300 cursor-pointer"} transition-colors duration-200`}
                   >
                     {item.label}
                   </button>
@@ -140,8 +180,10 @@ export const Footer = () => {
                 <li key={item.label}>
                   <button
                     disabled={item.disabled}
-                    onClick={() => !item.disabled && handleNavClick(item.type, item.href)}
-                    className={`${item.disabled ? '' : 'hover:text-blue-300 cursor-pointer'} transition-colors duration-200`}
+                    onClick={() =>
+                      !item.disabled && handleNavClick(item.type, item.href)
+                    }
+                    className={`${item.disabled ? "" : "hover:text-blue-300 cursor-pointer"} transition-colors duration-200`}
                   >
                     {item.label}
                   </button>
@@ -162,14 +204,18 @@ export const Footer = () => {
         {/* Desktop layout */}
         <div className="hidden md:grid grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-6 mb-8">
           <div className="space-y-3">
-            <h3 className="font-bold text-sm mb-4 uppercase tracking-wide">EMPRESA</h3>
+            <h3 className="font-bold text-sm mb-4 uppercase tracking-wide">
+              EMPRESA
+            </h3>
             <ul className="space-y-3 text-base">
               {FOOTER_EMPRESA.map((item) => (
                 <li key={item.label}>
                   <button
                     disabled={item.disabled}
-                    onClick={() => !item.disabled && handleNavClick(item.type, item.href)}
-                    className={`${item.disabled ? '' : 'hover:text-blue-500 cursor-pointer'} transition-colors duration-200`}
+                    onClick={() =>
+                      !item.disabled && handleNavClick(item.type, item.href)
+                    }
+                    className={`${item.disabled ? "" : "hover:text-blue-500 cursor-pointer"} transition-colors duration-200`}
                   >
                     {item.label}
                   </button>
@@ -179,14 +225,18 @@ export const Footer = () => {
           </div>
 
           <div className="space-y-3">
-            <h3 className="font-bold text-sm mb-4 uppercase tracking-wide">DESCUBRIR</h3>
+            <h3 className="font-bold text-sm mb-4 uppercase tracking-wide">
+              DESCUBRIR
+            </h3>
             <ul className="space-y-3 text-base">
               {FOOTER_DESCUBRIR.map((item) => (
                 <li key={item.label}>
                   <button
                     disabled={item.disabled}
-                    onClick={() => !item.disabled && handleNavClick(item.type, item.href)}
-                    className={`${item.disabled ? '' : 'hover:text-blue-500 cursor-pointer'} transition-colors duration-200`}
+                    onClick={() =>
+                      !item.disabled && handleNavClick(item.type, item.href)
+                    }
+                    className={`${item.disabled ? "" : "hover:text-blue-500 cursor-pointer"} transition-colors duration-200`}
                   >
                     {item.label}
                   </button>
@@ -196,15 +246,23 @@ export const Footer = () => {
           </div>
 
           <div className="space-y-3">
-            <h3 className="font-bold text-sm mb-4 uppercase tracking-wide">CONTACTO</h3>
+            <h3 className="font-bold text-sm mb-4 uppercase tracking-wide">
+              CONTACTO
+            </h3>
             <ul className="space-y-3 text-base">
               <li>
-                <a href={`mailto:${CONTACT_INFO.email}`} className="hover:text-blue-500 transition-colors duration-200 break-all">
+                <a
+                  href={`mailto:${CONTACT_INFO.email}`}
+                  className="hover:text-blue-500 transition-colors duration-200 break-all"
+                >
                   {CONTACT_INFO.email}
                 </a>
               </li>
               <li>
-                <a href={`tel:${CONTACT_INFO.phone}`} className="hover:text-blue-500 transition-colors duration-200">
+                <a
+                  href={`tel:${CONTACT_INFO.phone}`}
+                  className="hover:text-blue-500 transition-colors duration-200"
+                >
                   {CONTACT_INFO.phone}
                 </a>
               </li>
@@ -212,14 +270,18 @@ export const Footer = () => {
           </div>
 
           <div className="space-y-3">
-            <h3 className="font-bold text-sm mb-4 uppercase tracking-wide">LEGAL</h3>
+            <h3 className="font-bold text-sm mb-4 uppercase tracking-wide">
+              LEGAL
+            </h3>
             <ul className="space-y-3 text-base">
               {FOOTER_LEGAL.map((item) => (
                 <li key={item.label}>
                   <button
                     disabled={item.disabled}
-                    onClick={() => !item.disabled && handleNavClick(item.type, item.href)}
-                    className={`${item.disabled ? '' : 'hover:text-blue-500 cursor-pointer'} transition-colors duration-200`}
+                    onClick={() =>
+                      !item.disabled && handleNavClick(item.type, item.href)
+                    }
+                    className={`${item.disabled ? "" : "hover:text-blue-500 cursor-pointer"} transition-colors duration-200`}
                   >
                     {item.label}
                   </button>
@@ -254,21 +316,43 @@ export const Footer = () => {
 
         {/* Desktop: Bottom bar */}
         <div className="hidden md:flex flex-row justify-between items-center pt-8 gap-4">
-          <p className="text-sm">
-            © SENA SE 2026
-          </p>
+          <p className="text-sm">© SENA SE 2026</p>
 
           <div className="flex gap-6">
-            <a href={SOCIAL_LINKS.facebook} target="_blank" rel="noopener noreferrer" className="hover:text-[#f6793a] transition-colors duration-200" aria-label="Facebook">
+            <a
+              href={SOCIAL_LINKS.facebook}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-[#f6793a] transition-colors duration-200"
+              aria-label="Facebook"
+            >
               <AssetIcon.facebook width={22} height={22} />
             </a>
-            <a href={SOCIAL_LINKS.instagram} target="_blank" rel="noopener noreferrer" className="hover:text-blue-500 transition-colors duration-200" aria-label="Instagram">
+            <a
+              href={SOCIAL_LINKS.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-blue-500 transition-colors duration-200"
+              aria-label="Instagram"
+            >
               <AssetIcon.instagram width={22} height={22} />
             </a>
-            <a href={SOCIAL_LINKS.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-blue-500 transition-colors duration-200" aria-label="LinkedIn">
+            <a
+              href={SOCIAL_LINKS.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-blue-500 transition-colors duration-200"
+              aria-label="LinkedIn"
+            >
               <AssetIcon.linkedin width={22} height={22} />
             </a>
-            <a href={SOCIAL_LINKS.youtube} target="_blank" rel="noopener noreferrer" className="hover:text-blue-500 transition-colors duration-200" aria-label="YouTube">
+            <a
+              href={SOCIAL_LINKS.youtube}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-blue-500 transition-colors duration-200"
+              aria-label="YouTube"
+            >
               <AssetIcon.youtube width={22} height={22} />
             </a>
           </div>
