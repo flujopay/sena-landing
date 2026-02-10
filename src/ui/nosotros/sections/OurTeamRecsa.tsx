@@ -19,7 +19,7 @@ export const OurTeamRecsa = () => {
                             Nuestro<br />equipo
                         </h2>
 
-                        <p className="text-sm lg:text-base text-gray-700 mb-6 leading-relaxed">
+                        <p className=" text-base lg:text-lg text-gray-700 mb-6 leading-relaxed">
                             Un equipo multidisciplinario que une tecnología, experiencia
                             financiera y criterio humano. Especialistas en producto,
                             desarrollo y operaciones de cobranza que diseñan cada
@@ -27,14 +27,14 @@ export const OurTeamRecsa = () => {
                             relaciones.
                         </p>
 
-                        <p className="text-sm lg:text-base text-gray-700 mb-6 leading-relaxed">
+                        <p className=" text-base lg:text-lg text-gray-700 mb-6 leading-relaxed">
                             Respaldados por Recsa, con más de 40 años de experiencia y
                             presencia en 15 países de LATAM. Más de 146 millones de
                             gestiones mensuales nos dan el conocimiento sobre cómo
                             cobrar bien en cada mercado.
                         </p>
 
-                        <p className="text-sm lg:text-base text-gray-700 mb-8 leading-relaxed">
+                        <p className=" text-base lg:text-lg text-gray-700 mb-8 leading-relaxed">
                             Síguenos en{" "}
                             <a
                                 href="https://www.linkedin.com/company/flujolink/posts/?feedView=all"
@@ -67,7 +67,7 @@ export const OurTeamRecsa = () => {
                         Nuestro<br />equipo
                     </h2>
 
-                    <p className="text-sm text-gray-700 mb-4 leading-relaxed">
+                    <p className="text-base text-gray-700 mb-4 leading-relaxed">
                         Un equipo multidisciplinario que une tecnología, experiencia
                         financiera y criterio humano. Especialistas en producto,
                         desarrollo y operaciones de cobranza que diseñan cada
@@ -75,7 +75,7 @@ export const OurTeamRecsa = () => {
                         relaciones.
                     </p>
 
-                    <p className="text-sm text-gray-700 mb-4 leading-relaxed">
+                    <p className="text-base text-gray-700 mb-4 leading-relaxed">
                         Respaldados por Recsa, con más de 40 años de experiencia y
                         presencia en 15 países de LATAM. Más de 146 millones de
                         gestiones mensuales nos dan el conocimiento sobre cómo
@@ -101,7 +101,7 @@ export const OurTeamRecsa = () => {
                         />
                     </div>
 
-                    <p className="text-sm text-gray-700 leading-relaxed">
+                    <p className="text-base text-gray-700 leading-relaxed">
                         Síguenos en{" "}
                         <a
                             href="https://www.linkedin.com/company/flujolink/posts/?feedView=all"
