@@ -284,7 +284,7 @@ export const HowItWorks = () => {
                           />
                         </svg>
                       }
-                      onClick={() => router.push("/recupera")}
+                      onClick={() => window.open('https://recupera.somossena.com', "_self")}
                     />
                   )}
                 </div>

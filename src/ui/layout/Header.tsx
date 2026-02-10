@@ -26,7 +26,7 @@ export const Header = ({ variant }: Props) => {
     { id: 1, name: "Productos", href: "#productos", type: "scroll" as const },
     { id: 2, name: "Precios", href: "#precios", type: "scroll" as const },
     { id: 3, name: "Nosotros", href: "/nosotros", type: "redirect" as const },
-    { id: 4, name: "Recupera", href: "https://recupera-landing.vercel.app/", type: "external" as const },
+    { id: 4, name: "Recupera", href: "https://recupera.somossena.com", type: "external" as const },
     { id: 5, name: "Blog", href: "/blog", type: "redirect" as const },
   ];
 
