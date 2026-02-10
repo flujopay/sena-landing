@@ -9,10 +9,10 @@ export const PrivacyContent = () => {
             Política de <span className="text-brand-primary">Privacidad</span>
           </h1>
           <p className="text-slate-600 text-sm">
-            Fecha de actualización: viernes 17 de enero del 2025
+            Fecha de actualización: lunes 01 de diciembre del 2025
           </p>
         </div>
-        <section className="bg-white text-slate-700 font-normal text-sm md:text-base p-8 md:p-14 rounded-2xl shadow-sm">
+        <section className="bg-white text-slate-700 font-normsal text-sm md:text-base p-8 md:p-14 rounded-2xl shadow-sm">
           <p className="mb-4">
             La presente Política de Privacidad (junto con los Términos y
             Condiciones) tiene por finalidad informar a los usuarios sobre el

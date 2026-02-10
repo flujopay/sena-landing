@@ -9,7 +9,7 @@ export const TermAndCond = () => {
             Términos y <span className="text-brand-primary">Condiciones</span>
           </h1>
           <p className="text-slate-600 text-sm">
-            Fecha de actualización: viernes 17 de enero del 2025
+            Fecha de actualización: lunes 01 de diciembre del 2025
           </p>
         </div>
         <section className="bg-white text-slate-700 font-normal text-sm md:text-base p-8 md:p-14 rounded-2xl shadow-sm space-y-10">
