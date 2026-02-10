@@ -1,9 +1,8 @@
 import { Footer } from "@/ui/layout/Footer";
 import { Header } from "@/ui/layout/Header";
-import Whatsapp from "../shared/WhatsApp";
 import { Hero } from "./sections/Hero";
 import { OurInspiration } from "./sections/OurInspiration";
-import { OurTeam } from "./sections/OurTeam";
+import { OurTeamRecsa } from "./sections/OurTeamRecsa";
 import { SenaRecovery } from "./sections/SenaRecovery";
 
 export const NosotrosPage = () => {
@@ -17,7 +16,7 @@ export const NosotrosPage = () => {
           </div>
         </div>
         <OurInspiration />
-        <OurTeam />
+        <OurTeamRecsa />
         <SenaRecovery />
       </div>
       <Footer />

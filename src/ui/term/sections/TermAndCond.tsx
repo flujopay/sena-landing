@@ -12,143 +12,144 @@ export const TermAndCond = () => {
             Fecha de actualización: viernes 17 de enero del 2025
           </p>
         </div>
-        <section className="bg-white text-slate-700 font-normal text-sm md:text-base p-8 md:p-14 rounded-2xl shadow-sm">
-          <p className="mb-4">
-            El presente documento establece los Términos y Condiciones, respecto
-            del uso de la Plataforma y de los servicios ofertados y prestados
-            por Flujolink.
-          </p>
-          <p className="mb-4">
-            La información contenida en este sitio web, así como las de todas
-            las empresas vinculadas a Flujolink, se proporciona exclusivamente
-            con fines informativos.
-          </p>
-          <p className="mb-4">
-            La información en este sitio web se proporciona &quot;tal cual&quot;
-            sin garantía ni término de ningún tipo, ya sea expreso o implícito,
-            incluyendo. Todos los términos y garantías tales implícitas quedan
-            excluidos.
-          </p>
-          <p className="mb-4">
-            Al acceder a esta página web usted acepta que Flujolink no será
-            responsable de ninguna pérdida directa, indirecta o consecuente
-            derivada del uso de la información y el material contenido en este
-            sitio web, o cualquier otro sitio web con hipervínculo, incluyendo,
-            sin limitación, cualquier pérdida de beneficios, suspensión de
-            negocios, pérdida de programas u otros.
-          </p>
-          <p className="mb-4">
-            En caso de que otras páginas se enlacen desde este sitio web no
-            significa que estén controladas por Flujolink. Por tanto, no somos
-            responsables de su contenido. Flujolink enlaza estas páginas para su
-            comodidad y funcionalidad.
-          </p>
-          <p className="mb-4">
-            Los Términos y Condiciones se entienden aceptados mediante la
-            conformidad de los mismos por parte del Usuario del sitio, al
-            momento de registrarse y utilizar la Plataforma.
-          </p>
-          <p className="mb-4">
-            Se requiere que todo Usuario de la plataforma de Flujolink, previo a
-            la aceptación de los Términos y Condiciones, lea en forma detallada
-            dichos Términos y Condiciones.
-          </p>
-          <p className="mb-4">
-            Iniciado el proceso de Registro, el aportante de información declara
-            comprender y aceptar las Condiciones, a su vez que declara
-            expresamente tener todas las facultades suficientes de
-            representación para registrar a una persona jurídica, en calidad de
-            acreedor (Usuario). Misma declaración aplica para el Registro en
-            beneficio de terceros que sean personas naturales.
-          </p>
-          <p className="mb-4">
-            Con la suscripción, se manifiesta la plena aceptación, expresa e
-            inequívoca de los presentes Términos y Condiciones. Si no está de
-            acuerdo con los Términos y Condiciones, debe abstenerse de utilizar
-            el Sitio.
-          </p>
-          <p className="mb-4">
-            La información ingresada en la plataforma, será utilizada por
-            Flujolink para el registro de Usuario en el sitio, creación de
-            cuentas personales, procesar y transmitir datos, darle seguimiento a
-            los servicios contratados, enviar y recibir correos electrónicos
-            automatizados, proporcionar información con respecto a su cuenta y
-            respecto del estado de los servicios contratados, enviar propuestas
-            de servicios e información a través de distintos canales y, en
-            general, intercambiar comunicación.
-          </p>
-          <p className="mb-4">
-            Flujolink se reserva el derecho de usar esta información para enviar
-            correos electrónicos relativos a los servicios contratados,
-            modificaciones de los servicios y/o para enviar información sobre
-            servicios adicionales.
-          </p>
-          <p className="mb-4">
-            Los aportantes de información deberán proporcionar información que
-            sea verídica, en de conformidad a la ley, la moral, las buenas
-            costumbres, el orden público y a estos Términos y Condiciones. Toda
-            información incorporada o publicada en el sitio web asociada a un
-            Usuario, se supondrá verídica. Se deja constancia que los
-            administradores del Sitio web no se obligan a verificar dicha
-            información, razón por lo cual no asumen responsabilidad alguna
-            respecto de su veracidad y/o exactitud.
-          </p>
-          <p className="mb-4">
-            Flujolink se reserva el derecho de revisar, sin previo aviso ni
-            expresión de causa, la información asociada a un Usuario y, en caso
-            de considerarlo contrario a la ley, la moral, las buenas costumbres,
-            el orden público y/o a estos Términos y Condiciones, podrá bajar los
-            datos de la plataforma o abstenerse de trabajar con ellos. Como
-            consecuencia de lo anterior, Flujolink no garantiza ni asume
-            responsabilidad alguna respecto a la veracidad, vigencia y/o
-            exhaustividad de la información proporcionada por los aportantes.
-          </p>
-          <p className="mb-4">
-            La información proporcionada por los aportantes son de su total y
-            absoluta responsabilidad, asumiendo la totalidad de los perjuicios
-            derivados de dicha información suministrada.
-          </p>
-          <p className="mb-4">
-            El Usuario acepta que el uso del Sitio web lo efectuará libre y
-            voluntariamente, y bajo su única y exclusiva responsabilidad. El
-            Usuario responderá de los daños y perjuicios de toda naturaleza que
-            pudiere causar a Flujolink, o a otros usuarios y/o el público en
-            general, como consecuencia de la infracción de cualquiera de las
-            obligaciones establecidas en estas Condiciones y en las normas
-            legales aplicables.
-          </p>
-          <p className="mb-4">
-            Todos los derechos sobre el Contenido son de propiedad de Flujolink,
-            incluyendo las herramientas y funcionalidades que deriven de la
-            plataforma, programas o servicios desarrollados, ya sean resultado o
-            producto intelectual del ámbito literario, artístico, comercial y/o
-            científico, entre ellos, los sitios web, documentación, diseños,
-            métodos, sistemas, software, contenidos de correos electrónicos y
-            todos los documentos asociados a los mismos. Lo anterior se extiende
-            a las modificaciones, actualizaciones, transformaciones,
-            adaptaciones, nuevas versiones, mejoras o incorporación de nuevas
-            funcionalidades de la plataforma del Sitio web y de las herramientas
-            ofrecidas.
-          </p>
-          <p className="mb-4">
-            Los Usuarios se encuentran autorizados para utilizar la Plataforma,
-            estando expresamente prohibida su copia, reproducción, publicación,
-            descarga, codificación, modificación, traducción, interpretación,
-            exhibición, distribución, transmisión o difusión en medios de
-            comunicación, sin la autorización previa, expresa y por escrito de
-            Flujolink.
-          </p>
-          <p className="mb-4">
-            Los derechos de autor y otros derechos de propiedad sobre el
-            contenido, son de propiedad de Flujolink, haciendo expresa reserva
-            del ejercicio de todas las acciones tanto civiles como penales
-            destinadas al resguardo de sus legítimos derechos de propiedad
-            intelectual e industrial.
-          </p>
-          <p>
-            Flujolink podrá, a su sola y absoluta discreción, actualizar estos
-            Términos y Condiciones.
-          </p>
+        <section className="bg-white text-slate-700 font-normal text-sm md:text-base p-8 md:p-14 rounded-2xl shadow-sm space-y-10">
+
+          {/* 1. INTRODUCCIÓN */}
+          <div>
+            <h2 className="text-brand-primary-dark text-lg md:text-xl font-extrabold mb-4">
+              1. Introducción y aceptación expresa
+            </h2>
+            <p className="mb-3 leading-relaxed">
+              Este acuerdo se celebra entre <strong>Flujolink SpA</strong> (&ldquo;Flujolink&rdquo;), y la persona natural o jurídica que contrata o accede al servicio (&ldquo;Cliente&rdquo;).
+            </p>
+            <p className="leading-relaxed">
+              Al hacer clic en el botón <strong>&ldquo;Crear Cuenta&rdquo;</strong>, <strong>&ldquo;Registrarme&rdquo;</strong> o al realizar el primer uso de la Plataforma, el Cliente acepta estos Términos de manera <strong>expresa, inequívoca e irrevocable</strong>. Este acto constituye una firma electrónica válida y perfecciona el contrato, eliminando la necesidad de firmas en papel. Si usted no tiene las facultades para obligar a su empresa, no continúe con el registro.
+            </p>
+          </div>
+
+          {/* 2. DESCRIPCIÓN DEL SERVICIO */}
+          <div>
+            <h2 className="text-brand-primary-dark text-lg md:text-xl font-extrabold mb-4">
+              2. Descripción del servicio (SaaS)
+            </h2>
+            <p className="mb-3 leading-relaxed">
+              La Plataforma Flujolink es un software como servicio (SaaS) diseñado para la gestión financiera, conciliación bancaria y automatización de cobranza.
+            </p>
+            <p className="leading-relaxed">
+              <strong>Flujolink es un proveedor de tecnología, no una institución financiera, banco ni asesor tributario.</strong> La Plataforma facilita la visualización y gestión de datos, pero la toma de decisiones financieras es responsabilidad exclusiva del Cliente.
+            </p>
+          </div>
+
+          {/* 3. MANDATO ESPECIAL */}
+          <div>
+            <h2 className="text-brand-primary-dark text-lg md:text-xl font-extrabold mb-4">
+              3. Mandato especial de acceso a información
+            </h2>
+            <p className="mb-3 leading-relaxed">
+              Para la correcta prestación de los servicios (especialmente la conciliación y lectura de DTEs), el Cliente otorga a Flujolink un <strong>mandato especial, gratuito e irrevocable</strong> durante la vigencia del servicio, para actuar en su nombre frente a terceros (incluyendo, pero no limitado a, el Servicio de Impuestos Internos y portales bancarios) exclusivamente con fines de <strong>lectura, sincronización y centralización de información</strong>.
+            </p>
+            <p className="leading-relaxed">
+              El Cliente declara que las credenciales entregadas para este fin son fidedignas y autoriza a los sistemas automatizados (&ldquo;bots&rdquo;) de Flujolink a acceder a dichas fuentes. Flujolink se compromete a no realizar transacciones, transferencias ni modificaciones en los portales bancarios o tributarios del Cliente, salvo que una funcionalidad específica así lo requiera y sea autorizada expresamente.
+            </p>
+          </div>
+
+          {/* 4. TARIFAS */}
+          <div>
+            <h2 className="text-brand-primary-dark text-lg md:text-xl font-extrabold mb-4">
+              4. Tarifas, facturación y reajuste
+            </h2>
+            <p className="mb-3 leading-relaxed">
+              El pago de las tarifas se rige por lo indicado en la sección &ldquo;Facturación&rdquo; de la Cuenta o en la propuesta comercial aceptada.
+            </p>
+            <p className="mb-3 leading-relaxed">
+              Flujolink se reserva el derecho de reajustar sus tarifas anualmente de acuerdo a la variación del IPC acumulado o condiciones de mercado, previa notificación al Cliente con 30 días de anticipación.
+            </p>
+            <p className="leading-relaxed">
+              En caso de mora o rechazo del medio de pago, Flujolink podrá suspender el acceso a la Plataforma automáticamente tras 5 días de aviso, sin responsabilidad por la pérdida de datos o interrupción de la gestión de cobranza durante el periodo de suspensión.
+            </p>
+          </div>
+
+          {/* 5. DISPONIBILIDAD Y SLA */}
+          <div>
+            <h2 className="text-brand-primary-dark text-lg md:text-xl font-extrabold mb-4">
+              5. Disponibilidad y nivel de servicio (SLA)
+            </h2>
+            <p className="mb-3 leading-relaxed">
+              Flujolink hará los esfuerzos comercialmente razonables para mantener la Plataforma disponible 24/7. Sin embargo, el servicio se entrega <strong>&ldquo;TAL CUAL&rdquo; (AS-IS)</strong> y <strong>&ldquo;SEGÚN DISPONIBILIDAD&rdquo;</strong>.
+            </p>
+            <p className="leading-relaxed">
+              Flujolink no garantiza que el servicio será ininterrumpido o libre de errores. Las interrupciones por mantenimiento programado, fallas en proveedores externos (ej: caída de AWS, Azure, o intermitencias en la página del SII o Bancos) no serán consideradas incumplimiento de contrato por parte de Flujolink.
+            </p>
+          </div>
+
+          {/* 6. LIMITACIÓN DE RESPONSABILIDAD */}
+          <div>
+            <h2 className="text-brand-primary-dark text-lg md:text-xl font-extrabold mb-4">
+              6. Limitación de responsabilidad
+            </h2>
+            <p className="mb-4 leading-relaxed">
+              En la máxima medida permitida por la ley chilena:
+            </p>
+            <div className="space-y-4 pl-4 border-l-2 border-brand-primary/20">
+              <div>
+                <p className="leading-relaxed">
+                  <strong>A. Exclusión de Daños Indirectos:</strong> Flujolink no será responsable por lucro cesante, pérdida de oportunidades de negocio, pérdida de datos, daño a la imagen o cualquier daño indirecto o consecuencial derivado del uso o imposibilidad de uso de la Plataforma.
+                </p>
+              </div>
+              <div>
+                <p className="leading-relaxed">
+                  <strong>B. Tope de Responsabilidad:</strong> La responsabilidad total acumulada de Flujolink por cualquier reclamo relacionado con este contrato <strong>no excederá en ningún caso el monto total pagado por el Cliente a Flujolink durante los tres (3) meses anteriores</strong> al evento que dio origen al reclamo.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* 7. PROPIEDAD INTELECTUAL */}
+          <div>
+            <h2 className="text-brand-primary-dark text-lg md:text-xl font-extrabold mb-4">
+              7. Propiedad intelectual y datos
+            </h2>
+            <p className="mb-3 leading-relaxed">
+              El Cliente mantiene la propiedad de sus datos transaccionales. Flujolink mantiene la propiedad intelectual exclusiva del software, algoritmos y metodologías.
+            </p>
+            <p className="leading-relaxed">
+              El Cliente autoriza a Flujolink a utilizar los datos generados por el uso de la Plataforma de manera <strong>anonimizada y agregada</strong> (sin identificar al Cliente) para fines estadísticos, mejora de algoritmos de Machine Learning, creación de benchmarks de industria y desarrollo de nuevos productos.
+            </p>
+          </div>
+
+          {/* 8. PRIVACIDAD */}
+          <div>
+            <h2 className="text-brand-primary-dark text-lg md:text-xl font-extrabold mb-4">
+              8. Privacidad y seguridad
+            </h2>
+            <p className="leading-relaxed">
+              Flujolink cumple con la Ley N.º 19.628 y aplica estándares de industria para proteger la información. No obstante, el Cliente es responsable de mantener la confidencialidad de sus claves de acceso y de los usuarios a quienes otorga permisos dentro de la Plataforma.
+            </p>
+          </div>
+
+          {/* 9. VIGENCIA */}
+          <div>
+            <h2 className="text-brand-primary-dark text-lg md:text-xl font-extrabold mb-4">
+              9. Vigencia y término
+            </h2>
+            <p className="mb-3 leading-relaxed">
+              El Cliente puede terminar su suscripción en cualquier momento notificando a través de la Plataforma o a soporte@flujolink.com.
+            </p>
+            <p className="leading-relaxed">
+              Si el contrato es anual, se renovará automáticamente por periodos iguales salvo aviso con 30 días de antelación. No se realizarán reembolsos por periodos no utilizados en planes prepagados.
+            </p>
+          </div>
+
+          {/* 10. LEY APLICABLE */}
+          <div>
+            <h2 className="text-brand-primary-dark text-lg md:text-xl font-extrabold mb-4">
+              10. Ley aplicable y arbitraje
+            </h2>
+            <p className="leading-relaxed">
+              Para cualquier controversia, las partes fijan domicilio en la comuna de Santiago y se someten a la jurisdicción de sus Tribunales Ordinarios de Justicia.
+            </p>
+          </div>
+
         </section>
         <div className="flex justify-center gap-6 py-12">
           <Link

@@ -27,7 +27,7 @@ export const Footer = () => {
   return (
     <footer className="bg-[#2270D0] text-white py-12 md:py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        <div className="flex justify-center mb-10 md:mb-12">
+        <div className="flex justify-start mb-10 md:mb-8 md:ml-[-50px] ml-[-32px]">
           <img
             src={AssetImage.logoBlanco.src}
             alt="Sena Logo"
@@ -35,8 +35,8 @@ export const Footer = () => {
           />
         </div>
 
-        {/* Newsletter - Mobile first */}
-        <div className="md:hidden mb-8">
+        {/* Newsletter - Mobile */}
+        <div className="md:hidden mb-6">
           <h3 className="font-bold text-xs mb-4 uppercase tracking-wide">
             SUSCRÍBETE A NUESTRO NEWSLETTER
           </h3>
@@ -58,14 +58,185 @@ export const Footer = () => {
           </form>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-6 mb-12 md:mb-16">
+        {/* Social Icons - Mobile (after newsletter) */}
+        <div className="md:hidden flex gap-5 mb-8">
+          <a
+            href="https://www.facebook.com/flujolink"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-[#f6793a] transition-colors duration-200"
+            aria-label="Facebook"
+          >
+            <AssetIcon.facebook width={22} height={22} />
+          </a>
+          <a
+            href="https://www.instagram.com/sena_latam/reels/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-blue-500 transition-colors duration-200"
+            aria-label="Instagram"
+          >
+            <AssetIcon.instagram width={22} height={22} />
+          </a>
+          <a
+            href="https://www.linkedin.com/company/flujolink/posts/?feedView=all"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-blue-500 transition-colors duration-200"
+            aria-label="LinkedIn"
+          >
+            <AssetIcon.linkedin width={22} height={22} />
+          </a>
+          <a
+            href="https://www.youtube.com/@flujolink"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-blue-500 transition-colors duration-200"
+            aria-label="YouTube"
+          >
+            <AssetIcon.youtube width={22} height={22} />
+          </a>
+        </div>
+
+        {/* Mobile: Single column sections */}
+        <div className="md:hidden flex flex-col gap-8 mb-8">
           <div className="space-y-3">
-            <h3 className="font-bold text-xs md:text-sm mb-3 md:mb-4 uppercase tracking-wide">
+            <h3 className="font-bold text-xs uppercase tracking-wide">
+              CONTACTO
+            </h3>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <a
+                  href="mailto:contacto@senacobranza.com"
+                  className="hover:text-blue-300 transition-colors duration-200"
+                >
+                  contacto@senacobranza.com
+                </a>
+              </li>
+              <li>
+                <a
+                  href="tel:+569495969"
+                  className="hover:text-blue-300 transition-colors duration-200"
+                >
+                  +569495969
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div className="space-y-3">
+            <h3 className="font-bold text-xs uppercase tracking-wide">
               EMPRESA
             </h3>
-            <ul className="space-y-2 md:space-y-3 text-sm md:text-base">
+            <ul className="space-y-2 text-sm">
               <li>
-                {/* <Link href="/sobre-nosotros" className="hover:text-blue-500 transition-colors duration-200"> */}
+                <button
+                  onClick={() => handleNavClick("redirect", "/nosotros")}
+                  className="hover:text-blue-300 cursor-pointer transition-colors duration-200"
+                >
+                  Sobre nosotros
+                </button>
+              </li>
+              <li>
+                <button
+                  disabled
+                  className="transition-colors duration-200"
+                >
+                  Sobre Recsa
+                </button>
+              </li>
+              <li>
+                <p className="transition-colors duration-200">
+                  FAQs
+                </p>
+              </li>
+            </ul>
+          </div>
+
+          <div className="space-y-3">
+            <h3 className="font-bold text-xs uppercase tracking-wide">
+              DESCUBRIR
+            </h3>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <button
+                  onClick={() => handleNavClick("scroll", "#productos")}
+                  className="hover:text-blue-300 cursor-pointer transition-colors duration-200"
+                >
+                  Productos
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => handleNavClick("scroll", "#como-funciona")}
+                  className="hover:text-blue-300 cursor-pointer transition-colors duration-200"
+                >
+                  Cómo funciona
+                </button>
+              </li>
+              <li>
+                <button
+                  disabled
+                  onClick={() =>
+                    handleNavClick("scroll", "#preguntas-frecuentes")
+                  }
+                  className="transition-colors duration-200"
+                >
+                  Preguntas frecuentes
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          <div className="space-y-3">
+            <h3 className="font-bold text-xs uppercase tracking-wide">
+              LEGAL
+            </h3>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <button
+                  onClick={() => handleNavClick("redirect", "/term")}
+                  className="hover:text-blue-300 cursor-pointer transition-colors duration-200"
+                >
+                  Término y condiciones
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => handleNavClick("redirect", "/privacy")}
+                  className="hover:text-blue-300 cursor-pointer transition-colors duration-200"
+                >
+                  Políticas de cookies
+                </button>
+              </li>
+              <li>
+                <button
+                  disabled
+                  className="transition-colors duration-200"
+                >
+                  Actualizar configuración de cookies
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Mobile: Bottom bar */}
+        <div className="md:hidden">
+          <div className="border-t border-white/30 pt-6 flex justify-between items-center">
+            <p className="text-xs">© SENA SE 2026</p>
+            <img className="w-20" src={AssetImage.byRecsa.src} alt="byRecsa" />
+          </div>
+        </div>
+
+        {/* Desktop layout */}
+        <div className="hidden md:grid grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-6 mb-8">
+          <div className="space-y-3">
+            <h3 className="font-bold text-sm mb-4 uppercase tracking-wide">
+              EMPRESA
+            </h3>
+            <ul className="space-y-3 text-base">
+              <li>
                 <button
                   onClick={() => handleNavClick("redirect", "/nosotros")}
                   className="hover:text-blue-500 cursor-pointer transition-colors duration-200"
@@ -76,18 +247,13 @@ export const Footer = () => {
               <li>
                 <button
                   disabled
-                  // onClick={() => router.push("/sobre-recsa")}
-                  // href="/sobre-recsa"
                   className="hover:text-blue-500 transition-colors duration-200"
                 >
                   Sobre Recsa
                 </button>
               </li>
               <li>
-                <p
-                  // href="/faqs"
-                  className="hover:text-blue-500 transition-colors duration-200"
-                >
+                <p className="hover:text-blue-500 transition-colors duration-200">
                   FAQs
                 </p>
               </li>
@@ -95,14 +261,13 @@ export const Footer = () => {
           </div>
 
           <div className="space-y-3">
-            <h3 className="font-bold text-xs md:text-sm mb-3 md:mb-4 uppercase tracking-wide">
+            <h3 className="font-bold text-sm mb-4 uppercase tracking-wide">
               DESCUBRIR
             </h3>
-            <ul className="space-y-2 md:space-y-3 text-sm md:text-base">
+            <ul className="space-y-3 text-base">
               <li>
                 <button
                   onClick={() => handleNavClick("scroll", "#productos")}
-                  // href="/productos"
                   className="hover:text-blue-500 cursor-pointer transition-colors duration-200"
                 >
                   Productos
@@ -111,7 +276,6 @@ export const Footer = () => {
               <li>
                 <button
                   onClick={() => handleNavClick("scroll", "#como-funciona")}
-                  // href="/como-funciona"
                   className="hover:text-blue-500 cursor-pointer transition-colors duration-200"
                 >
                   Cómo funciona
@@ -123,8 +287,7 @@ export const Footer = () => {
                   onClick={() =>
                     handleNavClick("scroll", "#preguntas-frecuentes")
                   }
-                  // href="/preguntas-frecuentes"
-                  className="hover:text-blue-500  transition-colors duration-200"
+                  className="hover:text-blue-500 transition-colors duration-200"
                 >
                   Preguntas frecuentes
                 </button>
@@ -133,38 +296,37 @@ export const Footer = () => {
           </div>
 
           <div className="space-y-3">
-            <h3 className="font-bold text-xs md:text-sm mb-3 md:mb-4 uppercase tracking-wide">
+            <h3 className="font-bold text-sm mb-4 uppercase tracking-wide">
               CONTACTO
             </h3>
-            <ul className="space-y-2 md:space-y-3 text-sm md:text-base">
+            <ul className="space-y-3 text-base">
               <li>
                 <a
-                  href="mailto:contacto@somossena.com"
+                  href="mailto:contacto@senacobranza.com"
                   className="hover:text-blue-500 transition-colors duration-200 break-all"
                 >
-                  contacto@somossena.com
+                  contacto@senacobranza.com
                 </a>
               </li>
               <li>
                 <a
-                  href="tel:+56962499909"
+                  href="tel:+569495969"
                   className="hover:text-blue-500 transition-colors duration-200"
                 >
-                  +56944489673
+                  +569495969
                 </a>
               </li>
             </ul>
           </div>
 
           <div className="space-y-3">
-            <h3 className="font-bold text-xs md:text-sm mb-3 md:mb-4 uppercase tracking-wide">
+            <h3 className="font-bold text-sm mb-4 uppercase tracking-wide">
               LEGAL
             </h3>
-            <ul className="space-y-2 md:space-y-3 text-sm md:text-base">
+            <ul className="space-y-3 text-base">
               <li>
                 <button
                   onClick={() => handleNavClick("redirect", "/term")}
-                  // href="/terminos"
                   className="hover:text-blue-500 cursor-pointer transition-colors duration-200"
                 >
                   Términos y condiciones
@@ -173,7 +335,6 @@ export const Footer = () => {
               <li>
                 <button
                   onClick={() => handleNavClick("redirect", "/privacy")}
-                  // href="/politicas-cookies"
                   className="hover:text-blue-500 cursor-pointer transition-colors duration-200"
                 >
                   Políticas de privacidad
@@ -182,7 +343,6 @@ export const Footer = () => {
               <li>
                 <button
                   disabled
-                  // href="/configuracion-cookies"
                   className="hover:text-blue-500 transition-colors duration-200"
                 >
                   Actualizar configuración de cookies
@@ -192,7 +352,7 @@ export const Footer = () => {
           </div>
 
           {/* Newsletter - Desktop */}
-          <div className="hidden md:block col-span-2 lg:col-span-1">
+          <div className="col-span-2 lg:col-span-1">
             <h3 className="font-bold text-sm mb-6 uppercase tracking-wide">
               SUSCRÍBETE A NUESTRO NEWSLETTER
             </h3>
@@ -215,14 +375,15 @@ export const Footer = () => {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row justify-between items-center pt-6 md:pt-8 gap-4">
-          <p className="text-xs md:text-sm  order-2 md:order-1">
-            © NILO SE 2026
+        {/* Desktop: Bottom bar */}
+        <div className="hidden md:flex flex-row justify-between items-center pt-8 gap-4">
+          <p className="text-sm">
+            © SENA SE 2026
           </p>
 
-          <div className="flex gap-5 md:gap-6 order-1 md:order-2">
+          <div className="flex gap-6">
             <a
-              href="https://facebook.com"
+              href="https://www.facebook.com/flujolink"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-[#f6793a] transition-colors duration-200"
@@ -231,7 +392,7 @@ export const Footer = () => {
               <AssetIcon.facebook width={22} height={22} />
             </a>
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/sena_latam/reels/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-blue-500 transition-colors duration-200"
@@ -240,7 +401,7 @@ export const Footer = () => {
               <AssetIcon.instagram width={22} height={22} />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/company/flujolink/posts/?feedView=all"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-blue-500 transition-colors duration-200"
@@ -249,7 +410,7 @@ export const Footer = () => {
               <AssetIcon.linkedin width={22} height={22} />
             </a>
             <a
-              href="https://youtube.com"
+              href="https://www.youtube.com/@flujolink"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-blue-500 transition-colors duration-200"
@@ -258,6 +419,9 @@ export const Footer = () => {
               <AssetIcon.youtube width={22} height={22} />
             </a>
           </div>
+        </div>
+        <div className="hidden md:flex w-full justify-end mt-8">
+          <img className="w-24" src={AssetImage.byRecsa.src} alt="byRecsa" />
         </div>
       </div>
     </footer>

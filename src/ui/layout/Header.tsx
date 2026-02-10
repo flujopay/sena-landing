@@ -59,7 +59,8 @@ export const Header = ({ variant }: Props) => {
     showModal({
       content: (
         <div className="flex flex-col h-full bg-white">
-          <div className="flex items-center justify-between p-4 border-b border-gray-100">
+          {/* Header: Logo + Close */}
+          <div className="flex items-center justify-between px-6 py-5">
             <Link href="/" onClick={() => hideModal()}>
               <Image src={logo} alt="Logo" className="w-36" />
             </Link>
@@ -72,30 +73,31 @@ export const Header = ({ variant }: Props) => {
             </button>
           </div>
 
-          <div className="flex flex-col px-6 py-4">
+          {/* Menu items */}
+          <div className="flex flex-col">
             {sectiosnNavbar.map((section) => (
               <button
                 key={section.id}
                 onClick={() => handleNavClick(section)}
-                className={`${
-                  variant === "primary"
-                    ? "text-brand-primary-dark"
-                    : "text-blue-500"
-                } font-semibold cursor-pointer`}
+                className="w-full text-left px-6 py-5 border-t border-gray-200 cursor-pointer"
               >
-                <span className={getActiveClass(section.href)}>
+                <span
+                  className={`text-base font-bold text-black ${getActiveClass(section.href)}`}
+                >
                   {section.name}
                 </span>
               </button>
             ))}
+            <div className="border-t border-gray-200" />
           </div>
 
-          <div className="px-6 mt-4">
+          {/* CTA Button */}
+          <div className="px-6 mt-12 pb-10">
             <Button
               size="md"
               text="Contáctanos"
               variant="primaryFilled"
-              className="w-[200px]"
+              className="w-full max-w-[280px]"
               onClick={() => {
                 hideModal();
                 router.push("/contactanos");

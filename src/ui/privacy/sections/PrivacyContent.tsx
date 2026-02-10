@@ -90,7 +90,7 @@ export const PrivacyContent = () => {
           </Link>
           <span className="text-slate-300">|</span>
           <Link
-            href="/terms"
+            href="/term"
             className="text-brand-primary hover:text-brand-primary-dark font-semibold text-sm transition-colors"
           >
             Términos y Condiciones

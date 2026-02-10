@@ -160,8 +160,8 @@ export const Hero = () => {
 
       <div className="py-3 mt-4 md:mt-0">
         <p className="text-slate-500 text-xs md:text-sm text-left md:text-right">
-          Respaldados por Recsa, con más de 40 años de experiencia en cobranza y
-          presencia en 15 países de Latinoamérica.
+          Respaldados por <a className="font-bold text-brand-secondary underline" href="https://recsa.com/" target="_blank">Recsa</a>, con más de 40 años de experiencia en cobranza y
+          presencia en 15 países de Latinoamérica.  
         </p>
       </div>
     </div>

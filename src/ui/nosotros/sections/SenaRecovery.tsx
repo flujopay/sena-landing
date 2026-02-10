@@ -11,7 +11,7 @@ export const SenaRecovery = () => {
   };
 
   return (
-    <section className="max-w-[1280px] mx-auto px-4 pb-12">
+    <section className="max-w-[1280px] mx-auto px-4 pb-12 pt-12">
       <div className="rounded-2xl overflow-hidden">
         <div className="flex flex-row items-center justify-center">
           {/* Image */}
