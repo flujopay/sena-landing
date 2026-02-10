@@ -78,7 +78,7 @@ export const Products = () => {
       },
       {
         key: "recuperacion" as const,
-        label: "Servicio de Recupeo con\nequipo humano",
+        label: "Servicio de Recupero con\nequipo humano",
         title: "Recupera pagos con apoyo experto",
         description:
           "Combina tecnología y un equipo especializado para gestionar casos complejos y mejorar tu tasa de recuperación.",
