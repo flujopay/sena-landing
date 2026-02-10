@@ -1,7 +1,7 @@
-import { RecuperaPage } from "@/ui/recupera/RecuperaPage";
+// import { RecuperaPage } from "@/ui/recupera/RecuperaPage";
 
-const Page = () => {
-  return <RecuperaPage />;
-};
+// const Page = () => {
+//   return <RecuperaPage />;
+// };
 
-export default Page;
+// export default Page;

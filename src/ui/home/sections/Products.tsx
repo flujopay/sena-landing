@@ -78,13 +78,15 @@ export const Products = () => {
       },
       {
         key: "recuperacion" as const,
-        label: "Servicio de recuperación con\nequipo humano",
+        label: "Servicio de Recupeo con\nequipo humano",
         title: "Recupera pagos con apoyo experto",
         description:
           "Combina tecnología y un equipo especializado para gestionar casos complejos y mejorar tu tasa de recuperación.",
         cta: "Conoce más",
         image: AssetImage.recuperaGirl,
-        onCtaClick: () => {},
+        onCtaClick: () => {
+          window.open("https://recupera.somossena.com", "_self");
+        },
       },
     ],
     [],

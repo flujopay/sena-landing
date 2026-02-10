@@ -44,6 +44,9 @@ export const PricingPlans = () => {
       variant: "growth",
       popular: true,
       cta: "Contrata ahora",
+      onCtaClick: () => {
+        window.open("https://meetings.hubspot.com/francisco472", "_blank");
+      },
     },
     {
       name: "Plan Enterprise",
