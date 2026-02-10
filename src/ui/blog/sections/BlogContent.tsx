@@ -38,7 +38,7 @@ export const BlogContent = ({ featuredPost, otherPosts }: BlogContentProps) => {
         <a
           href={`/blog/${featuredPost.slug}`}
           aria-label={`Ver Blog: ${featuredPost.title}`}
-          className="hover:shadow-xl transition-all hover:cursor-pointer flex flex-col md:flex-row gap-6 rounded-2xl bg-linear-to-br from-brand-primary to-brand-primary-dark p-6 md:p-10 mb-16"
+          className="hover:shadow-xl transition-all hover:cursor-pointer flex flex-col md:flex-row gap-6 rounded-2xl bg-[#f9f9f9] p-6 md:p-10 mb-16"
         >
           <div className="md:w-[60%] w-full flex flex-col justify-between">
             <div className="flex flex-wrap gap-2 mb-4">
@@ -52,7 +52,7 @@ export const BlogContent = ({ featuredPost, otherPosts }: BlogContentProps) => {
               ))}
             </div>
 
-            <div className="flex items-center gap-2 text-gray-200 text-sm mb-4">
+            <div className="flex items-center gap-2 text-sm mb-4">
               {/* <p className="font-medium">{featuredPost.author}</p> */}
               {/* <span>|</span> */}
               <svg
@@ -75,11 +75,11 @@ export const BlogContent = ({ featuredPost, otherPosts }: BlogContentProps) => {
               <p className="font-medium">{featuredPost.date}</p>
             </div>
 
-            <h2 className="text-2xl md:text-3xl font-extrabold text-white leading-tight mb-3">
+            <h2 className="text-2xl md:text-3xl font-extrabold text-brand-primary leading-tight mb-3">
               {featuredPost.title}
             </h2>
 
-            <p className="text-gray-200 text-base leading-relaxed">
+            <p className="text-base leading-relaxed">
               {featuredPost.intro}
             </p>
           </div>
