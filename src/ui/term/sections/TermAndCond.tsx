@@ -133,7 +133,7 @@ export const TermAndCond = () => {
               9. Vigencia y término
             </h2>
             <p className="mb-3 leading-relaxed">
-              El Cliente puede terminar su suscripción en cualquier momento notificando a través de la Plataforma o a soporte@flujolink.com.
+              El Cliente puede terminar su suscripción en cualquier momento notificando a través de la Plataforma o a hola@somossena.com.
             </p>
             <p className="leading-relaxed">
               Si el contrato es anual, se renovará automáticamente por periodos iguales salvo aviso con 30 días de antelación. No se realizarán reembolsos por periodos no utilizados en planes prepagados.
