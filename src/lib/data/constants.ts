@@ -33,6 +33,6 @@ export const FOOTER_DESCUBRIR = [
 
 export const FOOTER_LEGAL = [
   { label: "Términos y condiciones", href: "/term", type: "redirect" as const, disabled: false },
-  { label: "Políticas de privacidad", href: "/privacy", type: "redirect" as const, disabled: false },
+  { label: "Políticas de privacidad", href: "/privacy", type: "redirect" as const, disabled: true },
   { label: "Actualizar configuración de cookies", href: "#", type: "redirect" as const, disabled: true },
 ];
