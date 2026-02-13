@@ -1,4 +1,4 @@
-import { InmobiliariasPage } from "@/ui/inmobiliarias/InmobiliariasPage";
+import { InmobiliariasPage } from "@/ui/industrias/inmobiliarias/InmobiliariasPage";
 
 const Inmobiliarias = () => {
   return <InmobiliariasPage />;

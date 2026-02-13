@@ -1,4 +1,4 @@
-import { InterComPage } from "@/ui/intercom/InterComPage";
+import { InterComPage } from "@/ui/industrias/intercom/InterComPage";
 
 const InterCom = () => {
   return <InterComPage />;

@@ -1,4 +1,4 @@
-import { AutopistasPage } from "@/ui/autopistas/AutopistasPage";
+import { AutopistasPage } from "@/ui/industrias/autopistas/AutopistasPage";
 
 const Autopistas = () => {
   return <AutopistasPage />;

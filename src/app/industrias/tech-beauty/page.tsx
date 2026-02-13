@@ -1,4 +1,4 @@
-import { TechBeautyPage } from "@/ui/tech-beauty/TechBeautyPage";
+import { TechBeautyPage } from "@/ui/industrias/tech-beauty/TechBeautyPage";
 
 const TechBeauty = () => {
   return <TechBeautyPage />;

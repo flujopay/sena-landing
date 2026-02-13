@@ -1,4 +1,4 @@
-import { FamilyOfficePage } from "@/ui/family-office/FamilyOfficePage";
+import { FamilyOfficePage } from "@/ui/industrias/family-office/FamilyOfficePage";
 
 const FamilyOffice = () => {
   return <FamilyOfficePage />;

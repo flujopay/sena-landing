@@ -1,4 +1,4 @@
-import { ServiciosBasicosPage } from "@/ui/servicios-basicos/ServiciosBasicosPage";
+import { ServiciosBasicosPage } from "@/ui/industrias/servicios-basicos/ServiciosBasicosPage";
 
 const ServiciosBasicos = () => {
   return <ServiciosBasicosPage />;

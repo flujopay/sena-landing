@@ -1,4 +1,4 @@
-import { TelcoPage } from "@/ui/telco/TelcoPage";
+import { TelcoPage } from "@/ui/industrias/telco/TelcoPage";
 
 const Telco = () => {
   return <TelcoPage />;
