@@ -12,7 +12,9 @@ export const SOCIAL_LINKS = {
 // Contact Info
 // ==========================================
 export const CONTACT_INFO = {
+  web: "www.somossena.com",
   email: "hola@somossena.com",
+  email2: "contacto@somossena.com",
   phone: "+569 4448 9673",
 };
 

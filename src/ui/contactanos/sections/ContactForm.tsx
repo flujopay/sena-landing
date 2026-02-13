@@ -171,6 +171,7 @@ export const ContactForm = () => {
           subMessage:
             "Gracias por tu mensaje, pronto nos pondremos en contacto contigo.",
         });
+        // !TODO: AQUIIII REDIRECCIONAR A LA PAGINA DE GRACIAS 
         reset();
       },
       onError: () => {

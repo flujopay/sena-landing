@@ -63,16 +63,6 @@ export const Header = ({ variant }: Props) => {
       { id: 6, name: "Family Office", href: "/industrias/family-office" },
       { id: 7, name: "Intercom", href: "/industrias/intercom" },
       { id: 8, name: "Inmobiliarias", href: "/industrias/inmobiliarias" },
-      {
-        id: 9,
-        name: "Recupera (COPY PROPUESTO)",
-        href: "/industrias/recupera-copy-propuesto",
-      },
-      {
-        id: 10,
-        name: "Recupera (Copy v2)",
-        href: "/industrias/recupera-copy-v2",
-      },
     ],
     [],
   );
@@ -82,13 +72,13 @@ export const Header = ({ variant }: Props) => {
       id: 1,
       name: "Plataforma de autogestión",
       description: "Cobros automáticos, recordatorios y seguimiento.",
-      href: "#productos-autogestion",
+      href: "#productos",
     },
     {
       id: 2,
       name: "Servicio de Recupero con equipo humano",
       description: "Gestión humana + estrategia para recuperar cartera.",
-      href: "#productos-recupero",
+      href: "#productos",
     },
   ];
 
@@ -430,16 +420,6 @@ export const Header = ({ variant }: Props) => {
                                 </div>
                               </button>
                             ))}
-                          </div>
-
-                          {/* Botoncito opcional para ir al bloque principal */}
-                          <div className="mt-4">
-                            <button
-                              onClick={() => goToAnchor("#productos")}
-                              className="text-sm font-semibold text-brand-primary-dark hover:underline"
-                            >
-                              Ver “Nuestros productos”
-                            </button>
                           </div>
                         </div>
                       </div>
