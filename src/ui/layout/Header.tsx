@@ -30,6 +30,7 @@ type IndustryItem = {
   name: string;
   href: string;
   description?: string;
+  icon?: React.ReactNode;
 };
 
 type ProductItem = {
@@ -37,6 +38,7 @@ type ProductItem = {
   name: string;
   description?: string;
   href: `#${string}`; // anchors para scroll
+  tab: "autogestion" | "recuperacion";
 };
 
 export const Header = ({ variant }: Props) => {
@@ -51,18 +53,14 @@ export const Header = ({ variant }: Props) => {
   // ✅ Industrias (rutas)
   const industries: IndustryItem[] = useMemo(
     () => [
-      { id: 1, name: "Telco", href: "/industrias/telco" },
-      { id: 2, name: "Tech Beauty", href: "/industrias/tech-beauty" },
-      { id: 3, name: "Maquinarias", href: "/industrias/maquinarias" },
-      {
-        id: 4,
-        name: "Servicios Básicos (utilities)",
-        href: "/industrias/servicios-basicos",
-      },
-      { id: 5, name: "Autopistas", href: "/industrias/autopistas" },
-      { id: 6, name: "Family Office", href: "/industrias/family-office" },
-      { id: 7, name: "Intercom", href: "/industrias/intercom" },
-      { id: 8, name: "Inmobiliarias", href: "/industrias/inmobiliarias" },
+      { id: 1, name: "Telco", href: "/industrias/telco", description: "Cobranza B2B para contratos de conectividad y servicios gestionados", icon: (<svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 12.55C6.97 16.84 10.16 20.03 14.45 22L16.69 19.77C16.97 19.49 17.37 19.4 17.72 19.53C18.87 19.93 20.1 20.15 21.38 20.15C21.93 20.15 22.38 20.6 22.38 21.15V24C22.38 24.55 21.93 25 21.38 25C10.33 25 1.38 16.05 1.38 5C1.38 4.45 1.83 4 2.38 4H5.23C5.78 4 6.23 4.45 6.23 5C6.23 6.28 6.45 7.51 6.85 8.66C6.97 9.01 6.89 9.41 6.6 9.69L5 12.55Z" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/></svg>) },
+      { id: 2, name: "Tech Beauty", href: "/industrias/tech-beauty", description: "Gestión de cuentas por cobrar para distribuidores y salones", icon: (<svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L14.09 8.26L20 9.27L15.55 13.97L16.91 20L12 16.9L7.09 20L8.45 13.97L4 9.27L9.91 8.26L12 2Z" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round"/></svg>) },
+      { id: 3, name: "Maquinarias", href: "/industrias/maquinarias", description: "Recupera facturas de alto valor en minería y maquinaria pesada", icon: (<svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/></svg>) },
+      { id: 4, name: "Servicios Básicos", href: "/industrias/servicios-basicos", description: "Cobranza para contratos regulados de utilities y servicios esenciales", icon: (<svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/></svg>) },
+      { id: 5, name: "Autopistas", href: "/industrias/autopistas", description: "Conciliación de TAG, flotas y cobranza en concesiones viales", icon: (<svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 18H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h3.19M15 6h2.81A2 2 0 0 1 20 8v8a2 2 0 0 1-2 2h-2" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round"/><path d="M7 18a2 2 0 1 0 4 0 2 2 0 0 0-4 0zM13 18a2 2 0 1 0 4 0 2 2 0 0 0-4 0z" stroke="currentColor" strokeWidth="1.6"/><path d="M12 2v4M8 6h8" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round"/></svg>) },
+      { id: 6, name: "Family Office", href: "/industrias/family-office", description: "Control financiero y cobranza patrimonial para holdings familiares", icon: (<svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11M20 10v11M8 14v4M12 14v4M16 14v4" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/></svg>) },
+      { id: 7, name: "Intercom", href: "/industrias/intercom", description: "Protege tu MRR y recupera pagos fallidos en modelos de suscripción", icon: (<svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17 1l4 4-4 4" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/><path d="M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/><path d="M21 13v2a4 4 0 0 1-4 4H3" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/></svg>) },
+      { id: 8, name: "Inmobiliarias", href: "/industrias/inmobiliarias", description: "Gestión de cuotas, arriendos y promesas en proyectos inmobiliarios", icon: (<svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/><path d="M9 22V12h6v10" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/></svg>) },
     ],
     [],
   );
@@ -73,12 +71,14 @@ export const Header = ({ variant }: Props) => {
       name: "Plataforma de autogestión",
       description: "Cobros automáticos, recordatorios y seguimiento.",
       href: "#productos",
+      tab: "autogestion" as const,
     },
     {
       id: 2,
       name: "Servicio de Recupero con equipo humano",
       description: "Gestión humana + estrategia para recuperar cartera.",
       href: "#productos",
+      tab: "recuperacion" as const,
     },
   ];
 
@@ -188,11 +188,19 @@ export const Header = ({ variant }: Props) => {
     router.push(href);
   };
 
-  const goToProduct = (href: ProductItem["href"]) => {
+  const goToProduct = (tab: string) => {
     setOpenProducts(false);
-    // opcional: que al elegir cualquiera, primero baje a "Nuestros productos"
-    // goToAnchor("#productos");
-    goToAnchor(href);
+    if (pathname === "/") {
+      // Update URL with tab param and scroll
+      window.history.replaceState(null, "", `/?tab=${tab}#productos`);
+      // Dispatch event so Products component picks up the change
+      const el = document.getElementById("productos");
+      if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+      // Trigger a custom event for the tab change
+      window.dispatchEvent(new CustomEvent("sena:product-tab", { detail: tab }));
+    } else {
+      window.location.href = `/?tab=${tab}#productos`;
+    }
   };
 
   // =========================
@@ -234,19 +242,22 @@ export const Header = ({ variant }: Props) => {
 
               {mobileProductsOpen && (
                 <div className="px-6 pb-4">
-                  <div className="flex flex-col gap-2">
+                  <div className="flex flex-col gap-1">
                     {products.map((it) => (
                       <button
                         key={it.id}
                         onClick={() => {
                           hideModal();
-                          goToAnchor(it.href);
+                          goToProduct(it.tab);
                         }}
-                        className="text-left px-3 py-3 rounded-xl hover:bg-gray-50 transition"
+                        className="text-left px-3 py-3 rounded-xl hover:bg-gray-50 transition cursor-pointer"
                       >
                         <span className="text-sm font-semibold text-black">
                           {it.name}
                         </span>
+                        {it.description && (
+                          <p className="text-xs text-gray-400 mt-0.5">{it.description}</p>
+                        )}
                       </button>
                     ))}
                   </div>
@@ -267,7 +278,7 @@ export const Header = ({ variant }: Props) => {
 
               {mobileIndustriesOpen && (
                 <div className="px-6 pb-4">
-                  <div className="flex flex-col gap-2">
+                  <div className="flex flex-col gap-1">
                     {industries.map((it) => (
                       <button
                         key={it.id}
@@ -275,11 +286,14 @@ export const Header = ({ variant }: Props) => {
                           hideModal();
                           router.push(it.href);
                         }}
-                        className="text-left px-3 py-3 rounded-xl hover:bg-gray-50 transition"
+                        className="text-left px-3 py-3 rounded-xl hover:bg-gray-50 transition cursor-pointer"
                       >
                         <span className="text-sm font-semibold text-black">
                           {it.name}
                         </span>
+                        {it.description && (
+                          <p className="text-xs text-gray-400 mt-0.5">{it.description}</p>
+                        )}
                       </button>
                     ))}
                   </div>
@@ -377,18 +391,18 @@ export const Header = ({ variant }: Props) => {
                   >
                     <div className="rounded-2xl bg-white shadow-[0_18px_60px_rgba(0,0,0,0.12)] border border-gray-100 overflow-hidden">
                       <div className="grid grid-cols-12">
-                        {/* Col izquierda (como Industrias) */}
+                        {/* Col izquierda */}
                         <div className="col-span-4 bg-gray-50 p-7">
                           <h4 className="text-2xl font-extrabold text-black">
                             Productos
                           </h4>
                           <p className="text-sm text-gray-600 mt-3 leading-relaxed">
-                            Elige el producto y te llevo a su sección.
+                            Conoce nuestras soluciones de cobranza y elige la que mejor se adapte a tu operación.
                           </p>
 
-                          <div className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-black">
-                            <span className="inline-block h-2 w-2 rounded-full bg-brand-secondary" />
-                            Ver detalles
+                          <div className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-brand-primary">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 12H19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /><path d="M12 5L19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg>
+                            Ir a productos
                           </div>
                         </div>
 
@@ -398,13 +412,17 @@ export const Header = ({ variant }: Props) => {
                             {products.map((it) => (
                               <button
                                 key={it.id}
-                                onClick={() => goToProduct(it.href)} // 👈 scroll suave
-                                className="group text-left rounded-xl p-4 hover:bg-gray-50 transition"
+                                onClick={() => goToProduct(it.tab)}
+                                className="group text-left rounded-xl p-4 hover:bg-gray-50 transition cursor-pointer"
                                 role="menuitem"
                               >
                                 <div className="flex items-start gap-3">
-                                  <div className="mt-1 h-9 w-9 rounded-xl bg-gray-100 group-hover:bg-white border border-gray-200 flex items-center justify-center">
-                                    <span className="h-2 w-2 rounded-full bg-brand-secondary" />
+                                  <div className="mt-0.5 h-8 w-8 shrink-0 rounded-lg bg-brand-primary/5 group-hover:bg-brand-primary/10 border border-brand-primary/10 flex items-center justify-center text-brand-primary transition-colors">
+                                    {it.tab === "autogestion" ? (
+                                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L14.2 7.8L20 10L14.2 12.2L12 18L9.8 12.2L4 10L9.8 7.8L12 2Z" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" /></svg>
+                                    ) : (
+                                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17 21V19C17 16.79 15.21 15 13 15H5C2.79 15 1 16.79 1 19V21" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" /><circle cx="9" cy="7" r="4" stroke="currentColor" strokeWidth="1.6" /></svg>
+                                    )}
                                   </div>
 
                                   <div>
@@ -470,12 +488,11 @@ export const Header = ({ variant }: Props) => {
                             Industrias
                           </h4>
                           <p className="text-sm text-gray-600 mt-3 leading-relaxed">
-                            Landings por sector para mostrar beneficios
-                            específicos.
+                            Soluciones de cobranza B2B adaptadas a los desafíos de tu sector.
                           </p>
-                          <div className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-black">
-                            <span className="inline-block h-2 w-2 rounded-full bg-brand-secondary" />
-                            Explora la tuya
+                          <div className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-brand-primary">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 12H19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /><path d="M12 5L19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg>
+                            Explora tu industria
                           </div>
                         </div>
 
@@ -485,21 +502,23 @@ export const Header = ({ variant }: Props) => {
                               <button
                                 key={it.id}
                                 onClick={() => goToIndustry(it.href)}
-                                className="group text-left rounded-xl p-4 hover:bg-gray-50 transition"
+                                className="group text-left rounded-xl p-3 hover:bg-gray-50 transition cursor-pointer"
                                 role="menuitem"
                               >
                                 <div className="flex items-start gap-3">
-                                  <div className="mt-1 h-9 w-9 rounded-xl bg-gray-100 group-hover:bg-white border border-gray-200 flex items-center justify-center">
-                                    <span className="h-2 w-2 rounded-full bg-brand-secondary" />
+                                  <div className="mt-0.5 h-8 w-8 shrink-0 rounded-lg bg-brand-primary/5 group-hover:bg-brand-primary/10 border border-brand-primary/10 flex items-center justify-center text-brand-primary transition-colors">
+                                    {it.icon}
                                   </div>
 
-                                  <div>
+                                  <div className="min-w-0">
                                     <p className="text-sm font-bold text-black">
                                       {it.name}
                                     </p>
-                                    <p className="text-xs text-gray-500 mt-1">
-                                      Ver landing
-                                    </p>
+                                    {it.description && (
+                                      <p className="text-[11px] text-gray-400 mt-0.5 leading-snug line-clamp-2">
+                                        {it.description}
+                                      </p>
+                                    )}
                                   </div>
                                 </div>
                               </button>

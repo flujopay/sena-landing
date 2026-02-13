@@ -2,7 +2,8 @@
 import { AssetImage } from "@/lib/utils/assets/image";
 import Button from "@/ui/shared/Button";
 import Image, { StaticImageData } from "next/image";
-import { useMemo, useState } from "react";
+import { useSearchParams } from "next/navigation";
+import { useEffect, useMemo, useState } from "react";
 
 type ProductKey = "autogestion" | "recuperacion";
 
@@ -92,8 +93,31 @@ export const Products = () => {
     [],
   );
 
-  const [activeKey, setActiveKey] = useState<ProductKey>(products[0].key);
+  const searchParams = useSearchParams();
+  const tabParam = searchParams.get("tab");
+
+  const [activeKey, setActiveKey] = useState<ProductKey>(
+    tabParam === "recuperacion" ? "recuperacion" : "autogestion"
+  );
   const active = products.find((p) => p.key === activeKey) ?? products[0];
+
+  useEffect(() => {
+    if (tabParam === "autogestion" || tabParam === "recuperacion") {
+      setActiveKey(tabParam);
+    }
+  }, [tabParam]);
+
+  // Listen for custom event from Header dropdown (same-page navigation)
+  useEffect(() => {
+    const handler = (e: Event) => {
+      const tab = (e as CustomEvent).detail;
+      if (tab === "autogestion" || tab === "recuperacion") {
+        setActiveKey(tab);
+      }
+    };
+    window.addEventListener("sena:product-tab", handler);
+    return () => window.removeEventListener("sena:product-tab", handler);
+  }, []);
 
   return (
     <section id="productos" className="max-w-[1280px] mx-auto pt-28">
