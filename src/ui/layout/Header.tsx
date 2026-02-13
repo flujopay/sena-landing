@@ -75,7 +75,7 @@ export const Header = ({ variant }: Props) => {
     },
     {
       id: 2,
-      name: "Servicio de Recupero con equipo humano",
+      name: "Servicio de Recupero",
       description: "Gestión humana + estrategia para recuperar cartera.",
       href: "#productos",
       tab: "recuperacion" as const,
