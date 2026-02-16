@@ -1,5 +1,5 @@
 export const IntercomSocialProof = () => {
-  const clientTypes = ["Plataformas SaaS", "Empresas de software B2B", "Servicios digitales recurrentes", "Marketplaces con membresías", "Negocios de licencias y contratos anuales", "Empresas con modelo Intercom"];
+  const clientTypes = ["Plataformas SaaS", "Empresas de software B2B", "Servicios digitales recurrentes", "Marketplaces con membresías", "Negocios de licencias y contratos anuales", "Empresas con modelo Intercompany"];
   const metrics = [
     { value: "35%", label: "Reducción de pagos no recuperados en los primeros 90 días" },
     { value: "2.1x", label: "Mejora en tasa de recuperación de cobros fallidos" },

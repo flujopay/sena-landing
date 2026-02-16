@@ -10,7 +10,7 @@ export const IntercomHero = () => {
       <div className="max-w-[1280px] mx-auto px-4 md:px-10 py-16 md:py-24">
         <div className="hidden md:flex flex-col gap-6 max-w-3xl">
           <div>
-            <span className="inline-block bg-brand-secondary/10 text-brand-secondary font-bold text-sm px-4 py-1.5 rounded-full mb-6">Modelo Intercom / SaaS</span>
+            <span className="inline-block bg-brand-secondary/10 text-brand-secondary font-bold text-sm px-4 py-1.5 rounded-full mb-6">Modelo Intercompany / SaaS</span>
             <h1 className="text-brand-primary-dark font-canaro text-5xl lg:text-7xl font-extrabold leading-tight">
               MRR protegido.{" "}<br />
               <span className="text-brand-primary font-caslon">Cobranza automatizada</span>
@@ -27,7 +27,7 @@ export const IntercomHero = () => {
           <p className="text-slate-500 text-sm mt-2">Plataformas SaaS, empresas de servicios digitales y negocios con contratos recurrentes ya confían en Sena para proteger su MRR.</p>
         </div>
         <div className="flex md:hidden flex-col gap-4">
-          <span className="inline-block bg-brand-secondary/10 text-brand-secondary font-bold text-xs px-3 py-1 rounded-full w-fit">Modelo Intercom / SaaS</span>
+          <span className="inline-block bg-brand-secondary/10 text-brand-secondary font-bold text-xs px-3 py-1 rounded-full w-fit">Modelo Intercompany / SaaS</span>
           <h1 className="text-brand-primary-dark font-canaro text-3xl font-extrabold leading-tight">
             MRR protegido.{" "}
             <span className="text-brand-primary font-caslon">Cobranza automatizada</span>

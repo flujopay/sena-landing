@@ -1,4 +1,4 @@
-import { InterComPage } from "@/ui/industrias/intercom/InterComPage";
+import { InterComPage } from "@/ui/industrias/intercompany/InterComPage";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -6,10 +6,10 @@ export const metadata: Metadata = {
   description:
     "Protege tu MRR y recupera pagos fallidos con Sena. Plataforma de cobranza automatizada para empresas SaaS, plataformas digitales y negocios con ingresos recurrentes. Reduce churn financiero y recupera ingresos.",
   keywords:
-    "cobranza para empresas SaaS, recuperación de pagos fallidos suscripción, gestión cuentas por cobrar MRR, automatización cobranza B2B recurrente, control financiero plataformas digitales, reducir churn financiero SaaS, cobranza modelo Intercom, Sena",
+    "cobranza para empresas SaaS, recuperación de pagos fallidos suscripción, gestión cuentas por cobrar MRR, automatización cobranza B2B recurrente, control financiero plataformas digitales, reducir churn financiero SaaS, cobranza modelo Intercompany, Sena",
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://www.somossena.com/industrias/intercom",
+    canonical: "https://www.somossena.com/industrias/intercompany",
   },
   openGraph: {
     title: "Cobranza para SaaS y Suscripciones | Sena",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     type: "website",
     siteName: "Sena",
     locale: "es_PE",
-    url: "https://www.somossena.com/industrias/intercom",
+    url: "https://www.somossena.com/industrias/intercompany",
   },
 };
 
