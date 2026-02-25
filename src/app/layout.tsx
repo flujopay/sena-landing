@@ -1,14 +1,14 @@
+import { getCountriesServer } from "@/lib/services/countryService.server";
 import { getIpInfoServer } from "@/lib/services/ipConfigService.server";
 import { ModalRenderer } from "@/ui/shared/ModalRender";
 import { Toast } from "@/ui/shared/Toast";
+import Whatsapp from "@/ui/shared/WhatsApp";
 import type { Metadata } from "next";
 import Script from "next/script";
 import { Suspense } from "react";
 import { adobeCleanFont, canaroFont, caslonFont } from "./fonts";
 import "./globals.css";
 import Providers from "./providers";
-import { getCountriesServer } from "@/lib/services/countryService.server";
-import Whatsapp from "@/ui/shared/WhatsApp";
 
 export const metadata: Metadata = {
   title: "Sena - El mejor CRM de cobranza y pagos B2B",
@@ -59,6 +59,19 @@ export default async function RootLayout({
                           f.parentNode.insertBefore(j,f);
                           })(window,document,'script','dataLayer','GTM-T2QDCJ6C');
                           `}
+          </Script>
+          {/* Google Ads */}
+          <Script
+            src="https://www.googletagmanager.com/gtag/js?id=AW-17962976949"
+            strategy="afterInteractive"
+          />
+          <Script id="google-ads-config" strategy="afterInteractive">
+            {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'AW-17962976949');
+            `}
           </Script>
         </head>
         <body

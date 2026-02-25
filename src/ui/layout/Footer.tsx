@@ -114,10 +114,28 @@ export const Footer = () => {
             <ul className="space-y-2 text-sm">
               <li>
                 <a
+                  href={`https://${CONTACT_INFO.web}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-blue-300 transition-colors duration-200"
+                >
+                  {CONTACT_INFO.web}
+                </a>
+              </li>
+              <li>
+                <a
                   href={`mailto:${CONTACT_INFO.email}`}
                   className="hover:text-blue-300 transition-colors duration-200"
                 >
                   {CONTACT_INFO.email}
+                </a>
+              </li>
+              <li>
+                <a
+                  href={`mailto:${CONTACT_INFO.email2}`}
+                  className="hover:text-blue-300 transition-colors duration-200"
+                >
+                  {CONTACT_INFO.email2}
                 </a>
               </li>
               <li>
@@ -197,7 +215,12 @@ export const Footer = () => {
         <div className="md:hidden">
           <div className="border-t border-white/30 pt-6 flex justify-between items-center">
             <p className="text-xs">© SENA SE 2026</p>
-            <img className="w-20 cursor-pointer" src={AssetImage.byRecsa.src} alt="byRecsa" onClick={() => window.open("https://recsa.com", "_blank")} />
+            <img
+              className="w-20 cursor-pointer"
+              src={AssetImage.byRecsa.src}
+              alt="byRecsa"
+              onClick={() => window.open("https://recsa.com", "_blank")}
+            />
           </div>
         </div>
 
@@ -252,10 +275,28 @@ export const Footer = () => {
             <ul className="space-y-3 text-base">
               <li>
                 <a
+                  href={`https://${CONTACT_INFO.web}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-blue-300 transition-colors duration-200"
+                >
+                  {CONTACT_INFO.web}
+                </a>
+              </li>
+              <li>
+                <a
                   href={`mailto:${CONTACT_INFO.email}`}
                   className="hover:text-blue-500 transition-colors duration-200 break-all"
                 >
                   {CONTACT_INFO.email}
+                </a>
+              </li>
+              <li>
+                <a
+                  href={`mailto:${CONTACT_INFO.email2}`}
+                  className="hover:text-blue-500 transition-colors duration-200 break-all"
+                >
+                  {CONTACT_INFO.email2}
                 </a>
               </li>
               <li>
@@ -358,7 +399,12 @@ export const Footer = () => {
           </div>
         </div>
         <div className="hidden md:flex w-full justify-end mt-8">
-          <img className="w-24 cursor-pointer" src={AssetImage.byRecsa.src} alt="byRecsa" onClick={() => window.open("https://recsa.com", "_blank")}/>
+          <img
+            className="w-24 cursor-pointer"
+            src={AssetImage.byRecsa.src}
+            alt="byRecsa"
+            onClick={() => window.open("https://recsa.com", "_blank")}
+          />
         </div>
       </div>
     </footer>

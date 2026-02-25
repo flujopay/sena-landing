@@ -12,7 +12,9 @@ export const SOCIAL_LINKS = {
 // Contact Info
 // ==========================================
 export const CONTACT_INFO = {
+  web: "www.somossena.com",
   email: "hola@somossena.com",
+  email2: "contacto@somossena.com",
   phone: "+569 4448 9673",
 };
 
@@ -33,6 +35,6 @@ export const FOOTER_DESCUBRIR = [
 
 export const FOOTER_LEGAL = [
   { label: "Términos y condiciones", href: "/term", type: "redirect" as const, disabled: false },
-  { label: "Políticas de privacidad", href: "/privacy", type: "redirect" as const, disabled: true },
+  { label: "Políticas de privacidad", href: "/privacy", type: "redirect" as const, disabled: false },
   { label: "Actualizar configuración de cookies", href: "#", type: "redirect" as const, disabled: true },
 ];
