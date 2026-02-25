@@ -2,8 +2,7 @@ import { TelcoPage } from "@/ui/industrias/telco/TelcoPage";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title:
-    "Cobranza B2B para Empresas de Telecomunicaciones | Sena",
+  title: "Cobranza B2B para Empresas de Telecomunicaciones | Sena",
   description:
     "Plataforma de gestión de cuentas por cobrar B2B para empresas de telecomunicaciones. Ordena, automatiza y recupera pagos de contratos complejos sin dañar relaciones estratégicas.",
   keywords:
@@ -20,6 +19,7 @@ export const metadata: Metadata = {
     siteName: "Sena",
     locale: "es_PE",
     url: "https://www.somossena.com/industrias/telco",
+    images: ["https://somossena.com/sena-crm-lite.jpg"],
   },
 };
 

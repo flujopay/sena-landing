@@ -11,7 +11,7 @@ import "./globals.css";
 import Providers from "./providers";
 
 export const metadata: Metadata = {
-  title: "Sena - El mejor CRM de cobranza y pagos B2B",
+  title: "Sena - El arte de cobrar bien",
   description:
     "Optimiza tu gestión de cobranza y pagos de facturas con Sena, el CRM B2B que simplifica procesos, mejora la eficiencia y acelera tus ingresos.",
   keywords:
@@ -19,10 +19,12 @@ export const metadata: Metadata = {
   authors: [{ name: "Sena" }],
   robots: { index: true, follow: true },
   openGraph: {
-    title: "Sena - El mejor CRM de cobranza y pagos B2B",
+    title: "Sena - El arte de cobrar bien",
     description:
       "Con Sena, simplifica y acelera la gestión de tus cobros y pagos. Una solución para empresas enfocada en eficiencia y resultados.",
     type: "website",
+    url: "https://somossena.com",
+    images: ["https://somossena.com/sena-crm-lite.jpg"],
     siteName: "Sena",
     locale: "es_PE",
   },
