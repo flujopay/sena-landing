@@ -22,8 +22,8 @@ export const PricingPlans = () => {
       variant: "starter",
       cta: "Contrata ahora",
       onCtaClick: () => {
-          window.open("https://meetings.hubspot.com/francisco472", "_blank"); // TODO: Cambiar a la url de abajo cuando sea el momento
-        // window.open("https://app.flujolink.com/signup?origin=main", "_blank");
+        // window.open("https://meetings.hubspot.com/francisco472", "_blank"); // TODO: Cambiar a la url de abajo cuando sea el momento
+        window.open("https://app.flujolink.com/signup?origin=main", "_blank");
       },
     },
     {
