@@ -24,6 +24,9 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  env: {
+    NEXT_PUBLIC_NINO_API_KEY: process.env.NINO_API_KEY || "",
+  },
   turbopack: {
     rules: {
       "*.svg": {
