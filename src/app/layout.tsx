@@ -2,6 +2,7 @@ import { getCountriesServer } from "@/lib/services/countryService.server";
 import { getIpInfoServer } from "@/lib/services/ipConfigService.server";
 import { ModalRenderer } from "@/ui/shared/ModalRender";
 import { Toast } from "@/ui/shared/Toast";
+import NinoChatInit from "@/ui/shared/NinoChatInit";
 import Whatsapp from "@/ui/shared/WhatsApp";
 import type { Metadata } from "next";
 import Script from "next/script";
@@ -107,6 +108,8 @@ export default async function RootLayout({
             message="Hola, vi su web y quiero saber más sobre Sena y cómo funciona."
             animated
           />
+          {/* Nino Chat — Landing widget */}
+          <NinoChatInit />
         </body>
       </html>
     </Providers>
