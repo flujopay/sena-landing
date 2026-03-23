@@ -1,6 +1,6 @@
 "use client";
 
-import { usePostContactForm } from "@/lib/services/contactService";
+import { usePostContactForm, usePostTestn8n } from "@/lib/services/contactService";
 import { useCountries } from "@/lib/services/countryService";
 import { useCurrencyStore } from "@/lib/store/useCurrencyStore";
 import { useToastStore } from "@/lib/store/useToastStore";
@@ -10,61 +10,39 @@ import { Input } from "@/ui/shared/Input";
 import SimpleCountrySelect, {
   OptionSelect,
 } from "@/ui/shared/SimpleCountrySelect";
-import Link from "next/link";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
 import { Controller, useForm } from "react-hook-form";
 
 type FormData = {
   nombre: string;
   apellido: string;
-  correo: string;
-  countryCode: string;
-  telefono: string;
-  representaEmpresa: string;
-  nombreEmpresa?: string;
-  mensaje?: string;
-  comoLlegaste: string;
+  empresa: string;
+  email: string;
+  whatsapp: string;
+  facturas_pendientes: string;
+  alguien_cobrando: string;
 };
 
 export const ContactForm = () => {
+  const { postTestn8nMutate, isLoadingPostTestn8n } = usePostTestn8n();
+  const { postContactFormMutate } = usePostContactForm();
   const { data: countries = [] } = useCountries();
-  const { postContactFormMutate, isLoadingPostContactForm } =
-    usePostContactForm();
+  const { ipCurrency } = useCurrencyStore();
+  const { showToast } = useToastStore();
   const searchParams = useSearchParams();
   const [countrySelect, setCountrySelect] = useState<string | null>(null);
-  const { ipCurrency, setIpCurrency, setWhatsappCountry } = useCurrencyStore();
-  const { showToast } = useToastStore();
-  const router = useRouter();
-  const {
-    control,
-    handleSubmit,
-    watch,
-    formState: { errors },
-    reset,
-  } = useForm<FormData>({
-    defaultValues: {
-      nombre: "",
-      apellido: "",
-      correo: "",
-      countryCode: "+51",
-      telefono: "",
-      representaEmpresa: "si",
-      nombreEmpresa: "",
-      mensaje: "",
-      comoLlegaste: "",
-    },
-  });
 
-  const representaEmpresa = watch("representaEmpresa");
+  const utmSource = searchParams?.get("utm_source") || null;
+  const utmMedium = searchParams?.get("utm_medium") || null;
+  const utmCampaign = searchParams?.get("utm_campaign") || null;
+  const utmContent = searchParams?.get("utm_content") || null;
 
   const countryOptions = useMemo(() => {
     if (!countries.length) return [];
-
     const priorityCountries = ["+51", "+56", "+57", "+593", "+52"];
     const priorityItems: OptionSelect[] = [];
     const otherItems: OptionSelect[] = [];
-
     countries.forEach((item) => {
       const option: OptionSelect = {
         id: item.country,
@@ -72,106 +50,88 @@ export const ContactForm = () => {
         icon: item.icon,
         subValue: item.country,
       };
-
       if (priorityCountries.includes(item.country)) {
         priorityItems.push(option);
       } else {
         otherItems.push(option);
       }
     });
-
-    priorityItems.sort((a, b) => {
-      return priorityCountries.indexOf(a.id) - priorityCountries.indexOf(b.id);
-    });
-
+    priorityItems.sort(
+      (a, b) =>
+        priorityCountries.indexOf(a.id) - priorityCountries.indexOf(b.id),
+    );
     return [...priorityItems, ...otherItems];
   }, [countries]);
 
   useEffect(() => {
-    if (ipCurrency === "PEN") {
-      setCountrySelect("+51");
-    } else if (ipCurrency === "CLP") {
-      setCountrySelect("+56");
-    } else if (ipCurrency === "COP") {
-      setCountrySelect("+57");
-    } else if (ipCurrency === "MXN") {
-      setCountrySelect("+52");
-    } else if (ipCurrency === "USD") {
-      setCountrySelect("+593");
+    const currencyMap: Record<string, string> = {
+      PEN: "+51",
+      CLP: "+56",
+      COP: "+57",
+      MXN: "+52",
+      USD: "+593",
+    };
+    if (ipCurrency && currencyMap[ipCurrency]) {
+      setCountrySelect(currencyMap[ipCurrency]);
     }
   }, [ipCurrency]);
 
-  const utmSource = searchParams?.get("utm_source") || null;
-  const utmMedium = searchParams?.get("utm_medium") || null;
-  const utmCampaign = searchParams?.get("utm_campaign") || null;
-  const utmContent = searchParams?.get("utm_content") || null;
-
-  const onChangeCountry = (value: string) => {
-    setCountrySelect(value);
-    if (value === "+51") {
-      setIpCurrency("PEN");
-      setWhatsappCountry({
-        phoneNumber: "958969041",
-        countryCode: "+51",
-      });
-    } else if (value === "+56") {
-      setIpCurrency("CLP");
-      setWhatsappCountry({
-        phoneNumber: "944489673",
-        countryCode: "+56",
-      });
-    } else if (value === "+57") {
-      setIpCurrency("COP");
-      setWhatsappCountry({
-        phoneNumber: "944489673",
-        countryCode: "+56",
-      });
-    } else if (value === "+52") {
-      setIpCurrency("MXN");
-      setWhatsappCountry({
-        phoneNumber: "944489673",
-        countryCode: "+56",
-      });
-    } else if (value === "+593") {
-      setIpCurrency("USD");
-      setWhatsappCountry({
-        phoneNumber: "944489673",
-        countryCode: "+56",
-      });
-    }
-  };
+  const {
+    control,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm<FormData>({
+    defaultValues: {
+      nombre: "",
+      apellido: "",
+      empresa: "",
+      email: "",
+      whatsapp: "",
+      facturas_pendientes: "",
+      alguien_cobrando: "",
+    },
+  });
 
   const onSubmit = (data: FormData) => {
-    const telefonoConPrefijo = (countrySelect || "") + data.telefono;
-    const payload: ContactFormRequest = {
-      telefono: telefonoConPrefijo,
-      formOrigin: "Formulario de Registro",
-      countryName:
-        countries?.find((type) => type.country === countrySelect)
-          ?.country_code || "",
-      productType: "main",
+    const pais =
+      countries?.find((c) => c.country === countrySelect)?.country_code || "";
+    const telefonoConPrefijo = (countrySelect || "") + data.whatsapp;
+
+    // Payload para n8n webhook
+    const payload = {
+      ...data,
+      codigo_pais: countrySelect || "",
+      pais,
+    };
+
+    // Payload para API de contacto
+    const contactPayload: ContactFormRequest = {
       nombre: data.nombre,
       apellido: data.apellido,
-      correo: data.correo,
-      representaEmpresa: data.representaEmpresa,
-      nombreEmpresa: data.nombreEmpresa || "",
-      mensaje: data.mensaje || "",
-      howFound: data.comoLlegaste || "",
+      correo: data.email,
+      telefono: telefonoConPrefijo,
+      formOrigin: "Formulario de Registro",
+      countryName: pais,
+      productType: "main",
+      nombreEmpresa: data.empresa,
+      mensaje: "",
+      howFound: "",
       utmSource: utmSource || undefined,
       utmMedium: utmMedium || undefined,
       utmCampaign: utmCampaign || undefined,
       utmContent: utmContent || undefined,
     };
 
-    postContactFormMutate(payload, {
+    // Llamar ambas APIs
+    postContactFormMutate(contactPayload);
+    postTestn8nMutate(payload, {
       onSuccess: () => {
         showToast({
           iconType: "success",
           message: "Formulario enviado correctamente",
-          subMessage:
-            "Gracias por tu mensaje, pronto nos pondremos en contacto contigo.",
+          subMessage: "Gracias, pronto nos pondremos en contacto contigo.",
         });
-        router.push("/thankyou");
         reset();
       },
       onError: () => {
@@ -201,6 +161,7 @@ export const ContactForm = () => {
             onSubmit={handleSubmit(onSubmit)}
             className="w-full rounded-2xl bg-[#f4f4f4] px-6 py-8"
           >
+            {/* Campo 1 — Nombre y Apellido */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
               <Controller
                 name="nombre"
@@ -208,7 +169,8 @@ export const ContactForm = () => {
                 rules={{ required: "El nombre es obligatorio" }}
                 render={({ field }) => (
                   <Input
-                    label="Nombre completo"
+                    label="Nombre"
+                    placeholder="Tu nombre"
                     {...field}
                     error={errors.nombre?.message}
                   />
@@ -221,6 +183,7 @@ export const ContactForm = () => {
                 render={({ field }) => (
                   <Input
                     label="Apellido"
+                    placeholder="Tu apellido"
                     {...field}
                     error={errors.apellido?.message}
                   />
@@ -228,31 +191,56 @@ export const ContactForm = () => {
               />
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+            {/* Campo 2 — Empresa */}
+            <div className="mb-4">
               <Controller
-                name="correo"
+                name="empresa"
                 control={control}
                 rules={{
-                  required: "El correo es obligatorio",
+                  required: "El nombre de la empresa es obligatorio",
+                }}
+                render={({ field }) => (
+                  <Input
+                    label="Empresa"
+                    placeholder="Nombre de tu empresa"
+                    {...field}
+                    error={errors.empresa?.message}
+                  />
+                )}
+              />
+            </div>
+
+            {/* Campo 3 — Email */}
+            <div className="mb-4">
+              <Controller
+                name="email"
+                control={control}
+                rules={{
+                  required: "El email es obligatorio",
                   pattern: {
                     value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                    message: "Correo inválido",
+                    message: "Email inválido",
                   },
                 }}
                 render={({ field }) => (
                   <Input
                     label="Email"
                     type="email"
+                    placeholder="tu@email.com"
                     {...field}
-                    error={errors.correo?.message}
+                    error={errors.email?.message}
                   />
                 )}
               />
+            </div>
+
+            {/* Campo 4 — WhatsApp */}
+            <div className="mb-4">
               <Controller
-                name="telefono"
+                name="whatsapp"
                 control={control}
                 rules={{
-                  required: "El teléfono es obligatorio",
+                  required: "El número de WhatsApp es obligatorio",
                   pattern: {
                     value: /^[0-9]+$/,
                     message: "Solo se permiten números",
@@ -260,7 +248,7 @@ export const ContactForm = () => {
                 }}
                 render={({ field }) => (
                   <Input
-                    label="Celular"
+                    label="WhatsApp"
                     type="tel"
                     placeholder="Número"
                     value={field.value || ""}
@@ -268,11 +256,11 @@ export const ContactForm = () => {
                       const onlyNumbers = e.target.value.replace(/\D/g, "");
                       field.onChange(onlyNumbers);
                     }}
-                    error={errors.telefono?.message}
+                    error={errors.whatsapp?.message}
                     leftElement={
                       <SimpleCountrySelect
                         value={countrySelect}
-                        onChange={(value: string) => onChangeCountry(value)}
+                        onChange={(value: string) => setCountrySelect(value)}
                         options={countryOptions}
                       />
                     }
@@ -281,102 +269,22 @@ export const ContactForm = () => {
               />
             </div>
 
+            {/* Campo 5 — ¿Cuántas facturas tienes pendientes? */}
             <div className="mb-6">
               <label className="block text-sm font-bold text-black mb-3">
-                ¿Representas a una empresa?
+                ¿Cuántas facturas tienes pendientes?
+                <span className="text-red-500">*</span>
               </label>
               <Controller
-                name="representaEmpresa"
-                control={control}
-                render={({ field }) => (
-                  <div className="flex items-center gap-6">
-                    <label className="flex items-center gap-2 cursor-pointer">
-                      <input
-                        type="radio"
-                        value="si"
-                        checked={field.value === "si"}
-                        onChange={() => field.onChange("si")}
-                        className="w-4 h-4 text-brand-primary accent-brand-primary"
-                      />
-                      <span className="text-sm text-black font-medium">SÍ</span>
-                    </label>
-                    <label className="flex items-center gap-2 cursor-pointer">
-                      <input
-                        type="radio"
-                        value="no"
-                        checked={field.value === "no"}
-                        onChange={() => field.onChange("no")}
-                        className="w-4 h-4 text-brand-primary accent-brand-primary"
-                      />
-                      <span className="text-sm text-black font-medium">NO</span>
-                    </label>
-                  </div>
-                )}
-              />
-            </div>
-
-            {representaEmpresa === "si" && (
-              <div className="mb-4">
-                <Controller
-                  name="nombreEmpresa"
-                  control={control}
-                  rules={{
-                    required:
-                      representaEmpresa === "si"
-                        ? "El nombre de la empresa es obligatorio"
-                        : false,
-                  }}
-                  render={({ field }) => (
-                    <Input
-                      label="Nombre de tu empresa"
-                      placeholder="Empresa..."
-                      {...field}
-                      error={errors.nombreEmpresa?.message}
-                    />
-                  )}
-                />
-              </div>
-            )}
-
-            {representaEmpresa === "no" && (
-              <div className="mb-4">
-                <Controller
-                  name="mensaje"
-                  control={control}
-                  rules={{
-                    required:
-                      representaEmpresa === "no"
-                        ? "El motivo es obligatorio"
-                        : false,
-                  }}
-                  render={({ field }) => (
-                    <Input
-                      label="¿Por qué nos contactas?"
-                      placeholder="¿Motivo?"
-                      {...field}
-                      error={errors.mensaje?.message}
-                    />
-                  )}
-                />
-              </div>
-            )}
-
-            <div className="mb-6">
-              <label className="block text-sm font-bold text-black mb-2">
-                ¿Cómo llegaste a Sena?<span className="text-red-500">*</span>
-              </label>
-              <Controller
-                name="comoLlegaste"
+                name="facturas_pendientes"
                 control={control}
                 rules={{ required: "Debes seleccionar una opción" }}
                 render={({ field }) => (
-                  <div className="space-y-2">
+                  <div className="flex items-center gap-6">
                     {[
-                      { value: "google", label: "Google" },
-                      { value: "social", label: "Redes sociales" },
-                      { value: "ads", label: "Publicidad" },
-                      { value: "referral", label: "Referido" },
-                      { value: "other", label: "Otro" },
+                      { value: "1-10", label: "1-10" },
+                      { value: "10-50", label: "10-50" },
+                      { value: "50+", label: "50+" },
                     ].map((opcion) => (
                       <label
                         key={opcion.value}
@@ -389,7 +297,7 @@ export const ContactForm = () => {
                           onChange={() => field.onChange(opcion.value)}
                           className="w-4 h-4 text-brand-primary accent-brand-primary"
                         />
-                        <span className="text-sm text-black">
+                        <span className="text-sm text-black font-medium">
                           {opcion.label}
                         </span>
                       </label>
@@ -397,37 +305,63 @@ export const ContactForm = () => {
                   </div>
                 )}
               />
-              {errors.comoLlegaste && (
+              {errors.facturas_pendientes && (
                 <p className="text-red-500 text-xs mt-1">
-                  {errors.comoLlegaste.message}
+                  {errors.facturas_pendientes.message}
                 </p>
               )}
             </div>
 
-            <p className="text-xs mb-4">
-              Al hacer click en enviar, aceptas los{" "}
-              <Link
-                href="/term"
-                className="text-brand-primary cursor-pointer font-semibold"
-              >
-                Términos y Condiciones{" "}
-              </Link>
-              y la{" "}
-              <Link
-                href="/privacy"
-                className="text-brand-primary font-semibold"
-              >
-                Política de Privacidad
-              </Link>
-            </p>
+            {/* Campo 6 — ¿Alguien en tu equipo se encarga de cobrar? */}
+            <div className="mb-6">
+              <label className="block text-sm font-bold text-black mb-3">
+                ¿Alguien en tu equipo se encarga de cobrar?
+                <span className="text-red-500">*</span>
+              </label>
+              <Controller
+                name="alguien_cobrando"
+                control={control}
+                rules={{ required: "Debes seleccionar una opción" }}
+                render={({ field }) => (
+                  <div className="flex items-center gap-6">
+                    {[
+                      { value: "Sí", label: "Sí" },
+                      { value: "No", label: "No" },
+                      { value: "A veces", label: "A veces" },
+                    ].map((opcion) => (
+                      <label
+                        key={opcion.value}
+                        className="flex items-center gap-2 cursor-pointer"
+                      >
+                        <input
+                          type="radio"
+                          value={opcion.value}
+                          checked={field.value === opcion.value}
+                          onChange={() => field.onChange(opcion.value)}
+                          className="w-4 h-4 text-brand-primary accent-brand-primary"
+                        />
+                        <span className="text-sm text-black font-medium">
+                          {opcion.label}
+                        </span>
+                      </label>
+                    ))}
+                  </div>
+                )}
+              />
+              {errors.alguien_cobrando && (
+                <p className="text-red-500 text-xs mt-1">
+                  {errors.alguien_cobrando.message}
+                </p>
+              )}
+            </div>
 
             <Button
               type="submit"
-              text={isLoadingPostContactForm ? "Enviando..." : "Enviar"}
+              text={isLoadingPostTestn8n ? "Enviando..." : "Enviar"}
               variant="primaryFilled"
               size="md"
               className="w-[200px]"
-              disabled={isLoadingPostContactForm}
+              disabled={isLoadingPostTestn8n}
             />
           </form>
         </div>
