@@ -39,7 +39,8 @@ type ProductItem = {
   id: number;
   name: string;
   description?: string;
-  tab: "autogestion" | "recuperacion";
+  tab: "autogestion" | "recuperacion" | "external";
+  href?: string;
 };
 
 type MobileMenuContentProps = {
@@ -47,7 +48,7 @@ type MobileMenuContentProps = {
   products: ProductItem[];
   industries: IndustryItem[];
   onClose: () => void;
-  goToProduct: (tab: ProductItem["tab"]) => void;
+  goToProduct: (tab: ProductItem["tab"], href?: string) => void;
   handleNavClick: (section: NavItem) => void;
   sectiosnNavbar: NavItem[];
   router: ReturnType<typeof useRouter>;
@@ -97,7 +98,7 @@ const MobileMenuContent = ({
                     key={it.id}
                     onClick={() => {
                       onClose();
-                      goToProduct(it.tab);
+                      goToProduct(it.tab, it.href);
                     }}
                     className="text-left px-3 py-3 rounded-xl hover:bg-gray-50 transition cursor-pointer"
                   >
@@ -442,6 +443,13 @@ export const Header = ({ variant }: Props) => {
         description: "Gestión humana + estrategia para recuperar cartera.",
         tab: "recuperacion",
       },
+      {
+        id: 3,
+        name: "Opera",
+        description: "CRM de cobranza y pagos B2B potenciado con IA.",
+        tab: "external",
+        href: "https://opera.somossena.com/",
+      },
     ],
     [],
   );
@@ -546,8 +554,13 @@ export const Header = ({ variant }: Props) => {
     router.push(href);
   };
 
-  const goToProduct = (tab: ProductItem["tab"]) => {
+  const goToProduct = (tab: ProductItem["tab"], href?: string) => {
     setOpenProducts(false);
+
+    if (tab === "external" && href) {
+      window.location.href = href;
+      return;
+    }
 
     if (tab === "recuperacion") {
       window.location.href = "https://recupera.somossena.com/";
@@ -670,7 +683,7 @@ export const Header = ({ variant }: Props) => {
                             {products.map((it) => (
                               <button
                                 key={it.id}
-                                onClick={() => goToProduct(it.tab)}
+                                onClick={() => goToProduct(it.tab, it.href)}
                                 className="group text-left rounded-xl p-4 hover:bg-gray-50 transition cursor-pointer"
                                 role="menuitem"
                               >
