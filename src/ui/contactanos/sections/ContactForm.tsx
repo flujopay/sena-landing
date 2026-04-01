@@ -14,7 +14,7 @@ import SimpleCountrySelect, {
   OptionSelect,
 } from "@/ui/shared/SimpleCountrySelect";
 import Link from "next/link";
-import { useSearchParams } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
 import { Controller, useForm } from "react-hook-form";
 
@@ -33,6 +33,7 @@ export const ContactForm = () => {
   const { postContactFormMutate } = usePostContactForm();
   const { data: countries = [] } = useCountries();
   const { ipCurrency } = useCurrencyStore();
+  const router = useRouter();
   const { showToast } = useToastStore();
   const searchParams = useSearchParams();
   const [countrySelect, setCountrySelect] = useState<string | null>(null);
@@ -131,12 +132,8 @@ export const ContactForm = () => {
     postContactFormMutate(contactPayload);
     postTestn8nMutate(payload, {
       onSuccess: () => {
-        showToast({
-          iconType: "success",
-          message: "Formulario enviado correctamente",
-          subMessage: "Gracias, pronto nos pondremos en contacto contigo.",
-        });
         reset();
+        router.push("/thankyou");
       },
       onError: () => {
         showToast({
