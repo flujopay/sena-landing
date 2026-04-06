@@ -52,6 +52,7 @@ type MobileMenuContentProps = {
   handleNavClick: (section: NavItem) => void;
   sectiosnNavbar: NavItem[];
   router: ReturnType<typeof useRouter>;
+  redirectLogin: () => void;
 };
 
 const MobileMenuContent = ({
@@ -63,6 +64,7 @@ const MobileMenuContent = ({
   handleNavClick,
   sectiosnNavbar,
   router,
+  redirectLogin,
 }: MobileMenuContentProps) => {
   const [mobileIndustriesOpen, setMobileIndustriesOpen] = useState(false);
   const [mobileProductsOpen, setMobileProductsOpen] = useState(false);
@@ -175,7 +177,17 @@ const MobileMenuContent = ({
       </div>
 
       {/* CTA */}
-      <div className="px-6 mt-12 pb-10">
+      <div className="px-6 mt-12 pb-10 flex flex-col gap-3">
+        <Button
+          size="md"
+          text="Iniciar sesión"
+          variant="ghost"
+          className="w-full max-w-[280px]"
+          onClick={() => {
+            onClose();
+            redirectLogin();
+          }}
+        />
         <Button
           size="md"
           text="Contáctanos"
@@ -582,6 +594,7 @@ export const Header = ({ variant }: Props) => {
           handleNavClick={handleNavClick}
           sectiosnNavbar={sectiosnNavbar}
           router={router}
+          redirectLogin={redirectLogin}
         />
       ),
       showHeader: false,
