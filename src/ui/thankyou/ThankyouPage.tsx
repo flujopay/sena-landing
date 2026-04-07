@@ -8,7 +8,7 @@ import { useEffect } from "react";
 
 declare global {
   interface Window {
-    dataLayer?: Record<string, unknown>[];
+    dataLayer?: Object[];
     fbq?: (...args: unknown[]) => void;
   }
 }
