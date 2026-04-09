@@ -218,7 +218,7 @@ Sena tiene landings especificas para las siguientes industrias:
 | Telefono | +569 4448 9673 |
 | WhatsApp Peru | +51 958 969 041 |
 | WhatsApp Chile | +56 944 489 673 |
-| Agendar demo | meetings.hubspot.com/francisco472 |
+| Agendar demo | meetings.hubspot.com/francisco502 |
 
 ### Redes sociales
 
@@ -248,4 +248,4 @@ Sena tiene landings especificas para las siguientes industrias:
 | Web de Sena | somossena.com |
 | Servicio Recupera | recupera.somossena.com |
 | Recsa (empresa madre) | recsa.com |
-| Agendar demo | meetings.hubspot.com/francisco472 |
+| Agendar demo | meetings.hubspot.com/francisco502 |

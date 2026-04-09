@@ -3,7 +3,7 @@
 import Button from "@/ui/shared/Button";
 
 export const InmobiliariasHero = () => {
-  const onRedirectHubspot = () => { window.open("https://meetings.hubspot.com/francisco472", "_blank"); };
+  const onRedirectHubspot = () => { window.open("https://meetings.hubspot.com/francisco502", "_blank"); };
 
   return (
     <section className="bg-[#F9F9F9]">

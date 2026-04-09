@@ -43,7 +43,7 @@ export const Hero = () => {
   }, [tick, isDeleting]);
 
   const onRedirectHubspot = () => {
-    window.open("https://meetings.hubspot.com/francisco472", "_blank");
+    window.open("https://meetings.hubspot.com/francisco502", "_blank");
   };
 
   return (

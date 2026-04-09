@@ -7,7 +7,7 @@ export const SenaRecovery = () => {
   const router = useRouter();
 
   const onRedirectHubspot = () => {
-    window.open("https://meetings.hubspot.com/francisco472", "_blank");
+    window.open("https://meetings.hubspot.com/francisco502", "_blank");
   };
 
   return (

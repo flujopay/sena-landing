@@ -22,7 +22,7 @@ export const PricingPlans = () => {
       variant: "starter",
       cta: "Contrata ahora",
       onCtaClick: () => {
-        // window.open("https://meetings.hubspot.com/francisco472", "_blank"); // TODO: Cambiar a la url de abajo cuando sea el momento
+        // window.open("https://meetings.hubspot.com/francisco502", "_blank"); // TODO: Cambiar a la url de abajo cuando sea el momento
         window.open("https://app.flujolink.com/signup?origin=main", "_blank");
       },
     },
@@ -46,7 +46,7 @@ export const PricingPlans = () => {
       popular: true,
       cta: "Contrata ahora",
       onCtaClick: () => {
-        window.open("https://meetings.hubspot.com/francisco472", "_blank");
+        window.open("https://meetings.hubspot.com/francisco502", "_blank");
       },
     },
     {
@@ -68,7 +68,7 @@ export const PricingPlans = () => {
       variant: "enterprise",
       cta: "Habla con ventas",
       onCtaClick: () => {
-        window.open("https://meetings.hubspot.com/francisco472", "_blank");
+        window.open("https://meetings.hubspot.com/francisco502", "_blank");
       },
     },
   ];

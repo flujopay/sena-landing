@@ -4,7 +4,7 @@ import Button from "@/ui/shared/Button";
 
 export const MaquinariasHero = () => {
   const onRedirectHubspot = () => {
-    window.open("https://meetings.hubspot.com/francisco472", "_blank");
+    window.open("https://meetings.hubspot.com/francisco502", "_blank");
   };
 
   return (
