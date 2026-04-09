@@ -49,22 +49,8 @@ export default async function RootLayout({
   return (
     <Providers country={country} countries={countries}>
       <html lang="es" dir="ltr">
-        <GoogleTagManager gtmId="GTM-T2QDCJ6C" />
-        <head>
-          {/* Google Ads */}
-          <Script
-            src="https://www.googletagmanager.com/gtag/js?id=AW-17962976949"
-            strategy="afterInteractive"
-          />
-          <Script id="google-ads-config" strategy="afterInteractive">
-            {`
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'AW-17962976949');
-            `}
-          </Script>
-        </head>
+        <GoogleTagManager gtmId="GTM-5W7F9MSP" />
+        <head />
         <body
           className={`${canaroFont.variable} ${adobeCleanFont.variable} ${caslonFont.variable} antialiased font-adobe`}
         >
@@ -74,7 +60,6 @@ export default async function RootLayout({
               (function() {
                   const originalDebugger = window.debugger;
                   window.debugger = function() {
-                      // No hacer nada, deshabilitar pausas del debugger
                       return;
                   };
               })();
