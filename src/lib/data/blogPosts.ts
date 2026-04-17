@@ -6197,9 +6197,9 @@ export const blogPosts: BlogPost[] = [
     slug: slug('Cobrar no deberia ser lo mas dificil de tu negocio'),
     title: 'Cobrar no debería ser lo más difícil de tu negocio',
     intro:
-      'Vendes, emites la factura y esperas. Pero el dinero no llega. Esta es la realidad de miles de empresas en Chile.',
+      'Hay plata que ya ganaste pero que todavía no está en tu cuenta. Entregaste el servicio, cumpliste con lo prometido, y aun así estás esperando.',
     date: '10 de abril 2026',
-    tags: ['Sena', 'Cobranza'],
+    tags: ['Sena', 'Blog'],
     image: AssetImageBlog.blog_29_main.src,
     content: [
       {
@@ -6207,7 +6207,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: 'text',
-            text: 'Vendes. Emites la factura. Y esperas.',
+            text: 'Hay plata que ya ganaste pero que todavía no está en tu cuenta. Entregaste el servicio, cumpliste con lo prometido, y aun así estás esperando. Ese es el momento en que la cobranza deja de ser un tema de otras industrias y se convierte en tu problema.',
           },
         ],
       },
@@ -6216,7 +6216,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: 'text',
-            text: 'Pero el dinero no llega. Pasan los días, luego las semanas. Mandas un correo. Otro. Llamas. Te dicen que "ya está en proceso". Y mientras tanto, tú tienes que pagar sueldos, proveedores e impuestos.',
+            text: 'La cobranza existe porque el dinero no siempre llega cuando debería. Mecanismos de pago ineficientes, ventas a crédito sin seguimiento, contrapartes que simplemente no priorizan pagar: todo eso acumula deuda en la calle y presión en tu caja.',
           },
         ],
       },
@@ -6225,20 +6225,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: 'text',
-            text: 'Esta es la realidad de miles de empresas en Chile. Y lo más frustrante: no es un problema de ventas ni de calidad. Es un problema de cobranza.',
-          },
-        ],
-      },
-      {
-        type: 'subtitle',
-        text: 'El problema no es que no te paguen. Es que no tienes un sistema.',
-      },
-      {
-        type: 'paragraph',
-        fragments: [
-          {
-            type: 'text',
-            text: 'La mayoría de las pymes cobran de manera reactiva. Esperan que llegue el vencimiento, ven que no llegó el pago, y recién ahí actúan. Sin proceso. Sin seguimiento. Sin datos.',
+            text: 'Y no es un problema nuevo. Sale en la biblia, aparece en los titulares de hoy.',
           },
         ],
       },
@@ -6247,7 +6234,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: 'text',
-            text: 'El resultado: facturas que se acumulan, relaciones comerciales que se tensan y dueños de empresa que dedican horas de su semana a perseguir lo que ya es suyo.',
+            text: '¿Suena familiar? No es casualidad: la cobranza apareció hasta en el caso CAE, en la SUCC (sistema único de cobranza de cotizaciones), en la Ley de prefijos telefónicos, en el debate sobre el pago a 30 días y en la figura del Abogado González. Es un tema que cruza emprendedores, pymes y política económica por igual.',
           },
         ],
       },
@@ -6256,20 +6243,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: 'text',
-            text: 'Cobrar no debería ser lo más difícil de tu negocio. Pero si no tienes un proceso claro, termina siéndolo.',
-          },
-        ],
-      },
-      {
-        type: 'subtitle',
-        text: 'Lo que hace la diferencia: anticipación y consistencia',
-      },
-      {
-        type: 'paragraph',
-        fragments: [
-          {
-            type: 'text',
-            text: 'Las empresas que cobran bien no cobran más fuerte. Cobran antes y con más orden.',
+            text: 'En el mundo de los negocios, la deuda que no se gestiona mata empresas. Pero hacerlo mal también. Una cobranza hostil o ineficiente puede costarte el cliente que más trabajo te costó conseguir.',
           },
         ],
       },
@@ -6278,7 +6252,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: 'text',
-            text: 'Eso significa enviar recordatorios antes del vencimiento, no después. Hacer seguimiento por el canal correcto según el tipo de cliente. Tener visibilidad de qué facturas están en riesgo antes de que venzan.',
+            text: 'Eso es exactamente lo que queremos cambiar con Sena. No se trata solo de lograr que las facturas ingresen a una cuenta bancaria. Se trata de que tu negocio siga creciendo, con tu flujo de caja ordenado y tus relaciones comerciales intactas. Cobrar bien es una especialidad. Y esa es la nuestra.',
           },
         ],
       },
@@ -6287,42 +6261,11 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: 'text',
-            text: 'Y sobre todo: no depender de una sola persona que lleva todo en una planilla.',
-          },
-        ],
-      },
-      {
-        type: 'subtitle',
-        text: 'Para eso existe Sena',
-      },
-      {
-        type: 'paragraph',
-        fragments: [
-          {
-            type: 'text',
-            text: 'Sena es una plataforma de cobranza diseñada para empresas B2B en Chile. Automatiza los recordatorios, centraliza el seguimiento y te da visibilidad en tiempo real del estado de cada factura.',
-          },
-        ],
-      },
-      {
-        type: 'paragraph',
-        fragments: [
-          {
-            type: 'text',
-            text: 'No es un ERP. No es una herramienta de contabilidad. Es una herramienta específica para que cobres más rápido, con menos esfuerzo y sin dañar la relación con tus clientes.',
-          },
-        ],
-      },
-      {
-        type: 'paragraph',
-        fragments: [
-          {
-            type: 'text',
-            text: 'Si tu empresa tiene facturas pendientes y quieres dejar de perseguirlas manualmente, ',
+            text: '¿Quieres ver cómo funciona Sena en tu operación? ',
           },
           {
             type: 'link',
-            text: 'agenda una demo con nuestro equipo',
+            text: 'Agenda una demo aquí',
             href: 'https://meetings.hubspot.com/francisco502',
           },
           {
@@ -6338,7 +6281,7 @@ export const blogPosts: BlogPost[] = [
     slug: slug('Cuando ya vendiste pero el dinero todavia no llega'),
     title: 'Cuando ya vendiste, pero el dinero todavía no llega',
     intro:
-      'El capital de trabajo es el oxígeno de una pyme. Y la principal amenaza para ese oxígeno no es vender poco, sino cobrar tarde.',
+      'El vibecoding abrió una puerta que antes era impensable. Pero esa misma agilidad choca con una realidad que la tecnología todavía no resuelve: cobrar.',
     date: '14 de abril 2026',
     tags: ['Sena', 'Educación Financiera'],
     image: AssetImageBlog.blog_30_main.src,
@@ -6348,7 +6291,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: 'text',
-            text: 'Sofi tiene una empresa de servicios de marketing. Factura bien. Sus clientes están contentos. Pero cada fin de mes entra en pánico.',
+            text: 'El vibecoding —la práctica de crear software con ayuda de inteligencia artificial, sin necesitar un equipo técnico completo— ha abierto una puerta que antes era impensable: emprendedores que, prácticamente solos, construyen soluciones digitales y las venden a grandes empresas. Conocemos a varios.',
           },
         ],
       },
@@ -6357,7 +6300,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: 'text',
-            text: 'No porque no tenga clientes. Sino porque tiene $18 millones en facturas emitidas y solo $3 millones en la cuenta.',
+            text: 'Pero esa misma agilidad choca con una realidad que la tecnología todavía no resuelve: cobrar.',
           },
         ],
       },
@@ -6366,20 +6309,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: 'text',
-            text: 'Sofi no tiene un problema de ventas. Tiene un problema de flujo de caja. Y la causa es siempre la misma: facturas que no se pagan a tiempo.',
-          },
-        ],
-      },
-      {
-        type: 'subtitle',
-        text: 'El costo invisible del cobro tardío',
-      },
-      {
-        type: 'paragraph',
-        fragments: [
-          {
-            type: 'text',
-            text: 'Cuando una factura se atrasa, el impacto no es solo financiero. También es operacional y emocional.',
+            text: 'Hay una historia en particular que nos hizo entender la magnitud del problema. Sofi es emprendedora de tecnología, lleva dos años trabajando con el mismo cliente corporativo, con contratos bien establecidos. La deuda acumulada por facturas impagas superaba los $8 millones de pesos, con más de 60 días de atraso. Mientras esperaba ese pago, siguió operando, pagando arriendo, sueldos y proveedores con sus propios recursos. Hasta que llegó la gota que rebalsó el vaso: un empleado la demandó por no pago de cotizaciones. La multa fue de casi $20 millones de pesos. Para una empresa de su tamaño, eso no es solo un problema financiero. Es una crisis existencial.',
           },
         ],
       },
@@ -6388,7 +6318,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: 'text',
-            text: 'Financieramente, tienes que buscar cómo financiar lo que ya vendiste. Operacionalmente, alguien de tu equipo tiene que dejar de hacer su trabajo para perseguir el pago. Y emocionalmente, ese estrés constante afecta la forma en que tomas decisiones.',
+            text: 'Abogados, negociaciones, estrés, conflictos laborales, multas, quiebra. Más o menos así termina la historia.',
           },
         ],
       },
@@ -6397,20 +6327,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: 'text',
-            text: 'Según datos de Propyme, más del 60% de las pymes chilenas ha tenido problemas de liquidez por cobros tardíos en el último año. No es una excepción. Es la norma.',
-          },
-        ],
-      },
-      {
-        type: 'subtitle',
-        text: 'El problema de fondo: cobrar sin proceso',
-      },
-      {
-        type: 'paragraph',
-        fragments: [
-          {
-            type: 'text',
-            text: 'La mayoría de las empresas cobra de manera reactiva. Espera el vencimiento, ve que no llegó el pago, y recién ahí actúa. Sin seguimiento previo. Sin datos. Sin automatización.',
+            text: 'Su historia no es la excepción. Acorde a la última encuesta de Propyme, más del 60% de las mipymes cerró el primer trimestre de 2026 con inyección de recursos personales. Cerca del 27% solicitó un crédito bancario. El 22% no pudo pagar sus obligaciones laborales.',
           },
         ],
       },
@@ -6419,7 +6336,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: 'text',
-            text: 'Y cuando finalmente se comunican con el cliente, ya pasaron días o semanas. El cliente ya "olvidó". O simplemente priorizó a quien le cobró primero.',
+            text: 'El impacto del no pago no se queda en el balance: se traslada a los equipos, a los proveedores, a los clientes finales. Cuando una gran empresa o el Estado retrasan sus pagos, asfixian cadenas completas de valor que generan empleo y productividad.',
           },
         ],
       },
@@ -6428,82 +6345,20 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: 'text',
-            text: 'Como reportó ',
+            text: 'La cobranza es mucho más que enviar recordatorios. Consiste en anticiparse, en llegar a la persona adecuada, en mostrar procesos que transmiten seriedad. Y sobre todo, en proteger las relaciones comerciales que costó construir.',
+          },
+        ],
+      },
+      {
+        type: 'paragraph',
+        fragments: [
+          {
+            type: 'text',
+            text: 'En Sena trabajamos con emprendedoras como Sofi todos los días. Les ayudamos a dejar de perseguir pagos y volver al trabajo que realmente importa. Si estás en una situación similar, ',
           },
           {
             type: 'link',
-            text: 'La Tercera',
-            href: 'https://www.latercera.com',
-          },
-          {
-            type: 'text',
-            text: ' en su cobertura del ecosistema pyme, el rezago en los pagos entre empresas es uno de los principales factores que limita el crecimiento de las empresas medianas en Chile.',
-          },
-        ],
-      },
-      {
-        type: 'subtitle',
-        text: 'Cobrar bien no es insistir más. Es anticiparse.',
-      },
-      {
-        type: 'paragraph',
-        fragments: [
-          {
-            type: 'text',
-            text: 'La diferencia entre las empresas que tienen flujo y las que no suele ser una sola cosa: proceso.',
-          },
-        ],
-      },
-      {
-        type: 'paragraph',
-        fragments: [
-          {
-            type: 'text',
-            text: 'Un recordatorio enviado tres días antes del vencimiento es mucho más efectivo que uno enviado tres días después. Un seguimiento automatizado por WhatsApp o email tiene más impacto que una llamada improvisada.',
-          },
-        ],
-      },
-      {
-        type: 'paragraph',
-        fragments: [
-          {
-            type: 'text',
-            text: 'Cuando tienes un proceso claro, cobrar deja de ser una fuente de estrés y se convierte en algo predecible.',
-          },
-        ],
-      },
-      {
-        type: 'subtitle',
-        text: 'Sena: cobranza con proceso, no con presión',
-      },
-      {
-        type: 'paragraph',
-        fragments: [
-          {
-            type: 'text',
-            text: 'Sena ayuda a empresas como la de Sofi a transformar su cobranza. Automatizamos los recordatorios, centralizamos el seguimiento y te damos visibilidad en tiempo real de qué facturas están en riesgo antes de que venzan.',
-          },
-        ],
-      },
-      {
-        type: 'paragraph',
-        fragments: [
-          {
-            type: 'text',
-            text: 'El resultado: menos tiempo persiguiendo pagos, más tiempo haciendo crecer tu negocio.',
-          },
-        ],
-      },
-      {
-        type: 'paragraph',
-        fragments: [
-          {
-            type: 'text',
-            text: 'Si quieres dejar de vivir con el estrés del flujo de caja, ',
-          },
-          {
-            type: 'link',
-            text: 'agenda una demo con nuestro equipo',
+            text: 'agenda una demo y cuéntanos qué está pasando en tu cartera',
             href: 'https://meetings.hubspot.com/francisco502',
           },
           {
@@ -6517,9 +6372,9 @@ export const blogPosts: BlogPost[] = [
   {
     id: 33,
     slug: slug('Tu equipo vende pero quien cobra'),
-    title: 'Tu equipo vende, pero \u00bfqui\u00e9n cobra?',
+    title: 'Tu equipo vende, pero ¿quién cobra?',
     intro:
-      'En muchas empresas, vender y cobrar son dos mundos separados. El problema es que esa separación tiene un costo enorme.',
+      'En muchas empresas existe un conflicto silencioso y permanente entre el equipo comercial y el equipo financiero. Ninguno está equivocado. Pero tampoco se ponen de acuerdo.',
     date: '17 de abril 2026',
     tags: ['Sena', 'Cobranza', 'Blog'],
     image: AssetImageBlog.blog_28_main.src,
@@ -6529,7 +6384,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: 'text',
-            text: 'En muchas empresas, vender y cobrar son dos mundos separados. El equipo comercial cierra negocios. El equipo administrativo (o el contador, o el asistente, o nadie en particular) se hace cargo de cobrar.',
+            text: 'En muchas empresas existe un conflicto silencioso y permanente entre dos áreas que deberían trabajar juntas: el equipo comercial y el equipo financiero. Los primeros quieren vender más, abrir nuevos clientes, extender crédito. Los segundos quieren ver los ingresos en la caja, restringir la cartera morosa y cuidar el inventario. Ninguno está equivocado. Pero tampoco se ponen de acuerdo.',
           },
         ],
       },
@@ -6538,20 +6393,20 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: 'text',
-            text: 'El problema es que esa separaci\u00f3n tiene un costo enorme.',
+            text: 'Este conflicto es especialmente intenso en empresas con venta en terreno: distribuidoras de alimentos, bebidas, ropa, insumos, cualquier industria donde un equipo de vendedores recorre el país entregando productos a crédito. Equipos numerosos, cobertura regional, ciclos de pago largos. Un modelo que genera crecimiento rápido, pero que sin gestión activa de cobranza puede convertirse en un problema de flujo de caja mayor.',
           },
         ],
       },
       {
         type: 'subtitle',
-        text: 'Dos tipos de empresa',
+        text: '¿Cómo cobrar sin perder clientes ni frenar las ventas?',
       },
       {
         type: 'paragraph',
         fragments: [
           {
             type: 'text',
-            text: 'Hay empresas donde el proceso comercial termina cuando se firma el contrato o se emite la factura. Y hay empresas donde el proceso comercial termina cuando el dinero entra a la cuenta.',
+            text: 'La respuesta es profesionalizar la cobranza. Eso significa tecnología y equipo trabajando en paralelo, no compitiendo.',
           },
         ],
       },
@@ -6560,55 +6415,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: 'text',
-            text: 'Las primeras tienen equipos de venta fuertes y procesos de cobranza d\u00e9biles. Las segundas entienden que ',
-          },
-          {
-            type: 'bold',
-            text: 'vender sin cobrar no es vender: es prestar.',
-          },
-        ],
-      },
-      {
-        type: 'subtitle',
-        text: 'El costo de no tener un proceso de cobranza',
-      },
-      {
-        type: 'paragraph',
-        fragments: [
-          {
-            type: 'text',
-            text: 'Cuando no hay un proceso claro de cobranza, pasan varias cosas:',
-          },
-        ],
-      },
-      {
-        type: 'list',
-        items: [
-          'Las facturas se acumulan sin seguimiento.',
-          'El equipo comercial evita presionar al cliente por miedo a perder la relaci\u00f3n.',
-          'La administraci\u00f3n cobra cuando puede, no cuando debe.',
-          'Los plazos se alargan y el flujo de caja se resiente.',
-        ],
-      },
-      {
-        type: 'paragraph',
-        fragments: [
-          {
-            type: 'text',
-            text: 'Y lo m\u00e1s irónico: a veces las empresas que m\u00e1s venden son las que m\u00e1s sufren de flujo. Porque crecieron sin escalar su proceso de cobranza.',
-          },
-        ],
-      },
-      {
-        type: 'subtitle',
-        text: '\u00bfQui\u00e9n deber\u00eda cobrar en tu empresa?',
-      },
-      {
-        type: 'paragraph',
-        fragments: [
-          {
-            type: 'text',
-            text: 'La respuesta corta: alguien con un proceso claro, herramientas adecuadas y visibilidad en tiempo real.',
+            text: 'Empresas con equipo interno de cobranza pero sin herramientas: ya tienen la cultura, les falta la plataforma. Sena les entrega un sistema de gestión robusto más agentes especializados que se adaptan al tamaño y complejidad de su cartera.',
           },
         ],
       },
@@ -6617,20 +6424,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: 'text',
-            text: 'No importa si es una persona dedicada o si se distribuye entre el equipo. Lo que importa es que haya un sistema. Que los recordatorios salgan antes del vencimiento. Que el seguimiento sea consistente. Que nadie tenga que perseguir pagos desde una planilla.',
-          },
-        ],
-      },
-      {
-        type: 'subtitle',
-        text: 'Sena: el proceso de cobranza que le falta a tu equipo',
-      },
-      {
-        type: 'paragraph',
-        fragments: [
-          {
-            type: 'text',
-            text: 'Sena es una plataforma dise\u00f1ada para que el proceso de cobranza exista, funcione y escale. Automatiza los recordatorios, centraliza el seguimiento de cada factura y le da a tu equipo visibilidad total sobre el estado de los cobros.',
+            text: 'Empresas más pequeñas que necesitan externalizar todo: no quieren gestionar cobranza internamente en ninguna etapa. Lo que buscan es un equipo externo de alta confianza que entienda su modelo de negocio, sus términos de crédito y sus ciclos de venta, y que actúe como una extensión de su operación.',
           },
         ],
       },
@@ -6639,15 +6433,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: 'text',
-            text: 'Porque ',
-          },
-          {
-            type: 'bold',
-            text: 'cobrar bien no es una habilidad. Es un proceso.',
-          },
-          {
-            type: 'text',
-            text: ' Y los procesos se pueden dise\u00f1ar, automatizar y mejorar.',
+            text: 'Vale la pena agregar que hay algo que la inteligencia artificial todavía no reemplaza: las relaciones humanas. En el mundo B2B, cobrar bien requiere entender el contexto del cliente, saber cuándo insistir y cuándo esperar, hablar con la persona indicada. Eso no se automatiza del todo, y por eso el equipo sigue siendo central en cualquier estrategia de cobranza.',
           },
         ],
       },
@@ -6656,11 +6442,20 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: 'text',
-            text: 'Si quieres que tu equipo deje de improvisar en la cobranza, ',
+            text: 'Cuando esto se hace bien, todos ganan: el equipo comercial puede seguir vendiendo, el equipo financiero ve la caja ordenada y el cliente siente que lo tratan con respeto.',
+          },
+        ],
+      },
+      {
+        type: 'paragraph',
+        fragments: [
+          {
+            type: 'text',
+            text: 'Eso es exactamente lo que construimos en Sena: que el arte de cobrar sea nuestro sello, para que el tuyo sea crecer. ¿Quieres saber cómo lo hacemos? ',
           },
           {
             type: 'link',
-            text: 'agenda una demo con nuestro equipo',
+            text: 'Conversemos',
             href: 'https://meetings.hubspot.com/francisco502',
           },
           {
