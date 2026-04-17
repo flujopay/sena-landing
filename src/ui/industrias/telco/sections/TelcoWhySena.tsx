@@ -1,21 +1,21 @@
 export const TelcoWhySena = () => {
   const differentiators = [
     {
-      title: "Entendemos la cobranza B2B compleja en telecomunicaciones",
+      title: 'Entendemos la cobranza B2B compleja en telecomunicaciones',
       description:
-        "No aplicamos fórmulas genéricas. Conocemos los ciclos de pago, las validaciones técnicas y la dinámica de contratos del sector telecom.",
+        'No aplicamos fórmulas genéricas. Conocemos los ciclos de pago, las validaciones técnicas y la dinámica de contratos del sector telecom.',
     },
     {
-      title: "Experiencia comprobada en industrias críticas y reguladas",
+      title: 'Experiencia comprobada en industrias críticas y reguladas',
       description:
-        "Respaldados por Recsa, con más de 40 años de trayectoria en cobranza corporativa y presencia en 15 países de Latinoamérica.",
+        'Respaldados por Recsa, con más de 40 años de trayectoria en cobranza corporativa y presencia en 15 países de Latinoamérica.',
     },
     {
-      title: "Tecnología escalable combinada con criterio humano experto",
+      title: 'Tecnología escalable combinada con criterio humano experto',
       description:
-        "Automatización inteligente para el volumen, intervención humana especializada para los casos que requieren negociación y sensibilidad comercial.",
+        'Automatización inteligente para el volumen, intervención humana especializada para los casos que requieren negociación y sensibilidad comercial.',
     },
-  ];
+  ]
 
   return (
     <section className="bg-[#F9F9F9] py-16 md:py-24">
@@ -35,19 +35,17 @@ export const TelcoWhySena = () => {
               className="relative bg-white rounded-2xl p-6 md:p-8 border border-slate-100 hover:shadow-md transition-shadow duration-300"
             >
               <div className="absolute top-6 right-6 text-brand-secondary/20 font-extrabold text-6xl leading-none select-none">
-                {String(idx + 1).padStart(2, "0")}
+                {String(idx + 1).padStart(2, '0')}
               </div>
               <div className="w-1 h-12 bg-brand-secondary rounded-full mb-5" />
               <h3 className="text-brand-primary-dark font-extrabold text-base md:text-lg mb-3 pr-12">
                 {item.title}
               </h3>
-              <p className="text-slate-600 text-sm md:text-base leading-relaxed">
-                {item.description}
-              </p>
+              <p className="text-slate-600 text-sm md:text-base leading-relaxed">{item.description}</p>
             </div>
           ))}
         </div>
       </div>
     </section>
-  );
-};
+  )
+}

@@ -1,6 +1,6 @@
-import { Footer } from "@/ui/layout/Footer";
-import { Header } from "@/ui/layout/Header";
-import { DocsPage } from "@/ui/docs/DocsPage";
+import { Footer } from '@/ui/layout/Footer'
+import { Header } from '@/ui/layout/Header'
+import { DocsPage } from '@/ui/docs/DocsPage'
 
 const Docs = () => {
   return (
@@ -11,7 +11,7 @@ const Docs = () => {
       </div>
       <Footer />
     </div>
-  );
-};
+  )
+}
 
-export default Docs;
+export default Docs

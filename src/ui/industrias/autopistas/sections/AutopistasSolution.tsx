@@ -1,24 +1,88 @@
 export const AutopistasSolution = () => {
   const pillars = [
-    { title: "Centraliza", description: "Integra datos de tránsitos, TAGs y facturación en un solo lugar. Visibilidad completa por cliente, flota, tramo o concesión, sin depender de planillas ni conciliaciones manuales.", icon: (<svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" /><path d="M2 17L12 22L22 17" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" /><path d="M2 12L12 17L22 12" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" /></svg>) },
-    { title: "Automatiza", description: "Flujos de cobranza diferenciados por tipo de cliente B2B (logística, transporte de pasajeros, corporativos). Estados de cuenta claros y recordatorios con respaldo detallado de tránsitos.", icon: (<svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L14.2 7.8L20 10L14.2 12.2L12 18L9.8 12.2L4 10L9.8 7.8L12 2Z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" /><path d="M19 14L19.8 16.2L22 17L19.8 17.8L19 20L18.2 17.8L16 17L18.2 16.2L19 14Z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" /></svg>) },
-    { title: "Recupera", description: "Para cuentas de alto volumen o disputas complejas, el equipo especialista de Sena interviene con experiencia en negociación B2B con grandes flotas y corporativos.", icon: (<svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 12.5C9.93 12.5 8.25 10.82 8.25 8.75C8.25 6.68 9.93 5 12 5C14.07 5 15.75 6.68 15.75 8.75C15.75 10.82 14.07 12.5 12 12.5Z" stroke="currentColor" strokeWidth="1.8" /><path d="M6.5 19C6.5 15.96 8.96 13.5 12 13.5C15.04 13.5 17.5 15.96 17.5 19" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" /></svg>) },
-  ];
+    {
+      title: 'Centraliza',
+      description:
+        'Integra datos de tránsitos, TAGs y facturación en un solo lugar. Visibilidad completa por cliente, flota, tramo o concesión, sin depender de planillas ni conciliaciones manuales.',
+      icon: (
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M12 2L2 7L12 12L22 7L12 2Z"
+            stroke="currentColor"
+            strokeWidth="1.8"
+            strokeLinejoin="round"
+          />
+          <path d="M2 17L12 22L22 17" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
+          <path d="M2 12L12 17L22 12" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
+        </svg>
+      ),
+    },
+    {
+      title: 'Automatiza',
+      description:
+        'Flujos de cobranza diferenciados por tipo de cliente B2B (logística, transporte de pasajeros, corporativos). Estados de cuenta claros y recordatorios con respaldo detallado de tránsitos.',
+      icon: (
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M12 2L14.2 7.8L20 10L14.2 12.2L12 18L9.8 12.2L4 10L9.8 7.8L12 2Z"
+            stroke="currentColor"
+            strokeWidth="1.8"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M19 14L19.8 16.2L22 17L19.8 17.8L19 20L18.2 17.8L16 17L18.2 16.2L19 14Z"
+            stroke="currentColor"
+            strokeWidth="1.8"
+            strokeLinejoin="round"
+          />
+        </svg>
+      ),
+    },
+    {
+      title: 'Recupera',
+      description:
+        'Para cuentas de alto volumen o disputas complejas, el equipo especialista de Sena interviene con experiencia en negociación B2B con grandes flotas y corporativos.',
+      icon: (
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M12 12.5C9.93 12.5 8.25 10.82 8.25 8.75C8.25 6.68 9.93 5 12 5C14.07 5 15.75 6.68 15.75 8.75C15.75 10.82 14.07 12.5 12 12.5Z"
+            stroke="currentColor"
+            strokeWidth="1.8"
+          />
+          <path
+            d="M6.5 19C6.5 15.96 8.96 13.5 12 13.5C15.04 13.5 17.5 15.96 17.5 19"
+            stroke="currentColor"
+            strokeWidth="1.8"
+            strokeLinecap="round"
+          />
+        </svg>
+      ),
+    },
+  ]
 
   return (
     <section className="bg-[#F9F9F9] py-16 md:py-24">
       <div className="max-w-[1280px] mx-auto px-4 md:px-10">
         <div className="text-left mb-4">
           <p className="text-brand-primary-dark text-2xl sm:text-4xl font-extrabold leading-tight">
-            Sena: El control total de tus ingresos<br />
+            Sena: El control total de tus ingresos
+            <br />
             <span className="text-brand-primary">por infraestructura vial</span>
           </p>
         </div>
-        <p className="text-slate-600 text-base md:text-lg max-w-2xl mb-12 leading-relaxed">Una plataforma diseñada para los desafíos de volumen, precisión y trazabilidad de la cobranza B2B en autopistas, combinando automatización inteligente con criterio experto.</p>
+        <p className="text-slate-600 text-base md:text-lg max-w-2xl mb-12 leading-relaxed">
+          Una plataforma diseñada para los desafíos de volumen, precisión y trazabilidad de la cobranza B2B en
+          autopistas, combinando automatización inteligente con criterio experto.
+        </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {pillars.map((p) => (
-            <div key={p.title} className="bg-white border border-slate-100 rounded-2xl p-6 md:p-8 hover:shadow-md transition-shadow duration-300">
-              <div className="w-12 h-12 rounded-full bg-brand-secondary flex items-center justify-center text-white mb-5">{p.icon}</div>
+            <div
+              key={p.title}
+              className="bg-white border border-slate-100 rounded-2xl p-6 md:p-8 hover:shadow-md transition-shadow duration-300"
+            >
+              <div className="w-12 h-12 rounded-full bg-brand-secondary flex items-center justify-center text-white mb-5">
+                {p.icon}
+              </div>
               <h3 className="text-brand-primary-dark font-extrabold text-xl mb-3">{p.title}</h3>
               <p className="text-slate-600 leading-relaxed text-sm md:text-base">{p.description}</p>
             </div>
@@ -26,5 +90,5 @@ export const AutopistasSolution = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}

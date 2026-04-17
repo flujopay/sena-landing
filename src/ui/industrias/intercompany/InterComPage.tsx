@@ -1,15 +1,15 @@
-"use client";
+'use client'
 
-import { Footer } from "@/ui/layout/Footer";
-import { Header } from "@/ui/layout/Header";
-import { IntercomBenefits } from "./sections/IntercomBenefits";
-import { IntercomCTA } from "./sections/IntercomCTA";
-import { IntercomHero } from "./sections/IntercomHero";
-import { IntercomHowItWorks } from "./sections/IntercomHowItWorks";
-import { IntercomProblem } from "./sections/IntercomProblem";
-import { IntercomSocialProof } from "./sections/IntercomSocialProof";
-import { IntercomSolution } from "./sections/IntercomSolution";
-import { IntercomWhySena } from "./sections/IntercomWhySena";
+import { Footer } from '@/ui/layout/Footer'
+import { Header } from '@/ui/layout/Header'
+import { IntercomBenefits } from './sections/IntercomBenefits'
+import { IntercomCTA } from './sections/IntercomCTA'
+import { IntercomHero } from './sections/IntercomHero'
+import { IntercomHowItWorks } from './sections/IntercomHowItWorks'
+import { IntercomProblem } from './sections/IntercomProblem'
+import { IntercomSocialProof } from './sections/IntercomSocialProof'
+import { IntercomSolution } from './sections/IntercomSolution'
+import { IntercomWhySena } from './sections/IntercomWhySena'
 
 export const InterComPage = () => {
   return (
@@ -27,5 +27,5 @@ export const InterComPage = () => {
         <Footer />
       </div>
     </div>
-  );
-};
+  )
+}

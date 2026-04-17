@@ -1,59 +1,59 @@
-"use client";
+'use client'
 
-import { useModalStore } from "@/lib/store/modalStore";
-import { useCurrencyStore } from "@/lib/store/useCurrencyStore";
-import { AssetIcon } from "@/lib/utils/assets/icon";
-import { AssetImage } from "@/lib/utils/assets/image";
-import Image from "next/image";
-import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
-import { useEffect, useMemo, useRef, useState } from "react";
-import Button from "../shared/Button";
+import { useModalStore } from '@/lib/store/modalStore'
+import { useCurrencyStore } from '@/lib/store/useCurrencyStore'
+import { AssetIcon } from '@/lib/utils/assets/icon'
+import { AssetImage } from '@/lib/utils/assets/image'
+import Image from 'next/image'
+import Link from 'next/link'
+import { usePathname, useRouter } from 'next/navigation'
+import { useEffect, useMemo, useRef, useState } from 'react'
+import Button from '../shared/Button'
 
 type Props = {
-  variant: "primary" | "secondary";
-};
+  variant: 'primary' | 'secondary'
+}
 
-const SENA_BASE_URL = "https://www.somossena.com";
+const SENA_BASE_URL = 'https://www.somossena.com'
 
 type NavItem =
-  | { id: number; name: string; type: "scroll"; href: string }
-  | { id: number; name: string; type: "redirect"; href: string }
-  | { id: number; name: string; type: "external"; href: string }
+  | { id: number; name: string; type: 'scroll'; href: string }
+  | { id: number; name: string; type: 'redirect'; href: string }
+  | { id: number; name: string; type: 'external'; href: string }
   | {
-      id: number;
-      name: string;
-      type: "dropdown";
-      key: "productos" | "industrias";
-    };
+      id: number
+      name: string
+      type: 'dropdown'
+      key: 'productos' | 'industrias'
+    }
 
 type IndustryItem = {
-  id: number;
-  name: string;
-  href: string;
-  description?: string;
-  icon?: React.ReactNode;
-};
+  id: number
+  name: string
+  href: string
+  description?: string
+  icon?: React.ReactNode
+}
 
 type ProductItem = {
-  id: number;
-  name: string;
-  description?: string;
-  tab: "autogestion" | "recuperacion" | "external";
-  href?: string;
-};
+  id: number
+  name: string
+  description?: string
+  tab: 'autogestion' | 'recuperacion' | 'external'
+  href?: string
+}
 
 type MobileMenuContentProps = {
-  logo: any;
-  products: ProductItem[];
-  industries: IndustryItem[];
-  onClose: () => void;
-  goToProduct: (tab: ProductItem["tab"], href?: string) => void;
-  handleNavClick: (section: NavItem) => void;
-  sectiosnNavbar: NavItem[];
-  router: ReturnType<typeof useRouter>;
-  redirectLogin: () => void;
-};
+  logo: any
+  products: ProductItem[]
+  industries: IndustryItem[]
+  onClose: () => void
+  goToProduct: (tab: ProductItem['tab'], href?: string) => void
+  handleNavClick: (section: NavItem) => void
+  sectiosnNavbar: NavItem[]
+  router: ReturnType<typeof useRouter>
+  redirectLogin: () => void
+}
 
 const MobileMenuContent = ({
   logo,
@@ -66,8 +66,8 @@ const MobileMenuContent = ({
   router,
   redirectLogin,
 }: MobileMenuContentProps) => {
-  const [mobileIndustriesOpen, setMobileIndustriesOpen] = useState(false);
-  const [mobileProductsOpen, setMobileProductsOpen] = useState(false);
+  const [mobileIndustriesOpen, setMobileIndustriesOpen] = useState(false)
+  const [mobileProductsOpen, setMobileProductsOpen] = useState(false)
 
   return (
     <div className="flex flex-col h-full bg-white">
@@ -99,19 +99,13 @@ const MobileMenuContent = ({
                   <button
                     key={it.id}
                     onClick={() => {
-                      onClose();
-                      goToProduct(it.tab, it.href);
+                      onClose()
+                      goToProduct(it.tab, it.href)
                     }}
                     className="text-left px-3 py-3 rounded-xl hover:bg-gray-50 transition cursor-pointer"
                   >
-                    <span className="text-sm font-semibold text-black">
-                      {it.name}
-                    </span>
-                    {it.description && (
-                      <p className="text-xs text-gray-400 mt-0.5">
-                        {it.description}
-                      </p>
-                    )}
+                    <span className="text-sm font-semibold text-black">{it.name}</span>
+                    {it.description && <p className="text-xs text-gray-400 mt-0.5">{it.description}</p>}
                   </button>
                 ))}
               </div>
@@ -135,19 +129,13 @@ const MobileMenuContent = ({
                   <button
                     key={it.id}
                     onClick={() => {
-                      onClose();
-                      router.push(it.href);
+                      onClose()
+                      router.push(it.href)
                     }}
                     className="text-left px-3 py-3 rounded-xl hover:bg-gray-50 transition cursor-pointer"
                   >
-                    <span className="text-sm font-semibold text-black">
-                      {it.name}
-                    </span>
-                    {it.description && (
-                      <p className="text-xs text-gray-400 mt-0.5">
-                        {it.description}
-                      </p>
-                    )}
+                    <span className="text-sm font-semibold text-black">{it.name}</span>
+                    {it.description && <p className="text-xs text-gray-400 mt-0.5">{it.description}</p>}
                   </button>
                 ))}
               </div>
@@ -157,19 +145,17 @@ const MobileMenuContent = ({
 
         {/* Resto normal */}
         {sectiosnNavbar
-          .filter((s) => s.type !== "dropdown")
+          .filter((s) => s.type !== 'dropdown')
           .map((section) => (
             <button
               key={section.id}
               onClick={() => {
-                onClose();
-                handleNavClick(section);
+                onClose()
+                handleNavClick(section)
               }}
               className="w-full text-left px-6 py-5 border-t border-gray-200 cursor-pointer"
             >
-              <span className="text-base font-bold text-black">
-                {section.name}
-              </span>
+              <span className="text-base font-bold text-black">{section.name}</span>
             </button>
           ))}
 
@@ -184,8 +170,8 @@ const MobileMenuContent = ({
           variant="ghost"
           className="w-full max-w-[280px]"
           onClick={() => {
-            onClose();
-            redirectLogin();
+            onClose()
+            redirectLogin()
           }}
         />
         <Button
@@ -194,41 +180,33 @@ const MobileMenuContent = ({
           variant="primaryFilled"
           className="w-full max-w-[280px]"
           onClick={() => {
-            onClose();
-            router.push("/contactanos");
+            onClose()
+            router.push('/contactanos')
           }}
         />
       </div>
     </div>
-  );
-};
+  )
+}
 
 export const Header = ({ variant }: Props) => {
-  const pathname = usePathname();
-  const router = useRouter();
-  const { showModal, hideModal } = useModalStore();
-  const { ipCurrency } = useCurrencyStore();
+  const pathname = usePathname()
+  const router = useRouter()
+  const { showModal, hideModal } = useModalStore()
+  const { ipCurrency } = useCurrencyStore()
 
-  const logo =
-    variant === "primary" ? AssetImage.logoBlack : AssetImage.logoBlack;
+  const logo = variant === 'primary' ? AssetImage.logoBlack : AssetImage.logoBlack
 
   // ✅ Industrias (rutas)
   const industries: IndustryItem[] = useMemo(
     () => [
       {
         id: 1,
-        name: "Telco",
-        href: "/industrias/telco",
-        description:
-          "Cobranza B2B para contratos de conectividad y servicios gestionados",
+        name: 'Telco',
+        href: '/industrias/telco',
+        description: 'Cobranza B2B para contratos de conectividad y servicios gestionados',
         icon: (
-          <svg
-            width="16"
-            height="16"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M5 12.55C6.97 16.84 10.16 20.03 14.45 22L16.69 19.77C16.97 19.49 17.37 19.4 17.72 19.53C18.87 19.93 20.1 20.15 21.38 20.15C21.93 20.15 22.38 20.6 22.38 21.15V24C22.38 24.55 21.93 25 21.38 25C10.33 25 1.38 16.05 1.38 5C1.38 4.45 1.83 4 2.38 4H5.23C5.78 4 6.23 4.45 6.23 5C6.23 6.28 6.45 7.51 6.85 8.66C6.97 9.01 6.89 9.41 6.6 9.69L5 12.55Z"
               stroke="currentColor"
@@ -241,18 +219,11 @@ export const Header = ({ variant }: Props) => {
       },
       {
         id: 2,
-        name: "Tech Beauty",
-        href: "/industrias/tech-beauty",
-        description:
-          "Gestión de cuentas por cobrar para distribuidores y salones",
+        name: 'Tech Beauty',
+        href: '/industrias/tech-beauty',
+        description: 'Gestión de cuentas por cobrar para distribuidores y salones',
         icon: (
-          <svg
-            width="16"
-            height="16"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M12 2L14.09 8.26L20 9.27L15.55 13.97L16.91 20L12 16.9L7.09 20L8.45 13.97L4 9.27L9.91 8.26L12 2Z"
               stroke="currentColor"
@@ -264,18 +235,11 @@ export const Header = ({ variant }: Props) => {
       },
       {
         id: 3,
-        name: "Maquinarias",
-        href: "/industrias/maquinarias",
-        description:
-          "Recupera facturas de alto valor en minería y maquinaria pesada",
+        name: 'Maquinarias',
+        href: '/industrias/maquinarias',
+        description: 'Recupera facturas de alto valor en minería y maquinaria pesada',
         icon: (
-          <svg
-            width="16"
-            height="16"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"
               stroke="currentColor"
@@ -288,18 +252,11 @@ export const Header = ({ variant }: Props) => {
       },
       {
         id: 4,
-        name: "Servicios Básicos",
-        href: "/industrias/servicios-basicos",
-        description:
-          "Cobranza para contratos regulados de utilities y servicios esenciales",
+        name: 'Servicios Básicos',
+        href: '/industrias/servicios-basicos',
+        description: 'Cobranza para contratos regulados de utilities y servicios esenciales',
         icon: (
-          <svg
-            width="16"
-            height="16"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"
               stroke="currentColor"
@@ -312,18 +269,11 @@ export const Header = ({ variant }: Props) => {
       },
       {
         id: 5,
-        name: "Autopistas",
-        href: "/industrias/autopistas",
-        description:
-          "Conciliación de TAG, flotas y cobranza en concesiones viales",
+        name: 'Autopistas',
+        href: '/industrias/autopistas',
+        description: 'Conciliación de TAG, flotas y cobranza en concesiones viales',
         icon: (
-          <svg
-            width="16"
-            height="16"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M5 18H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h3.19M15 6h2.81A2 2 0 0 1 20 8v8a2 2 0 0 1-2 2h-2"
               stroke="currentColor"
@@ -335,29 +285,17 @@ export const Header = ({ variant }: Props) => {
               stroke="currentColor"
               strokeWidth="1.6"
             />
-            <path
-              d="M12 2v4M8 6h8"
-              stroke="currentColor"
-              strokeWidth="1.6"
-              strokeLinecap="round"
-            />
+            <path d="M12 2v4M8 6h8" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
           </svg>
         ),
       },
       {
         id: 6,
-        name: "Family Office",
-        href: "/industrias/family-office",
-        description:
-          "Control financiero y cobranza patrimonial para holdings familiares",
+        name: 'Family Office',
+        href: '/industrias/family-office',
+        description: 'Control financiero y cobranza patrimonial para holdings familiares',
         icon: (
-          <svg
-            width="16"
-            height="16"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11M20 10v11M8 14v4M12 14v4M16 14v4"
               stroke="currentColor"
@@ -370,18 +308,11 @@ export const Header = ({ variant }: Props) => {
       },
       {
         id: 7,
-        name: "Intercompany",
-        href: "/industrias/intercompany",
-        description:
-          "Protege tu MRR y recupera pagos fallidos en modelos de suscripción",
+        name: 'Intercompany',
+        href: '/industrias/intercompany',
+        description: 'Protege tu MRR y recupera pagos fallidos en modelos de suscripción',
         icon: (
-          <svg
-            width="16"
-            height="16"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M17 1l4 4-4 4"
               stroke="currentColor"
@@ -408,18 +339,11 @@ export const Header = ({ variant }: Props) => {
       },
       {
         id: 8,
-        name: "Inmobiliarias",
-        href: "/industrias/inmobiliarias",
-        description:
-          "Gestión de cuotas, arriendos y promesas en proyectos inmobiliarios",
+        name: 'Inmobiliarias',
+        href: '/industrias/inmobiliarias',
+        description: 'Gestión de cuotas, arriendos y promesas en proyectos inmobiliarios',
         icon: (
-          <svg
-            width="16"
-            height="16"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
               stroke="currentColor"
@@ -438,149 +362,139 @@ export const Header = ({ variant }: Props) => {
         ),
       },
     ],
-    [],
-  );
+    []
+  )
 
   const products: ProductItem[] = useMemo(
     () => [
       {
         id: 1,
-        name: "Plataforma de autogestión",
-        description: "Cobros automáticos, recordatorios y seguimiento.",
-        tab: "autogestion",
+        name: 'Plataforma de autogestión',
+        description: 'Cobros automáticos, recordatorios y seguimiento.',
+        tab: 'autogestion',
       },
       {
         id: 2,
-        name: "Servicio de Recupero",
-        description: "Gestión humana + estrategia para recuperar cartera.",
-        tab: "recuperacion",
+        name: 'Servicio de Recupero',
+        description: 'Gestión humana + estrategia para recuperar cartera.',
+        tab: 'recuperacion',
       },
       {
         id: 3,
-        name: "Opera",
-        description: "Servicio de cobranza all-in.",
-        tab: "external",
-        href: "https://opera.somossena.com/",
+        name: 'Opera',
+        description: 'Servicio de cobranza all-in.',
+        tab: 'external',
+        href: 'https://opera.somossena.com/',
       },
     ],
-    [],
-  );
+    []
+  )
 
   const sectiosnNavbar: NavItem[] = useMemo(
     () => [
-      { id: 101, name: "Productos", type: "dropdown", key: "productos" },
-      { id: 102, name: "Industrias", type: "dropdown", key: "industrias" },
-      { id: 2, name: "Precios", href: "#precios", type: "scroll" },
-      { id: 3, name: "Nosotros", href: "/nosotros", type: "redirect" },
-      { id: 5, name: "Blog", href: "/blog", type: "redirect" },
+      { id: 101, name: 'Productos', type: 'dropdown', key: 'productos' },
+      { id: 102, name: 'Industrias', type: 'dropdown', key: 'industrias' },
+      { id: 2, name: 'Precios', href: '#precios', type: 'scroll' },
+      { id: 3, name: 'Nosotros', href: '/nosotros', type: 'redirect' },
+      { id: 5, name: 'Blog', href: '/blog', type: 'redirect' },
     ],
-    [],
-  );
+    []
+  )
 
-  const isActive = (href: string) => pathname === href;
+  const isActive = (href: string) => pathname === href
 
   const getActiveClass = (href: string) => {
-    if (!isActive(href)) return "";
-    return "inline-block border-b-2 border-brand-secondary !text-brand-primary pb-[2px]";
-  };
+    if (!isActive(href)) return ''
+    return 'inline-block border-b-2 border-brand-secondary !text-brand-primary pb-[2px]'
+  }
 
   const handleNavClick = (section: NavItem) => {
-    hideModal();
+    hideModal()
 
-    if (section.type === "scroll") {
-      goToAnchor(section.href);
-    } else if (section.type === "redirect") {
-      router.push(section.href);
-    } else if (section.type === "external") {
-      window.open(section.href, "_self");
+    if (section.type === 'scroll') {
+      goToAnchor(section.href)
+    } else if (section.type === 'redirect') {
+      router.push(section.href)
+    } else if (section.type === 'external') {
+      window.open(section.href, '_self')
     }
-  };
+  }
 
   // ✅ Scroll suave (HOME) o redirección a /#id (otras páginas)
   const goToAnchor = (href: string) => {
-    const id = href.replace("#", "");
+    const id = href.replace('#', '')
 
-    if (pathname === "/") {
-      const el = document.getElementById(id);
-      if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+    if (pathname === '/') {
+      const el = document.getElementById(id)
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
     } else {
-      window.location.href = `/#${id}`;
+      window.location.href = `/#${id}`
     }
-  };
+  }
 
   const redirectLogin = () => {
-    const url = ipCurrency === "PEN" ? "pe" : "";
-    router.push(`https://app.somossena.com/login?l=${url}&origin=main`);
-  };
+    const url = ipCurrency === 'PEN' ? 'pe' : ''
+    router.push(`https://app.somossena.com/login?l=${url}&origin=main`)
+  }
 
   // =========================
   // ✅ Dropdown states (desktop)
   // =========================
-  const [openIndustries, setOpenIndustries] = useState(false);
-  const [openProducts, setOpenProducts] = useState(false);
+  const [openIndustries, setOpenIndustries] = useState(false)
+  const [openProducts, setOpenProducts] = useState(false)
 
-  const closeTimerIndustries = useRef<number | null>(null);
-  const closeTimerProducts = useRef<number | null>(null);
+  const closeTimerIndustries = useRef<number | null>(null)
+  const closeTimerProducts = useRef<number | null>(null)
 
   const openInd = () => {
-    if (closeTimerIndustries.current)
-      window.clearTimeout(closeTimerIndustries.current);
-    setOpenIndustries(true);
-  };
+    if (closeTimerIndustries.current) window.clearTimeout(closeTimerIndustries.current)
+    setOpenIndustries(true)
+  }
   const closeInd = (delay = 120) => {
-    if (closeTimerIndustries.current)
-      window.clearTimeout(closeTimerIndustries.current);
-    closeTimerIndustries.current = window.setTimeout(
-      () => setOpenIndustries(false),
-      delay,
-    );
-  };
+    if (closeTimerIndustries.current) window.clearTimeout(closeTimerIndustries.current)
+    closeTimerIndustries.current = window.setTimeout(() => setOpenIndustries(false), delay)
+  }
 
   const openProd = () => {
-    if (closeTimerProducts.current)
-      window.clearTimeout(closeTimerProducts.current);
-    setOpenProducts(true);
-  };
+    if (closeTimerProducts.current) window.clearTimeout(closeTimerProducts.current)
+    setOpenProducts(true)
+  }
   const closeProd = (delay = 120) => {
-    if (closeTimerProducts.current)
-      window.clearTimeout(closeTimerProducts.current);
-    closeTimerProducts.current = window.setTimeout(
-      () => setOpenProducts(false),
-      delay,
-    );
-  };
+    if (closeTimerProducts.current) window.clearTimeout(closeTimerProducts.current)
+    closeTimerProducts.current = window.setTimeout(() => setOpenProducts(false), delay)
+  }
 
   useEffect(() => {
     const onKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "Escape") {
-        setOpenIndustries(false);
-        setOpenProducts(false);
+      if (e.key === 'Escape') {
+        setOpenIndustries(false)
+        setOpenProducts(false)
       }
-    };
-    window.addEventListener("keydown", onKeyDown);
-    return () => window.removeEventListener("keydown", onKeyDown);
-  }, []);
+    }
+    window.addEventListener('keydown', onKeyDown)
+    return () => window.removeEventListener('keydown', onKeyDown)
+  }, [])
 
   const goToIndustry = (href: string) => {
-    setOpenIndustries(false);
-    router.push(href);
-  };
+    setOpenIndustries(false)
+    router.push(href)
+  }
 
-  const goToProduct = (tab: ProductItem["tab"], href?: string) => {
-    setOpenProducts(false);
+  const goToProduct = (tab: ProductItem['tab'], href?: string) => {
+    setOpenProducts(false)
 
-    if (tab === "external" && href) {
-      window.location.href = href;
-      return;
+    if (tab === 'external' && href) {
+      window.location.href = href
+      return
     }
 
-    if (tab === "recuperacion") {
-      window.location.href = "https://recupera.somossena.com/";
-      return;
+    if (tab === 'recuperacion') {
+      window.location.href = 'https://recupera.somossena.com/'
+      return
     }
 
-    window.location.href = `${SENA_BASE_URL}/?tab=${tab}#productos`;
-  };
+    window.location.href = `${SENA_BASE_URL}/?tab=${tab}#productos`
+  }
 
   const openMobileMenu = () => {
     showModal({
@@ -598,12 +512,12 @@ export const Header = ({ variant }: Props) => {
         />
       ),
       showHeader: false,
-      width: "100%",
-      height: "100vh",
-      modalClassName: "lg:hidden",
-      contentClassName: "!rounded-none !max-h-full",
-    });
-  };
+      width: '100%',
+      height: '100vh',
+      modalClassName: 'lg:hidden',
+      contentClassName: '!rounded-none !max-h-full',
+    })
+  }
 
   return (
     <header className="sticky top-0 z-50 bg-[#f9f9f9]">
@@ -620,7 +534,7 @@ export const Header = ({ variant }: Props) => {
             // =========================
             // ✅ Productos (lista vertical como tu imagen)
             // =========================
-            if (section.type === "dropdown" && section.key === "productos") {
+            if (section.type === 'dropdown' && section.key === 'productos') {
               return (
                 <div
                   key={section.id}
@@ -632,9 +546,7 @@ export const Header = ({ variant }: Props) => {
                     type="button"
                     onFocus={openProd}
                     className={`flex items-center gap-2 font-semibold cursor-pointer ${
-                      variant === "primary"
-                        ? "text-brand-primary-dark"
-                        : "text-blue-500"
+                      variant === 'primary' ? 'text-brand-primary-dark' : 'text-blue-500'
                     }`}
                     aria-haspopup="menu"
                     aria-expanded={openProducts}
@@ -646,8 +558,8 @@ export const Header = ({ variant }: Props) => {
                   <div
                     className={`absolute left-1/2 -translate-x-1/2 top-[52px] w-[680px] ${
                       openProducts
-                        ? "opacity-100 translate-y-0 pointer-events-auto"
-                        : "opacity-0 -translate-y-1 pointer-events-none"
+                        ? 'opacity-100 translate-y-0 pointer-events-auto'
+                        : 'opacity-0 -translate-y-1 pointer-events-none'
                     } transition-all duration-150`}
                     onMouseEnter={openProd}
                     onMouseLeave={() => closeProd(140)}
@@ -656,12 +568,10 @@ export const Header = ({ variant }: Props) => {
                       <div className="grid grid-cols-12">
                         {/* Col izquierda */}
                         <div className="col-span-4 bg-gray-50 p-7">
-                          <h4 className="text-2xl font-extrabold text-black">
-                            Productos
-                          </h4>
+                          <h4 className="text-2xl font-extrabold text-black">Productos</h4>
                           <p className="text-sm text-gray-600 mt-3 leading-relaxed">
-                            Conoce nuestras soluciones de cobranza y elige la
-                            que mejor se adapte a tu operación.
+                            Conoce nuestras soluciones de cobranza y elige la que mejor se adapte a tu
+                            operación.
                           </p>
 
                           <div className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-brand-primary">
@@ -702,7 +612,7 @@ export const Header = ({ variant }: Props) => {
                               >
                                 <div className="flex items-start gap-3">
                                   <div className="mt-0.5 h-8 w-8 shrink-0 rounded-lg bg-brand-primary/5 group-hover:bg-brand-primary/10 border border-brand-primary/10 flex items-center justify-center text-brand-primary transition-colors">
-                                    {it.tab === "autogestion" ? (
+                                    {it.tab === 'autogestion' ? (
                                       <svg
                                         width="16"
                                         height="16"
@@ -731,25 +641,15 @@ export const Header = ({ variant }: Props) => {
                                           strokeWidth="1.6"
                                           strokeLinecap="round"
                                         />
-                                        <circle
-                                          cx="9"
-                                          cy="7"
-                                          r="4"
-                                          stroke="currentColor"
-                                          strokeWidth="1.6"
-                                        />
+                                        <circle cx="9" cy="7" r="4" stroke="currentColor" strokeWidth="1.6" />
                                       </svg>
                                     )}
                                   </div>
 
                                   <div>
-                                    <p className="text-sm font-bold text-black">
-                                      {it.name}
-                                    </p>
+                                    <p className="text-sm font-bold text-black">{it.name}</p>
                                     {it.description && (
-                                      <p className="text-xs text-gray-500 mt-1">
-                                        {it.description}
-                                      </p>
+                                      <p className="text-xs text-gray-500 mt-1">{it.description}</p>
                                     )}
                                   </div>
                                 </div>
@@ -761,13 +661,13 @@ export const Header = ({ variant }: Props) => {
                     </div>
                   </div>
                 </div>
-              );
+              )
             }
 
             // =========================
             // ✅ Industrias (mega menu)
             // =========================
-            if (section.type === "dropdown" && section.key === "industrias") {
+            if (section.type === 'dropdown' && section.key === 'industrias') {
               return (
                 <div
                   key={section.id}
@@ -779,9 +679,7 @@ export const Header = ({ variant }: Props) => {
                     type="button"
                     onFocus={openInd}
                     className={`flex items-center gap-2 font-semibold cursor-pointer ${
-                      variant === "primary"
-                        ? "text-brand-primary-dark"
-                        : "text-blue-500"
+                      variant === 'primary' ? 'text-brand-primary-dark' : 'text-blue-500'
                     }`}
                     aria-haspopup="menu"
                     aria-expanded={openIndustries}
@@ -792,8 +690,8 @@ export const Header = ({ variant }: Props) => {
                   <div
                     className={`absolute left-1/2 -translate-x-1/2 top-[52px] w-[760px] ${
                       openIndustries
-                        ? "opacity-100 translate-y-0 pointer-events-auto"
-                        : "opacity-0 -translate-y-1 pointer-events-none"
+                        ? 'opacity-100 translate-y-0 pointer-events-auto'
+                        : 'opacity-0 -translate-y-1 pointer-events-none'
                     } transition-all duration-150`}
                     onMouseEnter={openInd}
                     onMouseLeave={() => closeInd(140)}
@@ -801,12 +699,9 @@ export const Header = ({ variant }: Props) => {
                     <div className="rounded-2xl bg-white shadow-[0_18px_60px_rgba(0,0,0,0.12)] border border-gray-100 overflow-hidden">
                       <div className="grid grid-cols-12">
                         <div className="col-span-4 bg-gray-50 p-7">
-                          <h4 className="text-2xl font-extrabold text-black">
-                            Industrias
-                          </h4>
+                          <h4 className="text-2xl font-extrabold text-black">Industrias</h4>
                           <p className="text-sm text-gray-600 mt-3 leading-relaxed">
-                            Soluciones de cobranza B2B adaptadas a los desafíos
-                            de tu sector.
+                            Soluciones de cobranza B2B adaptadas a los desafíos de tu sector.
                           </p>
                           <div className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-brand-primary">
                             <svg
@@ -849,9 +744,7 @@ export const Header = ({ variant }: Props) => {
                                   </div>
 
                                   <div className="min-w-0">
-                                    <p className="text-sm font-bold text-black">
-                                      {it.name}
-                                    </p>
+                                    <p className="text-sm font-bold text-black">{it.name}</p>
                                     {it.description && (
                                       <p className="text-[11px] text-gray-400 mt-0.5 leading-snug line-clamp-2">
                                         {it.description}
@@ -867,26 +760,24 @@ export const Header = ({ variant }: Props) => {
                     </div>
                   </div>
                 </div>
-              );
+              )
             }
 
             // =========================
             // ✅ Resto normal
             // =========================
-            if (section.type === "scroll") {
+            if (section.type === 'scroll') {
               return (
                 <button
                   key={section.id}
                   onClick={() => handleNavClick(section)}
                   className={`${
-                    variant === "primary"
-                      ? "text-brand-primary-dark"
-                      : "text-blue-500"
+                    variant === 'primary' ? 'text-brand-primary-dark' : 'text-blue-500'
                   } font-semibold cursor-pointer`}
                 >
                   {section.name}
                 </button>
-              );
+              )
             }
 
             return (
@@ -894,16 +785,12 @@ export const Header = ({ variant }: Props) => {
                 key={section.id}
                 onClick={() => handleNavClick(section)}
                 className={`${
-                  variant === "primary"
-                    ? "text-brand-primary-dark"
-                    : "text-blue-500"
-                } font-semibold cursor-pointer ${
-                  "href" in section ? getActiveClass(section.href) : ""
-                }`}
+                  variant === 'primary' ? 'text-brand-primary-dark' : 'text-blue-500'
+                } font-semibold cursor-pointer ${'href' in section ? getActiveClass(section.href) : ''}`}
               >
                 {section.name}
               </button>
-            );
+            )
           })}
         </div>
 
@@ -919,11 +806,9 @@ export const Header = ({ variant }: Props) => {
           <Button
             size="md"
             text="Contáctanos"
-            variant={
-              variant === "primary" ? "primaryFilled" : "secondaryFilled"
-            }
+            variant={variant === 'primary' ? 'primaryFilled' : 'secondaryFilled'}
             className="text-md"
-            onClick={() => router.push("/contactanos")}
+            onClick={() => router.push('/contactanos')}
           />
         </div>
 
@@ -934,17 +819,13 @@ export const Header = ({ variant }: Props) => {
             text="Contáctanos"
             variant="secondaryFilled"
             className="text-xs px-3 py-1.5"
-            onClick={() => router.push("/contactanos")}
+            onClick={() => router.push('/contactanos')}
           />
-          <button
-            onClick={openMobileMenu}
-            className="p-2 z-50"
-            aria-label="Abrir menú"
-          >
+          <button onClick={openMobileMenu} className="p-2 z-50" aria-label="Abrir menú">
             <AssetIcon.menu width={28} height={28} />
           </button>
         </div>
       </div>
     </header>
-  );
-};
+  )
+}

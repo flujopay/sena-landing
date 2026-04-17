@@ -1,6 +1,6 @@
-import { Footer } from "@/ui/layout/Footer";
-import { Header } from "@/ui/layout/Header";
-import { TermAndCond } from "./sections/TermAndCond";
+import { Footer } from '@/ui/layout/Footer'
+import { Header } from '@/ui/layout/Header'
+import { TermAndCond } from './sections/TermAndCond'
 
 export const TermPage = () => {
   return (
@@ -9,5 +9,5 @@ export const TermPage = () => {
       <TermAndCond />
       <Footer />
     </div>
-  );
-};
+  )
+}

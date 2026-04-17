@@ -1,12 +1,12 @@
 export function slug(title: string): string {
   return title
     .toLowerCase()
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .replace(/[^a-z0-9\s-]/g, "")
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9\s-]/g, '')
     .trim()
-    .replace(/\s+/g, "-")
-    .replace(/-+/g, "-");
+    .replace(/\s+/g, '-')
+    .replace(/-+/g, '-')
 }
 
 export function parseSpanishDate(dateString: string): Date {
@@ -23,12 +23,12 @@ export function parseSpanishDate(dateString: string): Date {
     octubre: 9,
     noviembre: 10,
     diciembre: 11,
-  };
+  }
 
-  const parts = dateString.split(" ");
-  const day = parseInt(parts[0], 10);
-  const monthName = parts[2].toLowerCase();
-  const year = parseInt(parts[3], 10);
+  const parts = dateString.split(' ')
+  const day = parseInt(parts[0], 10)
+  const monthName = parts[2].toLowerCase()
+  const year = parseInt(parts[3], 10)
 
-  return new Date(year, monthsMap[monthName], day);
+  return new Date(year, monthsMap[monthName], day)
 }

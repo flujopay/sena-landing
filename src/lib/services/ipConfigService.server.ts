@@ -1,30 +1,30 @@
-import { apiDev } from "@/api";
+import { apiDev } from '@/api'
 
-import { headers } from "next/headers";
+import { headers } from 'next/headers'
 
 const getClientIp = async () => {
-  const h = await headers();
+  const h = await headers()
 
-  const xff = h.get("x-forwarded-for");
-  if (xff) return xff.split(",")[0].trim();
+  const xff = h.get('x-forwarded-for')
+  if (xff) return xff.split(',')[0].trim()
 
-  return h.get("x-real-ip") ?? h.get("cf-connecting-ip") ?? null;
-};
+  return h.get('x-real-ip') ?? h.get('cf-connecting-ip') ?? null
+}
 
 export const getIpInfoServer = async (): Promise<any | null> => {
   try {
-    const clientIp = await getClientIp();
+    const clientIp = await getClientIp()
 
-    console.log("headers", { "x-client-ip": clientIp });
-    const res = await apiDev.get("configuration/get_ip_info/", {
-      headers: clientIp ? { "x-client-ip": clientIp } : undefined,
-    });
+    console.log('headers', { 'x-client-ip': clientIp })
+    const res = await apiDev.get('configuration/get_ip_info/', {
+      headers: clientIp ? { 'x-client-ip': clientIp } : undefined,
+    })
 
-    console.log("res.data", res.data);
+    console.log('res.data', res.data)
 
-    return res.data;
+    return res.data
   } catch (error) {
-    console.error("Error obteniendo IP en servidor:", error);
-    return null;
+    console.error('Error obteniendo IP en servidor:', error)
+    return null
   }
-};
+}

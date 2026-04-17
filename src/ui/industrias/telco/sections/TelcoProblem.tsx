@@ -1,24 +1,24 @@
 export const TelcoProblem = () => {
   const painPoints = [
     {
-      number: "01",
-      title: "Procesos de pago largos y técnicos",
+      number: '01',
+      title: 'Procesos de pago largos y técnicos',
       description:
-        "En la cobranza B2B de telecomunicaciones, el pago no depende solo de finanzas. Validaciones técnicas, SLAs, actas de conformidad y múltiples áreas internas pueden retrasar una factura 60, 90 o más días.",
+        'En la cobranza B2B de telecomunicaciones, el pago no depende solo de finanzas. Validaciones técnicas, SLAs, actas de conformidad y múltiples áreas internas pueden retrasar una factura 60, 90 o más días.',
     },
     {
-      number: "02",
-      title: "Pocas facturas, montos estratégicos",
+      number: '02',
+      title: 'Pocas facturas, montos estratégicos',
       description:
-        "No son miles de tickets pequeños. Son contratos B2B de conectividad, enlaces, data centers o servicios gestionados, donde cada factura impacta directamente el flujo de caja.",
+        'No son miles de tickets pequeños. Son contratos B2B de conectividad, enlaces, data centers o servicios gestionados, donde cada factura impacta directamente el flujo de caja.',
     },
     {
-      number: "03",
-      title: "Relaciones comerciales que no puedes dañar",
+      number: '03',
+      title: 'Relaciones comerciales que no puedes dañar',
       description:
-        "Tus clientes son grandes empresas, operadores u organismos públicos. Presionar mal una cobranza puede afectar renovaciones, ampliaciones o licitaciones futuras.",
+        'Tus clientes son grandes empresas, operadores u organismos públicos. Presionar mal una cobranza puede afectar renovaciones, ampliaciones o licitaciones futuras.',
     },
-  ];
+  ]
 
   return (
     <section className="py-16 md:py-24">
@@ -37,19 +37,13 @@ export const TelcoProblem = () => {
               key={point.number}
               className="bg-[#F9F9F9] rounded-2xl p-6 md:p-8 border border-slate-100 hover:shadow-md transition-shadow duration-300"
             >
-              <span className="text-brand-secondary font-extrabold text-3xl md:text-4xl">
-                {point.number}
-              </span>
-              <h3 className="text-brand-primary-dark font-extrabold text-lg mt-4 mb-3">
-                {point.title}
-              </h3>
-              <p className="text-slate-600 leading-relaxed text-sm md:text-base">
-                {point.description}
-              </p>
+              <span className="text-brand-secondary font-extrabold text-3xl md:text-4xl">{point.number}</span>
+              <h3 className="text-brand-primary-dark font-extrabold text-lg mt-4 mb-3">{point.title}</h3>
+              <p className="text-slate-600 leading-relaxed text-sm md:text-base">{point.description}</p>
             </div>
           ))}
         </div>
       </div>
     </section>
-  );
-};
+  )
+}

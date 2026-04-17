@@ -1,14 +1,14 @@
-"use client";
-import { AssetImage } from "@/lib/utils/assets/image";
-import Button from "@/ui/shared/Button";
-import { useRouter } from "next/navigation";
+'use client'
+import { AssetImage } from '@/lib/utils/assets/image'
+import Button from '@/ui/shared/Button'
+import { useRouter } from 'next/navigation'
 
 export const SenaRecovery = () => {
-  const router = useRouter();
+  const router = useRouter()
 
   const onRedirectHubspot = () => {
-    window.open("https://meetings.hubspot.com/francisco502", "_blank");
-  };
+    window.open('https://meetings.hubspot.com/francisco502', '_blank')
+  }
 
   return (
     <section className="max-w-[1280px] mx-auto px-4 pb-12 pt-12">
@@ -26,10 +26,8 @@ export const SenaRecovery = () => {
           {/* Content */}
           <div className="max-w-full  text-left">
             <h2 className="text-brand-primary-dark text-3xl md:text-6xl font-extrabold leading-tight">
-              El arte está en la{" "}
-              <span className="text-brand-primary font-caslon">forma</span>
-              <span className="text-brand-secondary font-caslon">,</span> no en
-              la presión.
+              El arte está en la <span className="text-brand-primary font-caslon">forma</span>
+              <span className="text-brand-secondary font-caslon">,</span> no en la presión.
             </h2>
             <div className="mt-8 flex gap-2 justify-start flex-wrap">
               <Button
@@ -41,7 +39,7 @@ export const SenaRecovery = () => {
               <Button
                 variant="primaryDarkOutlined"
                 text="Contáctanos"
-                onClick={() => router.push("/contactanos")}
+                onClick={() => router.push('/contactanos')}
                 className="h-8 px-6 text-sm md:h-13 md:px-8 md:text-base"
               />
             </div>
@@ -49,5 +47,5 @@ export const SenaRecovery = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}

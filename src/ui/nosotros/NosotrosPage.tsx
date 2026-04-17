@@ -1,9 +1,9 @@
-import { Footer } from "@/ui/layout/Footer";
-import { Header } from "@/ui/layout/Header";
-import { Hero } from "./sections/Hero";
-import { OurInspiration } from "./sections/OurInspiration";
-import { OurTeamRecsa } from "./sections/OurTeamRecsa";
-import { SenaRecovery } from "./sections/SenaRecovery";
+import { Footer } from '@/ui/layout/Footer'
+import { Header } from '@/ui/layout/Header'
+import { Hero } from './sections/Hero'
+import { OurInspiration } from './sections/OurInspiration'
+import { OurTeamRecsa } from './sections/OurTeamRecsa'
+import { SenaRecovery } from './sections/SenaRecovery'
 
 export const NosotrosPage = () => {
   return (
@@ -20,7 +20,6 @@ export const NosotrosPage = () => {
         <SenaRecovery />
       </div>
       <Footer />
-     
     </div>
-  );
-};
+  )
+}

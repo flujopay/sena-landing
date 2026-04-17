@@ -1,20 +1,20 @@
-import { blogPosts } from "@/lib/data/blogPosts";
-import { SinglePostPage } from "@/ui/blog/SinglePostPage";
-import { notFound } from "next/navigation";
+import { blogPosts } from '@/lib/data/blogPosts'
+import { SinglePostPage } from '@/ui/blog/SinglePostPage'
+import { notFound } from 'next/navigation'
 
-type Params = Promise<{ slug: string }>;
+type Params = Promise<{ slug: string }>
 
 export async function generateStaticParams() {
   return blogPosts.map((post) => ({
     slug: post.slug,
-  }));
+  }))
 }
 
 export async function generateMetadata({ params }: { params: Params }) {
-  const { slug } = await params;
-  const post = blogPosts.find((p) => p.slug === slug);
+  const { slug } = await params
+  const post = blogPosts.find((p) => p.slug === slug)
 
-  if (!post) return {};
+  if (!post) return {}
 
   return {
     title: post.title,
@@ -23,17 +23,17 @@ export async function generateMetadata({ params }: { params: Params }) {
       title: post.title,
       description: post.intro,
       images: [{ url: post.image }],
-      type: "article",
+      type: 'article',
       url: `https://somossena.com/blog/${post.slug}`,
     },
-  };
+  }
 }
 
 export default async function Page({ params }: { params: Params }) {
-  const { slug } = await params;
-  const post = blogPosts.find((p) => p.slug === slug);
+  const { slug } = await params
+  const post = blogPosts.find((p) => p.slug === slug)
 
-  if (!post) return notFound();
+  if (!post) return notFound()
 
-  return <SinglePostPage post={post} />;
+  return <SinglePostPage post={post} />
 }

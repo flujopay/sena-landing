@@ -1,11 +1,11 @@
-"use client";
-import { AssetImage } from "@/lib/utils/assets/image";
-import Button from "@/ui/shared/Button";
-import Image, { StaticImageData } from "next/image";
-import { useSearchParams } from "next/navigation";
-import { useEffect, useMemo, useState } from "react";
+'use client'
+import { AssetImage } from '@/lib/utils/assets/image'
+import Button from '@/ui/shared/Button'
+import Image, { StaticImageData } from 'next/image'
+import { useSearchParams } from 'next/navigation'
+import { useEffect, useMemo, useState } from 'react'
 
-type ProductKey = "autogestion" | "recuperacion";
+type ProductKey = 'autogestion' | 'recuperacion'
 
 const ProductCard = ({
   label,
@@ -16,26 +16,22 @@ const ProductCard = ({
   productKey,
   onCtaClick,
 }: {
-  label: string;
-  title: string;
-  description: string;
-  cta: string;
-  image: StaticImageData;
-  productKey: ProductKey;
-  onCtaClick: () => void;
+  label: string
+  title: string
+  description: string
+  cta: string
+  image: StaticImageData
+  productKey: ProductKey
+  onCtaClick: () => void
 }) => (
   <div className="rounded-2xl overflow-hidden">
     <p className="font-bold text-xl text-left py-4">{label}</p>
     <div className="bg-brand-primary p-4 rounded-t-2xl">
       <div className="bg-white rounded-2xl h-40 flex items-center justify-center overflow-visible relative">
-        {productKey === "recuperacion" ? (
+        {productKey === 'recuperacion' ? (
           <>
             <div className="w-[85%] h-full rounded-xl overflow-hidden">
-              <Image
-                src={AssetImage.home3}
-                alt={title}
-                className="w-full h-full object-cover object-top"
-              />
+              <Image src={AssetImage.home3} alt={title} className="w-full h-full object-cover object-top" />
             </div>
             <div className="absolute bottom-0 right-0 w-16 h-[80%] rounded-lg overflow-hidden shadow-xl border-2 border-white">
               <Image
@@ -46,11 +42,7 @@ const ProductCard = ({
             </div>
           </>
         ) : (
-          <Image
-            src={image}
-            alt={title}
-            className="w-full h-full object-cover"
-          />
+          <Image src={image} alt={title} className="w-full h-full object-cover" />
         )}
       </div>
     </div>
@@ -60,64 +52,64 @@ const ProductCard = ({
       <Button text={cta} className="mt-4" size="sm" onClick={onCtaClick} />
     </div>
   </div>
-);
+)
 
 export const Products = () => {
   const products = useMemo(
     () => [
       {
-        key: "autogestion" as const,
-        label: "Plataforma de\nautogestión",
-        title: "Para el día a día de tu cobranza",
+        key: 'autogestion' as const,
+        label: 'Plataforma de\nautogestión',
+        title: 'Para el día a día de tu cobranza',
         description:
-          "Organiza facturas, automatiza recordatorios y controla todo tu ciclo de cobranza desde un solo lugar.",
-        cta: "Agenda una demo",
+          'Organiza facturas, automatiza recordatorios y controla todo tu ciclo de cobranza desde un solo lugar.',
+        cta: 'Agenda una demo',
         image: AssetImage.autogestion,
         onCtaClick: () => {
-          window.open("https://meetings.hubspot.com/francisco502", "_blank");
+          window.open('https://meetings.hubspot.com/francisco502', '_blank')
         },
       },
       {
-        key: "recuperacion" as const,
-        label: "Servicio de Recupero con\nequipo humano",
-        title: "Recupera pagos con apoyo experto",
+        key: 'recuperacion' as const,
+        label: 'Servicio de Recupero con\nequipo humano',
+        title: 'Recupera pagos con apoyo experto',
         description:
-          "Combina tecnología y un equipo especializado para gestionar casos complejos y mejorar tu tasa de recuperación.",
-        cta: "Conoce más",
+          'Combina tecnología y un equipo especializado para gestionar casos complejos y mejorar tu tasa de recuperación.',
+        cta: 'Conoce más',
         image: AssetImage.recuperaGirl,
         onCtaClick: () => {
-          window.open("https://recupera.somossena.com", "_self");
+          window.open('https://recupera.somossena.com', '_self')
         },
       },
     ],
-    [],
-  );
+    []
+  )
 
-  const searchParams = useSearchParams();
-  const tabParam = searchParams.get("tab");
+  const searchParams = useSearchParams()
+  const tabParam = searchParams.get('tab')
 
   const [activeKey, setActiveKey] = useState<ProductKey>(
-    tabParam === "recuperacion" ? "recuperacion" : "autogestion"
-  );
-  const active = products.find((p) => p.key === activeKey) ?? products[0];
+    tabParam === 'recuperacion' ? 'recuperacion' : 'autogestion'
+  )
+  const active = products.find((p) => p.key === activeKey) ?? products[0]
 
   useEffect(() => {
-    if (tabParam === "autogestion" || tabParam === "recuperacion") {
-      setActiveKey(tabParam);
+    if (tabParam === 'autogestion' || tabParam === 'recuperacion') {
+      setActiveKey(tabParam)
     }
-  }, [tabParam]);
+  }, [tabParam])
 
   // Listen for custom event from Header dropdown (same-page navigation)
   useEffect(() => {
     const handler = (e: Event) => {
-      const tab = (e as CustomEvent).detail;
-      if (tab === "autogestion" || tab === "recuperacion") {
-        setActiveKey(tab);
+      const tab = (e as CustomEvent).detail
+      if (tab === 'autogestion' || tab === 'recuperacion') {
+        setActiveKey(tab)
       }
-    };
-    window.addEventListener("sena:product-tab", handler);
-    return () => window.removeEventListener("sena:product-tab", handler);
-  }, []);
+    }
+    window.addEventListener('sena:product-tab', handler)
+    return () => window.removeEventListener('sena:product-tab', handler)
+  }, [])
 
   return (
     <section id="productos" className="max-w-[1280px] mx-auto pt-28">
@@ -160,18 +152,15 @@ export const Products = () => {
                 <div
                   className="absolute left-0 top-0 w-1 rounded bg-brand-secondary transition-all"
                   style={{
-                    height: activeKey === "autogestion" ? "50%" : "50%",
-                    transform:
-                      activeKey === "autogestion"
-                        ? "translateY(0%)"
-                        : "translateY(100%)",
+                    height: activeKey === 'autogestion' ? '50%' : '50%',
+                    transform: activeKey === 'autogestion' ? 'translateY(0%)' : 'translateY(100%)',
                   }}
                 />
               </div>
 
               <div className="flex flex-col gap-6">
                 {products.map((p) => {
-                  const isActive = p.key === activeKey;
+                  const isActive = p.key === activeKey
                   return (
                     <button
                       key={p.key}
@@ -182,14 +171,14 @@ export const Products = () => {
                       <p
                         className={
                           isActive
-                            ? "text-black font-bold text-3xl leading-tight whitespace-pre-line"
-                            : "text-slate-400 font-bold text-3xl leading-tight whitespace-pre-line"
+                            ? 'text-black font-bold text-3xl leading-tight whitespace-pre-line'
+                            : 'text-slate-400 font-bold text-3xl leading-tight whitespace-pre-line'
                         }
                       >
                         {p.label}
                       </p>
                     </button>
-                  );
+                  )
                 })}
               </div>
             </div>
@@ -197,7 +186,7 @@ export const Products = () => {
 
           <div className="bg-white rounded-2xl overflow-hidden shadow-sm">
             <div className="bg-brand-primary p-6 md:p-8">
-              {activeKey === "recuperacion" ? (
+              {activeKey === 'recuperacion' ? (
                 <div className="bg-white w-[80%] mx-auto rounded-xl h-48 md:h-56 flex items-center justify-center overflow-visible relative">
                   <div className="w-[160px] ml-16 h-full rounded-xl overflow-hidden">
                     <Image
@@ -227,18 +216,12 @@ export const Products = () => {
 
             <div className="p-6 md:p-8 bg-slate-100">
               <p className="text-black font-extrabold">{active.title}</p>
-              <p className="text-slate-700 mt-2 leading-5">
-                {active.description}
-              </p>
-              <Button
-                text={active.cta}
-                className="mt-5"
-                onClick={active.onCtaClick}
-              />
+              <p className="text-slate-700 mt-2 leading-5">{active.description}</p>
+              <Button text={active.cta} className="mt-5" onClick={active.onCtaClick} />
             </div>
           </div>
         </div>
       </div>
     </section>
-  );
-};
+  )
+}

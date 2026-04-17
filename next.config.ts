@@ -1,40 +1,40 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
-  output: "standalone",
+  output: 'standalone',
 
   images: {
     remotePatterns: [
       {
-        protocol: "https",
-        hostname: "lh7-rt.googleusercontent.com",
+        protocol: 'https',
+        hostname: 'lh7-rt.googleusercontent.com',
       },
       {
-        protocol: "https",
-        hostname: "lh3.googleusercontent.com",
+        protocol: 'https',
+        hostname: 'lh3.googleusercontent.com',
       },
       {
-        protocol: "https",
-        hostname: "drive.google.com",
+        protocol: 'https',
+        hostname: 'drive.google.com',
       },
       {
-        protocol: "https",
-        hostname: "drive.usercontent.google.com",
+        protocol: 'https',
+        hostname: 'drive.usercontent.google.com',
       },
     ],
   },
   env: {
-    NEXT_PUBLIC_NINO_API_KEY: process.env.NINO_API_KEY || "",
+    NEXT_PUBLIC_NINO_API_KEY: process.env.NINO_API_KEY || '',
   },
   turbopack: {
     rules: {
-      "*.svg": {
-        loaders: ["@svgr/webpack"],
-        as: "*.js",
+      '*.svg': {
+        loaders: ['@svgr/webpack'],
+        as: '*.js',
       },
     },
   },
-};
+}
 
-export default nextConfig;
+export default nextConfig

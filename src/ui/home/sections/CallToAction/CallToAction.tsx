@@ -1,14 +1,14 @@
-"use client";
-import { AssetImage } from "@/lib/utils/assets/image";
-import Button from "@/ui/shared/Button";
-import { useRouter } from "next/navigation";
+'use client'
+import { AssetImage } from '@/lib/utils/assets/image'
+import Button from '@/ui/shared/Button'
+import { useRouter } from 'next/navigation'
 
 export const CallToAction = () => {
-  const router = useRouter();
+  const router = useRouter()
 
   const onRedirectHubspot = () => {
-    window.open("https://meetings.hubspot.com/francisco502", "_blank");
-  };
+    window.open('https://meetings.hubspot.com/francisco502', '_blank')
+  }
 
   return (
     <section className="max-w-[1280px] mx-auto">
@@ -26,8 +26,7 @@ export const CallToAction = () => {
           {/* Content */}
           <div className="max-w-xl px-4 py-8 text-left">
             <h2 className="text-brand-primary-dark text-3xl md:text-6xl font-extrabold leading-tight">
-              Cobrar bien hace la{" "}
-              <span className="text-brand-primary font-caslon">diferencia</span>
+              Cobrar bien hace la <span className="text-brand-primary font-caslon">diferencia</span>
               <span className="text-brand-secondary font-caslon">.</span>
             </h2>
 
@@ -41,7 +40,7 @@ export const CallToAction = () => {
               <Button
                 variant="primaryDarkOutlined"
                 text="Contáctanos"
-                onClick={() => router.push("/contactanos")}
+                onClick={() => router.push('/contactanos')}
                 className="h-8 px-6 text-sm md:h-13 md:px-8 md:text-base"
               />
             </div>
@@ -49,5 +48,5 @@ export const CallToAction = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}

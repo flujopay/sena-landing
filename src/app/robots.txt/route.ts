@@ -1,4 +1,4 @@
-import { NextResponse } from "next/server";
+import { NextResponse } from 'next/server'
 
 export async function GET() {
   const content = `
@@ -7,11 +7,11 @@ Allow: /
 
 Sitemap: https://somossena.com/sitemap.xml
 LLMs: https://somossena.com/llms.txt
-  `.trim();
+  `.trim()
 
   return new NextResponse(content, {
     headers: {
-      "Content-Type": "text/plain",
+      'Content-Type': 'text/plain',
     },
-  });
+  })
 }

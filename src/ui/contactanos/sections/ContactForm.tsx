@@ -1,85 +1,77 @@
-"use client";
+'use client'
 
-import {
-  usePostContactForm,
-  usePostTestn8n,
-} from "@/lib/services/contactService";
-import { useCountries } from "@/lib/services/countryService";
-import { useCurrencyStore } from "@/lib/store/useCurrencyStore";
-import { useToastStore } from "@/lib/store/useToastStore";
-import { ContactFormRequest } from "@/lib/types/contact";
-import Button from "@/ui/shared/Button";
-import { Input } from "@/ui/shared/Input";
-import SimpleCountrySelect, {
-  OptionSelect,
-} from "@/ui/shared/SimpleCountrySelect";
-import Link from "next/link";
-import { useRouter, useSearchParams } from "next/navigation";
-import { useEffect, useMemo, useState } from "react";
-import { Controller, useForm } from "react-hook-form";
+import { usePostContactForm, usePostTestn8n } from '@/lib/services/contactService'
+import { useCountries } from '@/lib/services/countryService'
+import { useCurrencyStore } from '@/lib/store/useCurrencyStore'
+import { useToastStore } from '@/lib/store/useToastStore'
+import { ContactFormRequest } from '@/lib/types/contact'
+import Button from '@/ui/shared/Button'
+import { Input } from '@/ui/shared/Input'
+import SimpleCountrySelect, { OptionSelect } from '@/ui/shared/SimpleCountrySelect'
+import Link from 'next/link'
+import { useRouter, useSearchParams } from 'next/navigation'
+import { useEffect, useMemo, useState } from 'react'
+import { Controller, useForm } from 'react-hook-form'
 
 type FormData = {
-  nombre: string;
-  apellido: string;
-  empresa: string;
-  email: string;
-  whatsapp: string;
-  facturas_pendientes: string;
-  alguien_cobrando: string;
-};
+  nombre: string
+  apellido: string
+  empresa: string
+  email: string
+  whatsapp: string
+  facturas_pendientes: string
+  alguien_cobrando: string
+}
 
 export const ContactForm = () => {
-  const { postTestn8nMutate, isLoadingPostTestn8n } = usePostTestn8n();
-  const { postContactFormMutate } = usePostContactForm();
-  const { data: countries = [] } = useCountries();
-  const { ipCurrency } = useCurrencyStore();
-  const router = useRouter();
-  const { showToast } = useToastStore();
-  const searchParams = useSearchParams();
-  const [countrySelect, setCountrySelect] = useState<string | null>(null);
+  const { postTestn8nMutate, isLoadingPostTestn8n } = usePostTestn8n()
+  const { postContactFormMutate } = usePostContactForm()
+  const { data: countries = [] } = useCountries()
+  const { ipCurrency } = useCurrencyStore()
+  const router = useRouter()
+  const { showToast } = useToastStore()
+  const searchParams = useSearchParams()
+  const [countrySelect, setCountrySelect] = useState<string | null>(null)
 
-  const utmSource = searchParams?.get("utm_source") || null;
-  const utmMedium = searchParams?.get("utm_medium") || null;
-  const utmCampaign = searchParams?.get("utm_campaign") || null;
-  const utmContent = searchParams?.get("utm_content") || null;
+  const utmSource = searchParams?.get('utm_source') || null
+  const utmMedium = searchParams?.get('utm_medium') || null
+  const utmCampaign = searchParams?.get('utm_campaign') || null
+  const utmContent = searchParams?.get('utm_content') || null
 
   const countryOptions = useMemo(() => {
-    if (!countries.length) return [];
-    const priorityCountries = ["+51", "+56", "+57", "+593", "+52"];
-    const priorityItems: OptionSelect[] = [];
-    const otherItems: OptionSelect[] = [];
+    if (!countries.length) return []
+    const priorityCountries = ['+51', '+56', '+57', '+593', '+52']
+    const priorityItems: OptionSelect[] = []
+    const otherItems: OptionSelect[] = []
     countries.forEach((item) => {
       const option: OptionSelect = {
         id: item.country,
         label: item.country,
         icon: item.icon,
         subValue: item.country,
-      };
-      if (priorityCountries.includes(item.country)) {
-        priorityItems.push(option);
-      } else {
-        otherItems.push(option);
       }
-    });
-    priorityItems.sort(
-      (a, b) =>
-        priorityCountries.indexOf(a.id) - priorityCountries.indexOf(b.id),
-    );
-    return [...priorityItems, ...otherItems];
-  }, [countries]);
+      if (priorityCountries.includes(item.country)) {
+        priorityItems.push(option)
+      } else {
+        otherItems.push(option)
+      }
+    })
+    priorityItems.sort((a, b) => priorityCountries.indexOf(a.id) - priorityCountries.indexOf(b.id))
+    return [...priorityItems, ...otherItems]
+  }, [countries])
 
   useEffect(() => {
     const currencyMap: Record<string, string> = {
-      PEN: "+51",
-      CLP: "+56",
-      COP: "+57",
-      MXN: "+52",
-      USD: "+593",
-    };
-    if (ipCurrency && currencyMap[ipCurrency]) {
-      setCountrySelect(currencyMap[ipCurrency]);
+      PEN: '+51',
+      CLP: '+56',
+      COP: '+57',
+      MXN: '+52',
+      USD: '+593',
     }
-  }, [ipCurrency]);
+    if (ipCurrency && currencyMap[ipCurrency]) {
+      setCountrySelect(currencyMap[ipCurrency])
+    }
+  }, [ipCurrency])
 
   const {
     control,
@@ -88,27 +80,26 @@ export const ContactForm = () => {
     reset,
   } = useForm<FormData>({
     defaultValues: {
-      nombre: "",
-      apellido: "",
-      empresa: "",
-      email: "",
-      whatsapp: "",
-      facturas_pendientes: "",
-      alguien_cobrando: "",
+      nombre: '',
+      apellido: '',
+      empresa: '',
+      email: '',
+      whatsapp: '',
+      facturas_pendientes: '',
+      alguien_cobrando: '',
     },
-  });
+  })
 
   const onSubmit = (data: FormData) => {
-    const pais =
-      countries?.find((c) => c.country === countrySelect)?.country_code || "";
-    const telefonoConPrefijo = (countrySelect || "") + data.whatsapp;
+    const pais = countries?.find((c) => c.country === countrySelect)?.country_code || ''
+    const telefonoConPrefijo = (countrySelect || '') + data.whatsapp
 
     // Payload para n8n webhook
     const payload = {
       ...data,
-      codigo_pais: countrySelect || "",
+      codigo_pais: countrySelect || '',
       pais,
-    };
+    }
 
     // Payload para API de contacto
     const contactPayload: ContactFormRequest = {
@@ -116,34 +107,34 @@ export const ContactForm = () => {
       apellido: data.apellido,
       correo: data.email,
       telefono: telefonoConPrefijo,
-      formOrigin: "Formulario de Registro",
+      formOrigin: 'Formulario de Registro',
       countryName: pais,
-      productType: "main",
+      productType: 'main',
       nombreEmpresa: data.empresa,
-      mensaje: "",
-      howFound: "",
+      mensaje: '',
+      howFound: '',
       utmSource: utmSource || undefined,
       utmMedium: utmMedium || undefined,
       utmCampaign: utmCampaign || undefined,
       utmContent: utmContent || undefined,
-    };
+    }
 
     // Llamar ambas APIs
-    postContactFormMutate(contactPayload);
+    postContactFormMutate(contactPayload)
     postTestn8nMutate(payload, {
       onSuccess: () => {
-        reset();
-        router.push("/thankyou");
+        reset()
+        router.push('/thankyou')
       },
       onError: () => {
         showToast({
-          iconType: "error",
-          message: "Error al enviar el formulario",
-          subMessage: "Por favor, intenta de nuevo.",
-        });
+          iconType: 'error',
+          message: 'Error al enviar el formulario',
+          subMessage: 'Por favor, intenta de nuevo.',
+        })
       },
-    });
-  };
+    })
+  }
 
   return (
     <div className="max-w-[1280px] mx-auto">
@@ -151,36 +142,27 @@ export const ContactForm = () => {
         <div className="flex flex-1">
           <div className="max-w-full text-left">
             <h2 className="text-brand-primary-dark text-3xl md:text-6xl font-extrabold leading-tight">
-              Estás a un paso de cobrar{" "}
-              <span className="text-brand-primary font-caslon">mejor</span>
+              Estás a un paso de cobrar <span className="text-brand-primary font-caslon">mejor</span>
               <span className="text-brand-secondary font-caslon">.</span>
             </h2>
           </div>
         </div>
         <div className="flex flex-1 w-full">
-          <form
-            onSubmit={handleSubmit(onSubmit)}
-            className="w-full rounded-2xl bg-[#f4f4f4] px-6 py-8"
-          >
+          <form onSubmit={handleSubmit(onSubmit)} className="w-full rounded-2xl bg-[#f4f4f4] px-6 py-8">
             {/* Campo 1 — Nombre y Apellido */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
               <Controller
                 name="nombre"
                 control={control}
-                rules={{ required: "El nombre es obligatorio" }}
+                rules={{ required: 'El nombre es obligatorio' }}
                 render={({ field }) => (
-                  <Input
-                    label="Nombre"
-                    placeholder="Tu nombre"
-                    {...field}
-                    error={errors.nombre?.message}
-                  />
+                  <Input label="Nombre" placeholder="Tu nombre" {...field} error={errors.nombre?.message} />
                 )}
               />
               <Controller
                 name="apellido"
                 control={control}
-                rules={{ required: "El apellido es obligatorio" }}
+                rules={{ required: 'El apellido es obligatorio' }}
                 render={({ field }) => (
                   <Input
                     label="Apellido"
@@ -198,7 +180,7 @@ export const ContactForm = () => {
                 name="empresa"
                 control={control}
                 rules={{
-                  required: "El nombre de la empresa es obligatorio",
+                  required: 'El nombre de la empresa es obligatorio',
                 }}
                 render={({ field }) => (
                   <Input
@@ -217,10 +199,10 @@ export const ContactForm = () => {
                 name="email"
                 control={control}
                 rules={{
-                  required: "El email es obligatorio",
+                  required: 'El email es obligatorio',
                   pattern: {
                     value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                    message: "Email inválido",
+                    message: 'Email inválido',
                   },
                 }}
                 render={({ field }) => (
@@ -241,10 +223,10 @@ export const ContactForm = () => {
                 name="whatsapp"
                 control={control}
                 rules={{
-                  required: "El número de WhatsApp es obligatorio",
+                  required: 'El número de WhatsApp es obligatorio',
                   pattern: {
                     value: /^[0-9]+$/,
-                    message: "Solo se permiten números",
+                    message: 'Solo se permiten números',
                   },
                 }}
                 render={({ field }) => (
@@ -252,10 +234,10 @@ export const ContactForm = () => {
                     label="WhatsApp"
                     type="tel"
                     placeholder="Número"
-                    value={field.value || ""}
+                    value={field.value || ''}
                     onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-                      const onlyNumbers = e.target.value.replace(/\D/g, "");
-                      field.onChange(onlyNumbers);
+                      const onlyNumbers = e.target.value.replace(/\D/g, '')
+                      field.onChange(onlyNumbers)
                     }}
                     error={errors.whatsapp?.message}
                     leftElement={
@@ -279,18 +261,15 @@ export const ContactForm = () => {
               <Controller
                 name="facturas_pendientes"
                 control={control}
-                rules={{ required: "Debes seleccionar una opción" }}
+                rules={{ required: 'Debes seleccionar una opción' }}
                 render={({ field }) => (
                   <div className="flex items-center gap-6">
                     {[
-                      { value: "1-10", label: "1-10" },
-                      { value: "10-50", label: "10-50" },
-                      { value: "50+", label: "50+" },
+                      { value: '1-10', label: '1-10' },
+                      { value: '10-50', label: '10-50' },
+                      { value: '50+', label: '50+' },
                     ].map((opcion) => (
-                      <label
-                        key={opcion.value}
-                        className="flex items-center gap-2 cursor-pointer"
-                      >
+                      <label key={opcion.value} className="flex items-center gap-2 cursor-pointer">
                         <input
                           type="radio"
                           value={opcion.value}
@@ -298,18 +277,14 @@ export const ContactForm = () => {
                           onChange={() => field.onChange(opcion.value)}
                           className="w-4 h-4 text-brand-primary accent-brand-primary"
                         />
-                        <span className="text-sm text-black font-medium">
-                          {opcion.label}
-                        </span>
+                        <span className="text-sm text-black font-medium">{opcion.label}</span>
                       </label>
                     ))}
                   </div>
                 )}
               />
               {errors.facturas_pendientes && (
-                <p className="text-red-500 text-xs mt-1">
-                  {errors.facturas_pendientes.message}
-                </p>
+                <p className="text-red-500 text-xs mt-1">{errors.facturas_pendientes.message}</p>
               )}
             </div>
 
@@ -322,18 +297,15 @@ export const ContactForm = () => {
               <Controller
                 name="alguien_cobrando"
                 control={control}
-                rules={{ required: "Debes seleccionar una opción" }}
+                rules={{ required: 'Debes seleccionar una opción' }}
                 render={({ field }) => (
                   <div className="flex items-center gap-6">
                     {[
-                      { value: "Sí", label: "Sí" },
-                      { value: "No", label: "No" },
-                      { value: "A veces", label: "A veces" },
+                      { value: 'Sí', label: 'Sí' },
+                      { value: 'No', label: 'No' },
+                      { value: 'A veces', label: 'A veces' },
                     ].map((opcion) => (
-                      <label
-                        key={opcion.value}
-                        className="flex items-center gap-2 cursor-pointer"
-                      >
+                      <label key={opcion.value} className="flex items-center gap-2 cursor-pointer">
                         <input
                           type="radio"
                           value={opcion.value}
@@ -341,41 +313,31 @@ export const ContactForm = () => {
                           onChange={() => field.onChange(opcion.value)}
                           className="w-4 h-4 text-brand-primary accent-brand-primary"
                         />
-                        <span className="text-sm text-black font-medium">
-                          {opcion.label}
-                        </span>
+                        <span className="text-sm text-black font-medium">{opcion.label}</span>
                       </label>
                     ))}
                   </div>
                 )}
               />
               {errors.alguien_cobrando && (
-                <p className="text-red-500 text-xs mt-1">
-                  {errors.alguien_cobrando.message}
-                </p>
+                <p className="text-red-500 text-xs mt-1">{errors.alguien_cobrando.message}</p>
               )}
             </div>
 
             <p className="text-xs text-slate-500 mt-5 mb-5">
-              Al enviar, aceptas los{" "}
-              <Link
-                href="/term"
-                className="text-brand-primary font-semibold hover:underline"
-              >
+              Al enviar, aceptas los{' '}
+              <Link href="/term" className="text-brand-primary font-semibold hover:underline">
                 Términos
-              </Link>{" "}
-              y la{" "}
-              <Link
-                href="/privacy"
-                className="text-brand-primary font-semibold hover:underline"
-              >
+              </Link>{' '}
+              y la{' '}
+              <Link href="/privacy" className="text-brand-primary font-semibold hover:underline">
                 Política de Privacidad
               </Link>
             </p>
 
             <Button
               type="submit"
-              text={isLoadingPostTestn8n ? "Enviando..." : "Enviar"}
+              text={isLoadingPostTestn8n ? 'Enviando...' : 'Enviar'}
               variant="primaryFilled"
               size="md"
               className="w-[200px]"
@@ -385,5 +347,5 @@ export const ContactForm = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}

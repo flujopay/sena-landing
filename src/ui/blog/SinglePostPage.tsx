@@ -1,46 +1,40 @@
-"use client";
+'use client'
 
-import { blogPosts } from "@/lib/data/blogPosts";
-import { BlogPost } from "@/lib/types/blog";
-import { ArrowLeft, Calendar } from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
-import { useRouter } from "next/navigation";
-import { useState } from "react";
-import { Footer } from "../layout/Footer";
-import { Header } from "../layout/Header";
-import Button from "../shared/Button";
+import { blogPosts } from '@/lib/data/blogPosts'
+import { BlogPost } from '@/lib/types/blog'
+import { ArrowLeft, Calendar } from 'lucide-react'
+import Image from 'next/image'
+import Link from 'next/link'
+import { useRouter } from 'next/navigation'
+import { useState } from 'react'
+import { Footer } from '../layout/Footer'
+import { Header } from '../layout/Header'
+import Button from '../shared/Button'
 
 const renderContentBlock = (block: any, index: number) => {
   switch (block.type) {
-    case "title":
+    case 'title':
       return (
-        <h2
-          key={index}
-          className="text-3xl font-bold text-brand-primary mt-8 mb-4"
-        >
+        <h2 key={index} className="text-3xl font-bold text-brand-primary mt-8 mb-4">
           {block.text}
         </h2>
-      );
+      )
 
-    case "subtitle":
+    case 'subtitle':
       return (
-        <h3
-          key={index}
-          className="text-2xl font-semibold text-brand-primary-dark mt-6 mb-3"
-        >
+        <h3 key={index} className="text-2xl font-semibold text-brand-primary-dark mt-6 mb-3">
           {block.text}
         </h3>
-      );
+      )
 
-    case "paragraph":
+    case 'paragraph':
       return (
         <p key={index} className="mb-4">
           {block.fragments.map((frag: any, i: number) => {
-            if (frag.type === "bold") {
-              return <strong key={i}>{frag.text}</strong>;
+            if (frag.type === 'bold') {
+              return <strong key={i}>{frag.text}</strong>
             }
-            if (frag.type === "link") {
+            if (frag.type === 'link') {
               return (
                 <a
                   key={i}
@@ -51,14 +45,14 @@ const renderContentBlock = (block: any, index: number) => {
                 >
                   {frag.text}
                 </a>
-              );
+              )
             }
-            return <span key={i}>{frag.text}</span>;
+            return <span key={i}>{frag.text}</span>
           })}
         </p>
-      );
+      )
 
-    case "quote":
+    case 'quote':
       return (
         <blockquote
           key={index}
@@ -66,22 +60,22 @@ const renderContentBlock = (block: any, index: number) => {
         >
           {block.text}
         </blockquote>
-      );
+      )
 
-    case "list":
+    case 'list':
       return (
         <ul key={index} className="list-disc list-inside space-y-2 mb-4 ml-4">
           {block.items.map((item: any, i: number) => {
-            if (typeof item === "string") {
-              return <li key={i}>{item}</li>;
+            if (typeof item === 'string') {
+              return <li key={i}>{item}</li>
             }
             return (
               <li key={i}>
                 {item.map((frag: any, j: number) => {
-                  if (frag.type === "bold") {
-                    return <strong key={j}>{frag.text}</strong>;
+                  if (frag.type === 'bold') {
+                    return <strong key={j}>{frag.text}</strong>
                   }
-                  if (frag.type === "link") {
+                  if (frag.type === 'link') {
                     return (
                       <a
                         key={j}
@@ -92,17 +86,17 @@ const renderContentBlock = (block: any, index: number) => {
                       >
                         {frag.text}
                       </a>
-                    );
+                    )
                   }
-                  return <span key={j}>{frag.text}</span>;
+                  return <span key={j}>{frag.text}</span>
                 })}
               </li>
-            );
+            )
           })}
         </ul>
-      );
+      )
 
-    case "image":
+    case 'image':
       return (
         <div key={index} className="my-8">
           <Image
@@ -114,24 +108,20 @@ const renderContentBlock = (block: any, index: number) => {
             sizes="100vw"
           />
         </div>
-      );
+      )
 
     default:
-      return null;
+      return null
   }
-};
+}
 
 export const SinglePostPage = ({ post }: { post: BlogPost }) => {
-  const [email, setEmail] = useState("");
-  const router = useRouter();
+  const [email, setEmail] = useState('')
+  const router = useRouter()
 
   const relatedPosts = blogPosts
-    .filter(
-      (p) =>
-        String(p.id) !== String(post.id) &&
-        p.tags.some((tag) => post.tags.includes(tag)),
-    )
-    .slice(0, 3);
+    .filter((p) => String(p.id) !== String(post.id) && p.tags.some((tag) => post.tags.includes(tag)))
+    .slice(0, 3)
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -146,9 +136,7 @@ export const SinglePostPage = ({ post }: { post: BlogPost }) => {
             <ArrowLeft className="w-3 h-3" /> Regresar al Blog
           </Link>
 
-          <h1 className="text-4xl md:text-5xl font-bold text-brand-primary mb-4">
-            {post.title}
-          </h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-brand-primary mb-4">{post.title}</h1>
           <div className="flex gap-2 items-center text-sm text-gray-500 mb-6 flex-wrap">
             {post.tags.map((tag, idx) => (
               <span
@@ -188,8 +176,7 @@ export const SinglePostPage = ({ post }: { post: BlogPost }) => {
             ¿Quieres recibir más artículos como este?
           </h3>
           <p className="text-gray-600 mb-6">
-            Suscríbete para estar al tanto de lo nuevo en gestión, productividad
-            y tecnología B2B.
+            Suscríbete para estar al tanto de lo nuevo en gestión, productividad y tecnología B2B.
           </p>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
             <input
@@ -199,21 +186,14 @@ export const SinglePostPage = ({ post }: { post: BlogPost }) => {
               onChange={(e) => setEmail(e.target.value)}
               className="px-4 pt-2.5 pb-2 border border-gray-300 rounded-full w-full sm:w-[300px]"
             />
-            <Button
-              size="md"
-              text="Suscribirme"
-              variant={"primaryFilled"}
-              className="text-md"
-            />
+            <Button size="md" text="Suscribirme" variant={'primaryFilled'} className="text-md" />
           </div>
         </div>
 
         {/* Posts relacionados */}
         {relatedPosts.length > 0 && (
           <div className="max-w-[900px] mx-auto mt-24">
-            <h3 className="text-3xl font-bold text-brand-primary mb-8">
-              Artículos relacionados
-            </h3>
+            <h3 className="text-3xl font-bold text-brand-primary mb-8">Artículos relacionados</h3>
             <div className="grid md:grid-cols-3 gap-6">
               {relatedPosts.map((rel) => (
                 <Link
@@ -239,9 +219,7 @@ export const SinglePostPage = ({ post }: { post: BlogPost }) => {
                         </span>
                       ))}
                     </div>
-                    <p className="text-brand-primary font-semibold mb-1 line-clamp-2">
-                      {rel.title}
-                    </p>
+                    <p className="text-brand-primary font-semibold mb-1 line-clamp-2">{rel.title}</p>
                     <p className="text-sm text-gray-600">{rel.date}</p>
                   </div>
                 </Link>
@@ -254,13 +232,13 @@ export const SinglePostPage = ({ post }: { post: BlogPost }) => {
           <Button
             size="md"
             text="Regresar al Blog"
-            variant={"primaryFilled"}
+            variant={'primaryFilled'}
             className="text-md"
-            onClick={() => router.push("/blog")}
+            onClick={() => router.push('/blog')}
           />
         </div>
       </section>
       <Footer />
     </div>
-  );
-};
+  )
+}

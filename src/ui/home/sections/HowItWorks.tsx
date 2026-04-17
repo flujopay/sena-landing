@@ -1,82 +1,80 @@
-"use client";
+'use client'
 
-import { useModalStore } from "@/lib/store/modalStore";
-import { AssetImage } from "@/lib/utils/assets/image";
-import { AssetVideo } from "@/lib/utils/assets/video";
-import Button from "@/ui/shared/Button";
-import Image from "next/image";
-import { useRouter } from "next/navigation";
-import { useMemo, useState } from "react";
-import { TitleDescripction } from "../../shared/TitleDescripction";
-import { VideoModal } from "../../shared/VideoModal";
+import { useModalStore } from '@/lib/store/modalStore'
+import { AssetImage } from '@/lib/utils/assets/image'
+import { AssetVideo } from '@/lib/utils/assets/video'
+import Button from '@/ui/shared/Button'
+import Image from 'next/image'
+import { useRouter } from 'next/navigation'
+import { useMemo, useState } from 'react'
+import { TitleDescripction } from '../../shared/TitleDescripction'
+import { VideoModal } from '../../shared/VideoModal'
 
-type StepKey = "Prepara" | "Cobra" | "Evalua" | "Recupera" | "Concilia";
+type StepKey = 'Prepara' | 'Cobra' | 'Evalua' | 'Recupera' | 'Concilia'
 
 export const HowItWorks = () => {
-  const router = useRouter();
+  const router = useRouter()
   const steps = useMemo(
     () => [
       {
-        key: "Prepara" as const,
-        label: "1. Prepara",
+        key: 'Prepara' as const,
+        label: '1. Prepara',
         number: 1,
-        title: "1. Prepara",
-        subtitle: "Ordena facturas, contactos y montos automáticamente.",
-        description:
-          "El sistema estructura toda la información para una gestión eficiente.",
+        title: '1. Prepara',
+        subtitle: 'Ordena facturas, contactos y montos automáticamente.',
+        description: 'El sistema estructura toda la información para una gestión eficiente.',
         image: AssetImage.sincroniza,
         video: AssetVideo.prepara,
       },
       {
-        key: "Cobra" as const,
-        label: "2. Cobra",
+        key: 'Cobra' as const,
+        label: '2. Cobra',
         number: 2,
-        title: "2. Cobra",
-        subtitle: "CRM multicanal con WhatsApp, email y SMS.",
-        description:
-          "Secuencias inteligentes segmentadas por vencimiento, monto y comportamiento.",
+        title: '2. Cobra',
+        subtitle: 'CRM multicanal con WhatsApp, email y SMS.',
+        description: 'Secuencias inteligentes segmentadas por vencimiento, monto y comportamiento.',
         image: AssetImage.cobra,
         video: AssetVideo.cobra,
       },
       {
-        key: "Evalua" as const,
-        label: "3. Evalua",
+        key: 'Evalua' as const,
+        label: '3. Evalua',
         number: 3,
-        title: "3. Evalua",
-        subtitle: "Métricas de conversión, aperturas y rendimiento por canal.",
-        description: "Mejora tu estrategia con datos reales.",
+        title: '3. Evalua',
+        subtitle: 'Métricas de conversión, aperturas y rendimiento por canal.',
+        description: 'Mejora tu estrategia con datos reales.',
         image: AssetImage.evalua,
       },
       {
-        key: "Recupera" as const,
-        label: "4. Recupera",
+        key: 'Recupera' as const,
+        label: '4. Recupera',
         number: 4,
-        title: "4. Recupera",
-        subtitle: "Equipo humano especializado en recuperación de deuda.",
+        title: '4. Recupera',
+        subtitle: 'Equipo humano especializado en recuperación de deuda.',
         description:
-          "Cuando hace falta entra el equipo humano de Recsa, quienes cuidando tu marca y relación con el cliente, realizan las gestiones de recupero, lo que llevamos haciendo por más de 40 años.",
+          'Cuando hace falta entra el equipo humano de Recsa, quienes cuidando tu marca y relación con el cliente, realizan las gestiones de recupero, lo que llevamos haciendo por más de 40 años.',
       },
       {
-        key: "Concilia" as const,
-        label: "5. Concilia",
+        key: 'Concilia' as const,
+        label: '5. Concilia',
         number: 5,
-        title: "5. Concilia",
-        subtitle: "Registro automático de tus pagos.",
-        description: "Cierre de facturas sin trabajo manual ni errores.",
+        title: '5. Concilia',
+        subtitle: 'Registro automático de tus pagos.',
+        description: 'Cierre de facturas sin trabajo manual ni errores.',
         image: AssetImage.conciliator1,
         video: AssetVideo.conciliar,
       },
     ],
-    [],
-  );
+    []
+  )
 
-  const [activeKey, setActiveKey] = useState<StepKey>(steps[0].key);
-  const activeIndex = steps.findIndex((s) => s.key === activeKey);
-  const active = steps[activeIndex] ?? steps[0];
-  const { showModal } = useModalStore();
+  const [activeKey, setActiveKey] = useState<StepKey>(steps[0].key)
+  const activeIndex = steps.findIndex((s) => s.key === activeKey)
+  const active = steps[activeIndex] ?? steps[0]
+  const { showModal } = useModalStore()
 
   const handleVideoClick = () => {
-    const stepWithVideo = active as any;
+    const stepWithVideo = active as any
     showModal({
       content: (
         <VideoModal
@@ -85,14 +83,14 @@ export const HowItWorks = () => {
           description={stepWithVideo.description}
         />
       ),
-      width: "690px",
+      width: '690px',
       showCloseButton: true,
       showHeader: false,
       closeOnOutsideClick: true,
-    });
-  };
+    })
+  }
 
-  const hasVideo = Boolean((active as any).video);
+  const hasVideo = Boolean((active as any).video)
 
   return (
     <section id="como-funciona" className="bg-[#F9F9F9] pt-28 ">
@@ -111,7 +109,7 @@ export const HowItWorks = () => {
           <div className="rounded-2xl pb-5 md:pb-8">
             <div className="rounded-full flex overflow-x-auto gap-2 justify-between bg-white">
               {steps.map((s) => {
-                const isActive = s.key === activeKey;
+                const isActive = s.key === activeKey
                 return (
                   <button
                     key={s.key}
@@ -119,13 +117,13 @@ export const HowItWorks = () => {
                     onClick={() => setActiveKey(s.key)}
                     className={
                       isActive
-                        ? "shrink-0 px-4 md:px-8 py-3 rounded-full bg-brand-primary text-white font-extrabold text-xs md:text-xl tracking-wide"
-                        : "shrink-0 px-4 md:px-8 py-3 rounded-full  text-brand-primary-dark font-extrabold text-xs md:text-xl tracking-wide cursor-pointer"
+                        ? 'shrink-0 px-4 md:px-8 py-3 rounded-full bg-brand-primary text-white font-extrabold text-xs md:text-xl tracking-wide'
+                        : 'shrink-0 px-4 md:px-8 py-3 rounded-full  text-brand-primary-dark font-extrabold text-xs md:text-xl tracking-wide cursor-pointer'
                     }
                   >
                     {s.label}
                   </button>
-                );
+                )
               })}
             </div>
 
@@ -133,10 +131,10 @@ export const HowItWorks = () => {
               <div className="p-6 md:p-10 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                 <div className="bg-linear-to-br from-slate-50 to-slate-100 rounded-xl h-56 md:h-80 flex items-center justify-center justify-self-center w-full max-w-xl shadow-lg">
                   <div
-                    className={`relative w-full h-full rounded-xl overflow-hidden group ${hasVideo ? "cursor-pointer" : ""}`}
+                    className={`relative w-full h-full rounded-xl overflow-hidden group ${hasVideo ? 'cursor-pointer' : ''}`}
                     onClick={hasVideo ? handleVideoClick : undefined}
                   >
-                    {activeKey === "Recupera" ? (
+                    {activeKey === 'Recupera' ? (
                       <div className="bg-white w-full mx-auto rounded-xl h-full flex items-center justify-center overflow-visible relative">
                         <div className="w-[280px] h-full mr-20 rounded-xl overflow-hidden">
                           <Image
@@ -155,12 +153,7 @@ export const HowItWorks = () => {
                       </div>
                     ) : active.image ? (
                       <>
-                        <Image
-                          src={active.image}
-                          alt={active.title}
-                          fill
-                          className="object-cover"
-                        />
+                        <Image src={active.image} alt={active.title} fill className="object-cover" />
                         {hasVideo && (
                           <>
                             <div className="absolute inset-0 bg-linear-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -197,10 +190,7 @@ export const HowItWorks = () => {
                           muted
                           playsInline
                         >
-                          <source
-                            src={(active as any).video}
-                            type="video/mp4"
-                          />
+                          <source src={(active as any).video} type="video/mp4" />
                         </video>
                         <div className="absolute inset-0 bg-linear-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                         <div className="hidden md:flex absolute inset-0 items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -234,10 +224,7 @@ export const HowItWorks = () => {
                               fill="none"
                               xmlns="http://www.w3.org/2000/svg"
                             >
-                              <path
-                                d="M9 7.5V16.5L16.5 12L9 7.5Z"
-                                fill="#64748B"
-                              />
+                              <path d="M9 7.5V16.5L16.5 12L9 7.5Z" fill="#64748B" />
                             </svg>
                           </div>
                         </div>
@@ -248,24 +235,20 @@ export const HowItWorks = () => {
 
                 <div className="flex flex-col gap-2">
                   <div className="bg-brand-primary text-white  rounded-full flex items-center gap-3 w-fit px-8 py-2">
-                    <p className="text-sm md:text-xl font-bold tracking-wide">
-                      {active.title}
-                    </p>
+                    <p className="text-sm md:text-xl font-bold tracking-wide">{active.title}</p>
                   </div>
                   <div>
                     <p className="text-brand-primary-dark text-xl md:text-2xl font-extrabold tracking-wide">
                       {active.subtitle}
                     </p>
                   </div>
-                  <p className="mt-2 text-black/95 leading-6 max-w-md">
-                    {active.description}
-                  </p>
+                  <p className="mt-2 text-black/95 leading-6 max-w-md">{active.description}</p>
 
-                  {activeKey === "Recupera" && (
+                  {activeKey === 'Recupera' && (
                     <Button
                       size="md"
                       text="Conocer más sobre Recupera"
-                      variant={"secondaryFilled"}
+                      variant={'secondaryFilled'}
                       className="text-lg w-fit mt-2"
                       rightIcon={
                         <svg
@@ -284,7 +267,7 @@ export const HowItWorks = () => {
                           />
                         </svg>
                       }
-                      onClick={() => window.open('https://recupera.somossena.com', "_self")}
+                      onClick={() => window.open('https://recupera.somossena.com', '_self')}
                     />
                   )}
                 </div>
@@ -293,7 +276,7 @@ export const HowItWorks = () => {
 
             <div className="mt-6 flex items-center justify-center gap-3">
               {steps.map((s, idx) => {
-                const isActive = idx === activeIndex;
+                const isActive = idx === activeIndex
                 return (
                   <button
                     key={s.key}
@@ -301,17 +284,17 @@ export const HowItWorks = () => {
                     onClick={() => setActiveKey(s.key)}
                     className={
                       isActive
-                        ? "w-3 h-3 rounded-full bg-brand-secondary-dark"
-                        : "w-3 h-3 rounded-full bg-[#FBC2A2]"
+                        ? 'w-3 h-3 rounded-full bg-brand-secondary-dark'
+                        : 'w-3 h-3 rounded-full bg-[#FBC2A2]'
                     }
                     aria-label={s.label}
                   />
-                );
+                )
               })}
             </div>
           </div>
         </div>
       </div>
     </section>
-  );
-};
+  )
+}

@@ -1,79 +1,79 @@
-"use client";
+'use client'
 
-import { useState } from "react";
-import { TitleDescripction } from "../../../shared/TitleDescripction";
-import { PlanCard, TPlan } from "./PlanCard";
+import { useState } from 'react'
+import { TitleDescripction } from '../../../shared/TitleDescripction'
+import { PlanCard, TPlan } from './PlanCard'
 
 export const PricingPlans = () => {
   const plans: TPlan[] = [
     {
-      name: "Plan Starter",
-      subtitle: "Para pequeñas empresas y primeros volúmenes",
+      name: 'Plan Starter',
+      subtitle: 'Para pequeñas empresas y primeros volúmenes',
       price: 39,
-      includedClients: "Hasta 10",
-      invoicesPerMonth: "Hasta 50",
+      includedClients: 'Hasta 10',
+      invoicesPerMonth: 'Hasta 50',
       features: [
-        "CRM básico de cobranza",
-        "Automatización de recordatorios",
-        "Conciliación manual",
-        "Reportes básicos",
-        "Soporte por email",
+        'CRM básico de cobranza',
+        'Automatización de recordatorios',
+        'Conciliación manual',
+        'Reportes básicos',
+        'Soporte por email',
       ],
-      variant: "starter",
-      cta: "Contrata ahora",
+      variant: 'starter',
+      cta: 'Contrata ahora',
       onCtaClick: () => {
         // window.open("https://meetings.hubspot.com/francisco502", "_blank"); // TODO: Cambiar a la url de abajo cuando sea el momento
-        window.open("https://app.flujolink.com/signup?origin=main", "_blank");
+        window.open('https://app.flujolink.com/signup?origin=main', '_blank')
       },
     },
     {
-      name: "Plan Growth",
-      subtitle: "Para empresas en expansión",
+      name: 'Plan Growth',
+      subtitle: 'Para empresas en expansión',
       price: 349,
-      includedClients: "Hasta 100",
-      invoicesPerMonth: "Hasta 500",
+      includedClients: 'Hasta 100',
+      invoicesPerMonth: 'Hasta 500',
       features: [
-        "Todo lo de Starter, más:",
-        "CRM avanzado multicanal",
-        "Segmentación inteligente",
-        "Conciliación automática",
-        "Portal de cliente",
-        "Campañas automatizadas",
-        "Reportería avanzada",
-        "Soporte prioritario",
+        'Todo lo de Starter, más:',
+        'CRM avanzado multicanal',
+        'Segmentación inteligente',
+        'Conciliación automática',
+        'Portal de cliente',
+        'Campañas automatizadas',
+        'Reportería avanzada',
+        'Soporte prioritario',
       ],
-      variant: "growth",
+      variant: 'growth',
       popular: true,
-      cta: "Contrata ahora",
+      cta: 'Contrata ahora',
       onCtaClick: () => {
-        window.open("https://meetings.hubspot.com/francisco502", "_blank");
+        window.open('https://meetings.hubspot.com/francisco502', '_blank')
       },
     },
     {
-      name: "Plan Enterprise",
-      subtitle: "Para alto volumen y operaciones críticas",
+      name: 'Plan Enterprise',
+      subtitle: 'Para alto volumen y operaciones críticas',
       price: 799,
-      includedClients: "100+",
-      invoicesPerMonth: "Desde 500",
+      includedClients: '100+',
+      invoicesPerMonth: 'Desde 500',
       features: [
-        "Todo lo de Growth, más:",
-        "Volumen ilimitado",
-        "API completa",
+        'Todo lo de Growth, más:',
+        'Volumen ilimitado',
+        'API completa',
         // "Integración con Recsa",
-        "Gestión humana especializada",
-        "Multi-tenant y white label",
-        "SLA garantizado",
-        "Account Manager dedicado",
+        'Gestión humana especializada',
+        'Multi-tenant y white label',
+        'SLA garantizado',
+        'Account Manager dedicado',
       ],
-      variant: "enterprise",
-      cta: "Habla con ventas",
+      variant: 'enterprise',
+      cta: 'Habla con ventas',
       onCtaClick: () => {
-        window.open("https://meetings.hubspot.com/francisco502", "_blank");
+        window.open('https://meetings.hubspot.com/francisco502', '_blank')
       },
     },
-  ];
+  ]
 
-  const [selectedPlan, setSelectedPlan] = useState(0);
+  const [selectedPlan, setSelectedPlan] = useState(0)
 
   return (
     <section id="precios" className="py-14 max-w-[1280px] mx-auto pt-28">
@@ -95,21 +95,19 @@ export const PricingPlans = () => {
               key={plan.variant}
               type="button"
               onClick={() => {
-                setSelectedPlan(index);
+                setSelectedPlan(index)
                 // plan.onCtaClick?.();
               }}
               className={`
                 w-full flex items-center gap-3 p-4
                 transition-colors
-                ${index === 1 ? "border-t-2 border-b-2 border-[#3771d1]" : ""}
-                ${selectedPlan === index ? "bg-blue-50" : ""}
+                ${index === 1 ? 'border-t-2 border-b-2 border-[#3771d1]' : ''}
+                ${selectedPlan === index ? 'bg-blue-50' : ''}
               `}
             >
               <div
                 className={`w-6 h-6 rounded-full border-2 flex items-center justify-center ${
-                  selectedPlan === index
-                    ? "border-[#3771d1] bg-white"
-                    : "border-slate-300"
+                  selectedPlan === index ? 'border-[#3771d1] bg-white' : 'border-slate-300'
                 }`}
               >
                 {selectedPlan === index && (
@@ -120,18 +118,12 @@ export const PricingPlans = () => {
                     stroke="currentColor"
                     strokeWidth={3}
                   >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M5 13l4 4L19 7"
-                    />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                   </svg>
                 )}
               </div>
               <div className="flex-1 text-left">
-                <p className="font-bold text-sm text-black">
-                  {plan.name.toUpperCase()}
-                </p>
+                <p className="font-bold text-sm text-black">{plan.name.toUpperCase()}</p>
                 <p className="text-xs text-slate-500">{plan.subtitle}</p>
               </div>
               {plan.popular && (
@@ -159,5 +151,5 @@ export const PricingPlans = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}

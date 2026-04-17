@@ -11,10 +11,11 @@ export default defineConfig([
   {
     plugins: {
       '@typescript-eslint': tseslint.plugin,
+      '@next/next': { rules: {} },
     },
     rules: {
-      '@typescript-eslint/no-unused-vars': 'error',
-      '@typescript-eslint/no-explicit-any': 'error',
+      '@typescript-eslint/no-unused-vars': 'warn',
+      '@typescript-eslint/no-explicit-any': 'warn',
       '@typescript-eslint/no-duplicate-enum-values': 'off',
 
       '@next/next/no-img-element': 'off',

@@ -1,16 +1,13 @@
-"use client";
+'use client'
 
-import Script from "next/script";
+import Script from 'next/script'
 
-const NINO_API_KEY = process.env.NEXT_PUBLIC_NINO_API_KEY || "";
+const NINO_API_KEY = process.env.NEXT_PUBLIC_NINO_API_KEY || ''
 
 export default function NinoChatInit() {
   return (
     <>
-      <Script
-        src="https://flujopay.blob.core.windows.net/webchat/landing.js"
-        strategy="lazyOnload"
-      />
+      <Script src="https://flujopay.blob.core.windows.net/webchat/landing.js" strategy="lazyOnload" />
       <Script id="nino-chat-init" strategy="lazyOnload">
         {`
           (function check() {
@@ -30,5 +27,5 @@ export default function NinoChatInit() {
         `}
       </Script>
     </>
-  );
+  )
 }

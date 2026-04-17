@@ -1,7 +1,7 @@
-import { Footer } from "@/ui/layout/Footer";
-import { Header } from "@/ui/layout/Header";
-import { ContactForm } from "./sections/ContactForm";
-import { MainPhrase } from "./sections/MainPhrase";
+import { Footer } from '@/ui/layout/Footer'
+import { Header } from '@/ui/layout/Header'
+import { ContactForm } from './sections/ContactForm'
+import { MainPhrase } from './sections/MainPhrase'
 
 export const ContactanosPage = () => {
   return (
@@ -15,5 +15,5 @@ export const ContactanosPage = () => {
       </div>
       <Footer />
     </div>
-  );
-};
+  )
+}

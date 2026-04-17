@@ -1,7 +1,5 @@
 {
   "permissions": {
-    "allow": [
-      "WebFetch(domain:opera.somossena.com)"
-    ]
+    "allow": ["WebFetch(domain:opera.somossena.com)"]
   }
 }

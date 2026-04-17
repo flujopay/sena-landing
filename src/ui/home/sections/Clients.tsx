@@ -1,20 +1,20 @@
-import { AssetImage } from "@/lib/utils/assets/image";
-import { LogoSlider } from "@/ui/shared/LogoSlider";
+import { AssetImage } from '@/lib/utils/assets/image'
+import { LogoSlider } from '@/ui/shared/LogoSlider'
 
 const clients = [
   {
     id: 1,
-    name: "Científica Andina",
+    name: 'Científica Andina',
     logo: AssetImage.cientificaLogo.src,
   },
   {
     id: 2,
-    name: "Proweld",
+    name: 'Proweld',
     logo: AssetImage.proweldLogo.src,
   },
   {
     id: 3,
-    name: "Aquarius Consulting",
+    name: 'Aquarius Consulting',
     logo: AssetImage.aquariusConsultingLogo.src,
   },
   // {
@@ -24,20 +24,20 @@ const clients = [
   // },
   {
     id: 5,
-    name: "Top Space",
+    name: 'Top Space',
     logo: AssetImage.topSpaceLogo.src,
   },
   {
     id: 6,
-    name: "Maruz",
+    name: 'Maruz',
     logo: AssetImage.maruzLogo.src,
   },
   {
     id: 7,
-    name: "AOM",
+    name: 'AOM',
     logo: AssetImage.aomLogo.src,
   },
-];
+]
 
 export const Clients = () => {
   const sliderItems = clients.map((client) => ({
@@ -48,11 +48,11 @@ export const Clients = () => {
         alt={client.name}
         className="w-[100px] h-[60px] object-contain"
         style={{
-          filter: "grayscale(100%) opacity(0.7)",
+          filter: 'grayscale(100%) opacity(0.7)',
         }}
       />
     ),
-  }));
+  }))
 
   return (
     <div className="bg-[#F5F5F5] py-12 md:py-16">
@@ -70,7 +70,7 @@ export const Clients = () => {
               alt={client.name}
               className="w-[120px] h-[70px] object-contain"
               style={{
-                filter: "grayscale(100%) opacity(0.7)",
+                filter: 'grayscale(100%) opacity(0.7)',
               }}
             />
           ))}
@@ -82,5 +82,5 @@ export const Clients = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}

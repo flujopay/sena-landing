@@ -1,7 +1,7 @@
-import { ContactanosPage } from "@/ui/contactanos/ContactanosPage";
+import { ContactanosPage } from '@/ui/contactanos/ContactanosPage'
 
 const Page = () => {
-  return <ContactanosPage />;
-};
+  return <ContactanosPage />
+}
 
-export default Page;
+export default Page

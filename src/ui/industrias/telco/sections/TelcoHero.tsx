@@ -1,11 +1,11 @@
-"use client";
+'use client'
 
-import Button from "@/ui/shared/Button";
+import Button from '@/ui/shared/Button'
 
 export const TelcoHero = () => {
   const onRedirectHubspot = () => {
-    window.open("https://meetings.hubspot.com/francisco502", "_blank");
-  };
+    window.open('https://meetings.hubspot.com/francisco502', '_blank')
+  }
 
   return (
     <section className="bg-[#F9F9F9]">
@@ -17,30 +17,26 @@ export const TelcoHero = () => {
               Telecomunicaciones B2B
             </span>
             <h1 className="text-brand-primary-dark font-canaro text-5xl lg:text-7xl font-extrabold leading-tight">
-              Contratos complejos.{" "}
-              <br />
+              Contratos complejos. <br />
               <span className="text-brand-primary font-caslon">Cobranza crítica</span>
               <span className="text-brand-secondary">.</span>
             </h1>
           </div>
           <p className="font-adobe text-black text-xl max-w-2xl leading-relaxed">
-            En las <strong>empresas de telecomunicaciones</strong>, cada factura depende de SLAs, validaciones técnicas y procesos internos extensos del cliente. Sena ordena y acelera tu ciclo de cuentas por cobrar B2B sin tensionar relaciones estratégicas.
+            En las <strong>empresas de telecomunicaciones</strong>, cada factura depende de SLAs, validaciones
+            técnicas y procesos internos extensos del cliente. Sena ordena y acelera tu ciclo de cuentas por
+            cobrar B2B sin tensionar relaciones estratégicas.
           </p>
           <div className="flex flex-row items-start gap-3 mt-2">
-            <Button
-              text="Agenda una demo"
-              size="lg"
-              className="text-lg"
-              onClick={onRedirectHubspot}
-            />
+            <Button text="Agenda una demo" size="lg" className="text-lg" onClick={onRedirectHubspot} />
             <Button
               text="Ver cómo funciona"
               variant="primaryDarkOutlined"
               size="lg"
               className="text-lg"
               onClick={() => {
-                const el = document.getElementById("telco-como-funciona");
-                if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+                const el = document.getElementById('telco-como-funciona')
+                if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
               }}
             />
           </div>
@@ -55,28 +51,24 @@ export const TelcoHero = () => {
             Telecomunicaciones B2B
           </span>
           <h1 className="text-brand-primary-dark font-canaro text-3xl font-extrabold leading-tight">
-            Contratos complejos.{" "}
-            <span className="text-brand-primary font-caslon">Cobranza crítica</span>
+            Contratos complejos. <span className="text-brand-primary font-caslon">Cobranza crítica</span>
             <span className="text-brand-secondary">.</span>
           </h1>
           <p className="font-adobe text-black text-sm leading-relaxed">
-            En las <strong>empresas de telecomunicaciones</strong>, cada factura depende de SLAs, validaciones técnicas y procesos internos extensos del cliente. Sena ordena y acelera tu ciclo de cuentas por cobrar B2B sin tensionar relaciones estratégicas.
+            En las <strong>empresas de telecomunicaciones</strong>, cada factura depende de SLAs, validaciones
+            técnicas y procesos internos extensos del cliente. Sena ordena y acelera tu ciclo de cuentas por
+            cobrar B2B sin tensionar relaciones estratégicas.
           </p>
           <div className="flex flex-row items-start gap-2">
-            <Button
-              text="Agenda una demo"
-              size="sm"
-              className="text-xs"
-              onClick={onRedirectHubspot}
-            />
+            <Button text="Agenda una demo" size="sm" className="text-xs" onClick={onRedirectHubspot} />
             <Button
               text="Ver cómo funciona"
               variant="primaryDarkOutlined"
               size="sm"
               className="text-xs"
               onClick={() => {
-                const el = document.getElementById("telco-como-funciona");
-                if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+                const el = document.getElementById('telco-como-funciona')
+                if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
               }}
             />
           </div>
@@ -86,5 +78,5 @@ export const TelcoHero = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}

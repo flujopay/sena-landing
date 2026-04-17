@@ -1,15 +1,13 @@
-"use client";
+'use client'
 
-import { getBlogPostsSorted, getFeaturedPost } from "@/lib/data/blogPosts";
-import { Footer } from "../layout/Footer";
-import { Header } from "../layout/Header";
-import { BlogContent } from "./sections/BlogContent";
+import { getBlogPostsSorted, getFeaturedPost } from '@/lib/data/blogPosts'
+import { Footer } from '../layout/Footer'
+import { Header } from '../layout/Header'
+import { BlogContent } from './sections/BlogContent'
 
 export const BlogPage = () => {
-  const featuredPost = getFeaturedPost();
-  const otherPosts = getBlogPostsSorted().filter(
-    (post) => post.id !== featuredPost.id,
-  );
+  const featuredPost = getFeaturedPost()
+  const otherPosts = getBlogPostsSorted().filter((post) => post.id !== featuredPost.id)
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -21,5 +19,5 @@ export const BlogPage = () => {
       </div>
       <Footer />
     </div>
-  );
-};
+  )
+}

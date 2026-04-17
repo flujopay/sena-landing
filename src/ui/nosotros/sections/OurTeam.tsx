@@ -1,45 +1,45 @@
-import { AssetUsImage } from "@/lib/utils/assets/imageUs";
-import { TitleDescripction } from "@/ui/shared/TitleDescripction";
-import Image from "next/image";
+import { AssetUsImage } from '@/lib/utils/assets/imageUs'
+import { TitleDescripction } from '@/ui/shared/TitleDescripction'
+import Image from 'next/image'
 
 type TeamMember = {
-  name: string;
-  role: string;
-  image?: string;
-};
+  name: string
+  role: string
+  image?: string
+}
 
 const teamMembers: TeamMember[] = [
   {
-    name: "JAZMÍN JORQUERA",
-    role: "CEO Sena",
+    name: 'JAZMÍN JORQUERA',
+    role: 'CEO Sena',
     image: AssetUsImage.jazmin.src,
   },
   {
-    name: "SEBASTIÁN GAJARDO",
-    role: "Product Manager",
+    name: 'SEBASTIÁN GAJARDO',
+    role: 'Product Manager',
     image: AssetUsImage.seba.src,
   },
   {
-    name: "FRANCISCO ORTEGA",
-    role: "Sales Manager",
+    name: 'FRANCISCO ORTEGA',
+    role: 'Sales Manager',
     image: AssetUsImage.francisco.src,
   },
   {
-    name: "RENILDO CHAVEZ",
-    role: "Full Stack Developer",
+    name: 'RENILDO CHAVEZ',
+    role: 'Full Stack Developer',
     image: AssetUsImage.renildo.src,
   },
   {
-    name: "DIEGO MATEO",
-    role: "Full Stack Developer",
+    name: 'DIEGO MATEO',
+    role: 'Full Stack Developer',
     image: AssetUsImage.diego.src,
   },
   {
-    name: "ERICK VILLALOBOS",
-    role: "Full Stack Developer",
+    name: 'ERICK VILLALOBOS',
+    role: 'Full Stack Developer',
     image: AssetUsImage.erick.src,
   },
-];
+]
 
 export const OurTeam = () => {
   return (
@@ -63,16 +63,12 @@ export const OurTeam = () => {
                   <div className="w-full h-full bg-blue-400" />
                 )}
               </div>
-              <h3 className="text-[10px] md:text-sm font-bold text-gray-900 uppercase">
-                {member.name}
-              </h3>
-              <p className="text-[10px] md:text-sm text-gray-600 italic">
-                {member.role}
-              </p>
+              <h3 className="text-[10px] md:text-sm font-bold text-gray-900 uppercase">{member.name}</h3>
+              <p className="text-[10px] md:text-sm text-gray-600 italic">{member.role}</p>
             </div>
           ))}
         </div>
       </div>
     </section>
-  );
-};
+  )
+}

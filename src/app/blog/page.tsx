@@ -1,7 +1,7 @@
-import { BlogPage } from "@/ui/blog/BlogPage";
+import { BlogPage } from '@/ui/blog/BlogPage'
 
 const Blog = () => {
-  return <BlogPage />;
-};
+  return <BlogPage />
+}
 
-export default Blog;
+export default Blog

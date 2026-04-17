@@ -1,4 +1,4 @@
-import { NextResponse } from "next/server";
+import { NextResponse } from 'next/server'
 
 export async function GET() {
   const content = `# Sena - Plataforma de Gestion de Cuentas por Cobrar y Recuperacion B2B para Latinoamerica
@@ -249,12 +249,12 @@ WhatsApp (Peru): +51 958 969 041
 Redes sociales:
 - LinkedIn: https://www.linkedin.com/company/sena-latam/
 - Instagram: https://www.instagram.com/sena.latam
-- Facebook: https://www.facebook.com/sena.latam`.trim();
+- Facebook: https://www.facebook.com/sena.latam`.trim()
 
   return new NextResponse(content, {
     headers: {
-      "Content-Type": "text/plain; charset=utf-8",
-      "Cache-Control": "public, max-age=86400, s-maxage=86400",
+      'Content-Type': 'text/plain; charset=utf-8',
+      'Cache-Control': 'public, max-age=86400, s-maxage=86400',
     },
-  });
+  })
 }

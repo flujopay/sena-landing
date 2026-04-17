@@ -1,37 +1,31 @@
-"use client";
+'use client'
 
-import { BlogPost } from "@/lib/types/blog";
-import Button from "@/ui/shared/Button";
-import Image from "next/image";
-import { useState } from "react";
+import { BlogPost } from '@/lib/types/blog'
+import Button from '@/ui/shared/Button'
+import Image from 'next/image'
+import { useState } from 'react'
 
 interface BlogContentProps {
-  featuredPost: BlogPost;
-  otherPosts: BlogPost[];
+  featuredPost: BlogPost
+  otherPosts: BlogPost[]
 }
 
 export const BlogContent = ({ featuredPost, otherPosts }: BlogContentProps) => {
-  const [selectedTag, setSelectedTag] = useState("Todos");
-  const [visibleCount, setVisibleCount] = useState(4);
+  const [selectedTag, setSelectedTag] = useState('Todos')
+  const [visibleCount, setVisibleCount] = useState(4)
 
-  const handleLoadMore = () => setVisibleCount((prev) => prev + 4);
+  const handleLoadMore = () => setVisibleCount((prev) => prev + 4)
 
-  const allTags = Array.from(new Set(otherPosts.flatMap((post) => post.tags)));
+  const allTags = Array.from(new Set(otherPosts.flatMap((post) => post.tags)))
 
   const filteredPosts =
-    selectedTag === "Todos"
-      ? otherPosts
-      : otherPosts.filter((post) => post.tags.includes(selectedTag));
+    selectedTag === 'Todos' ? otherPosts : otherPosts.filter((post) => post.tags.includes(selectedTag))
 
   return (
     <section className="py-12 md:py-16 px-4 md:px-12">
-      <h1 className="text-4xl md:text-6xl font-extrabold text-brand-primary-dark mb-4">
-        Blog
-      </h1>
+      <h1 className="text-4xl md:text-6xl font-extrabold text-brand-primary-dark mb-4">Blog</h1>
       <div className="inline-block bg-brand-secondary-light rounded-full px-6 py-2 mb-12">
-        <p className="text-white font-bold text-lg md:text-xl">
-          Últimas novedades
-        </p>
+        <p className="text-white font-bold text-lg md:text-xl">Últimas novedades</p>
       </div>
 
       {featuredPost && (
@@ -79,9 +73,7 @@ export const BlogContent = ({ featuredPost, otherPosts }: BlogContentProps) => {
               {featuredPost.title}
             </h2>
 
-            <p className="text-base leading-relaxed">
-              {featuredPost.intro}
-            </p>
+            <p className="text-base leading-relaxed">{featuredPost.intro}</p>
           </div>
 
           <div className="md:w-[40%] w-full h-64 md:h-auto rounded-xl overflow-hidden bg-white">
@@ -105,11 +97,11 @@ export const BlogContent = ({ featuredPost, otherPosts }: BlogContentProps) => {
 
       <div className="flex flex-wrap gap-3 mb-10">
         <button
-          onClick={() => setSelectedTag("Todos")}
+          onClick={() => setSelectedTag('Todos')}
           className={`hover:cursor-pointer px-4 py-2 rounded-full border-2 font-semibold text-sm transition-colors ${
-            selectedTag === "Todos"
-              ? "bg-brand-primary text-white border-brand-primary"
-              : "border-brand-primary text-brand-primary hover:bg-brand-primary/10"
+            selectedTag === 'Todos'
+              ? 'bg-brand-primary text-white border-brand-primary'
+              : 'border-brand-primary text-brand-primary hover:bg-brand-primary/10'
           }`}
         >
           Todos
@@ -120,8 +112,8 @@ export const BlogContent = ({ featuredPost, otherPosts }: BlogContentProps) => {
             onClick={() => setSelectedTag(tag)}
             className={`hover:cursor-pointer px-4 py-2 rounded-full border-2 font-semibold text-sm transition-colors ${
               selectedTag === tag
-                ? "bg-brand-primary text-white border-brand-primary"
-                : "border-brand-primary text-brand-primary hover:bg-brand-primary/10"
+                ? 'bg-brand-primary text-white border-brand-primary'
+                : 'border-brand-primary text-brand-primary hover:bg-brand-primary/10'
             }`}
           >
             {tag}
@@ -161,12 +153,8 @@ export const BlogContent = ({ featuredPost, otherPosts }: BlogContentProps) => {
               {/* <span>|</span> */}
               <span>{post.date}</span>
             </div>
-            <h3 className="text-xl font-extrabold text-brand-primary mb-2">
-              {post.title}
-            </h3>
-            <p className="text-sm text-slate-700  leading-relaxed">
-              {post.intro}
-            </p>
+            <h3 className="text-xl font-extrabold text-brand-primary mb-2">{post.title}</h3>
+            <p className="text-sm text-slate-700  leading-relaxed">{post.intro}</p>
           </a>
         ))}
       </div>
@@ -176,13 +164,12 @@ export const BlogContent = ({ featuredPost, otherPosts }: BlogContentProps) => {
           <Button
             size="lg"
             text="Cargar más"
-            variant={"primaryFilled"}
+            variant={'primaryFilled'}
             className="text-lg"
             onClick={handleLoadMore}
           />
-        
         </div>
       )}
     </section>
-  );
-};
+  )
+}

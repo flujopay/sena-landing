@@ -1,4 +1,4 @@
-import { AssetImage } from "@/lib/utils/assets/image";
+import { AssetImage } from '@/lib/utils/assets/image'
 
 export const OurInspiration = () => {
   return (
@@ -18,8 +18,7 @@ export const OurInspiration = () => {
                 Nos inspira el río Sena de París.
                 <br />
                 Un río que avanza solo cuando puede
-                <br />
-                y que necesita cuidado cuando el camino se complica.
+                <br />y que necesita cuidado cuando el camino se complica.
               </p>
 
               <p>
@@ -33,15 +32,14 @@ export const OurInspiration = () => {
               <p>
                 Por eso cobrar bien es un arte:
                 <br />
-                hacerlo con{" "}
+                hacerlo con{' '}
                 <span className="bg-brand-primary text-white px-2 py-0.5 rounded">
                   cuidado, criterio y experiencia.
                 </span>
               </p>
 
               <p>
-                Sena. El arte de cobrar{" "}
-                <span className="text-brand-secondary">bien.</span>
+                Sena. El arte de cobrar <span className="text-brand-secondary">bien.</span>
               </p>
             </div>
           </div>
@@ -49,9 +47,9 @@ export const OurInspiration = () => {
           {/* Image */}
           <div className="w-full md:w-1/2 lg:w-2/3">
             <div className="overflow-hidden">
-              <img 
-                src={AssetImage.rioSena.src} 
-                alt="Río Sena de París" 
+              <img
+                src={AssetImage.rioSena.src}
+                alt="Río Sena de París"
                 className="w-full max-h-[300px] md:max-h-[400px] object-cover rounded-2xl "
               />
             </div>
@@ -59,5 +57,5 @@ export const OurInspiration = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}

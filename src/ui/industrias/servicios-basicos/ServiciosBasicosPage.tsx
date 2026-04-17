@@ -1,15 +1,15 @@
-"use client";
+'use client'
 
-import { Footer } from "@/ui/layout/Footer";
-import { Header } from "@/ui/layout/Header";
-import { ServiciosBenefits } from "./sections/ServiciosBenefits";
-import { ServiciosCTA } from "./sections/ServiciosCTA";
-import { ServiciosHero } from "./sections/ServiciosHero";
-import { ServiciosHowItWorks } from "./sections/ServiciosHowItWorks";
-import { ServiciosProblem } from "./sections/ServiciosProblem";
-import { ServiciosSocialProof } from "./sections/ServiciosSocialProof";
-import { ServiciosSolution } from "./sections/ServiciosSolution";
-import { ServiciosWhySena } from "./sections/ServiciosWhySena";
+import { Footer } from '@/ui/layout/Footer'
+import { Header } from '@/ui/layout/Header'
+import { ServiciosBenefits } from './sections/ServiciosBenefits'
+import { ServiciosCTA } from './sections/ServiciosCTA'
+import { ServiciosHero } from './sections/ServiciosHero'
+import { ServiciosHowItWorks } from './sections/ServiciosHowItWorks'
+import { ServiciosProblem } from './sections/ServiciosProblem'
+import { ServiciosSocialProof } from './sections/ServiciosSocialProof'
+import { ServiciosSolution } from './sections/ServiciosSolution'
+import { ServiciosWhySena } from './sections/ServiciosWhySena'
 
 export const ServiciosBasicosPage = () => {
   return (
@@ -27,5 +27,5 @@ export const ServiciosBasicosPage = () => {
         <Footer />
       </div>
     </div>
-  );
-};
+  )
+}

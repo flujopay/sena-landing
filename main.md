@@ -4,9 +4,9 @@
 
 Sena es una plataforma de gestion de cuentas por cobrar que incluye un servicio de cobranza. Ayuda a las empresas a ordenar, automatizar y recuperar pagos combinando tecnologia, inteligencia artificial y personas expertas.
 
-> *"Nos inspira el rio Sena de Paris. Un rio que avanza solo cuando puede y que necesita cuidado cuando el camino se complica. Asi entendemos el cobrar. A veces fluye y otras veces hay que estar ahi para ayudarlo a avanzar."*
+> _"Nos inspira el rio Sena de Paris. Un rio que avanza solo cuando puede y que necesita cuidado cuando el camino se complica. Asi entendemos el cobrar. A veces fluye y otras veces hay que estar ahi para ayudarlo a avanzar."_
 >
-> *"Por eso cobrar bien es un arte: hacerlo con cuidado, criterio y experiencia."*
+> _"Por eso cobrar bien es un arte: hacerlo con cuidado, criterio y experiencia."_
 
 **Slogan:** "El arte de cobrar bien / con criterio / a tiempo / con cuidado"
 
@@ -62,28 +62,34 @@ Combina tecnologia y un equipo especializado para gestionar casos complejos y me
 - Cuidan la marca y la relacion con el cliente
 - Mas de 40 anos de experiencia en recuperacion
 
-> *"Cuando hace falta entra el equipo humano de Recsa, quienes cuidando tu marca y relacion con el cliente, realizan las gestiones de recupero, lo que llevamos haciendo por mas de 40 anos."*
+> _"Cuando hace falta entra el equipo humano de Recsa, quienes cuidando tu marca y relacion con el cliente, realizan las gestiones de recupero, lo que llevamos haciendo por mas de 40 anos."_
 
 ---
 
 ## Funcionalidades clave
 
 ### Plataforma unificada de cobranza
+
 Centraliza facturas, clientes, gestiones y pagos en un solo lugar, sin planillas ni sistemas paralelos.
 
 ### Gestion multicanal integrada
+
 Administra WhatsApp, email y SMS desde una sola plataforma, con historial completo de cada interaccion.
 
 ### Automatizacion inteligente
+
 Automatiza recordatorios y seguimientos con reglas claras, manteniendo siempre un tono humano en la comunicacion con tus clientes.
 
 ### Control y reporteria en tiempo real
+
 Visualiza estados de pago, mora y desempeno de tus gestiones con informacion siempre actualizada.
 
 ### Gestion humana especializada
+
 Cuando la automatizacion no basta, entra el equipo experto de Recsa para gestionar los casos complejos que requieren criterio humano.
 
 ### Arquitectura escalable
+
 Una solucion pensada para startups, pymes y grandes empresas, que se adapta a tu volumen, complejidad y etapa de negocio.
 
 ---
@@ -93,27 +99,33 @@ Una solucion pensada para startups, pymes y grandes empresas, que se adapta a tu
 Un sistema completo que combina automatizacion, control y criterio humano.
 
 ### Paso 1 - Prepara
+
 Ordena facturas, contactos y montos automaticamente. El sistema estructura toda la informacion para una gestion eficiente.
 
 ### Paso 2 - Cobra
+
 CRM multicanal con WhatsApp, email y SMS. Secuencias inteligentes segmentadas por vencimiento, monto y comportamiento.
 
 ### Paso 3 - Evalua
+
 Metricas de conversion, aperturas y rendimiento por canal. Mejora tu estrategia con datos reales.
 
 ### Paso 4 - Recupera
+
 Equipo humano especializado en recuperacion de deuda. Cuando hace falta entra el equipo humano de Recsa, quienes cuidando tu marca y relacion con el cliente, realizan las gestiones de recupero.
 
 ### Paso 5 - Concilia
+
 Registro automatico de tus pagos. Cierre de facturas sin trabajo manual ni errores.
 
 ---
 
 ## Planes y precios
 
-*"Desde startups hasta empresas establecidas, tenemos el plan perfecto para ti."*
+_"Desde startups hasta empresas establecidas, tenemos el plan perfecto para ti."_
 
 ### Plan Starter - USD $39/mes
+
 **Para pequenas empresas y primeros volumenes**
 
 - Hasta 10 clientes
@@ -125,6 +137,7 @@ Registro automatico de tus pagos. Cierre de facturas sin trabajo manual ni error
 - Soporte por email
 
 ### Plan Growth - USD $349/mes (Mas popular)
+
 **Para empresas en expansion**
 
 - Hasta 100 clientes
@@ -139,6 +152,7 @@ Registro automatico de tus pagos. Cierre de facturas sin trabajo manual ni error
 - Soporte prioritario
 
 ### Plan Enterprise - USD $799/mes
+
 **Para alto volumen y operaciones criticas**
 
 - 100+ clientes
@@ -155,19 +169,19 @@ Registro automatico de tus pagos. Cierre de facturas sin trabajo manual ni error
 
 ## Mercados y presencia
 
-| Pais | Moneda |
-|------|--------|
-| Peru | PEN (Soles) |
-| Chile | CLP (Pesos chilenos) |
+| Pais     | Moneda                  |
+| -------- | ----------------------- |
+| Peru     | PEN (Soles)             |
+| Chile    | CLP (Pesos chilenos)    |
 | Colombia | COP (Pesos colombianos) |
-| Ecuador | USD (Dolares) |
-| Mexico | MXN (Pesos mexicanos) |
+| Ecuador  | USD (Dolares)           |
+| Mexico   | MXN (Pesos mexicanos)   |
 
 ---
 
 ## Clientes
 
-*"Nuestra trayectoria y nuestros clientes nos avalan."*
+_"Nuestra trayectoria y nuestros clientes nos avalan."_
 
 - Cientifica Andina
 - Proweld
@@ -182,16 +196,16 @@ Registro automatico de tus pagos. Cierre de facturas sin trabajo manual ni error
 
 ### Equipo Sena
 
-| Nombre | Rol |
-|--------|-----|
-| Jazmin Jorquera | CEO |
-| Sebastian Gajardo | Product Manager |
-| Francisco Ortega | Sales Manager |
-| Renildo Chavez | Full Stack Developer |
-| Diego Mateo | Full Stack Developer |
-| Erick Villalobos | Full Stack Developer |
+| Nombre            | Rol                  |
+| ----------------- | -------------------- |
+| Jazmin Jorquera   | CEO                  |
+| Sebastian Gajardo | Product Manager      |
+| Francisco Ortega  | Sales Manager        |
+| Renildo Chavez    | Full Stack Developer |
+| Diego Mateo       | Full Stack Developer |
+| Erick Villalobos  | Full Stack Developer |
 
-> *"Un equipo multidisciplinario que une tecnologia, experiencia financiera y criterio humano. Especialistas en producto, desarrollo y operaciones de cobranza que disenan cada funcionalidad pensando en el equilibrio entre efectividad y relaciones."*
+> _"Un equipo multidisciplinario que une tecnologia, experiencia financiera y criterio humano. Especialistas en producto, desarrollo y operaciones de cobranza que disenan cada funcionalidad pensando en el equilibrio entre efectividad y relaciones."_
 
 ---
 
@@ -212,13 +226,13 @@ Sena tiene landings especificas para las siguientes industrias:
 
 ## Canales de contacto
 
-| Canal | Detalle |
-|-------|---------|
-| Email | hola@somossena.com |
-| Telefono | +569 4448 9673 |
-| WhatsApp Peru | +51 958 969 041 |
-| WhatsApp Chile | +56 944 489 673 |
-| Agendar demo | meetings.hubspot.com/francisco502 |
+| Canal          | Detalle                           |
+| -------------- | --------------------------------- |
+| Email          | hola@somossena.com                |
+| Telefono       | +569 4448 9673                    |
+| WhatsApp Peru  | +51 958 969 041                   |
+| WhatsApp Chile | +56 944 489 673                   |
+| Agendar demo   | meetings.hubspot.com/francisco502 |
 
 ### Redes sociales
 
@@ -231,21 +245,21 @@ Sena tiene landings especificas para las siguientes industrias:
 
 ## Mensajes clave de la marca
 
-| Contexto | Mensaje |
-|----------|---------|
-| Home - Hero | "El arte de cobrar bien" |
-| Home - CTA | "Cobrar bien hace la diferencia." |
-| Nosotros - CTA | "El arte esta en la forma, no en la presion." |
-| Contacto | "Estas a un paso de cobrar mejor." |
+| Contexto         | Mensaje                                       |
+| ---------------- | --------------------------------------------- |
+| Home - Hero      | "El arte de cobrar bien"                      |
+| Home - CTA       | "Cobrar bien hace la diferencia."             |
+| Nosotros - CTA   | "El arte esta en la forma, no en la presion." |
+| Contacto         | "Estas a un paso de cobrar mejor."            |
 | Contacto - frase | "Saber cuando actuar tambien es cobrar bien." |
 
 ---
 
 ## Links principales
 
-| Recurso | URL |
-|---------|-----|
-| Web de Sena | somossena.com |
-| Servicio Recupera | recupera.somossena.com |
-| Recsa (empresa madre) | recsa.com |
-| Agendar demo | meetings.hubspot.com/francisco502 |
+| Recurso               | URL                               |
+| --------------------- | --------------------------------- |
+| Web de Sena           | somossena.com                     |
+| Servicio Recupera     | recupera.somossena.com            |
+| Recsa (empresa madre) | recsa.com                         |
+| Agendar demo          | meetings.hubspot.com/francisco502 |

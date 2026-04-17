@@ -1,17 +1,17 @@
 export type ContactFormRequest = {
-  formOrigin: string;
-  countryName: string;
-  productType: string;
-  nombre: string;
-  apellido: string;
-  correo: string;
-  telefono: string;
-  representaEmpresa?: string;
-  nombreEmpresa?: string;
-  mensaje: string;
+  formOrigin: string
+  countryName: string
+  productType: string
+  nombre: string
+  apellido: string
+  correo: string
+  telefono: string
+  representaEmpresa?: string
+  nombreEmpresa?: string
+  mensaje: string
   howFound: string
-  utmSource?: string;
-  utmMedium?: string;
-  utmCampaign?: string;
-  utmContent?: string;
-};
+  utmSource?: string
+  utmMedium?: string
+  utmCampaign?: string
+  utmContent?: string
+}

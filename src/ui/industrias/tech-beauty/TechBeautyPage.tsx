@@ -1,14 +1,14 @@
-"use client";
+'use client'
 
-import { Footer } from "@/ui/layout/Footer";
-import { Header } from "@/ui/layout/Header";
-import { BeautyBenefits } from "./sections/BeautyBenefits";
-import { BeautyCTA } from "./sections/BeautyCTA";
-import { BeautyHero } from "./sections/BeautyHero";
-import { BeautyHowItWorks } from "./sections/BeautyHowItWorks";
-import { BeautyProblem } from "./sections/BeautyProblem";
-import { BeautySocialProof } from "./sections/BeautySocialProof";
-import { BeautySolution } from "./sections/BeautySolution";
+import { Footer } from '@/ui/layout/Footer'
+import { Header } from '@/ui/layout/Header'
+import { BeautyBenefits } from './sections/BeautyBenefits'
+import { BeautyCTA } from './sections/BeautyCTA'
+import { BeautyHero } from './sections/BeautyHero'
+import { BeautyHowItWorks } from './sections/BeautyHowItWorks'
+import { BeautyProblem } from './sections/BeautyProblem'
+import { BeautySocialProof } from './sections/BeautySocialProof'
+import { BeautySolution } from './sections/BeautySolution'
 
 export const TechBeautyPage = () => {
   return (
@@ -25,5 +25,5 @@ export const TechBeautyPage = () => {
         <Footer />
       </div>
     </div>
-  );
-};
+  )
+}

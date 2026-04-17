@@ -1,3 +1,3 @@
 export const ContentBlock = () => {
-  return <div>ContentBlock</div>;
-};
+  return <div>ContentBlock</div>
+}

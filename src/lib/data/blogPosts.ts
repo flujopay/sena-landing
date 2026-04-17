@@ -1,8 +1,8 @@
-import { BlogPost } from "../types/blog";
-import { AssetImageBlog } from "../utils/assets/imageBlog";
-import { parseSpanishDate, slug } from "../utils/blog";
+import { BlogPost } from '../types/blog'
+import { AssetImageBlog } from '../utils/assets/imageBlog'
+import { parseSpanishDate, slug } from '../utils/blog'
 
-export const featuredPostId = 1;
+export const featuredPostId = 1
 
 export const blogPosts: BlogPost[] = [
   // {
@@ -129,80 +129,77 @@ export const blogPosts: BlogPost[] = [
   // },
   {
     id: 5,
-    slug: slug(
-      "cuanto le cuesta a tu equipo cobrar de forma manual",
-    ),
-    title:
-      "¿Cuánto le cuesta a tu equipo cobrar de forma manual?",
+    slug: slug('cuanto le cuesta a tu equipo cobrar de forma manual'),
+    title: '¿Cuánto le cuesta a tu equipo cobrar de forma manual?',
     intro:
-      "El costo de una cobranza desordenada no aparece en el estado de resultados. Aparece en el tiempo que tu equipo pierde, en los errores que se acumulan y en las oportunidades que se dejan ir. Ese costo es real, aunque nadie lo esté midiendo.",
-    date: "02 de diciembre 2025",
-    tags: ["Cobranza", "Educación Financiera"],
+      'El costo de una cobranza desordenada no aparece en el estado de resultados. Aparece en el tiempo que tu equipo pierde, en los errores que se acumulan y en las oportunidades que se dejan ir. Ese costo es real, aunque nadie lo esté midiendo.',
+    date: '02 de diciembre 2025',
+    tags: ['Cobranza', 'Educación Financiera'],
     image: AssetImageBlog.blog_5_main.src,
     content: [
       {
-        type: "title",
-        text: "¿Cuánto le cuesta a tu equipo cobrar de forma manual?",
+        type: 'title',
+        text: '¿Cuánto le cuesta a tu equipo cobrar de forma manual?',
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Hay un costo que pocas empresas calculan: el tiempo que su equipo dedica a gestionar cobranza de forma manual. Revisar planillas, redactar correos uno por uno, hacer llamadas sin registro, cruzar información entre WhatsApp y Excel. Cada hora invertida en eso es una hora que no se destinó a vender, a retener clientes o a mejorar la operación.",
+            type: 'text',
+            text: 'Hay un costo que pocas empresas calculan: el tiempo que su equipo dedica a gestionar cobranza de forma manual. Revisar planillas, redactar correos uno por uno, hacer llamadas sin registro, cruzar información entre WhatsApp y Excel. Cada hora invertida en eso es una hora que no se destinó a vender, a retener clientes o a mejorar la operación.',
           },
         ],
       },
-      { type: "subtitle", text: "El problema no es la persona. Es el sistema." },
+      { type: 'subtitle', text: 'El problema no es la persona. Es el sistema.' },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Cuando la cobranza depende de la memoria de alguien, los errores son inevitables. Se olvidan facturas, se mandan recordatorios a destiempo, se pierde el historial de conversaciones. Y cuando el equipo crece, el caos escala con él. No porque las personas fallen, sino porque un proceso manual no escala.",
+            type: 'text',
+            text: 'Cuando la cobranza depende de la memoria de alguien, los errores son inevitables. Se olvidan facturas, se mandan recordatorios a destiempo, se pierde el historial de conversaciones. Y cuando el equipo crece, el caos escala con él. No porque las personas fallen, sino porque un proceso manual no escala.',
           },
         ],
       },
-      { type: "subtitle", text: "Lo que se puede automatizar" },
+      { type: 'subtitle', text: 'Lo que se puede automatizar' },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "La mayoría de las tareas operativas de cobranza son repetibles y predecibles: recordatorios antes del vencimiento, seguimientos a los 3, 7 y 15 días, notificaciones por WhatsApp o email según el comportamiento del cliente. Todo eso puede ejecutarse automáticamente, con el tono correcto y en el momento adecuado, sin que nadie del equipo tenga que intervenir.",
-          },
-        ],
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "text",
-            text: "Cuando la tecnología se encarga de lo rutinario, tu equipo puede enfocarse en lo que realmente requiere criterio humano: negociar acuerdos, gestionar casos complejos, cuidar las relaciones estratégicas.",
-          },
-        ],
-      },
-      { type: "subtitle", text: "El costo de no automatizar" },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "text",
-            text: "Cada mes que pasa con un proceso manual es un mes con más facturas rezagadas, más horas perdidas y más estrés acumulado en el equipo financiero. La cobranza no resuelta no desaparece sola: crece.",
+            type: 'text',
+            text: 'La mayoría de las tareas operativas de cobranza son repetibles y predecibles: recordatorios antes del vencimiento, seguimientos a los 3, 7 y 15 días, notificaciones por WhatsApp o email según el comportamiento del cliente. Todo eso puede ejecutarse automáticamente, con el tono correcto y en el momento adecuado, sin que nadie del equipo tenga que intervenir.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "¿Quieres saber cuánto tiempo está perdiendo tu equipo en cobranza manual? ",
+            type: 'text',
+            text: 'Cuando la tecnología se encarga de lo rutinario, tu equipo puede enfocarse en lo que realmente requiere criterio humano: negociar acuerdos, gestionar casos complejos, cuidar las relaciones estratégicas.',
+          },
+        ],
+      },
+      { type: 'subtitle', text: 'El costo de no automatizar' },
+      {
+        type: 'paragraph',
+        fragments: [
+          {
+            type: 'text',
+            text: 'Cada mes que pasa con un proceso manual es un mes con más facturas rezagadas, más horas perdidas y más estrés acumulado en el equipo financiero. La cobranza no resuelta no desaparece sola: crece.',
+          },
+        ],
+      },
+      {
+        type: 'paragraph',
+        fragments: [
+          {
+            type: 'text',
+            text: '¿Quieres saber cuánto tiempo está perdiendo tu equipo en cobranza manual? ',
           },
           {
-            type: "link",
-            text: "Agenda una demo y lo revisamos juntos.",
-            href: "https://meetings.hubspot.com/francisco502",
+            type: 'link',
+            text: 'Agenda una demo y lo revisamos juntos.',
+            href: 'https://meetings.hubspot.com/francisco502',
           },
         ],
       },
@@ -210,190 +207,193 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: 6,
-    slug: slug("Factura vencida que nadie paga que puedes hacer"),
-    title: "Factura vencida que nadie paga: qué puedes hacer",
+    slug: slug('Factura vencida que nadie paga que puedes hacer'),
+    title: 'Factura vencida que nadie paga: qué puedes hacer',
     intro:
-      "Cumpliste. Entregaste el servicio, emitiste la factura y esperaste. Pero el pago no llegó. En algún momento dejaste de esperar y empezaste a perseguir. Eso tiene un nombre: cartera vencida. Y tiene solución.",
-    date: "05 de diciembre 2025",
-    tags: ["Cobranza", "Sena"],
+      'Cumpliste. Entregaste el servicio, emitiste la factura y esperaste. Pero el pago no llegó. En algún momento dejaste de esperar y empezaste a perseguir. Eso tiene un nombre: cartera vencida. Y tiene solución.',
+    date: '05 de diciembre 2025',
+    tags: ['Cobranza', 'Sena'],
     image: AssetImageBlog.blog_6_main.src,
     content: [
       {
-        type: "title",
-        text: "Factura vencida que nadie paga: qué puedes hacer",
+        type: 'title',
+        text: 'Factura vencida que nadie paga: qué puedes hacer',
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Cumpliste. Entregaste el servicio, emitiste la factura y esperaste. Pero el pago no llegó. En algún momento dejaste de esperar y empezaste a perseguir -- llamadas sin respuesta, correos ignorados, promesas que no se cumplen. Eso tiene un nombre: ",
+            type: 'text',
+            text: 'Cumpliste. Entregaste el servicio, emitiste la factura y esperaste. Pero el pago no llegó. En algún momento dejaste de esperar y empezaste a perseguir -- llamadas sin respuesta, correos ignorados, promesas que no se cumplen. Eso tiene un nombre: ',
           },
-          { type: "bold", text: "cartera vencida." },
-          { type: "text", text: " Y tiene solución." },
+          { type: 'bold', text: 'cartera vencida.' },
+          { type: 'text', text: ' Y tiene solución.' },
         ],
       },
-      { type: "subtitle", text: "No es factoring. Es recuperación." },
+      { type: 'subtitle', text: 'No es factoring. Es recuperación.' },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Cuando una factura lleva más de 60 días vencida, el camino habitual es el factoring: cedes tu documento, recibes un porcentaje adelantado y pierdes parte de lo que te deben. En Sena hacemos algo distinto. No compramos tu factura ni te damos un préstamo. ",
+            type: 'text',
+            text: 'Cuando una factura lleva más de 60 días vencida, el camino habitual es el factoring: cedes tu documento, recibes un porcentaje adelantado y pierdes parte de lo que te deben. En Sena hacemos algo distinto. No compramos tu factura ni te damos un préstamo. ',
           },
           {
-            type: "bold",
-            text: "Recuperamos el pago directamente con tu cliente, a través de gestión profesional, y solo cobramos si logramos que te paguen.",
+            type: 'bold',
+            text: 'Recuperamos el pago directamente con tu cliente, a través de gestión profesional, y solo cobramos si logramos que te paguen.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
-          { type: "text", text: "Tu factura sigue siendo tuya. No cedes derechos. No comprometes la relación comercial. No pagas por adelantado." },
+          {
+            type: 'text',
+            text: 'Tu factura sigue siendo tuya. No cedes derechos. No comprometes la relación comercial. No pagas por adelantado.',
+          },
         ],
       },
-      { type: "subtitle", text: "¿Cómo funciona Recupera?" },
+      { type: 'subtitle', text: '¿Cómo funciona Recupera?' },
       {
-        type: "list",
+        type: 'list',
         items: [
-          "Nos cuentas cuáles son las facturas vencidas y los montos.",
-          "Evaluamos tu cartera sin costo.",
-          "Activamos la gestión: contacto profesional con tu cliente por los canales adecuados.",
-          "Seguimiento hasta el acuerdo de pago.",
-          "Cuando el pago se concreta, recibes lo que te corresponde.",
+          'Nos cuentas cuáles son las facturas vencidas y los montos.',
+          'Evaluamos tu cartera sin costo.',
+          'Activamos la gestión: contacto profesional con tu cliente por los canales adecuados.',
+          'Seguimiento hasta el acuerdo de pago.',
+          'Cuando el pago se concreta, recibes lo que te corresponde.',
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "El proceso está respaldado por ",
+            type: 'text',
+            text: 'El proceso está respaldado por ',
           },
           {
-            type: "link",
-            text: "Recsa",
-            href: "https://recsa.com",
+            type: 'link',
+            text: 'Recsa',
+            href: 'https://recsa.com',
           },
           {
-            type: "text",
-            text: ", con más de 40 años de experiencia en cobranza en 15 países de LATAM. Más de 146 millones de gestiones mensuales. Saben cómo hablar con quien no paga -- sin romper la relación comercial.",
+            type: 'text',
+            text: ', con más de 40 años de experiencia en cobranza en 15 países de LATAM. Más de 146 millones de gestiones mensuales. Saben cómo hablar con quien no paga -- sin romper la relación comercial.',
           },
         ],
       },
       {
-        type: "image",
-        link: "https://lh7-rt.googleusercontent.com/docsz/AD_4nXc709NrLvnJSDVR39oh82sue9wENpR1rmX7GPnZd4ULBZmUfoYMoD_5z6SzytDkudGGwiYSImsHcDYyy3CY-6ZWrMnmOS2E9l_ipBTpucny4KskH_U-l_IjsEdt47KDeKmAvfC1PwD50BEhbxR_mVU?key=zNxDjqMGOyLpRYie3ixLSQ",
+        type: 'image',
+        link: 'https://lh7-rt.googleusercontent.com/docsz/AD_4nXc709NrLvnJSDVR39oh82sue9wENpR1rmX7GPnZd4ULBZmUfoYMoD_5z6SzytDkudGGwiYSImsHcDYyy3CY-6ZWrMnmOS2E9l_ipBTpucny4KskH_U-l_IjsEdt47KDeKmAvfC1PwD50BEhbxR_mVU?key=zNxDjqMGOyLpRYie3ixLSQ',
       },
-      { type: "subtitle", text: "Sin riesgo de tu parte" },
+      { type: 'subtitle', text: 'Sin riesgo de tu parte' },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Si no recuperamos, no pagas nada. Sin letras pequeñas. Sin sorpresas. Ese es el modelo de Recupera: alineamos nuestros incentivos con los tuyos.",
+            type: 'text',
+            text: 'Si no recuperamos, no pagas nada. Sin letras pequeñas. Sin sorpresas. Ese es el modelo de Recupera: alineamos nuestros incentivos con los tuyos.',
           },
         ],
       },
       {
-        type: "quote",
+        type: 'quote',
         text: `”Tu cartera vencida no está perdida. Solo necesita el proceso correcto.”`,
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "¿Tienes facturas vencidas que no has podido cobrar? ",
+            type: 'text',
+            text: '¿Tienes facturas vencidas que no has podido cobrar? ',
           },
           {
-            type: "link",
-            text: "Cuéntanos qué está pasando en tu cartera.",
-            href: "https://meetings.hubspot.com/francisco502",
+            type: 'link',
+            text: 'Cuéntanos qué está pasando en tu cartera.',
+            href: 'https://meetings.hubspot.com/francisco502',
           },
         ],
       },
-      { type: "image", link: AssetImageBlog.blog_6_3.src },
+      { type: 'image', link: AssetImageBlog.blog_6_3.src },
     ],
   },
   {
     id: 7,
-    slug: slug("vender a credito sin politica de cobranza es un riesgo financiero"),
-    title: "Vender a crédito sin política de cobranza es un riesgo financiero",
+    slug: slug('vender a credito sin politica de cobranza es un riesgo financiero'),
+    title: 'Vender a crédito sin política de cobranza es un riesgo financiero',
     intro:
-      "Extender crédito a un cliente es una decisión comercial. No cobrar a tiempo es una consecuencia financiera. El problema es que muchas empresas diseñan bien la primera parte y no tienen nada estructurado para la segunda.",
-    date: "09 de diciembre 2025",
-    tags: ["Sena", "Cobranza", "Educación Financiera"],
+      'Extender crédito a un cliente es una decisión comercial. No cobrar a tiempo es una consecuencia financiera. El problema es que muchas empresas diseñan bien la primera parte y no tienen nada estructurado para la segunda.',
+    date: '09 de diciembre 2025',
+    tags: ['Sena', 'Cobranza', 'Educación Financiera'],
     image: AssetImageBlog.blog_7_main.src,
     content: [
       {
-        type: "title",
-        text: "Vender a crédito sin política de cobranza es un riesgo financiero",
+        type: 'title',
+        text: 'Vender a crédito sin política de cobranza es un riesgo financiero',
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Cuando una empresa decide vender a crédito, asume un riesgo: que el dinero no llegue cuando debería. Ese riesgo se puede gestionar. El problema es que la mayoría de las empresas tiene una política de crédito -- aunque sea informal -- pero no tiene una política de cobranza. Y ahí es donde empieza el problema.",
+            type: 'text',
+            text: 'Cuando una empresa decide vender a crédito, asume un riesgo: que el dinero no llegue cuando debería. Ese riesgo se puede gestionar. El problema es que la mayoría de las empresas tiene una política de crédito -- aunque sea informal -- pero no tiene una política de cobranza. Y ahí es donde empieza el problema.',
           },
         ],
       },
-      { type: "subtitle", text: "El ciclo que nadie cierra" },
+      { type: 'subtitle', text: 'El ciclo que nadie cierra' },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "El ciclo de una venta B2B tiene dos mitades: la primera termina cuando el cliente firma o acepta. La segunda termina cuando el dinero entra a tu cuenta. Muchas empresas invierten todo su esfuerzo en la primera mitad -- propuestas, negociaciones, contratos -- y dejan la segunda al azar: un recordatorio cuando alguien se acuerda, un correo cuando la factura ya lleva 45 días vencida.",
+            type: 'text',
+            text: 'El ciclo de una venta B2B tiene dos mitades: la primera termina cuando el cliente firma o acepta. La segunda termina cuando el dinero entra a tu cuenta. Muchas empresas invierten todo su esfuerzo en la primera mitad -- propuestas, negociaciones, contratos -- y dejan la segunda al azar: un recordatorio cuando alguien se acuerda, un correo cuando la factura ya lleva 45 días vencida.',
           },
         ],
       },
-      { type: "subtitle", text: "Qué debería tener una política de cobranza" },
+      { type: 'subtitle', text: 'Qué debería tener una política de cobranza' },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "No se necesita un manual extenso. Se necesita tener claro, al menos, tres cosas: cuándo se envía el primer recordatorio (antes del vencimiento, no después), por qué canal se contacta a cada tipo de cliente, y qué pasa si no hay respuesta a los 15, 30 o 60 días. Eso solo, aplicado con consistencia, cambia completamente el resultado.",
-          },
-        ],
-      },
-      {
-        type: "image",
-        link: "https://lh7-rt.googleusercontent.com/docsz/AD_4nXfSdjWiLw2HnwccLjaJ1-Ps3SonCHVFWLzXB-zCo1U2T04NSBJ_B_hSC6Hsu4fMezwTDyCfmLyDHblGvW64ll-OEwviwNmWsyoympvetH8pj0WsdD3drd814206dNNn8_o8O_Zp42usY4MsCSUKTjI?key=vXGcwwMqEuun1PDHDhkzYg",
-      },
-      { type: "subtitle", text: "Cuando la cartera ya está vencida" },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "text",
-            text: "Si la política no existió desde el principio, la deuda se acumula. En ese punto, el equipo interno rara vez tiene el tiempo, el proceso o la experiencia para recuperarla sin poner en riesgo la relación comercial. Ahí es donde entra Recupera: gestión especializada de deuda activa, con el respaldo de ",
-          },
-          {
-            type: "link",
-            text: "Recsa",
-            href: "https://recsa.com",
-          },
-          {
-            type: "text",
-            text: " y más de 40 años de experiencia en cobranza en 15 países de LATAM.",
+            type: 'text',
+            text: 'No se necesita un manual extenso. Se necesita tener claro, al menos, tres cosas: cuándo se envía el primer recordatorio (antes del vencimiento, no después), por qué canal se contacta a cada tipo de cliente, y qué pasa si no hay respuesta a los 15, 30 o 60 días. Eso solo, aplicado con consistencia, cambia completamente el resultado.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'image',
+        link: 'https://lh7-rt.googleusercontent.com/docsz/AD_4nXfSdjWiLw2HnwccLjaJ1-Ps3SonCHVFWLzXB-zCo1U2T04NSBJ_B_hSC6Hsu4fMezwTDyCfmLyDHblGvW64ll-OEwviwNmWsyoympvetH8pj0WsdD3drd814206dNNn8_o8O_Zp42usY4MsCSUKTjI?key=vXGcwwMqEuun1PDHDhkzYg',
+      },
+      { type: 'subtitle', text: 'Cuando la cartera ya está vencida' },
+      {
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "En Sena ayudamos a cerrar el ciclo completo: desde automatizar la cobranza preventiva hasta recuperar lo que ya está vencido. ",
+            type: 'text',
+            text: 'Si la política no existió desde el principio, la deuda se acumula. En ese punto, el equipo interno rara vez tiene el tiempo, el proceso o la experiencia para recuperarla sin poner en riesgo la relación comercial. Ahí es donde entra Recupera: gestión especializada de deuda activa, con el respaldo de ',
           },
           {
-            type: "link",
-            text: "Conversemos sobre tu cartera.",
-            href: "https://meetings.hubspot.com/francisco502",
+            type: 'link',
+            text: 'Recsa',
+            href: 'https://recsa.com',
+          },
+          {
+            type: 'text',
+            text: ' y más de 40 años de experiencia en cobranza en 15 países de LATAM.',
+          },
+        ],
+      },
+      {
+        type: 'paragraph',
+        fragments: [
+          {
+            type: 'text',
+            text: 'En Sena ayudamos a cerrar el ciclo completo: desde automatizar la cobranza preventiva hasta recuperar lo que ya está vencido. ',
+          },
+          {
+            type: 'link',
+            text: 'Conversemos sobre tu cartera.',
+            href: 'https://meetings.hubspot.com/francisco502',
           },
         ],
       },
@@ -401,108 +401,108 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: 11,
-    slug: slug("Por que nacio Sena el arte de cobrar bien"),
-    title: "Por qué nació Sena: el arte de cobrar bien",
+    slug: slug('Por que nacio Sena el arte de cobrar bien'),
+    title: 'Por qué nació Sena: el arte de cobrar bien',
     intro:
-      "La cobranza existe porque el dinero no siempre llega cuando debería. Mecanismos de pago ineficientes, ventas a crédito sin seguimiento, contrapartes que no priorizan pagar. Todo eso acumula deuda en la calle y presión en tu caja. Sena nació para cambiar eso.",
-    date: "12 de diciembre 2025",
-    tags: ["Sena", "Blog"],
+      'La cobranza existe porque el dinero no siempre llega cuando debería. Mecanismos de pago ineficientes, ventas a crédito sin seguimiento, contrapartes que no priorizan pagar. Todo eso acumula deuda en la calle y presión en tu caja. Sena nació para cambiar eso.',
+    date: '12 de diciembre 2025',
+    tags: ['Sena', 'Blog'],
     image: AssetImageBlog.blog_11_main.src,
     content: [
       {
-        type: "title",
-        text: "Por qué nació Sena: el arte de cobrar bien",
+        type: 'title',
+        text: 'Por qué nació Sena: el arte de cobrar bien',
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "La cobranza existe porque el dinero no siempre llega cuando debería. Mecanismos de pago ineficientes, ventas a crédito sin seguimiento, contrapartes que simplemente no priorizan pagar. Todo eso acumula deuda en la calle y presión en tu caja.",
+            type: 'text',
+            text: 'La cobranza existe porque el dinero no siempre llega cuando debería. Mecanismos de pago ineficientes, ventas a crédito sin seguimiento, contrapartes que simplemente no priorizan pagar. Todo eso acumula deuda en la calle y presión en tu caja.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Y no es un problema nuevo. En el mundo de los negocios, la deuda que no se gestiona mata empresas. Pero hacerlo mal también. Una cobranza hostil o ineficiente puede costarte el cliente que más trabajo te costó conseguir.",
+            type: 'text',
+            text: 'Y no es un problema nuevo. En el mundo de los negocios, la deuda que no se gestiona mata empresas. Pero hacerlo mal también. Una cobranza hostil o ineficiente puede costarte el cliente que más trabajo te costó conseguir.',
           },
         ],
       },
-      { type: "subtitle", text: "El problema que queríamos resolver" },
+      { type: 'subtitle', text: 'El problema que queríamos resolver' },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Sena nació de cientos de conversaciones con empresas B2B que enfrentaban el mismo problema: ya habían vendido, habían entregado el servicio, y aún así estaban esperando el pago. Sin visibilidad de su cartera. Sin proceso. Sin tiempo para perseguir a cada cliente.",
-          },
-        ],
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "text",
-            text: "El resultado era siempre el mismo: estrés financiero, relaciones comerciales tensas y equipos perdiendo horas en tareas que no deberían depender de la memoria de nadie.",
-          },
-        ],
-      },
-      { type: "subtitle", text: "Cobrar también es una forma de cuidar" },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "text",
-            text: "Nuestra filosofía es simple: cobrar bien no es ser agresivo. Es tener un proceso profesional que transmite orden y respeto -- tanto para quien cobra como para quien paga. No se trata solo de lograr que las facturas entren a una cuenta bancaria. Se trata de que tu negocio siga creciendo, con tu flujo de caja ordenado y tus relaciones comerciales intactas.",
+            type: 'text',
+            text: 'Sena nació de cientos de conversaciones con empresas B2B que enfrentaban el mismo problema: ya habían vendido, habían entregado el servicio, y aún así estaban esperando el pago. Sin visibilidad de su cartera. Sin proceso. Sin tiempo para perseguir a cada cliente.',
           },
         ],
       },
       {
-        type: "quote",
+        type: 'paragraph',
+        fragments: [
+          {
+            type: 'text',
+            text: 'El resultado era siempre el mismo: estrés financiero, relaciones comerciales tensas y equipos perdiendo horas en tareas que no deberían depender de la memoria de nadie.',
+          },
+        ],
+      },
+      { type: 'subtitle', text: 'Cobrar también es una forma de cuidar' },
+      {
+        type: 'paragraph',
+        fragments: [
+          {
+            type: 'text',
+            text: 'Nuestra filosofía es simple: cobrar bien no es ser agresivo. Es tener un proceso profesional que transmite orden y respeto -- tanto para quien cobra como para quien paga. No se trata solo de lograr que las facturas entren a una cuenta bancaria. Se trata de que tu negocio siga creciendo, con tu flujo de caja ordenado y tus relaciones comerciales intactas.',
+          },
+        ],
+      },
+      {
+        type: 'quote',
         text: `”Cobrar también es una forma de cuidar: cuidar el pago, la relación y al cliente.”`,
       },
-      { type: "subtitle", text: "Tecnología y experiencia humana, juntas" },
+      { type: 'subtitle', text: 'Tecnología y experiencia humana, juntas' },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Sena combina una plataforma de automatización multicanal -- WhatsApp, email, SMS -- con el respaldo del equipo humano de ",
+            type: 'text',
+            text: 'Sena combina una plataforma de automatización multicanal -- WhatsApp, email, SMS -- con el respaldo del equipo humano de ',
           },
           {
-            type: "link",
-            text: "Recsa",
-            href: "https://recsa.com",
+            type: 'link',
+            text: 'Recsa',
+            href: 'https://recsa.com',
           },
           {
-            type: "text",
-            text: ": más de 40 años de experiencia en cobranza, presencia en 15 países de LATAM y más de 146 millones de gestiones mensuales. Cuando la tecnología no es suficiente, entra el criterio humano.",
+            type: 'text',
+            text: ': más de 40 años de experiencia en cobranza, presencia en 15 países de LATAM y más de 146 millones de gestiones mensuales. Cuando la tecnología no es suficiente, entra el criterio humano.',
           },
         ],
       },
       {
-        type: "image",
+        type: 'image',
         link: AssetImageBlog.blog_11_main.src,
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Seguimos construyendo junto a las empresas que usan Sena todos los días. Porque creemos que ninguna empresa debería perder dinero -- ni relaciones -- por falta de proceso.",
+            type: 'text',
+            text: 'Seguimos construyendo junto a las empresas que usan Sena todos los días. Porque creemos que ninguna empresa debería perder dinero -- ni relaciones -- por falta de proceso.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "link",
-            text: "¿Quieres ver cómo funciona Sena en tu operación? Agenda una demo aquí.",
-            href: "https://meetings.hubspot.com/francisco502",
+            type: 'link',
+            text: '¿Quieres ver cómo funciona Sena en tu operación? Agenda una demo aquí.',
+            href: 'https://meetings.hubspot.com/francisco502',
           },
         ],
       },
@@ -510,173 +510,170 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: 13,
-    slug: slug(
-      "retrasos en pagos: el drama silencioso que asfixia a las pymes peruanas",
-    ),
-    title:
-      "Retrasos en pagos: el drama silencioso que asfixia a las pymes peruanas",
+    slug: slug('retrasos en pagos: el drama silencioso que asfixia a las pymes peruanas'),
+    title: 'Retrasos en pagos: el drama silencioso que asfixia a las pymes peruanas',
     intro:
-      "Las pequeñas y medianas empresas (pymes) conforman más del 99% del tejido empresarial del Perú. Sin embargo, siguen siendo las principales víctimas de un problema crónico que rara vez se discute abiertamente: los retrasos en pagos.",
-    date: "16 de diciembre 2025",
-    tags: ["Prensa"],
+      'Las pequeñas y medianas empresas (pymes) conforman más del 99% del tejido empresarial del Perú. Sin embargo, siguen siendo las principales víctimas de un problema crónico que rara vez se discute abiertamente: los retrasos en pagos.',
+    date: '16 de diciembre 2025',
+    tags: ['Prensa'],
     image: AssetImageBlog.blog_13_main.src,
     content: [
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Las pequeñas y medianas empresas (pymes) conforman más del 99% del tejido empresarial del Perú. Sin embargo, siguen siendo las principales víctimas de un problema crónico que rara vez se discute abiertamente:  ",
+            type: 'text',
+            text: 'Las pequeñas y medianas empresas (pymes) conforman más del 99% del tejido empresarial del Perú. Sin embargo, siguen siendo las principales víctimas de un problema crónico que rara vez se discute abiertamente:  ',
           },
           {
-            type: "bold",
-            text: "los retrasos en pagos.",
+            type: 'bold',
+            text: 'los retrasos en pagos.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "En sectores como construcción y comercio, la ",
+            type: 'text',
+            text: 'En sectores como construcción y comercio, la ',
           },
           {
-            type: "bold",
-            text: "morosidad supera el 13% y 8% respectivamente",
+            type: 'bold',
+            text: 'morosidad supera el 13% y 8% respectivamente',
           },
           {
-            type: "text",
-            text: "según datos del Instituto de Economía y Desarrollo Empresarial (IEDEP) de la Cámara de Comercio de Lima. Pero más allá de las cifras, se esconde una realidad angustiante para miles de emprendedores que operan con liquidez limitada, alta incertidumbre y pagos vencidos que nunca llegan a tiempo.",
+            type: 'text',
+            text: 'según datos del Instituto de Economía y Desarrollo Empresarial (IEDEP) de la Cámara de Comercio de Lima. Pero más allá de las cifras, se esconde una realidad angustiante para miles de emprendedores que operan con liquidez limitada, alta incertidumbre y pagos vencidos que nunca llegan a tiempo.',
           },
         ],
       },
       {
-        type: "subtitle",
+        type: 'subtitle',
         text: '”Cobrar” no debería ser un tabú',
       },
       {
-        type: "quote",
+        type: 'quote',
         text: `”Aunque legalmente el plazo de pago es de 30 días, muchas pymes reciben su dinero después de 60, 90 o incluso 120 días. Esto se da especialmente en sectores como construcción, donde el retraso ya es una norma no escrita. Las pequeñas empresas temen perder contratos si exigen sus pagos a tiempo. En Perú, hablar de cobranzas aún es visto como algo negativo”, comenta Juan Córdova, Subgerente de Venta B2B en Sena, en entrevista para PQS.pe.`,
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Este desequilibrio entre grandes clientes y proveedores más pequeños genera consecuencias devastadoras: ",
+            type: 'text',
+            text: 'Este desequilibrio entre grandes clientes y proveedores más pequeños genera consecuencias devastadoras: ',
           },
           {
-            type: "bold",
-            text: "más de 100,000 pymes cierran cada año en Perú",
+            type: 'bold',
+            text: 'más de 100,000 pymes cierran cada año en Perú',
           },
           {
-            type: "text",
-            text: ", y hasta el 40% de estos cierres están vinculados a problemas de flujo de caja.",
+            type: 'text',
+            text: ', y hasta el 40% de estos cierres están vinculados a problemas de flujo de caja.',
           },
         ],
       },
       {
-        type: "image",
+        type: 'image',
         link: AssetImageBlog.blog_13_main.src,
       },
       {
-        type: "subtitle",
-        text: "¿Cómo cambiar esta realidad?",
+        type: 'subtitle',
+        text: '¿Cómo cambiar esta realidad?',
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Desde Sena, promovemos una nueva visión de la cobranza: ",
+            type: 'text',
+            text: 'Desde Sena, promovemos una nueva visión de la cobranza: ',
           },
           {
-            type: "bold",
-            text: "cobrar bien, a tiempo y sin conflicto",
+            type: 'bold',
+            text: 'cobrar bien, a tiempo y sin conflicto',
           },
           {
-            type: "text",
-            text: ". Para ello, es fundamental:",
+            type: 'text',
+            text: '. Para ello, es fundamental:',
           },
         ],
       },
       {
-        type: "list",
+        type: 'list',
         items: [
           [
             {
-              type: "bold",
-              text: "Profesionalizar los procesos de cobro",
+              type: 'bold',
+              text: 'Profesionalizar los procesos de cobro',
             },
           ],
           [
             {
-              type: "bold",
-              text: "Utilizar herramientas tecnológicas",
+              type: 'bold',
+              text: 'Utilizar herramientas tecnológicas',
             },
             {
-              type: "text",
-              text: " que automaticen y gestionen la cobranza sin fricciones",
+              type: 'text',
+              text: ' que automaticen y gestionen la cobranza sin fricciones',
             },
           ],
           [
             {
-              type: "bold",
-              text: "Cambiar la mentalidad del emprendedor",
+              type: 'bold',
+              text: 'Cambiar la mentalidad del emprendedor',
             },
             {
-              type: "text",
-              text: ": exigir el cumplimiento de pago no es agresivo, es saludable para el negocio",
+              type: 'text',
+              text: ': exigir el cumplimiento de pago no es agresivo, es saludable para el negocio',
             },
           ],
         ],
       },
       {
-        type: "quote",
+        type: 'quote',
         text: `"Nuestra misión es romper el círculo vicioso que atrapa a las pymes y convertir la cobranza en una palanca de crecimiento, no en un obstáculo", añade Córdova.`,
       },
       {
-        type: "subtitle",
-        text: "¿Y el marco legal?",
+        type: 'subtitle',
+        text: '¿Y el marco legal?',
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Aunque existen mecanismos como la cobranza judicial o coactiva, estos son procesos costosos, lentos y poco accesibles para una pyme. La tan mencionada ",
+            type: 'text',
+            text: 'Aunque existen mecanismos como la cobranza judicial o coactiva, estos son procesos costosos, lentos y poco accesibles para una pyme. La tan mencionada ',
           },
           {
-            type: "bold",
-            text: "Ley de Pronto Pago",
+            type: 'bold',
+            text: 'Ley de Pronto Pago',
           },
           {
-            type: "text",
-            text: ", similar a la implementada en Chile, aún sigue en discusión en Perú sin avances concretos.",
+            type: 'text',
+            text: ', similar a la implementada en Chile, aún sigue en discusión en Perú sin avances concretos.',
           },
         ],
       },
       {
-        type: "quote",
+        type: 'quote',
         text: `"El Estado tiene la responsabilidad de establecer reglas claras, sancionar el incumplimiento de pagos y fomentar la digitalización. Y el sistema financiero también puede contribuir ofreciendo factoring accesible y justo", concluye Córdova.`,
       },
       {
-        type: "subtitle",
-        text: "Lee la nota completa",
+        type: 'subtitle',
+        text: 'Lee la nota completa',
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
-          { type: "text", text: "Puedes acceder al artículo original en " },
+          { type: 'text', text: 'Puedes acceder al artículo original en ' },
           {
-            type: "link",
-            text: "PQS.pe",
-            href: "https://pqs.pe/emprendimiento/retrasos-en-pagos-el-drama-silencioso-que-asfixia-a-las-pymes/",
+            type: 'link',
+            text: 'PQS.pe',
+            href: 'https://pqs.pe/emprendimiento/retrasos-en-pagos-el-drama-silencioso-que-asfixia-a-las-pymes/',
           },
           {
-            type: "text",
-            text: ", donde profundizamos en cómo este problema silencioso sigue afectando a miles de negocios peruanos y qué medidas se pueden tomar desde el sector público y privado.",
+            type: 'text',
+            text: ', donde profundizamos en cómo este problema silencioso sigue afectando a miles de negocios peruanos y qué medidas se pueden tomar desde el sector público y privado.',
           },
         ],
       },
@@ -685,77 +682,77 @@ export const blogPosts: BlogPost[] = [
   {
     id: 14,
     slug: slug(
-      "tu flujo de caja está amenazado por clientes morosos, automatizar tu proceso de cobranza puede ser la solución",
+      'tu flujo de caja está amenazado por clientes morosos, automatizar tu proceso de cobranza puede ser la solución'
     ),
     title:
-      "¿Tu flujo de caja está en riesgo? Descubre cómo reducir la morosidad con automatización inteligente",
+      '¿Tu flujo de caja está en riesgo? Descubre cómo reducir la morosidad con automatización inteligente',
     intro:
-      "En las empresas B2B, el flujo de caja puede verse afectado incluso cuando las ventas van bien. ¿La razón? La morosidad silenciosa: clientes que postergan pagos, olvidan sus compromisos o simplemente no responden. Y mientras tanto, tu empresa sigue operando con ingresos pendientes que nunca llegan. Este desequilibrio se convierte en un cuello de botella para crecer, invertir y proyectar tu negocio con solidez.",
-    date: "19 de diciembre 2025",
-    tags: ["Blog"],
+      'En las empresas B2B, el flujo de caja puede verse afectado incluso cuando las ventas van bien. ¿La razón? La morosidad silenciosa: clientes que postergan pagos, olvidan sus compromisos o simplemente no responden. Y mientras tanto, tu empresa sigue operando con ingresos pendientes que nunca llegan. Este desequilibrio se convierte en un cuello de botella para crecer, invertir y proyectar tu negocio con solidez.',
+    date: '19 de diciembre 2025',
+    tags: ['Blog'],
     image: AssetImageBlog.blog_14_main.src,
     content: [
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "En las empresas B2B, el flujo de caja puede verse afectado incluso cuando las ventas van bien. ¿La razón? La morosidad silenciosa: clientes que postergan pagos, olvidan sus compromisos o simplemente no responden. Y mientras tanto, tu empresa sigue operando con ingresos pendientes que nunca llegan. Este desequilibrio se convierte en un cuello de botella para crecer, invertir y proyectar tu negocio con solidez.",
+            type: 'text',
+            text: 'En las empresas B2B, el flujo de caja puede verse afectado incluso cuando las ventas van bien. ¿La razón? La morosidad silenciosa: clientes que postergan pagos, olvidan sus compromisos o simplemente no responden. Y mientras tanto, tu empresa sigue operando con ingresos pendientes que nunca llegan. Este desequilibrio se convierte en un cuello de botella para crecer, invertir y proyectar tu negocio con solidez.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "La pregunta clave es: ",
+            type: 'text',
+            text: 'La pregunta clave es: ',
           },
           {
-            type: "bold",
-            text: "¿estás gestionando tus cuentas por cobrar de forma estratégica o reactiva?",
+            type: 'bold',
+            text: '¿estás gestionando tus cuentas por cobrar de forma estratégica o reactiva?',
           },
           {
-            type: "text",
-            text: " Si aún dependes de Excel, recordatorios manuales o correos improvisados, tu sistema está fallando. Hoy, el diferencial competitivo está en la eficiencia, y eso significa automatizar. En Sena, ayudamos a empresas a digitalizar completamente su gestión de cuentas por cobrar, con recordatorios automáticos, trazabilidad en tiempo real y reportes que te permiten tomar decisiones con data, no con intuición.",
+            type: 'text',
+            text: ' Si aún dependes de Excel, recordatorios manuales o correos improvisados, tu sistema está fallando. Hoy, el diferencial competitivo está en la eficiencia, y eso significa automatizar. En Sena, ayudamos a empresas a digitalizar completamente su gestión de cuentas por cobrar, con recordatorios automáticos, trazabilidad en tiempo real y reportes que te permiten tomar decisiones con data, no con intuición.',
           },
         ],
       },
       {
-        type: "image",
+        type: 'image',
         link: AssetImageBlog.blog_14_main.src,
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Pero automatizar no solo es eficiencia. Es prevención. ¿Cómo? Aplicando flujos inteligentes de comunicación vía WhatsApp, email o SMS, activados según el comportamiento de pago de cada cliente. No todos pagan igual, y por eso no todos deberían recibir el mismo seguimiento.",
+            type: 'text',
+            text: 'Pero automatizar no solo es eficiencia. Es prevención. ¿Cómo? Aplicando flujos inteligentes de comunicación vía WhatsApp, email o SMS, activados según el comportamiento de pago de cada cliente. No todos pagan igual, y por eso no todos deberían recibir el mismo seguimiento.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Ahora bien, ¿qué pasa si tu cartera ya está vencida y sabes que tienes dinero por recuperar, pero no cuentas con el equipo ni los procesos para hacerlo? No necesitas construir un área de cobranzas desde cero. Para eso está ",
+            type: 'text',
+            text: 'Ahora bien, ¿qué pasa si tu cartera ya está vencida y sabes que tienes dinero por recuperar, pero no cuentas con el equipo ni los procesos para hacerlo? No necesitas construir un área de cobranzas desde cero. Para eso está ',
           },
           {
-            type: "bold",
-            text: "Recupera Plus",
+            type: 'bold',
+            text: 'Recupera Plus',
           },
           {
-            type: "text",
-            text: ": nuestro servicio especializado en ",
+            type: 'text',
+            text: ': nuestro servicio especializado en ',
           },
           {
-            type: "bold",
-            text: "recuperar deudas activas",
+            type: 'bold',
+            text: 'recuperar deudas activas',
           },
           {
-            type: "text",
-            text: " de forma profesional, sin afectar la relación con tus clientes y sin que tú muevas un dedo. Nosotros lo hacemos por ti con procesos efectivos y éticos, enfocados en recuperar sin conflicto.",
+            type: 'text',
+            text: ' de forma profesional, sin afectar la relación con tus clientes y sin que tú muevas un dedo. Nosotros lo hacemos por ti con procesos efectivos y éticos, enfocados en recuperar sin conflicto.',
           },
         ],
       },
@@ -777,21 +774,21 @@ export const blogPosts: BlogPost[] = [
       //     ],
       // },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "No necesitas más planillas ni más meses con ingresos retenidos. Necesitas estructura, visibilidad y seguimiento.",
+            type: 'text',
+            text: 'No necesitas más planillas ni más meses con ingresos retenidos. Necesitas estructura, visibilidad y seguimiento.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "link",
-            text: "Agenda una demo y ve cómo Sena puede ordenar tu cobranza.",
-            href: "https://meetings.hubspot.com/francisco502",
+            type: 'link',
+            text: 'Agenda una demo y ve cómo Sena puede ordenar tu cobranza.',
+            href: 'https://meetings.hubspot.com/francisco502',
           },
         ],
       },
@@ -800,194 +797,193 @@ export const blogPosts: BlogPost[] = [
   {
     id: 15,
     slug: slug(
-      "Descubre por qué tus clientes no pagan a tiempo, cómo eso afecta tu negocio y qué solución existe para recuperar el control ",
+      'Descubre por qué tus clientes no pagan a tiempo, cómo eso afecta tu negocio y qué solución existe para recuperar el control '
     ),
-    title:
-      "Clientes que no pagan a tiempo: causas, impacto y solución definitiva para empresas B2B",
+    title: 'Clientes que no pagan a tiempo: causas, impacto y solución definitiva para empresas B2B',
     intro:
-      "En todo negocio B2B existe un momento incómodo que se repite: un cliente no paga a tiempo. Y no hablamos de uno o dos días, sino semanas o incluso meses sin respuesta. El área de ventas se frustra, finanzas pierde visibilidad y dirección comienza a sentir la presión en la caja. Pero, ¿por qué ocurre esto con tanta frecuencia? Y más importante aún: ¿cómo puedes solucionarlo sin desgastar la relación comercial?",
-    date: "06 de enero 2026",
-    tags: ["Blog"],
+      'En todo negocio B2B existe un momento incómodo que se repite: un cliente no paga a tiempo. Y no hablamos de uno o dos días, sino semanas o incluso meses sin respuesta. El área de ventas se frustra, finanzas pierde visibilidad y dirección comienza a sentir la presión en la caja. Pero, ¿por qué ocurre esto con tanta frecuencia? Y más importante aún: ¿cómo puedes solucionarlo sin desgastar la relación comercial?',
+    date: '06 de enero 2026',
+    tags: ['Blog'],
     image: AssetImageBlog.blog_15_main.src,
     content: [
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "En todo negocio B2B existe un momento incómodo que se repite: un cliente no paga a tiempo. Y no hablamos de uno o dos días, sino semanas o incluso meses sin respuesta. El área de ventas se frustra, finanzas pierde visibilidad y dirección comienza a sentir la presión en la caja. Pero, ¿por qué ocurre esto con tanta frecuencia? Y más importante aún: ¿cómo puedes solucionarlo sin desgastar la relación comercial?",
+            type: 'text',
+            text: 'En todo negocio B2B existe un momento incómodo que se repite: un cliente no paga a tiempo. Y no hablamos de uno o dos días, sino semanas o incluso meses sin respuesta. El área de ventas se frustra, finanzas pierde visibilidad y dirección comienza a sentir la presión en la caja. Pero, ¿por qué ocurre esto con tanta frecuencia? Y más importante aún: ¿cómo puedes solucionarlo sin desgastar la relación comercial?',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "Las verdaderas causas detrás de los impagos",
+            type: 'bold',
+            text: 'Las verdaderas causas detrás de los impagos',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "En Sena, después de analizar cientos de casos, identificamos que el impago no siempre es por falta de dinero. A menudo responde a tres causas principales:",
+            type: 'text',
+            text: 'En Sena, después de analizar cientos de casos, identificamos que el impago no siempre es por falta de dinero. A menudo responde a tres causas principales:',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "1. ",
+            type: 'text',
+            text: '1. ',
           },
           {
-            type: "bold",
-            text: "Desorganización del cliente",
+            type: 'bold',
+            text: 'Desorganización del cliente',
           },
           {
-            type: "text",
-            text: ": No tienen procesos internos claros, se les pasan los vencimientos, no priorizan los pagos.",
+            type: 'text',
+            text: ': No tienen procesos internos claros, se les pasan los vencimientos, no priorizan los pagos.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "2. ",
+            type: 'text',
+            text: '2. ',
           },
           {
-            type: "bold",
-            text: "Falta de seguimiento por parte de la empresa",
+            type: 'bold',
+            text: 'Falta de seguimiento por parte de la empresa',
           },
           {
-            type: "text",
-            text: ": Si no recuerdas, no cobras. Muchos negocios pierden dinero simplemente por no hacer seguimiento automatizado.",
+            type: 'text',
+            text: ': Si no recuerdas, no cobras. Muchos negocios pierden dinero simplemente por no hacer seguimiento automatizado.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "3. ",
+            type: 'text',
+            text: '3. ',
           },
           {
-            type: "bold",
-            text: "Falta de estructura en la cobranza",
+            type: 'bold',
+            text: 'Falta de estructura en la cobranza',
           },
           {
-            type: "text",
-            text: ": Correo por aquí, una llamada por allá, pero sin trazabilidad ni estrategia.",
+            type: 'text',
+            text: ': Correo por aquí, una llamada por allá, pero sin trazabilidad ni estrategia.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Estas causas, que parecen menores, se traducen en cientos de miles de soles retenidos cada año. Mientras tanto, tú sigues operando, pagando planilla y proveedores con dinero que aún no ha ingresado.",
+            type: 'text',
+            text: 'Estas causas, que parecen menores, se traducen en cientos de miles de soles retenidos cada año. Mientras tanto, tú sigues operando, pagando planilla y proveedores con dinero que aún no ha ingresado.',
           },
         ],
       },
       {
-        type: "image",
+        type: 'image',
         link: AssetImageBlog.blog_15_main.src,
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "El impacto financiero es más grande de lo que crees",
+            type: 'bold',
+            text: 'El impacto financiero es más grande de lo que crees',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "La morosidad no solo afecta tu flujo de caja. Tiene un efecto dominó en toda tu operación: retrasas pagos a proveedores, reduces inversiones, pierdes oportunidades comerciales y tu equipo pierde tiempo persiguiendo deudas en lugar de vender o innovar.",
+            type: 'text',
+            text: 'La morosidad no solo afecta tu flujo de caja. Tiene un efecto dominó en toda tu operación: retrasas pagos a proveedores, reduces inversiones, pierdes oportunidades comerciales y tu equipo pierde tiempo persiguiendo deudas en lugar de vender o innovar.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Por eso es clave tener una gestión robusta de cobranza desde el primer día. Si tu empresa aún gestiona sus cuentas por cobrar en Excel o de forma manual, estás expuesto a errores, olvidos y falta de seguimiento. Con Sena puedes automatizar recordatorios, visualizar todo el historial de cobranza y actuar con tiempo, no con urgencia.",
+            type: 'text',
+            text: 'Por eso es clave tener una gestión robusta de cobranza desde el primer día. Si tu empresa aún gestiona sus cuentas por cobrar en Excel o de forma manual, estás expuesto a errores, olvidos y falta de seguimiento. Con Sena puedes automatizar recordatorios, visualizar todo el historial de cobranza y actuar con tiempo, no con urgencia.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "¿Y si ya sabes que tienes clientes morosos, pero no tienes equipo para cobrar?",
+            type: 'bold',
+            text: '¿Y si ya sabes que tienes clientes morosos, pero no tienes equipo para cobrar?',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Cuando ya tienes una cartera vencida y ningún área interna puede tomar acción --ya sea por falta de tiempo, recursos o experiencia-- lo peor que puedes hacer es dejar que el problema crezca. En vez de eso, delega. Con ",
+            type: 'text',
+            text: 'Cuando ya tienes una cartera vencida y ningún área interna puede tomar acción --ya sea por falta de tiempo, recursos o experiencia-- lo peor que puedes hacer es dejar que el problema crezca. En vez de eso, delega. Con ',
           },
           {
-            type: "bold",
-            text: "Recupera Plus",
+            type: 'bold',
+            text: 'Recupera Plus',
           },
           {
-            type: "text",
-            text: ", nosotros recuperamos esa deuda por ti. Sin confrontaciones, sin procesos invasivos, y cuidando la relación comercial.",
+            type: 'text',
+            text: ', nosotros recuperamos esa deuda por ti. Sin confrontaciones, sin procesos invasivos, y cuidando la relación comercial.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Recupera Plus es ideal para empresas que ya saben cuánto les deben, pero no tienen la estructura ni el tiempo para convertir eso en dinero en caja. Nuestro equipo profesional se encarga de todo, con tecnología, trazabilidad y comunicación efectiva.",
+            type: 'text',
+            text: 'Recupera Plus es ideal para empresas que ya saben cuánto les deben, pero no tienen la estructura ni el tiempo para convertir eso en dinero en caja. Nuestro equipo profesional se encarga de todo, con tecnología, trazabilidad y comunicación efectiva.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "Toma acción hoy: no normalices la morosidad",
+            type: 'bold',
+            text: 'Toma acción hoy: no normalices la morosidad',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Cada día que pasa sin cobrar una deuda es dinero que podrías estar reinvirtiendo en tu empresa. La solución comienza por dejar atrás los procesos manuales.",
+            type: 'text',
+            text: 'Cada día que pasa sin cobrar una deuda es dinero que podrías estar reinvirtiendo en tu empresa. La solución comienza por dejar atrás los procesos manuales.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "link",
-            text: "Conversemos sobre tu cartera.",
-            href: "https://meetings.hubspot.com/francisco502",
+            type: 'link',
+            text: 'Conversemos sobre tu cartera.',
+            href: 'https://meetings.hubspot.com/francisco502',
           },
         ],
       },
@@ -995,112 +991,110 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: 16,
-    slug: slug(
-      "La educación financiera en empresas B2B es clave para cobrar mejor y crecer con estabilidad",
-    ),
+    slug: slug('La educación financiera en empresas B2B es clave para cobrar mejor y crecer con estabilidad'),
     title:
-      "Educación financiera para empresas B2B: el primer paso para cobrar mejor y crecer con estabilidad",
+      'Educación financiera para empresas B2B: el primer paso para cobrar mejor y crecer con estabilidad',
     intro:
-      "En el mundo de los negocios B2B, el éxito no depende únicamente de vender más. Depende de cobrar mejor. Y para lograrlo, el primer paso no está en contratar a un equipo más grande ni en perseguir a los clientes, sino en algo mucho más profundo: educación financiera.",
-    date: "09 de enero 2026",
-    tags: ["Blog"],
+      'En el mundo de los negocios B2B, el éxito no depende únicamente de vender más. Depende de cobrar mejor. Y para lograrlo, el primer paso no está en contratar a un equipo más grande ni en perseguir a los clientes, sino en algo mucho más profundo: educación financiera.',
+    date: '09 de enero 2026',
+    tags: ['Blog'],
     image: AssetImageBlog.blog_16_main.src,
     content: [
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "En el mundo de los negocios B2B, el éxito no depende únicamente de vender más. Depende de cobrar mejor. Y para lograrlo, el primer paso no está en contratar a un equipo más grande ni en perseguir a los clientes, sino en algo mucho más profundo: ",
+            type: 'text',
+            text: 'En el mundo de los negocios B2B, el éxito no depende únicamente de vender más. Depende de cobrar mejor. Y para lograrlo, el primer paso no está en contratar a un equipo más grande ni en perseguir a los clientes, sino en algo mucho más profundo: ',
           },
           {
-            type: "bold",
-            text: "educación financiera",
+            type: 'bold',
+            text: 'educación financiera',
           },
           {
-            type: "text",
-            text: ".",
+            type: 'text',
+            text: '.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Cuando una empresa entiende cómo fluye su dinero, cómo se comportan sus cuentas por cobrar y qué tan eficiente es su sistema de cobranza, comienza a operar con una nueva mentalidad. Ya no se trata de sobrevivir mes a mes esperando que el cliente pague, sino de proyectar el crecimiento con base en data, procesos y control. Esa es la diferencia entre una empresa reactiva y una financieramente saludable.",
+            type: 'text',
+            text: 'Cuando una empresa entiende cómo fluye su dinero, cómo se comportan sus cuentas por cobrar y qué tan eficiente es su sistema de cobranza, comienza a operar con una nueva mentalidad. Ya no se trata de sobrevivir mes a mes esperando que el cliente pague, sino de proyectar el crecimiento con base en data, procesos y control. Esa es la diferencia entre una empresa reactiva y una financieramente saludable.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Uno de los errores más comunes que encontramos en empresas que facturan bien, pero tienen problemas de liquidez, es la falta de estructura en el seguimiento de cobranzas. ¿Te suena familiar?: recordatorios manuales, Excel compartidos entre áreas, correos sin respuesta, pagos que se caen entre los cracks. No es casualidad que el dinero no llegue: ",
+            type: 'text',
+            text: 'Uno de los errores más comunes que encontramos en empresas que facturan bien, pero tienen problemas de liquidez, es la falta de estructura en el seguimiento de cobranzas. ¿Te suena familiar?: recordatorios manuales, Excel compartidos entre áreas, correos sin respuesta, pagos que se caen entre los cracks. No es casualidad que el dinero no llegue: ',
           },
           {
-            type: "bold",
-            text: "es el sistema el que está roto.",
+            type: 'bold',
+            text: 'es el sistema el que está roto.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Por eso, el punto de partida para fortalecer la salud financiera de tu negocio es profesionalizar tu proceso de cobranza. Y eso comienza por digitalizar tu gestión de cuentas por cobrar. Esto no es solo implementar un software, es un cambio de enfoque: automatizar recordatorios, integrar canales de contacto (como WhatsApp, email o llamadas programadas), generar reportes de riesgo por cliente y tener visibilidad total de tu cartera en tiempo real.",
+            type: 'text',
+            text: 'Por eso, el punto de partida para fortalecer la salud financiera de tu negocio es profesionalizar tu proceso de cobranza. Y eso comienza por digitalizar tu gestión de cuentas por cobrar. Esto no es solo implementar un software, es un cambio de enfoque: automatizar recordatorios, integrar canales de contacto (como WhatsApp, email o llamadas programadas), generar reportes de riesgo por cliente y tener visibilidad total de tu cartera en tiempo real.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Una empresa que domina sus cuentas por cobrar no solo recupera más rápido su dinero, sino que puede planificar con más seguridad, invertir con más precisión y operar con menos estrés. Porque no se trata solo de cobrar por cobrar. Se trata de ordenar las finanzas de tu empresa desde la raíz.",
+            type: 'text',
+            text: 'Una empresa que domina sus cuentas por cobrar no solo recupera más rápido su dinero, sino que puede planificar con más seguridad, invertir con más precisión y operar con menos estrés. Porque no se trata solo de cobrar por cobrar. Se trata de ordenar las finanzas de tu empresa desde la raíz.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Además, digitalizar tu cobranza no significa perder el toque humano. Todo lo contrario: al automatizar tareas operativas, liberas a tu equipo para que pueda enfocarse en relaciones estratégicas y resolución de casos complejos. Mientras la tecnología trabaja por ti, tu equipo toma decisiones con información clara y actualizada.",
+            type: 'text',
+            text: 'Además, digitalizar tu cobranza no significa perder el toque humano. Todo lo contrario: al automatizar tareas operativas, liberas a tu equipo para que pueda enfocarse en relaciones estratégicas y resolución de casos complejos. Mientras la tecnología trabaja por ti, tu equipo toma decisiones con información clara y actualizada.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "Conclusión",
+            type: 'bold',
+            text: 'Conclusión',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "La educación financiera no es solo teoría contable. Es tomar decisiones reales que impactan tu rentabilidad. Si aún estás gestionando tu cobranza con métodos improvisados, estás dejando pasar oportunidades valiosas. Empieza por lo esencial: ordena tu flujo, entiende tu cartera y actúa con visión.",
+            type: 'text',
+            text: 'La educación financiera no es solo teoría contable. Es tomar decisiones reales que impactan tu rentabilidad. Si aún estás gestionando tu cobranza con métodos improvisados, estás dejando pasar oportunidades valiosas. Empieza por lo esencial: ordena tu flujo, entiende tu cartera y actúa con visión.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Sena puede ayudarte a digitalizar y profesionalizar tu gestión de cuentas por cobrar, sin fricciones, sin complicaciones, y con resultados visibles en semanas. ",
+            type: 'text',
+            text: 'Sena puede ayudarte a digitalizar y profesionalizar tu gestión de cuentas por cobrar, sin fricciones, sin complicaciones, y con resultados visibles en semanas. ',
           },
           {
-            type: "link",
-            text: "Agenda una demo aquí.",
-            href: "https://meetings.hubspot.com/francisco502",
+            type: 'link',
+            text: 'Agenda una demo aquí.',
+            href: 'https://meetings.hubspot.com/francisco502',
           },
         ],
       },
@@ -1109,205 +1103,203 @@ export const blogPosts: BlogPost[] = [
   {
     id: 17,
     slug: slug(
-      "Profesionalizar tu cobranza no significa ser agresivo. Descubre cómo digitalizar tu proceso y recuperar tus cuentas vencidas",
+      'Profesionalizar tu cobranza no significa ser agresivo. Descubre cómo digitalizar tu proceso y recuperar tus cuentas vencidas'
     ),
-    title:
-      "Cómo profesionalizar tu cobranza sin perder clientes: estrategias probadas para empresas B2B",
-    intro:
-      `Muchas empresas temen profesionalizar su proceso de cobranza por miedo a "espantar" a sus clientes. La realidad es todo lo contrario: un proceso profesional transmite orden, seriedad y respeto. No hay nada más dañino que perseguir a un cliente sin estructura, sin consistencia y sin tacto. Eso es lo que realmente deteriora relaciones.`,
-    date: "13 de enero 2026",
-    tags: ["Blog"],
+    title: 'Cómo profesionalizar tu cobranza sin perder clientes: estrategias probadas para empresas B2B',
+    intro: `Muchas empresas temen profesionalizar su proceso de cobranza por miedo a "espantar" a sus clientes. La realidad es todo lo contrario: un proceso profesional transmite orden, seriedad y respeto. No hay nada más dañino que perseguir a un cliente sin estructura, sin consistencia y sin tacto. Eso es lo que realmente deteriora relaciones.`,
+    date: '13 de enero 2026',
+    tags: ['Blog'],
     image: AssetImageBlog.blog_17_main.src,
     content: [
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
+            type: 'text',
             text: `Muchas empresas temen profesionalizar su proceso de cobranza por miedo a "espantar" a sus clientes. La realidad es todo lo contrario: un proceso profesional transmite orden, seriedad y respeto. No hay nada más dañino que perseguir a un cliente sin estructura, sin consistencia y sin tacto. Eso es lo que realmente deteriora relaciones.`,
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "En el mundo B2B, cobrar de forma efectiva ",
+            type: 'text',
+            text: 'En el mundo B2B, cobrar de forma efectiva ',
           },
           {
-            type: "bold",
-            text: "no se trata de insistir más, sino de hacerlo mejor",
+            type: 'bold',
+            text: 'no se trata de insistir más, sino de hacerlo mejor',
           },
           {
-            type: "text",
-            text: ". Y para lograrlo, necesitas aplicar dos enfoques clave en el momento correcto: digitalizar tus ",
+            type: 'text',
+            text: '. Y para lograrlo, necesitas aplicar dos enfoques clave en el momento correcto: digitalizar tus ',
           },
           {
-            type: "bold",
-            text: "cuentas por cobrar",
+            type: 'bold',
+            text: 'cuentas por cobrar',
           },
           {
-            type: "text",
-            text: " para hacer seguimiento automatizado, y escalar a un servicio de recuperación especializada como ",
+            type: 'text',
+            text: ' para hacer seguimiento automatizado, y escalar a un servicio de recuperación especializada como ',
           },
           {
-            type: "bold",
-            text: "Recupera Plus",
+            type: 'bold',
+            text: 'Recupera Plus',
           },
           {
-            type: "text",
-            text: " cuando ya tienes deudas activas que no logras resolver por tu cuenta.",
+            type: 'text',
+            text: ' cuando ya tienes deudas activas que no logras resolver por tu cuenta.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "Paso 1: Digitaliza tu cobranza antes de que el problema escale",
+            type: 'bold',
+            text: 'Paso 1: Digitaliza tu cobranza antes de que el problema escale',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Si tu empresa todavía depende de hojas de Excel para controlar las cobranzas, estás a un paso del caos. A medida que crece tu base de clientes, aumenta también el riesgo de olvido, duplicidad o errores humanos. El primer gran paso para profesionalizar tu proceso es implementar un sistema que te brinde trazabilidad, alertas automatizadas y seguimiento inteligente.",
+            type: 'text',
+            text: 'Si tu empresa todavía depende de hojas de Excel para controlar las cobranzas, estás a un paso del caos. A medida que crece tu base de clientes, aumenta también el riesgo de olvido, duplicidad o errores humanos. El primer gran paso para profesionalizar tu proceso es implementar un sistema que te brinde trazabilidad, alertas automatizadas y seguimiento inteligente.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Con Sena, puedes digitalizar tu gestión de cuentas por cobrar, automatizando recordatorios por WhatsApp, correo o llamada, generando reportes de riesgo por cliente y organizando todo el proceso en una sola plataforma. Así, reduces la morosidad sin esfuerzo operativo, y mantienes la relación comercial intacta, porque el cliente se siente acompañado, no presionado.",
+            type: 'text',
+            text: 'Con Sena, puedes digitalizar tu gestión de cuentas por cobrar, automatizando recordatorios por WhatsApp, correo o llamada, generando reportes de riesgo por cliente y organizando todo el proceso en una sola plataforma. Así, reduces la morosidad sin esfuerzo operativo, y mantienes la relación comercial intacta, porque el cliente se siente acompañado, no presionado.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Además, cuando tu equipo de finanzas trabaja con visibilidad y control, puede tomar decisiones más estratégicas: segmentar clientes según comportamiento de pago, priorizar acciones y anticiparse a escenarios de riesgo.",
+            type: 'text',
+            text: 'Además, cuando tu equipo de finanzas trabaja con visibilidad y control, puede tomar decisiones más estratégicas: segmentar clientes según comportamiento de pago, priorizar acciones y anticiparse a escenarios de riesgo.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "Paso 2: Si la deuda ya existe, actúa sin perder tiempo",
+            type: 'bold',
+            text: 'Paso 2: Si la deuda ya existe, actúa sin perder tiempo',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Ahora bien, hay otro escenario común: empresas que ya tienen ",
+            type: 'text',
+            text: 'Ahora bien, hay otro escenario común: empresas que ya tienen ',
           },
           {
-            type: "bold",
-            text: "cartera vencida",
+            type: 'bold',
+            text: 'cartera vencida',
           },
           {
-            type: "text",
-            text: ", saben que sus clientes les deben, pero no cuentan con el equipo, tiempo ni procesos para recuperar ese dinero. Aquí ya no basta con enviar recordatorios: se necesita una acción más estructurada.",
+            type: 'text',
+            text: ', saben que sus clientes les deben, pero no cuentan con el equipo, tiempo ni procesos para recuperar ese dinero. Aquí ya no basta con enviar recordatorios: se necesita una acción más estructurada.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Para estos casos, Sena ofrece ",
+            type: 'text',
+            text: 'Para estos casos, Sena ofrece ',
           },
           {
-            type: "bold",
-            text: "Recupera Plus",
+            type: 'bold',
+            text: 'Recupera Plus',
           },
           {
-            type: "text",
-            text: ", un servicio diseñado específicamente para ",
+            type: 'text',
+            text: ', un servicio diseñado específicamente para ',
           },
           {
-            type: "bold",
-            text: "empresas que ya identificaron su deuda activa",
+            type: 'bold',
+            text: 'empresas que ya identificaron su deuda activa',
           },
           {
-            type: "text",
-            text: ", pero necesitan apoyo externo para cobrar. Nosotros asumimos el proceso completo, con comunicaciones profesionales, protocolos éticos y trazabilidad de cada contacto, para que tú puedas recuperar el dinero sin desgastar tu operación ni poner en riesgo la relación comercial.",
+            type: 'text',
+            text: ', pero necesitan apoyo externo para cobrar. Nosotros asumimos el proceso completo, con comunicaciones profesionales, protocolos éticos y trazabilidad de cada contacto, para que tú puedas recuperar el dinero sin desgastar tu operación ni poner en riesgo la relación comercial.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "No se trata de una cobranza invasiva ni agresiva. Es una recuperación bien hecha, desde la empatía, la tecnología y la experiencia.",
+            type: 'text',
+            text: 'No se trata de una cobranza invasiva ni agresiva. Es una recuperación bien hecha, desde la empatía, la tecnología y la experiencia.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "¿Qué logras al profesionalizar tu cobranza?",
+            type: 'bold',
+            text: '¿Qué logras al profesionalizar tu cobranza?',
           },
         ],
       },
       {
-        type: "list",
+        type: 'list',
         items: [
-          "Reduces tu morosidad sin desgastar relaciones.",
-          "Ordenas tu flujo de caja y proyectas con más certeza.",
-          "Libertas a tu equipo financiero de tareas operativas improductivas.",
-          "Cuidas tu marca, tu reputación y tu base de clientes.",
+          'Reduces tu morosidad sin desgastar relaciones.',
+          'Ordenas tu flujo de caja y proyectas con más certeza.',
+          'Libertas a tu equipo financiero de tareas operativas improductivas.',
+          'Cuidas tu marca, tu reputación y tu base de clientes.',
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "Conclusión",
-          },
-        ],
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "text",
-            text: "Profesionalizar tu proceso de cobranza no solo te permite cobrar más rápido, sino mejor. Ya sea implementando un sistema automatizado para tus cuentas por cobrar o activando un plan de recuperación con Recupera Plus, el objetivo es el mismo: ",
-          },
-          {
-            type: "bold",
-            text: "recuperar tu dinero sin perder a tus clientes.",
+            type: 'bold',
+            text: 'Conclusión',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "No sigas normalizando los pagos vencidos. ",
+            type: 'text',
+            text: 'Profesionalizar tu proceso de cobranza no solo te permite cobrar más rápido, sino mejor. Ya sea implementando un sistema automatizado para tus cuentas por cobrar o activando un plan de recuperación con Recupera Plus, el objetivo es el mismo: ',
           },
           {
-            type: "link",
-            text: "Conversemos sobre cómo profesionalizar tu cobranza.",
-            href: "https://meetings.hubspot.com/francisco502",
+            type: 'bold',
+            text: 'recuperar tu dinero sin perder a tus clientes.',
+          },
+        ],
+      },
+      {
+        type: 'paragraph',
+        fragments: [
+          {
+            type: 'text',
+            text: 'No sigas normalizando los pagos vencidos. ',
+          },
+          {
+            type: 'link',
+            text: 'Conversemos sobre cómo profesionalizar tu cobranza.',
+            href: 'https://meetings.hubspot.com/francisco502',
           },
         ],
       },
@@ -1315,175 +1307,174 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: 18,
-    slug: "si-no-haces-seguimiento-no-cobras-como-Sena-profesionaliza-el-seguimiento-y-recupera-tu-dinero",
-    title:
-      "Si no haces seguimiento, no cobras: cómo Sena profesionaliza el seguimiento y recupera tu dinero",
+    slug: 'si-no-haces-seguimiento-no-cobras-como-Sena-profesionaliza-el-seguimiento-y-recupera-tu-dinero',
+    title: 'Si no haces seguimiento, no cobras: cómo Sena profesionaliza el seguimiento y recupera tu dinero',
     intro:
-      "Hiciste el cálculo. Ahora sabes cuánto dinero tienes atrapado en tu cartera vencida. ¿Y ahora qué?\n\nEl mayor error que cometen las empresas con deudas activas no es no saber cuánto les deben --ese paso ya lo diste--, sino **no hacer seguimiento constante, estratégico y profesional para recuperar ese dinero**. No basta con una llamada. No basta con reenviar la factura. Si no hay estructura, el cliente posterga, ignora... y tú sigues perdiendo.",
-    date: "16 de enero 2026",
-    tags: ["Blog"],
+      'Hiciste el cálculo. Ahora sabes cuánto dinero tienes atrapado en tu cartera vencida. ¿Y ahora qué?\n\nEl mayor error que cometen las empresas con deudas activas no es no saber cuánto les deben --ese paso ya lo diste--, sino **no hacer seguimiento constante, estratégico y profesional para recuperar ese dinero**. No basta con una llamada. No basta con reenviar la factura. Si no hay estructura, el cliente posterga, ignora... y tú sigues perdiendo.',
+    date: '16 de enero 2026',
+    tags: ['Blog'],
     image: AssetImageBlog.blog_18_main.src,
     content: [
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Hiciste el cálculo. Ahora sabes cuánto dinero tienes atrapado en tu cartera vencida. ¿Y ahora qué?",
+            type: 'text',
+            text: 'Hiciste el cálculo. Ahora sabes cuánto dinero tienes atrapado en tu cartera vencida. ¿Y ahora qué?',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "El mayor error que cometen las empresas con deudas activas no es no saber cuánto les deben --ese paso ya lo diste--, sino ",
+            type: 'text',
+            text: 'El mayor error que cometen las empresas con deudas activas no es no saber cuánto les deben --ese paso ya lo diste--, sino ',
           },
           {
-            type: "bold",
-            text: "no hacer seguimiento constante, estratégico y profesional para recuperar ese dinero",
+            type: 'bold',
+            text: 'no hacer seguimiento constante, estratégico y profesional para recuperar ese dinero',
           },
           {
-            type: "text",
-            text: ". No basta con una llamada. No basta con reenviar la factura. Si no hay estructura, el cliente posterga, ignora... y tú sigues perdiendo.",
+            type: 'text',
+            text: '. No basta con una llamada. No basta con reenviar la factura. Si no hay estructura, el cliente posterga, ignora... y tú sigues perdiendo.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "El seguimiento es el corazón de toda recuperación efectiva",
+            type: 'bold',
+            text: 'El seguimiento es el corazón de toda recuperación efectiva',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Hacer seguimiento no es perseguir. Es tener un ",
+            type: 'text',
+            text: 'Hacer seguimiento no es perseguir. Es tener un ',
           },
           {
-            type: "bold",
-            text: "sistema estructurado",
+            type: 'bold',
+            text: 'sistema estructurado',
           },
           {
-            type: "text",
-            text: ", donde cada cliente moroso reciba comunicaciones oportunas, por el canal adecuado, con el mensaje correcto y la frecuencia ideal. Suena simple, pero requiere tiempo, estrategia y experiencia. Por eso muchas empresas, incluso sabiendo que tienen deudas por recuperar, no logran hacerlo solas.",
+            type: 'text',
+            text: ', donde cada cliente moroso reciba comunicaciones oportunas, por el canal adecuado, con el mensaje correcto y la frecuencia ideal. Suena simple, pero requiere tiempo, estrategia y experiencia. Por eso muchas empresas, incluso sabiendo que tienen deudas por recuperar, no logran hacerlo solas.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Ahí es donde entra ",
+            type: 'text',
+            text: 'Ahí es donde entra ',
           },
           {
-            type: "bold",
-            text: "Recupera Plus",
+            type: 'bold',
+            text: 'Recupera Plus',
           },
           {
-            type: "text",
-            text: ": nuestro servicio especializado en ",
+            type: 'text',
+            text: ': nuestro servicio especializado en ',
           },
           {
-            type: "bold",
-            text: "recuperación de deudas activas",
+            type: 'bold',
+            text: 'recuperación de deudas activas',
           },
           {
-            type: "text",
-            text: ", diseñado para empresas que no tienen un equipo interno de cobranza ni procesos profesionales para gestionarlo.",
+            type: 'text',
+            text: ', diseñado para empresas que no tienen un equipo interno de cobranza ni procesos profesionales para gestionarlo.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "¿Cómo lo hacemos?",
+            type: 'bold',
+            text: '¿Cómo lo hacemos?',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Con Recupera Plus, Sena se encarga de todo el seguimiento por ti. Diseñamos flujos inteligentes que combinan llamadas, emails y WhatsApps según el comportamiento del cliente. Cada acción queda registrada, cada avance se reporta, y tú tienes visibilidad completa del proceso. Nuestro enfoque es ético, profesional y centrado en resultados.",
+            type: 'text',
+            text: 'Con Recupera Plus, Sena se encarga de todo el seguimiento por ti. Diseñamos flujos inteligentes que combinan llamadas, emails y WhatsApps según el comportamiento del cliente. Cada acción queda registrada, cada avance se reporta, y tú tienes visibilidad completa del proceso. Nuestro enfoque es ético, profesional y centrado en resultados.',
           },
         ],
       },
       {
-        type: "image",
+        type: 'image',
         link: AssetImageBlog.blog_18_main.src,
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Recuperamos sin fricciones, sin amenazas y sin poner en riesgo la relación comercial. Porque entendemos que detrás de cada cliente hay una oportunidad de negocio... pero también una obligación pendiente.",
+            type: 'text',
+            text: 'Recuperamos sin fricciones, sin amenazas y sin poner en riesgo la relación comercial. Porque entendemos que detrás de cada cliente hay una oportunidad de negocio... pero también una obligación pendiente.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "¿Qué pasa si no haces nada?",
+            type: 'bold',
+            text: '¿Qué pasa si no haces nada?',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Lo que pasa todos los meses: ese dinero sigue fuera de tu caja. Mientras tú te enfocas en operar, vender y pagar tus propias obligaciones, estás financiando a clientes que simplemente no respondieron a tiempo... y a los que nadie les volvió a escribir.",
+            type: 'text',
+            text: 'Lo que pasa todos los meses: ese dinero sigue fuera de tu caja. Mientras tú te enfocas en operar, vender y pagar tus propias obligaciones, estás financiando a clientes que simplemente no respondieron a tiempo... y a los que nadie les volvió a escribir.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "El seguimiento lo es todo. Y si tú no lo haces, nadie lo hará por ti.",
+            type: 'bold',
+            text: 'El seguimiento lo es todo. Y si tú no lo haces, nadie lo hará por ti.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "Conclusión: haz que ese número se convierta en recuperación real",
+            type: 'bold',
+            text: 'Conclusión: haz que ese número se convierta en recuperación real',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Deja que Sena se encargue del seguimiento profesional y empieza a recuperar lo que ya sabes que te pertenece.",
+            type: 'text',
+            text: 'Deja que Sena se encargue del seguimiento profesional y empieza a recuperar lo que ya sabes que te pertenece.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "link",
-            text: "Solicita una evaluación gratuita de tu cartera.",
-            href: "https://meetings.hubspot.com/francisco502",
+            type: 'link',
+            text: 'Solicita una evaluación gratuita de tu cartera.',
+            href: 'https://meetings.hubspot.com/francisco502',
           },
         ],
       },
@@ -1491,559 +1482,559 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: 20,
-    slug: "descubre-como-salir-de-infocorp-consultar-tus-deudas-y-limpiar-tu-historial-financiero-para-recuperar-acceso-a-credito",
-    title: "¿Cómo salir de Infocorp y limpiar tu historial crediticio? ",
+    slug: 'descubre-como-salir-de-infocorp-consultar-tus-deudas-y-limpiar-tu-historial-financiero-para-recuperar-acceso-a-credito',
+    title: '¿Cómo salir de Infocorp y limpiar tu historial crediticio? ',
     intro:
-      "Estar en Infocorp representa una de las mayores preocupaciones para personas y pymes que buscan acceder a créditos, financiamiento o cerrar contratos importantes. Un historial negativo puede convertirse en un obstáculo significativo, pero no es permanente. Con los pasos adecuados, es posible salir de Infocorp, limpiar tu historial crediticio y recuperar la confianza financiera. En este artículo explicaremos cómo funciona este sistema, qué acciones tomar y qué alternativas existen para evitar reincidencias.",
-    date: "20 de enero 2026",
-    tags: ["Blog"],
+      'Estar en Infocorp representa una de las mayores preocupaciones para personas y pymes que buscan acceder a créditos, financiamiento o cerrar contratos importantes. Un historial negativo puede convertirse en un obstáculo significativo, pero no es permanente. Con los pasos adecuados, es posible salir de Infocorp, limpiar tu historial crediticio y recuperar la confianza financiera. En este artículo explicaremos cómo funciona este sistema, qué acciones tomar y qué alternativas existen para evitar reincidencias.',
+    date: '20 de enero 2026',
+    tags: ['Blog'],
     image: AssetImageBlog.blog_20_main.src,
     content: [
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Estar en Infocorp representa una de las mayores preocupaciones para personas y pymes que buscan acceder a créditos, financiamiento o cerrar contratos importantes. Un historial negativo puede convertirse en un obstáculo significativo, pero no es permanente. Con los pasos adecuados, es posible salir de Infocorp, limpiar tu historial crediticio y recuperar la confianza financiera. En este artículo explicaremos cómo funciona este sistema, qué acciones tomar y qué alternativas existen para evitar reincidencias.",
+            type: 'text',
+            text: 'Estar en Infocorp representa una de las mayores preocupaciones para personas y pymes que buscan acceder a créditos, financiamiento o cerrar contratos importantes. Un historial negativo puede convertirse en un obstáculo significativo, pero no es permanente. Con los pasos adecuados, es posible salir de Infocorp, limpiar tu historial crediticio y recuperar la confianza financiera. En este artículo explicaremos cómo funciona este sistema, qué acciones tomar y qué alternativas existen para evitar reincidencias.',
           },
         ],
       },
       {
-        type: "subtitle",
-        text: "¿Qué significa estar en Infocorp y por qué afecta tu crédito?",
+        type: 'subtitle',
+        text: '¿Qué significa estar en Infocorp y por qué afecta tu crédito?',
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Infocorp es una central de riesgo que opera en Perú y pertenece a Equifax. Es el nombre más conocido en ese país para referirse al registro de deudas.",
+            type: 'text',
+            text: 'Infocorp es una central de riesgo que opera en Perú y pertenece a Equifax. Es el nombre más conocido en ese país para referirse al registro de deudas.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "En otros países de Latinoamérica existen sistemas similares, pero con distintos nombres:",
+            type: 'text',
+            text: 'En otros países de Latinoamérica existen sistemas similares, pero con distintos nombres:',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Chile → DICOM (Equifax Chile).",
+            type: 'text',
+            text: 'Chile → DICOM (Equifax Chile).',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Colombia → Datacrédito y TransUnion.",
+            type: 'text',
+            text: 'Colombia → Datacrédito y TransUnion.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "México → Buró de Crédito y Círculo de Crédito.",
+            type: 'text',
+            text: 'México → Buró de Crédito y Círculo de Crédito.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Argentina → Veraz (Equifax Argentina).",
+            type: 'text',
+            text: 'Argentina → Veraz (Equifax Argentina).',
           },
         ],
       },
       {
-        type: "subtitle",
+        type: 'subtitle',
         text: `Entonces, cuando hablamos de "Infocorp" nos referimos específicamente al contexto peruano.`,
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Estar en Infocorp no siempre implica que seas un mal pagador, pero sí indica que existe información financiera relevante sobre ti o tu empresa. Infocorp, gestionado en Perú por ",
+            type: 'text',
+            text: 'Estar en Infocorp no siempre implica que seas un mal pagador, pero sí indica que existe información financiera relevante sobre ti o tu empresa. Infocorp, gestionado en Perú por ',
           },
           {
-            type: "bold",
-            text: "Equifax",
+            type: 'bold',
+            text: 'Equifax',
           },
           {
-            type: "text",
-            text: ", es una central de riesgo que recopila datos de deudas vencidas y obligaciones financieras de personas y compañías.",
+            type: 'text',
+            text: ', es una central de riesgo que recopila datos de deudas vencidas y obligaciones financieras de personas y compañías.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Cuando apareces en este registro, tu reputación crediticia se ve comprometida. Para los bancos, proveedores o inversionistas, tu nombre en Infocorp puede ser interpretado como una alerta de riesgo. Esto puede traducirse en dificultades para obtener préstamos, líneas de crédito, leasing u otros productos financieros.",
+            type: 'text',
+            text: 'Cuando apareces en este registro, tu reputación crediticia se ve comprometida. Para los bancos, proveedores o inversionistas, tu nombre en Infocorp puede ser interpretado como una alerta de riesgo. Esto puede traducirse en dificultades para obtener préstamos, líneas de crédito, leasing u otros productos financieros.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Además, muchas empresas B2B también consultan Infocorp antes de cerrar contratos. Si tienes una pyme y estás reportado, el acceso a nuevos clientes o socios podría verse afectado.",
+            type: 'text',
+            text: 'Además, muchas empresas B2B también consultan Infocorp antes de cerrar contratos. Si tienes una pyme y estás reportado, el acceso a nuevos clientes o socios podría verse afectado.',
           },
         ],
       },
       {
-        type: "subtitle",
-        text: "Cómo saber si tienes deuda en Infocorp",
+        type: 'subtitle',
+        text: 'Cómo saber si tienes deuda en Infocorp',
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "El primer paso para mejorar tu situación es ",
+            type: 'text',
+            text: 'El primer paso para mejorar tu situación es ',
           },
           {
-            type: "bold",
-            text: "verificar si realmente tienes deudas registradas",
+            type: 'bold',
+            text: 'verificar si realmente tienes deudas registradas',
           },
           {
-            type: "text",
-            text: ". Mucha gente ni siquiera sabe que está reportada hasta que un banco le niega un préstamo.",
+            type: 'text',
+            text: '. Mucha gente ni siquiera sabe que está reportada hasta que un banco le niega un préstamo.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Para consultar tu estado en Infocorp:",
+            type: 'text',
+            text: 'Para consultar tu estado en Infocorp:',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "1. ",
+            type: 'text',
+            text: '1. ',
           },
           {
-            type: "bold",
-            text: "Solicita tu reporte online en Equifax",
+            type: 'bold',
+            text: 'Solicita tu reporte online en Equifax',
           },
           {
-            type: "text",
-            text: ": la plataforma ofrece versiones gratuitas y de pago con más detalle.",
+            type: 'text',
+            text: ': la plataforma ofrece versiones gratuitas y de pago con más detalle.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "2. ",
+            type: 'text',
+            text: '2. ',
           },
           {
-            type: "bold",
-            text: "Consulta en la SBS (Superintendencia de Banca, Seguros y AFP)",
+            type: 'bold',
+            text: 'Consulta en la SBS (Superintendencia de Banca, Seguros y AFP)',
           },
           {
-            type: "text",
-            text: ": permite acceder a tu reporte crediticio consolidado.",
+            type: 'text',
+            text: ': permite acceder a tu reporte crediticio consolidado.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "3. ",
+            type: 'text',
+            text: '3. ',
           },
           {
-            type: "bold",
-            text: "Usa plataformas autorizadas",
+            type: 'bold',
+            text: 'Usa plataformas autorizadas',
           },
           {
-            type: "text",
-            text: ": existen servicios digitales que ofrecen reportes integrados de deudas y pagos atrasados.",
+            type: 'text',
+            text: ': existen servicios digitales que ofrecen reportes integrados de deudas y pagos atrasados.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Saber ",
+            type: 'text',
+            text: 'Saber ',
           },
           {
-            type: "bold",
-            text: "cómo identificar si tienes deuda en Infocorp",
+            type: 'bold',
+            text: 'cómo identificar si tienes deuda en Infocorp',
           },
           {
-            type: "text",
-            text: " es clave, porque solo con esa información podrás planear una estrategia de salida.",
+            type: 'text',
+            text: ' es clave, porque solo con esa información podrás planear una estrategia de salida.',
           },
         ],
       },
       {
-        type: "subtitle",
-        text: "Pasos prácticos para salir de Infocorp",
+        type: 'subtitle',
+        text: 'Pasos prácticos para salir de Infocorp',
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Salir de Infocorp no ocurre de la noche a la mañana, pero con un plan ordenado sí es totalmente alcanzable.",
+            type: 'text',
+            text: 'Salir de Infocorp no ocurre de la noche a la mañana, pero con un plan ordenado sí es totalmente alcanzable.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "1. ",
+            type: 'text',
+            text: '1. ',
           },
           {
-            type: "bold",
-            text: "Identifica las deudas vigentes",
+            type: 'bold',
+            text: 'Identifica las deudas vigentes',
           },
           {
-            type: "text",
-            text: ": revisa cada obligación y define cuáles están vencidas.",
+            type: 'text',
+            text: ': revisa cada obligación y define cuáles están vencidas.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "2. ",
+            type: 'text',
+            text: '2. ',
           },
           {
-            type: "bold",
-            text: "Negocia o paga la deuda",
+            type: 'bold',
+            text: 'Negocia o paga la deuda',
           },
           {
-            type: "text",
-            text: ": si puedes pagar, hazlo lo antes posible. Si no, acércate al acreedor para refinanciar o reestructurar.",
+            type: 'text',
+            text: ': si puedes pagar, hazlo lo antes posible. Si no, acércate al acreedor para refinanciar o reestructurar.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "3. ",
+            type: 'text',
+            text: '3. ',
           },
           {
-            type: "bold",
-            text: "Solicita constancia de pago",
+            type: 'bold',
+            text: 'Solicita constancia de pago',
           },
           {
-            type: "text",
-            text: ": cada vez que liquides una deuda, pide un documento que lo respalde.",
+            type: 'text',
+            text: ': cada vez que liquides una deuda, pide un documento que lo respalde.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "4. ",
+            type: 'text',
+            text: '4. ',
           },
           {
-            type: "bold",
-            text: "Haz seguimiento a la actualización",
+            type: 'bold',
+            text: 'Haz seguimiento a la actualización',
           },
           {
-            type: "text",
-            text: ": las entidades actualizan sus reportes periódicamente, pero conviene confirmar que tu historial quede limpio.",
+            type: 'text',
+            text: ': las entidades actualizan sus reportes periódicamente, pero conviene confirmar que tu historial quede limpio.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "5. ",
+            type: 'text',
+            text: '5. ',
           },
           {
-            type: "bold",
-            text: "Mantén comunicación constante",
+            type: 'bold',
+            text: 'Mantén comunicación constante',
           },
           {
-            type: "text",
-            text: ": si hay errores o deudas ya canceladas que siguen apareciendo, reclama directamente a Infocorp o a la SBS.",
+            type: 'text',
+            text: ': si hay errores o deudas ya canceladas que siguen apareciendo, reclama directamente a Infocorp o a la SBS.',
           },
         ],
       },
       {
-        type: "subtitle",
-        text: "Estrategias para limpiar tu historial crediticio",
+        type: 'subtitle',
+        text: 'Estrategias para limpiar tu historial crediticio',
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "La paciencia es importante, pero también existen ",
+            type: 'text',
+            text: 'La paciencia es importante, pero también existen ',
           },
           {
-            type: "bold",
-            text: "acciones que aceleran el proceso",
+            type: 'bold',
+            text: 'acciones que aceleran el proceso',
           },
           {
-            type: "text",
-            text: ":",
+            type: 'text',
+            text: ':',
           },
         ],
       },
       {
-        type: "list",
+        type: 'list',
         items: [
-          "Presentar la constancia de pago directamente en Infocorp para que el registro se actualice con mayor rapidez.",
-          "Solicitar a la entidad financiera que comunique el levantamiento de la deuda en el menor plazo posible.",
-          "Revisar periódicamente tu historial crediticio para confirmar que la información sea correcta.",
+          'Presentar la constancia de pago directamente en Infocorp para que el registro se actualice con mayor rapidez.',
+          'Solicitar a la entidad financiera que comunique el levantamiento de la deuda en el menor plazo posible.',
+          'Revisar periódicamente tu historial crediticio para confirmar que la información sea correcta.',
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Además, no olvides que tu historial no solo se compone de deudas impagas: tener servicios o créditos en curso que pagues puntualmente ayuda a mejorar tu score y a demostrar que eres un cliente confiable.",
+            type: 'text',
+            text: 'Además, no olvides que tu historial no solo se compone de deudas impagas: tener servicios o créditos en curso que pagues puntualmente ayuda a mejorar tu score y a demostrar que eres un cliente confiable.',
           },
         ],
       },
       {
-        type: "subtitle",
-        text: "Cómo evitar volver a caer en Infocorp",
+        type: 'subtitle',
+        text: 'Cómo evitar volver a caer en Infocorp',
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Salir de Infocorp es un alivio, pero nadie quiere repetir la experiencia. Para mantener tu historial limpio, tanto a nivel personal como empresarial, conviene adoptar ciertas prácticas:",
+            type: 'text',
+            text: 'Salir de Infocorp es un alivio, pero nadie quiere repetir la experiencia. Para mantener tu historial limpio, tanto a nivel personal como empresarial, conviene adoptar ciertas prácticas:',
           },
         ],
       },
       {
-        type: "list",
+        type: 'list',
         items: [
           [
             {
-              type: "bold",
-              text: "Llevar un control de tus obligaciones",
+              type: 'bold',
+              text: 'Llevar un control de tus obligaciones',
             },
             {
-              type: "text",
-              text: ": usa un calendario o recordatorios automáticos.",
+              type: 'text',
+              text: ': usa un calendario o recordatorios automáticos.',
             },
           ],
           [
             {
-              type: "bold",
-              text: "Separar las finanzas personales de las del negocio",
+              type: 'bold',
+              text: 'Separar las finanzas personales de las del negocio',
             },
             {
-              type: "text",
-              text: ": mezclar cuentas suele generar desorden.",
+              type: 'text',
+              text: ': mezclar cuentas suele generar desorden.',
             },
           ],
           [
             {
-              type: "bold",
-              text: "No depender del Excel y WhatsApp",
+              type: 'bold',
+              text: 'No depender del Excel y WhatsApp',
             },
             {
-              type: "text",
-              text: ": si manejas una pyme, estos métodos se vuelven insuficientes con el tiempo.",
+              type: 'text',
+              text: ': si manejas una pyme, estos métodos se vuelven insuficientes con el tiempo.',
             },
           ],
           [
             {
-              type: "bold",
-              text: "Implementar un sistema de cobranza profesional:",
+              type: 'bold',
+              text: 'Implementar un sistema de cobranza profesional:',
             },
             {
-              type: "text",
-              text: " evita retrasos y falta de liquidez en tu empresa.",
+              type: 'text',
+              text: ' evita retrasos y falta de liquidez en tu empresa.',
             },
           ],
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Aquí es donde soluciones como ",
+            type: 'text',
+            text: 'Aquí es donde soluciones como ',
           },
           {
-            type: "link",
-            text: "Sena",
-            href: "https://meetings.hubspot.com/francisco502",
+            type: 'link',
+            text: 'Sena',
+            href: 'https://meetings.hubspot.com/francisco502',
           },
           {
-            type: "text",
-            text: " marcan la diferencia. Esta plataforma SaaS permite:",
+            type: 'text',
+            text: ' marcan la diferencia. Esta plataforma SaaS permite:',
           },
         ],
       },
       {
-        type: "list",
+        type: 'list',
         items: [
-          "Automatizar recordatorios de cobro y pagos.",
-          "Centralizar comunicaciones en un solo dashboard.",
-          "Monitorear indicadores como DSO o antigüedad de cartera en tiempo real.",
-          "Reducir la carga operativa del equipo financiero con flujos inteligentes.",
+          'Automatizar recordatorios de cobro y pagos.',
+          'Centralizar comunicaciones en un solo dashboard.',
+          'Monitorear indicadores como DSO o antigüedad de cartera en tiempo real.',
+          'Reducir la carga operativa del equipo financiero con flujos inteligentes.',
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "El resultado es simple: más liquidez, menos morosidad y menor riesgo de volver a ser reportado en Infocorp.",
+            type: 'text',
+            text: 'El resultado es simple: más liquidez, menos morosidad y menor riesgo de volver a ser reportado en Infocorp.',
           },
         ],
       },
       {
-        type: "subtitle",
-        text: "Caso práctico: una pyme que salió de Infocorp",
+        type: 'subtitle',
+        text: 'Caso práctico: una pyme que salió de Infocorp',
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Imagina una empresa de servicios logísticos con más de 300 facturas al mes. Durante años manejó la cobranza con hojas de Excel y mensajes por WhatsApp. Poco a poco, la falta de control la llevó a acumular clientes morosos y deudas propias, hasta terminar en Infocorp.",
+            type: 'text',
+            text: 'Imagina una empresa de servicios logísticos con más de 300 facturas al mes. Durante años manejó la cobranza con hojas de Excel y mensajes por WhatsApp. Poco a poco, la falta de control la llevó a acumular clientes morosos y deudas propias, hasta terminar en Infocorp.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "link",
-            text: "Al implementar Sena",
-            href: "",
+            type: 'link',
+            text: 'Al implementar Sena',
+            href: '',
           },
           {
-            type: "text",
-            text: ", logró:",
+            type: 'text',
+            text: ', logró:',
           },
         ],
       },
       {
-        type: "list",
+        type: 'list',
         items: [
           [
             {
-              type: "text",
-              text: "Reducir en un 33% el ",
+              type: 'text',
+              text: 'Reducir en un 33% el ',
             },
             {
-              type: "bold",
-              text: "DSO (Days Sales Outstanding)",
+              type: 'bold',
+              text: 'DSO (Days Sales Outstanding)',
             },
             {
-              type: "text",
-              text: ".",
+              type: 'text',
+              text: '.',
             },
           ],
-          "Recuperar flujo de caja perdido con recordatorios automáticos y segmentados.",
-          "Evitar que nuevas facturas se atrasaran gracias a notificaciones preventivas.",
+          'Recuperar flujo de caja perdido con recordatorios automáticos y segmentados.',
+          'Evitar que nuevas facturas se atrasaran gracias a notificaciones preventivas.',
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "En menos de seis meses, la pyme salió de Infocorp y recuperó su capacidad de financiamiento.",
+            type: 'text',
+            text: 'En menos de seis meses, la pyme salió de Infocorp y recuperó su capacidad de financiamiento.',
           },
         ],
       },
       {
-        type: "subtitle",
-        text: "Recursos útiles para consultar y mantener tu historial limpio",
+        type: 'subtitle',
+        text: 'Recursos útiles para consultar y mantener tu historial limpio',
       },
       {
-        type: "list",
+        type: 'list',
         items: [
-          "Superintendencia de Banca, Seguros y AFP (SBS) - Perú",
-          "Infocorp Equifax",
-          "Recuperación de créditos MYPE - Ministerio de Producción",
+          'Superintendencia de Banca, Seguros y AFP (SBS) - Perú',
+          'Infocorp Equifax',
+          'Recuperación de créditos MYPE - Ministerio de Producción',
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Estos portales ofrecen información oficial para revisar tu historial y conocer programas de apoyo financiero.",
+            type: 'text',
+            text: 'Estos portales ofrecen información oficial para revisar tu historial y conocer programas de apoyo financiero.',
           },
         ],
       },
       {
-        type: "subtitle",
-        text: "Reflexión final",
+        type: 'subtitle',
+        text: 'Reflexión final',
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Estar en Infocorp no es el fin del mundo, pero sí una señal de alerta. Salir requiere disciplina y acción: consulta tu estado, negocia tus deudas, solicita constancias y mantén un seguimiento constante.",
+            type: 'text',
+            text: 'Estar en Infocorp no es el fin del mundo, pero sí una señal de alerta. Salir requiere disciplina y acción: consulta tu estado, negocia tus deudas, solicita constancias y mantén un seguimiento constante.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Lo más importante, sin embargo, es prevenir. Con una gestión financiera ordenada y herramientas profesionales como Sena, no solo puedes limpiar tu historial, sino también evitar volver a caer.",
+            type: 'text',
+            text: 'Lo más importante, sin embargo, es prevenir. Con una gestión financiera ordenada y herramientas profesionales como Sena, no solo puedes limpiar tu historial, sino también evitar volver a caer.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "¿Quieres que tu pyme crezca sin preocuparse por la morosidad? ",
+            type: 'text',
+            text: '¿Quieres que tu pyme crezca sin preocuparse por la morosidad? ',
           },
           {
-            type: "link",
-            text: "Descubre cómo Sena puede ayudarte.",
-            href: "https://meetings.hubspot.com/francisco502",
+            type: 'link',
+            text: 'Descubre cómo Sena puede ayudarte.',
+            href: 'https://meetings.hubspot.com/francisco502',
           },
         ],
       },
@@ -2051,380 +2042,380 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: 21,
-    slug: "mejora-el-score-crediticio-de-tu-pyme-en-90-dias-con-estas-tacticas-efectivas-y-accede-a-mejores-oportunidades-financieras",
-    title: "Score crediticio para pymes: 7 tácticas para subirlo en 90 días",
+    slug: 'mejora-el-score-crediticio-de-tu-pyme-en-90-dias-con-estas-tacticas-efectivas-y-accede-a-mejores-oportunidades-financieras',
+    title: 'Score crediticio para pymes: 7 tácticas para subirlo en 90 días',
     intro:
-      "El score crediticio se ha convertido en una de las métricas más influyentes a la hora de evaluar la solidez financiera de una empresa. Para una pyme, un puntaje bajo puede significar el cierre de puertas a nuevas oportunidades de crédito, proveedores desconfiados o incluso mayores tasas de interés. Sin embargo, mejorar este indicador no es una tarea imposible. Con disciplina, estrategia y acciones enfocadas, es posible subir el score crediticio de una pyme en tan solo 90 días.",
-    date: "23 de enero 2026",
-    tags: ["Blog"],
+      'El score crediticio se ha convertido en una de las métricas más influyentes a la hora de evaluar la solidez financiera de una empresa. Para una pyme, un puntaje bajo puede significar el cierre de puertas a nuevas oportunidades de crédito, proveedores desconfiados o incluso mayores tasas de interés. Sin embargo, mejorar este indicador no es una tarea imposible. Con disciplina, estrategia y acciones enfocadas, es posible subir el score crediticio de una pyme en tan solo 90 días.',
+    date: '23 de enero 2026',
+    tags: ['Blog'],
     image: AssetImageBlog.blog_21_main.src,
     content: [
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "El score crediticio se ha convertido en una de las métricas más influyentes a la hora de evaluar la solidez financiera de una empresa. Para una pyme, un puntaje bajo puede significar el cierre de puertas a nuevas oportunidades de crédito, proveedores desconfiados o incluso mayores tasas de interés. Sin embargo, mejorar este indicador no es una tarea imposible. Con disciplina, estrategia y acciones enfocadas, es posible subir el score crediticio de una pyme en tan solo 90 días.",
+            type: 'text',
+            text: 'El score crediticio se ha convertido en una de las métricas más influyentes a la hora de evaluar la solidez financiera de una empresa. Para una pyme, un puntaje bajo puede significar el cierre de puertas a nuevas oportunidades de crédito, proveedores desconfiados o incluso mayores tasas de interés. Sin embargo, mejorar este indicador no es una tarea imposible. Con disciplina, estrategia y acciones enfocadas, es posible subir el score crediticio de una pyme en tan solo 90 días.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "En este artículo se presentan siete tácticas prácticas para lograrlo.",
+            type: 'text',
+            text: 'En este artículo se presentan siete tácticas prácticas para lograrlo.',
           },
         ],
       },
       {
-        type: "subtitle",
-        text: "¿Qué es el score crediticio de una pyme y por qué importa?",
+        type: 'subtitle',
+        text: '¿Qué es el score crediticio de una pyme y por qué importa?',
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "El score crediticio es una calificación que refleja el nivel de riesgo de una empresa. Se calcula con base en el historial de pagos, la cantidad de obligaciones vigentes y la capacidad de respuesta financiera.",
+            type: 'text',
+            text: 'El score crediticio es una calificación que refleja el nivel de riesgo de una empresa. Se calcula con base en el historial de pagos, la cantidad de obligaciones vigentes y la capacidad de respuesta financiera.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "En la práctica, este puntaje es consultado por bancos antes de otorgar préstamos, por proveedores al definir plazos de pago y hasta por aliados estratégicos antes de firmar un contrato. Un score bajo se interpreta como una alerta de incumplimiento, mientras que un score alto abre puertas a mejores condiciones de financiamiento y confianza comercial.",
+            type: 'text',
+            text: 'En la práctica, este puntaje es consultado por bancos antes de otorgar préstamos, por proveedores al definir plazos de pago y hasta por aliados estratégicos antes de firmar un contrato. Un score bajo se interpreta como una alerta de incumplimiento, mientras que un score alto abre puertas a mejores condiciones de financiamiento y confianza comercial.',
           },
         ],
       },
       {
-        type: "subtitle",
-        text: "Diagnóstico inicial: conoce tu puntaje actual",
+        type: 'subtitle',
+        text: 'Diagnóstico inicial: conoce tu puntaje actual',
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Antes de mejorar tu puntaje, es indispensable saber en qué punto estás. Para ello puedes:",
+            type: 'text',
+            text: 'Antes de mejorar tu puntaje, es indispensable saber en qué punto estás. Para ello puedes:',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Solicitar un reporte crediticio empresarial en centrales de riesgo como Equifax o TransUnion.",
+            type: 'text',
+            text: 'Solicitar un reporte crediticio empresarial en centrales de riesgo como Equifax o TransUnion.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Revisar en la Superintendencia de Banca, Seguros y AFP (SBS) si operas en Perú.",
+            type: 'text',
+            text: 'Revisar en la Superintendencia de Banca, Seguros y AFP (SBS) si operas en Perú.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Consultar con tu banco o institución financiera si ofrecen evaluaciones internas de tu empresa.",
+            type: 'text',
+            text: 'Consultar con tu banco o institución financiera si ofrecen evaluaciones internas de tu empresa.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Este diagnóstico no solo muestra tu score actual, también detalla deudas vencidas, antigüedad de la cartera y patrones de pago. Con esta información, podrás definir prioridades claras.",
+            type: 'text',
+            text: 'Este diagnóstico no solo muestra tu score actual, también detalla deudas vencidas, antigüedad de la cartera y patrones de pago. Con esta información, podrás definir prioridades claras.',
           },
         ],
       },
       {
-        type: "subtitle",
-        text: "7 tácticas para mejorar el score crediticio en 90 días",
+        type: 'subtitle',
+        text: '7 tácticas para mejorar el score crediticio en 90 días',
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "1. Paga tus facturas y créditos a tiempo",
+            type: 'bold',
+            text: '1. Paga tus facturas y créditos a tiempo',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "El factor que más pesa en la evaluación crediticia es la puntualidad de los pagos. Una factura vencida, aunque sea pequeña, puede arrastrar tu score hacia abajo. Programa alertas o automatiza recordatorios para evitar retrasos.",
+            type: 'text',
+            text: 'El factor que más pesa en la evaluación crediticia es la puntualidad de los pagos. Una factura vencida, aunque sea pequeña, puede arrastrar tu score hacia abajo. Programa alertas o automatiza recordatorios para evitar retrasos.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "2. Renegocia deudas vencidas y busca acuerdos formales",
+            type: 'bold',
+            text: '2. Renegocia deudas vencidas y busca acuerdos formales',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Si tu empresa atraviesa problemas de liquidez, no ignores la deuda. Contacta a la entidad acreedora y plantea una reestructuración. Los acuerdos de pago reflejados en el historial son mejor vistos que los impagos prolongados.",
+            type: 'text',
+            text: 'Si tu empresa atraviesa problemas de liquidez, no ignores la deuda. Contacta a la entidad acreedora y plantea una reestructuración. Los acuerdos de pago reflejados en el historial son mejor vistos que los impagos prolongados.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "3. Evita sobregirar tus líneas de crédito",
+            type: 'bold',
+            text: '3. Evita sobregirar tus líneas de crédito',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Tener acceso a financiamiento no significa usarlo al 100%. Lo ideal es mantener el uso de líneas de crédito por debajo del 50%. Esto muestra control y reduce el nivel de riesgo percibido por bancos y proveedores.",
+            type: 'text',
+            text: 'Tener acceso a financiamiento no significa usarlo al 100%. Lo ideal es mantener el uso de líneas de crédito por debajo del 50%. Esto muestra control y reduce el nivel de riesgo percibido por bancos y proveedores.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "link",
-            text: "4. Centraliza tu gestión financiera",
-            href: "",
+            type: 'link',
+            text: '4. Centraliza tu gestión financiera',
+            href: '',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "El desorden es un enemigo silencioso. Muchas pymes dependen de Excel y WhatsApp para controlar pagos y cobranzas, lo cual genera errores. Implementar un ERP o una plataforma de cobranza inteligente permite tener una visión clara y ordenada de todas las cuentas.",
+            type: 'text',
+            text: 'El desorden es un enemigo silencioso. Muchas pymes dependen de Excel y WhatsApp para controlar pagos y cobranzas, lo cual genera errores. Implementar un ERP o una plataforma de cobranza inteligente permite tener una visión clara y ordenada de todas las cuentas.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "5. Separa cuentas personales de las empresariales",
+            type: 'bold',
+            text: '5. Separa cuentas personales de las empresariales',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Uno de los errores más comunes es mezclar ingresos del negocio con gastos personales. Esta práctica distorsiona el flujo de caja y genera retrasos en pagos empresariales. Abrir cuentas exclusivas para la pyme aporta claridad y transparencia.",
+            type: 'text',
+            text: 'Uno de los errores más comunes es mezclar ingresos del negocio con gastos personales. Esta práctica distorsiona el flujo de caja y genera retrasos en pagos empresariales. Abrir cuentas exclusivas para la pyme aporta claridad y transparencia.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "6. Diversifica tus fuentes de financiamiento",
+            type: 'bold',
+            text: '6. Diversifica tus fuentes de financiamiento',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Depender de un solo banco o proveedor puede ser riesgoso. Abrir líneas de crédito en distintas instituciones muestra estabilidad y fortalece tu reputación financiera. Además, te da mayor flexibilidad para enfrentar imprevistos.",
+            type: 'text',
+            text: 'Depender de un solo banco o proveedor puede ser riesgoso. Abrir líneas de crédito en distintas instituciones muestra estabilidad y fortalece tu reputación financiera. Además, te da mayor flexibilidad para enfrentar imprevistos.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "link",
-            text: "7. Usa herramientas de cobranza como Sena",
-            href: "http://www.somossena.com",
+            type: 'link',
+            text: '7. Usa herramientas de cobranza como Sena',
+            href: 'http://www.somossena.com',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "La liquidez depende en gran medida de que tus clientes paguen a tiempo. Con Sena, puedes:",
+            type: 'text',
+            text: 'La liquidez depende en gran medida de que tus clientes paguen a tiempo. Con Sena, puedes:',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Automatizar recordatorios de pago por correo, SMS o WhatsApp.",
+            type: 'text',
+            text: 'Automatizar recordatorios de pago por correo, SMS o WhatsApp.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Segmentar clientes según nivel de morosidad.",
+            type: 'text',
+            text: 'Segmentar clientes según nivel de morosidad.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Obtener un dashboard en tiempo real con indicadores como DSO y antigüedad de cartera.",
+            type: 'text',
+            text: 'Obtener un dashboard en tiempo real con indicadores como DSO y antigüedad de cartera.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Reducir tareas manuales que consumen tiempo y aumentan el riesgo de errores.",
+            type: 'text',
+            text: 'Reducir tareas manuales que consumen tiempo y aumentan el riesgo de errores.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Un flujo de caja estable gracias a una gestión de cobranza profesional impacta directamente en la mejora del score crediticio.",
+            type: 'text',
+            text: 'Un flujo de caja estable gracias a una gestión de cobranza profesional impacta directamente en la mejora del score crediticio.',
           },
         ],
       },
       {
-        type: "subtitle",
-        text: "Cómo la cobranza impacta en tu historial financiero",
+        type: 'subtitle',
+        text: 'Cómo la cobranza impacta en tu historial financiero',
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Muchas pymes creen que el score crediticio solo depende de pagar préstamos bancarios. En realidad, el puntaje refleja la salud financiera integral de la empresa, y la cobranza juega un rol clave.",
+            type: 'text',
+            text: 'Muchas pymes creen que el score crediticio solo depende de pagar préstamos bancarios. En realidad, el puntaje refleja la salud financiera integral de la empresa, y la cobranza juega un rol clave.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Un mal manejo de cuentas por cobrar provoca atrasos en el pago de proveedores, sobregiros y deudas acumuladas. Todo esto afecta el score. En cambio, cuando el flujo de caja es estable gracias a recordatorios automáticos y segmentación de clientes, la empresa gana liquidez y puede cumplir puntualmente con sus obligaciones.",
+            type: 'text',
+            text: 'Un mal manejo de cuentas por cobrar provoca atrasos en el pago de proveedores, sobregiros y deudas acumuladas. Todo esto afecta el score. En cambio, cuando el flujo de caja es estable gracias a recordatorios automáticos y segmentación de clientes, la empresa gana liquidez y puede cumplir puntualmente con sus obligaciones.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
+            type: 'text',
             text: `Ejemplo real: Una pyme de servicios de consultoría redujo en 30% su DSO (días promedio de cobranza) al implementar Sena. En tres meses, pasó de un score "riesgoso" a "aceptable" y obtuvo la aprobación de una nueva línea de crédito para expandirse.`,
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "Recursos adicionales para monitorear tu score",
+            type: 'bold',
+            text: 'Recursos adicionales para monitorear tu score',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Equifax - Reportes crediticios",
+            type: 'text',
+            text: 'Equifax - Reportes crediticios',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Superintendencia de Banca, Seguros y AFP (SBS) - Perú",
+            type: 'text',
+            text: 'Superintendencia de Banca, Seguros y AFP (SBS) - Perú',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "TransUnion - Informes empresariales",
+            type: 'text',
+            text: 'TransUnion - Informes empresariales',
           },
         ],
       },
       {
-        type: "subtitle",
-        text: "Consultar periódicamente tu score ayuda a detectar problemas antes de que se conviertan en obstáculos para el crecimiento.",
+        type: 'subtitle',
+        text: 'Consultar periódicamente tu score ayuda a detectar problemas antes de que se conviertan en obstáculos para el crecimiento.',
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "El score crediticio pymes no es estático, puede mejorar rápidamente con disciplina y estrategias claras. Pagar puntualmente, renegociar deudas, mantener un control financiero ordenado y usar herramientas de cobranza profesional son pasos que marcan la diferencia.",
+            type: 'text',
+            text: 'El score crediticio pymes no es estático, puede mejorar rápidamente con disciplina y estrategias claras. Pagar puntualmente, renegociar deudas, mantener un control financiero ordenado y usar herramientas de cobranza profesional son pasos que marcan la diferencia.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Recuerda: tu score es el espejo de la salud de tu empresa. Un buen puntaje abre puertas a crédito, confianza y crecimiento sostenido.",
+            type: 'text',
+            text: 'Recuerda: tu score es el espejo de la salud de tu empresa. Un buen puntaje abre puertas a crédito, confianza y crecimiento sostenido.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "¿Quieres fortalecer el flujo de caja de tu pyme? ",
+            type: 'text',
+            text: '¿Quieres fortalecer el flujo de caja de tu pyme? ',
           },
           {
-            type: "link",
-            text: "Conversemos.",
-            href: "https://meetings.hubspot.com/francisco502",
+            type: 'link',
+            text: 'Conversemos.',
+            href: 'https://meetings.hubspot.com/francisco502',
           },
         ],
       },
@@ -2432,267 +2423,266 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: 22,
-    slug: "calcular-roi-en-15-minutos-descubre-cuanto-ahorras-al-automatizar-tu-cobranza",
-    title:
-      "Calcular ROI en 15 minutos: descubre cuánto ahorras al automatizar tu cobranza ",
+    slug: 'calcular-roi-en-15-minutos-descubre-cuanto-ahorras-al-automatizar-tu-cobranza',
+    title: 'Calcular ROI en 15 minutos: descubre cuánto ahorras al automatizar tu cobranza ',
     intro:
-      "¿Vale la pena pagar por un software de cobranza? La mejor forma de responder no es con percepciones, sino con datos. En este artículo aprenderás a calcular ROI en solo 15 minutos y a descubrir cómo la automatización de procesos transforma la cobranza en un motor de ahorro y eficiencia.",
-    date: "03 de marzo 2026",
-    tags: ["Blog", "Visión Financiera", "Educación Financiera"],
+      '¿Vale la pena pagar por un software de cobranza? La mejor forma de responder no es con percepciones, sino con datos. En este artículo aprenderás a calcular ROI en solo 15 minutos y a descubrir cómo la automatización de procesos transforma la cobranza en un motor de ahorro y eficiencia.',
+    date: '03 de marzo 2026',
+    tags: ['Blog', 'Visión Financiera', 'Educación Financiera'],
     image: AssetImageBlog.blog_22_main.src,
     content: [
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "¿Vale la pena pagar por un software de cobranza? La mejor forma de responder no es con percepciones, sino con datos. En este artículo aprenderás a calcular ROI en solo 15 minutos y a descubrir cómo la automatización de procesos transforma la cobranza en un motor de ahorro y eficiencia.",
+            type: 'text',
+            text: '¿Vale la pena pagar por un software de cobranza? La mejor forma de responder no es con percepciones, sino con datos. En este artículo aprenderás a calcular ROI en solo 15 minutos y a descubrir cómo la automatización de procesos transforma la cobranza en un motor de ahorro y eficiencia.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "¿Qué es el ROI y por qué es clave en decisiones financieras?",
+            type: 'bold',
+            text: '¿Qué es el ROI y por qué es clave en decisiones financieras?',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "El ROI (Return on Investment o Retorno de la Inversión) es una métrica que permite saber si una inversión genera beneficios suficientes frente al dinero y tiempo invertidos.",
+            type: 'text',
+            text: 'El ROI (Return on Investment o Retorno de la Inversión) es una métrica que permite saber si una inversión genera beneficios suficientes frente al dinero y tiempo invertidos.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "En el contexto de la gestión de cobranzas, el ROI responde a una pregunta crítica: ¿la automatización genera más valor que el costo del software?",
+            type: 'text',
+            text: 'En el contexto de la gestión de cobranzas, el ROI responde a una pregunta crítica: ¿la automatización genera más valor que el costo del software?',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Medir el ROI automatización cobranzas se ha vuelto indispensable para CFOs y gerentes que deben justificar presupuestos ante directorios o socios. No se trata solo de eficiencia, sino de demostrar con números que la inversión se traduce en mayor liquidez, menos costos y un flujo de caja más estable.",
+            type: 'text',
+            text: 'Medir el ROI automatización cobranzas se ha vuelto indispensable para CFOs y gerentes que deben justificar presupuestos ante directorios o socios. No se trata solo de eficiencia, sino de demostrar con números que la inversión se traduce en mayor liquidez, menos costos y un flujo de caja más estable.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "Cómo calcular ROI en tu empresa paso a paso",
+            type: 'bold',
+            text: 'Cómo calcular ROI en tu empresa paso a paso',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "La fórmula básica es:",
+            type: 'text',
+            text: 'La fórmula básica es:',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "ROI = (Beneficio - Inversión) / Inversión x 100",
+            type: 'text',
+            text: 'ROI = (Beneficio - Inversión) / Inversión x 100',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Ejemplo:",
+            type: 'text',
+            text: 'Ejemplo:',
           },
         ],
       },
       {
-        type: "list",
+        type: 'list',
         items: [
-          "Inversión en software de cobranza: $1,000 mensuales.",
-          "Beneficio estimado: $3,500 en reducción de cartera vencida y ahorro operativo.",
+          'Inversión en software de cobranza: $1,000 mensuales.',
+          'Beneficio estimado: $3,500 en reducción de cartera vencida y ahorro operativo.',
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "ROI = (3,500 - 1,000) / 1,000 x 100 = 250%",
+            type: 'text',
+            text: 'ROI = (3,500 - 1,000) / 1,000 x 100 = 250%',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Esto significa que por cada dólar invertido, la empresa recupera 2.5 adicionales.",
+            type: 'text',
+            text: 'Esto significa que por cada dólar invertido, la empresa recupera 2.5 adicionales.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Lo mejor: con las métricas adecuadas, calcular ROI puede tomar solo 15 minutos. Basta con identificar la inversión, medir los beneficios (ahorro en horas, reducción de morosidad, incremento en liquidez) y aplicar la fórmula.",
+            type: 'text',
+            text: 'Lo mejor: con las métricas adecuadas, calcular ROI puede tomar solo 15 minutos. Basta con identificar la inversión, medir los beneficios (ahorro en horas, reducción de morosidad, incremento en liquidez) y aplicar la fórmula.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "Beneficios financieros de la automatización de cobranza",
+            type: 'bold',
+            text: 'Beneficios financieros de la automatización de cobranza',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Un buen ROI no aparece por casualidad, sino porque la automatización impacta directamente en varios frentes:",
+            type: 'text',
+            text: 'Un buen ROI no aparece por casualidad, sino porque la automatización impacta directamente en varios frentes:',
           },
         ],
       },
       {
-        type: "list",
+        type: 'list',
         items: [
-          "Reducción del DSO: menos días de venta pendientes de cobro.",
-          "Menor carga operativa: equipos que dejan tareas manuales para enfocarse en estrategia.",
-          "Incremento en la tasa de recuperación: más facturas cobradas en menos tiempo.",
-          "Flujo de caja más predecible: mayor liquidez para pagar proveedores o invertir.",
-          "Eficiencia operativa: menor dependencia de Excel y procesos fragmentados.",
+          'Reducción del DSO: menos días de venta pendientes de cobro.',
+          'Menor carga operativa: equipos que dejan tareas manuales para enfocarse en estrategia.',
+          'Incremento en la tasa de recuperación: más facturas cobradas en menos tiempo.',
+          'Flujo de caja más predecible: mayor liquidez para pagar proveedores o invertir.',
+          'Eficiencia operativa: menor dependencia de Excel y procesos fragmentados.',
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Cada uno de estos indicadores de ahorro y eficiencia entra en el cálculo del ROI, reforzando el valor de la automatización.",
+            type: 'text',
+            text: 'Cada uno de estos indicadores de ahorro y eficiencia entra en el cálculo del ROI, reforzando el valor de la automatización.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "La calculadora ROI de Sena",
+            type: 'bold',
+            text: 'La calculadora ROI de Sena',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Sena va más allá de la teoría. Su plataforma incluye una calculadora ROI diseñada para mostrar, en tiempo real, cuánto tiempo y dinero ahorra la empresa al automatizar la cobranza.",
+            type: 'text',
+            text: 'Sena va más allá de la teoría. Su plataforma incluye una calculadora ROI diseñada para mostrar, en tiempo real, cuánto tiempo y dinero ahorra la empresa al automatizar la cobranza.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "La herramienta considera:",
+            type: 'text',
+            text: 'La herramienta considera:',
           },
         ],
       },
       {
-        type: "list",
+        type: 'list',
         items: [
-          "Horas liberadas de tareas manuales.",
-          "Reducción del DSO gracias a flujos automáticos.",
-          "Incremento de la tasa de recuperación de facturas.",
-          "Impacto directo en el flujo de caja.",
+          'Horas liberadas de tareas manuales.',
+          'Reducción del DSO gracias a flujos automáticos.',
+          'Incremento de la tasa de recuperación de facturas.',
+          'Impacto directo en el flujo de caja.',
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "El resultado es un informe claro y visual que facilita la toma de decisiones: el CFO no solo dice que la automatización es útil, lo demuestra con cifras.",
+            type: 'text',
+            text: 'El resultado es un informe claro y visual que facilita la toma de decisiones: el CFO no solo dice que la automatización es útil, lo demuestra con cifras.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "Casos comunes donde calcular ROI cambia la decisión",
+            type: 'bold',
+            text: 'Casos comunes donde calcular ROI cambia la decisión',
           },
         ],
       },
       {
-        type: "list",
+        type: 'list',
         items: [
-          "Un CFO frente al directorio: necesita justificar inversión en software frente a contratar más personal. El ROI demuestra que la automatización genera más valor con menos gasto fijo.",
-          "Una pyme con liquidez ajustada: duda si pagar por una plataforma. El cálculo muestra que recuperar facturas atrasadas vale mucho más que el costo mensual.",
-          "Una empresa en crecimiento: necesita escalar sin aumentar su equipo de cobranza. El ROI proyecta ahorros que permiten crecer sin contratar.",
+          'Un CFO frente al directorio: necesita justificar inversión en software frente a contratar más personal. El ROI demuestra que la automatización genera más valor con menos gasto fijo.',
+          'Una pyme con liquidez ajustada: duda si pagar por una plataforma. El cálculo muestra que recuperar facturas atrasadas vale mucho más que el costo mensual.',
+          'Una empresa en crecimiento: necesita escalar sin aumentar su equipo de cobranza. El ROI proyecta ahorros que permiten crecer sin contratar.',
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "En todos estos escenarios, calcular ROI aporta la seguridad que los números entregan y ayuda a transformar dudas en decisiones estratégicas.",
+            type: 'text',
+            text: 'En todos estos escenarios, calcular ROI aporta la seguridad que los números entregan y ayuda a transformar dudas en decisiones estratégicas.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "La automatización de cobranza no debe verse como un gasto, sino como una inversión que se mide con datos. Calcular ROI permite comprobar en minutos si la decisión genera valor real para la empresa.",
+            type: 'text',
+            text: 'La automatización de cobranza no debe verse como un gasto, sino como una inversión que se mide con datos. Calcular ROI permite comprobar en minutos si la decisión genera valor real para la empresa.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Con Sena, este proceso es aún más sencillo gracias a su calculadora de ROI: una herramienta que conecta indicadores como DSO, tasa de recuperación y flujo de caja con el impacto financiero directo de la automatización.",
+            type: 'text',
+            text: 'Con Sena, este proceso es aún más sencillo gracias a su calculadora de ROI: una herramienta que conecta indicadores como DSO, tasa de recuperación y flujo de caja con el impacto financiero directo de la automatización.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "¿Quieres comprobar en minutos cuánto puede ahorrar tu empresa? ",
+            type: 'text',
+            text: '¿Quieres comprobar en minutos cuánto puede ahorrar tu empresa? ',
           },
           {
-            type: "link",
-            text: "Prueba la calculadora ROI de Sena.",
-            href: "https://meetings.hubspot.com/francisco502",
+            type: 'link',
+            text: 'Prueba la calculadora ROI de Sena.',
+            href: 'https://meetings.hubspot.com/francisco502',
           },
         ],
       },
@@ -2700,575 +2690,574 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: 23,
-    slug: "descubre-que-software-de-cobranza-puede-ayudarte-a-automatizar-procesos-salir-del-excel-y-mejorar-la-liquidez-en-tu-pyme",
-    title:
-      "¿Qué software de cobranza me ayuda a automatizar las cobranzas en mi pyme?",
+    slug: 'descubre-que-software-de-cobranza-puede-ayudarte-a-automatizar-procesos-salir-del-excel-y-mejorar-la-liquidez-en-tu-pyme',
+    title: '¿Qué software de cobranza me ayuda a automatizar las cobranzas en mi pyme?',
     intro:
-      "Muchas pymes todavía dependen de hojas de Excel y recordatorios manuales para gestionar las cuentas por cobrar. Este enfoque no solo consume tiempo, también aumenta el riesgo de errores y afecta el flujo de caja. La buena noticia es que existen soluciones digitales pensadas para automatizar el proceso y mejorar la eficiencia. En este blog revisaremos qué software de cobranza puede ayudarte a salir del Excel, qué funciones debes buscar y cómo Sena se convierte en un aliado estratégico para crecer sin fricciones.",
-    date: "06 de marzo 2026",
-    tags: ["Blog", "Producto", "Servicio"],
+      'Muchas pymes todavía dependen de hojas de Excel y recordatorios manuales para gestionar las cuentas por cobrar. Este enfoque no solo consume tiempo, también aumenta el riesgo de errores y afecta el flujo de caja. La buena noticia es que existen soluciones digitales pensadas para automatizar el proceso y mejorar la eficiencia. En este blog revisaremos qué software de cobranza puede ayudarte a salir del Excel, qué funciones debes buscar y cómo Sena se convierte en un aliado estratégico para crecer sin fricciones.',
+    date: '06 de marzo 2026',
+    tags: ['Blog', 'Producto', 'Servicio'],
     image: AssetImageBlog.blog_23_main.src,
     content: [
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Muchas pymes todavía dependen de hojas de Excel y recordatorios manuales para gestionar las cuentas por cobrar. Este enfoque no solo consume tiempo, también aumenta el riesgo de errores y afecta el ",
+            type: 'text',
+            text: 'Muchas pymes todavía dependen de hojas de Excel y recordatorios manuales para gestionar las cuentas por cobrar. Este enfoque no solo consume tiempo, también aumenta el riesgo de errores y afecta el ',
           },
           {
-            type: "bold",
-            text: "flujo de caja",
+            type: 'bold',
+            text: 'flujo de caja',
           },
           {
-            type: "text",
-            text: ". La buena noticia es que existen soluciones digitales pensadas para automatizar el proceso y mejorar la eficiencia. En este blog revisaremos qué ",
+            type: 'text',
+            text: '. La buena noticia es que existen soluciones digitales pensadas para automatizar el proceso y mejorar la eficiencia. En este blog revisaremos qué ',
           },
           {
-            type: "bold",
-            text: "software de cobranza",
+            type: 'bold',
+            text: 'software de cobranza',
           },
           {
-            type: "text",
-            text: " puede ayudarte a salir del Excel, qué funciones debes buscar y cómo Sena se convierte en un aliado estratégico para crecer sin fricciones.",
+            type: 'text',
+            text: ' puede ayudarte a salir del Excel, qué funciones debes buscar y cómo Sena se convierte en un aliado estratégico para crecer sin fricciones.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "El problema de depender de Excel para la cobranza",
+            type: 'bold',
+            text: 'El problema de depender de Excel para la cobranza',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Excel ha sido durante años la herramienta favorita de muchas empresas para llevar un control financiero básico. Sin embargo, cuando una pyme empieza a manejar cientos de facturas mensuales, el sistema se queda corto.",
+            type: 'text',
+            text: 'Excel ha sido durante años la herramienta favorita de muchas empresas para llevar un control financiero básico. Sin embargo, cuando una pyme empieza a manejar cientos de facturas mensuales, el sistema se queda corto.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Los principales problemas son:",
+            type: 'text',
+            text: 'Los principales problemas son:',
           },
         ],
       },
       {
-        type: "list",
+        type: 'list',
         items: [
           [
             {
-              type: "bold",
-              text: "Falta de trazabilidad",
+              type: 'bold',
+              text: 'Falta de trazabilidad',
             },
             {
-              type: "text",
-              text: ": los recordatorios enviados por correo o WhatsApp no quedan registrados de forma ordenada.",
+              type: 'text',
+              text: ': los recordatorios enviados por correo o WhatsApp no quedan registrados de forma ordenada.',
             },
           ],
           [
             {
-              type: "bold",
-              text: "Errores manuales",
+              type: 'bold',
+              text: 'Errores manuales',
             },
             {
-              type: "text",
-              text: ": copiar y pegar datos del ERP a una planilla es propenso a equivocaciones.",
+              type: 'text',
+              text: ': copiar y pegar datos del ERP a una planilla es propenso a equivocaciones.',
             },
           ],
           [
             {
-              type: "bold",
-              text: "Pérdida de tiempo",
+              type: 'bold',
+              text: 'Pérdida de tiempo',
             },
             {
-              type: "text",
-              text: ": los equipos financieros gastan horas en tareas repetitivas.",
+              type: 'text',
+              text: ': los equipos financieros gastan horas en tareas repetitivas.',
             },
           ],
           [
             {
-              type: "bold",
-              text: "Impacto en liquidez",
+              type: 'bold',
+              text: 'Impacto en liquidez',
             },
             {
-              type: "text",
-              text: ": los atrasos aumentan y el ",
+              type: 'text',
+              text: ': los atrasos aumentan y el ',
             },
             {
-              type: "bold",
-              text: "DSO",
+              type: 'bold',
+              text: 'DSO',
             },
             {
-              type: "text",
-              text: " (días promedio de cobro) se eleva, poniendo presión en el flujo de caja.",
+              type: 'text',
+              text: ' (días promedio de cobro) se eleva, poniendo presión en el flujo de caja.',
             },
           ],
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "En este contexto, la digitalización de la cobranza deja de ser una opción para convertirse en una necesidad.",
+            type: 'text',
+            text: 'En este contexto, la digitalización de la cobranza deja de ser una opción para convertirse en una necesidad.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "¿Qué es un software de cobranza y cómo funciona?",
+            type: 'bold',
+            text: '¿Qué es un software de cobranza y cómo funciona?',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Un ",
+            type: 'text',
+            text: 'Un ',
           },
           {
-            type: "bold",
-            text: "software de cobranza",
+            type: 'bold',
+            text: 'software de cobranza',
           },
           {
-            type: "text",
-            text: " es una plataforma digital, generalmente en la nube (SaaS), que centraliza, automatiza y monitorea los procesos de recuperación de pagos.",
+            type: 'text',
+            text: ' es una plataforma digital, generalmente en la nube (SaaS), que centraliza, automatiza y monitorea los procesos de recuperación de pagos.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "A diferencia de las herramientas tradicionales, este tipo de sistemas ofrece:",
+            type: 'text',
+            text: 'A diferencia de las herramientas tradicionales, este tipo de sistemas ofrece:',
           },
         ],
       },
       {
-        type: "list",
+        type: 'list',
         items: [
           [
             {
-              type: "bold",
-              text: "Automatización inteligente",
+              type: 'bold',
+              text: 'Automatización inteligente',
             },
             {
-              type: "text",
-              text: ": recordatorios automáticos antes y después del vencimiento.",
+              type: 'text',
+              text: ': recordatorios automáticos antes y después del vencimiento.',
             },
           ],
           [
             {
-              type: "bold",
-              text: "Visibilidad total",
+              type: 'bold',
+              text: 'Visibilidad total',
             },
             {
-              type: "text",
-              text: ": dashboards con métricas en tiempo real.",
+              type: 'text',
+              text: ': dashboards con métricas en tiempo real.',
             },
           ],
           [
             {
-              type: "bold",
-              text: "Escalabilidad",
+              type: 'bold',
+              text: 'Escalabilidad',
             },
             {
-              type: "text",
-              text: ": permite manejar mayor volumen de facturas sin aumentar el equipo.",
+              type: 'text',
+              text: ': permite manejar mayor volumen de facturas sin aumentar el equipo.',
             },
           ],
           [
             {
-              type: "bold",
-              text: "Integración",
+              type: 'bold',
+              text: 'Integración',
             },
             {
-              type: "text",
-              text: ": conexión con ERP o CRM para sincronizar datos sin esfuerzo manual.",
+              type: 'text',
+              text: ': conexión con ERP o CRM para sincronizar datos sin esfuerzo manual.',
             },
           ],
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "En resumen, pasa de un proceso manual y reactivo a una gestión proactiva, ordenada y enfocada en resultados.",
+            type: 'text',
+            text: 'En resumen, pasa de un proceso manual y reactivo a una gestión proactiva, ordenada y enfocada en resultados.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "Funciones clave de un software de cobranza para pymes",
+            type: 'bold',
+            text: 'Funciones clave de un software de cobranza para pymes',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Cuando busques una solución para tu empresa, asegúrate de que incluya estas funcionalidades:",
+            type: 'text',
+            text: 'Cuando busques una solución para tu empresa, asegúrate de que incluya estas funcionalidades:',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "1. ",
+            type: 'text',
+            text: '1. ',
           },
           {
-            type: "bold",
-            text: "Automatización de recordatorios",
+            type: 'bold',
+            text: 'Automatización de recordatorios',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Correos, SMS o WhatsApp enviados según reglas de negocio, liberando al equipo de tareas repetitivas.",
+            type: 'text',
+            text: 'Correos, SMS o WhatsApp enviados según reglas de negocio, liberando al equipo de tareas repetitivas.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "2. ",
+            type: 'text',
+            text: '2. ',
           },
           {
-            type: "bold",
-            text: "Dashboards en tiempo real",
+            type: 'bold',
+            text: 'Dashboards en tiempo real',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Métricas como DSO, antigüedad de cartera y ",
+            type: 'text',
+            text: 'Métricas como DSO, antigüedad de cartera y ',
           },
           {
-            type: "bold",
-            text: "tasa de recuperación",
+            type: 'bold',
+            text: 'tasa de recuperación',
           },
           {
-            type: "text",
-            text: " disponibles al instante para tomar decisiones rápidas.",
+            type: 'text',
+            text: ' disponibles al instante para tomar decisiones rápidas.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "3. ",
+            type: 'text',
+            text: '3. ',
           },
           {
-            type: "bold",
-            text: "Segmentación de clientes morosos",
+            type: 'bold',
+            text: 'Segmentación de clientes morosos',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Clasificación automática por riesgo y monto, lo que permite priorizar la gestión en cuentas críticas.",
+            type: 'text',
+            text: 'Clasificación automática por riesgo y monto, lo que permite priorizar la gestión en cuentas críticas.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "4. ",
+            type: 'text',
+            text: '4. ',
           },
           {
-            type: "bold",
-            text: "Reportes y métricas exportables",
+            type: 'bold',
+            text: 'Reportes y métricas exportables',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Información lista para auditorías y presentaciones gerenciales.",
+            type: 'text',
+            text: 'Información lista para auditorías y presentaciones gerenciales.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "5. ",
+            type: 'text',
+            text: '5. ',
           },
           {
-            type: "bold",
-            text: "Historial de interacciones",
+            type: 'bold',
+            text: 'Historial de interacciones',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Registro de llamadas, correos y notas, aportando trazabilidad y respaldo ante disputas.",
+            type: 'text',
+            text: 'Registro de llamadas, correos y notas, aportando trazabilidad y respaldo ante disputas.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "Cómo elegir el software de cobranza adecuado",
+            type: 'bold',
+            text: 'Cómo elegir el software de cobranza adecuado',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "No todas las soluciones son iguales. Para una pyme que busca salir del Excel y digitalizarse, conviene evaluar los siguientes aspectos:",
+            type: 'text',
+            text: 'No todas las soluciones son iguales. Para una pyme que busca salir del Excel y digitalizarse, conviene evaluar los siguientes aspectos:',
           },
         ],
       },
       {
-        type: "list",
+        type: 'list',
         items: [
           [
             {
-              type: "bold",
-              text: "Escalabilidad",
+              type: 'bold',
+              text: 'Escalabilidad',
             },
             {
-              type: "text",
-              text: ": que pueda crecer al ritmo de tu negocio.",
-            },
-          ],
-          [
-            {
-              type: "bold",
-              text: "Integración sencilla",
-            },
-            {
-              type: "text",
-              text: ": conexión con sistemas existentes sin procesos complejos.",
+              type: 'text',
+              text: ': que pueda crecer al ritmo de tu negocio.',
             },
           ],
           [
             {
-              type: "bold",
-              text: "Facilidad de uso",
+              type: 'bold',
+              text: 'Integración sencilla',
             },
             {
-              type: "text",
-              text: ": una interfaz intuitiva para el equipo.",
-            },
-          ],
-          [
-            {
-              type: "bold",
-              text: "Soporte y seguridad",
-            },
-            {
-              type: "text",
-              text: ": respaldo ante dudas y cumplimiento de estándares de protección de datos.",
+              type: 'text',
+              text: ': conexión con sistemas existentes sin procesos complejos.',
             },
           ],
           [
             {
-              type: "bold",
-              text: "Relación costo-beneficio",
+              type: 'bold',
+              text: 'Facilidad de uso',
             },
             {
-              type: "text",
-              text: ": medir el ",
+              type: 'text',
+              text: ': una interfaz intuitiva para el equipo.',
+            },
+          ],
+          [
+            {
+              type: 'bold',
+              text: 'Soporte y seguridad',
             },
             {
-              type: "bold",
-              text: "ROI automatización cobranzas",
+              type: 'text',
+              text: ': respaldo ante dudas y cumplimiento de estándares de protección de datos.',
+            },
+          ],
+          [
+            {
+              type: 'bold',
+              text: 'Relación costo-beneficio',
             },
             {
-              type: "text",
-              text: " frente a contratar más personal o mantener procesos manuales.",
+              type: 'text',
+              text: ': medir el ',
+            },
+            {
+              type: 'bold',
+              text: 'ROI automatización cobranzas',
+            },
+            {
+              type: 'text',
+              text: ' frente a contratar más personal o mantener procesos manuales.',
             },
           ],
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "Caso Sena: automatización enfocada en resultados",
+            type: 'bold',
+            text: 'Caso Sena: automatización enfocada en resultados',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Sena no es solo un ",
+            type: 'text',
+            text: 'Sena no es solo un ',
           },
           {
-            type: "bold",
-            text: "software de cobranza",
+            type: 'bold',
+            text: 'software de cobranza',
           },
           {
-            type: "text",
-            text: ", es una plataforma SaaS que combina automatización tecnológica con ejecución profesional.",
+            type: 'text',
+            text: ', es una plataforma SaaS que combina automatización tecnológica con ejecución profesional.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Lo que lo hace destacar frente a otras opciones:",
+            type: 'text',
+            text: 'Lo que lo hace destacar frente a otras opciones:',
           },
         ],
       },
       {
-        type: "list",
+        type: 'list',
         items: [
           [
             {
-              type: "bold",
-              text: "Reducción comprobada del DSO",
+              type: 'bold',
+              text: 'Reducción comprobada del DSO',
             },
             {
-              type: "text",
-              text: " en hasta 33%.",
-            },
-          ],
-          [
-            {
-              type: "bold",
-              text: "Ahorro de tiempo operativo",
-            },
-            {
-              type: "text",
-              text: " gracias a flujos automáticos.",
+              type: 'text',
+              text: ' en hasta 33%.',
             },
           ],
           [
             {
-              type: "bold",
-              text: "Dashboards con KPIs clave",
+              type: 'bold',
+              text: 'Ahorro de tiempo operativo',
             },
             {
-              type: "text",
-              text: ": aging de cartera, top morosos, flujo de caja proyectado.",
-            },
-          ],
-          [
-            {
-              type: "bold",
-              text: "Bitácora completa de gestiones",
-            },
-            {
-              type: "text",
-              text: " con trazabilidad para auditorías.",
+              type: 'text',
+              text: ' gracias a flujos automáticos.',
             },
           ],
           [
             {
-              type: "bold",
-              text: "Estrategias inteligentes de cobranza",
+              type: 'bold',
+              text: 'Dashboards con KPIs clave',
             },
             {
-              type: "text",
-              text: " configuradas según el perfil de cada cliente.",
+              type: 'text',
+              text: ': aging de cartera, top morosos, flujo de caja proyectado.',
+            },
+          ],
+          [
+            {
+              type: 'bold',
+              text: 'Bitácora completa de gestiones',
+            },
+            {
+              type: 'text',
+              text: ' con trazabilidad para auditorías.',
+            },
+          ],
+          [
+            {
+              type: 'bold',
+              text: 'Estrategias inteligentes de cobranza',
+            },
+            {
+              type: 'text',
+              text: ' configuradas según el perfil de cada cliente.',
             },
           ],
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "El resultado: menos morosidad, más liquidez y una gestión de cobranzas ordenada y profesional.",
+            type: 'text',
+            text: 'El resultado: menos morosidad, más liquidez y una gestión de cobranzas ordenada y profesional.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Depender de Excel para manejar las cuentas por cobrar es insostenible cuando una pyme busca crecer. Un ",
+            type: 'text',
+            text: 'Depender de Excel para manejar las cuentas por cobrar es insostenible cuando una pyme busca crecer. Un ',
           },
           {
-            type: "bold",
-            text: "software de cobranza",
+            type: 'bold',
+            text: 'software de cobranza',
           },
           {
-            type: "text",
-            text: " ofrece automatización, visibilidad y control en tiempo real, liberando al equipo financiero de tareas manuales y garantizando liquidez.",
+            type: 'text',
+            text: ' ofrece automatización, visibilidad y control en tiempo real, liberando al equipo financiero de tareas manuales y garantizando liquidez.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Sena, además, convierte los datos en decisiones estratégicas al vigilar indicadores como DSO, tasa de recuperación y eficiencia operativa.",
+            type: 'text',
+            text: 'Sena, además, convierte los datos en decisiones estratégicas al vigilar indicadores como DSO, tasa de recuperación y eficiencia operativa.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "¿Quieres salir del Excel y automatizar tu cobranza de manera profesional? ",
+            type: 'text',
+            text: '¿Quieres salir del Excel y automatizar tu cobranza de manera profesional? ',
           },
           {
-            type: "link",
-            text: "Conoce Sena y transforma tu gestión financiera",
-            href: "https://meetings.hubspot.com/francisco502",
+            type: 'link',
+            text: 'Conoce Sena y transforma tu gestión financiera',
+            href: 'https://meetings.hubspot.com/francisco502',
           },
           {
-            type: "text",
-            text: ".",
+            type: 'text',
+            text: '.',
           },
         ],
       },
@@ -3276,263 +3265,262 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: 24,
-    slug: "descubre-los-kpis-de-cobranza-mas-importantes-para-medir-la-efectividad-de-tu-gestion-y-mejorar-la-toma-de-decisiones",
-    title:
-      "¿Qué KPIs de cobranza debo revisar para saber si mi cobranza está funcionando?",
+    slug: 'descubre-los-kpis-de-cobranza-mas-importantes-para-medir-la-efectividad-de-tu-gestion-y-mejorar-la-toma-de-decisiones',
+    title: '¿Qué KPIs de cobranza debo revisar para saber si mi cobranza está funcionando?',
     intro:
-      "Medir la efectividad de la cobranza no significa únicamente revisar cuánto dinero ingresa a caja. Para un CFO o controller, lo que realmente importa es analizar los KPIs de cobranza, es decir, los indicadores que muestran la eficiencia del proceso, anticipan riesgos y permiten justificar decisiones estratégicas ante la gerencia.",
-    date: "10 de marzo 2026",
-    tags: ["Blog", "Visión Financiera", "Educación Financiera"],
+      'Medir la efectividad de la cobranza no significa únicamente revisar cuánto dinero ingresa a caja. Para un CFO o controller, lo que realmente importa es analizar los KPIs de cobranza, es decir, los indicadores que muestran la eficiencia del proceso, anticipan riesgos y permiten justificar decisiones estratégicas ante la gerencia.',
+    date: '10 de marzo 2026',
+    tags: ['Blog', 'Visión Financiera', 'Educación Financiera'],
     image: AssetImageBlog.blog_24_main.src,
     content: [
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Medir la efectividad de la cobranza no significa únicamente revisar cuánto dinero ingresa a caja. Para un CFO o controller, lo que realmente importa es analizar los KPIs de cobranza, es decir, los indicadores que muestran la eficiencia del proceso, anticipan riesgos y permiten justificar decisiones estratégicas ante la gerencia.",
+            type: 'text',
+            text: 'Medir la efectividad de la cobranza no significa únicamente revisar cuánto dinero ingresa a caja. Para un CFO o controller, lo que realmente importa es analizar los KPIs de cobranza, es decir, los indicadores que muestran la eficiencia del proceso, anticipan riesgos y permiten justificar decisiones estratégicas ante la gerencia.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "La importancia de los KPIs en la gestión de cobranza",
+            type: 'bold',
+            text: 'La importancia de los KPIs en la gestión de cobranza',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Una empresa puede emitir cientos de facturas, pero si estas no se convierten en liquidez oportuna, su operación corre riesgos. Los indicadores de cobranza ofrecen una radiografía clara de cómo se comporta la cartera, identificando patrones de pago, clientes morosos y posibles fugas de liquidez.",
+            type: 'text',
+            text: 'Una empresa puede emitir cientos de facturas, pero si estas no se convierten en liquidez oportuna, su operación corre riesgos. Los indicadores de cobranza ofrecen una radiografía clara de cómo se comporta la cartera, identificando patrones de pago, clientes morosos y posibles fugas de liquidez.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Medir KPIs no solo ayuda a saber si la estrategia de cobranza está funcionando, sino también a tomar decisiones de mejora: ajustar plazos, renegociar con clientes o reforzar políticas de crédito. En pocas palabras, los KPIs de cobranza conectan la gestión operativa con la salud financiera de la empresa.",
+            type: 'text',
+            text: 'Medir KPIs no solo ayuda a saber si la estrategia de cobranza está funcionando, sino también a tomar decisiones de mejora: ajustar plazos, renegociar con clientes o reforzar políticas de crédito. En pocas palabras, los KPIs de cobranza conectan la gestión operativa con la salud financiera de la empresa.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "Principales KPIs de cobranza que debes monitorear",
+            type: 'bold',
+            text: 'Principales KPIs de cobranza que debes monitorear',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "1. DSO (Days Sales Outstanding)",
+            type: 'bold',
+            text: '1. DSO (Days Sales Outstanding)',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "El DSO mide los días promedio que tarda la empresa en recuperar el dinero de sus ventas a crédito. Un DSO alto puede señalar problemas de flujo de caja o clientes que pagan tarde. Reducirlo es clave para mantener liquidez y operar sin depender de préstamos.",
+            type: 'text',
+            text: 'El DSO mide los días promedio que tarda la empresa en recuperar el dinero de sus ventas a crédito. Un DSO alto puede señalar problemas de flujo de caja o clientes que pagan tarde. Reducirlo es clave para mantener liquidez y operar sin depender de préstamos.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "2. Aging de cartera",
+            type: 'bold',
+            text: '2. Aging de cartera',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Este indicador clasifica las cuentas por cobrar según su antigüedad: 30, 60, 90 días o más. El aging permite priorizar esfuerzos sobre las facturas más críticas y visualizar qué parte de la cartera corre mayor riesgo de incobrabilidad.",
+            type: 'text',
+            text: 'Este indicador clasifica las cuentas por cobrar según su antigüedad: 30, 60, 90 días o más. El aging permite priorizar esfuerzos sobre las facturas más críticas y visualizar qué parte de la cartera corre mayor riesgo de incobrabilidad.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "3. Tasa de recuperación",
+            type: 'bold',
+            text: '3. Tasa de recuperación',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Mide el porcentaje de facturas efectivamente cobradas sobre el total emitido. Una tasa baja revela ineficiencia en la cobranza y alerta sobre posibles pérdidas.",
+            type: 'text',
+            text: 'Mide el porcentaje de facturas efectivamente cobradas sobre el total emitido. Una tasa baja revela ineficiencia en la cobranza y alerta sobre posibles pérdidas.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "4. Promedio de días de mora",
+            type: 'bold',
+            text: '4. Promedio de días de mora',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Indica cuántos días adicionales, después de la fecha de vencimiento, tardan los clientes en pagar. Este KPI permite evaluar el comportamiento real de pago y sirve para diseñar recordatorios más efectivos.",
+            type: 'text',
+            text: 'Indica cuántos días adicionales, después de la fecha de vencimiento, tardan los clientes en pagar. Este KPI permite evaluar el comportamiento real de pago y sirve para diseñar recordatorios más efectivos.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "5. Eficiencia operativa en cobranza",
+            type: 'bold',
+            text: '5. Eficiencia operativa en cobranza',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "No basta con cobrar; importa cuánto cuesta hacerlo. Este KPI compara los recursos invertidos en cobranza (tiempo y personal) contra los montos recuperados. Un proceso eficiente debería minimizar costos y maximizar liquidez.",
+            type: 'text',
+            text: 'No basta con cobrar; importa cuánto cuesta hacerlo. Este KPI compara los recursos invertidos en cobranza (tiempo y personal) contra los montos recuperados. Un proceso eficiente debería minimizar costos y maximizar liquidez.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "Cómo interpretar los indicadores de cobranza",
+            type: 'bold',
+            text: 'Cómo interpretar los indicadores de cobranza',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Los números por sí solos no cuentan toda la historia. Un DSO de 40 días puede ser excelente para una empresa industrial, pero preocupante para un negocio de servicios con plazos más cortos. Del mismo modo, un aging de cartera concentrado en deudas mayores a 90 días es una señal crítica de ineficiencia.",
+            type: 'text',
+            text: 'Los números por sí solos no cuentan toda la historia. Un DSO de 40 días puede ser excelente para una empresa industrial, pero preocupante para un negocio de servicios con plazos más cortos. Del mismo modo, un aging de cartera concentrado en deudas mayores a 90 días es una señal crítica de ineficiencia.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "La clave es comparar los KPIs financieros de tu empresa con:",
+            type: 'text',
+            text: 'La clave es comparar los KPIs financieros de tu empresa con:',
           },
         ],
       },
       {
-        type: "list",
+        type: 'list',
         items: [
-          "Promedios del sector.",
-          "Tu propio historial de cobranza.",
-          "Las metas fijadas en tus políticas de crédito.",
+          'Promedios del sector.',
+          'Tu propio historial de cobranza.',
+          'Las metas fijadas en tus políticas de crédito.',
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Así podrás identificar si tu gestión de cuentas por cobrar va en la dirección correcta o si necesita ajustes inmediatos.",
+            type: 'text',
+            text: 'Así podrás identificar si tu gestión de cuentas por cobrar va en la dirección correcta o si necesita ajustes inmediatos.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "Herramientas para medir KPIs en tiempo real",
+            type: 'bold',
+            text: 'Herramientas para medir KPIs en tiempo real',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "El reto de muchos CFOs es que sus métricas de cobranza se calculan de manera manual en Excel, lo que genera retrasos y errores. Aquí es donde la tecnología cambia el juego.",
+            type: 'text',
+            text: 'El reto de muchos CFOs es que sus métricas de cobranza se calculan de manera manual en Excel, lo que genera retrasos y errores. Aquí es donde la tecnología cambia el juego.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Con plataformas como Sena puedes:",
+            type: 'text',
+            text: 'Con plataformas como Sena puedes:',
           },
         ],
       },
       {
-        type: "list",
+        type: 'list',
         items: [
-          "Acceder a dashboards en tiempo real con métricas como DSO, aging y tasa de recuperación.",
-          "Centralizar todas las cuentas por cobrar en un solo sistema.",
-          "Automatizar reportes y presentarlos fácilmente a la gerencia.",
-          "Identificar tendencias antes de que se conviertan en problemas graves de liquidez.",
+          'Acceder a dashboards en tiempo real con métricas como DSO, aging y tasa de recuperación.',
+          'Centralizar todas las cuentas por cobrar en un solo sistema.',
+          'Automatizar reportes y presentarlos fácilmente a la gerencia.',
+          'Identificar tendencias antes de que se conviertan en problemas graves de liquidez.',
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Gracias a estas herramientas, los indicadores de cobranza dejan de ser estáticos y se convierten en información accionable.",
-          },
-        ],
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "text",
-            text: "Los KPIs de cobranza son mucho más que simples métricas: son la brújula que muestra si la empresa está convirtiendo ventas en liquidez real. Analizar el DSO, el aging de cartera, la tasa de recuperación y otros indicadores permite anticipar riesgos, optimizar procesos y justificar decisiones financieras.",
+            type: 'text',
+            text: 'Gracias a estas herramientas, los indicadores de cobranza dejan de ser estáticos y se convierten en información accionable.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "¿Quieres medir tus KPIs de cobranza en tiempo real y reducir la incertidumbre en tus finanzas? ",
+            type: 'text',
+            text: 'Los KPIs de cobranza son mucho más que simples métricas: son la brújula que muestra si la empresa está convirtiendo ventas en liquidez real. Analizar el DSO, el aging de cartera, la tasa de recuperación y otros indicadores permite anticipar riesgos, optimizar procesos y justificar decisiones financieras.',
+          },
+        ],
+      },
+      {
+        type: 'paragraph',
+        fragments: [
+          {
+            type: 'text',
+            text: '¿Quieres medir tus KPIs de cobranza en tiempo real y reducir la incertidumbre en tus finanzas? ',
           },
           {
-            type: "link",
-            text: "Descubre cómo Sena puede ayudarte a transformar tu gestión",
-            href: "https://meetings.hubspot.com/francisco502",
+            type: 'link',
+            text: 'Descubre cómo Sena puede ayudarte a transformar tu gestión',
+            href: 'https://meetings.hubspot.com/francisco502',
           },
           {
-            type: "text",
-            text: ".",
+            type: 'text',
+            text: '.',
           },
         ],
       },
@@ -3540,237 +3528,237 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: 25,
-    slug: "descubre-como-sena-mide-el-exito-de-sus-automatizaciones-con-KPIs-de-cobranza-clave-para-optimizar-liquidez-y-eficiencia",
+    slug: 'descubre-como-sena-mide-el-exito-de-sus-automatizaciones-con-KPIs-de-cobranza-clave-para-optimizar-liquidez-y-eficiencia',
     title:
-      "¿Cómo mide Sena el éxito de sus automatizaciones? ¿Qué KPIs de automatización de cobranza vigilan?",
+      '¿Cómo mide Sena el éxito de sus automatizaciones? ¿Qué KPIs de automatización de cobranza vigilan?',
     intro:
-      "Automatizar la cobranza no basta: lo que marca la diferencia es saber qué KPIs automatización cobranza se están cumpliendo. En Sena, el éxito se mide con indicadores concretos que muestran si la empresa cobra más rápido, mejora su flujo de caja y reduce la carga manual del equipo.",
-    date: "13 de marzo 2026",
-    tags: ["Blog", "Visión Financiera", "Educación Financiera"],
+      'Automatizar la cobranza no basta: lo que marca la diferencia es saber qué KPIs automatización cobranza se están cumpliendo. En Sena, el éxito se mide con indicadores concretos que muestran si la empresa cobra más rápido, mejora su flujo de caja y reduce la carga manual del equipo.',
+    date: '13 de marzo 2026',
+    tags: ['Blog', 'Visión Financiera', 'Educación Financiera'],
     image: AssetImageBlog.blog_25_main.src,
     content: [
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Automatizar la cobranza no basta: lo que marca la diferencia es saber qué KPIs automatización cobranza se están cumpliendo. En Sena, el éxito se mide con indicadores concretos que muestran si la empresa cobra más rápido, mejora su flujo de caja y reduce la carga manual del equipo.",
+            type: 'text',
+            text: 'Automatizar la cobranza no basta: lo que marca la diferencia es saber qué KPIs automatización cobranza se están cumpliendo. En Sena, el éxito se mide con indicadores concretos que muestran si la empresa cobra más rápido, mejora su flujo de caja y reduce la carga manual del equipo.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "Medir el éxito de la automatización: la filosofía Sena",
+            type: 'bold',
+            text: 'Medir el éxito de la automatización: la filosofía Sena',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Muchas pymes creen que automatizar es sinónimo de éxito. Pero, sin indicadores de cobranza, no hay forma de saber si las acciones digitales están generando resultados reales.",
+            type: 'text',
+            text: 'Muchas pymes creen que automatizar es sinónimo de éxito. Pero, sin indicadores de cobranza, no hay forma de saber si las acciones digitales están generando resultados reales.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Sena conecta cada flujo automatizado con métricas de cuentas por cobrar visibles en tiempo real. Así, el éxito no se mide por la cantidad de correos enviados, sino por cómo mejoran el DSO, el aging de cartera y la tasa de recuperación.",
+            type: 'text',
+            text: 'Sena conecta cada flujo automatizado con métricas de cuentas por cobrar visibles en tiempo real. Así, el éxito no se mide por la cantidad de correos enviados, sino por cómo mejoran el DSO, el aging de cartera y la tasa de recuperación.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "KPIs automatización cobranza que Sena vigila",
+            type: 'bold',
+            text: 'KPIs automatización cobranza que Sena vigila',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "1. DSO (Days Sales Outstanding)",
+            type: 'bold',
+            text: '1. DSO (Days Sales Outstanding)',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Este indicador muestra cuántos días tarda en promedio una empresa en recuperar el dinero de sus ventas a crédito. Una reducción del DSO confirma que la automatización acelera la cobranza y libera liquidez.",
+            type: 'text',
+            text: 'Este indicador muestra cuántos días tarda en promedio una empresa en recuperar el dinero de sus ventas a crédito. Una reducción del DSO confirma que la automatización acelera la cobranza y libera liquidez.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "2. Aging de cartera",
+            type: 'bold',
+            text: '2. Aging de cartera',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Sena clasifica de forma automática las facturas según su antigüedad. Este KPI revela la proporción de facturas en 30, 60 o 90 días de mora y permite enfocar la gestión en clientes críticos.",
+            type: 'text',
+            text: 'Sena clasifica de forma automática las facturas según su antigüedad. Este KPI revela la proporción de facturas en 30, 60 o 90 días de mora y permite enfocar la gestión en clientes críticos.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "3. Tasa de recuperación",
+            type: 'bold',
+            text: '3. Tasa de recuperación',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Más allá de la automatización, lo importante es cuántas facturas realmente se cobran. Este KPI muestra si las campañas digitales logran convertir deuda en liquidez efectiva.",
+            type: 'text',
+            text: 'Más allá de la automatización, lo importante es cuántas facturas realmente se cobran. Este KPI muestra si las campañas digitales logran convertir deuda en liquidez efectiva.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "4. Flujo de caja proyectado",
+            type: 'bold',
+            text: '4. Flujo de caja proyectado',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "La plataforma integra información de ERP y cuentas por cobrar para proyectar la liquidez disponible. Con esta visión, un CFO puede anticipar necesidades de financiamiento y planificar con datos.",
+            type: 'text',
+            text: 'La plataforma integra información de ERP y cuentas por cobrar para proyectar la liquidez disponible. Con esta visión, un CFO puede anticipar necesidades de financiamiento y planificar con datos.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "5. Eficiencia operativa",
+            type: 'bold',
+            text: '5. Eficiencia operativa',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Sena mide el impacto de las automatizaciones en el tiempo y esfuerzo del equipo. Menos horas en tareas manuales significa más capacidad para trabajar en estrategias financieras de valor.",
+            type: 'text',
+            text: 'Sena mide el impacto de las automatizaciones en el tiempo y esfuerzo del equipo. Menos horas en tareas manuales significa más capacidad para trabajar en estrategias financieras de valor.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "Cómo Sena conecta automatización y KPIs",
+            type: 'bold',
+            text: 'Cómo Sena conecta automatización y KPIs',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Cada flujo programado --recordatorios por email, avisos vía WhatsApp o segmentaciones-- queda vinculado a los KPIs automatización cobranza. Si los pagos llegan más rápido, baja el DSO; si se reducen las facturas de más de 90 días, mejora el aging de cartera; si aumentan los montos recuperados, sube la tasa de recuperación.",
+            type: 'text',
+            text: 'Cada flujo programado --recordatorios por email, avisos vía WhatsApp o segmentaciones-- queda vinculado a los KPIs automatización cobranza. Si los pagos llegan más rápido, baja el DSO; si se reducen las facturas de más de 90 días, mejora el aging de cartera; si aumentan los montos recuperados, sube la tasa de recuperación.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "El resultado es simple: la automatización deja de ser una promesa abstracta y se convierte en datos claros y auditables.",
+            type: 'text',
+            text: 'El resultado es simple: la automatización deja de ser una promesa abstracta y se convierte en datos claros y auditables.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "Valor para CFOs y controllers",
+            type: 'bold',
+            text: 'Valor para CFOs y controllers',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Los gerentes financieros necesitan más que percepciones: requieren reportes confiables para tomar decisiones. Con Sena pueden:",
+            type: 'text',
+            text: 'Los gerentes financieros necesitan más que percepciones: requieren reportes confiables para tomar decisiones. Con Sena pueden:',
           },
         ],
       },
       {
-        type: "list",
+        type: 'list',
         items: [
-          "Monitorear en tiempo real los indicadores de cobranza.",
-          "Exportar reportes automáticos para auditorías.",
-          "Analizar tendencias del flujo de caja.",
-          "Demostrar mejoras en eficiencia operativa gracias a la automatización.",
+          'Monitorear en tiempo real los indicadores de cobranza.',
+          'Exportar reportes automáticos para auditorías.',
+          'Analizar tendencias del flujo de caja.',
+          'Demostrar mejoras en eficiencia operativa gracias a la automatización.',
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Esto convierte a los KPIs automatización cobranza en aliados estratégicos para justificar decisiones y mostrar resultados medibles a la gerencia.",
-          },
-        ],
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "text",
-            text: "Automatizar la cobranza solo tiene valor cuando se traduce en mejores indicadores financieros. Sena mide el éxito de sus flujos con KPIs claros: DSO, aging de cartera, tasa de recuperación, flujo de caja proyectado y eficiencia operativa.",
+            type: 'text',
+            text: 'Esto convierte a los KPIs automatización cobranza en aliados estratégicos para justificar decisiones y mostrar resultados medibles a la gerencia.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "¿Quieres medir tus resultados con datos y no con suposiciones? ",
+            type: 'text',
+            text: 'Automatizar la cobranza solo tiene valor cuando se traduce en mejores indicadores financieros. Sena mide el éxito de sus flujos con KPIs claros: DSO, aging de cartera, tasa de recuperación, flujo de caja proyectado y eficiencia operativa.',
+          },
+        ],
+      },
+      {
+        type: 'paragraph',
+        fragments: [
+          {
+            type: 'text',
+            text: '¿Quieres medir tus resultados con datos y no con suposiciones? ',
           },
           {
-            type: "link",
-            text: "Descubre cómo Sena transforma la cobranza con KPIs en tiempo real",
-            href: "https://meetings.hubspot.com/francisco502",
+            type: 'link',
+            text: 'Descubre cómo Sena transforma la cobranza con KPIs en tiempo real',
+            href: 'https://meetings.hubspot.com/francisco502',
           },
           {
-            type: "text",
-            text: ".",
+            type: 'text',
+            text: '.',
           },
         ],
       },
@@ -3778,539 +3766,539 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: 26,
-    slug: "aprende-que-es-dso-como-calcularlo-y-estrategias-para-reducirlo-y-fortalecer-las-finanzas-de-tu-empresa",
-    title: "¿Qué es DSO y cómo puedo reducirlo en mi empresa?",
+    slug: 'aprende-que-es-dso-como-calcularlo-y-estrategias-para-reducirlo-y-fortalecer-las-finanzas-de-tu-empresa',
+    title: '¿Qué es DSO y cómo puedo reducirlo en mi empresa?',
     intro:
-      "El DSO es una de las métricas financieras más influyentes para la salud de cualquier empresa, especialmente en pymes que dependen de un flujo de caja estable para crecer. Si no lo mides, puedes estar perdiendo liquidez sin darte cuenta. En este blog conocerás qué es, cómo calcularlo y las mejores estrategias para reducirlo de forma práctica.",
-    date: "17 de marzo 2026",
-    tags: ["Blog", "Cobranza"],
+      'El DSO es una de las métricas financieras más influyentes para la salud de cualquier empresa, especialmente en pymes que dependen de un flujo de caja estable para crecer. Si no lo mides, puedes estar perdiendo liquidez sin darte cuenta. En este blog conocerás qué es, cómo calcularlo y las mejores estrategias para reducirlo de forma práctica.',
+    date: '17 de marzo 2026',
+    tags: ['Blog', 'Cobranza'],
     image: AssetImageBlog.blog_26_main.src,
     content: [
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "El ",
+            type: 'text',
+            text: 'El ',
           },
           {
-            type: "bold",
-            text: "DSO",
+            type: 'bold',
+            text: 'DSO',
           },
           {
-            type: "text",
-            text: " es una de las métricas financieras más influyentes para la salud de cualquier empresa, especialmente en pymes que dependen de un flujo de caja estable para crecer. Si no lo mides, puedes estar perdiendo liquidez sin darte cuenta. En este blog conocerás qué es, cómo calcularlo y las mejores estrategias para reducirlo de forma práctica.",
+            type: 'text',
+            text: ' es una de las métricas financieras más influyentes para la salud de cualquier empresa, especialmente en pymes que dependen de un flujo de caja estable para crecer. Si no lo mides, puedes estar perdiendo liquidez sin darte cuenta. En este blog conocerás qué es, cómo calcularlo y las mejores estrategias para reducirlo de forma práctica.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "¿Qué es DSO y por qué es tan importante?",
+            type: 'bold',
+            text: '¿Qué es DSO y por qué es tan importante?',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "El DSO, también conocido como Days Sales Outstanding o Días de Venta Pendientes de Cobro, mide el promedio de días que tarda una empresa en recuperar el dinero de sus ventas a crédito.",
+            type: 'text',
+            text: 'El DSO, también conocido como Days Sales Outstanding o Días de Venta Pendientes de Cobro, mide el promedio de días que tarda una empresa en recuperar el dinero de sus ventas a crédito.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "En términos simples, refleja ",
+            type: 'text',
+            text: 'En términos simples, refleja ',
           },
           {
-            type: "bold",
-            text: "cuánto tiempo pasa desde que emites una factura hasta que recibes el pago",
+            type: 'bold',
+            text: 'cuánto tiempo pasa desde que emites una factura hasta que recibes el pago',
           },
           {
-            type: "text",
-            text: ". Mientras más alto sea este número, más tardan tus clientes en pagar y más presión existe sobre tu liquidez.",
+            type: 'text',
+            text: '. Mientras más alto sea este número, más tardan tus clientes en pagar y más presión existe sobre tu liquidez.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Para las pymes, donde cada sol o peso cuenta, un DSO elevado puede significar problemas para cubrir sueldos, pagar proveedores o invertir en crecimiento. Por eso, los CFOs y responsables financieros lo consideran un ",
+            type: 'text',
+            text: 'Para las pymes, donde cada sol o peso cuenta, un DSO elevado puede significar problemas para cubrir sueldos, pagar proveedores o invertir en crecimiento. Por eso, los CFOs y responsables financieros lo consideran un ',
           },
           {
-            type: "bold",
-            text: "KPI clave",
+            type: 'bold',
+            text: 'KPI clave',
           },
           {
-            type: "text",
-            text: " para evaluar la eficiencia en la gestión de cuentas por cobrar.",
+            type: 'text',
+            text: ' para evaluar la eficiencia en la gestión de cuentas por cobrar.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "Cómo calcular el DSO en tu empresa",
+            type: 'bold',
+            text: 'Cómo calcular el DSO en tu empresa',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "El cálculo del DSO no es complejo. La fórmula más usada es:",
+            type: 'text',
+            text: 'El cálculo del DSO no es complejo. La fórmula más usada es:',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "DSO = (Cuentas por cobrar / Ventas a crédito) x Número de días",
+            type: 'bold',
+            text: 'DSO = (Cuentas por cobrar / Ventas a crédito) x Número de días',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Ejemplo:",
+            type: 'text',
+            text: 'Ejemplo:',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Imagina que tu pyme tiene ",
+            type: 'text',
+            text: 'Imagina que tu pyme tiene ',
           },
           {
-            type: "bold",
-            text: "$150,000 en cuentas por cobrar",
+            type: 'bold',
+            text: '$150,000 en cuentas por cobrar',
           },
           {
-            type: "text",
-            text: " y unas ",
+            type: 'text',
+            text: ' y unas ',
           },
           {
-            type: "bold",
-            text: "ventas a crédito de $450,000 en un trimestre (90 días)",
+            type: 'bold',
+            text: 'ventas a crédito de $450,000 en un trimestre (90 días)',
           },
           {
-            type: "text",
-            text: ".",
+            type: 'text',
+            text: '.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "El cálculo sería:",
+            type: 'text',
+            text: 'El cálculo sería:',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "DSO = (150,000 / 450,000) x 90",
+            type: 'text',
+            text: 'DSO = (150,000 / 450,000) x 90',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "DSO = 0.33 x 90 = ",
+            type: 'text',
+            text: 'DSO = 0.33 x 90 = ',
           },
           {
-            type: "bold",
-            text: "30 días",
+            type: 'bold',
+            text: '30 días',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Esto significa que, en promedio, tardas un mes en recuperar el dinero de tus facturas.",
+            type: 'text',
+            text: 'Esto significa que, en promedio, tardas un mes en recuperar el dinero de tus facturas.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Un DSO bajo indica que tu proceso de cobranza es eficiente. En cambio, un DSO alto puede encender alarmas sobre atrasos en los pagos o una gestión desordenada.",
+            type: 'text',
+            text: 'Un DSO bajo indica que tu proceso de cobranza es eficiente. En cambio, un DSO alto puede encender alarmas sobre atrasos en los pagos o una gestión desordenada.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "¿Por qué un DSO alto es un problema para las finanzas?",
+            type: 'bold',
+            text: '¿Por qué un DSO alto es un problema para las finanzas?',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Un DSO elevado no solo refleja clientes que pagan tarde, también genera un efecto dominó en la salud financiera:",
+            type: 'text',
+            text: 'Un DSO elevado no solo refleja clientes que pagan tarde, también genera un efecto dominó en la salud financiera:',
           },
         ],
       },
       {
-        type: "list",
+        type: 'list',
         items: [
           [
             {
-              type: "bold",
-              text: "Falta de liquidez inmediata",
+              type: 'bold',
+              text: 'Falta de liquidez inmediata',
             },
             {
-              type: "text",
-              text: ": tus recursos están atrapados en cuentas por cobrar.",
+              type: 'text',
+              text: ': tus recursos están atrapados en cuentas por cobrar.',
             },
           ],
           [
             {
-              type: "bold",
-              text: "Mayor dependencia del crédito externo",
+              type: 'bold',
+              text: 'Mayor dependencia del crédito externo',
             },
             {
-              type: "text",
-              text: ": necesitas préstamos o líneas de crédito para cubrir gastos.",
+              type: 'text',
+              text: ': necesitas préstamos o líneas de crédito para cubrir gastos.',
             },
           ],
           [
             {
-              type: "bold",
-              text: "Menor capacidad de inversión",
+              type: 'bold',
+              text: 'Menor capacidad de inversión',
             },
             {
-              type: "text",
-              text: ": sin flujo de caja, es difícil reinvertir en expansión o innovación.",
+              type: 'text',
+              text: ': sin flujo de caja, es difícil reinvertir en expansión o innovación.',
             },
           ],
           [
             {
-              type: "bold",
-              text: "Relaciones tensas con proveedores",
+              type: 'bold',
+              text: 'Relaciones tensas con proveedores',
             },
             {
-              type: "text",
-              text: ": si no puedes pagarles a tiempo, tu reputación empresarial puede verse afectada.",
+              type: 'text',
+              text: ': si no puedes pagarles a tiempo, tu reputación empresarial puede verse afectada.',
             },
           ],
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "En resumen, un DSO alto es una señal de que tu empresa financia a sus clientes más de lo que debería, poniendo en riesgo su estabilidad.",
+            type: 'text',
+            text: 'En resumen, un DSO alto es una señal de que tu empresa financia a sus clientes más de lo que debería, poniendo en riesgo su estabilidad.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "Estrategias efectivas para reducir el DSO",
+            type: 'bold',
+            text: 'Estrategias efectivas para reducir el DSO',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "1. Automatiza recordatorios de pago",
+            type: 'bold',
+            text: '1. Automatiza recordatorios de pago',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Enviar correos o mensajes manuales suele ser ineficiente. Al automatizar recordatorios previos y posteriores al vencimiento, tus clientes reciben avisos oportunos sin que tu equipo pierda tiempo.",
+            type: 'text',
+            text: 'Enviar correos o mensajes manuales suele ser ineficiente. Al automatizar recordatorios previos y posteriores al vencimiento, tus clientes reciben avisos oportunos sin que tu equipo pierda tiempo.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "2. Implementa políticas de crédito claras",
+            type: 'bold',
+            text: '2. Implementa políticas de crédito claras',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "No todos los clientes deberían recibir los mismos plazos de pago. Define políticas diferenciadas según historial, tamaño de cliente y riesgo. Esto previene retrasos y reduce la exposición a morosidad.",
+            type: 'text',
+            text: 'No todos los clientes deberían recibir los mismos plazos de pago. Define políticas diferenciadas según historial, tamaño de cliente y riesgo. Esto previene retrasos y reduce la exposición a morosidad.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "3. Ofrece incentivos por pronto pago",
+            type: 'bold',
+            text: '3. Ofrece incentivos por pronto pago',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Un pequeño descuento o beneficio adicional puede motivar a tus clientes a pagar antes. Aunque pierdas un margen mínimo, ganas liquidez y estabilidad.",
+            type: 'text',
+            text: 'Un pequeño descuento o beneficio adicional puede motivar a tus clientes a pagar antes. Aunque pierdas un margen mínimo, ganas liquidez y estabilidad.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "4. Segmenta a tus clientes",
+            type: 'bold',
+            text: '4. Segmenta a tus clientes',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "No todos los clientes son iguales. Prioriza la gestión sobre quienes acumulan más deuda o tienen mayor riesgo de atraso. Una segmentación inteligente ayuda a concentrar esfuerzos en donde más importa.",
+            type: 'text',
+            text: 'No todos los clientes son iguales. Prioriza la gestión sobre quienes acumulan más deuda o tienen mayor riesgo de atraso. Una segmentación inteligente ayuda a concentrar esfuerzos en donde más importa.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "5. Centraliza la información de cobranzas",
+            type: 'bold',
+            text: '5. Centraliza la información de cobranzas',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Muchas empresas aún dependen de Excel, correos dispersos o WhatsApp. Esto genera errores y pérdida de trazabilidad. Un sistema centralizado permite ordenar, controlar y reducir los tiempos de cobro.",
+            type: 'text',
+            text: 'Muchas empresas aún dependen de Excel, correos dispersos o WhatsApp. Esto genera errores y pérdida de trazabilidad. Un sistema centralizado permite ordenar, controlar y reducir los tiempos de cobro.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "6. Apóyate en la tecnología",
+            type: 'bold',
+            text: '6. Apóyate en la tecnología',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Plataformas como ",
+            type: 'text',
+            text: 'Plataformas como ',
           },
           {
-            type: "bold",
-            text: "Sena",
+            type: 'bold',
+            text: 'Sena',
           },
           {
-            type: "text",
-            text: " ofrecen dashboards en tiempo real con métricas de cobranza, permiten automatizar campañas de recordatorios y segmentar clientes por riesgo. Con estas herramientas, el DSO puede reducirse hasta en un 33% en pocos meses.",
+            type: 'text',
+            text: ' ofrecen dashboards en tiempo real con métricas de cobranza, permiten automatizar campañas de recordatorios y segmentar clientes por riesgo. Con estas herramientas, el DSO puede reducirse hasta en un 33% en pocos meses.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "El rol de la tecnología en la gestión del DSO",
+            type: 'bold',
+            text: 'El rol de la tecnología en la gestión del DSO',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "La digitalización ha transformado la manera en que las empresas gestionan sus cuentas por cobrar. Hoy en día, ya no basta con emitir facturas y esperar. Se requiere visibilidad total y procesos proactivos.",
+            type: 'text',
+            text: 'La digitalización ha transformado la manera en que las empresas gestionan sus cuentas por cobrar. Hoy en día, ya no basta con emitir facturas y esperar. Se requiere visibilidad total y procesos proactivos.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Con Sena, por ejemplo, las pymes pueden:",
+            type: 'text',
+            text: 'Con Sena, por ejemplo, las pymes pueden:',
           },
         ],
       },
       {
-        type: "list",
+        type: 'list',
         items: [
-          "Sincronizar automáticamente facturas desde el ERP.",
-          "Configurar flujos de cobranza inteligentes que envían notificaciones según reglas de negocio.",
-          "Tener un registro detallado de cada interacción con clientes.",
-          "Acceder a reportes de DSO, antigüedad de cartera y top morosos en tiempo real.",
+          'Sincronizar automáticamente facturas desde el ERP.',
+          'Configurar flujos de cobranza inteligentes que envían notificaciones según reglas de negocio.',
+          'Tener un registro detallado de cada interacción con clientes.',
+          'Acceder a reportes de DSO, antigüedad de cartera y top morosos en tiempo real.',
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Esto no solo ayuda a reducir el DSO, sino que convierte la cobranza en una ventaja competitiva: una empresa con liquidez puede negociar mejor con proveedores, invertir en nuevos proyectos y crecer con menos fricciones.",
+            type: 'text',
+            text: 'Esto no solo ayuda a reducir el DSO, sino que convierte la cobranza en una ventaja competitiva: una empresa con liquidez puede negociar mejor con proveedores, invertir en nuevos proyectos y crecer con menos fricciones.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "Buenas prácticas complementarias",
+            type: 'bold',
+            text: 'Buenas prácticas complementarias',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Además de las estrategias anteriores, conviene adoptar ciertas prácticas que refuercen el control del DSO:",
+            type: 'text',
+            text: 'Además de las estrategias anteriores, conviene adoptar ciertas prácticas que refuercen el control del DSO:',
           },
         ],
       },
       {
-        type: "list",
+        type: 'list',
         items: [
           [
             {
-              type: "bold",
-              text: "Capacitar al equipo financiero",
+              type: 'bold',
+              text: 'Capacitar al equipo financiero',
             },
             {
-              type: "text",
-              text: " en métricas clave de cobranza.",
-            },
-          ],
-          [
-            {
-              type: "bold",
-              text: "Revisar periódicamente el DSO",
-            },
-            {
-              type: "text",
-              text: " para detectar tendencias.",
+              type: 'text',
+              text: ' en métricas clave de cobranza.',
             },
           ],
           [
             {
-              type: "bold",
-              text: "Evitar concentrar ventas a crédito",
+              type: 'bold',
+              text: 'Revisar periódicamente el DSO',
             },
             {
-              type: "text",
-              text: " en pocos clientes, diversificar reduce riesgos.",
+              type: 'text',
+              text: ' para detectar tendencias.',
             },
           ],
           [
             {
-              type: "bold",
-              text: "Comparar tu DSO con el promedio de tu industria",
+              type: 'bold',
+              text: 'Evitar concentrar ventas a crédito',
             },
             {
-              type: "text",
-              text: ": esto te da un benchmark realista.",
+              type: 'text',
+              text: ' en pocos clientes, diversificar reduce riesgos.',
+            },
+          ],
+          [
+            {
+              type: 'bold',
+              text: 'Comparar tu DSO con el promedio de tu industria',
+            },
+            {
+              type: 'text',
+              text: ': esto te da un benchmark realista.',
             },
           ],
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "El ",
+            type: 'text',
+            text: 'El ',
           },
           {
-            type: "bold",
-            text: "DSO",
+            type: 'bold',
+            text: 'DSO',
           },
           {
-            type: "text",
-            text: " es mucho más que un número: es el reflejo de qué tan eficiente es tu empresa para transformar ventas en liquidez real. Reducirlo no solo significa cobrar más rápido, también implica fortalecer tu flujo de caja, generar confianza y abrir oportunidades de crecimiento.",
+            type: 'text',
+            text: ' es mucho más que un número: es el reflejo de qué tan eficiente es tu empresa para transformar ventas en liquidez real. Reducirlo no solo significa cobrar más rápido, también implica fortalecer tu flujo de caja, generar confianza y abrir oportunidades de crecimiento.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Las empresas que ignoran este indicador corren el riesgo de quedarse sin capital para operar, mientras que aquellas que lo gestionan de forma inteligente ganan estabilidad y competitividad.",
+            type: 'text',
+            text: 'Las empresas que ignoran este indicador corren el riesgo de quedarse sin capital para operar, mientras que aquellas que lo gestionan de forma inteligente ganan estabilidad y competitividad.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "¿Quieres medir y reducir tu DSO sin complicaciones? ",
+            type: 'text',
+            text: '¿Quieres medir y reducir tu DSO sin complicaciones? ',
           },
           {
-            type: "link",
-            text: "Descubre cómo Sena puede ayudarte a optimizar tu cobranza",
-            href: "https://meetings.hubspot.com/francisco502",
+            type: 'link',
+            text: 'Descubre cómo Sena puede ayudarte a optimizar tu cobranza',
+            href: 'https://meetings.hubspot.com/francisco502',
           },
           {
-            type: "text",
-            text: ".",
+            type: 'text',
+            text: '.',
           },
         ],
       },
@@ -4319,499 +4307,499 @@ export const blogPosts: BlogPost[] = [
   {
     id: 27,
     slug: slug(
-      "Conoce las diferencias entre CRM cobranza, ERP cobranza y SaaS financiero, y descubre que sistema de gestion es mejor para tu empresa",
+      'Conoce las diferencias entre CRM cobranza, ERP cobranza y SaaS financiero, y descubre que sistema de gestion es mejor para tu empresa'
     ),
-    title: "¿Cuál es la diferencia entre CRM, ERP y SaaS para cobranza?",
+    title: '¿Cuál es la diferencia entre CRM, ERP y SaaS para cobranza?',
     intro:
-      "La gestión de cuentas por cobrar es uno de los grandes retos de cualquier pyme en crecimiento. Mientras algunas empresas confían en un CRM de cobranza, otras dependen de su ERP de cobranza, y muchas ya evalúan migrar hacia un SaaS financiero especializado. Pero, ¿cuál es la mejor opción para asegurar liquidez, automatización y control? En este artículo te mostraremos las diferencias más importantes y cómo elegir el sistema de gestión adecuado.",
-    date: "20 de marzo 2026",
-    tags: ["Blog", "Producto", "Servicio"],
+      'La gestión de cuentas por cobrar es uno de los grandes retos de cualquier pyme en crecimiento. Mientras algunas empresas confían en un CRM de cobranza, otras dependen de su ERP de cobranza, y muchas ya evalúan migrar hacia un SaaS financiero especializado. Pero, ¿cuál es la mejor opción para asegurar liquidez, automatización y control? En este artículo te mostraremos las diferencias más importantes y cómo elegir el sistema de gestión adecuado.',
+    date: '20 de marzo 2026',
+    tags: ['Blog', 'Producto', 'Servicio'],
     image: AssetImageBlog.blog_27_main.src,
     content: [
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "La gestión de cuentas por cobrar es uno de los grandes retos de cualquier pyme en crecimiento. Mientras algunas empresas confían en un ",
+            type: 'text',
+            text: 'La gestión de cuentas por cobrar es uno de los grandes retos de cualquier pyme en crecimiento. Mientras algunas empresas confían en un ',
           },
           {
-            type: "bold",
-            text: "CRM de cobranza",
+            type: 'bold',
+            text: 'CRM de cobranza',
           },
           {
-            type: "text",
-            text: ", otras dependen de su ",
+            type: 'text',
+            text: ', otras dependen de su ',
           },
           {
-            type: "bold",
-            text: "ERP de cobranza",
+            type: 'bold',
+            text: 'ERP de cobranza',
           },
           {
-            type: "text",
-            text: ", y muchas ya evalúan migrar hacia un ",
+            type: 'text',
+            text: ', y muchas ya evalúan migrar hacia un ',
           },
           {
-            type: "bold",
-            text: "SaaS financiero",
+            type: 'bold',
+            text: 'SaaS financiero',
           },
           {
-            type: "text",
-            text: " especializado. Pero, ¿cuál es la mejor opción para asegurar liquidez, automatización y control? En este artículo te mostraremos las diferencias más importantes y cómo elegir el sistema de gestión adecuado.",
+            type: 'text',
+            text: ' especializado. Pero, ¿cuál es la mejor opción para asegurar liquidez, automatización y control? En este artículo te mostraremos las diferencias más importantes y cómo elegir el sistema de gestión adecuado.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "¿Qué es un CRM de cobranza y qué ofrece?",
+            type: 'bold',
+            text: '¿Qué es un CRM de cobranza y qué ofrece?',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Un ",
+            type: 'text',
+            text: 'Un ',
           },
           {
-            type: "bold",
-            text: "CRM cobranza",
+            type: 'bold',
+            text: 'CRM cobranza',
           },
           {
-            type: "text",
-            text: " está pensado para administrar la relación con los clientes, incluyendo recordatorios, seguimientos y comunicación. Su principal ventaja es que organiza interacciones y ayuda a no perder de vista las facturas pendientes.",
+            type: 'text',
+            text: ' está pensado para administrar la relación con los clientes, incluyendo recordatorios, seguimientos y comunicación. Su principal ventaja es que organiza interacciones y ayuda a no perder de vista las facturas pendientes.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Sin embargo, el alcance de un CRM cobranza suele ser limitado cuando la empresa busca métricas avanzadas como DSO, aging de cartera o proyecciones de flujo de caja. Por ello, aunque es útil como primer paso, puede quedarse corto en empresas que buscan mayor control financiero.",
+            type: 'text',
+            text: 'Sin embargo, el alcance de un CRM cobranza suele ser limitado cuando la empresa busca métricas avanzadas como DSO, aging de cartera o proyecciones de flujo de caja. Por ello, aunque es útil como primer paso, puede quedarse corto en empresas que buscan mayor control financiero.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "El rol del ERP en la gestión de cobranza",
+            type: 'bold',
+            text: 'El rol del ERP en la gestión de cobranza',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "El ",
+            type: 'text',
+            text: 'El ',
           },
           {
-            type: "bold",
-            text: "ERP cobranza",
+            type: 'bold',
+            text: 'ERP cobranza',
           },
           {
-            type: "text",
-            text: " centraliza procesos administrativos y financieros en un mismo sistema. Muchos ERPs incluyen módulos para cuentas por cobrar, lo que facilita la integración con facturación, inventario y contabilidad.",
+            type: 'text',
+            text: ' centraliza procesos administrativos y financieros en un mismo sistema. Muchos ERPs incluyen módulos para cuentas por cobrar, lo que facilita la integración con facturación, inventario y contabilidad.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Aun así, el ERP no siempre está diseñado con un enfoque especializado en cobranza. Suele carecer de funciones como segmentación de clientes morosos, reportes específicos de recuperación o flujos de recordatorios automatizados. Esto genera que las empresas terminen dependiendo de Excel para tareas críticas, reduciendo la eficiencia de la gestión.",
+            type: 'text',
+            text: 'Aun así, el ERP no siempre está diseñado con un enfoque especializado en cobranza. Suele carecer de funciones como segmentación de clientes morosos, reportes específicos de recuperación o flujos de recordatorios automatizados. Esto genera que las empresas terminen dependiendo de Excel para tareas críticas, reduciendo la eficiencia de la gestión.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "SaaS financiero: especialización y automatización",
+            type: 'bold',
+            text: 'SaaS financiero: especialización y automatización',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "El ",
+            type: 'text',
+            text: 'El ',
           },
           {
-            type: "bold",
-            text: "SaaS financiero",
+            type: 'bold',
+            text: 'SaaS financiero',
           },
           {
-            type: "text",
-            text: " surge como la respuesta moderna a los límites de un CRM o ERP. Estas plataformas, como Sena, están diseñadas específicamente para digitalizar la cobranza y ofrecer ",
+            type: 'text',
+            text: ' surge como la respuesta moderna a los límites de un CRM o ERP. Estas plataformas, como Sena, están diseñadas específicamente para digitalizar la cobranza y ofrecer ',
           },
           {
-            type: "bold",
-            text: "automatización financiera",
+            type: 'bold',
+            text: 'automatización financiera',
           },
           {
-            type: "text",
-            text: " de extremo a extremo.",
+            type: 'text',
+            text: ' de extremo a extremo.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Algunas de sus ventajas son:",
+            type: 'text',
+            text: 'Algunas de sus ventajas son:',
           },
         ],
       },
       {
-        type: "list",
+        type: 'list',
         items: [
           [
             {
-              type: "bold",
-              text: "Automatización de recordatorios",
+              type: 'bold',
+              text: 'Automatización de recordatorios',
             },
             {
-              type: "text",
-              text: " multicanal (email, SMS, WhatsApp).",
+              type: 'text',
+              text: ' multicanal (email, SMS, WhatsApp).',
             },
           ],
           [
             {
-              type: "bold",
-              text: "Dashboards en tiempo real",
+              type: 'bold',
+              text: 'Dashboards en tiempo real',
             },
             {
-              type: "text",
-              text: " con indicadores clave.",
+              type: 'text',
+              text: ' con indicadores clave.',
             },
           ],
           [
             {
-              type: "bold",
-              text: "Proyecciones de flujo de caja",
+              type: 'bold',
+              text: 'Proyecciones de flujo de caja',
             },
             {
-              type: "text",
-              text: " basadas en comportamiento de pago.",
+              type: 'text',
+              text: ' basadas en comportamiento de pago.',
             },
           ],
           [
             {
-              type: "bold",
-              text: "Segmentación inteligente",
+              type: 'bold',
+              text: 'Segmentación inteligente',
             },
             {
-              type: "text",
-              text: " de clientes y top morosos.",
+              type: 'text',
+              text: ' de clientes y top morosos.',
             },
           ],
           [
             {
-              type: "bold",
-              text: "Reportes exportables",
+              type: 'bold',
+              text: 'Reportes exportables',
             },
             {
-              type: "text",
-              text: " listos para auditorías y presentaciones gerenciales.",
+              type: 'text',
+              text: ' listos para auditorías y presentaciones gerenciales.',
             },
           ],
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "El SaaS convierte a la cobranza en una ventaja competitiva al reducir el DSO, mejorar la tasa de recuperación y liberar al equipo de tareas manuales.",
+            type: 'text',
+            text: 'El SaaS convierte a la cobranza en una ventaja competitiva al reducir el DSO, mejorar la tasa de recuperación y liberar al equipo de tareas manuales.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "Diferencias clave entre CRM, ERP y SaaS",
+            type: 'bold',
+            text: 'Diferencias clave entre CRM, ERP y SaaS',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Para simplificar la comparación, podemos resumir las ",
+            type: 'text',
+            text: 'Para simplificar la comparación, podemos resumir las ',
           },
           {
-            type: "bold",
-            text: "diferencias CRM ERP SaaS",
+            type: 'bold',
+            text: 'diferencias CRM ERP SaaS',
           },
           {
-            type: "text",
-            text: " en tres puntos:",
+            type: 'text',
+            text: ' en tres puntos:',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "1. ",
+            type: 'text',
+            text: '1. ',
           },
           {
-            type: "bold",
-            text: "Enfoque:",
+            type: 'bold',
+            text: 'Enfoque:',
           },
         ],
       },
       {
-        type: "list",
+        type: 'list',
         items: [
-          "CRM: relación con clientes.",
-          "ERP: procesos administrativos globales.",
+          'CRM: relación con clientes.',
+          'ERP: procesos administrativos globales.',
           [
             {
-              type: "text",
-              text: "SaaS: especialización en ",
+              type: 'text',
+              text: 'SaaS: especialización en ',
             },
             {
-              type: "bold",
-              text: "sistema de gestión de cobranza",
+              type: 'bold',
+              text: 'sistema de gestión de cobranza',
             },
             {
-              type: "text",
-              text: ".",
+              type: 'text',
+              text: '.',
             },
           ],
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "1. ",
+            type: 'text',
+            text: '1. ',
           },
           {
-            type: "bold",
-            text: "Nivel de automatización:",
+            type: 'bold',
+            text: 'Nivel de automatización:',
           },
         ],
       },
       {
-        type: "list",
+        type: 'list',
         items: [
-          "CRM: básico.",
-          "ERP: limitado.",
-          "SaaS: avanzado, con automatización financiera y flujos inteligentes.",
+          'CRM: básico.',
+          'ERP: limitado.',
+          'SaaS: avanzado, con automatización financiera y flujos inteligentes.',
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "1. ",
+            type: 'text',
+            text: '1. ',
           },
           {
-            type: "bold",
-            text: "Visibilidad y métricas:",
+            type: 'bold',
+            text: 'Visibilidad y métricas:',
           },
         ],
       },
       {
-        type: "list",
+        type: 'list',
         items: [
-          "CRM: seguimiento de interacciones.",
-          "ERP: integración contable.",
-          "SaaS: métricas financieras en tiempo real (DSO, aging, tasa de recuperación).",
+          'CRM: seguimiento de interacciones.',
+          'ERP: integración contable.',
+          'SaaS: métricas financieras en tiempo real (DSO, aging, tasa de recuperación).',
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "Cómo elegir el sistema de gestión adecuado",
+            type: 'bold',
+            text: 'Cómo elegir el sistema de gestión adecuado',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Al evaluar opciones, considera:",
+            type: 'text',
+            text: 'Al evaluar opciones, considera:',
           },
         ],
       },
       {
-        type: "list",
+        type: 'list',
         items: [
-          "Tamaño y complejidad de tu pyme.",
-          "Recursos disponibles para inversión.",
-          "Necesidad de liquidez inmediata.",
-          "Capacidad de tu equipo para manejar software especializado.",
+          'Tamaño y complejidad de tu pyme.',
+          'Recursos disponibles para inversión.',
+          'Necesidad de liquidez inmediata.',
+          'Capacidad de tu equipo para manejar software especializado.',
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "En muchos casos, comenzar con un ",
+            type: 'text',
+            text: 'En muchos casos, comenzar con un ',
           },
           {
-            type: "bold",
-            text: "software de cobranza para pymes",
+            type: 'bold',
+            text: 'software de cobranza para pymes',
           },
           {
-            type: "text",
-            text: " especializado puede marcar la diferencia frente a depender solo de CRM o ERP. Una ",
+            type: 'text',
+            text: ' especializado puede marcar la diferencia frente a depender solo de CRM o ERP. Una ',
           },
           {
-            type: "bold",
-            text: "plataforma de cobranza",
+            type: 'bold',
+            text: 'plataforma de cobranza',
           },
           {
-            type: "text",
-            text: " SaaS no solo organiza datos, también transforma la operación en resultados financieros visibles.",
+            type: 'text',
+            text: ' SaaS no solo organiza datos, también transforma la operación en resultados financieros visibles.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "Sena: el SaaS que combina automatización y resultados",
+            type: 'bold',
+            text: 'Sena: el SaaS que combina automatización y resultados',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Sena se posiciona como un ",
+            type: 'text',
+            text: 'Sena se posiciona como un ',
           },
           {
-            type: "bold",
-            text: "software de cobranza",
+            type: 'bold',
+            text: 'software de cobranza',
           },
           {
-            type: "text",
-            text: " diseñado para pymes que buscan ir más allá de Excel o de módulos limitados en su ERP. Al centralizar gestiones y automatizar flujos, ofrece:",
+            type: 'text',
+            text: ' diseñado para pymes que buscan ir más allá de Excel o de módulos limitados en su ERP. Al centralizar gestiones y automatizar flujos, ofrece:',
           },
         ],
       },
       {
-        type: "list",
+        type: 'list',
         items: [
           [
             {
-              type: "bold",
-              text: "Menor DSO",
+              type: 'bold',
+              text: 'Menor DSO',
             },
             {
-              type: "text",
-              text: " en promedio hasta un 33%.",
-            },
-          ],
-          [
-            {
-              type: "bold",
-              text: "Flujo de caja más estable",
-            },
-            {
-              type: "text",
-              text: ".",
+              type: 'text',
+              text: ' en promedio hasta un 33%.',
             },
           ],
           [
             {
-              type: "bold",
-              text: "KPIs claros en dashboards",
+              type: 'bold',
+              text: 'Flujo de caja más estable',
             },
             {
-              type: "text",
-              text: " en tiempo real.",
+              type: 'text',
+              text: '.',
             },
           ],
           [
             {
-              type: "bold",
-              text: "Bitácora completa de gestiones",
+              type: 'bold',
+              text: 'KPIs claros en dashboards',
             },
             {
-              type: "text",
-              text: " para trazabilidad.",
+              type: 'text',
+              text: ' en tiempo real.',
+            },
+          ],
+          [
+            {
+              type: 'bold',
+              text: 'Bitácora completa de gestiones',
+            },
+            {
+              type: 'text',
+              text: ' para trazabilidad.',
             },
           ],
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "En comparación con un CRM cobranza o un ERP cobranza, Sena integra lo mejor de ambos mundos, con la fuerza de un ",
+            type: 'text',
+            text: 'En comparación con un CRM cobranza o un ERP cobranza, Sena integra lo mejor de ambos mundos, con la fuerza de un ',
           },
           {
-            type: "bold",
-            text: "SaaS financiero",
+            type: 'bold',
+            text: 'SaaS financiero',
           },
           {
-            type: "text",
-            text: " especializado.",
+            type: 'text',
+            text: ' especializado.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Elegir entre un CRM, un ERP o un SaaS puede parecer complejo, pero todo depende de la prioridad de la empresa. Si buscas un sistema de relación, el CRM es un primer paso; si prefieres integración administrativa, el ERP puede servir. Pero si lo que necesitas es control, liquidez y eficiencia, el camino está en un ",
+            type: 'text',
+            text: 'Elegir entre un CRM, un ERP o un SaaS puede parecer complejo, pero todo depende de la prioridad de la empresa. Si buscas un sistema de relación, el CRM es un primer paso; si prefieres integración administrativa, el ERP puede servir. Pero si lo que necesitas es control, liquidez y eficiencia, el camino está en un ',
           },
           {
-            type: "bold",
-            text: "SaaS financiero especializado en cobranzas",
+            type: 'bold',
+            text: 'SaaS financiero especializado en cobranzas',
           },
           {
-            type: "text",
-            text: ".",
+            type: 'text',
+            text: '.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "¿Quieres llevar tu cobranza a otro nivel con un software pensado para resultados? ",
+            type: 'text',
+            text: '¿Quieres llevar tu cobranza a otro nivel con un software pensado para resultados? ',
           },
           {
-            type: "link",
-            text: "Descubre Sena y su plataforma de cobranza",
-            href: "https://meetings.hubspot.com/francisco502",
+            type: 'link',
+            text: 'Descubre Sena y su plataforma de cobranza',
+            href: 'https://meetings.hubspot.com/francisco502',
           },
           {
-            type: "text",
-            text: ".",
+            type: 'text',
+            text: '.',
           },
         ],
       },
@@ -4820,547 +4808,546 @@ export const blogPosts: BlogPost[] = [
   {
     id: 28,
     slug: slug(
-      "Descubre las limitaciones de un ERP de cobranza y cuando conviene migrar a una plataforma especializada para mejorar tu liquidez",
+      'Descubre las limitaciones de un ERP de cobranza y cuando conviene migrar a una plataforma especializada para mejorar tu liquidez'
     ),
-    title:
-      "¿Tu ERP de cobranza se queda corto? 7 señales de que necesitas una plataforma dedicada",
+    title: '¿Tu ERP de cobranza se queda corto? 7 señales de que necesitas una plataforma dedicada',
     intro:
-      "Un ERP de cobranza puede centralizar procesos básicos de facturación y cuentas por cobrar, pero ¿realmente es suficiente para una pyme en crecimiento? Cuando el sistema no ofrece indicadores financieros claros ni herramientas de automatización, es probable que se esté quedando corto. En este blog te compartimos 7 señales para detectar esas limitaciones y cómo una plataforma especializada como Sena puede marcar la diferencia.",
-    date: "24 de marzo 2026",
-    tags: ["Blog"],
+      'Un ERP de cobranza puede centralizar procesos básicos de facturación y cuentas por cobrar, pero ¿realmente es suficiente para una pyme en crecimiento? Cuando el sistema no ofrece indicadores financieros claros ni herramientas de automatización, es probable que se esté quedando corto. En este blog te compartimos 7 señales para detectar esas limitaciones y cómo una plataforma especializada como Sena puede marcar la diferencia.',
+    date: '24 de marzo 2026',
+    tags: ['Blog'],
     image: AssetImageBlog.blog_28_main.src,
     content: [
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Un ",
+            type: 'text',
+            text: 'Un ',
           },
           {
-            type: "bold",
-            text: "ERP de cobranza",
+            type: 'bold',
+            text: 'ERP de cobranza',
           },
           {
-            type: "text",
-            text: " puede centralizar procesos básicos de facturación y cuentas por cobrar, pero ¿realmente es suficiente para una pyme en crecimiento? Cuando el sistema no ofrece indicadores financieros claros ni herramientas de automatización, es probable que se esté quedando corto. En este blog te compartimos 7 señales para detectar esas limitaciones y cómo una plataforma especializada como Sena puede marcar la diferencia.",
+            type: 'text',
+            text: ' puede centralizar procesos básicos de facturación y cuentas por cobrar, pero ¿realmente es suficiente para una pyme en crecimiento? Cuando el sistema no ofrece indicadores financieros claros ni herramientas de automatización, es probable que se esté quedando corto. En este blog te compartimos 7 señales para detectar esas limitaciones y cómo una plataforma especializada como Sena puede marcar la diferencia.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "¿Qué es un ERP de cobranza y cómo funciona?",
+            type: 'bold',
+            text: '¿Qué es un ERP de cobranza y cómo funciona?',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "El ",
+            type: 'text',
+            text: 'El ',
           },
           {
-            type: "bold",
-            text: "ERP",
+            type: 'bold',
+            text: 'ERP',
           },
           {
-            type: "text",
-            text: " (Enterprise Resource Planning) es un ",
+            type: 'text',
+            text: ' (Enterprise Resource Planning) es un ',
           },
           {
-            type: "bold",
-            text: "sistema de gestión empresarial",
+            type: 'bold',
+            text: 'sistema de gestión empresarial',
           },
           {
-            type: "text",
-            text: " que centraliza procesos como contabilidad, inventario, compras y ventas. Cuando hablamos de ",
+            type: 'text',
+            text: ' que centraliza procesos como contabilidad, inventario, compras y ventas. Cuando hablamos de ',
           },
           {
-            type: "bold",
-            text: "ERP cobranza",
+            type: 'bold',
+            text: 'ERP cobranza',
           },
           {
-            type: "text",
-            text: ", nos referimos al módulo que gestiona las cuentas por cobrar: registra facturas, actualiza pagos y genera reportes administrativos básicos.",
+            type: 'text',
+            text: ', nos referimos al módulo que gestiona las cuentas por cobrar: registra facturas, actualiza pagos y genera reportes administrativos básicos.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "En teoría, un ",
+            type: 'text',
+            text: 'En teoría, un ',
           },
           {
-            type: "bold",
-            text: "software ERP",
+            type: 'bold',
+            text: 'software ERP',
           },
           {
-            type: "text",
-            text: " permite integrar todas las áreas de la empresa en una sola plataforma. Sin embargo, al tratarse de una solución generalista, su módulo de cobranzas suele quedarse corto. Un ",
+            type: 'text',
+            text: ' permite integrar todas las áreas de la empresa en una sola plataforma. Sin embargo, al tratarse de una solución generalista, su módulo de cobranzas suele quedarse corto. Un ',
           },
           {
-            type: "bold",
-            text: "ERP qué es",
+            type: 'bold',
+            text: 'ERP qué es',
           },
           {
-            type: "text",
-            text: " y lo que promete no siempre coincide con lo que una empresa realmente necesita para asegurar liquidez, especialmente cuando enfrenta morosidad o falta de automatización financiera.",
+            type: 'text',
+            text: ' y lo que promete no siempre coincide con lo que una empresa realmente necesita para asegurar liquidez, especialmente cuando enfrenta morosidad o falta de automatización financiera.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "7 señales de que tu ERP de cobranza no es suficiente",
+            type: 'bold',
+            text: '7 señales de que tu ERP de cobranza no es suficiente',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "1. Dependencia de Excel para dar seguimiento",
+            type: 'bold',
+            text: '1. Dependencia de Excel para dar seguimiento',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Si tu equipo necesita exportar datos a hojas de cálculo para controlar atrasos, es una clara señal de que el ",
+            type: 'text',
+            text: 'Si tu equipo necesita exportar datos a hojas de cálculo para controlar atrasos, es una clara señal de que el ',
           },
           {
-            type: "bold",
-            text: "sistema ERP",
+            type: 'bold',
+            text: 'sistema ERP',
           },
           {
-            type: "text",
-            text: " no está resolviendo la gestión de cobranzas.",
+            type: 'text',
+            text: ' no está resolviendo la gestión de cobranzas.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "2. Falta de indicadores clave",
+            type: 'bold',
+            text: '2. Falta de indicadores clave',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Un ERP suele mostrar balances generales, pero rara vez ofrece KPIs como ",
+            type: 'text',
+            text: 'Un ERP suele mostrar balances generales, pero rara vez ofrece KPIs como ',
           },
           {
-            type: "bold",
-            text: "DSO",
+            type: 'bold',
+            text: 'DSO',
           },
           {
-            type: "text",
-            text: ", aging de cartera o tasa de recuperación. Sin esas métricas, se vuelve difícil medir la eficiencia real.",
+            type: 'text',
+            text: ', aging de cartera o tasa de recuperación. Sin esas métricas, se vuelve difícil medir la eficiencia real.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "3. Más tiempo en tareas manuales que en análisis",
+            type: 'bold',
+            text: '3. Más tiempo en tareas manuales que en análisis',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Un módulo de ",
+            type: 'text',
+            text: 'Un módulo de ',
           },
           {
-            type: "bold",
-            text: "ERP cobranza",
+            type: 'bold',
+            text: 'ERP cobranza',
           },
           {
-            type: "text",
-            text: " no siempre automatiza recordatorios ni gestiona interacciones con clientes. Esto obliga al equipo a invertir horas en enviar correos o llamadas, reduciendo su eficiencia.",
+            type: 'text',
+            text: ' no siempre automatiza recordatorios ni gestiona interacciones con clientes. Esto obliga al equipo a invertir horas en enviar correos o llamadas, reduciendo su eficiencia.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "4. No permite segmentar clientes morosos",
+            type: 'bold',
+            text: '4. No permite segmentar clientes morosos',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Un ",
+            type: 'text',
+            text: 'Un ',
           },
           {
-            type: "bold",
-            text: "software ERP",
+            type: 'bold',
+            text: 'software ERP',
           },
           {
-            type: "text",
-            text: " trata a todos los clientes de la misma manera, sin segmentar por riesgo o antigüedad de deuda. Esta carencia retrasa las estrategias de cobranza.",
+            type: 'text',
+            text: ' trata a todos los clientes de la misma manera, sin segmentar por riesgo o antigüedad de deuda. Esta carencia retrasa las estrategias de cobranza.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "5. Carece de recordatorios multicanal",
+            type: 'bold',
+            text: '5. Carece de recordatorios multicanal',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Las plataformas modernas permiten enviar recordatorios por email, SMS o WhatsApp. El ",
+            type: 'text',
+            text: 'Las plataformas modernas permiten enviar recordatorios por email, SMS o WhatsApp. El ',
           },
           {
-            type: "bold",
-            text: "ERP de cobranza",
+            type: 'bold',
+            text: 'ERP de cobranza',
           },
           {
-            type: "text",
-            text: " tradicional no incluye estas funciones, dejando la gestión en manos del equipo.",
+            type: 'text',
+            text: ' tradicional no incluye estas funciones, dejando la gestión en manos del equipo.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "6. No proyecta el flujo de caja",
+            type: 'bold',
+            text: '6. No proyecta el flujo de caja',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Un ERP puede mostrar cuánto tienes en cuentas por cobrar, pero no proyecta escenarios futuros ni analiza cómo los atrasos afectan la liquidez.",
+            type: 'text',
+            text: 'Un ERP puede mostrar cuánto tienes en cuentas por cobrar, pero no proyecta escenarios futuros ni analiza cómo los atrasos afectan la liquidez.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "7. Reportes limitados y poco prácticos",
+            type: 'bold',
+            text: '7. Reportes limitados y poco prácticos',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Los informes del ",
+            type: 'text',
+            text: 'Los informes del ',
           },
           {
-            type: "bold",
-            text: "software ERP",
+            type: 'bold',
+            text: 'software ERP',
           },
           {
-            type: "text",
-            text: " suelen ser rígidos y poco visuales. En cambio, un sistema especializado entrega dashboards en tiempo real y reportes exportables para gerencia o auditorías.",
+            type: 'text',
+            text: ' suelen ser rígidos y poco visuales. En cambio, un sistema especializado entrega dashboards en tiempo real y reportes exportables para gerencia o auditorías.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "Limitaciones comunes del ERP en cobranzas",
+            type: 'bold',
+            text: 'Limitaciones comunes del ERP en cobranzas',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "La principal limitación es que un ",
+            type: 'text',
+            text: 'La principal limitación es que un ',
           },
           {
-            type: "bold",
-            text: "ERP financiero",
+            type: 'bold',
+            text: 'ERP financiero',
           },
           {
-            type: "text",
-            text: " fue diseñado como herramienta administrativa global, no como un sistema de cobranza especializado. Esto genera:",
+            type: 'text',
+            text: ' fue diseñado como herramienta administrativa global, no como un sistema de cobranza especializado. Esto genera:',
           },
         ],
       },
       {
-        type: "list",
+        type: 'list',
         items: [
-          "Procesos poco ágiles.",
-          "Escasa automatización financiera.",
-          "Reportes genéricos que no responden a necesidades estratégicas.",
+          'Procesos poco ágiles.',
+          'Escasa automatización financiera.',
+          'Reportes genéricos que no responden a necesidades estratégicas.',
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Por eso, aunque el ",
+            type: 'text',
+            text: 'Por eso, aunque el ',
           },
           {
-            type: "bold",
-            text: "ERP de cobranza",
+            type: 'bold',
+            text: 'ERP de cobranza',
           },
           {
-            type: "text",
-            text: " cumple con funciones básicas, no basta para empresas que buscan eficiencia y liquidez.",
+            type: 'text',
+            text: ' cumple con funciones básicas, no basta para empresas que buscan eficiencia y liquidez.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "Cuándo dar el salto a un software especializado",
+            type: 'bold',
+            text: 'Cuándo dar el salto a un software especializado',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Si notas que tu ",
+            type: 'text',
+            text: 'Si notas que tu ',
           },
           {
-            type: "bold",
-            text: "ERP",
+            type: 'bold',
+            text: 'ERP',
           },
           {
-            type: "text",
-            text: " no responde a las demandas de crecimiento, es momento de considerar una ",
+            type: 'text',
+            text: ' no responde a las demandas de crecimiento, es momento de considerar una ',
           },
           {
-            type: "bold",
-            text: "plataforma de cobranza",
+            type: 'bold',
+            text: 'plataforma de cobranza',
           },
           {
-            type: "text",
-            text: " dedicada.",
+            type: 'text',
+            text: ' dedicada.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Las soluciones ",
+            type: 'text',
+            text: 'Las soluciones ',
           },
           {
-            type: "bold",
-            text: "SaaS de cobranza",
+            type: 'bold',
+            text: 'SaaS de cobranza',
           },
           {
-            type: "text",
-            text: " están diseñadas específicamente para este fin. A diferencia de un ",
+            type: 'text',
+            text: ' están diseñadas específicamente para este fin. A diferencia de un ',
           },
           {
-            type: "bold",
-            text: "sistema ERP",
+            type: 'bold',
+            text: 'sistema ERP',
           },
           {
-            type: "text",
-            text: " tradicional, incluyen:",
+            type: 'text',
+            text: ' tradicional, incluyen:',
           },
         ],
       },
       {
-        type: "list",
+        type: 'list',
         items: [
-          "Dashboards en tiempo real.",
-          "KPIs estratégicos como DSO, aging y tasa de recuperación.",
-          "Flujos automáticos de recordatorios multicanal.",
-          "Segmentación de clientes según riesgo.",
+          'Dashboards en tiempo real.',
+          'KPIs estratégicos como DSO, aging y tasa de recuperación.',
+          'Flujos automáticos de recordatorios multicanal.',
+          'Segmentación de clientes según riesgo.',
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "En otras palabras, un ",
+            type: 'text',
+            text: 'En otras palabras, un ',
           },
           {
-            type: "bold",
-            text: "software de cobranza para pymes",
+            type: 'bold',
+            text: 'software de cobranza para pymes',
           },
           {
-            type: "text",
-            text: " especializado convierte datos dispersos en decisiones financieras inteligentes.",
+            type: 'text',
+            text: ' especializado convierte datos dispersos en decisiones financieras inteligentes.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "Sena: más allá del ERP de cobranza",
+            type: 'bold',
+            text: 'Sena: más allá del ERP de cobranza',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Sena no reemplaza tu ",
+            type: 'text',
+            text: 'Sena no reemplaza tu ',
           },
           {
-            type: "bold",
-            text: "ERP",
+            type: 'bold',
+            text: 'ERP',
           },
           {
-            type: "text",
-            text: ", sino que lo complementa y lo supera en todo lo relacionado con cobranzas. Como ",
+            type: 'text',
+            text: ', sino que lo complementa y lo supera en todo lo relacionado con cobranzas. Como ',
           },
           {
-            type: "bold",
-            text: "SaaS financiero",
+            type: 'bold',
+            text: 'SaaS financiero',
           },
           {
-            type: "text",
-            text: ", ofrece:",
+            type: 'text',
+            text: ', ofrece:',
           },
         ],
       },
       {
-        type: "list",
+        type: 'list',
         items: [
           [
             {
-              type: "bold",
-              text: "Automatización financiera",
+              type: 'bold',
+              text: 'Automatización financiera',
             },
             {
-              type: "text",
-              text: " completa con flujos de recordatorios.",
-            },
-          ],
-          [
-            {
-              type: "bold",
-              text: "KPIs de cobranza",
-            },
-            {
-              type: "text",
-              text: " visibles en dashboards en tiempo real.",
+              type: 'text',
+              text: ' completa con flujos de recordatorios.',
             },
           ],
           [
             {
-              type: "bold",
-              text: "Bitácora de gestiones",
+              type: 'bold',
+              text: 'KPIs de cobranza',
             },
             {
-              type: "text",
-              text: " que aporta trazabilidad.",
+              type: 'text',
+              text: ' visibles en dashboards en tiempo real.',
             },
           ],
           [
             {
-              type: "bold",
-              text: "Proyecciones de flujo de caja",
+              type: 'bold',
+              text: 'Bitácora de gestiones',
             },
             {
-              type: "text",
-              text: " para anticipar decisiones.",
+              type: 'text',
+              text: ' que aporta trazabilidad.',
+            },
+          ],
+          [
+            {
+              type: 'bold',
+              text: 'Proyecciones de flujo de caja',
+            },
+            {
+              type: 'text',
+              text: ' para anticipar decisiones.',
             },
           ],
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Así, lo que antes era un módulo limitado dentro del ",
+            type: 'text',
+            text: 'Así, lo que antes era un módulo limitado dentro del ',
           },
           {
-            type: "bold",
-            text: "software ERP",
+            type: 'bold',
+            text: 'software ERP',
           },
           {
-            type: "text",
-            text: ", ahora se convierte en una herramienta estratégica que impacta directamente en la liquidez de la empresa.",
+            type: 'text',
+            text: ', ahora se convierte en una herramienta estratégica que impacta directamente en la liquidez de la empresa.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "El ",
+            type: 'text',
+            text: 'El ',
           },
           {
-            type: "bold",
-            text: "ERP de cobranza",
+            type: 'bold',
+            text: 'ERP de cobranza',
           },
           {
-            type: "text",
-            text: " puede ser útil para registrar datos, pero no es suficiente para asegurar liquidez ni para gestionar clientes morosos de manera eficiente. Si tu empresa depende demasiado de Excel, carece de métricas financieras claras o tu equipo gasta más tiempo en tareas manuales que en análisis, es hora de dar el salto.",
+            type: 'text',
+            text: ' puede ser útil para registrar datos, pero no es suficiente para asegurar liquidez ni para gestionar clientes morosos de manera eficiente. Si tu empresa depende demasiado de Excel, carece de métricas financieras claras o tu equipo gasta más tiempo en tareas manuales que en análisis, es hora de dar el salto.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "¿Quieres complementar tu ERP con una solución especializada en cobranzas? ",
+            type: 'text',
+            text: '¿Quieres complementar tu ERP con una solución especializada en cobranzas? ',
           },
           {
-            type: "link",
-            text: "Conoce Sena, la plataforma de cobranza SaaS diseñada para pymes en crecimiento",
-            href: "https://meetings.hubspot.com/francisco502",
+            type: 'link',
+            text: 'Conoce Sena, la plataforma de cobranza SaaS diseñada para pymes en crecimiento',
+            href: 'https://meetings.hubspot.com/francisco502',
           },
           {
-            type: "text",
-            text: ".",
+            type: 'text',
+            text: '.',
           },
         ],
       },
@@ -5369,263 +5356,263 @@ export const blogPosts: BlogPost[] = [
   {
     id: 29,
     slug: slug(
-      "Aprende como manejar facturas vencidas, recuperar pagos y mantener buenas relaciones con tus clientes mediante tecnicas de cobranza efectivas",
+      'Aprende como manejar facturas vencidas, recuperar pagos y mantener buenas relaciones con tus clientes mediante tecnicas de cobranza efectivas'
     ),
-    title: "¿Cómo puedo recuperar una factura vencida sin perder al cliente?",
+    title: '¿Cómo puedo recuperar una factura vencida sin perder al cliente?',
     intro:
-      "Las facturas vencidas son uno de los mayores dolores de cabeza para las pymes. No solo afectan la liquidez, también ponen en riesgo la relación con los clientes. Sin embargo, con un enfoque profesional y herramientas adecuadas, es posible recuperar una factura vencida sin dañar la confianza comercial. En este artículo veremos estrategias prácticas para el cobro de facturas vencidas, cuándo actuar y cómo una plataforma como Sena puede ayudarte a mantener el control.",
-    date: "27 de marzo 2026",
-    tags: ["Producto", "Servicio"],
+      'Las facturas vencidas son uno de los mayores dolores de cabeza para las pymes. No solo afectan la liquidez, también ponen en riesgo la relación con los clientes. Sin embargo, con un enfoque profesional y herramientas adecuadas, es posible recuperar una factura vencida sin dañar la confianza comercial. En este artículo veremos estrategias prácticas para el cobro de facturas vencidas, cuándo actuar y cómo una plataforma como Sena puede ayudarte a mantener el control.',
+    date: '27 de marzo 2026',
+    tags: ['Producto', 'Servicio'],
     image: AssetImageBlog.blog_29_main.src,
     content: [
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Las facturas vencidas son uno de los mayores dolores de cabeza para las pymes. No solo afectan la liquidez, también ponen en riesgo la relación con los clientes. Sin embargo, con un enfoque profesional y herramientas adecuadas, es posible recuperar una factura vencida sin dañar la confianza comercial. En este artículo veremos estrategias prácticas para el cobro de facturas vencidas, cuándo actuar y cómo una plataforma como Sena puede ayudarte a mantener el control.",
+            type: 'text',
+            text: 'Las facturas vencidas son uno de los mayores dolores de cabeza para las pymes. No solo afectan la liquidez, también ponen en riesgo la relación con los clientes. Sin embargo, con un enfoque profesional y herramientas adecuadas, es posible recuperar una factura vencida sin dañar la confianza comercial. En este artículo veremos estrategias prácticas para el cobro de facturas vencidas, cuándo actuar y cómo una plataforma como Sena puede ayudarte a mantener el control.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "¿Por qué las facturas vencidas son un problema tan común?",
+            type: 'bold',
+            text: '¿Por qué las facturas vencidas son un problema tan común?',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "En el mundo empresarial, la morosidad es casi inevitable. Una pyme puede ofrecer excelentes productos o servicios, pero si los clientes no cumplen a tiempo con el pago de facturas vencidas, la empresa se enfrenta a:",
+            type: 'text',
+            text: 'En el mundo empresarial, la morosidad es casi inevitable. Una pyme puede ofrecer excelentes productos o servicios, pero si los clientes no cumplen a tiempo con el pago de facturas vencidas, la empresa se enfrenta a:',
           },
         ],
       },
       {
-        type: "list",
+        type: 'list',
         items: [
-          "Problemas de flujo de caja.",
-          "Dificultades para cubrir gastos fijos como nómina y proveedores.",
-          "Aumento del DSO (días de venta pendientes de cobro).",
-          "Tensión en la relación con los clientes.",
+          'Problemas de flujo de caja.',
+          'Dificultades para cubrir gastos fijos como nómina y proveedores.',
+          'Aumento del DSO (días de venta pendientes de cobro).',
+          'Tensión en la relación con los clientes.',
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "La clave no está en evitar el riesgo al 100%, sino en implementar procesos de cobranza de facturas vencidas claros, ordenados y empáticos.",
+            type: 'text',
+            text: 'La clave no está en evitar el riesgo al 100%, sino en implementar procesos de cobranza de facturas vencidas claros, ordenados y empáticos.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "Estrategias para recuperar una factura vencida",
+            type: 'bold',
+            text: 'Estrategias para recuperar una factura vencida',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "1. Comunicación proactiva y empática",
+            type: 'bold',
+            text: '1. Comunicación proactiva y empática',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Un recordatorio amable antes del vencimiento puede evitar retrasos. Si ya pasó la fecha, es mejor mantener un tono cordial para no dañar la relación.",
+            type: 'text',
+            text: 'Un recordatorio amable antes del vencimiento puede evitar retrasos. Si ya pasó la fecha, es mejor mantener un tono cordial para no dañar la relación.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "2. Formaliza un plan de pagos",
+            type: 'bold',
+            text: '2. Formaliza un plan de pagos',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "En muchos casos, el cliente no paga por falta de liquidez. Proponer cuotas o renegociar plazos puede ser más efectivo que insistir en un único cobro inmediato.",
+            type: 'text',
+            text: 'En muchos casos, el cliente no paga por falta de liquidez. Proponer cuotas o renegociar plazos puede ser más efectivo que insistir en un único cobro inmediato.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "3. Usa la tecnología a tu favor",
+            type: 'bold',
+            text: '3. Usa la tecnología a tu favor',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Las plataformas modernas permiten cobrar facturas vencidas de forma más eficiente mediante:",
+            type: 'text',
+            text: 'Las plataformas modernas permiten cobrar facturas vencidas de forma más eficiente mediante:',
           },
         ],
       },
       {
-        type: "list",
+        type: 'list',
         items: [
-          "Recordatorios automáticos multicanal.",
-          "Segmentación de clientes según riesgo.",
-          "Dashboards con métricas como aging de cartera.",
+          'Recordatorios automáticos multicanal.',
+          'Segmentación de clientes según riesgo.',
+          'Dashboards con métricas como aging de cartera.',
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "4. Establece políticas claras desde el inicio",
+            type: 'bold',
+            text: '4. Establece políticas claras desde el inicio',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Cuando los contratos especifican consecuencias por atraso, la gestión se simplifica. Además, la transparencia genera confianza y reduce conflictos.",
+            type: 'text',
+            text: 'Cuando los contratos especifican consecuencias por atraso, la gestión se simplifica. Además, la transparencia genera confianza y reduce conflictos.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "5. Evalúa cuándo escalar el caso",
+            type: 'bold',
+            text: '5. Evalúa cuándo escalar el caso',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Si el cliente no responde después de varios intentos, puede ser necesario acudir a servicios externos. La decisión debe basarse en un análisis costo-beneficio.",
+            type: 'text',
+            text: 'Si el cliente no responde después de varios intentos, puede ser necesario acudir a servicios externos. La decisión debe basarse en un análisis costo-beneficio.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "Cómo cobrar una factura vencida sin perder al cliente",
+            type: 'bold',
+            text: 'Cómo cobrar una factura vencida sin perder al cliente',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Uno de los mayores retos es recuperar una factura sin perder al cliente. Para lograrlo:",
+            type: 'text',
+            text: 'Uno de los mayores retos es recuperar una factura sin perder al cliente. Para lograrlo:',
           },
         ],
       },
       {
-        type: "list",
+        type: 'list',
         items: [
-          "Evita un tono agresivo o amenazante.",
-          "Personaliza los mensajes de recordatorio.",
-          "Ofrece soluciones antes que sanciones.",
-          "Registra todas las interacciones para mantener coherencia en la comunicación.",
+          'Evita un tono agresivo o amenazante.',
+          'Personaliza los mensajes de recordatorio.',
+          'Ofrece soluciones antes que sanciones.',
+          'Registra todas las interacciones para mantener coherencia en la comunicación.',
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Con estas prácticas, el pago de facturas vencidas deja de ser un conflicto y se convierte en una oportunidad para reforzar la confianza.",
+            type: 'text',
+            text: 'Con estas prácticas, el pago de facturas vencidas deja de ser un conflicto y se convierte en una oportunidad para reforzar la confianza.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "Recuperar facturas vencidas con una plataforma especializada",
+            type: 'bold',
+            text: 'Recuperar facturas vencidas con una plataforma especializada',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Las herramientas digitales hacen la diferencia entre un proceso caótico y una gestión profesional. Con Sena puedes:",
+            type: 'text',
+            text: 'Las herramientas digitales hacen la diferencia entre un proceso caótico y una gestión profesional. Con Sena puedes:',
           },
         ],
       },
       {
-        type: "list",
+        type: 'list',
         items: [
-          "Automatizar campañas de cobranza.",
-          "Acceder a reportes de cobranza de facturas vencidas en tiempo real.",
-          "Clasificar clientes por antigüedad de deuda.",
-          "Proyectar flujo de caja para anticipar problemas de liquidez.",
+          'Automatizar campañas de cobranza.',
+          'Acceder a reportes de cobranza de facturas vencidas en tiempo real.',
+          'Clasificar clientes por antigüedad de deuda.',
+          'Proyectar flujo de caja para anticipar problemas de liquidez.',
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "De esta manera, el seguimiento de facturas vencidas se convierte en un proceso ordenado, estratégico y menos desgastante para el equipo.",
-          },
-        ],
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "text",
-            text: "Las facturas vencidas no tienen por qué convertirse en una amenaza para la estabilidad de tu empresa. Con procesos claros, comunicación empática y herramientas adecuadas, es posible cobrar facturas vencidas sin deteriorar la relación con tus clientes.",
+            type: 'text',
+            text: 'De esta manera, el seguimiento de facturas vencidas se convierte en un proceso ordenado, estratégico y menos desgastante para el equipo.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "¿Quieres dejar atrás la incertidumbre y optimizar tu cobranza? ",
+            type: 'text',
+            text: 'Las facturas vencidas no tienen por qué convertirse en una amenaza para la estabilidad de tu empresa. Con procesos claros, comunicación empática y herramientas adecuadas, es posible cobrar facturas vencidas sin deteriorar la relación con tus clientes.',
+          },
+        ],
+      },
+      {
+        type: 'paragraph',
+        fragments: [
+          {
+            type: 'text',
+            text: '¿Quieres dejar atrás la incertidumbre y optimizar tu cobranza? ',
           },
           {
-            type: "link",
-            text: "Conoce Sena y su solución para la gestión de facturas vencidas",
-            href: "https://meetings.hubspot.com/francisco502",
+            type: 'link',
+            text: 'Conoce Sena y su solución para la gestión de facturas vencidas',
+            href: 'https://meetings.hubspot.com/francisco502',
           },
           {
-            type: "text",
-            text: ".",
+            type: 'text',
+            text: '.',
           },
         ],
       },
@@ -5634,573 +5621,572 @@ export const blogPosts: BlogPost[] = [
   {
     id: 30,
     slug: slug(
-      "Descubre los riesgos de no cobrar una deuda a tiempo y como afectan el flujo de caja, la rentabilidad y las relaciones comerciales de tu empresa",
+      'Descubre los riesgos de no cobrar una deuda a tiempo y como afectan el flujo de caja, la rentabilidad y las relaciones comerciales de tu empresa'
     ),
-    title:
-      "¿Qué pasa si no cobro una deuda a tiempo? Riesgos ocultos para tu pyme?",
+    title: '¿Qué pasa si no cobro una deuda a tiempo? Riesgos ocultos para tu pyme?',
     intro:
-      "Retrasar la cobranza puede parecer un detalle menor, pero los riesgos de no cobrar una deuda se acumulan y terminan poniendo en jaque la estabilidad financiera de cualquier pyme. Con frecuencia, los dueños de negocio piensan que esperar un poco más no traerá consecuencias; sin embargo, lo que realmente ocurre es que el flujo de caja se deteriora, las pérdidas aumentan y las relaciones con los clientes se tensan.",
-    date: "31 de marzo 2026",
-    tags: ["Blog"],
+      'Retrasar la cobranza puede parecer un detalle menor, pero los riesgos de no cobrar una deuda se acumulan y terminan poniendo en jaque la estabilidad financiera de cualquier pyme. Con frecuencia, los dueños de negocio piensan que esperar un poco más no traerá consecuencias; sin embargo, lo que realmente ocurre es que el flujo de caja se deteriora, las pérdidas aumentan y las relaciones con los clientes se tensan.',
+    date: '31 de marzo 2026',
+    tags: ['Blog'],
     image: AssetImageBlog.blog_30_main.src,
     content: [
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Retrasar la cobranza puede parecer un detalle menor, pero los ",
+            type: 'text',
+            text: 'Retrasar la cobranza puede parecer un detalle menor, pero los ',
           },
           {
-            type: "bold",
-            text: "riesgos de no cobrar una deuda",
+            type: 'bold',
+            text: 'riesgos de no cobrar una deuda',
           },
           {
-            type: "text",
-            text: " se acumulan y terminan poniendo en jaque la estabilidad financiera de cualquier pyme. Con frecuencia, los dueños de negocio piensan que esperar un poco más no traerá consecuencias; sin embargo, lo que realmente ocurre es que el flujo de caja se deteriora, las pérdidas aumentan y las relaciones con los clientes se tensan.",
+            type: 'text',
+            text: ' se acumulan y terminan poniendo en jaque la estabilidad financiera de cualquier pyme. Con frecuencia, los dueños de negocio piensan que esperar un poco más no traerá consecuencias; sin embargo, lo que realmente ocurre es que el flujo de caja se deteriora, las pérdidas aumentan y las relaciones con los clientes se tensan.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "En este artículo se explicará en detalle qué sucede cuando una factura queda pendiente por mucho tiempo, cuáles son los efectos invisibles que se generan y cómo prevenirlos con una gestión más estratégica.",
+            type: 'text',
+            text: 'En este artículo se explicará en detalle qué sucede cuando una factura queda pendiente por mucho tiempo, cuáles son los efectos invisibles que se generan y cómo prevenirlos con una gestión más estratégica.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "Riesgos de no cobrar una deuda: un problema más común de lo que parece",
+            type: 'bold',
+            text: 'Riesgos de no cobrar una deuda: un problema más común de lo que parece',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "En la mayoría de las pymes, la prioridad diaria se centra en vender más y atender clientes, pero no siempre en ",
+            type: 'text',
+            text: 'En la mayoría de las pymes, la prioridad diaria se centra en vender más y atender clientes, pero no siempre en ',
           },
           {
-            type: "bold",
-            text: "cobrar deudas a tiempo",
+            type: 'bold',
+            text: 'cobrar deudas a tiempo',
           },
           {
-            type: "text",
-            text: ". Cuando se deja pasar una factura vencida, se instala un efecto dominó: la liquidez se reduce, las obligaciones internas se complican y la empresa comienza a depender de créditos externos.",
+            type: 'text',
+            text: '. Cuando se deja pasar una factura vencida, se instala un efecto dominó: la liquidez se reduce, las obligaciones internas se complican y la empresa comienza a depender de créditos externos.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "El riesgo mayor no está en una sola factura sin pagar, sino en la acumulación de atrasos. Las estadísticas muestran que mientras más tiempo transcurre, menor es la probabilidad de recuperación. Por lo tanto, lo que al inicio parece un simple retraso, termina convirtiéndose en un ",
+            type: 'text',
+            text: 'El riesgo mayor no está en una sola factura sin pagar, sino en la acumulación de atrasos. Las estadísticas muestran que mientras más tiempo transcurre, menor es la probabilidad de recuperación. Por lo tanto, lo que al inicio parece un simple retraso, termina convirtiéndose en un ',
           },
           {
-            type: "bold",
-            text: "problema estructural de flujo de caja afectado",
+            type: 'bold',
+            text: 'problema estructural de flujo de caja afectado',
           },
           {
-            type: "text",
-            text: ".",
+            type: 'text',
+            text: '.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "¿Qué pasa si no cobro una deuda en mi pyme?",
+            type: 'bold',
+            text: '¿Qué pasa si no cobro una deuda en mi pyme?',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Para comprender la magnitud del problema, conviene observar tres escenarios habituales que enfrentan las pequeñas y medianas empresas:",
+            type: 'text',
+            text: 'Para comprender la magnitud del problema, conviene observar tres escenarios habituales que enfrentan las pequeñas y medianas empresas:',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "1. ",
+            type: 'text',
+            text: '1. ',
           },
           {
-            type: "bold",
-            text: "Pérdidas financieras inevitables",
+            type: 'bold',
+            text: 'Pérdidas financieras inevitables',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Cuando un pago no se recupera a tiempo, el dinero deja de estar disponible para el negocio. Aunque se insista en cobrar, la experiencia demuestra que mientras más antigua es la deuda, menor es la tasa de recuperación. En consecuencia, los ingresos proyectados nunca se concretan y las pérdidas se consolidan.",
+            type: 'text',
+            text: 'Cuando un pago no se recupera a tiempo, el dinero deja de estar disponible para el negocio. Aunque se insista en cobrar, la experiencia demuestra que mientras más antigua es la deuda, menor es la tasa de recuperación. En consecuencia, los ingresos proyectados nunca se concretan y las pérdidas se consolidan.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "2. ",
+            type: 'text',
+            text: '2. ',
           },
           {
-            type: "bold",
-            text: "Deterioro del flujo de caja",
+            type: 'bold',
+            text: 'Deterioro del flujo de caja',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "El retraso en el ingreso de efectivo afecta directamente la capacidad de la empresa para cubrir gastos fijos como salarios, impuestos o proveedores. Se produce, por lo tanto, un círculo vicioso: la falta de liquidez obliga a buscar financiamiento externo y este financiamiento incrementa los costos operativos.",
+            type: 'text',
+            text: 'El retraso en el ingreso de efectivo afecta directamente la capacidad de la empresa para cubrir gastos fijos como salarios, impuestos o proveedores. Se produce, por lo tanto, un círculo vicioso: la falta de liquidez obliga a buscar financiamiento externo y este financiamiento incrementa los costos operativos.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "3. ",
+            type: 'text',
+            text: '3. ',
           },
           {
-            type: "bold",
-            text: "Relaciones comerciales desgastadas",
+            type: 'bold',
+            text: 'Relaciones comerciales desgastadas',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "La presión por el pago genera tensión entre empresa y cliente. Si la cobranza se maneja tarde y de forma improvisada, la confianza se erosiona. Lo que pudo resolverse con una comunicación proactiva se convierte en un conflicto difícil de gestionar.",
+            type: 'text',
+            text: 'La presión por el pago genera tensión entre empresa y cliente. Si la cobranza se maneja tarde y de forma improvisada, la confianza se erosiona. Lo que pudo resolverse con una comunicación proactiva se convierte en un conflicto difícil de gestionar.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "Consecuencias de no cobrar una deuda: señales de alerta",
+            type: 'bold',
+            text: 'Consecuencias de no cobrar una deuda: señales de alerta',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Quienes se preguntan ",
+            type: 'text',
+            text: 'Quienes se preguntan ',
           },
           {
-            type: "bold",
-            text: "qué pasa si no cobro una deuda",
+            type: 'bold',
+            text: 'qué pasa si no cobro una deuda',
           },
           {
-            type: "text",
-            text: " deben identificar las señales tempranas que revelan una gestión de cobros deficiente:",
+            type: 'text',
+            text: ' deben identificar las señales tempranas que revelan una gestión de cobros deficiente:',
           },
         ],
       },
       {
-        type: "list",
+        type: 'list',
         items: [
-          "Facturas vencidas que superan los 30 o 60 días sin seguimiento.",
-          "Dependencia excesiva de Excel para registrar cuentas por cobrar.",
-          "Ausencia de métricas clave como aging de cartera o DSO.",
-          "Clientes que repiten patrones de atraso sin recibir una estrategia diferenciada.",
-          "Equipo financiero saturado con tareas manuales y poco análisis estratégico.",
+          'Facturas vencidas que superan los 30 o 60 días sin seguimiento.',
+          'Dependencia excesiva de Excel para registrar cuentas por cobrar.',
+          'Ausencia de métricas clave como aging de cartera o DSO.',
+          'Clientes que repiten patrones de atraso sin recibir una estrategia diferenciada.',
+          'Equipo financiero saturado con tareas manuales y poco análisis estratégico.',
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Estas señales no deben ser ignoradas. Cada día que pasa, el costo oculto de la morosidad se acumula, afectando no solo el dinero disponible, sino también la capacidad de tomar decisiones estratégicas.",
+            type: 'text',
+            text: 'Estas señales no deben ser ignoradas. Cada día que pasa, el costo oculto de la morosidad se acumula, afectando no solo el dinero disponible, sino también la capacidad de tomar decisiones estratégicas.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "Riesgos financieros y operativos de la morosidad",
+            type: 'bold',
+            text: 'Riesgos financieros y operativos de la morosidad',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "El impacto de las ",
+            type: 'text',
+            text: 'El impacto de las ',
           },
           {
-            type: "bold",
-            text: "deudas no cobradas a tiempo",
+            type: 'bold',
+            text: 'deudas no cobradas a tiempo',
           },
           {
-            type: "text",
-            text: " se manifiesta en distintos niveles:",
+            type: 'text',
+            text: ' se manifiesta en distintos niveles:',
           },
         ],
       },
       {
-        type: "list",
-        items: [
-          [
-            {
-              type: "bold",
-              text: "Liquidez reducida:",
-            },
-            {
-              type: "text",
-              text: " los recursos que deberían estar en caja permanecen retenidos en cuentas incobrables.",
-            },
-          ],
-          [
-            {
-              type: "bold",
-              text: "Mayor riesgo de impago definitivo:",
-            },
-            {
-              type: "text",
-              text: " después de 90 días, las probabilidades de recuperar una deuda caen de forma significativa.",
-            },
-          ],
-          [
-            {
-              type: "bold",
-              text: "Incremento de costos administrativos:",
-            },
-            {
-              type: "text",
-              text: " más tiempo y esfuerzo se destinan a tareas de persecución de pagos.",
-            },
-          ],
-          [
-            {
-              type: "bold",
-              text: "Desconfianza del mercado:",
-            },
-            {
-              type: "text",
-              text: " proveedores y entidades financieras perciben mayor riesgo en una empresa con altos niveles de morosidad.",
-            },
-          ],
-        ],
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "text",
-            text: "En otras palabras, las ",
-          },
-          {
-            type: "bold",
-            text: "consecuencias de no cobrar una deuda",
-          },
-          {
-            type: "text",
-            text: " no se limitan al corto plazo; también afectan la reputación y la competitividad de la empresa en el mercado.",
-          },
-        ],
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "bold",
-            text: "Cómo evitar los riesgos de no cobrar una deuda",
-          },
-        ],
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "text",
-            text: "Aunque la morosidad nunca se elimina por completo, sí puede controlarse con prácticas adecuadas:",
-          },
-        ],
-      },
-      {
-        type: "list",
+        type: 'list',
         items: [
           [
             {
-              type: "bold",
-              text: "Políticas de crédito claras:",
+              type: 'bold',
+              text: 'Liquidez reducida:',
             },
             {
-              type: "text",
-              text: " establecer plazos, penalidades y condiciones desde el inicio reduce la ambigüedad.",
+              type: 'text',
+              text: ' los recursos que deberían estar en caja permanecen retenidos en cuentas incobrables.',
             },
           ],
           [
             {
-              type: "bold",
-              text: "Recordatorios preventivos:",
+              type: 'bold',
+              text: 'Mayor riesgo de impago definitivo:',
             },
             {
-              type: "text",
-              text: " no esperar a que la factura venza para comunicarse con el cliente.",
+              type: 'text',
+              text: ' después de 90 días, las probabilidades de recuperar una deuda caen de forma significativa.',
             },
           ],
           [
             {
-              type: "bold",
-              text: "Planes de pago flexibles:",
+              type: 'bold',
+              text: 'Incremento de costos administrativos:',
             },
             {
-              type: "text",
-              text: " en lugar de perder al cliente, puede proponerse un esquema escalonado.",
+              type: 'text',
+              text: ' más tiempo y esfuerzo se destinan a tareas de persecución de pagos.',
             },
           ],
           [
             {
-              type: "bold",
-              text: "Uso de indicadores financieros:",
+              type: 'bold',
+              text: 'Desconfianza del mercado:',
             },
             {
-              type: "text",
-              text: " medir el aging de cartera, el DSO y la tasa de recuperación facilita la toma de decisiones.",
-            },
-          ],
-          [
-            {
-              type: "bold",
-              text: "Automatización del proceso:",
-            },
-            {
-              type: "text",
-              text: " la tecnología permite enviar recordatorios automáticos, segmentar clientes y proyectar escenarios de liquidez.",
+              type: 'text',
+              text: ' proveedores y entidades financieras perciben mayor riesgo en una empresa con altos niveles de morosidad.',
             },
           ],
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Sin estas prácticas, los ",
+            type: 'text',
+            text: 'En otras palabras, las ',
           },
           {
-            type: "bold",
-            text: "riesgos de no cobrar una deuda",
+            type: 'bold',
+            text: 'consecuencias de no cobrar una deuda',
           },
           {
-            type: "text",
-            text: " aumentan considerablemente, comprometiendo la salud de la empresa.",
+            type: 'text',
+            text: ' no se limitan al corto plazo; también afectan la reputación y la competitividad de la empresa en el mercado.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "Sena: una solución frente a los riesgos de morosidad",
+            type: 'bold',
+            text: 'Cómo evitar los riesgos de no cobrar una deuda',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Para una pyme, depender únicamente de planillas o de un ERP genérico puede resultar insuficiente. Sena surge como un ",
-          },
-          {
-            type: "bold",
-            text: "SaaS especializado en cobranza",
-          },
-          {
-            type: "text",
-            text: ", diseñado para reducir la morosidad y evitar que las ",
-          },
-          {
-            type: "bold",
-            text: "deudas no cobradas a tiempo",
-          },
-          {
-            type: "text",
-            text: " afecten la estabilidad financiera.",
+            type: 'text',
+            text: 'Aunque la morosidad nunca se elimina por completo, sí puede controlarse con prácticas adecuadas:',
           },
         ],
       },
       {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "text",
-            text: "Entre sus principales ventajas se destacan:",
-          },
-        ],
-      },
-      {
-        type: "list",
+        type: 'list',
         items: [
           [
             {
-              type: "bold",
-              text: "Automatización completa de la cobranza",
+              type: 'bold',
+              text: 'Políticas de crédito claras:',
             },
             {
-              type: "text",
-              text: " con recordatorios multicanal.",
-            },
-          ],
-          [
-            {
-              type: "bold",
-              text: "Dashboards en tiempo real",
-            },
-            {
-              type: "text",
-              text: " con KPIs estratégicos como DSO y aging de cartera.",
+              type: 'text',
+              text: ' establecer plazos, penalidades y condiciones desde el inicio reduce la ambigüedad.',
             },
           ],
           [
             {
-              type: "bold",
-              text: "Segmentación de clientes morosos",
+              type: 'bold',
+              text: 'Recordatorios preventivos:',
             },
             {
-              type: "text",
-              text: " según riesgo y antigüedad.",
+              type: 'text',
+              text: ' no esperar a que la factura venza para comunicarse con el cliente.',
             },
           ],
           [
             {
-              type: "bold",
-              text: "Proyecciones claras de flujo de caja",
+              type: 'bold',
+              text: 'Planes de pago flexibles:',
             },
             {
-              type: "text",
-              text: " que anticipan escenarios futuros.",
+              type: 'text',
+              text: ' en lugar de perder al cliente, puede proponerse un esquema escalonado.',
+            },
+          ],
+          [
+            {
+              type: 'bold',
+              text: 'Uso de indicadores financieros:',
+            },
+            {
+              type: 'text',
+              text: ' medir el aging de cartera, el DSO y la tasa de recuperación facilita la toma de decisiones.',
+            },
+          ],
+          [
+            {
+              type: 'bold',
+              text: 'Automatización del proceso:',
+            },
+            {
+              type: 'text',
+              text: ' la tecnología permite enviar recordatorios automáticos, segmentar clientes y proyectar escenarios de liquidez.',
             },
           ],
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Gracias a estas funciones, el seguimiento de cuentas por cobrar se transforma en un proceso estratégico y no reactivo. En lugar de descubrir demasiado tarde los efectos negativos, la empresa actúa de forma anticipada.",
+            type: 'text',
+            text: 'Sin estas prácticas, los ',
+          },
+          {
+            type: 'bold',
+            text: 'riesgos de no cobrar una deuda',
+          },
+          {
+            type: 'text',
+            text: ' aumentan considerablemente, comprometiendo la salud de la empresa.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "bold",
-            text: "Ejemplo práctico: dos pymes, dos realidades",
+            type: 'bold',
+            text: 'Sena: una solución frente a los riesgos de morosidad',
           },
         ],
       },
       {
-        type: "list",
+        type: 'paragraph',
+        fragments: [
+          {
+            type: 'text',
+            text: 'Para una pyme, depender únicamente de planillas o de un ERP genérico puede resultar insuficiente. Sena surge como un ',
+          },
+          {
+            type: 'bold',
+            text: 'SaaS especializado en cobranza',
+          },
+          {
+            type: 'text',
+            text: ', diseñado para reducir la morosidad y evitar que las ',
+          },
+          {
+            type: 'bold',
+            text: 'deudas no cobradas a tiempo',
+          },
+          {
+            type: 'text',
+            text: ' afecten la estabilidad financiera.',
+          },
+        ],
+      },
+      {
+        type: 'paragraph',
+        fragments: [
+          {
+            type: 'text',
+            text: 'Entre sus principales ventajas se destacan:',
+          },
+        ],
+      },
+      {
+        type: 'list',
         items: [
           [
             {
-              type: "bold",
-              text: "Pyme A:",
+              type: 'bold',
+              text: 'Automatización completa de la cobranza',
             },
             {
-              type: "text",
-              text: " deja pasar las facturas vencidas más de 60 días sin estrategia. Resultado: su flujo de caja se colapsa y debe recurrir a créditos externos costosos.",
+              type: 'text',
+              text: ' con recordatorios multicanal.',
             },
           ],
           [
             {
-              type: "bold",
-              text: "Pyme B:",
+              type: 'bold',
+              text: 'Dashboards en tiempo real',
             },
             {
-              type: "text",
-              text: " implementa Sena, automatiza la cobranza y segmenta clientes por riesgo. Resultado: reduce su DSO en 30%, recupera liquidez y logra invertir en crecimiento.",
+              type: 'text',
+              text: ' con KPIs estratégicos como DSO y aging de cartera.',
+            },
+          ],
+          [
+            {
+              type: 'bold',
+              text: 'Segmentación de clientes morosos',
+            },
+            {
+              type: 'text',
+              text: ' según riesgo y antigüedad.',
+            },
+          ],
+          [
+            {
+              type: 'bold',
+              text: 'Proyecciones claras de flujo de caja',
+            },
+            {
+              type: 'text',
+              text: ' que anticipan escenarios futuros.',
             },
           ],
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Este ejemplo muestra cómo las decisiones de cobranza marcan la diferencia entre sobrevivir con deudas acumuladas o crecer con estabilidad.",
+            type: 'text',
+            text: 'Gracias a estas funciones, el seguimiento de cuentas por cobrar se transforma en un proceso estratégico y no reactivo. En lugar de descubrir demasiado tarde los efectos negativos, la empresa actúa de forma anticipada.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Los ",
-          },
-          {
-            type: "bold",
-            text: "riesgos de no cobrar una deuda",
-          },
-          {
-            type: "text",
-            text: " son reales y profundos: pérdida de liquidez, desgaste en las relaciones comerciales, aumento de costos y daño a la reputación. Lo que comienza como un simple atraso se convierte en una amenaza para la continuidad del negocio si no se actúa con rapidez.",
+            type: 'bold',
+            text: 'Ejemplo práctico: dos pymes, dos realidades',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'list',
+        items: [
+          [
+            {
+              type: 'bold',
+              text: 'Pyme A:',
+            },
+            {
+              type: 'text',
+              text: ' deja pasar las facturas vencidas más de 60 días sin estrategia. Resultado: su flujo de caja se colapsa y debe recurrir a créditos externos costosos.',
+            },
+          ],
+          [
+            {
+              type: 'bold',
+              text: 'Pyme B:',
+            },
+            {
+              type: 'text',
+              text: ' implementa Sena, automatiza la cobranza y segmenta clientes por riesgo. Resultado: reduce su DSO en 30%, recupera liquidez y logra invertir en crecimiento.',
+            },
+          ],
+        ],
+      },
+      {
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "La gestión de cuentas por cobrar no debe verse como un trámite administrativo, sino como una estrategia central para garantizar el futuro de la empresa.",
+            type: 'text',
+            text: 'Este ejemplo muestra cómo las decisiones de cobranza marcan la diferencia entre sobrevivir con deudas acumuladas o crecer con estabilidad.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "¿Quieres evitar que las facturas vencidas se conviertan en un problema para tu pyme? ",
+            type: 'text',
+            text: 'Los ',
           },
           {
-            type: "link",
-            text: "Conoce Sena y transforma tu cobranza en un proceso automatizado y estratégico",
-            href: "https://meetings.hubspot.com/francisco502",
+            type: 'bold',
+            text: 'riesgos de no cobrar una deuda',
           },
           {
-            type: "text",
-            text: ".",
+            type: 'text',
+            text: ' son reales y profundos: pérdida de liquidez, desgaste en las relaciones comerciales, aumento de costos y daño a la reputación. Lo que comienza como un simple atraso se convierte en una amenaza para la continuidad del negocio si no se actúa con rapidez.',
+          },
+        ],
+      },
+      {
+        type: 'paragraph',
+        fragments: [
+          {
+            type: 'text',
+            text: 'La gestión de cuentas por cobrar no debe verse como un trámite administrativo, sino como una estrategia central para garantizar el futuro de la empresa.',
+          },
+        ],
+      },
+      {
+        type: 'paragraph',
+        fragments: [
+          {
+            type: 'text',
+            text: '¿Quieres evitar que las facturas vencidas se conviertan en un problema para tu pyme? ',
+          },
+          {
+            type: 'link',
+            text: 'Conoce Sena y transforma tu cobranza en un proceso automatizado y estratégico',
+            href: 'https://meetings.hubspot.com/francisco502',
+          },
+          {
+            type: 'text',
+            text: '.',
           },
         ],
       },
@@ -6208,139 +6194,140 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: 31,
-    slug: slug("Cobrar no deberia ser lo mas dificil de tu negocio"),
-    title: "Cobrar no debería ser lo más difícil de tu negocio",
-    intro: "Vendes, emites la factura y esperas. Pero el dinero no llega. Esta es la realidad de miles de empresas en Chile.",
-    date: "10 de abril 2026",
-    tags: ["Sena", "Cobranza"],
-    image: "/images/blog/cobrar-no-deberia-ser-dificil.jpg",
+    slug: slug('Cobrar no deberia ser lo mas dificil de tu negocio'),
+    title: 'Cobrar no debería ser lo más difícil de tu negocio',
+    intro:
+      'Vendes, emites la factura y esperas. Pero el dinero no llega. Esta es la realidad de miles de empresas en Chile.',
+    date: '10 de abril 2026',
+    tags: ['Sena', 'Cobranza'],
+    image: '/images/blog/cobrar-no-deberia-ser-dificil.jpg',
     content: [
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Vendes. Emites la factura. Y esperas.",
+            type: 'text',
+            text: 'Vendes. Emites la factura. Y esperas.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Pero el dinero no llega. Pasan los días, luego las semanas. Mandas un correo. Otro. Llamas. Te dicen que \"ya está en proceso\". Y mientras tanto, tú tienes que pagar sueldos, proveedores e impuestos.",
+            type: 'text',
+            text: 'Pero el dinero no llega. Pasan los días, luego las semanas. Mandas un correo. Otro. Llamas. Te dicen que "ya está en proceso". Y mientras tanto, tú tienes que pagar sueldos, proveedores e impuestos.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Esta es la realidad de miles de empresas en Chile. Y lo más frustrante: no es un problema de ventas ni de calidad. Es un problema de cobranza.",
+            type: 'text',
+            text: 'Esta es la realidad de miles de empresas en Chile. Y lo más frustrante: no es un problema de ventas ni de calidad. Es un problema de cobranza.',
           },
         ],
       },
       {
-        type: "subtitle",
-        text: "El problema no es que no te paguen. Es que no tienes un sistema.",
+        type: 'subtitle',
+        text: 'El problema no es que no te paguen. Es que no tienes un sistema.',
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "La mayoría de las pymes cobran de manera reactiva. Esperan que llegue el vencimiento, ven que no llegó el pago, y recién ahí actúan. Sin proceso. Sin seguimiento. Sin datos.",
+            type: 'text',
+            text: 'La mayoría de las pymes cobran de manera reactiva. Esperan que llegue el vencimiento, ven que no llegó el pago, y recién ahí actúan. Sin proceso. Sin seguimiento. Sin datos.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "El resultado: facturas que se acumulan, relaciones comerciales que se tensan y dueños de empresa que dedican horas de su semana a perseguir lo que ya es suyo.",
+            type: 'text',
+            text: 'El resultado: facturas que se acumulan, relaciones comerciales que se tensan y dueños de empresa que dedican horas de su semana a perseguir lo que ya es suyo.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Cobrar no debería ser lo más difícil de tu negocio. Pero si no tienes un proceso claro, termina siéndolo.",
+            type: 'text',
+            text: 'Cobrar no debería ser lo más difícil de tu negocio. Pero si no tienes un proceso claro, termina siéndolo.',
           },
         ],
       },
       {
-        type: "subtitle",
-        text: "Lo que hace la diferencia: anticipación y consistencia",
+        type: 'subtitle',
+        text: 'Lo que hace la diferencia: anticipación y consistencia',
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Las empresas que cobran bien no cobran más fuerte. Cobran antes y con más orden.",
+            type: 'text',
+            text: 'Las empresas que cobran bien no cobran más fuerte. Cobran antes y con más orden.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Eso significa enviar recordatorios antes del vencimiento, no después. Hacer seguimiento por el canal correcto según el tipo de cliente. Tener visibilidad de qué facturas están en riesgo antes de que venzan.",
+            type: 'text',
+            text: 'Eso significa enviar recordatorios antes del vencimiento, no después. Hacer seguimiento por el canal correcto según el tipo de cliente. Tener visibilidad de qué facturas están en riesgo antes de que venzan.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Y sobre todo: no depender de una sola persona que lleva todo en una planilla.",
+            type: 'text',
+            text: 'Y sobre todo: no depender de una sola persona que lleva todo en una planilla.',
           },
         ],
       },
       {
-        type: "subtitle",
-        text: "Para eso existe Sena",
+        type: 'subtitle',
+        text: 'Para eso existe Sena',
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Sena es una plataforma de cobranza diseñada para empresas B2B en Chile. Automatiza los recordatorios, centraliza el seguimiento y te da visibilidad en tiempo real del estado de cada factura.",
+            type: 'text',
+            text: 'Sena es una plataforma de cobranza diseñada para empresas B2B en Chile. Automatiza los recordatorios, centraliza el seguimiento y te da visibilidad en tiempo real del estado de cada factura.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "No es un ERP. No es una herramienta de contabilidad. Es una herramienta específica para que cobres más rápido, con menos esfuerzo y sin dañar la relación con tus clientes.",
+            type: 'text',
+            text: 'No es un ERP. No es una herramienta de contabilidad. Es una herramienta específica para que cobres más rápido, con menos esfuerzo y sin dañar la relación con tus clientes.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Si tu empresa tiene facturas pendientes y quieres dejar de perseguirlas manualmente, ",
+            type: 'text',
+            text: 'Si tu empresa tiene facturas pendientes y quieres dejar de perseguirlas manualmente, ',
           },
           {
-            type: "link",
-            text: "agenda una demo con nuestro equipo",
-            href: "https://meetings.hubspot.com/francisco502",
+            type: 'link',
+            text: 'agenda una demo con nuestro equipo',
+            href: 'https://meetings.hubspot.com/francisco502',
           },
           {
-            type: "text",
-            text: ".",
+            type: 'text',
+            text: '.',
           },
         ],
       },
@@ -6348,179 +6335,180 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: 32,
-    slug: slug("Cuando ya vendiste pero el dinero todavia no llega"),
-    title: "Cuando ya vendiste, pero el dinero todavía no llega",
-    intro: "El capital de trabajo es el oxígeno de una pyme. Y la principal amenaza para ese oxígeno no es vender poco, sino cobrar tarde.",
-    date: "14 de abril 2026",
-    tags: ["Sena", "Educación Financiera"],
-    image: "/images/blog/cuando-vendiste-pero-no-llega.jpg",
+    slug: slug('Cuando ya vendiste pero el dinero todavia no llega'),
+    title: 'Cuando ya vendiste, pero el dinero todavía no llega',
+    intro:
+      'El capital de trabajo es el oxígeno de una pyme. Y la principal amenaza para ese oxígeno no es vender poco, sino cobrar tarde.',
+    date: '14 de abril 2026',
+    tags: ['Sena', 'Educación Financiera'],
+    image: '/images/blog/cuando-vendiste-pero-no-llega.jpg',
     content: [
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Sofi tiene una empresa de servicios de marketing. Factura bien. Sus clientes están contentos. Pero cada fin de mes entra en pánico.",
+            type: 'text',
+            text: 'Sofi tiene una empresa de servicios de marketing. Factura bien. Sus clientes están contentos. Pero cada fin de mes entra en pánico.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "No porque no tenga clientes. Sino porque tiene $18 millones en facturas emitidas y solo $3 millones en la cuenta.",
+            type: 'text',
+            text: 'No porque no tenga clientes. Sino porque tiene $18 millones en facturas emitidas y solo $3 millones en la cuenta.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Sofi no tiene un problema de ventas. Tiene un problema de flujo de caja. Y la causa es siempre la misma: facturas que no se pagan a tiempo.",
+            type: 'text',
+            text: 'Sofi no tiene un problema de ventas. Tiene un problema de flujo de caja. Y la causa es siempre la misma: facturas que no se pagan a tiempo.',
           },
         ],
       },
       {
-        type: "subtitle",
-        text: "El costo invisible del cobro tardío",
+        type: 'subtitle',
+        text: 'El costo invisible del cobro tardío',
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Cuando una factura se atrasa, el impacto no es solo financiero. También es operacional y emocional.",
+            type: 'text',
+            text: 'Cuando una factura se atrasa, el impacto no es solo financiero. También es operacional y emocional.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Financieramente, tienes que buscar cómo financiar lo que ya vendiste. Operacionalmente, alguien de tu equipo tiene que dejar de hacer su trabajo para perseguir el pago. Y emocionalmente, ese estrés constante afecta la forma en que tomas decisiones.",
+            type: 'text',
+            text: 'Financieramente, tienes que buscar cómo financiar lo que ya vendiste. Operacionalmente, alguien de tu equipo tiene que dejar de hacer su trabajo para perseguir el pago. Y emocionalmente, ese estrés constante afecta la forma en que tomas decisiones.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Según datos de Propyme, más del 60% de las pymes chilenas ha tenido problemas de liquidez por cobros tardíos en el último año. No es una excepción. Es la norma.",
+            type: 'text',
+            text: 'Según datos de Propyme, más del 60% de las pymes chilenas ha tenido problemas de liquidez por cobros tardíos en el último año. No es una excepción. Es la norma.',
           },
         ],
       },
       {
-        type: "subtitle",
-        text: "El problema de fondo: cobrar sin proceso",
+        type: 'subtitle',
+        text: 'El problema de fondo: cobrar sin proceso',
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "La mayoría de las empresas cobra de manera reactiva. Espera el vencimiento, ve que no llegó el pago, y recién ahí actúa. Sin seguimiento previo. Sin datos. Sin automatización.",
+            type: 'text',
+            text: 'La mayoría de las empresas cobra de manera reactiva. Espera el vencimiento, ve que no llegó el pago, y recién ahí actúa. Sin seguimiento previo. Sin datos. Sin automatización.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Y cuando finalmente se comunican con el cliente, ya pasaron días o semanas. El cliente ya \"olvidó\". O simplemente priorizó a quien le cobró primero.",
+            type: 'text',
+            text: 'Y cuando finalmente se comunican con el cliente, ya pasaron días o semanas. El cliente ya "olvidó". O simplemente priorizó a quien le cobró primero.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Como reportó ",
+            type: 'text',
+            text: 'Como reportó ',
           },
           {
-            type: "link",
-            text: "La Tercera",
-            href: "https://www.latercera.com",
+            type: 'link',
+            text: 'La Tercera',
+            href: 'https://www.latercera.com',
           },
           {
-            type: "text",
-            text: " en su cobertura del ecosistema pyme, el rezago en los pagos entre empresas es uno de los principales factores que limita el crecimiento de las empresas medianas en Chile.",
+            type: 'text',
+            text: ' en su cobertura del ecosistema pyme, el rezago en los pagos entre empresas es uno de los principales factores que limita el crecimiento de las empresas medianas en Chile.',
           },
         ],
       },
       {
-        type: "subtitle",
-        text: "Cobrar bien no es insistir más. Es anticiparse.",
+        type: 'subtitle',
+        text: 'Cobrar bien no es insistir más. Es anticiparse.',
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "La diferencia entre las empresas que tienen flujo y las que no suele ser una sola cosa: proceso.",
+            type: 'text',
+            text: 'La diferencia entre las empresas que tienen flujo y las que no suele ser una sola cosa: proceso.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Un recordatorio enviado tres días antes del vencimiento es mucho más efectivo que uno enviado tres días después. Un seguimiento automatizado por WhatsApp o email tiene más impacto que una llamada improvisada.",
+            type: 'text',
+            text: 'Un recordatorio enviado tres días antes del vencimiento es mucho más efectivo que uno enviado tres días después. Un seguimiento automatizado por WhatsApp o email tiene más impacto que una llamada improvisada.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Cuando tienes un proceso claro, cobrar deja de ser una fuente de estrés y se convierte en algo predecible.",
+            type: 'text',
+            text: 'Cuando tienes un proceso claro, cobrar deja de ser una fuente de estrés y se convierte en algo predecible.',
           },
         ],
       },
       {
-        type: "subtitle",
-        text: "Sena: cobranza con proceso, no con presión",
+        type: 'subtitle',
+        text: 'Sena: cobranza con proceso, no con presión',
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Sena ayuda a empresas como la de Sofi a transformar su cobranza. Automatizamos los recordatorios, centralizamos el seguimiento y te damos visibilidad en tiempo real de qué facturas están en riesgo antes de que venzan.",
+            type: 'text',
+            text: 'Sena ayuda a empresas como la de Sofi a transformar su cobranza. Automatizamos los recordatorios, centralizamos el seguimiento y te damos visibilidad en tiempo real de qué facturas están en riesgo antes de que venzan.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "El resultado: menos tiempo persiguiendo pagos, más tiempo haciendo crecer tu negocio.",
+            type: 'text',
+            text: 'El resultado: menos tiempo persiguiendo pagos, más tiempo haciendo crecer tu negocio.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Si quieres dejar de vivir con el estrés del flujo de caja, ",
+            type: 'text',
+            text: 'Si quieres dejar de vivir con el estrés del flujo de caja, ',
           },
           {
-            type: "link",
-            text: "agenda una demo con nuestro equipo",
-            href: "https://meetings.hubspot.com/francisco502",
+            type: 'link',
+            text: 'agenda una demo con nuestro equipo',
+            href: 'https://meetings.hubspot.com/francisco502',
           },
           {
-            type: "text",
-            text: ".",
+            type: 'text',
+            text: '.',
           },
         ],
       },
@@ -6528,174 +6516,175 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: 33,
-    slug: slug("Tu equipo vende pero quien cobra"),
-    title: "Tu equipo vende, pero \u00bfqui\u00e9n cobra?",
-    intro: "En muchas empresas, vender y cobrar son dos mundos separados. El problema es que esa separación tiene un costo enorme.",
-    date: "17 de abril 2026",
-    tags: ["Sena", "Cobranza", "Blog"],
-    image: "/images/blog/equipo-vende-quien-cobra.jpg",
+    slug: slug('Tu equipo vende pero quien cobra'),
+    title: 'Tu equipo vende, pero \u00bfqui\u00e9n cobra?',
+    intro:
+      'En muchas empresas, vender y cobrar son dos mundos separados. El problema es que esa separación tiene un costo enorme.',
+    date: '17 de abril 2026',
+    tags: ['Sena', 'Cobranza', 'Blog'],
+    image: '/images/blog/equipo-vende-quien-cobra.jpg',
     content: [
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "En muchas empresas, vender y cobrar son dos mundos separados. El equipo comercial cierra negocios. El equipo administrativo (o el contador, o el asistente, o nadie en particular) se hace cargo de cobrar.",
+            type: 'text',
+            text: 'En muchas empresas, vender y cobrar son dos mundos separados. El equipo comercial cierra negocios. El equipo administrativo (o el contador, o el asistente, o nadie en particular) se hace cargo de cobrar.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "El problema es que esa separaci\u00f3n tiene un costo enorme.",
+            type: 'text',
+            text: 'El problema es que esa separaci\u00f3n tiene un costo enorme.',
           },
         ],
       },
       {
-        type: "subtitle",
-        text: "Dos tipos de empresa",
+        type: 'subtitle',
+        text: 'Dos tipos de empresa',
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Hay empresas donde el proceso comercial termina cuando se firma el contrato o se emite la factura. Y hay empresas donde el proceso comercial termina cuando el dinero entra a la cuenta.",
+            type: 'text',
+            text: 'Hay empresas donde el proceso comercial termina cuando se firma el contrato o se emite la factura. Y hay empresas donde el proceso comercial termina cuando el dinero entra a la cuenta.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Las primeras tienen equipos de venta fuertes y procesos de cobranza d\u00e9biles. Las segundas entienden que ",
+            type: 'text',
+            text: 'Las primeras tienen equipos de venta fuertes y procesos de cobranza d\u00e9biles. Las segundas entienden que ',
           },
           {
-            type: "bold",
-            text: "vender sin cobrar no es vender: es prestar.",
+            type: 'bold',
+            text: 'vender sin cobrar no es vender: es prestar.',
           },
         ],
       },
       {
-        type: "subtitle",
-        text: "El costo de no tener un proceso de cobranza",
+        type: 'subtitle',
+        text: 'El costo de no tener un proceso de cobranza',
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Cuando no hay un proceso claro de cobranza, pasan varias cosas:",
+            type: 'text',
+            text: 'Cuando no hay un proceso claro de cobranza, pasan varias cosas:',
           },
         ],
       },
       {
-        type: "list",
+        type: 'list',
         items: [
-          "Las facturas se acumulan sin seguimiento.",
-          "El equipo comercial evita presionar al cliente por miedo a perder la relaci\u00f3n.",
-          "La administraci\u00f3n cobra cuando puede, no cuando debe.",
-          "Los plazos se alargan y el flujo de caja se resiente.",
+          'Las facturas se acumulan sin seguimiento.',
+          'El equipo comercial evita presionar al cliente por miedo a perder la relaci\u00f3n.',
+          'La administraci\u00f3n cobra cuando puede, no cuando debe.',
+          'Los plazos se alargan y el flujo de caja se resiente.',
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Y lo m\u00e1s irónico: a veces las empresas que m\u00e1s venden son las que m\u00e1s sufren de flujo. Porque crecieron sin escalar su proceso de cobranza.",
-          },
-        ],
-      },
-      {
-        type: "subtitle",
-        text: "\u00bfQui\u00e9n deber\u00eda cobrar en tu empresa?",
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "text",
-            text: "La respuesta corta: alguien con un proceso claro, herramientas adecuadas y visibilidad en tiempo real.",
+            type: 'text',
+            text: 'Y lo m\u00e1s irónico: a veces las empresas que m\u00e1s venden son las que m\u00e1s sufren de flujo. Porque crecieron sin escalar su proceso de cobranza.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'subtitle',
+        text: '\u00bfQui\u00e9n deber\u00eda cobrar en tu empresa?',
+      },
+      {
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "No importa si es una persona dedicada o si se distribuye entre el equipo. Lo que importa es que haya un sistema. Que los recordatorios salgan antes del vencimiento. Que el seguimiento sea consistente. Que nadie tenga que perseguir pagos desde una planilla.",
+            type: 'text',
+            text: 'La respuesta corta: alguien con un proceso claro, herramientas adecuadas y visibilidad en tiempo real.',
           },
         ],
       },
       {
-        type: "subtitle",
-        text: "Sena: el proceso de cobranza que le falta a tu equipo",
-      },
-      {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Sena es una plataforma dise\u00f1ada para que el proceso de cobranza exista, funcione y escale. Automatiza los recordatorios, centraliza el seguimiento de cada factura y le da a tu equipo visibilidad total sobre el estado de los cobros.",
+            type: 'text',
+            text: 'No importa si es una persona dedicada o si se distribuye entre el equipo. Lo que importa es que haya un sistema. Que los recordatorios salgan antes del vencimiento. Que el seguimiento sea consistente. Que nadie tenga que perseguir pagos desde una planilla.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'subtitle',
+        text: 'Sena: el proceso de cobranza que le falta a tu equipo',
+      },
+      {
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Porque ",
-          },
-          {
-            type: "bold",
-            text: "cobrar bien no es una habilidad. Es un proceso.",
-          },
-          {
-            type: "text",
-            text: " Y los procesos se pueden dise\u00f1ar, automatizar y mejorar.",
+            type: 'text',
+            text: 'Sena es una plataforma dise\u00f1ada para que el proceso de cobranza exista, funcione y escale. Automatiza los recordatorios, centraliza el seguimiento de cada factura y le da a tu equipo visibilidad total sobre el estado de los cobros.',
           },
         ],
       },
       {
-        type: "paragraph",
+        type: 'paragraph',
         fragments: [
           {
-            type: "text",
-            text: "Si quieres que tu equipo deje de improvisar en la cobranza, ",
+            type: 'text',
+            text: 'Porque ',
           },
           {
-            type: "link",
-            text: "agenda una demo con nuestro equipo",
-            href: "https://meetings.hubspot.com/francisco502",
+            type: 'bold',
+            text: 'cobrar bien no es una habilidad. Es un proceso.',
           },
           {
-            type: "text",
-            text: ".",
+            type: 'text',
+            text: ' Y los procesos se pueden dise\u00f1ar, automatizar y mejorar.',
+          },
+        ],
+      },
+      {
+        type: 'paragraph',
+        fragments: [
+          {
+            type: 'text',
+            text: 'Si quieres que tu equipo deje de improvisar en la cobranza, ',
+          },
+          {
+            type: 'link',
+            text: 'agenda una demo con nuestro equipo',
+            href: 'https://meetings.hubspot.com/francisco502',
+          },
+          {
+            type: 'text',
+            text: '.',
           },
         ],
       },
     ],
   },
-];
+]
 
 export const getBlogPostsSorted = () => {
   return [...blogPosts].sort((a, b) => {
-    const dateA = parseSpanishDate(a.date);
-    const dateB = parseSpanishDate(b.date);
-    return dateB.getTime() - dateA.getTime();
-  });
-};
+    const dateA = parseSpanishDate(a.date)
+    const dateB = parseSpanishDate(b.date)
+    return dateB.getTime() - dateA.getTime()
+  })
+}
 
 export const getFeaturedPost = () => {
-  return blogPosts.find((post) => post.id === featuredPostId) || blogPosts[0];
-};
+  return blogPosts.find((post) => post.id === featuredPostId) || blogPosts[0]
+}
 
 export const getOtherPosts = () => {
-  return blogPosts.filter((post) => post.id !== featuredPostId);
-};
+  return blogPosts.filter((post) => post.id !== featuredPostId)
+}

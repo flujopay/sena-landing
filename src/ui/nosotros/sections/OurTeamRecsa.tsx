@@ -1,4 +1,4 @@
-import { AssetImage } from "@/lib/utils/assets/image";
+import { AssetImage } from '@/lib/utils/assets/image'
 
 export const OurTeamRecsa = () => {
   return (
@@ -22,22 +22,19 @@ export const OurTeamRecsa = () => {
             </h2>
 
             <p className=" text-base lg:text-lg text-gray-700 mb-6 leading-relaxed">
-              Un equipo multidisciplinario que une tecnología, experiencia
-              financiera y criterio humano. Especialistas en producto,
-              desarrollo y operaciones de cobranza que diseñan cada
-              funcionalidad pensando en el equilibrio entre efectividad y
-              relaciones.
+              Un equipo multidisciplinario que une tecnología, experiencia financiera y criterio humano.
+              Especialistas en producto, desarrollo y operaciones de cobranza que diseñan cada funcionalidad
+              pensando en el equilibrio entre efectividad y relaciones.
             </p>
 
             <p className=" text-base lg:text-lg text-gray-700 mb-6 leading-relaxed">
-              Respaldados por Recsa, con más de 40 años de experiencia y
-              presencia en 15 países de LATAM. Más de 146 millones de gestiones
-              mensuales nos dan el conocimiento sobre cómo cobrar bien en cada
+              Respaldados por Recsa, con más de 40 años de experiencia y presencia en 15 países de LATAM. Más
+              de 146 millones de gestiones mensuales nos dan el conocimiento sobre cómo cobrar bien en cada
               mercado.
             </p>
 
             <p className=" text-base lg:text-lg text-gray-700 mb-8 leading-relaxed">
-              Síguenos en{" "}
+              Síguenos en{' '}
               <a
                 href="https://www.linkedin.com/company/sena-latam/"
                 target="_blank"
@@ -45,9 +42,8 @@ export const OurTeamRecsa = () => {
                 className="font-bold underline text-gray-700"
               >
                 LinkedIn
-              </a>{" "}
-              para conocer al equipo, ver cómo trabajamos y aprender sobre el
-              arte de la cobranza profesional.
+              </a>{' '}
+              para conocer al equipo, ver cómo trabajamos y aprender sobre el arte de la cobranza profesional.
             </p>
 
             <a
@@ -71,16 +67,15 @@ export const OurTeamRecsa = () => {
           </h2>
 
           <p className="text-base text-gray-700 mb-4 leading-relaxed">
-            Un equipo multidisciplinario que une tecnología, experiencia
-            financiera y criterio humano. Especialistas en producto, desarrollo
-            y operaciones de cobranza que diseñan cada funcionalidad pensando en
-            el equilibrio entre efectividad y relaciones.
+            Un equipo multidisciplinario que une tecnología, experiencia financiera y criterio humano.
+            Especialistas en producto, desarrollo y operaciones de cobranza que diseñan cada funcionalidad
+            pensando en el equilibrio entre efectividad y relaciones.
           </p>
 
           <p className="text-base text-gray-700 mb-4 leading-relaxed">
-            Respaldados por Recsa, con más de 40 años de experiencia y presencia
-            en 15 países de LATAM. Más de 146 millones de gestiones mensuales
-            nos dan el conocimiento sobre cómo cobrar bien en cada mercado.
+            Respaldados por Recsa, con más de 40 años de experiencia y presencia en 15 países de LATAM. Más de
+            146 millones de gestiones mensuales nos dan el conocimiento sobre cómo cobrar bien en cada
+            mercado.
           </p>
 
           <a
@@ -103,7 +98,7 @@ export const OurTeamRecsa = () => {
           </div>
 
           <p className="text-base text-gray-700 leading-relaxed">
-            Síguenos en{" "}
+            Síguenos en{' '}
             <a
               href="https://www.linkedin.com/company/sena-latam/"
               target="_blank"
@@ -111,12 +106,11 @@ export const OurTeamRecsa = () => {
               className="font-bold underline text-gray-700"
             >
               LinkedIn
-            </a>{" "}
-            para conocer al equipo, ver cómo trabajamos y aprender sobre el arte
-            de la cobranza profesional.
+            </a>{' '}
+            para conocer al equipo, ver cómo trabajamos y aprender sobre el arte de la cobranza profesional.
           </p>
         </div>
       </div>
     </section>
-  );
-};
+  )
+}

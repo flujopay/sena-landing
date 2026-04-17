@@ -1,56 +1,86 @@
-"use client";
+'use client'
 
-import Button from "@/ui/shared/Button";
-import { useRouter } from "next/navigation";
+import Button from '@/ui/shared/Button'
+import { useRouter } from 'next/navigation'
 
 export const BeautyCTA = () => {
-  const router = useRouter();
+  const router = useRouter()
 
   const onRedirectHubspot = () => {
-    window.open("https://meetings.hubspot.com/francisco502", "_blank");
-  };
+    window.open('https://meetings.hubspot.com/francisco502', '_blank')
+  }
 
   const trustElements = [
     {
-      text: "Sin compromiso",
+      text: 'Sin compromiso',
       icon: (
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M9 11L12 14L22 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-          <path d="M21 12V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3H16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+          <path
+            d="M9 11L12 14L22 4"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M21 12V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3H16"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+          />
         </svg>
       ),
     },
     {
-      text: "Implementación en 1 semana",
+      text: 'Implementación en 1 semana',
       icon: (
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" strokeWidth="2" />
+          <path
+            d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+            stroke="currentColor"
+            strokeWidth="2"
+          />
           <path d="M12 6V12L16 14" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
         </svg>
       ),
     },
     {
-      text: "Soporte dedicado para tu industria",
+      text: 'Soporte dedicado para tu industria',
       icon: (
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M17 21V19C17 16.7909 15.2091 15 13 15H5C2.79086 15 1 16.7909 1 19V21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+          <path
+            d="M17 21V19C17 16.7909 15.2091 15 13 15H5C2.79086 15 1 16.7909 1 19V21"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+          />
           <circle cx="9" cy="7" r="4" stroke="currentColor" strokeWidth="2" />
-          <path d="M23 21V19C23 17.1362 21.7252 15.5701 20 15.126" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-          <path d="M16 3.12602C17.7252 3.57006 19 5.13616 19 7C19 8.86384 17.7252 10.4299 16 10.874" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+          <path
+            d="M23 21V19C23 17.1362 21.7252 15.5701 20 15.126"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+          />
+          <path
+            d="M16 3.12602C17.7252 3.57006 19 5.13616 19 7C19 8.86384 17.7252 10.4299 16 10.874"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+          />
         </svg>
       ),
     },
-  ];
+  ]
 
   return (
     <section className="bg-[#F9F9F9] py-16 md:py-24">
       <div className="max-w-[1280px] mx-auto px-4 md:px-10 text-center">
         <h2 className="text-brand-primary-dark text-3xl md:text-5xl font-extrabold leading-tight mb-4">
-          Empieza a cobrar como{" "}
-          <span className="text-brand-primary">tu marca merece</span>
+          Empieza a cobrar como <span className="text-brand-primary">tu marca merece</span>
         </h2>
         <p className="text-slate-600 text-base md:text-lg max-w-2xl mx-auto mb-8 leading-relaxed">
-          Agenda una demo de 30 minutos y descubre cómo Sena puede transformar tu gestión de cuentas por cobrar en Beauty Tech.
+          Agenda una demo de 30 minutos y descubre cómo Sena puede transformar tu gestión de cuentas por
+          cobrar en Beauty Tech.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-10">
@@ -66,7 +96,7 @@ export const BeautyCTA = () => {
             variant="primaryInvertedFilled"
             size="lg"
             className="text-lg"
-            onClick={() => router.push("/contactanos")}
+            onClick={() => router.push('/contactanos')}
           />
         </div>
 
@@ -84,11 +114,9 @@ export const BeautyCTA = () => {
           <p className="text-brand-primary-dark font-extrabold text-lg">
             Sena — <span className="text-brand-secondary font-caslon">El arte de cobrar bien</span>
           </p>
-          <p className="text-slate-400 text-sm mt-1">
-            Cobrar también es una forma de cuidar.
-          </p>
+          <p className="text-slate-400 text-sm mt-1">Cobrar también es una forma de cuidar.</p>
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
