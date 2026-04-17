@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-wrapper-object-types */
 'use client'
 
 import { AssetImage } from '@/lib/utils/assets/image'
@@ -8,7 +9,7 @@ import { useEffect } from 'react'
 
 declare global {
   interface Window {
-    dataLayer?: object[]
+    dataLayer?: Object[]
     fbq?: (...args: unknown[]) => void
   }
 }
