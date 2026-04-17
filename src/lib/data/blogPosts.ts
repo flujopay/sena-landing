@@ -298,7 +298,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "quote",
-        text: "“Tu cartera vencida no está perdida. Solo necesita el proceso correcto.”",
+        text: `”Tu cartera vencida no está perdida. Solo necesita el proceso correcto.”`,
       },
       {
         type: "paragraph",
@@ -462,7 +462,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "quote",
-        text: "“Cobrar también es una forma de cuidar: cuidar el pago, la relación y al cliente.”",
+        text: `”Cobrar también es una forma de cuidar: cuidar el pago, la relación y al cliente.”`,
       },
       { type: "subtitle", text: "Tecnología y experiencia humana, juntas" },
       {
@@ -553,11 +553,11 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "subtitle",
-        text: "“Cobrar" no debería ser un tabú",
+        text: '”Cobrar” no debería ser un tabú',
       },
       {
         type: "quote",
-        text: "“Aunque legalmente el plazo de pago es de 30 días, muchas pymes reciben su dinero después de 60, 90 o incluso 120 días. Esto se da especialmente en sectores como construcción, donde el retraso ya es una norma no escrita. Las pequeñas empresas temen perder contratos si exigen sus pagos a tiempo. En Perú, hablar de cobranzas aún es visto como algo negativo", comenta Juan Córdova, Subgerente de Venta B2B en Sena, en entrevista para PQS.pe.",
+        text: `”Aunque legalmente el plazo de pago es de 30 días, muchas pymes reciben su dinero después de 60, 90 o incluso 120 días. Esto se da especialmente en sectores como construcción, donde el retraso ya es una norma no escrita. Las pequeñas empresas temen perder contratos si exigen sus pagos a tiempo. En Perú, hablar de cobranzas aún es visto como algo negativo”, comenta Juan Córdova, Subgerente de Venta B2B en Sena, en entrevista para PQS.pe.`,
       },
       {
         type: "paragraph",
@@ -634,7 +634,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "quote",
-        text: ""Nuestra misión es romper el círculo vicioso que atrapa a las pymes y convertir la cobranza en una palanca de crecimiento, no en un obstáculo", añade Córdova.",
+        text: `"Nuestra misión es romper el círculo vicioso que atrapa a las pymes y convertir la cobranza en una palanca de crecimiento, no en un obstáculo", añade Córdova.`,
       },
       {
         type: "subtitle",
@@ -659,7 +659,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "quote",
-        text: ""El Estado tiene la responsabilidad de establecer reglas claras, sancionar el incumplimiento de pagos y fomentar la digitalización. Y el sistema financiero también puede contribuir ofreciendo factoring accesible y justo", concluye Córdova.",
+        text: `"El Estado tiene la responsabilidad de establecer reglas claras, sancionar el incumplimiento de pagos y fomentar la digitalización. Y el sistema financiero también puede contribuir ofreciendo factoring accesible y justo", concluye Córdova.`,
       },
       {
         type: "subtitle",
@@ -1114,7 +1114,7 @@ export const blogPosts: BlogPost[] = [
     title:
       "Cómo profesionalizar tu cobranza sin perder clientes: estrategias probadas para empresas B2B",
     intro:
-      "Muchas empresas temen profesionalizar su proceso de cobranza por miedo a "espantar" a sus clientes. La realidad es todo lo contrario: un proceso profesional transmite orden, seriedad y respeto. No hay nada más dañino que perseguir a un cliente sin estructura, sin consistencia y sin tacto. Eso es lo que realmente deteriora relaciones.",
+      `Muchas empresas temen profesionalizar su proceso de cobranza por miedo a "espantar" a sus clientes. La realidad es todo lo contrario: un proceso profesional transmite orden, seriedad y respeto. No hay nada más dañino que perseguir a un cliente sin estructura, sin consistencia y sin tacto. Eso es lo que realmente deteriora relaciones.`,
     date: "13 de enero 2026",
     tags: ["Blog"],
     image: AssetImageBlog.blog_17_main.src,
@@ -1124,7 +1124,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: "text",
-            text: "Muchas empresas temen profesionalizar su proceso de cobranza por miedo a "espantar" a sus clientes. La realidad es todo lo contrario: un proceso profesional transmite orden, seriedad y respeto. No hay nada más dañino que perseguir a un cliente sin estructura, sin consistencia y sin tacto. Eso es lo que realmente deteriora relaciones.",
+            text: `Muchas empresas temen profesionalizar su proceso de cobranza por miedo a "espantar" a sus clientes. La realidad es todo lo contrario: un proceso profesional transmite orden, seriedad y respeto. No hay nada más dañino que perseguir a un cliente sin estructura, sin consistencia y sin tacto. Eso es lo que realmente deteriora relaciones.`,
           },
         ],
       },
@@ -1568,7 +1568,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "subtitle",
-        text: "Entonces, cuando hablamos de "Infocorp" nos referimos específicamente al contexto peruano.",
+        text: `Entonces, cuando hablamos de "Infocorp" nos referimos específicamente al contexto peruano.`,
       },
       {
         type: "paragraph",
@@ -2352,7 +2352,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: "text",
-            text: "Ejemplo real: Una pyme de servicios de consultoría redujo en 30% su DSO (días promedio de cobranza) al implementar Sena. En tres meses, pasó de un score "riesgoso" a "aceptable" y obtuvo la aprobación de una nueva línea de crédito para expandirse.",
+            text: `Ejemplo real: Una pyme de servicios de consultoría redujo en 30% su DSO (días promedio de cobranza) al implementar Sena. En tres meses, pasó de un score "riesgoso" a "aceptable" y obtuvo la aprobación de una nueva línea de crédito para expandirse.`,
           },
         ],
       },

@@ -12,6 +12,8 @@ import { adobeCleanFont, canaroFont, caslonFont } from "./fonts";
 import "./globals.css";
 import Providers from "./providers";
 
+export const dynamic = "force-dynamic";
+
 export const metadata: Metadata = {
   title: "Sena - El arte de cobrar bien",
   description:
