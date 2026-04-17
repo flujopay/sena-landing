@@ -104,7 +104,7 @@ export const blogPosts: BlogPost[] = [
   //     },
   //     {
   //       type: "quote",
-  //       text: "“Muchas veces el problema no es el cliente, sino el canal. Sena adapta el mensaje y la vía según el comportamiento de cada pagador”, explica Sebastián Gajardo, Product Manager de Sena.",
+  //       text: "“Muchas veces el problema no es el cliente, sino el canal. Sena adapta el mensaje y la vía según el comportamiento de cada pagador", explica Sebastián Gajardo, Product Manager de Sena.",
   //     },
   //     { type: "title", text: "Integración real con tu operación " },
   //     {
@@ -130,198 +130,47 @@ export const blogPosts: BlogPost[] = [
   {
     id: 5,
     slug: slug(
-      "Sena: Optimiza la gestión financiera con cobranzas digitalizadas eficaces",
+      "cuanto le cuesta a tu equipo cobrar de forma manual",
     ),
     title:
-      "Sena: Optimiza la gestión financiera con cobranzas digitalizadas eficaces",
+      "¿Cuánto le cuesta a tu equipo cobrar de forma manual?",
     intro:
-      "En el mundo empresarial moderno, gestionar las cuentas por cobrar y pagar de manera eficiente es fundamental para mantener un flujo de efectivo saludable. Sin embargo, muchas empresas aún enfrentan desafíos con la automatización y organización de estos procesos clave. Ahí es donde entra Sena.",
-    date: "24 de abril 2025 ",
-    tags: ["Cobranza"],
+      "El costo de una cobranza desordenada no aparece en el estado de resultados. Aparece en el tiempo que tu equipo pierde, en los errores que se acumulan y en las oportunidades que se dejan ir. Ese costo es real, aunque nadie lo esté midiendo.",
+    date: "02 de diciembre 2025",
+    tags: ["Cobranza", "Educación Financiera"],
     image: AssetImageBlog.blog_5_main.src,
     content: [
       {
         type: "title",
-        text: "Sena: Optimiza la gestión financiera con cobranzas digitalizadas eficaces ",
+        text: "¿Cuánto le cuesta a tu equipo cobrar de forma manual?",
       },
       {
         type: "paragraph",
         fragments: [
           {
             type: "text",
-            text: "En el mundo empresarial moderno, gestionar las cuentas por cobrar y pagar de manera eficiente es fundamental para mantener un flujo de efectivo saludable. Sin embargo, muchas empresas aún enfrentan desafíos con la automatización y organización de estos procesos clave. Ahí es donde entra ",
-          },
-          {
-            type: "bold",
-            text: "Sena. ",
+            text: "Hay un costo que pocas empresas calculan: el tiempo que su equipo dedica a gestionar cobranza de forma manual. Revisar planillas, redactar correos uno por uno, hacer llamadas sin registro, cruzar información entre WhatsApp y Excel. Cada hora invertida en eso es una hora que no se destinó a vender, a retener clientes o a mejorar la operación.",
           },
         ],
       },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "bold",
-            text: "Sena ",
-          },
-          {
-            type: "text",
-            text: "es un ",
-          },
-          {
-            type: "bold",
-            text: "software de cobranzas y pagos ",
-          },
-          { type: "text", text: "diseñado específicamente para " },
-          {
-            type: "bold",
-            text: "automatizar, controlar y optimizar la gestión financiera de tu empresa. ",
-          },
-          { type: "text", text: "Nuestra plataforma te brinda " },
-          {
-            type: "bold",
-            text: "total control y visibilidad en tiempo real ",
-          },
-          {
-            type: "text",
-            text: "sobre todas tus cuentas por cobrar y pagar, lo que te permite gestionar tu flujo de efectivo de manera eficiente y sin esfuerzo. Con ",
-          },
-          {
-            type: "bold",
-            text: "Sena, ",
-          },
-          {
-            type: "text",
-            text: "podrás olvidarte de los procesos manuales y de los sistemas desorganizados que consumen tiempo, recursos y que además te pueden hacer incurrir en fraudes o errores.",
-          },
-        ],
-      },
-      { type: "subtitle", text: "¿Qué hace Sena por tu empresa?" },
+      { type: "subtitle", text: "El problema no es la persona. Es el sistema." },
       {
         type: "paragraph",
         fragments: [
           {
             type: "text",
-            text: "La gestión de las cobranzas y los pagos es uno de los aspectos más críticos de cualquier negocio. Un retraso en los cobros o un error en los pagos puede generar consecuencias financieras importantes. ",
+            text: "Cuando la cobranza depende de la memoria de alguien, los errores son inevitables. Se olvidan facturas, se mandan recordatorios a destiempo, se pierde el historial de conversaciones. Y cuando el equipo crece, el caos escala con él. No porque las personas fallen, sino porque un proceso manual no escala.",
           },
-          { type: "bold", text: "Sena " },
-          {
-            type: "text",
-            text: "te ofrece una solución integral que no solo te ayuda a mantener tus cuentas en orden, sino que también te permite ",
-          },
-          { type: "bold", text: "optimizar cada etapa del proceso." },
         ],
       },
-      {
-        type: "paragraph",
-        fragments: [
-          { type: "text", text: "Con nuestra plataforma, puedes " },
-          {
-            type: "bold",
-            text: "digitalizar la gestión de tus cobranzas y agilizar los pagos ",
-          },
-          {
-            type: "text",
-            text: "de manera eficiente, lo que se traduce en una ",
-          },
-          {
-            type: "bold",
-            text: "mejor administración del flujo de efectivo. ",
-          },
-          {
-            type: "text",
-            text: "Además, al centralizar todas tus operaciones en un solo sistema, podrás obtener una visión clara y detallada de la situación financiera de tu empresa en ",
-          },
-          { type: "bold", text: "tiempo real." },
-        ],
-      },
-      { type: "subtitle", text: "Automatización de Cobranzas y Pagos " },
+      { type: "subtitle", text: "Lo que se puede automatizar" },
       {
         type: "paragraph",
         fragments: [
           {
             type: "text",
-            text: "Sena digitalizalos procesos de cobranzas y pagos, eliminando la necesidad de realizar tareas repetitivas manualmente. Al integrar nuestras soluciones a tu sistema contable y financiero podrás: ",
+            text: "La mayoría de las tareas operativas de cobranza son repetibles y predecibles: recordatorios antes del vencimiento, seguimientos a los 3, 7 y 15 días, notificaciones por WhatsApp o email según el comportamiento del cliente. Todo eso puede ejecutarse automáticamente, con el tono correcto y en el momento adecuado, sin que nadie del equipo tenga que intervenir.",
           },
-        ],
-      },
-      {
-        type: "list",
-        items: [
-          [
-            {
-              type: "bold",
-              text: "Envíos de recordatorios de pago y facturación digitalizada.",
-            },
-          ],
-          [
-            {
-              type: "bold",
-              text: "Generación de informes y alertas ",
-            },
-            {
-              type: "text",
-              text: "para que puedas conocer el estado de tus cuentas por cobrar y pagar de manera continua.",
-            },
-          ],
-          [
-            {
-              type: "bold",
-              text: "Notificaciones personalizadas ",
-            },
-            {
-              type: "text",
-              text: "que se envían automáticamente a tus clientes y proveedores, asegurando que no se pierda ninguna deuda ni pago importante. ",
-            },
-          ],
-        ],
-      },
-      {
-        type: "image",
-        link: "https://drive.usercontent.google.com/download?id=10UG2cGHXGtokTERXu_WJ2fZNiK3MlwkT&export=view&authuser=0" /* '/images/blog/blog5/1.jpg' */,
-      },
-      { type: "subtitle", text: "Visibilidad y Control en Tiempo Real " },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "text",
-            text: "La visibilidad es crucial para tomar decisiones acertadas y oportunas en tu negocio. Con ",
-          },
-          { type: "bold", text: "Sena, " },
-          { type: "text", text: "obtienes " },
-          { type: "bold", text: "informes en tiempo real " },
-          {
-            type: "text",
-            text: "que te permiten conocer el estado exacto de tus cuentas, desde las más recientes hasta las más antiguas. Puedes ver:",
-          },
-        ],
-      },
-      {
-        type: "list",
-        items: [
-          [
-            {
-              type: "bold",
-              text: "El saldo pendiente de cada factura.",
-            },
-          ],
-          [
-            {
-              type: "bold",
-              text: "El historial de pagos y cobranzas.",
-            },
-          ],
-          [
-            {
-              type: "bold",
-              text: "El rendimiento de las acciones de cobranza ",
-            },
-            {
-              type: "text",
-              text: "que estás ejecutando.",
-            },
-          ],
         ],
       },
       {
@@ -329,239 +178,107 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: "text",
-            text: "Esto te da un control total sobre el proceso, lo que te permite tomar decisiones informadas sobre cómo priorizar tus esfuerzos de cobranza o pagos en el momento adecuado. ",
+            text: "Cuando la tecnología se encarga de lo rutinario, tu equipo puede enfocarse en lo que realmente requiere criterio humano: negociar acuerdos, gestionar casos complejos, cuidar las relaciones estratégicas.",
           },
         ],
       },
-      { type: "subtitle", text: "¿Qué puedes lograr con Sena? " },
-      {
-        type: "paragraph",
-        fragments: [
-          { type: "bold", text: "Sena " },
-          {
-            type: "text",
-            text: "está diseñado para ayudar a las empresas a gestionar su flujo de efectivo de manera más eficiente, independientemente del tamaño o la industria. Con nuestra plataforma, podrás: ",
-          },
-        ],
-      },
-      {
-        type: "list",
-        items: [
-          "Reducir  hasta un 30% tus días de cobro (DSO), gracias a recordatorios oportunos y seguimientos automáticos, asegurando que el flujo de caja se mantenga constante.",
-          "Recupera hasta el 80% de tus facturas atrasadas en un promedio de 60 días. Optimiza tus procesos financieros,centralizando todas tus cuentas por cobrar y pagar en un solo lugar, lo que mejora la productividad de tu equipo y la efectividad del departamento financiero.",
-          "Disminuye en un 50% el ciclo de aprobación de facturas con trazabilidad total y aprobaciones más ágiles ",
-          "Mejorar la recuperación de deuda: nuestra plataforma te permite realizar seguimientos a clientes morosos, lo que aumenta la tasa de éxito en la cobranza.",
-          [
-            {
-              type: "bold",
-              text: "Tener total visibilidad en tiempo real: ",
-            },
-            {
-              type: "bold",
-              text: "te brindamos información clara, precisa y actualizada sobre el estado de todas tus operaciones financieras. ",
-            },
-          ],
-        ],
-      },
-      {
-        type: "image",
-        link: "https://drive.usercontent.google.com/download?id=1AbVUB1GEX-sHhsNlZUlfaf-ahtkN4yIr&export=view&authuser=0" /* '/images/blog/blog5/2.jpg' */,
-      },
-      { type: "subtitle", text: "Experiencia y Respaldo de RECSA " },
+      { type: "subtitle", text: "El costo de no automatizar" },
       {
         type: "paragraph",
         fragments: [
           {
             type: "text",
-            text: "Sena no es solo una herramienta avanzada de gestión financiera, sino que también cuenta con el respaldo de ",
+            text: "Cada mes que pasa con un proceso manual es un mes con más facturas rezagadas, más horas perdidas y más estrés acumulado en el equipo financiero. La cobranza no resuelta no desaparece sola: crece.",
+          },
+        ],
+      },
+      {
+        type: "paragraph",
+        fragments: [
+          {
+            type: "text",
+            text: "¿Quieres saber cuánto tiempo está perdiendo tu equipo en cobranza manual? ",
           },
           {
             type: "link",
-            text: "RECSA: ",
-            href: "https://recsa.com",
-          },
-          {
-            type: "text",
-            text: "Líder en cobranzas con más de 35 años de experiencia en Latam, presente en 15 países. ",
+            text: "Agenda una demo y lo revisamos juntos.",
+            href: "https://meetings.hubspot.com/francisco502",
           },
         ],
       },
-      {
-        type: "list",
-        items: [
-          "14 millones de correos electrónicos enviados al mes ",
-          "60 millones de llamadas de robots avanzados al mes ",
-          "70 millones de llamadas de agentes de call center al mes",
-          "2 millones de SMS y WhatsApp enviados al mes ",
-          "146 millones de gestiones en total al mes ",
-        ],
-      },
-      /*   { type: 'image', link: '/images/blog/blog5/3.jpg' }, */
-      { type: "subtitle", text: "¿Por qué elegir Sena? " },
-      {
-        type: "list",
-        items: [
-          [
-            { type: "bold", text: "Ahorro de tiempo y recursos: " },
-            {
-              type: "text",
-              text: "Al digitalizar procesos, automatizar  recordatorios y centralizar procesos, ",
-            },
-            { type: "bold", text: "Sena " },
-            {
-              type: "text",
-              text: "te ayuda a optimizar los recursos de tu empresa, permitiendo que tu equipo se enfoque en actividades más estratégicas. ",
-            },
-          ],
-          [
-            {
-              type: "bold",
-              text: "Simplificación del proceso financiero: ",
-            },
-            { type: "text", text: "Con nuestra plataforma, " },
-            {
-              type: "bold",
-              text: "gestionar tus cuentas por cobrar y pagar nunca fue tan fácil. ",
-            },
-            {
-              type: "text",
-              text: "Todo está al alcance de un clic, con una interfaz intuitiva y fácil de usar. ",
-            },
-          ],
-          [
-            {
-              type: "bold",
-              text: "Control total de tus cobros y pagos en una sola plataforma:  Elimina  la complejidad de sistemas desconectados y logrando total transparencia de tu flujo de caja. ",
-            },
-          ],
-        ],
-      },
-      { type: "subtitle", text: "La tecnología que tu empresa necesita" },
-      {
-        type: "paragraph",
-        fragments: [
-          { type: "text", text: "En " },
-          { type: "bold", text: "Sena, " },
-          {
-            type: "text",
-            text: "entendemos que cada empresa tiene necesidades diferentes. Por eso, nuestras soluciones están diseñadas para ser ",
-          },
-          { type: "bold", text: "flexibles y escalables, " },
-          {
-            type: "text",
-            text: "adaptándose a la medida de cada cliente. Ya sea que estés comenzando o buscando mejorar los procesos de cobranzas y pagos de tu empresa, ",
-          },
-          { type: "bold", text: "Sena " },
-          {
-            type: "text",
-            text: "te proporciona las herramientas que necesitas para mejorar tu eficiencia financiera y asegurarte de que tu flujo de efectivo siempre esté optimizado. ",
-          },
-        ],
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          { type: "bold", text: "Sena " },
-          { type: "text", text: "te ofrece una " },
-          {
-            type: "bold",
-            text: "gestión integral de cobranzas y pagos ",
-          },
-          {
-            type: "text",
-            text: "para optimizar tus operaciones financieras. Si estás buscando una forma fácil y eficiente de controlar y automatizar el proceso de cobro y pago de tus facturas, Sena es la solución ideal para tu empresa! ",
-          },
-        ],
-      },
-      /*  { type: 'image', link: '/images/blog/blog5/4.jpg' }, */
     ],
   },
   {
     id: 6,
-    slug: slug("¿Tienes una factura impaga? Sena la recupera por ti"),
-    title: "¿Tienes una factura impaga? Sena la recupera por ti",
+    slug: slug("Factura vencida que nadie paga que puedes hacer"),
+    title: "Factura vencida que nadie paga: qué puedes hacer",
     intro:
-      "Cuando una factura vence y el pago no llega, no solo se retrasa un ingreso: se altera toda la operación financiera de tu empresa. En Sena, te ofrecemos una solución eficaz y sin riesgos, es el servicio de 'Recupera Plus'.",
-    date: "25 de abril 2025",
+      "Cumpliste. Entregaste el servicio, emitiste la factura y esperaste. Pero el pago no llegó. En algún momento dejaste de esperar y empezaste a perseguir. Eso tiene un nombre: cartera vencida. Y tiene solución.",
+    date: "05 de diciembre 2025",
     tags: ["Cobranza", "Sena"],
     image: AssetImageBlog.blog_6_main.src,
     content: [
       {
         type: "title",
-        text: "¿Tienes una factura impaga? Sena la recupera por ti",
+        text: "Factura vencida que nadie paga: qué puedes hacer",
       },
       {
         type: "paragraph",
         fragments: [
           {
             type: "text",
-            text: "Cuando una factura vence y el pago no llega, no solo se retrasa un ingreso: se altera toda la operación financiera de tu empresa. En ",
+            text: "Cumpliste. Entregaste el servicio, emitiste la factura y esperaste. Pero el pago no llegó. En algún momento dejaste de esperar y empezaste a perseguir -- llamadas sin respuesta, correos ignorados, promesas que no se cumplen. Eso tiene un nombre: ",
           },
-          { type: "bold", text: "Sena, " },
+          { type: "bold", text: "cartera vencida." },
+          { type: "text", text: " Y tiene solución." },
+        ],
+      },
+      { type: "subtitle", text: "No es factoring. Es recuperación." },
+      {
+        type: "paragraph",
+        fragments: [
           {
             type: "text",
-            text: "te ofrecemos una solución eficaz y sin riesgos, es el servicio de “Recupera Plus”. ",
+            text: "Cuando una factura lleva más de 60 días vencida, el camino habitual es el factoring: cedes tu documento, recibes un porcentaje adelantado y pierdes parte de lo que te deben. En Sena hacemos algo distinto. No compramos tu factura ni te damos un préstamo. ",
           },
           {
             type: "bold",
-            text: "Nosotros  recuperamos pagos vencidos sin que tengas que adelantar dinero ni ceder o perder dinero de tus facturas impagas. ",
-          },
-          { type: "text", text: "Y lo más importante: " },
-          {
-            type: "bold",
-            text: "solo tiene costo si el pago se concreta. ",
+            text: "Recuperamos el pago directamente con tu cliente, a través de gestión profesional, y solo cobramos si logramos que te paguen.",
           },
         ],
       },
       {
         type: "paragraph",
         fragments: [
-          {
-            type: "text",
-            text: "Así de simple. Tú nos confirmas las facturas impagas que tengas y nosotros activamos el proceso de recuperación y, si el cliente paga, recuperas lo que te corresponde. Si no se cobra, no tienes que pagar por el intento.",
-          },
+          { type: "text", text: "Tu factura sigue siendo tuya. No cedes derechos. No comprometes la relación comercial. No pagas por adelantado." },
         ],
       },
-      { type: "subtitle", text: "No es factoring. Es Sena" },
-      {
-        type: "paragraph",
-        fragments: [
-          { type: "text", text: "A diferencia del " },
-          { type: "bold", text: "factoring financiero, " },
-          { type: "text", text: "el " },
-          { type: "bold", text: "factoring con recursos " },
-          { type: "text", text: "o los servicios de " },
-          { type: "bold", text: "factoring online, " },
-          {
-            type: "text",
-            text: "en Sena no compramos tus facturas ni te adelantamos dinero. No estás contratando una empresa que financia tu cartera, sino un equipo que ",
-          },
-          {
-            type: "bold",
-            text: "gestiona y ejecuta la recuperación de tus pagos vencidos, ",
-          },
-          { type: "text", text: "manteniéndote siempre en control." },
-        ],
-      },
+      { type: "subtitle", text: "¿Cómo funciona Recupera?" },
       {
         type: "list",
         items: [
-          "No cedes tus derechos.",
-          "No comprometes tu relación con el cliente.",
-          "No pagas por adelantado.",
-          "Solo tiene costo si recuperas tu dinero.",
+          "Nos cuentas cuáles son las facturas vencidas y los montos.",
+          "Evaluamos tu cartera sin costo.",
+          "Activamos la gestión: contacto profesional con tu cliente por los canales adecuados.",
+          "Seguimiento hasta el acuerdo de pago.",
+          "Cuando el pago se concreta, recibes lo que te corresponde.",
         ],
       },
       {
         type: "paragraph",
         fragments: [
-          { type: "text", text: "Otras " },
-          { type: "bold", text: "factoring companies " },
-          { type: "text", text: "o " },
-          { type: "bold", text: "freight factoring companies " },
           {
             type: "text",
-            text: "te ofrecen liquidez inmediata con descuentos, intereses o cesión de documentos. En cambio, Sena es una alternativa al factoring te permite mantener la propiedad total sobre tus facturas y cobrar exactamente lo que te deben. ",
+            text: "El proceso está respaldado por ",
+          },
+          {
+            type: "link",
+            text: "Recsa",
+            href: "https://recsa.com",
+          },
+          {
+            type: "text",
+            text: ", con más de 40 años de experiencia en cobranza en 15 países de LATAM. Más de 146 millones de gestiones mensuales. Saben cómo hablar con quien no paga -- sin romper la relación comercial.",
           },
         ],
       },
@@ -569,111 +286,31 @@ export const blogPosts: BlogPost[] = [
         type: "image",
         link: "https://lh7-rt.googleusercontent.com/docsz/AD_4nXc709NrLvnJSDVR39oh82sue9wENpR1rmX7GPnZd4ULBZmUfoYMoD_5z6SzytDkudGGwiYSImsHcDYyy3CY-6ZWrMnmOS2E9l_ipBTpucny4KskH_U-l_IjsEdt47KDeKmAvfC1PwD50BEhbxR_mVU?key=zNxDjqMGOyLpRYie3ixLSQ",
       },
+      { type: "subtitle", text: "Sin riesgo de tu parte" },
       {
-        type: "subtitle",
-        text: "¿Cómo funciona el servicio de Sena 'Recupera Plus'?",
+        type: "paragraph",
+        fragments: [
+          {
+            type: "text",
+            text: "Si no recuperamos, no pagas nada. Sin letras pequeñas. Sin sorpresas. Ese es el modelo de Recupera: alineamos nuestros incentivos con los tuyos.",
+          },
+        ],
       },
       {
-        type: "list",
-        items: [
-          [
-            {
-              type: "text",
-              text: "Dejas tus datos en el formulario: ",
-            },
-            // {
-            //   type: "link",
-            //   text: "https://sena.com/recuperacion-de-deudas",
-            //   href: "https://sena.com/recuperacion-de-deudas",
-            // },
-          ],
-          "Nos contactaremos contigo para definir las facturas impagas, montos y todos los detalles del servicio. Una vez aclarados todos los puntos, te solicitaremos el envío de las facturas impagas en nuestra plataforma.",
-          "Iniciamos la gestión de cobranza con tecnología y respaldo profesional.",
-          "Hacemos el seguimiento, contacto y recuperación con tu cliente.",
-          "Una vez que el pago se realiza, tú recibes el monto recuperado.",
-        ],
+        type: "quote",
+        text: "“Tu cartera vencida no está perdida. Solo necesita el proceso correcto.”",
       },
       {
         type: "paragraph",
         fragments: [
           {
             type: "text",
-            text: "Todo el proceso es digital, transparente y respaldado por más de ",
+            text: "¿Tienes facturas vencidas que no has podido cobrar? ",
           },
-          {
-            type: "bold",
-            text: "35 años de experiencia en cobranzas empresariales, ",
-          },
-          { type: "text", text: "junto con el respaldo de " },
           {
             type: "link",
-            text: "RECSA, ",
-            href: "https://recsa.com",
-          },
-          {
-            type: "text",
-            text: "una de las redes más sólidas en el rubro. ",
-          },
-        ],
-      },
-
-      {
-        type: "subtitle",
-        text: "Beneficios reales frente al factoring tradicional",
-      },
-      {
-        type: "list",
-        items: [
-          "No dependas de adelantos.",
-          "No pierdes valor de tu factura.",
-          "No te endeudas ni comprometes activos.",
-          "Mantienes visibilidad y control total.",
-        ],
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          { type: "text", text: "Ya no necesitas recurrir al " },
-          { type: "bold", text: "factoring de empresas " },
-          {
-            type: "text",
-            text: "para resolver tu flujo de caja. Si lo que buscas es ",
-          },
-          { type: "bold", text: "recuperar lo que te deben, " },
-          {
-            type: "text",
-            text: "Sena es la opción más segura, transparente y efectiva.",
-          },
-        ],
-      },
-      {
-        type: "image",
-        link: "https://lh7-rt.googleusercontent.com/docsz/AD_4nXfmGfizTCfMLWe61w4nQReFvAoUzdRrRqWhPpAhtFN8HwQZrTOk6rub26oBztIyimFmM2XadBviE7u1Fx1RenmaJTGEMCvX_buUGniR-QcS42XQFbi4W3j4Nhfd9cOGbL2LD25c0H8Xn5vCN7texNs?key=zNxDjqMGOyLpRYie3ixLSQ",
-      },
-      { type: "subtitle", text: "Cobra lo que te deben sin ceder nada" },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "text",
-            text: "En Sena, creemos que recuperar un pago no debería representar un nuevo gasto. Por eso, ",
-          },
-          {
-            type: "text",
-            text: "nuestro servicio solo tiene costo si se logra el cobro. ",
-          },
-          {
-            type: "text",
-            text: "Sin letras pequeñas. Sin sorpresas. ",
-          },
-        ],
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "bold",
-            text: "Recupera tus pagos. Gana control. Optimiza tus finanzas. Todo con Sena.",
+            text: "Cuéntanos qué está pasando en tu cartera.",
+            href: "https://meetings.hubspot.com/francisco502",
           },
         ],
       },
@@ -682,77 +319,44 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: 7,
-    slug: slug("Recupera ese dinero con Sena sin factoring"),
-    title:
-      "¿Tu cliente aún no paga? Recupera ese dinero con Sena, sin Factoring ni adelantos de dinero",
+    slug: slug("vender a credito sin politica de cobranza es un riesgo financiero"),
+    title: "Vender a crédito sin política de cobranza es un riesgo financiero",
     intro:
-      "Tener facturas vencidas no sólo genera estrés, también frena tu crecimiento. En Sena entendemos el impacto que tiene una cuenta por cobrar sin resolver, y por eso diseñamos una solución concreta: recuperamos tus pagos vencidos de forma profesional, sin que adelantes dinero y sin que cedas tus derechos o pierdas dinero.",
-    date: "26 de abril 2025",
+      "Extender crédito a un cliente es una decisión comercial. No cobrar a tiempo es una consecuencia financiera. El problema es que muchas empresas diseñan bien la primera parte y no tienen nada estructurado para la segunda.",
+    date: "09 de diciembre 2025",
     tags: ["Sena", "Cobranza", "Educación Financiera"],
     image: AssetImageBlog.blog_7_main.src,
     content: [
       {
         type: "title",
-        text: "¿Tu cliente aún no paga? Recupera ese dinero con Sena, sin Factoring ni adelantos de dinero",
+        text: "Vender a crédito sin política de cobranza es un riesgo financiero",
       },
       {
         type: "paragraph",
         fragments: [
           {
             type: "text",
-            text: "Tener facturas vencidas no sólo genera estrés, también frena tu crecimiento. En Sena entendemos el impacto que tiene una cuenta por cobrar sin resolver, y por eso diseñamos una solución concreta: recuperamos tus pagos vencidos de forma profesional, sin que adelantes dinero y sin que cedas tus derechos o pierdas dinero.",
+            text: "Cuando una empresa decide vender a crédito, asume un riesgo: que el dinero no llegue cuando debería. Ese riesgo se puede gestionar. El problema es que la mayoría de las empresas tiene una política de crédito -- aunque sea informal -- pero no tiene una política de cobranza. Y ahí es donde empieza el problema.",
           },
         ],
       },
+      { type: "subtitle", text: "El ciclo que nadie cierra" },
       {
         type: "paragraph",
         fragments: [
           {
             type: "text",
-            text: "La mejor parte: solo tiene costo si el pago se recupera. ",
-          },
-          {
-            type: "bold",
-            text: "Si no cobras, no nos pagas.",
+            text: "El ciclo de una venta B2B tiene dos mitades: la primera termina cuando el cliente firma o acepta. La segunda termina cuando el dinero entra a tu cuenta. Muchas empresas invierten todo su esfuerzo en la primera mitad -- propuestas, negociaciones, contratos -- y dejan la segunda al azar: un recordatorio cuando alguien se acuerda, un correo cuando la factura ya lleva 45 días vencida.",
           },
         ],
       },
-      {
-        type: "subtitle",
-        text: "No hacemos factoring, hacemos que te paguen",
-      },
+      { type: "subtitle", text: "Qué debería tener una política de cobranza" },
       {
         type: "paragraph",
         fragments: [
           {
             type: "text",
-            text: "A diferencia del factoring, en Sena con el servicio ",
-          },
-          // {
-          //   type: "link",
-          //   text: "“Recupera Plus” ",
-          //   href: "/recuperacion-de-deudas",
-          // },
-          {
-            type: "text",
-            text: "no compramos tus facturas ni te damos préstamos. Tampoco pierdes valor al ceder tu cartera. Tu factura sigue siendo tuya, y nosotros nos encargamos de recuperarla directamente con tu cliente.",
-          },
-        ],
-      },
-      {
-        type: "list",
-        items: [
-          "No hay intereses ni descuentos.",
-          "No hay pagos por adelantado.",
-          "No corres riesgos financieros.",
-        ],
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "text",
-            text: "Mientras el factoring financiero y el factoring online están pensados para adelantar liquidez a cambio de una factura, nosotros nos enfocamos en lo esencial: que te paguen lo que ya te deben.",
+            text: "No se necesita un manual extenso. Se necesita tener claro, al menos, tres cosas: cuándo se envía el primer recordatorio (antes del vencimiento, no después), por qué canal se contacta a cada tipo de cliente, y qué pasa si no hay respuesta a los 15, 30 o 60 días. Eso solo, aplicado con consistencia, cambia completamente el resultado.",
           },
         ],
       },
@@ -760,59 +364,23 @@ export const blogPosts: BlogPost[] = [
         type: "image",
         link: "https://lh7-rt.googleusercontent.com/docsz/AD_4nXfSdjWiLw2HnwccLjaJ1-Ps3SonCHVFWLzXB-zCo1U2T04NSBJ_B_hSC6Hsu4fMezwTDyCfmLyDHblGvW64ll-OEwviwNmWsyoympvetH8pj0WsdD3drd814206dNNn8_o8O_Zp42usY4MsCSUKTjI?key=vXGcwwMqEuun1PDHDhkzYg",
       },
-      { type: "subtitle", text: "¿Cómo funciona Sena Recupera?" },
-      {
-        type: "list",
-        items: [
-          [
-            {
-              type: "text",
-              text: "Dejas tus datos en el formulario: ",
-            },
-            // {
-            //   type: "link",
-            //   text: "https://sena.com/recuperacion-de-deudas",
-            //   href: "https://sena.com/recuperacion-de-deudas",
-            // },
-          ],
-          "Nos contactaremos contigo para definir las facturas impagas, montos y todos los detalles del servicio. Una vez aclarado todos los puntos, te solicitaremos el envío de las facturas impagas en nuestra plataforma.",
-          "Iniciamos la gestión de cobranza con tecnología y respaldo profesional.",
-          "Hacemos el seguimiento, contacto y recuperación con tu cliente.",
-          "Una vez que el pago se realiza, tú recibes el monto recuperado.",
-        ],
-      },
-      {
-        type: "image",
-        link: "https://lh7-rt.googleusercontent.com/docsz/AD_4nXfCtEpx6DiPF9q6tXNI0OXsFdzxiQtECBkpliJNXPqgAtKNnUasDhAzBpAg2DJIMpkTokNEvJsWgrT3bnJVAN-WoUOxz1N32Dnu8Wk5caEs3Ma20rzLa_dkx_9H_0O878XaRABaDW5rY87zl-WrLA?key=vXGcwwMqEuun1PDHDhkzYg",
-      },
+      { type: "subtitle", text: "Cuando la cartera ya está vencida" },
       {
         type: "paragraph",
         fragments: [
           {
             type: "text",
-            text: "Es rápido y transparente. Además, todo está respaldado por ",
+            text: "Si la política no existió desde el principio, la deuda se acumula. En ese punto, el equipo interno rara vez tiene el tiempo, el proceso o la experiencia para recuperarla sin poner en riesgo la relación comercial. Ahí es donde entra Recupera: gestión especializada de deuda activa, con el respaldo de ",
           },
           {
-            type: "bold",
-            text: "más de 35 años de experiencia en recuperación de pagos empresariales, ",
+            type: "link",
+            text: "Recsa",
+            href: "https://recsa.com",
           },
           {
             type: "text",
-            text: "junto con el respaldo de RECSA, lo que nos permite garantizar resultados reales.",
+            text: " y más de 40 años de experiencia en cobranza en 15 países de LATAM.",
           },
-        ],
-      },
-      {
-        type: "subtitle",
-        text: "Una solución moderna, sin los límites del factoring tradicional",
-      },
-      {
-        type: "list",
-        items: [
-          "No pierdes margen en descuentos.",
-          "No afectas tu relación con los clientes.",
-          "No tienes que esperar semanas.",
-          "Solo actúas cuando lo necesitas.",
         ],
       },
       {
@@ -820,98 +388,37 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: "text",
-            text: "Ya sea que estés considerando opciones de factoring empresas, freight factoring companies, o soluciones de factoraje financiero, Sena es la alternativa sin letra chica: recuperamos tu factura cuando nadie más puede, sin que pongas nada por adelantado.",
+            text: "En Sena ayudamos a cerrar el ciclo completo: desde automatizar la cobranza preventiva hasta recuperar lo que ya está vencido. ",
           },
-        ],
-      },
-      {
-        type: "subtitle",
-        text: "Tu factura sigue siendo tuya. Nosotros solo hacemos que te la paguen.",
-      },
-      {
-        type: "paragraph",
-        fragments: [
           {
-            type: "text",
-            text: "Sena es la forma más eficiente de recuperar pagos vencidos. Sin complicaciones, sin papeleo innecesario y sin poner en riesgo tus finanzas. Solo si recuperas tu dinero, nuestro trabajo se da por hecho.",
+            type: "link",
+            text: "Conversemos sobre tu cartera.",
+            href: "https://meetings.hubspot.com/francisco502",
           },
         ],
       },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "bold",
-            text: "Recupera Plus: la manera más inteligente de cobrar lo que te deben.",
-          },
-        ],
-      },
-      /*  { type: 'image', link: '/images/blog/blog7/3.jpg' }, */
     ],
   },
   {
     id: 11,
-    slug: slug("Sena nacio para transformar las finanzas de las empresas"),
-    title: "¿Por qué Sena nació para transformar las finanzas de las empresas?",
+    slug: slug("Por que nacio Sena el arte de cobrar bien"),
+    title: "Por qué nació Sena: el arte de cobrar bien",
     intro:
-      "En Sena no solo creamos una herramienta financiera. Creamos una solución pensada en la realidad de quienes llevan adelante sus negocios todos los días. Nacimos con un propósito claro: ordenar, simplificar y dar control a las finanzas de las empresas que más lo necesitan.",
-    date: "11 de junio 2025",
+      "La cobranza existe porque el dinero no siempre llega cuando debería. Mecanismos de pago ineficientes, ventas a crédito sin seguimiento, contrapartes que no priorizan pagar. Todo eso acumula deuda en la calle y presión en tu caja. Sena nació para cambiar eso.",
+    date: "12 de diciembre 2025",
     tags: ["Sena", "Blog"],
     image: AssetImageBlog.blog_11_main.src,
     content: [
       {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "text",
-            text: "En Sena no solo creamos una herramienta financiera. Creamos una solución pensada en la realidad de quienes llevan adelante sus negocios todos los días. Nacimos con un propósito claro: ",
-          },
-          {
-            type: "bold",
-            text: "ordenar, simplificar y dar control a las finanzas de las empresas que más lo necesitan.",
-          },
-        ],
-      },
-      {
-        type: "paragraph",
-        fragments: [{ type: "bold", text: "El problema que nadie resolvía" }],
+        type: "title",
+        text: "Por qué nació Sena: el arte de cobrar bien",
       },
       {
         type: "paragraph",
         fragments: [
           {
             type: "text",
-            text: "Durante años, las pymes y comerciantes han enfrentado los mismos retos:",
-          },
-        ],
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          { type: "text", text: "👉 Facturas que no se pagan a tiempo" },
-        ],
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "text",
-            text: "👉 Cobranzas manuales, desordenadas y difíciles de rastrear",
-          },
-        ],
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          { type: "text", text: "👉 Pagos que se olvidan o se acumulan" },
-        ],
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "text",
-            text: "👉 Falta de información clara para tomar decisiones",
+            text: "La cobranza existe porque el dinero no siempre llega cuando debería. Mecanismos de pago ineficientes, ventas a crédito sin seguimiento, contrapartes que simplemente no priorizan pagar. Todo eso acumula deuda en la calle y presión en tu caja.",
           },
         ],
       },
@@ -920,22 +427,17 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: "text",
-            text: "Y, sobre todo, una sensación constante de estar apagando incendios en lugar de construir con tranquilidad.",
+            text: "Y no es un problema nuevo. En el mundo de los negocios, la deuda que no se gestiona mata empresas. Pero hacerlo mal también. Una cobranza hostil o ineficiente puede costarte el cliente que más trabajo te costó conseguir.",
           },
         ],
       },
-      {
-        type: "paragraph",
-        fragments: [
-          { type: "bold", text: "Escuchamos de cerca a comerciantes y pymes" },
-        ],
-      },
+      { type: "subtitle", text: "El problema que queríamos resolver" },
       {
         type: "paragraph",
         fragments: [
           {
             type: "text",
-            text: "Sena nació tras cientos de conversaciones con personas que día a día luchan por mantener su negocio a flote. Nos contaron lo difícil que es tener claridad sobre lo que entra y lo que sale, y cómo eso afecta todo: desde el crecimiento hasta el descanso mental.",
+            text: "Sena nació de cientos de conversaciones con empresas B2B que enfrentaban el mismo problema: ya habían vendido, habían entregado el servicio, y aún así estaban esperando el pago. Sin visibilidad de su cartera. Sin proceso. Sin tiempo para perseguir a cada cliente.",
           },
         ],
       },
@@ -944,39 +446,40 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: "text",
-            text: "Ese fue nuestro punto de partida: crear algo útil, simple y poderoso.",
+            text: "El resultado era siempre el mismo: estrés financiero, relaciones comerciales tensas y equipos perdiendo horas en tareas que no deberían depender de la memoria de nadie.",
           },
         ],
       },
-      {
-        type: "paragraph",
-        fragments: [{ type: "bold", text: "Pensado desde la operación real" }],
-      },
+      { type: "subtitle", text: "Cobrar también es una forma de cuidar" },
       {
         type: "paragraph",
         fragments: [
           {
             type: "text",
-            text: "Sena fue diseñado para adaptarse al ritmo real de las empresas.",
+            text: "Nuestra filosofía es simple: cobrar bien no es ser agresivo. Es tener un proceso profesional que transmite orden y respeto -- tanto para quien cobra como para quien paga. No se trata solo de lograr que las facturas entren a una cuenta bancaria. Se trata de que tu negocio siga creciendo, con tu flujo de caja ordenado y tus relaciones comerciales intactas.",
           },
         ],
       },
       {
-        type: "list",
-        items: [
-          "Se conecta con herramientas que ya usan.",
-          "Es fácil de implementar y de entender.",
-          "Ofrece visibilidad en tiempo real del flujo de pagos.",
-          "Reduce el desorden, elimina tareas repetitivas y permite planificar.",
-        ],
+        type: "quote",
+        text: "“Cobrar también es una forma de cuidar: cuidar el pago, la relación y al cliente.”",
       },
+      { type: "subtitle", text: "Tecnología y experiencia humana, juntas" },
       {
         type: "paragraph",
         fragments: [
-          { type: "text", text: "En otras palabras: " },
           {
-            type: "bold",
-            text: "menos esfuerzo operativo, más control financiero.",
+            type: "text",
+            text: "Sena combina una plataforma de automatización multicanal -- WhatsApp, email, SMS -- con el respaldo del equipo humano de ",
+          },
+          {
+            type: "link",
+            text: "Recsa",
+            href: "https://recsa.com",
+          },
+          {
+            type: "text",
+            text: ": más de 40 años de experiencia en cobranza, presencia en 15 países de LATAM y más de 146 millones de gestiones mensuales. Cuando la tecnología no es suficiente, entra el criterio humano.",
           },
         ],
       },
@@ -988,36 +491,8 @@ export const blogPosts: BlogPost[] = [
         type: "paragraph",
         fragments: [
           {
-            type: "bold",
-            text: "No es solo tecnología, es una nueva forma de trabajar",
-          },
-        ],
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          {
             type: "text",
-            text: "Cuando una empresa tiene claridad sobre sus pagos y cobranzas, todo cambia:",
-          },
-        ],
-      },
-      {
-        type: "paragraph",
-        fragments: [{ type: "text", text: "✅ Se toman mejores decisiones" }],
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          { type: "text", text: "✅ Se gana tiempo para lo importante" },
-        ],
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "text",
-            text: "✅ Se deja atrás el caos y el estrés financiero",
+            text: "Seguimos construyendo junto a las empresas que usan Sena todos los días. Porque creemos que ninguna empresa debería perder dinero -- ni relaciones -- por falta de proceso.",
           },
         ],
       },
@@ -1025,37 +500,12 @@ export const blogPosts: BlogPost[] = [
         type: "paragraph",
         fragments: [
           {
-            type: "text",
-            text: "Sena no es solo una plataforma. Es una nueva forma de relacionarse con el dinero que entra y sale del negocio.",
+            type: "link",
+            text: "¿Quieres ver cómo funciona Sena en tu operación? Agenda una demo aquí.",
+            href: "https://meetings.hubspot.com/francisco502",
           },
         ],
       },
-      {
-        type: "paragraph",
-        fragments: [
-          { type: "bold", text: "Lo que viene: más control, menos fricción" },
-        ],
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          {
-            type: "text",
-            text: "Seguimos construyendo junto a nuestros usuarios. Cada mejora que lanzamos nace de la experiencia real de quienes usan Sena todos los días.",
-          },
-        ],
-      },
-      {
-        type: "paragraph",
-        fragments: [
-          { type: "text", text: "Porque creemos que " },
-          {
-            type: "bold",
-            text: "las empresas no deberían perder dinero ni energía por falta de visibilidad o desorden.",
-          },
-        ],
-      },
-      //*! aca abajo no */
     ],
   },
   {
@@ -1067,7 +517,7 @@ export const blogPosts: BlogPost[] = [
       "Retrasos en pagos: el drama silencioso que asfixia a las pymes peruanas",
     intro:
       "Las pequeñas y medianas empresas (pymes) conforman más del 99% del tejido empresarial del Perú. Sin embargo, siguen siendo las principales víctimas de un problema crónico que rara vez se discute abiertamente: los retrasos en pagos.",
-    date: "26 de junio 2025",
+    date: "16 de diciembre 2025",
     tags: ["Prensa"],
     image: AssetImageBlog.blog_13_main.src,
     content: [
@@ -1103,11 +553,11 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "subtitle",
-        text: "“Cobrar” no debería ser un tabú",
+        text: "“Cobrar" no debería ser un tabú",
       },
       {
         type: "quote",
-        text: "“Aunque legalmente el plazo de pago es de 30 días, muchas pymes reciben su dinero después de 60, 90 o incluso 120 días. Esto se da especialmente en sectores como construcción, donde el retraso ya es una norma no escrita. Las pequeñas empresas temen perder contratos si exigen sus pagos a tiempo. En Perú, hablar de cobranzas aún es visto como algo negativo”, comenta Juan Córdova, Subgerente de Venta B2B en Sena, en entrevista para PQS.pe.",
+        text: "“Aunque legalmente el plazo de pago es de 30 días, muchas pymes reciben su dinero después de 60, 90 o incluso 120 días. Esto se da especialmente en sectores como construcción, donde el retraso ya es una norma no escrita. Las pequeñas empresas temen perder contratos si exigen sus pagos a tiempo. En Perú, hablar de cobranzas aún es visto como algo negativo", comenta Juan Córdova, Subgerente de Venta B2B en Sena, en entrevista para PQS.pe.",
       },
       {
         type: "paragraph",
@@ -1184,11 +634,11 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "quote",
-        text: "“Nuestra misión es romper el círculo vicioso que atrapa a las pymes y convertir la cobranza en una palanca de crecimiento, no en un obstáculo”, añade Córdova.",
+        text: ""Nuestra misión es romper el círculo vicioso que atrapa a las pymes y convertir la cobranza en una palanca de crecimiento, no en un obstáculo", añade Córdova.",
       },
       {
         type: "subtitle",
-        text: "🧾 ¿Y el marco legal?",
+        text: "¿Y el marco legal?",
       },
       {
         type: "paragraph",
@@ -1209,11 +659,11 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "quote",
-        text: "“El Estado tiene la responsabilidad de establecer reglas claras, sancionar el incumplimiento de pagos y fomentar la digitalización. Y el sistema financiero también puede contribuir ofreciendo factoring accesible y justo”, concluye Córdova.",
+        text: ""El Estado tiene la responsabilidad de establecer reglas claras, sancionar el incumplimiento de pagos y fomentar la digitalización. Y el sistema financiero también puede contribuir ofreciendo factoring accesible y justo", concluye Córdova.",
       },
       {
         type: "subtitle",
-        text: "📎 Lee la nota completa",
+        text: "Lee la nota completa",
       },
       {
         type: "paragraph",
@@ -1241,7 +691,7 @@ export const blogPosts: BlogPost[] = [
       "¿Tu flujo de caja está en riesgo? Descubre cómo reducir la morosidad con automatización inteligente",
     intro:
       "En las empresas B2B, el flujo de caja puede verse afectado incluso cuando las ventas van bien. ¿La razón? La morosidad silenciosa: clientes que postergan pagos, olvidan sus compromisos o simplemente no responden. Y mientras tanto, tu empresa sigue operando con ingresos pendientes que nunca llegan. Este desequilibrio se convierte en un cuello de botella para crecer, invertir y proyectar tu negocio con solidez.",
-    date: "22 de julio 2025",
+    date: "19 de diciembre 2025",
     tags: ["Blog"],
     image: AssetImageBlog.blog_14_main.src,
     content: [
@@ -1280,7 +730,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: "text",
-            text: "Pero automatizar no solo es eficiencia. Es prevención. Las empresas que usan Sena han logrado reducir su morosidad hasta en un 35% en los primeros 90 días. ¿Cómo? Aplicando flujos inteligentes de comunicación vía WhatsApp, email o llamadas automáticas, activados según el comportamiento de pago de cada cliente. No todos pagan igual, y por eso no todos deberían recibir el mismo seguimiento.",
+            text: "Pero automatizar no solo es eficiencia. Es prevención. ¿Cómo? Aplicando flujos inteligentes de comunicación vía WhatsApp, email o SMS, activados según el comportamiento de pago de cada cliente. No todos pagan igual, y por eso no todos deberían recibir el mismo seguimiento.",
           },
         ],
       },
@@ -1330,8 +780,8 @@ export const blogPosts: BlogPost[] = [
         type: "paragraph",
         fragments: [
           {
-            type: "bold",
-            text: "Conclusión clara y potente:",
+            type: "text",
+            text: "No necesitas más planillas ni más meses con ingresos retenidos. Necesitas estructura, visibilidad y seguimiento.",
           },
         ],
       },
@@ -1339,8 +789,9 @@ export const blogPosts: BlogPost[] = [
         type: "paragraph",
         fragments: [
           {
-            type: "text",
-            text: "👉 No necesitas más planillas, más excusas ni más meses con ingresos retenidos. Necesitas estructura, visibilidad y seguimiento. Automatiza tu cobranza con Sena, y empieza a recuperar lo que es tuyo.",
+            type: "link",
+            text: "Agenda una demo y ve cómo Sena puede ordenar tu cobranza.",
+            href: "https://meetings.hubspot.com/francisco502",
           },
         ],
       },
@@ -1355,7 +806,7 @@ export const blogPosts: BlogPost[] = [
       "Clientes que no pagan a tiempo: causas, impacto y solución definitiva para empresas B2B",
     intro:
       "En todo negocio B2B existe un momento incómodo que se repite: un cliente no paga a tiempo. Y no hablamos de uno o dos días, sino semanas o incluso meses sin respuesta. El área de ventas se frustra, finanzas pierde visibilidad y dirección comienza a sentir la presión en la caja. Pero, ¿por qué ocurre esto con tanta frecuencia? Y más importante aún: ¿cómo puedes solucionarlo sin desgastar la relación comercial?",
-    date: "24 de julio 2025",
+    date: "06 de enero 2026",
     tags: ["Blog"],
     image: AssetImageBlog.blog_15_main.src,
     content: [
@@ -1491,7 +942,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: "text",
-            text: "Cuando ya tienes una cartera vencida y ningún área interna puede tomar acción —ya sea por falta de tiempo, recursos o experiencia— lo peor que puedes hacer es dejar que el problema crezca. En vez de eso, delega. Con ",
+            text: "Cuando ya tienes una cartera vencida y ningún área interna puede tomar acción --ya sea por falta de tiempo, recursos o experiencia-- lo peor que puedes hacer es dejar que el problema crezca. En vez de eso, delega. Con ",
           },
           {
             type: "bold",
@@ -1526,19 +977,20 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: "text",
-            text: "Cada día que pasa sin cobrar una deuda es dinero que podrías estar reinvirtiendo en tu empresa. La solución existe, y comienza por dejar atrás los procesos manuales. Automatiza tu cobranza, digitaliza tus cuentas por cobrar y, si ya estás en una etapa avanzada del problema, actívalo con Recupera Plus.",
+            text: "Cada día que pasa sin cobrar una deuda es dinero que podrías estar reinvirtiendo en tu empresa. La solución comienza por dejar atrás los procesos manuales.",
           },
         ],
       },
-      // {
-      //     type: 'paragraph',
-      //     fragments: [
-      //         {
-      //             type: 'text',
-      //             text: 'Usa también nuestra Calculadora de Recuperación para estimar cuánto podrías recuperar este mes. Elige dejar de perder.',
-      //         },
-      //     ],
-      // },
+      {
+        type: "paragraph",
+        fragments: [
+          {
+            type: "link",
+            text: "Conversemos sobre tu cartera.",
+            href: "https://meetings.hubspot.com/francisco502",
+          },
+        ],
+      },
     ],
   },
   {
@@ -1550,7 +1002,7 @@ export const blogPosts: BlogPost[] = [
       "Educación financiera para empresas B2B: el primer paso para cobrar mejor y crecer con estabilidad",
     intro:
       "En el mundo de los negocios B2B, el éxito no depende únicamente de vender más. Depende de cobrar mejor. Y para lograrlo, el primer paso no está en contratar a un equipo más grande ni en perseguir a los clientes, sino en algo mucho más profundo: educación financiera.",
-    date: "01 de agosto 2025",
+    date: "09 de enero 2026",
     tags: ["Blog"],
     image: AssetImageBlog.blog_16_main.src,
     content: [
@@ -1643,7 +1095,12 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: "text",
-            text: "Sena puede ayudarte a digitalizar y profesionalizar tu gestión de cuentas por cobrar, sin fricciones, sin complicaciones, y con resultados visibles en semanas.",
+            text: "Sena puede ayudarte a digitalizar y profesionalizar tu gestión de cuentas por cobrar, sin fricciones, sin complicaciones, y con resultados visibles en semanas. ",
+          },
+          {
+            type: "link",
+            text: "Agenda una demo aquí.",
+            href: "https://meetings.hubspot.com/francisco502",
           },
         ],
       },
@@ -1657,8 +1114,8 @@ export const blogPosts: BlogPost[] = [
     title:
       "Cómo profesionalizar tu cobranza sin perder clientes: estrategias probadas para empresas B2B",
     intro:
-      "Muchas empresas temen profesionalizar su proceso de cobranza por miedo a “espantar” a sus clientes. La realidad es todo lo contrario: un proceso profesional transmite orden, seriedad y respeto. No hay nada más dañino que perseguir a un cliente sin estructura, sin consistencia y sin tacto. Eso es lo que realmente deteriora relaciones.",
-    date: "04 de agosto 2025",
+      "Muchas empresas temen profesionalizar su proceso de cobranza por miedo a "espantar" a sus clientes. La realidad es todo lo contrario: un proceso profesional transmite orden, seriedad y respeto. No hay nada más dañino que perseguir a un cliente sin estructura, sin consistencia y sin tacto. Eso es lo que realmente deteriora relaciones.",
+    date: "13 de enero 2026",
     tags: ["Blog"],
     image: AssetImageBlog.blog_17_main.src,
     content: [
@@ -1667,7 +1124,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: "text",
-            text: "Muchas empresas temen profesionalizar su proceso de cobranza por miedo a “espantar” a sus clientes. La realidad es todo lo contrario: un proceso profesional transmite orden, seriedad y respeto. No hay nada más dañino que perseguir a un cliente sin estructura, sin consistencia y sin tacto. Eso es lo que realmente deteriora relaciones.",
+            text: "Muchas empresas temen profesionalizar su proceso de cobranza por miedo a "espantar" a sus clientes. La realidad es todo lo contrario: un proceso profesional transmite orden, seriedad y respeto. No hay nada más dañino que perseguir a un cliente sin estructura, sin consistencia y sin tacto. Eso es lo que realmente deteriora relaciones.",
           },
         ],
       },
@@ -1845,7 +1302,12 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: "text",
-            text: "No sigas normalizando los pagos vencidos. Elige eficiencia, elige orden, elige Sena.",
+            text: "No sigas normalizando los pagos vencidos. ",
+          },
+          {
+            type: "link",
+            text: "Conversemos sobre cómo profesionalizar tu cobranza.",
+            href: "https://meetings.hubspot.com/francisco502",
           },
         ],
       },
@@ -1857,8 +1319,8 @@ export const blogPosts: BlogPost[] = [
     title:
       "Si no haces seguimiento, no cobras: cómo Sena profesionaliza el seguimiento y recupera tu dinero",
     intro:
-      "Hiciste el cálculo. Ahora sabes cuánto dinero tienes atrapado en tu cartera vencida. ¿Y ahora qué?\n\nEl mayor error que cometen las empresas con deudas activas no es no saber cuánto les deben —ese paso ya lo diste—, sino **no hacer seguimiento constante, estratégico y profesional para recuperar ese dinero**. No basta con una llamada. No basta con reenviar la factura. Si no hay estructura, el cliente posterga, ignora… y tú sigues perdiendo.",
-    date: "07 de agosto 2025",
+      "Hiciste el cálculo. Ahora sabes cuánto dinero tienes atrapado en tu cartera vencida. ¿Y ahora qué?\n\nEl mayor error que cometen las empresas con deudas activas no es no saber cuánto les deben --ese paso ya lo diste--, sino **no hacer seguimiento constante, estratégico y profesional para recuperar ese dinero**. No basta con una llamada. No basta con reenviar la factura. Si no hay estructura, el cliente posterga, ignora... y tú sigues perdiendo.",
+    date: "16 de enero 2026",
     tags: ["Blog"],
     image: AssetImageBlog.blog_18_main.src,
     content: [
@@ -1876,7 +1338,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: "text",
-            text: "El mayor error que cometen las empresas con deudas activas no es no saber cuánto les deben —ese paso ya lo diste—, sino ",
+            text: "El mayor error que cometen las empresas con deudas activas no es no saber cuánto les deben --ese paso ya lo diste--, sino ",
           },
           {
             type: "bold",
@@ -1884,7 +1346,7 @@ export const blogPosts: BlogPost[] = [
           },
           {
             type: "text",
-            text: ". No basta con una llamada. No basta con reenviar la factura. Si no hay estructura, el cliente posterga, ignora… y tú sigues perdiendo.",
+            text: ". No basta con una llamada. No basta con reenviar la factura. Si no hay estructura, el cliente posterga, ignora... y tú sigues perdiendo.",
           },
         ],
       },
@@ -1966,7 +1428,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: "text",
-            text: "Recuperamos sin fricciones, sin amenazas y sin poner en riesgo la relación comercial. Porque entendemos que detrás de cada cliente hay una oportunidad de negocio… pero también una obligación pendiente.",
+            text: "Recuperamos sin fricciones, sin amenazas y sin poner en riesgo la relación comercial. Porque entendemos que detrás de cada cliente hay una oportunidad de negocio... pero también una obligación pendiente.",
           },
         ],
       },
@@ -1984,7 +1446,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: "text",
-            text: "Lo que pasa todos los meses: ese dinero sigue fuera de tu caja. Mientras tú te enfocas en operar, vender y pagar tus propias obligaciones, estás financiando a clientes que simplemente no respondieron a tiempo… y a los que nadie les volvió a escribir.",
+            text: "Lo que pasa todos los meses: ese dinero sigue fuera de tu caja. Mientras tú te enfocas en operar, vender y pagar tus propias obligaciones, estás financiando a clientes que simplemente no respondieron a tiempo... y a los que nadie les volvió a escribir.",
           },
         ],
       },
@@ -2019,8 +1481,9 @@ export const blogPosts: BlogPost[] = [
         type: "paragraph",
         fragments: [
           {
-            type: "text",
-            text: "👉 Solicita una evaluación gratuita de tu cartera y conoce cómo podemos ayudarte a cobrar sin tener que perseguir a nadie.",
+            type: "link",
+            text: "Solicita una evaluación gratuita de tu cartera.",
+            href: "https://meetings.hubspot.com/francisco502",
           },
         ],
       },
@@ -2032,7 +1495,7 @@ export const blogPosts: BlogPost[] = [
     title: "¿Cómo salir de Infocorp y limpiar tu historial crediticio? ",
     intro:
       "Estar en Infocorp representa una de las mayores preocupaciones para personas y pymes que buscan acceder a créditos, financiamiento o cerrar contratos importantes. Un historial negativo puede convertirse en un obstáculo significativo, pero no es permanente. Con los pasos adecuados, es posible salir de Infocorp, limpiar tu historial crediticio y recuperar la confianza financiera. En este artículo explicaremos cómo funciona este sistema, qué acciones tomar y qué alternativas existen para evitar reincidencias.",
-    date: "17 de septiembre 2025",
+    date: "20 de enero 2026",
     tags: ["Blog"],
     image: AssetImageBlog.blog_20_main.src,
     content: [
@@ -2105,7 +1568,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "subtitle",
-        text: "👉 Entonces, cuando hablamos de “Infocorp” nos referimos específicamente al contexto peruano.",
+        text: "Entonces, cuando hablamos de "Infocorp" nos referimos específicamente al contexto peruano.",
       },
       {
         type: "paragraph",
@@ -2444,7 +1907,7 @@ export const blogPosts: BlogPost[] = [
           {
             type: "link",
             text: "Sena",
-            href: "https://somossena.com/",
+            href: "https://meetings.hubspot.com/francisco502",
           },
           {
             type: "text",
@@ -2534,9 +1997,9 @@ export const blogPosts: BlogPost[] = [
       {
         type: "list",
         items: [
-          "Superintendencia de Banca, Seguros y AFP (SBS) – Perú",
+          "Superintendencia de Banca, Seguros y AFP (SBS) - Perú",
           "Infocorp Equifax",
-          "Recuperación de créditos MYPE – Ministerio de Producción",
+          "Recuperación de créditos MYPE - Ministerio de Producción",
         ],
       },
       {
@@ -2575,16 +2038,12 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: "text",
-            text: "👉 ¿Quieres que tu pyme crezca sin preocuparse por la morosidad? ",
+            text: "¿Quieres que tu pyme crezca sin preocuparse por la morosidad? ",
           },
           {
             type: "link",
-            text: "Descubre cómo Sena puede ayudarte a tener liquidez sin fricciones",
-            href: "https://somossena.com/",
-          },
-          {
-            type: "text",
-            text: ".",
+            text: "Descubre cómo Sena puede ayudarte.",
+            href: "https://meetings.hubspot.com/francisco502",
           },
         ],
       },
@@ -2596,7 +2055,7 @@ export const blogPosts: BlogPost[] = [
     title: "Score crediticio para pymes: 7 tácticas para subirlo en 90 días",
     intro:
       "El score crediticio se ha convertido en una de las métricas más influyentes a la hora de evaluar la solidez financiera de una empresa. Para una pyme, un puntaje bajo puede significar el cierre de puertas a nuevas oportunidades de crédito, proveedores desconfiados o incluso mayores tasas de interés. Sin embargo, mejorar este indicador no es una tarea imposible. Con disciplina, estrategia y acciones enfocadas, es posible subir el score crediticio de una pyme en tan solo 90 días.",
-    date: "19 de septiembre 2025",
+    date: "23 de enero 2026",
     tags: ["Blog"],
     image: AssetImageBlog.blog_21_main.src,
     content: [
@@ -2893,7 +2352,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: "text",
-            text: "Ejemplo real: Una pyme de servicios de consultoría redujo en 30% su DSO (días promedio de cobranza) al implementar Sena. En tres meses, pasó de un score “riesgoso” a “aceptable” y obtuvo la aprobación de una nueva línea de crédito para expandirse.",
+            text: "Ejemplo real: Una pyme de servicios de consultoría redujo en 30% su DSO (días promedio de cobranza) al implementar Sena. En tres meses, pasó de un score "riesgoso" a "aceptable" y obtuvo la aprobación de una nueva línea de crédito para expandirse.",
           },
         ],
       },
@@ -2911,7 +2370,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: "text",
-            text: "Equifax – Reportes crediticios",
+            text: "Equifax - Reportes crediticios",
           },
         ],
       },
@@ -2920,7 +2379,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: "text",
-            text: "Superintendencia de Banca, Seguros y AFP (SBS) – Perú",
+            text: "Superintendencia de Banca, Seguros y AFP (SBS) - Perú",
           },
         ],
       },
@@ -2929,7 +2388,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: "text",
-            text: "TransUnion – Informes empresariales",
+            text: "TransUnion - Informes empresariales",
           },
         ],
       },
@@ -2960,16 +2419,12 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: "text",
-            text: "👉 ¿Quieres mejorar tu score crediticio y fortalecer el flujo de caja de tu pyme? ",
+            text: "¿Quieres fortalecer el flujo de caja de tu pyme? ",
           },
           {
             type: "link",
-            text: "Descubre cómo Sena puede ayudarte a crecer sin fricciones",
-            href: "https://somossena.com/",
-          },
-          {
-            type: "text",
-            text: ".",
+            text: "Conversemos.",
+            href: "https://meetings.hubspot.com/francisco502",
           },
         ],
       },
@@ -2982,7 +2437,7 @@ export const blogPosts: BlogPost[] = [
       "Calcular ROI en 15 minutos: descubre cuánto ahorras al automatizar tu cobranza ",
     intro:
       "¿Vale la pena pagar por un software de cobranza? La mejor forma de responder no es con percepciones, sino con datos. En este artículo aprenderás a calcular ROI en solo 15 minutos y a descubrir cómo la automatización de procesos transforma la cobranza en un motor de ahorro y eficiencia.",
-    date: "07 de octubre 2025",
+    date: "03 de marzo 2026",
     tags: ["Blog", "Visión Financiera", "Educación Financiera"],
     image: AssetImageBlog.blog_22_main.src,
     content: [
@@ -3054,7 +2509,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: "text",
-            text: "ROI = (Beneficio – Inversión) / Inversión x 100",
+            text: "ROI = (Beneficio - Inversión) / Inversión x 100",
           },
         ],
       },
@@ -3079,7 +2534,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: "text",
-            text: "ROI = (3,500 – 1,000) / 1,000 x 100 = 250%",
+            text: "ROI = (3,500 - 1,000) / 1,000 x 100 = 250%",
           },
         ],
       },
@@ -3232,12 +2687,12 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: "text",
-            text: "👉 ¿Quieres comprobar en minutos cuánto puede ahorrar tu empresa? ",
+            text: "¿Quieres comprobar en minutos cuánto puede ahorrar tu empresa? ",
           },
           {
             type: "link",
             text: "Prueba la calculadora ROI de Sena.",
-            href: "https://somossena.com/calculadora",
+            href: "https://meetings.hubspot.com/francisco502",
           },
         ],
       },
@@ -3250,7 +2705,7 @@ export const blogPosts: BlogPost[] = [
       "¿Qué software de cobranza me ayuda a automatizar las cobranzas en mi pyme?",
     intro:
       "Muchas pymes todavía dependen de hojas de Excel y recordatorios manuales para gestionar las cuentas por cobrar. Este enfoque no solo consume tiempo, también aumenta el riesgo de errores y afecta el flujo de caja. La buena noticia es que existen soluciones digitales pensadas para automatizar el proceso y mejorar la eficiencia. En este blog revisaremos qué software de cobranza puede ayudarte a salir del Excel, qué funciones debes buscar y cómo Sena se convierte en un aliado estratégico para crecer sin fricciones.",
-    date: "09 de octubre 2025",
+    date: "06 de marzo 2026",
     tags: ["Blog", "Producto", "Servicio"],
     image: AssetImageBlog.blog_23_main.src,
     content: [
@@ -3804,12 +3259,12 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: "text",
-            text: "👉 ¿Quieres salir del Excel y automatizar tu cobranza de manera profesional? ",
+            text: "¿Quieres salir del Excel y automatizar tu cobranza de manera profesional? ",
           },
           {
             type: "link",
             text: "Conoce Sena y transforma tu gestión financiera",
-            href: "https://somossena.com/",
+            href: "https://meetings.hubspot.com/francisco502",
           },
           {
             type: "text",
@@ -3826,7 +3281,7 @@ export const blogPosts: BlogPost[] = [
       "¿Qué KPIs de cobranza debo revisar para saber si mi cobranza está funcionando?",
     intro:
       "Medir la efectividad de la cobranza no significa únicamente revisar cuánto dinero ingresa a caja. Para un CFO o controller, lo que realmente importa es analizar los KPIs de cobranza, es decir, los indicadores que muestran la eficiencia del proceso, anticipan riesgos y permiten justificar decisiones estratégicas ante la gerencia.",
-    date: "14 de octubre 2025",
+    date: "10 de marzo 2026",
     tags: ["Blog", "Visión Financiera", "Educación Financiera"],
     image: AssetImageBlog.blog_24_main.src,
     content: [
@@ -4068,12 +3523,12 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: "text",
-            text: "👉 ¿Quieres medir tus KPIs de cobranza en tiempo real y reducir la incertidumbre en tus finanzas? ",
+            text: "¿Quieres medir tus KPIs de cobranza en tiempo real y reducir la incertidumbre en tus finanzas? ",
           },
           {
             type: "link",
             text: "Descubre cómo Sena puede ayudarte a transformar tu gestión",
-            href: "https://somossena.com/",
+            href: "https://meetings.hubspot.com/francisco502",
           },
           {
             type: "text",
@@ -4090,7 +3545,7 @@ export const blogPosts: BlogPost[] = [
       "¿Cómo mide Sena el éxito de sus automatizaciones? ¿Qué KPIs de automatización de cobranza vigilan?",
     intro:
       "Automatizar la cobranza no basta: lo que marca la diferencia es saber qué KPIs automatización cobranza se están cumpliendo. En Sena, el éxito se mide con indicadores concretos que muestran si la empresa cobra más rápido, mejora su flujo de caja y reduce la carga manual del equipo.",
-    date: "16 de octubre 2025",
+    date: "13 de marzo 2026",
     tags: ["Blog", "Visión Financiera", "Educación Financiera"],
     image: AssetImageBlog.blog_25_main.src,
     content: [
@@ -4243,7 +3698,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: "text",
-            text: "Cada flujo programado —recordatorios por email, avisos vía WhatsApp o segmentaciones— queda vinculado a los KPIs automatización cobranza. Si los pagos llegan más rápido, baja el DSO; si se reducen las facturas de más de 90 días, mejora el aging de cartera; si aumentan los montos recuperados, sube la tasa de recuperación.",
+            text: "Cada flujo programado --recordatorios por email, avisos vía WhatsApp o segmentaciones-- queda vinculado a los KPIs automatización cobranza. Si los pagos llegan más rápido, baja el DSO; si se reducen las facturas de más de 90 días, mejora el aging de cartera; si aumentan los montos recuperados, sube la tasa de recuperación.",
           },
         ],
       },
@@ -4306,12 +3761,12 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: "text",
-            text: "👉 ¿Quieres medir tus resultados con datos y no con suposiciones? ",
+            text: "¿Quieres medir tus resultados con datos y no con suposiciones? ",
           },
           {
             type: "link",
             text: "Descubre cómo Sena transforma la cobranza con KPIs en tiempo real",
-            href: "https://somossena.com/",
+            href: "https://meetings.hubspot.com/francisco502",
           },
           {
             type: "text",
@@ -4327,7 +3782,7 @@ export const blogPosts: BlogPost[] = [
     title: "¿Qué es DSO y cómo puedo reducirlo en mi empresa?",
     intro:
       "El DSO es una de las métricas financieras más influyentes para la salud de cualquier empresa, especialmente en pymes que dependen de un flujo de caja estable para crecer. Si no lo mides, puedes estar perdiendo liquidez sin darte cuenta. En este blog conocerás qué es, cómo calcularlo y las mejores estrategias para reducirlo de forma práctica.",
-    date: "21 de octubre 2025",
+    date: "17 de marzo 2026",
     tags: ["Blog", "Cobranza"],
     image: AssetImageBlog.blog_26_main.src,
     content: [
@@ -4846,12 +4301,12 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: "text",
-            text: "👉 ¿Quieres medir y reducir tu DSO sin complicaciones? ",
+            text: "¿Quieres medir y reducir tu DSO sin complicaciones? ",
           },
           {
             type: "link",
             text: "Descubre cómo Sena puede ayudarte a optimizar tu cobranza",
-            href: "https://somossena.com/",
+            href: "https://meetings.hubspot.com/francisco502",
           },
           {
             type: "text",
@@ -4869,7 +4324,7 @@ export const blogPosts: BlogPost[] = [
     title: "¿Cuál es la diferencia entre CRM, ERP y SaaS para cobranza?",
     intro:
       "La gestión de cuentas por cobrar es uno de los grandes retos de cualquier pyme en crecimiento. Mientras algunas empresas confían en un CRM de cobranza, otras dependen de su ERP de cobranza, y muchas ya evalúan migrar hacia un SaaS financiero especializado. Pero, ¿cuál es la mejor opción para asegurar liquidez, automatización y control? En este artículo te mostraremos las diferencias más importantes y cómo elegir el sistema de gestión adecuado.",
-    date: "28 de octubre 2025",
+    date: "20 de marzo 2026",
     tags: ["Blog", "Producto", "Servicio"],
     image: AssetImageBlog.blog_27_main.src,
     content: [
@@ -5347,12 +4802,12 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: "text",
-            text: "👉 ¿Quieres llevar tu cobranza a otro nivel con un software pensado para resultados? ",
+            text: "¿Quieres llevar tu cobranza a otro nivel con un software pensado para resultados? ",
           },
           {
             type: "link",
             text: "Descubre Sena y su plataforma de cobranza",
-            href: "https://somossena.com/",
+            href: "https://meetings.hubspot.com/francisco502",
           },
           {
             type: "text",
@@ -5371,7 +4826,7 @@ export const blogPosts: BlogPost[] = [
       "¿Tu ERP de cobranza se queda corto? 7 señales de que necesitas una plataforma dedicada",
     intro:
       "Un ERP de cobranza puede centralizar procesos básicos de facturación y cuentas por cobrar, pero ¿realmente es suficiente para una pyme en crecimiento? Cuando el sistema no ofrece indicadores financieros claros ni herramientas de automatización, es probable que se esté quedando corto. En este blog te compartimos 7 señales para detectar esas limitaciones y cómo una plataforma especializada como Sena puede marcar la diferencia.",
-    date: "30 de octubre 2025",
+    date: "24 de marzo 2026",
     tags: ["Blog"],
     image: AssetImageBlog.blog_28_main.src,
     content: [
@@ -5896,12 +5351,12 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: "text",
-            text: "👉 ¿Quieres complementar tu ERP con una solución especializada en cobranzas? ",
+            text: "¿Quieres complementar tu ERP con una solución especializada en cobranzas? ",
           },
           {
             type: "link",
             text: "Conoce Sena, la plataforma de cobranza SaaS diseñada para pymes en crecimiento",
-            href: "https://somossena.com/",
+            href: "https://meetings.hubspot.com/francisco502",
           },
           {
             type: "text",
@@ -5919,7 +5374,7 @@ export const blogPosts: BlogPost[] = [
     title: "¿Cómo puedo recuperar una factura vencida sin perder al cliente?",
     intro:
       "Las facturas vencidas son uno de los mayores dolores de cabeza para las pymes. No solo afectan la liquidez, también ponen en riesgo la relación con los clientes. Sin embargo, con un enfoque profesional y herramientas adecuadas, es posible recuperar una factura vencida sin dañar la confianza comercial. En este artículo veremos estrategias prácticas para el cobro de facturas vencidas, cuándo actuar y cómo una plataforma como Sena puede ayudarte a mantener el control.",
-    date: "03 de noviembre 2025",
+    date: "27 de marzo 2026",
     tags: ["Producto", "Servicio"],
     image: AssetImageBlog.blog_29_main.src,
     content: [
@@ -6161,12 +5616,12 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: "text",
-            text: "👉 ¿Quieres dejar atrás la incertidumbre y optimizar tu cobranza? ",
+            text: "¿Quieres dejar atrás la incertidumbre y optimizar tu cobranza? ",
           },
           {
             type: "link",
             text: "Conoce Sena y su solución para la gestión de facturas vencidas",
-            href: "https://somosena.com/",
+            href: "https://meetings.hubspot.com/francisco502",
           },
           {
             type: "text",
@@ -6185,7 +5640,7 @@ export const blogPosts: BlogPost[] = [
       "¿Qué pasa si no cobro una deuda a tiempo? Riesgos ocultos para tu pyme?",
     intro:
       "Retrasar la cobranza puede parecer un detalle menor, pero los riesgos de no cobrar una deuda se acumulan y terminan poniendo en jaque la estabilidad financiera de cualquier pyme. Con frecuencia, los dueños de negocio piensan que esperar un poco más no traerá consecuencias; sin embargo, lo que realmente ocurre es que el flujo de caja se deteriora, las pérdidas aumentan y las relaciones con los clientes se tensan.",
-    date: "05 de noviembre 2025",
+    date: "31 de marzo 2026",
     tags: ["Blog"],
     image: AssetImageBlog.blog_30_main.src,
     content: [
@@ -6736,12 +6191,488 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: "text",
-            text: "👉 ¿Quieres evitar que las facturas vencidas se conviertan en un problema para tu pyme? ",
+            text: "¿Quieres evitar que las facturas vencidas se conviertan en un problema para tu pyme? ",
           },
           {
             type: "link",
             text: "Conoce Sena y transforma tu cobranza en un proceso automatizado y estratégico",
-            href: "https://somosena.com/",
+            href: "https://meetings.hubspot.com/francisco502",
+          },
+          {
+            type: "text",
+            text: ".",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 31,
+    slug: slug("Cobrar no deberia ser lo mas dificil de tu negocio"),
+    title: "Cobrar no debería ser lo más difícil de tu negocio",
+    intro: "Vendes, emites la factura y esperas. Pero el dinero no llega. Esta es la realidad de miles de empresas en Chile.",
+    date: "10 de abril 2026",
+    tags: ["Sena", "Cobranza"],
+    image: "/images/blog/cobrar-no-deberia-ser-dificil.jpg",
+    content: [
+      {
+        type: "paragraph",
+        fragments: [
+          {
+            type: "text",
+            text: "Vendes. Emites la factura. Y esperas.",
+          },
+        ],
+      },
+      {
+        type: "paragraph",
+        fragments: [
+          {
+            type: "text",
+            text: "Pero el dinero no llega. Pasan los días, luego las semanas. Mandas un correo. Otro. Llamas. Te dicen que \"ya está en proceso\". Y mientras tanto, tú tienes que pagar sueldos, proveedores e impuestos.",
+          },
+        ],
+      },
+      {
+        type: "paragraph",
+        fragments: [
+          {
+            type: "text",
+            text: "Esta es la realidad de miles de empresas en Chile. Y lo más frustrante: no es un problema de ventas ni de calidad. Es un problema de cobranza.",
+          },
+        ],
+      },
+      {
+        type: "subtitle",
+        text: "El problema no es que no te paguen. Es que no tienes un sistema.",
+      },
+      {
+        type: "paragraph",
+        fragments: [
+          {
+            type: "text",
+            text: "La mayoría de las pymes cobran de manera reactiva. Esperan que llegue el vencimiento, ven que no llegó el pago, y recién ahí actúan. Sin proceso. Sin seguimiento. Sin datos.",
+          },
+        ],
+      },
+      {
+        type: "paragraph",
+        fragments: [
+          {
+            type: "text",
+            text: "El resultado: facturas que se acumulan, relaciones comerciales que se tensan y dueños de empresa que dedican horas de su semana a perseguir lo que ya es suyo.",
+          },
+        ],
+      },
+      {
+        type: "paragraph",
+        fragments: [
+          {
+            type: "text",
+            text: "Cobrar no debería ser lo más difícil de tu negocio. Pero si no tienes un proceso claro, termina siéndolo.",
+          },
+        ],
+      },
+      {
+        type: "subtitle",
+        text: "Lo que hace la diferencia: anticipación y consistencia",
+      },
+      {
+        type: "paragraph",
+        fragments: [
+          {
+            type: "text",
+            text: "Las empresas que cobran bien no cobran más fuerte. Cobran antes y con más orden.",
+          },
+        ],
+      },
+      {
+        type: "paragraph",
+        fragments: [
+          {
+            type: "text",
+            text: "Eso significa enviar recordatorios antes del vencimiento, no después. Hacer seguimiento por el canal correcto según el tipo de cliente. Tener visibilidad de qué facturas están en riesgo antes de que venzan.",
+          },
+        ],
+      },
+      {
+        type: "paragraph",
+        fragments: [
+          {
+            type: "text",
+            text: "Y sobre todo: no depender de una sola persona que lleva todo en una planilla.",
+          },
+        ],
+      },
+      {
+        type: "subtitle",
+        text: "Para eso existe Sena",
+      },
+      {
+        type: "paragraph",
+        fragments: [
+          {
+            type: "text",
+            text: "Sena es una plataforma de cobranza diseñada para empresas B2B en Chile. Automatiza los recordatorios, centraliza el seguimiento y te da visibilidad en tiempo real del estado de cada factura.",
+          },
+        ],
+      },
+      {
+        type: "paragraph",
+        fragments: [
+          {
+            type: "text",
+            text: "No es un ERP. No es una herramienta de contabilidad. Es una herramienta específica para que cobres más rápido, con menos esfuerzo y sin dañar la relación con tus clientes.",
+          },
+        ],
+      },
+      {
+        type: "paragraph",
+        fragments: [
+          {
+            type: "text",
+            text: "Si tu empresa tiene facturas pendientes y quieres dejar de perseguirlas manualmente, ",
+          },
+          {
+            type: "link",
+            text: "agenda una demo con nuestro equipo",
+            href: "https://meetings.hubspot.com/francisco502",
+          },
+          {
+            type: "text",
+            text: ".",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 32,
+    slug: slug("Cuando ya vendiste pero el dinero todavia no llega"),
+    title: "Cuando ya vendiste, pero el dinero todavía no llega",
+    intro: "El capital de trabajo es el oxígeno de una pyme. Y la principal amenaza para ese oxígeno no es vender poco, sino cobrar tarde.",
+    date: "14 de abril 2026",
+    tags: ["Sena", "Educación Financiera"],
+    image: "/images/blog/cuando-vendiste-pero-no-llega.jpg",
+    content: [
+      {
+        type: "paragraph",
+        fragments: [
+          {
+            type: "text",
+            text: "Sofi tiene una empresa de servicios de marketing. Factura bien. Sus clientes están contentos. Pero cada fin de mes entra en pánico.",
+          },
+        ],
+      },
+      {
+        type: "paragraph",
+        fragments: [
+          {
+            type: "text",
+            text: "No porque no tenga clientes. Sino porque tiene $18 millones en facturas emitidas y solo $3 millones en la cuenta.",
+          },
+        ],
+      },
+      {
+        type: "paragraph",
+        fragments: [
+          {
+            type: "text",
+            text: "Sofi no tiene un problema de ventas. Tiene un problema de flujo de caja. Y la causa es siempre la misma: facturas que no se pagan a tiempo.",
+          },
+        ],
+      },
+      {
+        type: "subtitle",
+        text: "El costo invisible del cobro tardío",
+      },
+      {
+        type: "paragraph",
+        fragments: [
+          {
+            type: "text",
+            text: "Cuando una factura se atrasa, el impacto no es solo financiero. También es operacional y emocional.",
+          },
+        ],
+      },
+      {
+        type: "paragraph",
+        fragments: [
+          {
+            type: "text",
+            text: "Financieramente, tienes que buscar cómo financiar lo que ya vendiste. Operacionalmente, alguien de tu equipo tiene que dejar de hacer su trabajo para perseguir el pago. Y emocionalmente, ese estrés constante afecta la forma en que tomas decisiones.",
+          },
+        ],
+      },
+      {
+        type: "paragraph",
+        fragments: [
+          {
+            type: "text",
+            text: "Según datos de Propyme, más del 60% de las pymes chilenas ha tenido problemas de liquidez por cobros tardíos en el último año. No es una excepción. Es la norma.",
+          },
+        ],
+      },
+      {
+        type: "subtitle",
+        text: "El problema de fondo: cobrar sin proceso",
+      },
+      {
+        type: "paragraph",
+        fragments: [
+          {
+            type: "text",
+            text: "La mayoría de las empresas cobra de manera reactiva. Espera el vencimiento, ve que no llegó el pago, y recién ahí actúa. Sin seguimiento previo. Sin datos. Sin automatización.",
+          },
+        ],
+      },
+      {
+        type: "paragraph",
+        fragments: [
+          {
+            type: "text",
+            text: "Y cuando finalmente se comunican con el cliente, ya pasaron días o semanas. El cliente ya \"olvidó\". O simplemente priorizó a quien le cobró primero.",
+          },
+        ],
+      },
+      {
+        type: "paragraph",
+        fragments: [
+          {
+            type: "text",
+            text: "Como reportó ",
+          },
+          {
+            type: "link",
+            text: "La Tercera",
+            href: "https://www.latercera.com",
+          },
+          {
+            type: "text",
+            text: " en su cobertura del ecosistema pyme, el rezago en los pagos entre empresas es uno de los principales factores que limita el crecimiento de las empresas medianas en Chile.",
+          },
+        ],
+      },
+      {
+        type: "subtitle",
+        text: "Cobrar bien no es insistir más. Es anticiparse.",
+      },
+      {
+        type: "paragraph",
+        fragments: [
+          {
+            type: "text",
+            text: "La diferencia entre las empresas que tienen flujo y las que no suele ser una sola cosa: proceso.",
+          },
+        ],
+      },
+      {
+        type: "paragraph",
+        fragments: [
+          {
+            type: "text",
+            text: "Un recordatorio enviado tres días antes del vencimiento es mucho más efectivo que uno enviado tres días después. Un seguimiento automatizado por WhatsApp o email tiene más impacto que una llamada improvisada.",
+          },
+        ],
+      },
+      {
+        type: "paragraph",
+        fragments: [
+          {
+            type: "text",
+            text: "Cuando tienes un proceso claro, cobrar deja de ser una fuente de estrés y se convierte en algo predecible.",
+          },
+        ],
+      },
+      {
+        type: "subtitle",
+        text: "Sena: cobranza con proceso, no con presión",
+      },
+      {
+        type: "paragraph",
+        fragments: [
+          {
+            type: "text",
+            text: "Sena ayuda a empresas como la de Sofi a transformar su cobranza. Automatizamos los recordatorios, centralizamos el seguimiento y te damos visibilidad en tiempo real de qué facturas están en riesgo antes de que venzan.",
+          },
+        ],
+      },
+      {
+        type: "paragraph",
+        fragments: [
+          {
+            type: "text",
+            text: "El resultado: menos tiempo persiguiendo pagos, más tiempo haciendo crecer tu negocio.",
+          },
+        ],
+      },
+      {
+        type: "paragraph",
+        fragments: [
+          {
+            type: "text",
+            text: "Si quieres dejar de vivir con el estrés del flujo de caja, ",
+          },
+          {
+            type: "link",
+            text: "agenda una demo con nuestro equipo",
+            href: "https://meetings.hubspot.com/francisco502",
+          },
+          {
+            type: "text",
+            text: ".",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 33,
+    slug: slug("Tu equipo vende pero quien cobra"),
+    title: "Tu equipo vende, pero \u00bfqui\u00e9n cobra?",
+    intro: "En muchas empresas, vender y cobrar son dos mundos separados. El problema es que esa separación tiene un costo enorme.",
+    date: "17 de abril 2026",
+    tags: ["Sena", "Cobranza", "Blog"],
+    image: "/images/blog/equipo-vende-quien-cobra.jpg",
+    content: [
+      {
+        type: "paragraph",
+        fragments: [
+          {
+            type: "text",
+            text: "En muchas empresas, vender y cobrar son dos mundos separados. El equipo comercial cierra negocios. El equipo administrativo (o el contador, o el asistente, o nadie en particular) se hace cargo de cobrar.",
+          },
+        ],
+      },
+      {
+        type: "paragraph",
+        fragments: [
+          {
+            type: "text",
+            text: "El problema es que esa separaci\u00f3n tiene un costo enorme.",
+          },
+        ],
+      },
+      {
+        type: "subtitle",
+        text: "Dos tipos de empresa",
+      },
+      {
+        type: "paragraph",
+        fragments: [
+          {
+            type: "text",
+            text: "Hay empresas donde el proceso comercial termina cuando se firma el contrato o se emite la factura. Y hay empresas donde el proceso comercial termina cuando el dinero entra a la cuenta.",
+          },
+        ],
+      },
+      {
+        type: "paragraph",
+        fragments: [
+          {
+            type: "text",
+            text: "Las primeras tienen equipos de venta fuertes y procesos de cobranza d\u00e9biles. Las segundas entienden que ",
+          },
+          {
+            type: "bold",
+            text: "vender sin cobrar no es vender: es prestar.",
+          },
+        ],
+      },
+      {
+        type: "subtitle",
+        text: "El costo de no tener un proceso de cobranza",
+      },
+      {
+        type: "paragraph",
+        fragments: [
+          {
+            type: "text",
+            text: "Cuando no hay un proceso claro de cobranza, pasan varias cosas:",
+          },
+        ],
+      },
+      {
+        type: "list",
+        items: [
+          "Las facturas se acumulan sin seguimiento.",
+          "El equipo comercial evita presionar al cliente por miedo a perder la relaci\u00f3n.",
+          "La administraci\u00f3n cobra cuando puede, no cuando debe.",
+          "Los plazos se alargan y el flujo de caja se resiente.",
+        ],
+      },
+      {
+        type: "paragraph",
+        fragments: [
+          {
+            type: "text",
+            text: "Y lo m\u00e1s irónico: a veces las empresas que m\u00e1s venden son las que m\u00e1s sufren de flujo. Porque crecieron sin escalar su proceso de cobranza.",
+          },
+        ],
+      },
+      {
+        type: "subtitle",
+        text: "\u00bfQui\u00e9n deber\u00eda cobrar en tu empresa?",
+      },
+      {
+        type: "paragraph",
+        fragments: [
+          {
+            type: "text",
+            text: "La respuesta corta: alguien con un proceso claro, herramientas adecuadas y visibilidad en tiempo real.",
+          },
+        ],
+      },
+      {
+        type: "paragraph",
+        fragments: [
+          {
+            type: "text",
+            text: "No importa si es una persona dedicada o si se distribuye entre el equipo. Lo que importa es que haya un sistema. Que los recordatorios salgan antes del vencimiento. Que el seguimiento sea consistente. Que nadie tenga que perseguir pagos desde una planilla.",
+          },
+        ],
+      },
+      {
+        type: "subtitle",
+        text: "Sena: el proceso de cobranza que le falta a tu equipo",
+      },
+      {
+        type: "paragraph",
+        fragments: [
+          {
+            type: "text",
+            text: "Sena es una plataforma dise\u00f1ada para que el proceso de cobranza exista, funcione y escale. Automatiza los recordatorios, centraliza el seguimiento de cada factura y le da a tu equipo visibilidad total sobre el estado de los cobros.",
+          },
+        ],
+      },
+      {
+        type: "paragraph",
+        fragments: [
+          {
+            type: "text",
+            text: "Porque ",
+          },
+          {
+            type: "bold",
+            text: "cobrar bien no es una habilidad. Es un proceso.",
+          },
+          {
+            type: "text",
+            text: " Y los procesos se pueden dise\u00f1ar, automatizar y mejorar.",
+          },
+        ],
+      },
+      {
+        type: "paragraph",
+        fragments: [
+          {
+            type: "text",
+            text: "Si quieres que tu equipo deje de improvisar en la cobranza, ",
+          },
+          {
+            type: "link",
+            text: "agenda una demo con nuestro equipo",
+            href: "https://meetings.hubspot.com/francisco502",
           },
           {
             type: "text",
