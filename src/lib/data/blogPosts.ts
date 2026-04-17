@@ -6200,7 +6200,7 @@ export const blogPosts: BlogPost[] = [
       'Vendes, emites la factura y esperas. Pero el dinero no llega. Esta es la realidad de miles de empresas en Chile.',
     date: '10 de abril 2026',
     tags: ['Sena', 'Cobranza'],
-    image: '/images/blog/cobrar-no-deberia-ser-dificil.jpg',
+    image: AssetImageBlog.blog_29_main.src,
     content: [
       {
         type: 'paragraph',
@@ -6341,7 +6341,7 @@ export const blogPosts: BlogPost[] = [
       'El capital de trabajo es el oxígeno de una pyme. Y la principal amenaza para ese oxígeno no es vender poco, sino cobrar tarde.',
     date: '14 de abril 2026',
     tags: ['Sena', 'Educación Financiera'],
-    image: '/images/blog/cuando-vendiste-pero-no-llega.jpg',
+    image: AssetImageBlog.blog_30_main.src,
     content: [
       {
         type: 'paragraph',
@@ -6522,7 +6522,7 @@ export const blogPosts: BlogPost[] = [
       'En muchas empresas, vender y cobrar son dos mundos separados. El problema es que esa separación tiene un costo enorme.',
     date: '17 de abril 2026',
     tags: ['Sena', 'Cobranza', 'Blog'],
-    image: '/images/blog/equipo-vende-quien-cobra.jpg',
+    image: AssetImageBlog.blog_28_main.src,
     content: [
       {
         type: 'paragraph',
