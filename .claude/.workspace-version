@@ -1,5 +1,5 @@
 {
-  "version": "1.0.2",
+  "version": "1.0.3",
   "skills": {
     "init.md": "eb0b71f0807dcf122f6446da3d4095acbbc994db48aeb6fb3ef87fa90d6f66ab",
     "plan.md": "1196c3601851691d8ea2b4efaa0c7b774edb69c9ce0385773a85eb9550ed25f3",
@@ -27,7 +27,7 @@
     "design": "da00729722fed7879ea2bc7b9d6f5c2158180503053c95515a2c9cf4c9727454",
     "init": "d95d5e970252931df149ad55a71b1c96789a5bfca7fbeabe032a4da8bdaa691c",
     "pentest": "5ff9fd15455c62625555b1757342b6c3c110880f8769a31cc59af0d9af59d2ca",
-    "plan": "d66d7c3d49fe77f6769e85de50ce5400dfb83bba7541b5a2b0f33ac513cd736b",
+    "plan": "081a132761d6a8b3ded2b785b4a521532c0b66c7e2ddd5770ed7b6b9539c3b57",
     "review": "da4f261fac457b3232f00138dd57bbbee4419cabacefb2309b4b5a868b9930d0",
     "rollback": "4f1e20f1e42696cbcece3eb207896b1f8dc1e3fd63796c13ab0423547223f444",
     "secure": "0e046c32cbf95b707a847b2cabba731d739f19bd2155e02f957f602c2d7b25d6",
@@ -47,5 +47,11 @@
     "python-fastapi.md": "66ef9947931b671580ca070d535e0a86db2fdd134c2cb12cd618bfd432eb0f5a"
   },
   "installedAt": "2026-04-23T21:36:56.603Z",
-  "updatedAt": "2026-04-23T22:00:19.156Z"
+  "updatedAt": "2026-04-23T22:31:58.335Z",
+  "githubProject": {
+    "number": 3,
+    "owner": "flujopay",
+    "url": "https://github.com/orgs/flujopay/projects/3",
+    "title": "Sena Landing"
+  }
 }
