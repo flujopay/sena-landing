@@ -1,5 +1,5 @@
 {
-  "version": "1.0.1",
+  "version": "1.0.2",
   "skills": {
     "init.md": "eb0b71f0807dcf122f6446da3d4095acbbc994db48aeb6fb3ef87fa90d6f66ab",
     "plan.md": "1196c3601851691d8ea2b4efaa0c7b774edb69c9ce0385773a85eb9550ed25f3",
@@ -17,13 +17,35 @@
     "design.md": "77d880c90b1149bde4d31ceb9e76d0ce9d140096c6e2b6e80c70d6e6955fb551",
     "triage.md": "45ab5ebc10e76212f7514e5ed685d6b793390b37a47672af3ba06c5785784350",
     "cross.md": "3afe813d4fc0f059c09301823cea783a9280c852b143d5e206344bd8c4bd71b8",
-    "setup.md": "137b50145882cdb0a8595e4b6e349bf89782f499daa97b92af7e9acb212bdf80"
+    "setup.md": "137b50145882cdb0a8595e4b6e349bf89782f499daa97b92af7e9acb212bdf80",
+    "apply": "af2927558ca4364af89643046048813f260d01948931fef7d19e0558f9b6670f",
+    "audit": "be88083e84ea2f0910e2bbbd16d734ac39117ff42db4f418848d2d7fe1aebd27",
+    "build": "a43655e5f46bdcbe751fac5f9acbc36d09da8c1f35f2c284d555cf4c561491d0",
+    "cross": "77b3bc439350fb2f12be73738a58b15aadedc38276840c947bfb53b90ecc3d79",
+    "debug": "5aac7fa945295020a9fa4998e925b261f625f93e4c135101bd79ec8106e50ab3",
+    "deploy": "0c6aa4997ead8909a5c4f3adb4ee7592cffd705db03bf9ebc514726b2cd20fb6",
+    "design": "da00729722fed7879ea2bc7b9d6f5c2158180503053c95515a2c9cf4c9727454",
+    "init": "d95d5e970252931df149ad55a71b1c96789a5bfca7fbeabe032a4da8bdaa691c",
+    "pentest": "5ff9fd15455c62625555b1757342b6c3c110880f8769a31cc59af0d9af59d2ca",
+    "plan": "d66d7c3d49fe77f6769e85de50ce5400dfb83bba7541b5a2b0f33ac513cd736b",
+    "review": "da4f261fac457b3232f00138dd57bbbee4419cabacefb2309b4b5a868b9930d0",
+    "rollback": "4f1e20f1e42696cbcece3eb207896b1f8dc1e3fd63796c13ab0423547223f444",
+    "secure": "0e046c32cbf95b707a847b2cabba731d739f19bd2155e02f957f602c2d7b25d6",
+    "setup": "2e5be9bfb6d61308170e9af58674d8432f5f6b2efc8ecdeb41fe259440341ee0",
+    "sync": "a3515c456b5c544a78080d1ee7606d58f7dff77ba6d65c748a982f26d9d0f627",
+    "test": "697fca5ed8124039fafe2ab34ccaaaeeede2cd709b23173c861acf5bd9042ecd",
+    "triage": "2e755e18aaba49bb5b592c369d6a20b1e2bd95edf40f89ba9d56588838327f97"
   },
   "rules": {
     "branching.md": "820ea2f392ca7be8dccceafd4e4079af99c766ffc3c2a8818d17ccf512d3c10c",
     "commits.md": "75d0f810b97596e82ea1a34d960980efe199b742d21946fd7c2048e7d45aadaa",
     "tests.md": "c11197669d613142649c380f100842487dfe3f5bde543ddc33eed7d4f4593e13",
-    "typescript.md": "71d5ffa043d5ecbcfe1dfd7b64dea5daafbf9373167e0c72cc10bc618117da4c"
+    "typescript.md": "71d5ffa043d5ecbcfe1dfd7b64dea5daafbf9373167e0c72cc10bc618117da4c",
+    "flutter.md": "833f3b4943bf74f651c9c164d9bcbd3c17c39c21956c8dd8f008e8390fb3ee3e",
+    "go.md": "55583efd298f1850de47b4d4a36927f35a40d431853ded1312c4d9c7bc17f4bd",
+    "python-django.md": "10a08968a9b11b87e75a6feff662ecdb1e89e25b699427571c53f47607fc38cb",
+    "python-fastapi.md": "66ef9947931b671580ca070d535e0a86db2fdd134c2cb12cd618bfd432eb0f5a"
   },
-  "installedAt": "2026-04-23T21:36:56.603Z"
+  "installedAt": "2026-04-23T21:36:56.603Z",
+  "updatedAt": "2026-04-23T22:00:19.156Z"
 }
