@@ -1,14 +1,14 @@
 {
-  "version": "1.0.6",
+  "version": "1.0.7",
   "skills": {
-    "apply": "0906e47afcca73c03f34336b27612a5101f5a05b7f3c64e01762f9e2b84b592d",
+    "apply": "eb809e88be96c53a34780f841bb0a1af1d9f368f6462fb9af363f8ff85fda747",
     "audit": "f0d8aa6f9ac8123d89e47c25777b9550e914fbe66e391546eeb9f130e9112421",
-    "build": "0963bae3337cd1d785dddc60f9e1e89b094313d14fba25d0e7f4700c77fb308a",
+    "build": "0596e8930731641ae552171ec891aae72c3d8f58d6abda845e886bfc82993304",
     "cross": "77b3bc439350fb2f12be73738a58b15aadedc38276840c947bfb53b90ecc3d79",
     "debug": "a5a3d81a58d75645001a7d260d00f3adaae4063d574a8a9c3a47ecf1d146e735",
     "deploy": "b929d913260f815b4c8c46fa44e7c362bff3ee224f4e5bdc05faa677ab50dcda",
     "design": "da00729722fed7879ea2bc7b9d6f5c2158180503053c95515a2c9cf4c9727454",
-    "init": "e5e299d9942206b927d7ce7d48fdb98eeee01f6f062e68779d468138a21c2b93",
+    "init": "0d9dfa3177f746f94d9bdc87a04b9984251e39d254cd97e053719ffe942882a3",
     "pentest": "5e705ab0cffe7bbcb21c2510dd9a2e96cd0bd4e7ec0f7c1754246d00e404102d",
     "plan": "3c61c8b8df41253c2e40c0db0f3f4c1ee32a7189bf0a443f508db6df329d3d28",
     "review": "dfada72298f71d80b701a813c90603a95ec7c30b692331706f73a40b15416ab1",
@@ -17,10 +17,11 @@
     "setup": "2e5be9bfb6d61308170e9af58674d8432f5f6b2efc8ecdeb41fe259440341ee0",
     "sync": "0b19dda6d4274e4c36590b14621324b5c27d084f8b1782e3e08b36f317d17579",
     "test": "697fca5ed8124039fafe2ab34ccaaaeeede2cd709b23173c861acf5bd9042ecd",
-    "triage": "31a6586159bcd2cd86cd47b9e0c19780969b54a480a8701e2aca64828b0b5a04"
+    "triage": "31a6586159bcd2cd86cd47b9e0c19780969b54a480a8701e2aca64828b0b5a04",
+    "branches": "12eb343631a74e34b68394b65050a2cd664308e5475c71ce183ac7e6e90963c1"
   },
   "rules": {
-    "branching.md": "820ea2f392ca7be8dccceafd4e4079af99c766ffc3c2a8818d17ccf512d3c10c",
+    "branching.md": "1ceee24932d3a4a74796c89264934b0f95454b3c2b68e296c539727141cece86",
     "commits.md": "75d0f810b97596e82ea1a34d960980efe199b742d21946fd7c2048e7d45aadaa",
     "tests.md": "c11197669d613142649c380f100842487dfe3f5bde543ddc33eed7d4f4593e13",
     "typescript.md": "71d5ffa043d5ecbcfe1dfd7b64dea5daafbf9373167e0c72cc10bc618117da4c",
@@ -30,7 +31,7 @@
     "python-fastapi.md": "66ef9947931b671580ca070d535e0a86db2fdd134c2cb12cd618bfd432eb0f5a"
   },
   "installedAt": "2026-04-23T21:36:56.603Z",
-  "updatedAt": "2026-04-24T04:46:47.932Z",
+  "updatedAt": "2026-04-24T15:30:54.007Z",
   "githubProject": {
     "number": 3,
     "owner": "flujopay",
