@@ -1,23 +1,23 @@
 {
-  "version": "1.0.3",
+  "version": "1.0.6",
   "skills": {
-    "apply": "af2927558ca4364af89643046048813f260d01948931fef7d19e0558f9b6670f",
-    "audit": "be88083e84ea2f0910e2bbbd16d734ac39117ff42db4f418848d2d7fe1aebd27",
-    "build": "a43655e5f46bdcbe751fac5f9acbc36d09da8c1f35f2c284d555cf4c561491d0",
+    "apply": "0906e47afcca73c03f34336b27612a5101f5a05b7f3c64e01762f9e2b84b592d",
+    "audit": "f0d8aa6f9ac8123d89e47c25777b9550e914fbe66e391546eeb9f130e9112421",
+    "build": "0963bae3337cd1d785dddc60f9e1e89b094313d14fba25d0e7f4700c77fb308a",
     "cross": "77b3bc439350fb2f12be73738a58b15aadedc38276840c947bfb53b90ecc3d79",
-    "debug": "5aac7fa945295020a9fa4998e925b261f625f93e4c135101bd79ec8106e50ab3",
-    "deploy": "0c6aa4997ead8909a5c4f3adb4ee7592cffd705db03bf9ebc514726b2cd20fb6",
+    "debug": "a5a3d81a58d75645001a7d260d00f3adaae4063d574a8a9c3a47ecf1d146e735",
+    "deploy": "b929d913260f815b4c8c46fa44e7c362bff3ee224f4e5bdc05faa677ab50dcda",
     "design": "da00729722fed7879ea2bc7b9d6f5c2158180503053c95515a2c9cf4c9727454",
-    "init": "d95d5e970252931df149ad55a71b1c96789a5bfca7fbeabe032a4da8bdaa691c",
-    "pentest": "5ff9fd15455c62625555b1757342b6c3c110880f8769a31cc59af0d9af59d2ca",
-    "plan": "081a132761d6a8b3ded2b785b4a521532c0b66c7e2ddd5770ed7b6b9539c3b57",
-    "review": "da4f261fac457b3232f00138dd57bbbee4419cabacefb2309b4b5a868b9930d0",
-    "rollback": "4f1e20f1e42696cbcece3eb207896b1f8dc1e3fd63796c13ab0423547223f444",
-    "secure": "0e046c32cbf95b707a847b2cabba731d739f19bd2155e02f957f602c2d7b25d6",
+    "init": "e5e299d9942206b927d7ce7d48fdb98eeee01f6f062e68779d468138a21c2b93",
+    "pentest": "5e705ab0cffe7bbcb21c2510dd9a2e96cd0bd4e7ec0f7c1754246d00e404102d",
+    "plan": "3c61c8b8df41253c2e40c0db0f3f4c1ee32a7189bf0a443f508db6df329d3d28",
+    "review": "dfada72298f71d80b701a813c90603a95ec7c30b692331706f73a40b15416ab1",
+    "rollback": "caf4a283d2261ca261c7010bfd806426e013f268a8610cfd7e31656d76062c7c",
+    "secure": "73bdcf771582d145fe26c6459e88faed8d960ce89bafa8fdef541ddf23768800",
     "setup": "2e5be9bfb6d61308170e9af58674d8432f5f6b2efc8ecdeb41fe259440341ee0",
-    "sync": "a3515c456b5c544a78080d1ee7606d58f7dff77ba6d65c748a982f26d9d0f627",
+    "sync": "0b19dda6d4274e4c36590b14621324b5c27d084f8b1782e3e08b36f317d17579",
     "test": "697fca5ed8124039fafe2ab34ccaaaeeede2cd709b23173c861acf5bd9042ecd",
-    "triage": "2e755e18aaba49bb5b592c369d6a20b1e2bd95edf40f89ba9d56588838327f97"
+    "triage": "31a6586159bcd2cd86cd47b9e0c19780969b54a480a8701e2aca64828b0b5a04"
   },
   "rules": {
     "branching.md": "820ea2f392ca7be8dccceafd4e4079af99c766ffc3c2a8818d17ccf512d3c10c",
@@ -30,11 +30,14 @@
     "python-fastapi.md": "66ef9947931b671580ca070d535e0a86db2fdd134c2cb12cd618bfd432eb0f5a"
   },
   "installedAt": "2026-04-23T21:36:56.603Z",
-  "updatedAt": "2026-04-23T22:31:58.335Z",
+  "updatedAt": "2026-04-24T04:46:47.932Z",
   "githubProject": {
     "number": 3,
     "owner": "flujopay",
     "url": "https://github.com/orgs/flujopay/projects/3",
     "title": "Sena Landing"
+  },
+  "scripts": {
+    "resolve-gh-creds.sh": "dc2339588029b88fc1390780276a37efcf99b1119d618f372ab02a349a8855fe"
   }
 }
