@@ -13,6 +13,13 @@ import { useRouter, useSearchParams } from 'next/navigation'
 import { useEffect, useMemo, useState } from 'react'
 import { Controller, useForm } from 'react-hook-form'
 
+declare global {
+  interface Window {
+    fbq?: (...args: unknown[]) => void
+    gtag?: (...args: unknown[]) => void
+  }
+}
+
 type FormData = {
   nombre: string
   apellido: string
@@ -109,7 +116,7 @@ export const ContactForm = () => {
       telefono: telefonoConPrefijo,
       formOrigin: 'Formulario de Registro',
       countryName: pais,
-      productType: 'main',
+      productType: 'plataforma',
       nombreEmpresa: data.empresa,
       mensaje: '',
       howFound: '',
@@ -123,6 +130,12 @@ export const ContactForm = () => {
     postContactFormMutate(contactPayload)
     postTestn8nMutate(payload, {
       onSuccess: () => {
+        if (window.gtag) {
+          window.gtag('event', 'conversion', { send_to: 'AW-17962976949/lead' })
+        }
+        if (window.fbq) {
+          window.fbq('track', 'Lead', { content_name: 'plataforma' })
+        }
         reset()
         router.push('/thankyou')
       },
