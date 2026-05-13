@@ -38,9 +38,9 @@ export const HowItWorks = () => {
       },
       {
         key: 'Evalua' as const,
-        label: '3. Evalua',
+        label: '3. Evalúa',
         number: 3,
-        title: '3. Evalua',
+        title: '3. Evalúa',
         subtitle: 'Métricas de conversión, aperturas y rendimiento por canal.',
         description: 'Mejora tu estrategia con datos reales.',
         image: AssetImage.evalua,

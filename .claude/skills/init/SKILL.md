@@ -162,6 +162,50 @@ Si el dev confirma:
 
 Marcar la sesión con `_DRIFT_LAST_CHECK_AT=$(date +%s)` para que las skills posteriores no rechecheen innecesariamente en los próximos 10 minutos.
 
+### 1.6 Detectar overlap de archivos con ramas activas de otros devs
+
+Drift responde _"¿quedé desactualizado?"_. Overlap responde _"¿alguien más está tocando los mismos archivos que yo?"_ — son preguntas distintas y ambas importan en repos donde varios chats trabajan en paralelo.
+
+Por cada rama local de work-item del dev, comparar sus archivos modificados contra los archivos modificados en ramas remotas de **otros** work-items vivos:
+
+```bash
+# Ramas locales del dev (work-items propios)
+MY_BRANCHES=$(git for-each-ref --format='%(refname:short)' refs/heads/ \
+  | grep -E '^(feature|refactor|fix|chore|hotfix)/')
+
+# Ramas remotas de OTROS work-items
+OTHER_REMOTES=$(git for-each-ref --format='%(refname:short)' refs/remotes/origin/ \
+  | grep -E '^origin/(feature|refactor|fix|chore|hotfix)/' \
+  | grep -v 'HEAD')
+
+for mine in $MY_BRANCHES; do
+  my_files=$(git diff --name-only "origin/dev...$mine" 2>/dev/null | sort -u)
+  [ -z "$my_files" ] && continue
+  for theirs in $OTHER_REMOTES; do
+    # Saltar la rama remota de mi propio work-item (mismo número)
+    [ "origin/$mine" = "$theirs" ] && continue
+    their_files=$(git diff --name-only "origin/dev...$theirs" 2>/dev/null | sort -u)
+    shared=$(comm -12 <(echo "$my_files") <(echo "$their_files"))
+    [ -n "$shared" ] && echo "  $mine ↔ $theirs comparten:" && echo "$shared" | sed 's/^/    /'
+  done
+done
+```
+
+Si hay overlap, mostrarlo en el resumen del paso 5 (no parar el flujo, es informativo):
+
+```
+ℹ Overlap de archivos con ramas activas de otros work-items:
+
+  feature/12-sistema-pagos ↔ origin/feature/15-checkout comparten:
+    src/components/PaymentForm.tsx
+    src/lib/payments/stripe.ts
+
+  Si vas a editar esos archivos hoy, considera coordinar con el dev de #15
+  antes de avanzar (resolverás conflictos al mergear si no).
+```
+
+Si no hay overlap, no mostrar nada (no contaminar el output de `/init` con un "✓").
+
 ### 1.7 Limpiar inconsistencias de estado en GitHub (rápido)
 
 Sanear estados zombies en una sola query, sin recorrer todo el backlog:
