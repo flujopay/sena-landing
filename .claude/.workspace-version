@@ -1,16 +1,16 @@
 {
-  "version": "1.1.7",
+  "version": "1.1.8",
   "skills": {
-    "apply": "27159b351dea53ba6fdb27692f286f07119bd7f01e9040163e2bfa6cde967a2a",
+    "apply": "002f6f6ee97749071e932d2b18992e66b4b20f3f7f92716ec8d40fdc53739c1d",
     "audit": "8b811d279b6076bbd59d19483d0da16871c3e8cb766c795f51d5aaae7f334393",
-    "build": "8e14b54a0aa04c4a6a031e53a44b481712204371b8b51d50fc2a1d29af6c605e",
+    "build": "679d35490d1182dbefa06fea1a362c3082d5faa0e378f762f90cc20f560d9840",
     "cross": "77b3bc439350fb2f12be73738a58b15aadedc38276840c947bfb53b90ecc3d79",
     "debug": "b574bd8cf83d64675cbd3a4a04216f682e1f90f9f89bd35e442ec04a788a25b2",
     "deploy": "2e215ad9e8cef9155322532c5af0b04de10310b3da5469f8a5f413c12dd9a6cb",
     "design": "f9ab665ea7d6a7f9d729b382cdd3fd72f905d0e49dcebefac2a7b56704322335",
-    "init": "2777135bb91769732cdd40bf823fc47b798289d838f6186b6fa9c9d91d62f9e2",
+    "init": "bad72edfe515ffcc6fe5ca63b2b0f183b4fd2260baee2f761bd41ca54b60408e",
     "pentest": "f504e4bb7de39587d3230f4be743e95a82347ce61225729abf1ccd042bc7173b",
-    "plan": "fb31e45af923e029624b0ea59e44c0dc049a4038b27826c45db16626799014bc",
+    "plan": "d31b77de777d1e1ef3b4065d4af8614d532d95471ff946c92d959f4489b42e8f",
     "review": "a6852f36796b81f846f9b7f04ffcc7f91f1431e2f5a0d64639750bde96bbf8a3",
     "rollback": "121e1374e1a81adf6974f11120155f17af51cf72f62aa5adfafe961c8dff289c",
     "secure": "437c5a0696ddcb0f3558606021a1a2098a86e6c0b247d82ac88c2a881fcbd265",
@@ -32,7 +32,7 @@
     "python-fastapi.md": "66ef9947931b671580ca070d535e0a86db2fdd134c2cb12cd618bfd432eb0f5a"
   },
   "installedAt": "2026-04-23T21:36:56.603Z",
-  "updatedAt": "2026-05-04T05:50:44.916Z",
+  "updatedAt": "2026-05-13T11:48:59.159Z",
   "githubProject": {
     "number": 3,
     "owner": "flujopay",
@@ -45,6 +45,11 @@
     "no-edit-without-plan.sh": "4915d3bd97d9076799f4ec6ee960ab7a884118d39cff38bfe09248aa7c4c08d5"
   },
   "github": {
-    ".github/pull_request_template.md": "d8b1165aff86dea1336e46e065fdfdb15fc111b1017006bc249e59aa573e9cf9"
+    ".github/pull_request_template.md": "d8b1165aff86dea1336e46e065fdfdb15fc111b1017006bc249e59aa573e9cf9",
+    ".github/ISSUE_TEMPLATE/feature.md": "e9ce82456cc53993280092d926fd963075ad3572be9019bc1852f3427f4c03d5",
+    ".github/ISSUE_TEMPLATE/refactor.md": "fca06305282c21d7b89201fe024deaae6fd4f33e09c106d55458b6ab8d5c6195",
+    ".github/ISSUE_TEMPLATE/chore.md": "9f77ba85f72af2474698cb217d059d5b58a736e5518df1194586c067847bdae2",
+    ".github/ISSUE_TEMPLATE/bug.md": "c9cffee8c4d434490ef90be1ab2ed25b44cd73f29ffcc2488599cdaf35cca334",
+    ".github/ISSUE_TEMPLATE/task.md": "a21bfac02b8e34dcf3aae13177e84db32c7d275da3cc002377a0161b3549f497"
   }
 }
