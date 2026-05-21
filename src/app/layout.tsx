@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     url: 'https://somossena.com',
     images: ['https://somossena.com/sena-crm-lite.jpg'],
     siteName: 'Sena',
-    locale: 'es_PE',
+    locale: 'es_CL',
   },
   other: {
     'facebook-domain-verification': 'tyjmxihsgkrx666ql4rwmnhsftl6hv',
