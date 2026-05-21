@@ -49,18 +49,46 @@ export default async function RootLayout({
     <Providers country={country} countries={countries}>
       <html lang="es" dir="ltr">
         <GoogleTagManager gtmId="GTM-5W7F9MSP" />
-        <head />
+        <head>
+          {/* Google Ads — Plataforma (AW-17962976949) */}
+          <Script
+            src="https://www.googletagmanager.com/gtag/js?id=AW-17962976949"
+            strategy="afterInteractive"
+          />
+          <Script id="google-ads-plataforma" strategy="afterInteractive">
+            {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'AW-17962976949');
+              gtag('config', 'G-BENT3HE0M6');
+            `}
+          </Script>
+          {/* Meta Pixel — Plataforma (1722871789075263) */}
+          <Script id="meta-pixel-plataforma" strategy="afterInteractive">
+            {`
+              !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+              n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+              n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+              t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
+              (window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+              fbq('init', '1722871789075263');
+              fbq('track', 'PageView');
+            `}
+          </Script>
+          <noscript>
+            <img height="1" width="1" style={{ display: 'none' }}
+              src="https://www.facebook.com/tr?id=1722871789075263&ev=PageView&noscript=1" alt="" />
+          </noscript>
+        </head>
         <body
           className={`${canaroFont.variable} ${adobeCleanFont.variable} ${caslonFont.variable} antialiased font-adobe`}
         >
-          {/* Deshabilitar debugger statements */}
           <Script id="disable-debugger" strategy="beforeInteractive">
             {`
               (function() {
                   const originalDebugger = window.debugger;
-                  window.debugger = function() {
-                      return;
-                  };
+                  window.debugger = function() { return; };
               })();
             `}
           </Script>
@@ -68,7 +96,6 @@ export default async function RootLayout({
           <ModalRenderer />
           <Toast />
           <Whatsapp message="Hola, vi su web y quiero saber más sobre Sena y cómo funciona." animated />
-          {/* Nino Chat — Landing widget */}
           <NinoChatInit />
         </body>
       </html>
