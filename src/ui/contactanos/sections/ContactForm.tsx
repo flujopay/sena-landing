@@ -32,7 +32,7 @@ type FormData = {
 
 export const ContactForm = () => {
   const { postTestn8nMutate, isLoadingPostTestn8n } = usePostTestn8n()
-  const { postContactFormMutate } = usePostContactForm()
+  const { postContactFormMutate, isLoadingPostContactForm } = usePostContactForm()
   const { data: countries = [] } = useCountries()
   const { ipCurrency } = useCurrencyStore()
   const router = useRouter()
@@ -126,9 +126,7 @@ export const ContactForm = () => {
       utmContent: utmContent || undefined,
     }
 
-    // Llamar ambas APIs
-    postContactFormMutate(contactPayload)
-    postTestn8nMutate(payload, {
+    postContactFormMutate(contactPayload, {
       onSuccess: () => {
         if (window.gtag) {
           window.gtag('event', 'conversion', { send_to: 'AW-17962976949/JNP9CMq42ZgcELWNtfVC' })
@@ -147,6 +145,7 @@ export const ContactForm = () => {
         })
       },
     })
+    postTestn8nMutate(payload)
   }
 
   return (
@@ -350,11 +349,11 @@ export const ContactForm = () => {
 
             <Button
               type="submit"
-              text={isLoadingPostTestn8n ? 'Enviando...' : 'Enviar'}
+              text={isLoadingPostContactForm ? 'Enviando...' : 'Enviar'}
               variant="primaryFilled"
               size="md"
               className="w-[200px]"
-              disabled={isLoadingPostTestn8n}
+              disabled={isLoadingPostContactForm}
             />
           </form>
         </div>
