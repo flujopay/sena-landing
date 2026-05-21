@@ -29,9 +29,36 @@ export const FOOTER_EMPRESA = [
 ]
 
 export const FOOTER_DESCUBRIR = [
-  { label: 'Productos', href: '#productos', type: 'scroll' as const, disabled: false },
-  { label: 'Cómo funciona', href: '#como-funciona', type: 'scroll' as const, disabled: false },
-  { label: 'Preguntas frecuentes', href: '#preguntas-frecuentes', type: 'scroll' as const, disabled: true },
+  {
+    label: 'Plataforma de autogestión',
+    href: 'https://www.somossena.com',
+    type: 'external' as const,
+    disabled: false,
+  },
+  {
+    label: 'Recupera',
+    href: 'https://recupera.somossena.com',
+    type: 'external' as const,
+    disabled: false,
+  },
+  {
+    label: 'Opera',
+    href: 'https://opera.somossena.com',
+    type: 'external' as const,
+    disabled: false,
+  },
+  {
+    label: 'Cómo funciona',
+    href: '#como-funciona',
+    type: 'scroll' as const,
+    disabled: false,
+  },
+  {
+    label: 'Preguntas frecuentes',
+    href: '#preguntas-frecuentes',
+    type: 'scroll' as const,
+    disabled: false,
+  },
 ]
 
 export const FOOTER_LEGAL = [

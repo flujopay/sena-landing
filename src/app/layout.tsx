@@ -22,6 +22,14 @@ export const metadata: Metadata = {
     'CRM cobranza, pagos B2B, facturación, gestión de pagos, CRM empresas, automatización de cobranza, Sena',
   authors: [{ name: 'Sena' }],
   robots: { index: true, follow: true },
+  metadataBase: new URL('https://www.somossena.com'),
+  alternates: { canonical: '/' },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Sena - El arte de cobrar bien',
+    description: 'Optimiza tu gestión de cobranza y pagos de facturas con Sena, el CRM B2B que simplifica procesos.',
+    images: ['https://somossena.com/sena-crm-lite.jpg'],
+  },
   openGraph: {
     title: 'Sena - El arte de cobrar bien',
     description:

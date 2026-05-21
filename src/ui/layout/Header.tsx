@@ -375,7 +375,7 @@ export const Header = ({ variant }: Props) => {
       },
       {
         id: 2,
-        name: 'Servicio de Recupero',
+        name: 'Recupera',
         description: 'Gestión humana + estrategia para recuperar cartera.',
         tab: 'recuperacion',
       },
