@@ -131,7 +131,7 @@ export const ContactForm = () => {
     postTestn8nMutate(payload, {
       onSuccess: () => {
         if (window.gtag) {
-          window.gtag('event', 'conversion', { send_to: 'AW-17962976949/lead' })
+          window.gtag('event', 'conversion', { send_to: 'AW-17962976949/JNP9CMq42ZgcELWNtfVC' })
         }
         if (window.fbq) {
           window.fbq('track', 'Lead', { content_name: 'plataforma' })

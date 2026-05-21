@@ -27,7 +27,6 @@ export const ThankyouPage = () => {
       origin: 'plataforma',
     })
     if (window.gtag) {
-      window.gtag('event', 'conversion', { send_to: 'AW-17962976949/signup' })
     }
     if (window.fbq) {
       window.fbq('track', 'Lead', { content_name: 'plataforma' })
