@@ -75,7 +75,7 @@ export const Products = () => {
       },
       {
         key: 'opera' as const,
-        label: 'Opera —\nCobranza delegada',
+        label: 'Opera\nCobranza delegada',
         title: 'Tu cobranza en manos expertas',
         description:
           'Deléganos la gestión completa. Sin contratar ni operar nada — nuestro equipo cobra por ti mientras te enfocas en tu negocio.',
