@@ -133,7 +133,6 @@ export const ContactForm = () => {
         landingPage: window.location.pathname,
       }),
     }).catch(() => {})
-
     const contactPayload: ContactFormRequest = {
       nombre: data.nombre,
       apellido: data.apellido,

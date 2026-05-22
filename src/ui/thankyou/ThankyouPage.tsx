@@ -11,6 +11,7 @@ declare global {
   interface Window {
     dataLayer?: Object[]
     fbq?: (...args: unknown[]) => void
+    gtag?: (...args: unknown[]) => void
   }
 }
 
@@ -25,8 +26,11 @@ export const ThankyouPage = () => {
       event: 'conversion_event_signup_2',
       origin: 'plataforma',
     })
+    if (window.gtag) {
+      window.gtag('event', 'conversion', { send_to: 'AW-17962976949/JNP9CMq42ZgcELWNtfVC' })
+    }
     if (window.fbq) {
-      window.fbq('track', 'Lead')
+      window.fbq('track', 'Lead', { content_name: 'plataforma' })
     }
   }, [])
 
