@@ -78,7 +78,7 @@ export const Products = () => {
         label: 'Delega\ntu cobranza',
         title: 'Tu cobranza en manos expertas',
         description:
-          'Deléganos la gestión completa. Sin contratar ni operar nada — nuestro equipo cobra por ti mientras te enfocas en tu negocio.',
+          'Agentes de IA y equipo humano gestionan tu cartera de principio a fin. Te enfocas en tu negocio mientras nosotros cobramos.',
         cta: 'Conoce Opera',
         image: AssetImage.autogestion,
         onCtaClick: () => window.open('https://opera.somossena.com', '_self'),
