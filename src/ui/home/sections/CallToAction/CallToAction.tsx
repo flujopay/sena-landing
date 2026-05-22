@@ -15,6 +15,14 @@ export const CallToAction = () => {
           <p className="text-slate-600 text-lg leading-relaxed">
             30 minutos. Sin compromiso. Te mostramos exactamente qué está atrapado en tu cartera y cómo Sena lo resuelve.
           </p>
+          <div className="flex flex-col gap-2">
+            <p className="text-brand-primary-dark font-semibold text-base">
+              Primer resultado en 30 días. Sin reemplazar tu tech stack.
+            </p>
+            <p className="text-slate-400 text-sm italic">
+              Cobrar también es una forma de cuidar.
+            </p>
+          </div>
           <p className="text-slate-400 text-sm">
             También puedes escribirnos a{' '}
             <a href="mailto:hola@somossena.com" className="text-brand-primary underline font-medium">
