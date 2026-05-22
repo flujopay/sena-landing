@@ -9,26 +9,23 @@ import { Hero } from './sections/Hero'
 import { HowItWorks } from './sections/HowItWorks'
 import { KeyFeatures } from './sections/KeyFeatures/KeyFeatures'
 import { PricingPlans } from './sections/PricingPlans/PricingPlans'
+import { Problem } from './sections/Problem'
 import { Products } from './sections/Products'
 
 export const HomePage = () => {
   useEffect(() => {
-    // Cuando la página carga, verificar si hay un hash en la URL
     const hash = window.location.hash
     if (hash) {
       const sectionId = hash.replace('#', '')
-      // Pequeño delay para asegurar que el DOM esté completamente cargado
       setTimeout(() => {
         const element = document.getElementById(sectionId)
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth', block: 'start' })
-        }
+        if (element) element.scrollIntoView({ behavior: 'smooth', block: 'start' })
       }, 100)
     }
   }, [])
 
   return (
-    <div className="min-h-screen flex flex-col ">
+    <div className="min-h-screen flex flex-col">
       <Header variant="primary" />
       <div className="grow">
         <div className="bg-[#F9F9F9]">
@@ -37,6 +34,7 @@ export const HomePage = () => {
           </div>
         </div>
         <Clients />
+        <Problem />
         <Products />
         <KeyFeatures />
         <HowItWorks />
