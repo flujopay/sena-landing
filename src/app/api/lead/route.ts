@@ -28,7 +28,7 @@ const INTERES_DEL_PRODUCTO = "Cuentas por Cobrar";
 function mapOrigen(utmSource?: string): string {
   const src = (utmSource ?? "").toLowerCase();
   if (src === "google" || src === "cpc") return "Google";
-  if (src === "facebook" || src === "meta" || src === "fb") return "true"; // valor histórico de Meta
+  if (src === "facebook" || src === "meta" || src === "fb") return "Meta";
   if (src === "linkedin") return "LinkedIn";
   return "Orgánico";
 }
