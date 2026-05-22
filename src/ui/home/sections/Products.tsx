@@ -55,7 +55,7 @@ export const Products = () => {
     () => [
       {
         key: 'autogestion' as const,
-        label: 'Plataforma de\nautogestión',
+        label: 'Automatiza\ntu cobranza',
         title: 'Para el día a día de tu cobranza',
         description:
           'Organiza facturas, automatiza recordatorios y controla todo tu ciclo de cobranza desde un solo lugar.',
@@ -65,7 +65,7 @@ export const Products = () => {
       },
       {
         key: 'recuperacion' as const,
-        label: 'Servicio de Recupero con\nequipo humano',
+        label: 'Recupera\nlo que te deben',
         title: 'Recupera pagos con apoyo experto',
         description:
           'Combina tecnología y un equipo especializado para gestionar casos complejos y mejorar tu tasa de recuperación.',
@@ -75,7 +75,7 @@ export const Products = () => {
       },
       {
         key: 'opera' as const,
-        label: 'Opera\nCobranza delegada',
+        label: 'Delega\ntu cobranza',
         title: 'Tu cobranza en manos expertas',
         description:
           'Deléganos la gestión completa. Sin contratar ni operar nada — nuestro equipo cobra por ti mientras te enfocas en tu negocio.',
