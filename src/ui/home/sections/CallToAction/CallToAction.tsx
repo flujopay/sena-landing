@@ -1,50 +1,38 @@
 'use client'
-import { AssetImage } from '@/lib/utils/assets/image'
-import Button from '@/ui/shared/Button'
-import { useRouter } from 'next/navigation'
+import Script from 'next/script'
 
 export const CallToAction = () => {
-  const router = useRouter()
-
-  const onRedirectHubspot = () => {
-    window.open('https://meetings.hubspot.com/francisco502', '_blank')
-  }
-
   return (
-    <section className="max-w-[1280px] mx-auto">
-      <div className="rounded-2xl overflow-hidden">
-        <div className="flex flex-row items-center justify-center">
-          {/* Image */}
-          <div className="md:shrink-0">
-            <img
-              src={AssetImage.home3.src}
-              alt="Mujer con teléfono"
-              className="w-full max-w-[420px] md:h-[500px] object-contain"
-            />
-          </div>
+    <section className="max-w-[1280px] mx-auto px-4 md:px-10 py-20">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        {/* Left: copy */}
+        <div className="flex flex-col gap-6 lg:pt-8">
+          <h2 className="text-brand-primary-dark font-canaro text-3xl md:text-5xl font-extrabold leading-tight">
+            ¿Tu empresa creció y la cobranza{' '}
+            <span className="text-brand-primary font-caslon">quedó atrás</span>
+            <span className="text-brand-secondary font-caslon">?</span>
+          </h2>
+          <p className="text-slate-600 text-lg leading-relaxed">
+            30 minutos. Sin compromiso. Te mostramos exactamente qué está atrapado en tu cartera y cómo Sena lo resuelve.
+          </p>
+          <p className="text-slate-400 text-sm">
+            También puedes escribirnos a{' '}
+            <a href="mailto:hola@somossena.com" className="text-brand-primary underline font-medium">
+              hola@somossena.com
+            </a>
+          </p>
+        </div>
 
-          {/* Content */}
-          <div className="max-w-xl px-4 py-8 text-left">
-            <h2 className="text-brand-primary-dark text-3xl md:text-6xl font-extrabold leading-tight">
-              Cobrar bien hace la <span className="text-brand-primary font-caslon">diferencia</span>
-              <span className="text-brand-secondary font-caslon">.</span>
-            </h2>
-
-            <div className="mt-8 flex gap-2 justify-start flex-wrap">
-              <Button
-                variant="primaryFilled"
-                text="Agenda una demo"
-                onClick={onRedirectHubspot}
-                className="h-8 px-6 text-sm md:h-13 md:px-8 md:text-base"
-              />
-              <Button
-                variant="primaryDarkOutlined"
-                text="Contáctanos"
-                onClick={() => router.push('/contactanos')}
-                className="h-8 px-6 text-sm md:h-13 md:px-8 md:text-base"
-              />
-            </div>
-          </div>
+        {/* Right: HubSpot calendar embed */}
+        <div className="w-full min-h-[500px]">
+          <div
+            className="meetings-iframe-container"
+            data-src="https://meetings.hubspot.com/francisco502?embed=true"
+          />
+          <Script
+            src="https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js"
+            strategy="afterInteractive"
+          />
         </div>
       </div>
     </section>
