@@ -17,17 +17,14 @@ export const Hero = () => {
 
   const tick = useCallback(() => {
     const currentWord = rotatingWords[currentIndex]
-
     if (!isDeleting) {
       setDisplayText(currentWord.substring(0, displayText.length + 1))
-
       if (displayText === currentWord) {
         setTimeout(() => setIsDeleting(true), pauseTime)
         return
       }
     } else {
       setDisplayText(currentWord.substring(0, displayText.length - 1))
-
       if (displayText === '') {
         setIsDeleting(false)
         setCurrentIndex((prev) => (prev + 1) % rotatingWords.length)
@@ -42,7 +39,7 @@ export const Hero = () => {
     return () => clearTimeout(timer)
   }, [tick, isDeleting])
 
-  const onRedirectHubspot = () => {
+  const onContactClick = () => {
     window.open('https://meetings.hubspot.com/francisco502', '_blank')
   }
 
@@ -60,10 +57,10 @@ export const Hero = () => {
             </span>
           </h1>
           <p className="font-adobe text-black text-xl max-w-[90%]">
-            Sena es una plataforma web de <span className="font-bold">gestión de cuentas por cobrar</span> que
-            incluye un servicio de cobranza. Sena te ayuda a{' '}
-            <span className="font-bold">ordenar, automatizar y recuperar pagos</span> combinando tecnología,
-            inteligencia artificial y personas expertas.
+            Para empresas que venden a crédito y están{' '}
+            <span className="font-bold">cansadas de perseguir pagos</span>.
+            Sena automatiza la cobranza B2B y convierte{' '}
+            <span className="font-bold">cartera en caja</span>.
           </p>
         </div>
         <div className="w-[40%] flex justify-end">
@@ -72,7 +69,7 @@ export const Hero = () => {
       </div>
 
       <div className="md:flex hidden flex-row items-start gap-2 mt-4">
-        <Button text="Agenda una demo" size="md" className="text-xl" onClick={onRedirectHubspot} />
+        <Button text="Habla con nosotros" size="md" className="text-xl" onClick={onContactClick} />
         <Button
           text="Ver cómo funciona"
           variant="primaryDarkOutlined"
@@ -80,17 +77,14 @@ export const Hero = () => {
           className="text-xl"
           onClick={() => {
             const element = document.getElementById('como-funciona')
-            if (element) {
-              element.scrollIntoView({ behavior: 'smooth', block: 'start' })
-            }
+            if (element) element.scrollIntoView({ behavior: 'smooth', block: 'start' })
           }}
         />
       </div>
 
       {/* Mobile Layout */}
       <div className="flex md:hidden flex-col gap-4">
-        {/* Título arriba */}
-        <div className="flex ">
+        <div className="flex">
           <div className="flex flex-col gap-4">
             <h1 className="text-brand-primary-dark font-canaro text-3xl font-extrabold">
               El arte de <br /> cobrar{' '}
@@ -100,28 +94,23 @@ export const Hero = () => {
                 <span className="text-brand-secondary">.</span>
               </span>
             </h1>
-
-            {/* Descripción + Imagen en fila */}
             <div className="flex flex-row gap-2">
               <p className="font-adobe text-black text-md xs:text-xs flex-1">
-                Sena es una plataforma web de <span className="font-bold">gestión de cuentas por cobrar</span>{' '}
-                que incluye un servicio de cobranza. Sena te ayuda a{' '}
-                <span className="font-bold">ordenar, automatizar y recuperar pagos</span> combinando
-                tecnología, inteligencia artificial y personas expertas.
+                Para empresas que venden a crédito y están{' '}
+                <span className="font-bold">cansadas de perseguir pagos</span>.
+                Sena automatiza la cobranza y convierte{' '}
+                <span className="font-bold">cartera en caja</span>.
               </p>
             </div>
           </div>
-
           <img
             src={AssetImage.home4.src}
             alt="home"
             className="flex-1 my-auto max-h-[200px] object-contain"
           />
         </div>
-
-        {/* Botones abajo */}
         <div className="flex flex-row items-start gap-2">
-          <Button text="Agenda una demo" size="sm" className="text-xs" onClick={onRedirectHubspot} />
+          <Button text="Habla con nosotros" size="sm" className="text-xs" onClick={onContactClick} />
           <Button
             text="Ver cómo funciona"
             variant="primaryDarkOutlined"
@@ -129,9 +118,7 @@ export const Hero = () => {
             className="text-xs"
             onClick={() => {
               const element = document.getElementById('como-funciona')
-              if (element) {
-                element.scrollIntoView({ behavior: 'smooth', block: 'start' })
-              }
+              if (element) element.scrollIntoView({ behavior: 'smooth', block: 'start' })
             }}
           />
         </div>
