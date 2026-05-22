@@ -43,6 +43,9 @@ export const ContactForm = () => {
   const utmMedium = searchParams?.get('utm_medium') || null
   const utmCampaign = searchParams?.get('utm_campaign') || null
   const utmContent = searchParams?.get('utm_content') || null
+  const utmTerm = searchParams?.get('utm_term') || null
+  const [gclid, setGclid] = useState<string | null>(null)
+  const [fbclid, setFbclid] = useState<string | null>(null)
 
   const countryOptions = useMemo(() => {
     if (!countries.length) return []
@@ -79,6 +82,14 @@ export const ContactForm = () => {
     }
   }, [ipCurrency])
 
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search)
+    const gc = params.get('gclid') || sessionStorage.getItem('gclid')
+    const fb = params.get('fbclid') || sessionStorage.getItem('fbclid')
+    if (gc) { setGclid(gc); sessionStorage.setItem('gclid', gc) }
+    if (fb) { setFbclid(fb); sessionStorage.setItem('fbclid', fb) }
+  }, [])
+
   const {
     control,
     handleSubmit,
@@ -100,7 +111,28 @@ export const ContactForm = () => {
     const pais = countries?.find((c) => c.country === countrySelect)?.country_code || ''
     const telefonoConPrefijo = (countrySelect || '') + data.whatsapp
 
-    // Payload para API de contacto
+    // Fire-and-forget HubSpot sync
+    fetch('/api/lead', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        nombre: data.nombre,
+        apellido: data.apellido,
+        empresa: data.empresa,
+        email: data.email,
+        telefono: telefonoConPrefijo,
+        facturas_pendientes: data.facturas_pendientes,
+        alguien_cobrando: data.alguien_cobrando,
+        utmSource: utmSource ?? undefined,
+        utmMedium: utmMedium ?? undefined,
+        utmCampaign: utmCampaign ?? undefined,
+        utmContent: utmContent ?? undefined,
+        utmTerm: utmTerm ?? undefined,
+        gclid: gclid ?? undefined,
+        fbclid: fbclid ?? undefined,
+        landingPage: window.location.pathname,
+      }),
+    }).catch(() => {})
     const contactPayload: ContactFormRequest = {
       nombre: data.nombre,
       apellido: data.apellido,
@@ -117,7 +149,6 @@ export const ContactForm = () => {
       utmCampaign: utmCampaign || undefined,
       utmContent: utmContent || undefined,
     }
-
     postContactFormMutate(contactPayload, {
       onSuccess: () => {
         if (window.gtag) {
