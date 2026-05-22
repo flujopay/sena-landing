@@ -56,9 +56,9 @@ export const Products = () => {
       {
         key: 'autogestion' as const,
         label: 'Automatiza\ntu cobranza',
-        title: 'Para el día a día de tu cobranza',
+        title: 'Tu cobranza funciona mientras tú vendes',
         description:
-          'Organiza facturas, automatiza recordatorios y controla todo tu ciclo de cobranza desde un solo lugar.',
+          'Sube tu cartera y Sena automatiza todo: recordatorios por WhatsApp, email y SMS, y conciliación sin trabajo manual.',
         cta: 'Agenda una demo',
         image: AssetImage.autogestion,
         onCtaClick: () => window.open('https://meetings.hubspot.com/francisco502', '_blank'),
@@ -66,9 +66,9 @@ export const Products = () => {
       {
         key: 'recuperacion' as const,
         label: 'Recupera\nlo que te deben',
-        title: 'Recupera pagos con apoyo experto',
+        title: 'Cartera difícil, equipo experto',
         description:
-          'Combina tecnología y un equipo especializado para gestionar casos complejos y mejorar tu tasa de recuperación.',
+          'El equipo de Recsa gestiona los casos complejos cuidando tu marca y tu relación con el cliente. Más de 40 años recuperando deuda en Chile.',
         cta: 'Conoce más',
         image: AssetImage.recuperaGirl,
         onCtaClick: () => window.open('https://recupera.somossena.com', '_self'),
@@ -76,9 +76,9 @@ export const Products = () => {
       {
         key: 'opera' as const,
         label: 'Delega\ntu cobranza',
-        title: 'Tu cobranza en manos expertas',
+        title: 'Tu cartera en manos expertas, tú en tu negocio',
         description:
-          'Agentes de IA y equipo humano gestionan tu cartera de principio a fin. Te enfocas en tu negocio mientras nosotros cobramos.',
+          'Agentes de IA y equipo humano gestionan tu cartera de principio a fin. Te enfocas en lo tuyo mientras Sena cobra.',
         cta: 'Conoce Opera',
         image: AssetImage.autogestion,
         onCtaClick: () => window.open('https://opera.somossena.com', '_self'),
