@@ -5,7 +5,7 @@ import Image, { StaticImageData } from 'next/image'
 import { useSearchParams } from 'next/navigation'
 import { useEffect, useMemo, useState } from 'react'
 
-type ProductKey = 'autogestion' | 'recuperacion'
+type ProductKey = 'autogestion' | 'recuperacion' | 'opera'
 
 const ProductCard = ({
   label,
@@ -34,11 +34,7 @@ const ProductCard = ({
               <Image src={AssetImage.home3} alt={title} className="w-full h-full object-cover object-top" />
             </div>
             <div className="absolute bottom-0 right-0 w-16 h-[80%] rounded-lg overflow-hidden shadow-xl border-2 border-white">
-              <Image
-                src={AssetImage.conciliatorNavbar}
-                alt="Dashboard"
-                className="w-full h-full object-cover"
-              />
+              <Image src={AssetImage.conciliatorNavbar} alt="Dashboard" className="w-full h-full object-cover" />
             </div>
           </>
         ) : (
@@ -65,9 +61,7 @@ export const Products = () => {
           'Organiza facturas, automatiza recordatorios y controla todo tu ciclo de cobranza desde un solo lugar.',
         cta: 'Agenda una demo',
         image: AssetImage.autogestion,
-        onCtaClick: () => {
-          window.open('https://meetings.hubspot.com/francisco502', '_blank')
-        },
+        onCtaClick: () => window.open('https://meetings.hubspot.com/francisco502', '_blank'),
       },
       {
         key: 'recuperacion' as const,
@@ -77,9 +71,17 @@ export const Products = () => {
           'Combina tecnología y un equipo especializado para gestionar casos complejos y mejorar tu tasa de recuperación.',
         cta: 'Conoce más',
         image: AssetImage.recuperaGirl,
-        onCtaClick: () => {
-          window.open('https://recupera.somossena.com', '_self')
-        },
+        onCtaClick: () => window.open('https://recupera.somossena.com', '_self'),
+      },
+      {
+        key: 'opera' as const,
+        label: 'Opera —\nCobranza delegada',
+        title: 'Tu cobranza en manos expertas',
+        description:
+          'Deléganos la gestión completa. Sin contratar ni operar nada — nuestro equipo cobra por ti mientras te enfocas en tu negocio.',
+        cta: 'Conoce Opera',
+        image: AssetImage.autogestion,
+        onCtaClick: () => window.open('https://opera.somossena.com', '_self'),
       },
     ],
     []
@@ -89,21 +91,22 @@ export const Products = () => {
   const tabParam = searchParams.get('tab')
 
   const [activeKey, setActiveKey] = useState<ProductKey>(
-    tabParam === 'recuperacion' ? 'recuperacion' : 'autogestion'
+    tabParam === 'recuperacion' ? 'recuperacion' : tabParam === 'opera' ? 'opera' : 'autogestion'
   )
   const active = products.find((p) => p.key === activeKey) ?? products[0]
+  const activeIndex = products.findIndex((p) => p.key === activeKey)
+  const segmentHeight = 100 / products.length
 
   useEffect(() => {
-    if (tabParam === 'autogestion' || tabParam === 'recuperacion') {
+    if (tabParam === 'autogestion' || tabParam === 'recuperacion' || tabParam === 'opera') {
       setActiveKey(tabParam)
     }
   }, [tabParam])
 
-  // Listen for custom event from Header dropdown (same-page navigation)
   useEffect(() => {
     const handler = (e: Event) => {
       const tab = (e as CustomEvent).detail
-      if (tab === 'autogestion' || tab === 'recuperacion') {
+      if (tab === 'autogestion' || tab === 'recuperacion' || tab === 'opera') {
         setActiveKey(tab)
       }
     }
@@ -140,7 +143,7 @@ export const Products = () => {
       <div className="hidden md:block bg-[#F7F7F7] rounded-3xl p-6 md:p-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
           <div className="flex flex-col gap-6">
-            <p className="text-left text-brand-primary-dark  font-extrabold tracking-wide  text-xl sm:text-4xl">
+            <p className="text-left text-brand-primary-dark font-extrabold tracking-wide text-xl sm:text-4xl">
               Nuestros
               <br />
               productos
@@ -150,10 +153,10 @@ export const Products = () => {
               <div className="relative w-1">
                 <div className="absolute left-0 top-0 h-full w-1 rounded bg-slate-300" />
                 <div
-                  className="absolute left-0 top-0 w-1 rounded bg-brand-secondary transition-all"
+                  className="absolute left-0 w-1 rounded bg-brand-secondary transition-all duration-300"
                   style={{
-                    height: activeKey === 'autogestion' ? '50%' : '50%',
-                    transform: activeKey === 'autogestion' ? 'translateY(0%)' : 'translateY(100%)',
+                    height: `${segmentHeight}%`,
+                    top: `${activeIndex * segmentHeight}%`,
                   }}
                 />
               </div>
@@ -168,13 +171,10 @@ export const Products = () => {
                       onClick={() => setActiveKey(p.key)}
                       className="text-left cursor-pointer"
                     >
-                      <p
-                        className={
-                          isActive
-                            ? 'text-black font-bold text-3xl leading-tight whitespace-pre-line'
-                            : 'text-slate-400 font-bold text-3xl leading-tight whitespace-pre-line'
-                        }
-                      >
+                      <p className={isActive
+                        ? 'text-black font-bold text-3xl leading-tight whitespace-pre-line'
+                        : 'text-slate-400 font-bold text-3xl leading-tight whitespace-pre-line'
+                      }>
                         {p.label}
                       </p>
                     </button>
@@ -189,27 +189,15 @@ export const Products = () => {
               {activeKey === 'recuperacion' ? (
                 <div className="bg-white w-[80%] mx-auto rounded-xl h-48 md:h-56 flex items-center justify-center overflow-visible relative">
                   <div className="w-[160px] ml-16 h-full rounded-xl overflow-hidden">
-                    <Image
-                      src={AssetImage.home3}
-                      alt={active.title}
-                      className="w-full h-full object-cover object-top"
-                    />
+                    <Image src={AssetImage.home3} alt={active.title} className="w-full h-full object-cover object-top" />
                   </div>
                   <div className="absolute bottom-4 -right-10 w-22 h-48 rounded-lg overflow-hidden shadow-xl border-2 border-white">
-                    <Image
-                      src={AssetImage.conciliatorNavbar}
-                      alt="Dashboard"
-                      className="w-full h-full object-cover"
-                    />
+                    <Image src={AssetImage.conciliatorNavbar} alt="Dashboard" className="w-full h-full object-cover" />
                   </div>
                 </div>
               ) : (
                 <div className="bg-white rounded-xl h-48 md:h-56 flex items-center justify-center overflow-visible relative">
-                  <Image
-                    src={active.image}
-                    alt={active.title}
-                    className="w-full h-full object-cover rounded-xl"
-                  />
+                  <Image src={active.image} alt={active.title} className="w-full h-full object-cover rounded-xl" />
                 </div>
               )}
             </div>
