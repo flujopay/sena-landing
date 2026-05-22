@@ -15,22 +15,22 @@ import Providers from './providers'
 export const dynamic = 'force-dynamic'
 
 export const metadata: Metadata = {
-  title: 'Sena - El arte de cobrar bien',
+  title: 'Sena — Cobranza B2B: automatiza el cobro de facturas y mejora tu flujo de caja',
   description:
-    'Optimiza tu gestión de cobranza y pagos de facturas con Sena, el CRM B2B que simplifica procesos, mejora la eficiencia y acelera tus ingresos.',
+    'Sena automatiza la cobranza B2B para empresas que venden a crédito. Convierte cartera en caja, reduce incobrables y elimina el Excel. Respaldados por Recsa.',
   keywords:
-    'CRM cobranza, pagos B2B, facturación, gestión de pagos, CRM empresas, automatización de cobranza, Sena',
+    'como cobrar facturas impagas, mejorar flujo de caja empresa, software cobranza B2B, automatizar cobranza empresa, sistema cobranza facturas, reducir incobrables empresa, cobranza B2B Chile, CRM cobranza empresarial',
   authors: [{ name: 'Sena' }],
   robots: { index: true, follow: true },
   openGraph: {
-    title: 'Sena - El arte de cobrar bien',
+    title: 'Sena — Cobranza B2B: automatiza el cobro de facturas y mejora tu flujo de caja',
     description:
-      'Con Sena, simplifica y acelera la gestión de tus cobros y pagos. Una solución para empresas enfocada en eficiencia y resultados.',
+      'Sena automatiza la cobranza B2B para empresas que venden a crédito. Convierte cartera en caja, reduce incobrables y elimina el Excel.',
     type: 'website',
     url: 'https://somossena.com',
     images: ['https://somossena.com/sena-crm-lite.jpg'],
     siteName: 'Sena',
-    locale: 'es_PE',
+    locale: 'es_CL',
   },
   other: {
     'facebook-domain-verification': 'tyjmxihsgkrx666ql4rwmnhsftl6hv',
