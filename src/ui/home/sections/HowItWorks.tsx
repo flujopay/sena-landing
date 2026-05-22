@@ -42,7 +42,7 @@ export const HowItWorks = () => {
         number: 3,
         title: '3. Evalúa',
         subtitle: 'Sabes qué funciona y qué no.',
-        description: 'Métricas reales de conversión y rendimiento por canal para que afines tu estrategia con datos, no suposiciones.',
+        description: 'Métricas por canal, por cartera y en tiempo real. Cada resultado alimenta la estrategia siguiente. El sistema aprende con cada ciclo.',
         image: AssetImage.evalua,
       },
       {
