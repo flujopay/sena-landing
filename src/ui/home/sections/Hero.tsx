@@ -57,10 +57,13 @@ export const Hero = () => {
             </span>
           </h1>
           <p className="font-adobe text-black text-xl max-w-[90%]">
+            El servicio de cobranza B2B que cuida tu cartera y tus relaciones.
+          </p>
+          <p className="font-adobe text-slate-500 text-base max-w-[85%]">
             Para empresas que venden a crédito y están{' '}
-            <span className="font-bold">cansadas de perseguir pagos</span>.
-            Sena automatiza la cobranza B2B y convierte{' '}
-            <span className="font-bold">cartera en caja</span>.
+            <span className="font-semibold text-slate-700">cansadas de perseguir pagos</span>.
+            Sena automatiza la cobranza y convierte{' '}
+            <span className="font-semibold text-slate-700">cartera en caja</span>.
           </p>
         </div>
         <div className="w-[40%] flex justify-end">
@@ -95,11 +98,8 @@ export const Hero = () => {
               </span>
             </h1>
             <div className="flex flex-row gap-2">
-              <p className="font-adobe text-black text-md xs:text-xs flex-1">
-                Para empresas que venden a crédito y están{' '}
-                <span className="font-bold">cansadas de perseguir pagos</span>.
-                Sena automatiza la cobranza y convierte{' '}
-                <span className="font-bold">cartera en caja</span>.
+              <p className="font-adobe text-black text-sm flex-1">
+                El servicio de cobranza B2B que cuida tu cartera y tus relaciones.
               </p>
             </div>
           </div>
