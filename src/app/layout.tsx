@@ -69,7 +69,6 @@ export default async function RootLayout({
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
               gtag('config', 'AW-17962976949');
-              gtag('config', 'G-BENT3HE0M6');
             `}
           </Script>
           {/* Meta Pixel — Plataforma (1722871789075263) */}
