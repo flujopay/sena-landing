@@ -130,7 +130,7 @@ export const ContactForm = () => {
         utmTerm: utmTerm ?? undefined,
         gclid: gclid ?? undefined,
         fbclid: fbclid ?? undefined,
-        landingPage: window.location.pathname,
+        landingPage: window.location.href,
       }),
     }).catch(() => {})
     const contactPayload: ContactFormRequest = {
