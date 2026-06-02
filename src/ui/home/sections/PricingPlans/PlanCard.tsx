@@ -39,6 +39,9 @@ export const PlanCard = ({ plan }: { plan: TPlan }) => {
 
       {/* Price */}
       <div>
+        {isEnterprise && (
+          <p className="text-xs font-bold text-brand-primary uppercase tracking-wide mb-0.5">Desde</p>
+        )}
         <p className="text-brand-primary flex items-center">
           <span className="text-xl font-extrabold mr-2">USD </span>
           <span className="text-5xl font-extrabold">{plan.price}</span>
