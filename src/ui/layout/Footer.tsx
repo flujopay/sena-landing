@@ -196,7 +196,7 @@ export const Footer = () => {
         {/* Mobile: Bottom bar */}
         <div className="md:hidden">
           <div className="border-t border-white/30 pt-6 flex justify-between items-center">
-            <p className="text-xs">© SENA SE 2026</p>
+            <p className="text-xs">© Sena 2026</p>
             <img
               className="w-20 cursor-pointer"
               src={AssetImage.byRecsa.src}
@@ -325,7 +325,7 @@ export const Footer = () => {
 
         {/* Desktop: Bottom bar */}
         <div className="hidden md:flex flex-row justify-between items-center pt-8 gap-4">
-          <p className="text-sm">© SENA SE 2026</p>
+          <p className="text-sm">© Sena 2026</p>
 
           <div className="flex gap-6">
             <a
