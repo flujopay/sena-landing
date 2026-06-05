@@ -257,7 +257,6 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Email inválido" }, { status: 400 });
   }
 
-  // Meta CAPI corre en paralelo — fire-and-forget, no bloquea
   const capiPromise = sendMetaCapi(body);
 
   try {
