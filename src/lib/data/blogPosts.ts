@@ -2,7 +2,7 @@ import { BlogPost } from '../types/blog'
 import { AssetImageBlog } from '../utils/assets/imageBlog'
 import { parseSpanishDate, slug } from '../utils/blog'
 
-export const featuredPostId = 1
+export const featuredPostId = 33
 
 export const blogPosts: BlogPost[] = [
   // {
