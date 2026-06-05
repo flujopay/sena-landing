@@ -187,6 +187,33 @@ async function addToList(token: string, contactId: string): Promise<void> {
   });
 }
 
+async function notifyN8N(body: LeadPayload, prioridad: "A" | "B" | "C"): Promise<void> {
+  const webhookUrl = process.env.N8N_WEBHOOK_PLATAFORMA_LEAD
+  if (!webhookUrl) return
+  try {
+    await fetch(webhookUrl, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        product: "plataforma",
+        nombre: body.nombre,
+        empresa: body.empresa,
+        email: body.email,
+        whatsapp: body.telefono,
+        prioridad,
+        gclid: body.gclid,
+        utm_source: body.utmSource,
+        utm_campaign: body.utmCampaign,
+        landing_page: body.landingPage,
+        _env: process.env.APP_ENV || "dev",
+      }),
+      signal: AbortSignal.timeout(5000),
+    })
+  } catch (err) {
+    console.error("[N8N] webhook error:", err instanceof Error ? err.message : "N8N error")
+  }
+}
+
 async function sendMetaCapi(body: LeadPayload): Promise<void> {
   const pixelId = process.env.META_PIXEL_ID;
   const capiToken = process.env.META_CAPI_TOKEN;
@@ -257,17 +284,19 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Email inválido" }, { status: 400 });
   }
 
-  // Meta CAPI corre en paralelo — fire-and-forget, no bloquea
+  // Fire-and-forget: CAPI + N8N corren en paralelo, no bloquean al usuario
+  const prioridad = calcPrioridad(body.facturas_pendientes, body.alguien_cobrando);
   const capiPromise = sendMetaCapi(body);
+  const n8nPromise = notifyN8N(body, prioridad);
 
   try {
     const contactId = await upsertContact(token, body);
     await Promise.all([createDeal(token, contactId, body), addToList(token, contactId)]);
-    await capiPromise;
+    await Promise.allSettled([capiPromise, n8nPromise]);
     return NextResponse.json({ ok: true });
   } catch (err) {
     console.error("[HubSpot] error:", err instanceof Error ? err.message : "CRM error");
-    await capiPromise;
+    await Promise.allSettled([capiPromise, n8nPromise]);
     return NextResponse.json({ ok: true, warning: "CRM sync pendiente" });
   }
 }

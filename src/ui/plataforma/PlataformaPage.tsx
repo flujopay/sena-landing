@@ -4,8 +4,9 @@ import Button from '@/ui/shared/Button'
 import { AssetImage } from '@/lib/utils/assets/image'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useEffect, useState } from 'react'
+import { Suspense, useEffect, useState } from 'react'
 import { ArrowRight, CheckCircle, BarChart2, Zap, Eye } from 'lucide-react'
+import { PlataformaContactForm } from './sections/PlataformaContactForm'
 
 const StickyMobileCTA = () => {
   const [visible, setVisible] = useState(true)
@@ -223,21 +224,22 @@ export const PlataformaPage = () => {
           </div>
         </section>
 
-        {/* Contact form section — placeholder; form se agrega en task #230 */}
+        {/* Contact form — inline above fold */}
         <section id="contacto" className="py-12 md:py-20">
           <div className="max-w-[1280px] mx-auto px-4">
-            <div className="max-w-lg mx-auto text-center">
-              <h2 className="text-brand-primary-dark text-2xl md:text-4xl font-extrabold mb-3">
-                Agenda tu demo de{' '}
-                <span className="text-brand-primary">30 minutos</span>
-              </h2>
-              <p className="text-slate-500 mb-8">
-                Sin compromiso. Te mostramos cómo funciona con tu cartera real.
-              </p>
-              {/* Form: task #230 */}
-              <div className="bg-white rounded-2xl shadow-sm border border-slate-100 p-8">
-                <p className="text-slate-400 text-sm">Formulario de contacto — próxima task</p>
+            <div className="max-w-xl mx-auto">
+              <div className="text-center mb-8">
+                <h2 className="text-brand-primary-dark text-2xl md:text-4xl font-extrabold mb-3">
+                  Agenda tu demo de{' '}
+                  <span className="text-brand-primary">30 minutos</span>
+                </h2>
+                <p className="text-slate-500">
+                  Sin compromiso. Te mostramos cómo funciona con tu cartera real.
+                </p>
               </div>
+              <Suspense>
+                <PlataformaContactForm />
+              </Suspense>
             </div>
           </div>
         </section>
