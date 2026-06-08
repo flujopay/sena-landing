@@ -72,7 +72,7 @@ export const Products = () => {
       {
         key: 'recuperacion' as const,
         label: 'Recupera deuda\nvencida',
-        title: 'Solo pagas si cobramos.',
+        title: 'Pagas solo si recuperamos.',
         description:
           'Facturas vencidas de más de 60 días. El equipo Recsa las gestiona y solo te cobramos si recuperamos el dinero. Sin ticket mínimo.',
         cta: 'Iniciar recupero',
