@@ -59,10 +59,17 @@ export const PlataformaPage = () => {
           </Link>
           <a
             href="tel:+56944489673"
-            className="text-sm font-semibold text-brand-primary-dark hover:text-brand-primary transition-colors"
+            className="hidden md:block text-sm font-semibold text-brand-primary-dark hover:text-brand-primary transition-colors"
           >
             +56 9 4448 9673
           </a>
+          <button
+            onClick={scrollToForm}
+            className="md:hidden flex items-center gap-1.5 bg-brand-primary text-white text-sm font-bold px-4 py-2 rounded-lg active:scale-[0.97] transition-transform"
+          >
+            Solicitar demo
+            <ArrowRight className="h-4 w-4" />
+          </button>
         </div>
       </header>
 
