@@ -39,7 +39,7 @@ type ProductItem = {
   id: number
   name: string
   description?: string
-  tab: 'autogestion' | 'recuperacion' | 'external'
+  tab: 'autogestion' | 'recuperacion' | 'opera'
   href?: string
 }
 
@@ -382,9 +382,8 @@ export const Header = ({ variant }: Props) => {
       {
         id: 3,
         name: 'Opera',
-        description: 'Servicio de cobranza all-in.',
-        tab: 'external',
-        href: 'https://opera.somossena.com/',
+        description: 'El equipo de cobranza que tu empresa no tiene.',
+        tab: 'opera',
       },
     ],
     []
@@ -483,13 +482,13 @@ export const Header = ({ variant }: Props) => {
   const goToProduct = (tab: ProductItem['tab'], href?: string) => {
     setOpenProducts(false)
 
-    if (tab === 'external' && href) {
-      window.location.href = href
+    if (tab === 'recuperacion') {
+      window.location.href = 'https://recupera.somossena.com/'
       return
     }
 
-    if (tab === 'recuperacion') {
-      window.location.href = 'https://recupera.somossena.com/'
+    if (tab === 'opera') {
+      window.location.href = `${SENA_BASE_URL}/opera`
       return
     }
 
