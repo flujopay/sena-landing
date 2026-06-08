@@ -55,7 +55,7 @@ export const PlataformaPage = () => {
       <header className="w-full bg-white border-b border-slate-100 px-4 py-3">
         <div className="max-w-[1280px] mx-auto flex items-center justify-between">
           <Link href="/">
-            <Image src={AssetImage.logoBlack} alt="Sena" className="h-7 w-auto" />
+            <Image src={AssetImage.logoBlack} alt="Sena" className="h-7 w-auto" priority />
           </Link>
           <a
             href="tel:+56944489673"
@@ -214,7 +214,7 @@ export const PlataformaPage = () => {
           <div className="max-w-[1280px] mx-auto px-4">
             <div className="flex flex-col items-center gap-5">
               <div className="flex items-center gap-3">
-                <Image src={AssetImage.byRecsa} alt="Respaldado por Recsa" className="h-8 w-auto" />
+                <Image src={AssetImage.byRecsa} alt="Respaldado por Recsa" className="h-8 w-auto" loading="lazy" />
                 <span className="text-slate-500 text-sm">40 años de experiencia en cobranza en Chile y LATAM</span>
               </div>
               <div className="flex flex-wrap justify-center gap-5">
@@ -255,7 +255,7 @@ export const PlataformaPage = () => {
                     <p className="font-bold text-brand-primary-dark text-sm">Osvaldo Cáceres</p>
                     <p className="text-slate-500 text-xs mt-0.5">KAM, RECSA · Cliente Sena Plataforma hace más de un año</p>
                   </div>
-                  <Image src={AssetImage.byRecsa} alt="RECSA" className="h-7 w-auto opacity-70" />
+                  <Image src={AssetImage.byRecsa} alt="RECSA" className="h-7 w-auto opacity-70" loading="lazy" />
                 </div>
               </div>
               <p className="text-center text-xs text-slate-400 mt-4">
@@ -293,7 +293,7 @@ export const PlataformaPage = () => {
       <footer className="bg-white border-t border-slate-100 py-6 px-4">
         <div className="max-w-[1280px] mx-auto flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-slate-400">
           <Link href="/">
-            <Image src={AssetImage.logoBlack} alt="Sena" className="h-5 w-auto opacity-60" />
+            <Image src={AssetImage.logoBlack} alt="Sena" className="h-5 w-auto opacity-60" loading="lazy" />
           </Link>
           <div className="flex gap-4">
             <Link href="/term" className="hover:text-slate-600 transition-colors">
