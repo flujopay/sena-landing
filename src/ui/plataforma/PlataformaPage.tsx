@@ -5,7 +5,7 @@ import { AssetImage } from '@/lib/utils/assets/image'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Suspense, useEffect, useState } from 'react'
-import { ArrowRight, CheckCircle, BarChart2, Zap, Eye } from 'lucide-react'
+import { ArrowRight, CheckCircle, BarChart2, Zap, Eye, Quote } from 'lucide-react'
 import { PlataformaContactForm } from './sections/PlataformaContactForm'
 
 const StickyMobileCTA = () => {
@@ -202,29 +202,66 @@ export const PlataformaPage = () => {
           </div>
         </section>
 
-        {/* Trust signals */}
+        {/* Trust signals — Recsa prominente */}
         <section className="bg-white py-10 border-y border-slate-100">
           <div className="max-w-[1280px] mx-auto px-4">
-            <p className="text-center text-sm text-slate-400 font-medium mb-6">
-              Respaldados por Recsa — 40 años de experiencia en cobranza en Chile y LATAM
-            </p>
-            <div className="flex flex-wrap justify-center gap-6 items-center">
-              {[
-                'Sin contrato de largo plazo',
-                'Implementación en días',
-                'Soporte en español',
-                'Datos 100% en Chile',
-              ].map((item) => (
-                <div key={item} className="flex items-center gap-2 text-slate-600 text-sm">
-                  <CheckCircle className="h-4 w-4 text-brand-primary shrink-0" />
-                  <span>{item}</span>
-                </div>
-              ))}
+            <div className="flex flex-col items-center gap-5">
+              <div className="flex items-center gap-3">
+                <Image src={AssetImage.byRecsa} alt="Respaldado por Recsa" className="h-8 w-auto" />
+                <span className="text-slate-500 text-sm">40 años de experiencia en cobranza en Chile y LATAM</span>
+              </div>
+              <div className="flex flex-wrap justify-center gap-5">
+                {[
+                  'Sin contrato de largo plazo',
+                  'Implementación en días',
+                  'Soporte en español',
+                  'Datos 100% en Chile',
+                ].map((item) => (
+                  <div key={item} className="flex items-center gap-2 text-slate-600 text-sm">
+                    <CheckCircle className="h-4 w-4 text-brand-primary shrink-0" />
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </section>
 
-        {/* Contact form — inline above fold */}
+        {/* Testimonial — Osvaldo Cáceres, RECSA */}
+        <section className="py-12 md:py-16 bg-[#F9F9F9]">
+          <div className="max-w-[1280px] mx-auto px-4">
+            <div className="max-w-2xl mx-auto">
+              <div className="bg-white rounded-2xl p-8 shadow-sm border border-slate-100 relative">
+                <Quote className="absolute top-6 right-6 h-8 w-8 text-brand-primary/10" />
+                <div className="flex gap-1 mb-5">
+                  {[...Array(5)].map((_, i) => (
+                    <svg key={i} className="h-4 w-4 text-yellow-400 fill-yellow-400" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  ))}
+                </div>
+                <p className="text-slate-700 text-lg leading-relaxed mb-6 italic">
+                  "Automatizamos por completo la conciliación entre pagos y facturas. Pasamos de 1.000 a más de 10.000 conciliaciones mensuales, con trazabilidad y aprobación en tiempo real. Es un cambio que no tiene vuelta atrás."
+                </p>
+                <div className="flex items-center justify-between border-t border-slate-100 pt-5">
+                  <div>
+                    <p className="font-bold text-brand-primary-dark text-sm">Osvaldo Cáceres</p>
+                    <p className="text-slate-500 text-xs mt-0.5">KAM, RECSA · Cliente Sena Plataforma hace más de un año</p>
+                  </div>
+                  <Image src={AssetImage.byRecsa} alt="RECSA" className="h-7 w-auto opacity-70" />
+                </div>
+              </div>
+              <p className="text-center text-xs text-slate-400 mt-4">
+                ¿Quieres ver más casos?{' '}
+                <Link href="/" target="_blank" rel="noopener noreferrer" className="text-brand-primary hover:underline font-medium">
+                  Conoce Sena →
+                </Link>
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Contact form — inline */}
         <section id="contacto" className="py-12 md:py-20">
           <div className="max-w-[1280px] mx-auto px-4">
             <div className="max-w-xl mx-auto">
