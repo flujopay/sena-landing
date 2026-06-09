@@ -7,6 +7,7 @@ import Link from 'next/link'
 import { Suspense, useRef } from 'react'
 import { OperaContactForm } from './sections/OperaContactForm'
 import { ArrowRight, CheckCircle, Users, Clock, BarChart2 } from 'lucide-react'
+import { ProductsEcosystem } from '@/ui/shared/ProductsEcosystem'
 
 export const OperaPage = () => {
   const formRef = useRef<HTMLDivElement>(null)
@@ -214,6 +215,8 @@ export const OperaPage = () => {
           </div>
         </section>
       </main>
+
+      <ProductsEcosystem active="opera" />
 
       {/* Footer */}
       <footer className="bg-white border-t border-slate-100 py-6 px-4">
