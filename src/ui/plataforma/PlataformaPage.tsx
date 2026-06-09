@@ -7,6 +7,7 @@ import Link from 'next/link'
 import { Suspense, useEffect, useState } from 'react'
 import { ArrowRight, CheckCircle, BarChart2, Zap, Eye } from 'lucide-react'
 import { PlataformaContactForm } from './sections/PlataformaContactForm'
+import { ProductsEcosystem } from '@/ui/shared/ProductsEcosystem'
 
 const StickyMobileCTA = () => {
   const [visible, setVisible] = useState(true)
@@ -244,6 +245,8 @@ export const PlataformaPage = () => {
           </div>
         </section>
       </main>
+
+      <ProductsEcosystem active="plataforma" />
 
       {/* Footer minimal */}
       <footer className="bg-white border-t border-slate-100 py-6 px-4">
