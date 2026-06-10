@@ -7,6 +7,7 @@ import Link from 'next/link'
 import { Suspense, useEffect, useState } from 'react'
 import { ArrowRight, CheckCircle, BarChart2, Zap, Eye, Quote } from 'lucide-react'
 import { PlataformaContactForm } from './sections/PlataformaContactForm'
+import { ProductsEcosystem } from '@/ui/shared/ProductsEcosystem'
 
 const StickyMobileCTA = () => {
   const [visible, setVisible] = useState(true)
@@ -55,7 +56,7 @@ export const PlataformaPage = () => {
       <header className="w-full bg-white border-b border-slate-100 px-4 py-3">
         <div className="max-w-[1280px] mx-auto flex items-center justify-between">
           <Link href="/">
-            <Image src={AssetImage.logoBlack} alt="Sena" className="h-7 w-auto" />
+            <Image src={AssetImage.logoBlack} alt="Sena" className="h-7 w-auto" priority />
           </Link>
           <a
             href="tel:+56944489673"
@@ -289,11 +290,13 @@ export const PlataformaPage = () => {
         </section>
       </main>
 
+      <ProductsEcosystem active="plataforma" />
+
       {/* Footer minimal */}
       <footer className="bg-white border-t border-slate-100 py-6 px-4">
         <div className="max-w-[1280px] mx-auto flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-slate-400">
           <Link href="/">
-            <Image src={AssetImage.logoBlack} alt="Sena" className="h-5 w-auto opacity-60" />
+            <Image src={AssetImage.logoBlack} alt="Sena" className="h-5 w-auto opacity-60" loading="lazy" />
           </Link>
           <div className="flex gap-4">
             <Link href="/term" className="hover:text-slate-600 transition-colors">

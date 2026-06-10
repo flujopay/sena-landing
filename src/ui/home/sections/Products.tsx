@@ -5,7 +5,7 @@ import Image, { StaticImageData } from 'next/image'
 import { useSearchParams } from 'next/navigation'
 import { useEffect, useMemo, useState } from 'react'
 
-type ProductKey = 'autogestion' | 'recuperacion'
+type ProductKey = 'autogestion' | 'recuperacion' | 'opera'
 
 const ProductCard = ({
   label,
@@ -60,9 +60,9 @@ export const Products = () => {
       {
         key: 'autogestion' as const,
         label: 'Plataforma de\nautogestión',
-        title: 'Para el día a día de tu cobranza',
+        title: 'Visibilidad total. Cobros automáticos.',
         description:
-          'Organiza facturas, automatiza recordatorios y controla todo tu ciclo de cobranza desde un solo lugar.',
+          'Dashboard unificado de tu cartera, recordatorios multicanal y conciliación sin reemplazar tu tech stack. Primer resultado en 30 días.',
         cta: 'Agenda una demo',
         image: AssetImage.autogestion,
         onCtaClick: () => {
@@ -71,14 +71,26 @@ export const Products = () => {
       },
       {
         key: 'recuperacion' as const,
-        label: 'Servicio de Recupero con\nequipo humano',
-        title: 'Recupera pagos con apoyo experto',
+        label: 'Recupera deuda\nvencida',
+        title: 'Pagas solo si recuperamos.',
         description:
-          'Combina tecnología y un equipo especializado para gestionar casos complejos y mejorar tu tasa de recuperación.',
-        cta: 'Conoce más',
+          'Facturas vencidas de más de 60 días. El equipo Recsa las gestiona y solo te cobramos si recuperamos el dinero. Sin ticket mínimo.',
+        cta: 'Iniciar recupero',
         image: AssetImage.recuperaGirl,
         onCtaClick: () => {
           window.open('https://recupera.somossena.com', '_self')
+        },
+      },
+      {
+        key: 'opera' as const,
+        label: 'Opera,\ncobranza delegada',
+        title: 'El equipo de cobranza que tu empresa no tiene.',
+        description:
+          'Tu empresa no tiene un equipo dedicado a cobrar. El nuestro opera por ti: gestión, seguimiento y resultados. Tú solo ves los números.',
+        cta: 'Solicitar propuesta',
+        image: AssetImage.cobra,
+        onCtaClick: () => {
+          window.location.href = '/opera'
         },
       },
     ],
@@ -88,28 +100,32 @@ export const Products = () => {
   const searchParams = useSearchParams()
   const tabParam = searchParams.get('tab')
 
-  const [activeKey, setActiveKey] = useState<ProductKey>(
-    tabParam === 'recuperacion' ? 'recuperacion' : 'autogestion'
-  )
+  const [activeKey, setActiveKey] = useState<ProductKey>(() => {
+    if (tabParam === 'recuperacion') return 'recuperacion'
+    if (tabParam === 'opera') return 'opera'
+    return 'autogestion'
+  })
   const active = products.find((p) => p.key === activeKey) ?? products[0]
+  const activeIndex = products.findIndex((p) => p.key === activeKey)
 
   useEffect(() => {
-    if (tabParam === 'autogestion' || tabParam === 'recuperacion') {
+    if (tabParam === 'autogestion' || tabParam === 'recuperacion' || tabParam === 'opera') {
       setActiveKey(tabParam)
     }
   }, [tabParam])
 
-  // Listen for custom event from Header dropdown (same-page navigation)
   useEffect(() => {
     const handler = (e: Event) => {
       const tab = (e as CustomEvent).detail
-      if (tab === 'autogestion' || tab === 'recuperacion') {
+      if (tab === 'autogestion' || tab === 'recuperacion' || tab === 'opera') {
         setActiveKey(tab)
       }
     }
     window.addEventListener('sena:product-tab', handler)
     return () => window.removeEventListener('sena:product-tab', handler)
   }, [])
+
+  const segmentHeight = 100 / products.length
 
   return (
     <section id="productos" className="max-w-[1280px] mx-auto pt-28">
@@ -140,7 +156,7 @@ export const Products = () => {
       <div className="hidden md:block bg-[#F7F7F7] rounded-3xl p-6 md:p-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
           <div className="flex flex-col gap-6">
-            <p className="text-left text-brand-primary-dark  font-extrabold tracking-wide  text-xl sm:text-4xl">
+            <p className="text-left text-brand-primary-dark font-extrabold tracking-wide text-xl sm:text-4xl">
               Nuestros
               <br />
               productos
@@ -150,10 +166,10 @@ export const Products = () => {
               <div className="relative w-1">
                 <div className="absolute left-0 top-0 h-full w-1 rounded bg-slate-300" />
                 <div
-                  className="absolute left-0 top-0 w-1 rounded bg-brand-secondary transition-all"
+                  className="absolute left-0 top-0 w-1 rounded bg-brand-secondary transition-all duration-300"
                   style={{
-                    height: activeKey === 'autogestion' ? '50%' : '50%',
-                    transform: activeKey === 'autogestion' ? 'translateY(0%)' : 'translateY(100%)',
+                    height: `${segmentHeight}%`,
+                    transform: `translateY(${activeIndex * 100}%)`,
                   }}
                 />
               </div>
