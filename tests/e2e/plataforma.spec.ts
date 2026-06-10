@@ -32,16 +32,22 @@ test('/plataforma/gracias muestra confirmación y embed de HubSpot meetings', as
   await expect(page.getByRole('link', { name: /abrir calendario/i })).toBeVisible()
 })
 
-// Este test pasa después del deploy del PR con Opera (#250).
-// Confirma: 3 productos en homepage, tab Opera activo vía URL param.
 test.skip('sección productos — Opera como 3er tab (post-deploy)', async ({ page }) => {
   await page.goto('/?tab=opera#productos')
 
-  await expect(page.getByText(/el equipo de cobranza que tu empresa no tiene/i).first()).toBeVisible({ timeout: 15_000 })
+  await expect(page.getByText(/el equipo de cobranza que tu empresa no tiene/i).first()).toBeVisible({
+    timeout: 15_000,
+  })
   await expect(page.getByRole('button', { name: /solicitar propuesta/i }).first()).toBeVisible()
 
-  // Los 3 labels visibles en mobile
   await expect(page.getByText(/plataforma de/i).first()).toBeVisible()
   await expect(page.getByText(/recupera deuda/i).first()).toBeVisible()
   await expect(page.getByText(/opera/i).first()).toBeVisible()
+})
+
+test('mobile 375px — CTA header "Solicitar demo" visible arriba del fold (#202)', async ({ page }) => {
+  await page.setViewportSize({ width: 375, height: 812 })
+  await page.goto('/plataforma?utm_source=google&utm_medium=cpc')
+
+  await expect(page.getByRole('button', { name: /solicitar demo/i }).first()).toBeVisible({ timeout: 15_000 })
 })
