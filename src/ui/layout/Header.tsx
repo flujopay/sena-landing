@@ -488,7 +488,7 @@ export const Header = ({ variant }: Props) => {
     }
 
     if (tab === 'opera') {
-      window.location.href = `${SENA_BASE_URL}/opera`
+      window.location.href = 'https://opera.somossena.com'
       return
     }
 
