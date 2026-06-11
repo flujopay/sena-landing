@@ -29,8 +29,9 @@ const PRODUCTS = [
     tag: 'Cobranza delegada',
     desc: 'El equipo de cobranza que tu empresa no tiene. Nosotros operamos, tú ves los números.',
     cta: 'Ver Opera',
-    href: '/opera',
+    href: 'https://opera.somossena.com',
     color: 'bg-violet-50 text-violet-800',
+    external: true,
   },
 ]
 
