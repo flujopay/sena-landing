@@ -21,6 +21,66 @@ export const metadata: Metadata = {
   },
 }
 
-const Page = () => <PlataformaPage />
+const SCHEMA = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'SoftwareApplication',
+      name: 'Sena Plataforma',
+      description:
+        'Software de cobranza B2B para empresas en Chile. Automatiza el seguimiento de facturas, recordatorios y conciliación sin cambiar tu tech stack.',
+      url: 'https://www.somossena.com/plataforma',
+      applicationCategory: 'BusinessApplication',
+      operatingSystem: 'Web',
+      inLanguage: 'es-CL',
+      offers: { '@type': 'Offer', url: 'https://www.somossena.com/plataforma' },
+      publisher: { '@type': 'Organization', name: 'Sena', url: 'https://www.somossena.com' },
+    },
+    {
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: '¿Qué es Sena Plataforma?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Sena Plataforma es un software de cobranza B2B que automatiza el seguimiento de facturas vencidas, envía recordatorios automáticos y concilia pagos sin reemplazar tu ERP o sistema contable.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: '¿Cuánto tiempo toma implementar Sena?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'La implementación típica toma entre 1 y 2 semanas. Sena se conecta a tu sistema de facturación existente sin migraciones ni desarrollo personalizado.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: '¿Sena se integra con ERPs o sistemas de facturación?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Sí. Sena se integra con los principales ERPs y sistemas de facturación del mercado chileno. No reemplaza tu stack tecnológico, se conecta sobre él.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: '¿Es adecuado para empresas con alto volumen de facturas?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Sí. Sena está diseñado para empresas B2B con carteras de 50 a miles de facturas mensuales. Automatiza el proceso para que tu equipo se enfoque solo en los casos que lo requieren.',
+          },
+        },
+      ],
+    },
+  ],
+}
+
+const Page = () => (
+  <>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA) }} />
+    <PlataformaPage />
+  </>
+)
 
 export default Page
