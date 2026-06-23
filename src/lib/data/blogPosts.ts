@@ -6474,7 +6474,7 @@ export const blogPosts: BlogPost[] = [
       'Hay alguien en tu empresa que lleva un Excel de facturas vencidas, envía recordatorios uno a uno y hace llamadas que nadie contesta. Esa persona gasta horas en lo que debería tardar minutos. Hay una forma mejor.',
     date: '23 de junio 2026',
     tags: ['Cobranza', 'IA', 'Automatización'],
-    image: AssetImageBlog.blog_30_main.src,
+    image: AssetImageBlog.blog_14_main.src,
     content: [
       {
         type: 'paragraph',
