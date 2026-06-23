@@ -2,7 +2,7 @@ import { BlogPost } from '../types/blog'
 import { AssetImageBlog } from '../utils/assets/imageBlog'
 import { parseSpanishDate, slug } from '../utils/blog'
 
-export const featuredPostId = 33
+export const featuredPostId = 34
 
 export const blogPosts: BlogPost[] = [
   // {
@@ -6461,6 +6461,257 @@ export const blogPosts: BlogPost[] = [
           {
             type: 'text',
             text: '.',
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 34,
+    slug: slug('Automatiza tu cobranza menos persecucion manual mas plata en tu cuenta'),
+    title: 'Automatiza tu cobranza: menos persecución manual, más plata en tu cuenta',
+    intro:
+      'Hay alguien en tu empresa que lleva un Excel de facturas vencidas, envía recordatorios uno a uno y hace llamadas que nadie contesta. Esa persona gasta horas en lo que debería tardar minutos. Hay una forma mejor.',
+    date: '23 de junio 2026',
+    tags: ['Cobranza', 'IA', 'Automatización'],
+    image: AssetImageBlog.blog_30_main.src,
+    content: [
+      {
+        type: 'paragraph',
+        fragments: [
+          {
+            type: 'text',
+            text: 'Hay alguien en tu empresa que lleva un Excel de facturas vencidas. Que envía recordatorios uno a uno. Que hace llamadas que nadie contesta y cuya respuesta, si llega, es "ya la semana que viene". Esa persona gasta horas cada semana en una tarea que debería tardar minutos.',
+          },
+        ],
+      },
+      {
+        type: 'paragraph',
+        fragments: [
+          {
+            type: 'text',
+            text: 'Eso es la cobranza manual. Y tiene un costo que va mucho más allá de la planilla: el ',
+          },
+          {
+            type: 'link',
+            text: '55% de las ventas B2B facturadas terminan vencidas',
+            href: 'https://msbureau.com/blog/b2b-debt-recovery-rates-by-industry-2026/',
+          },
+          {
+            type: 'text',
+            text: ', y cerca del 8% nunca se recupera.',
+          },
+        ],
+      },
+      {
+        type: 'subtitle',
+        text: 'La cobranza en piloto automático',
+      },
+      {
+        type: 'paragraph',
+        fragments: [
+          {
+            type: 'text',
+            text: 'La cobranza automática —lo que en la industria se llama ',
+          },
+          {
+            type: 'bold',
+            text: 'debt collection on autopilot',
+          },
+          {
+            type: 'text',
+            text: '— usa inteligencia artificial y agentes conversacionales (sistemas de chat y de voz automatizados) para gestionar el cobro con mínima intervención humana. El sistema envía recordatorios personalizados, negocia condiciones de pago según las reglas del negocio, prioriza qué cuentas atender primero y concilia los pagos en tiempo real. Todo esto 24/7, en los canales donde tus clientes realmente responden: WhatsApp, SMS, email o llamada.',
+          },
+        ],
+      },
+      {
+        type: 'paragraph',
+        fragments: [
+          {
+            type: 'text',
+            text: 'El humano vuelve a entrar cuando hay que cuidar una relación o tomar una decisión que requiere criterio. No antes.',
+          },
+        ],
+      },
+      {
+        type: 'subtitle',
+        text: '5 tendencias que están redefiniendo la industria',
+      },
+      {
+        type: 'paragraph',
+        fragments: [
+          {
+            type: 'text',
+            text: 'Desde Sena lo vemos a diario en nuestras operaciones con clientes:',
+          },
+        ],
+      },
+      {
+        type: 'list',
+        items: [
+          [
+            { type: 'bold', text: 'Crecimiento explosivo del mercado: ' },
+            { type: 'text', text: 'La cobranza con IA se proyecta a crecer entre 5 y 7 veces para 2034, con un 16,9% anual entre 2025 y 2034. En sentido contrario, las agencias tradicionales —call centers masivos, miles de llamadas, bajas tasas de recuperación— están perdiendo asignaciones y compitiendo únicamente por precio.' },
+          ],
+          [
+            { type: 'bold', text: 'Eficiencia medible: ' },
+            { type: 'text', text: 'Los clientes de Sena ven caídas en sus costos operativos, automatización de tareas repetitivas y mejoras en el DSO —los días promedio que demora en entrar una factura pagada.' },
+          ],
+          [
+            { type: 'bold', text: 'Negociación autónoma: ' },
+            { type: 'text', text: 'El agente de IA analiza el historial del deudor, el contexto de la conversación y las reglas de negocio del cliente para ofrecer alternativas de pago directamente, sin escalar. No es un bot genérico: es un negociador con instrucciones precisas.' },
+          ],
+          [
+            { type: 'bold', text: 'Cumplimiento y experiencia de pago: ' },
+            { type: 'text', text: 'Todas las interacciones respetan las regulaciones vigentes —incluyendo la Ley de Pago a 30 Días— y están diseñadas para que el deudor sienta el proceso como algo ordenado, no agresivo.' },
+          ],
+          [
+            { type: 'bold', text: 'Canales y segmentación: ' },
+            { type: 'text', text: 'Los clientes son segmentados según su comportamiento y preferencia de canal. No todos responden igual al WhatsApp; algunos prefieren email o una llamada. El sistema aprende y optimiza.' },
+          ],
+        ],
+      },
+      {
+        type: 'subtitle',
+        text: 'El dato que más importa',
+      },
+      {
+        type: 'paragraph',
+        fragments: [
+          {
+            type: 'text',
+            text: 'Cada 30 días que una factura permanece sin gestionarse, la probabilidad de recuperarla cae entre ',
+          },
+          {
+            type: 'link',
+            text: '10 y 15 puntos porcentuales',
+            href: 'https://msbureau.com/blog/b2b-debt-recovery-rates-by-industry-2026/',
+          },
+          {
+            type: 'text',
+            text: '. En números concretos:',
+          },
+        ],
+      },
+      {
+        type: 'list',
+        items: [
+          '30 días vencida: 85–90% de probabilidad de recuperación',
+          '90 días vencida: 55–60% de probabilidad de recuperación',
+          '6 meses vencida: 38–43% de probabilidad de recuperación',
+          '1 año vencida: 20–25% de probabilidad de recuperación',
+        ],
+      },
+      {
+        type: 'paragraph',
+        fragments: [
+          {
+            type: 'text',
+            text: 'No es un caso aislado. Por eso en Sena partimos desde la cobranza preventiva —facturas entre 0 y 90 días— y trabajamos hasta la deuda morosa. El objetivo de largo plazo es que el máximo de tu cartera esté concentrado en los primeros 90 días y que la deuda mayor a 180 días sea la excepción, no la regla.',
+          },
+        ],
+      },
+      {
+        type: 'subtitle',
+        text: 'Cómo se implementa',
+      },
+      {
+        type: 'paragraph',
+        fragments: [
+          {
+            type: 'text',
+            text: 'El proceso no empieza con tecnología. Empieza con entender tu negocio:',
+          },
+        ],
+      },
+      {
+        type: 'list',
+        items: [
+          [
+            { type: 'bold', text: 'Diagnóstico de cartera: ' },
+            { type: 'text', text: 'Analizamos tus facturas sin recaudar para entender el estado real de tu cobranza y diseñar la estrategia adecuada.' },
+          ],
+          [
+            { type: 'bold', text: 'Integración con tus sistemas: ' },
+            { type: 'text', text: 'Nos conectamos a tu ERP, CRM y al SII —incluyendo facturas DTE— para operar con información en línea sin que tu equipo tenga que cargar datos manualmente.' },
+          ],
+          [
+            { type: 'bold', text: 'WhatsApp como canal principal: ' },
+            { type: 'text', text: 'Es el canal de mensajería más usado en Latinoamérica. En Sena lo dominamos para que tus comunicaciones de cobro lleguen sin restricciones y cumpliendo los requisitos de Meta.' },
+          ],
+          [
+            { type: 'bold', text: 'Visibilidad total: ' },
+            { type: 'text', text: 'Tu equipo accede a un tablero de gestión con todas las gestiones activas y reportes a la medida.' },
+          ],
+          [
+            { type: 'bold', text: 'Modelo híbrido: ' },
+            { type: 'text', text: 'La automatización resuelve el volumen. El equipo humano interviene cuando la relación o la complejidad del caso lo requieren.' },
+          ],
+        ],
+      },
+      {
+        type: 'paragraph',
+        fragments: [
+          {
+            type: 'text',
+            text: 'La cobranza automática no es el futuro: es el presente de las empresas que ya dejaron de perseguir pagos manualmente. En Sena combinamos tecnología y equipo especializado para que recuperes tu cartera sin multiplicar tu operación.',
+          },
+        ],
+      },
+      {
+        type: 'paragraph',
+        fragments: [
+          {
+            type: 'text',
+            text: '¿Quieres saber cómo funciona en tu industria? ',
+          },
+          {
+            type: 'link',
+            text: 'Agenda una demo y cuéntanos el estado de tu cartera.',
+            href: 'https://meetings.hubspot.com/francisco502',
+          },
+        ],
+      },
+      {
+        type: 'subtitle',
+        text: 'Preguntas frecuentes',
+      },
+      {
+        type: 'subtitle',
+        text: '¿La cobranza automática funciona para pymes o solo para empresas grandes?',
+      },
+      {
+        type: 'paragraph',
+        fragments: [
+          {
+            type: 'text',
+            text: 'Funciona para ambas. Las pymes se benefician especialmente porque no tienen equipo interno dedicado a cobranza: la automatización les permite operar a escala sin contratar más personas.',
+          },
+        ],
+      },
+      {
+        type: 'subtitle',
+        text: '¿Qué pasa con las relaciones comerciales cuando un agente de IA cobra por mí?',
+      },
+      {
+        type: 'paragraph',
+        fragments: [
+          {
+            type: 'text',
+            text: 'El sistema está diseñado para preservarlas. Los mensajes son personalizados y el tono siempre es profesional. Cuando un caso requiere sensibilidad especial, entra el equipo humano.',
+          },
+        ],
+      },
+      {
+        type: 'subtitle',
+        text: '¿Se integra con el SII y con facturas DTE?',
+      },
+      {
+        type: 'paragraph',
+        fragments: [
+          {
+            type: 'text',
+            text: 'Sí. Sena se conecta directamente a los sistemas tributarios para operar con información de facturas DTE en línea, sin carga manual de datos.',
           },
         ],
       },
