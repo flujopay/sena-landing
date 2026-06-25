@@ -2,15 +2,15 @@ import Link from 'next/link'
 
 export const PrivacyContent = () => {
   return (
-    <div className="grow bg-[#F9F9F9]">
+    <div className="grow bg-surface-secondary">
       <div className="max-w-[1280px] mx-auto px-4 py-16 md:py-24">
         <div className="text-center mb-8">
           <h1 className="text-brand-primary-dark text-3xl md:text-5xl font-extrabold mb-3">
             Política de <span className="text-brand-primary">Privacidad</span>
           </h1>
-          <p className="text-slate-600 text-sm">Última actualización: febrero 2026</p>
+          <p className="text-text-secondary text-sm">Última actualización: febrero 2026</p>
         </div>
-        <section className="bg-white text-slate-700 font-normal text-sm md:text-base p-8 md:p-14 rounded-2xl shadow-sm space-y-8">
+        <section className="bg-white text-text-primary font-normal text-sm md:text-base p-8 md:p-14 rounded-2xl shadow-sm space-y-8">
           {/* 1. Introducción */}
           <div>
             <h2 className="text-brand-primary-dark text-xl md:text-2xl font-bold mb-3">1. Introducción</h2>
@@ -301,7 +301,7 @@ export const PrivacyContent = () => {
           >
             Inicio
           </Link>
-          <span className="text-slate-300">|</span>
+          <span className="text-text-disabled">|</span>
           <Link
             href="/term"
             className="text-brand-primary hover:text-brand-primary-dark font-semibold text-sm transition-colors"

@@ -28,7 +28,7 @@ export const PlataformaGraciasPage = () => {
   }, [])
 
   return (
-    <div className="min-h-screen bg-[#F9F9F9] flex flex-col">
+    <div className="min-h-screen bg-surface-secondary flex flex-col">
       <div className="w-full py-6 flex justify-center">
         <button onClick={() => router.push('/')} className="cursor-pointer">
           <Image src={AssetImage.logoBlack} alt="Sena" className="w-36" />
@@ -38,7 +38,7 @@ export const PlataformaGraciasPage = () => {
       <div className="flex-1 flex items-start justify-center px-4 pb-16">
         <div className="w-full max-w-2xl">
           {/* Success card */}
-          <div className="bg-white rounded-3xl shadow-[0_8px_40px_rgba(0,0,0,0.06)] border border-slate-100 overflow-hidden mb-6">
+          <div className="bg-white rounded-3xl shadow-[0_8px_40px_rgba(0,0,0,0.06)] border border-border-default overflow-hidden mb-6">
             <div className="h-1.5 bg-linear-to-r from-brand-primary via-brand-primary to-brand-secondary" />
             <div className="px-8 pt-8 pb-6 md:px-12 text-center">
               <div className="flex justify-center mb-5">
@@ -57,7 +57,7 @@ export const PlataformaGraciasPage = () => {
               <h1 className="font-canaro text-brand-primary-dark text-2xl md:text-3xl font-extrabold leading-tight mb-2">
                 ¡Recibimos tu solicitud!
               </h1>
-              <p className="text-slate-600 text-sm md:text-base leading-relaxed mb-1">
+              <p className="text-text-secondary text-sm md:text-base leading-relaxed mb-1">
                 Nuestro equipo te contactará pronto.
               </p>
               <p className="text-brand-primary-dark text-sm md:text-base font-bold leading-relaxed mb-6">
@@ -67,9 +67,9 @@ export const PlataformaGraciasPage = () => {
           </div>
 
           {/* HubSpot inline calendar */}
-          <div className="bg-white rounded-3xl shadow-[0_8px_40px_rgba(0,0,0,0.06)] border border-slate-100 overflow-hidden mb-6">
+          <div className="bg-white rounded-3xl shadow-[0_8px_40px_rgba(0,0,0,0.06)] border border-border-default overflow-hidden mb-6">
             <div className="px-4 pt-6 pb-2 text-center">
-              <p className="text-xs text-slate-400 font-medium mb-4">Agenda tu demo de 30 minutos</p>
+              <p className="text-xs text-text-disabled font-medium mb-4">Agenda tu demo de 30 minutos</p>
             </div>
             <div
               className="meetings-iframe-container w-full"
@@ -92,7 +92,7 @@ export const PlataformaGraciasPage = () => {
 
           {/* WhatsApp Agent */}
           <div className="flex flex-col items-center gap-3 mb-8">
-            <p className="text-slate-500 text-sm">¿Tienes dudas? Habla con nuestro agente</p>
+            <p className="text-text-secondary text-sm">¿Tienes dudas? Habla con nuestro agente</p>
             <Link
               href="https://wa.me/56977290160?text=Hola%2C+me+registr%C3%A9+en+Plataforma+SENA.+%C2%BFC%C3%B3mo+automatiza+la+cobranza+con+mis+clientes+actuales%3F"
               target="_blank"
@@ -114,7 +114,7 @@ export const PlataformaGraciasPage = () => {
 
           {/* Footer */}
           <div className="flex flex-col items-center gap-4">
-            <div className="flex items-center gap-6 text-slate-400 text-xs">
+            <div className="flex items-center gap-6 text-text-disabled text-xs">
               <span>Sin compromiso</span>
               <span>·</span>
               <span>30 min</span>
@@ -137,7 +137,7 @@ export const PlataformaGraciasPage = () => {
               </svg>
               Volver a la landing
             </button>
-            <p className="text-slate-300 text-xs mt-2">
+            <p className="text-text-disabled text-xs mt-2">
               Sena — <span className="font-caslon">El arte de cobrar bien</span>
             </p>
           </div>

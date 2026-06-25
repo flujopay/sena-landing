@@ -27,7 +27,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Sena - El arte de cobrar bien',
-    description: 'Optimiza tu gestión de cobranza y pagos de facturas con Sena, el CRM B2B que simplifica procesos.',
+    description:
+      'Optimiza tu gestión de cobranza y pagos de facturas con Sena, el CRM B2B que simplifica procesos.',
     images: ['https://somossena.com/sena-crm-lite.jpg'],
   },
   openGraph: {
@@ -84,12 +85,17 @@ export default async function RootLayout({
             `}
           </Script>
           <noscript>
-            <img height="1" width="1" style={{ display: 'none' }}
-              src="https://www.facebook.com/tr?id=1722871789075263&ev=PageView&noscript=1" alt="" />
+            <img
+              height="1"
+              width="1"
+              style={{ display: 'none' }}
+              src="https://www.facebook.com/tr?id=1722871789075263&ev=PageView&noscript=1"
+              alt=""
+            />
           </noscript>
         </head>
         <body
-          className={`${canaroFont.variable} ${adobeCleanFont.variable} ${caslonFont.variable} antialiased font-adobe`}
+          className={`${canaroFont.variable} ${adobeCleanFont.variable} ${caslonFont.variable} antialiased font-adobe bg-surface-default`}
         >
           <Script id="disable-debugger" strategy="beforeInteractive">
             {`

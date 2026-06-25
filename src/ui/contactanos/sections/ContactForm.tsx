@@ -86,8 +86,14 @@ export const ContactForm = () => {
     const params = new URLSearchParams(window.location.search)
     const gc = params.get('gclid') || sessionStorage.getItem('gclid')
     const fb = params.get('fbclid') || sessionStorage.getItem('fbclid')
-    if (gc) { setGclid(gc); sessionStorage.setItem('gclid', gc) }
-    if (fb) { setFbclid(fb); sessionStorage.setItem('fbclid', fb) }
+    if (gc) {
+      setGclid(gc)
+      sessionStorage.setItem('gclid', gc)
+    }
+    if (fb) {
+      setFbclid(fb)
+      sessionStorage.setItem('fbclid', fb)
+    }
   }, [])
 
   const {
@@ -176,7 +182,10 @@ export const ContactForm = () => {
           </div>
         </div>
         <div className="flex flex-1 w-full">
-          <form onSubmit={handleSubmit(onSubmit)} className="w-full rounded-2xl bg-[#f4f4f4] px-6 py-8">
+          <form
+            onSubmit={handleSubmit(onSubmit)}
+            className="w-full rounded-2xl bg-surface-secondary px-6 py-8"
+          >
             {/* Campo 1 — Nombre y Apellido */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
               <Controller
@@ -352,7 +361,7 @@ export const ContactForm = () => {
               )}
             </div>
 
-            <p className="text-xs text-slate-500 mt-5 mb-5">
+            <p className="text-xs text-text-secondary mt-5 mb-5">
               Al enviar, aceptas los{' '}
               <Link href="/term" className="text-brand-primary font-semibold hover:underline">
                 Términos

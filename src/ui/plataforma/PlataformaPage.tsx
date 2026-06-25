@@ -31,7 +31,7 @@ const StickyMobileCTA = () => {
   if (!visible) return null
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 p-4 bg-white border-t border-slate-200 shadow-[0_-4px_16px_rgba(0,0,0,0.08)] md:hidden">
+    <div className="fixed bottom-0 left-0 right-0 z-50 p-4 bg-white border-t border-border-default shadow-[0_-4px_16px_rgba(0,0,0,0.08)] md:hidden">
       <button
         onClick={scrollToForm}
         className="w-full flex items-center justify-center gap-2 bg-brand-primary text-white font-bold py-3.5 px-6 rounded-xl text-base active:scale-[0.98] transition-transform"
@@ -51,9 +51,9 @@ export const PlataformaPage = () => {
   }
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#F9F9F9]">
+    <div className="min-h-screen flex flex-col bg-surface-secondary">
       {/* Header minimal — solo logo + teléfono */}
-      <header className="w-full bg-white border-b border-slate-100 px-4 py-3">
+      <header className="w-full bg-white border-b border-border-default px-4 py-3">
         <div className="max-w-[1280px] mx-auto flex items-center justify-between">
           <Link href="/">
             <Image src={AssetImage.logoBlack} alt="Sena" className="h-7 w-auto" priority />
@@ -87,7 +87,7 @@ export const PlataformaPage = () => {
               <span className="text-brand-primary">Visibilidad total de tu cartera.</span>
             </h1>
 
-            <p className="text-slate-600 text-base md:text-xl leading-relaxed mb-8 max-w-2xl mx-auto">
+            <p className="text-text-secondary text-base md:text-xl leading-relaxed mb-8 max-w-2xl mx-auto">
               Gestiona cuentas por cobrar, envía recordatorios automáticos y consolida tu cartera sin
               reemplazar tu tech stack. Primer resultado en 30 días.
             </p>
@@ -107,9 +107,13 @@ export const PlataformaPage = () => {
                 size="lg"
                 onClick={() => {
                   const el = document.getElementById('como-funciona')
-                  if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.pageYOffset - 72, behavior: 'smooth' })
+                  if (el)
+                    window.scrollTo({
+                      top: el.getBoundingClientRect().top + window.pageYOffset - 72,
+                      behavior: 'smooth',
+                    })
                 }}
-                className="w-full sm:w-auto min-h-[48px] border border-slate-300"
+                className="w-full sm:w-auto min-h-[48px] border border-border-default"
               />
             </div>
 
@@ -117,19 +121,19 @@ export const PlataformaPage = () => {
             <div className="grid grid-cols-3 gap-4 bg-white rounded-2xl shadow-lg p-6 max-w-2xl mx-auto">
               <div className="text-center">
                 <div className="text-2xl md:text-3xl font-extrabold text-brand-primary mb-1">30 días</div>
-                <div className="text-slate-500 text-xs md:text-sm font-medium leading-tight">
+                <div className="text-text-secondary text-xs md:text-sm font-medium leading-tight">
                   Primer resultado
                 </div>
               </div>
-              <div className="text-center border-x border-slate-200">
+              <div className="text-center border-x border-border-default">
                 <div className="text-2xl md:text-3xl font-extrabold text-brand-primary mb-1">+85%</div>
-                <div className="text-slate-500 text-xs md:text-sm font-medium leading-tight">
+                <div className="text-text-secondary text-xs md:text-sm font-medium leading-tight">
                   Tasa de recupero
                 </div>
               </div>
               <div className="text-center">
                 <div className="text-2xl md:text-3xl font-extrabold text-brand-primary mb-1">0</div>
-                <div className="text-slate-500 text-xs md:text-sm font-medium leading-tight">
+                <div className="text-text-secondary text-xs md:text-sm font-medium leading-tight">
                   Cambios a tu stack
                 </div>
               </div>
@@ -143,7 +147,7 @@ export const PlataformaPage = () => {
             <h2 className="text-brand-primary-dark text-2xl md:text-3xl font-extrabold text-center mb-2">
               ¿Te suena esto?
             </h2>
-            <p className="text-slate-500 text-center mb-10">
+            <p className="text-text-secondary text-center mb-10">
               El dinero está. Solo que no está disponible.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
@@ -164,12 +168,12 @@ export const PlataformaPage = () => {
                   desc: 'No puedes saber qué clientes van a pagar, cuáles necesitan acción urgente ni tu flujo real.',
                 },
               ].map((item) => (
-                <div key={item.title} className="bg-slate-50 rounded-2xl p-6 border border-slate-100">
+                <div key={item.title} className="bg-slate-50 rounded-2xl p-6 border border-border-default">
                   <div className="h-10 w-10 bg-brand-primary/10 rounded-xl flex items-center justify-center mb-4">
                     {item.icon}
                   </div>
                   <h3 className="font-bold text-brand-primary-dark text-base mb-2">{item.title}</h3>
-                  <p className="text-slate-500 text-sm leading-relaxed">{item.desc}</p>
+                  <p className="text-text-secondary text-sm leading-relaxed">{item.desc}</p>
                 </div>
               ))}
             </div>
@@ -200,10 +204,13 @@ export const PlataformaPage = () => {
                   desc: 'Se integra con tu ERP o facturador. Sin reemplazar nada. Funcional en días, no meses.',
                 },
               ].map((item) => (
-                <div key={item.step} className="bg-white rounded-2xl p-6 shadow-sm border border-slate-100">
+                <div
+                  key={item.step}
+                  className="bg-white rounded-2xl p-6 shadow-sm border border-border-default"
+                >
                   <div className="text-4xl font-extrabold text-brand-primary/20 mb-3">{item.step}</div>
                   <h3 className="font-bold text-brand-primary-dark text-base mb-2">{item.title}</h3>
-                  <p className="text-slate-500 text-sm leading-relaxed">{item.desc}</p>
+                  <p className="text-text-secondary text-sm leading-relaxed">{item.desc}</p>
                 </div>
               ))}
             </div>
@@ -211,12 +218,14 @@ export const PlataformaPage = () => {
         </section>
 
         {/* Trust signals — Recsa prominente */}
-        <section className="bg-white py-10 border-y border-slate-100">
+        <section className="bg-white py-10 border-y border-border-default">
           <div className="max-w-[1280px] mx-auto px-4">
             <div className="flex flex-col items-center gap-5">
               <div className="flex items-center gap-3">
                 <Image src={AssetImage.byRecsa} alt="Respaldado por Recsa" className="h-8 w-auto" />
-                <span className="text-slate-500 text-sm">40 años de experiencia en cobranza en Chile y LATAM</span>
+                <span className="text-text-secondary text-sm">
+                  40 años de experiencia en cobranza en Chile y LATAM
+                </span>
               </div>
               <div className="flex flex-wrap justify-center gap-5">
                 {[
@@ -225,7 +234,7 @@ export const PlataformaPage = () => {
                   'Soporte en español',
                   'Datos 100% en Chile',
                 ].map((item) => (
-                  <div key={item} className="flex items-center gap-2 text-slate-600 text-sm">
+                  <div key={item} className="flex items-center gap-2 text-text-secondary text-sm">
                     <CheckCircle className="h-4 w-4 text-brand-primary shrink-0" />
                     <span>{item}</span>
                   </div>
@@ -236,10 +245,10 @@ export const PlataformaPage = () => {
         </section>
 
         {/* Testimonial — Osvaldo Cáceres, RECSA */}
-        <section className="py-12 md:py-16 bg-[#F9F9F9]">
+        <section className="py-12 md:py-16 bg-surface-secondary">
           <div className="max-w-[1280px] mx-auto px-4">
             <div className="max-w-2xl mx-auto">
-              <div className="bg-white rounded-2xl p-8 shadow-sm border border-slate-100 relative">
+              <div className="bg-white rounded-2xl p-8 shadow-sm border border-border-default relative">
                 <Quote className="absolute top-6 right-6 h-8 w-8 text-brand-primary/10" />
                 <div className="flex gap-1 mb-5">
                   {[...Array(5)].map((_, i) => (
@@ -248,20 +257,29 @@ export const PlataformaPage = () => {
                     </svg>
                   ))}
                 </div>
-                <p className="text-slate-700 text-lg leading-relaxed mb-6 italic">
-                  "Automatizamos por completo la conciliación entre pagos y facturas. Pasamos de 1.000 a más de 10.000 conciliaciones mensuales, con trazabilidad y aprobación en tiempo real. Es un cambio que no tiene vuelta atrás."
+                <p className="text-text-primary text-lg leading-relaxed mb-6 italic">
+                  "Automatizamos por completo la conciliación entre pagos y facturas. Pasamos de 1.000 a más
+                  de 10.000 conciliaciones mensuales, con trazabilidad y aprobación en tiempo real. Es un
+                  cambio que no tiene vuelta atrás."
                 </p>
-                <div className="flex items-center justify-between border-t border-slate-100 pt-5">
+                <div className="flex items-center justify-between border-t border-border-default pt-5">
                   <div>
                     <p className="font-bold text-brand-primary-dark text-sm">Osvaldo Cáceres</p>
-                    <p className="text-slate-500 text-xs mt-0.5">KAM, RECSA · Cliente Sena Plataforma hace más de un año</p>
+                    <p className="text-text-secondary text-xs mt-0.5">
+                      KAM, RECSA · Cliente Sena Plataforma hace más de un año
+                    </p>
                   </div>
                   <Image src={AssetImage.byRecsa} alt="RECSA" className="h-7 w-auto opacity-70" />
                 </div>
               </div>
-              <p className="text-center text-xs text-slate-400 mt-4">
+              <p className="text-center text-xs text-text-disabled mt-4">
                 ¿Quieres ver más casos?{' '}
-                <Link href="/" target="_blank" rel="noopener noreferrer" className="text-brand-primary hover:underline font-medium">
+                <Link
+                  href="/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-brand-primary hover:underline font-medium"
+                >
                   Conoce Sena →
                 </Link>
               </p>
@@ -275,10 +293,9 @@ export const PlataformaPage = () => {
             <div className="max-w-xl mx-auto">
               <div className="text-center mb-8">
                 <h2 className="text-brand-primary-dark text-2xl md:text-4xl font-extrabold mb-3">
-                  Agenda tu demo de{' '}
-                  <span className="text-brand-primary">30 minutos</span>
+                  Agenda tu demo de <span className="text-brand-primary">30 minutos</span>
                 </h2>
-                <p className="text-slate-500">
+                <p className="text-text-secondary">
                   Sin compromiso. Te mostramos cómo funciona con tu cartera real.
                 </p>
               </div>
@@ -293,19 +310,19 @@ export const PlataformaPage = () => {
       <ProductsEcosystem active="plataforma" />
 
       {/* Footer minimal */}
-      <footer className="bg-white border-t border-slate-100 py-6 px-4">
-        <div className="max-w-[1280px] mx-auto flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-slate-400">
+      <footer className="bg-white border-t border-border-default py-6 px-4">
+        <div className="max-w-[1280px] mx-auto flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-text-disabled">
           <Link href="/">
             <Image src={AssetImage.logoBlack} alt="Sena" className="h-5 w-auto opacity-60" loading="lazy" />
           </Link>
           <div className="flex gap-4">
-            <Link href="/term" className="hover:text-slate-600 transition-colors">
+            <Link href="/term" className="hover:text-text-secondary transition-colors">
               Términos
             </Link>
-            <Link href="/privacy" className="hover:text-slate-600 transition-colors">
+            <Link href="/privacy" className="hover:text-text-secondary transition-colors">
               Privacidad
             </Link>
-            <Link href="/" className="hover:text-slate-600 transition-colors">
+            <Link href="/" className="hover:text-text-secondary transition-colors">
               somossena.com
             </Link>
           </div>

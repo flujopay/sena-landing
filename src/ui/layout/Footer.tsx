@@ -32,7 +32,7 @@ export const Footer = () => {
   }
 
   return (
-    <footer className="bg-[--color-footer-bg] text-white py-12 md:py-14 px-4 sm:px-6 lg:px-8">
+    <footer className="bg-footer-bg text-white py-12 md:py-14 px-4 sm:px-6 lg:px-8">
       <div className="max-w-[1280px] mx-auto">
         <div className="flex justify-start mb-10 md:mb-8">
           <img src={AssetImage.logoBlanco.src} alt="Sena Logo" className="w-64 md:w-100" />

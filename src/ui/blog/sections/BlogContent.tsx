@@ -32,7 +32,7 @@ export const BlogContent = ({ featuredPost, otherPosts }: BlogContentProps) => {
         <a
           href={`/blog/${featuredPost.slug}`}
           aria-label={`Ver Blog: ${featuredPost.title}`}
-          className="hover:shadow-xl transition-all hover:cursor-pointer flex flex-col md:flex-row gap-6 rounded-2xl bg-[#f9f9f9] p-6 md:p-10 mb-16"
+          className="hover:shadow-xl transition-all hover:cursor-pointer flex flex-col md:flex-row gap-6 rounded-2xl bg-surface-secondary p-6 md:p-10 mb-16"
         >
           <div className="md:w-[60%] w-full flex flex-col justify-between">
             <div className="flex flex-wrap gap-2 mb-4">
@@ -127,7 +127,7 @@ export const BlogContent = ({ featuredPost, otherPosts }: BlogContentProps) => {
             href={`/blog/${post.slug}`}
             aria-label={`Ver Blog: ${post.title}`}
             key={post.id}
-            className="hover:scale-[1.01] hover:cursor-pointer transition-all ease-in-out duration-300 border-2 border-gray-200 rounded-2xl p-6 hover:shadow-lg"
+            className="hover:scale-[1.01] hover:cursor-pointer transition-all ease-in-out duration-300 border-2 border-border-default rounded-2xl p-6 hover:shadow-lg"
           >
             <div className="relative w-full h-48 rounded-xl overflow-hidden mb-4">
               <Image
@@ -148,13 +148,13 @@ export const BlogContent = ({ featuredPost, otherPosts }: BlogContentProps) => {
                 </span>
               ))}
             </div>
-            <div className="flex items-center gap-2 text-sm text-gray-500 mb-2">
+            <div className="flex items-center gap-2 text-sm text-text-secondary mb-2">
               {/* <span>{post.author}</span> */}
               {/* <span>|</span> */}
               <span>{post.date}</span>
             </div>
             <h3 className="text-xl font-extrabold text-brand-primary mb-2">{post.title}</h3>
-            <p className="text-sm text-slate-700  leading-relaxed">{post.intro}</p>
+            <p className="text-sm text-text-primary  leading-relaxed">{post.intro}</p>
           </a>
         ))}
       </div>

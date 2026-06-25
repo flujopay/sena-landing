@@ -37,7 +37,7 @@ export const ThankyouPage = () => {
   }, [])
 
   return (
-    <div className="min-h-screen bg-[#F9F9F9] flex flex-col">
+    <div className="min-h-screen bg-surface-secondary flex flex-col">
       {/* Header */}
       <div className="w-full py-6 flex justify-center">
         <button onClick={() => router.push('/')} className="cursor-pointer">
@@ -49,7 +49,7 @@ export const ThankyouPage = () => {
       <div className="flex-1 flex items-center justify-center px-4 pb-16">
         <div className="w-full max-w-lg">
           {/* Card */}
-          <div className="bg-white rounded-3xl shadow-[0_8px_40px_rgba(0,0,0,0.06)] border border-slate-100 overflow-hidden">
+          <div className="bg-white rounded-3xl shadow-[0_8px_40px_rgba(0,0,0,0.06)] border border-border-default overflow-hidden">
             {/* Top accent bar */}
             <div className="h-1.5 bg-linear-to-r from-brand-primary via-brand-primary to-brand-secondary" />
 
@@ -83,7 +83,7 @@ export const ThankyouPage = () => {
               </h1>
 
               {/* Description */}
-              <p className="text-slate-600 text-center text-sm md:text-base leading-relaxed mb-2">
+              <p className="text-text-secondary text-center text-sm md:text-base leading-relaxed mb-2">
                 En breve nos pondremos en contacto contigo para continuar con el proceso.
               </p>
 
@@ -114,8 +114,8 @@ export const ThankyouPage = () => {
               </div>
 
               {/* WhatsApp Agent */}
-              <div className="flex flex-col items-center gap-3 mt-6 pt-6 border-t border-slate-100">
-                <p className="text-slate-500 text-sm">¿Tienes dudas? Habla con nuestro agente</p>
+              <div className="flex flex-col items-center gap-3 mt-6 pt-6 border-t border-border-default">
+                <p className="text-text-secondary text-sm">¿Tienes dudas? Habla con nuestro agente</p>
                 <Link
                   href="https://wa.me/56977290160?text=Hola%2C+me+registr%C3%A9+en+Plataforma+SENA.+%C2%BFC%C3%B3mo+automatiza+la+cobranza+con+mis+clientes+actuales%3F"
                   target="_blank"
@@ -139,7 +139,7 @@ export const ThankyouPage = () => {
 
           {/* Footer trust */}
           <div className="mt-8 flex flex-col items-center gap-4">
-            <div className="flex items-center gap-6 text-slate-400 text-xs">
+            <div className="flex items-center gap-6 text-text-disabled text-xs">
               <span className="flex items-center gap-1.5">
                 <svg
                   width="14"
@@ -217,7 +217,7 @@ export const ThankyouPage = () => {
               Volver al inicio
             </button>
 
-            <p className="text-slate-300 text-xs mt-2">
+            <p className="text-text-disabled text-xs mt-2">
               Sena — <span className="font-caslon">El arte de cobrar bien</span>
             </p>
           </div>

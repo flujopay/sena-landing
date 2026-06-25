@@ -2,7 +2,7 @@ import { AssetImage } from '@/lib/utils/assets/image'
 
 export const OurTeamRecsa = () => {
   return (
-    <section className=" bg-[#f9f9f9]">
+    <section className=" bg-surface-secondary">
       <div className="px-4 py-4 md:py-0 md:px-8 max-w-[1280px] mx-auto">
         {/* Desktop */}
         <div className="hidden md:block relative min-h-[600px] overflow-hidden">
@@ -21,25 +21,25 @@ export const OurTeamRecsa = () => {
               equipo
             </h2>
 
-            <p className=" text-base lg:text-lg text-gray-700 mb-6 leading-relaxed">
+            <p className=" text-base lg:text-lg text-text-primary mb-6 leading-relaxed">
               Un equipo multidisciplinario que une tecnología, experiencia financiera y criterio humano.
               Especialistas en producto, desarrollo y operaciones de cobranza que diseñan cada funcionalidad
               pensando en el equilibrio entre efectividad y relaciones.
             </p>
 
-            <p className=" text-base lg:text-lg text-gray-700 mb-6 leading-relaxed">
+            <p className=" text-base lg:text-lg text-text-primary mb-6 leading-relaxed">
               Respaldados por Recsa, con más de 40 años de experiencia y presencia en 15 países de LATAM. Más
               de 146 millones de gestiones mensuales nos dan el conocimiento sobre cómo cobrar bien en cada
               mercado.
             </p>
 
-            <p className=" text-base lg:text-lg text-gray-700 mb-8 leading-relaxed">
+            <p className=" text-base lg:text-lg text-text-primary mb-8 leading-relaxed">
               Síguenos en{' '}
               <a
                 href="https://www.linkedin.com/company/sena-latam/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-bold underline text-gray-700"
+                className="font-bold underline text-text-primary"
               >
                 LinkedIn
               </a>{' '}
@@ -66,13 +66,13 @@ export const OurTeamRecsa = () => {
             equipo
           </h2>
 
-          <p className="text-base text-gray-700 mb-4 leading-relaxed">
+          <p className="text-base text-text-primary mb-4 leading-relaxed">
             Un equipo multidisciplinario que une tecnología, experiencia financiera y criterio humano.
             Especialistas en producto, desarrollo y operaciones de cobranza que diseñan cada funcionalidad
             pensando en el equilibrio entre efectividad y relaciones.
           </p>
 
-          <p className="text-base text-gray-700 mb-4 leading-relaxed">
+          <p className="text-base text-text-primary mb-4 leading-relaxed">
             Respaldados por Recsa, con más de 40 años de experiencia y presencia en 15 países de LATAM. Más de
             146 millones de gestiones mensuales nos dan el conocimiento sobre cómo cobrar bien en cada
             mercado.
@@ -97,13 +97,13 @@ export const OurTeamRecsa = () => {
             />
           </div>
 
-          <p className="text-base text-gray-700 leading-relaxed">
+          <p className="text-base text-text-primary leading-relaxed">
             Síguenos en{' '}
             <a
               href="https://www.linkedin.com/company/sena-latam/"
               target="_blank"
               rel="noopener noreferrer"
-              className="font-bold underline text-gray-700"
+              className="font-bold underline text-text-primary"
             >
               LinkedIn
             </a>{' '}
