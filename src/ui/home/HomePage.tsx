@@ -31,7 +31,7 @@ export const HomePage = () => {
     <div className="min-h-screen flex flex-col ">
       <Header variant="primary" />
       <div className="grow">
-        <div className="bg-[#F9F9F9]">
+        <div className="bg-surface-secondary">
           <div className="max-w-[1280px] mx-auto">
             <Hero />
           </div>

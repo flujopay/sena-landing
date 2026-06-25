@@ -89,7 +89,7 @@ export const PricingPlans = () => {
 
       {/* Mobile: Selector + Card */}
       <div className="md:hidden mt-8 px-4">
-        <div className="bg-white rounded-2xl border-2 border-[#3771d1] shadow-sm overflow-hidden">
+        <div className="bg-white rounded-2xl border-2 border-brand-primary shadow-sm overflow-hidden">
           {plans.map((plan, index) => (
             <button
               key={plan.variant}
@@ -101,18 +101,18 @@ export const PricingPlans = () => {
               className={`
                 w-full flex items-center gap-3 p-4
                 transition-colors
-                ${index === 1 ? 'border-t-2 border-b-2 border-[#3771d1]' : ''}
+                ${index === 1 ? 'border-t-2 border-b-2 border-brand-primary' : ''}
                 ${selectedPlan === index ? 'bg-blue-50' : ''}
               `}
             >
               <div
                 className={`w-6 h-6 rounded-full border-2 flex items-center justify-center ${
-                  selectedPlan === index ? 'border-[#3771d1] bg-white' : 'border-slate-300'
+                  selectedPlan === index ? 'border-brand-primary bg-white' : 'border-slate-300'
                 }`}
               >
                 {selectedPlan === index && (
                   <svg
-                    className="w-4 h-4 text-[#3771d1]"
+                    className="w-4 h-4 text-brand-primary"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -124,7 +124,7 @@ export const PricingPlans = () => {
               </div>
               <div className="flex-1 text-left">
                 <p className="font-bold text-sm text-black">{plan.name.toUpperCase()}</p>
-                <p className="text-xs text-slate-500">{plan.subtitle}</p>
+                <p className="text-xs text-text-secondary">{plan.subtitle}</p>
               </div>
               {plan.popular && (
                 <span className="text-sm h-9 px-4 inline-flex items-center justify-center gap-2 rounded-full font-bold transition-all bg-brand-secondary text-white">

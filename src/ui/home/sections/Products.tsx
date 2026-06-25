@@ -48,7 +48,7 @@ const ProductCard = ({
     </div>
     <div className="p-4 bg-white">
       <p className="text-black font-extrabold text-sm">{title}</p>
-      <p className="text-slate-700 mt-2 text-sm leading-5">{description}</p>
+      <p className="text-text-primary mt-2 text-sm leading-5">{description}</p>
       <Button text={cta} className="mt-4" size="sm" onClick={onCtaClick} />
     </div>
   </div>
@@ -130,7 +130,7 @@ export const Products = () => {
   return (
     <section id="productos" className="max-w-[1280px] mx-auto pt-28">
       {/* Mobile Layout */}
-      <div className="md:hidden bg-[#F7F7F7] px-4 py-10">
+      <div className="md:hidden bg-surface-secondary px-4 py-10">
         <p className="text-left text-brand-primary-dark text-2xl sm:text-4xl font-extrabold tracking-wide mb-6">
           Nuestros
           <br />
@@ -153,7 +153,7 @@ export const Products = () => {
       </div>
 
       {/* Desktop Layout */}
-      <div className="hidden md:block bg-[#F7F7F7] rounded-3xl p-6 md:p-10">
+      <div className="hidden md:block bg-surface-secondary rounded-3xl p-6 md:p-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
           <div className="flex flex-col gap-6">
             <p className="text-left text-brand-primary-dark font-extrabold tracking-wide text-xl sm:text-4xl">
@@ -188,7 +188,7 @@ export const Products = () => {
                         className={
                           isActive
                             ? 'text-black font-bold text-3xl leading-tight whitespace-pre-line'
-                            : 'text-slate-400 font-bold text-3xl leading-tight whitespace-pre-line'
+                            : 'text-text-disabled font-bold text-3xl leading-tight whitespace-pre-line'
                         }
                       >
                         {p.label}
@@ -232,7 +232,7 @@ export const Products = () => {
 
             <div className="p-6 md:p-8 bg-slate-100">
               <p className="text-black font-extrabold">{active.title}</p>
-              <p className="text-slate-700 mt-2 leading-5">{active.description}</p>
+              <p className="text-text-primary mt-2 leading-5">{active.description}</p>
               <Button text={active.cta} className="mt-5" onClick={active.onCtaClick} />
             </div>
           </div>

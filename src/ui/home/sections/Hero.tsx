@@ -138,7 +138,7 @@ export const Hero = () => {
       </div>
 
       <div className="py-3 mt-4 md:mt-0">
-        <p className="text-slate-500 text-xs md:text-sm text-left md:text-right">
+        <p className="text-text-secondary text-xs md:text-sm text-left md:text-right">
           Respaldados por{' '}
           <a className="font-bold text-brand-secondary underline" href="https://recsa.com/" target="_blank">
             Recsa
