@@ -24,18 +24,18 @@ export const Toast = () => {
           style={width ? { width } : undefined}
           className={`${t.visible ? 'animate-enter' : 'animate-leave'}
                       min-w-[280px] w-full max-w-max rounded-xl pointer-events-auto
-                      bg-[#FFFFFF] shadow-[0_4px_12px_0_rgba(0,0,0,0.07)]
+                      bg-surface-default shadow-[0_4px_12px_0_rgba(0,0,0,0.07)]
                       flex items-center p-4 gap-4 
-                      hover:bg-[#F9F9F9] border-[#F1F1F4]
+                      hover:bg-surface-secondary border-border-default
                       `}
         >
           <Icon color="#252F4A" width={40} height={40} />
           <div className="flex items-center gap-3 w-full justify-between">
             <div className="flex-1 flex items-center gap-3">
               <div className="flex flex-col gap-1">
-                <p className={`text-[14px] font-semibold leading-[14px] text-[#252F4A]`}>{message}</p>
+                <p className={`text-[14px] font-semibold leading-[14px] text-text-primary`}>{message}</p>
                 {subMessage && (
-                  <p className={`text-[13px] font-medium leading-[14px] text-[#78829D]`}>{subMessage}</p>
+                  <p className={`text-[13px] font-medium leading-[14px] text-text-secondary`}>{subMessage}</p>
                 )}
               </div>
             </div>
