@@ -519,7 +519,7 @@ export const Header = ({ variant }: Props) => {
   }
 
   return (
-    <header className="sticky top-0 z-50 bg-[#f9f9f9]">
+    <header className="sticky top-0 z-50 bg-surface-secondary">
       <div className="mx-auto max-w-[1280px] flex items-center gap-2 justify-between p-4">
         <div>
           <Link href="/">
@@ -563,7 +563,7 @@ export const Header = ({ variant }: Props) => {
                     onMouseEnter={openProd}
                     onMouseLeave={() => closeProd(140)}
                   >
-                    <div className="rounded-2xl bg-white shadow-[0_18px_60px_rgba(0,0,0,0.12)] border border-gray-100 overflow-hidden">
+                    <div className="rounded-2xl bg-surface-default shadow-[var(--shadow-dropdown)] border border-border-default overflow-hidden">
                       <div className="grid grid-cols-12">
                         {/* Col izquierda */}
                         <div className="col-span-4 bg-gray-50 p-7">
@@ -695,7 +695,7 @@ export const Header = ({ variant }: Props) => {
                     onMouseEnter={openInd}
                     onMouseLeave={() => closeInd(140)}
                   >
-                    <div className="rounded-2xl bg-white shadow-[0_18px_60px_rgba(0,0,0,0.12)] border border-gray-100 overflow-hidden">
+                    <div className="rounded-2xl bg-surface-default shadow-[var(--shadow-dropdown)] border border-border-default overflow-hidden">
                       <div className="grid grid-cols-12">
                         <div className="col-span-4 bg-gray-50 p-7">
                           <h4 className="text-2xl font-extrabold text-black">Industrias</h4>
