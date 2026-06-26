@@ -111,7 +111,7 @@ export function PortfolioAnalyzerModal() {
     setSubmitError('')
 
     try {
-      const res = await fetch('/api/lead-analyzer', {
+      await fetch('/api/lead-analyzer', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -127,15 +127,11 @@ export function PortfolioAnalyzerModal() {
           landingPage: typeof window !== 'undefined' ? window.location.href : '',
         }),
       })
-      if (!res.ok) {
-        const data = await res.json().catch(() => ({}))
-        throw new Error((data as { error?: string }).error ?? 'Error al enviar')
-      }
-      goTo(7)
-    } catch (err) {
-      setSubmitError(err instanceof Error ? err.message : 'Error al enviar. Intenta de nuevo.')
+    } catch {
+      // fire-and-forget — siempre avanzamos a confirmación
     } finally {
       setSubmitting(false)
+      goTo(7)
     }
   }
 
