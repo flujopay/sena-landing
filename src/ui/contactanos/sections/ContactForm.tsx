@@ -86,8 +86,14 @@ export const ContactForm = () => {
     const params = new URLSearchParams(window.location.search)
     const gc = params.get('gclid') || sessionStorage.getItem('gclid')
     const fb = params.get('fbclid') || sessionStorage.getItem('fbclid')
-    if (gc) { setGclid(gc); sessionStorage.setItem('gclid', gc) }
-    if (fb) { setFbclid(fb); sessionStorage.setItem('fbclid', fb) }
+    if (gc) {
+      setGclid(gc)
+      sessionStorage.setItem('gclid', gc)
+    }
+    if (fb) {
+      setFbclid(fb)
+      sessionStorage.setItem('fbclid', fb)
+    }
   }, [])
 
   const {

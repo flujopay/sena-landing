@@ -49,7 +49,12 @@ export const PlataformaContactForm = () => {
     const priorityItems: OptionSelect[] = []
     const otherItems: OptionSelect[] = []
     countries.forEach((item) => {
-      const option: OptionSelect = { id: item.country, label: item.country, icon: item.icon, subValue: item.country }
+      const option: OptionSelect = {
+        id: item.country,
+        label: item.country,
+        icon: item.icon,
+        subValue: item.country,
+      }
       if (priority.includes(item.country)) priorityItems.push(option)
       else otherItems.push(option)
     })
@@ -58,7 +63,13 @@ export const PlataformaContactForm = () => {
   }, [countries])
 
   useEffect(() => {
-    const currencyMap: Record<string, string> = { PEN: '+51', CLP: '+56', COP: '+57', MXN: '+52', USD: '+593' }
+    const currencyMap: Record<string, string> = {
+      PEN: '+51',
+      CLP: '+56',
+      COP: '+57',
+      MXN: '+52',
+      USD: '+593',
+    }
     if (ipCurrency && currencyMap[ipCurrency]) setCountrySelect(currencyMap[ipCurrency])
   }, [ipCurrency])
 
@@ -66,8 +77,14 @@ export const PlataformaContactForm = () => {
     const params = new URLSearchParams(window.location.search)
     const gc = params.get('gclid') || sessionStorage.getItem('gclid')
     const fb = params.get('fbclid') || sessionStorage.getItem('fbclid')
-    if (gc) { setGclid(gc); sessionStorage.setItem('gclid', gc) }
-    if (fb) { setFbclid(fb); sessionStorage.setItem('fbclid', fb) }
+    if (gc) {
+      setGclid(gc)
+      sessionStorage.setItem('gclid', gc)
+    }
+    if (fb) {
+      setFbclid(fb)
+      sessionStorage.setItem('fbclid', fb)
+    }
   }, [])
 
   const {
@@ -76,8 +93,13 @@ export const PlataformaContactForm = () => {
     formState: { errors },
   } = useForm<FormData>({
     defaultValues: {
-      nombre: '', apellido: '', empresa: '', email: '', whatsapp: '',
-      facturas_pendientes: '', alguien_cobrando: '',
+      nombre: '',
+      apellido: '',
+      empresa: '',
+      email: '',
+      whatsapp: '',
+      facturas_pendientes: '',
+      alguien_cobrando: '',
     },
   })
 
@@ -132,7 +154,10 @@ export const PlataformaContactForm = () => {
   ]
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="w-full rounded-2xl bg-white shadow-sm border border-slate-100 p-6 md:p-8">
+    <form
+      onSubmit={handleSubmit(onSubmit)}
+      className="w-full rounded-2xl bg-white shadow-sm border border-slate-100 p-6 md:p-8"
+    >
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
         <Controller
           name="nombre"
@@ -158,7 +183,12 @@ export const PlataformaContactForm = () => {
           control={control}
           rules={{ required: 'El nombre de la empresa es obligatorio' }}
           render={({ field }) => (
-            <Input label="Empresa" placeholder="Nombre de tu empresa" {...field} error={errors.empresa?.message} />
+            <Input
+              label="Empresa"
+              placeholder="Nombre de tu empresa"
+              {...field}
+              error={errors.empresa?.message}
+            />
           )}
         />
       </div>
@@ -172,7 +202,13 @@ export const PlataformaContactForm = () => {
             pattern: { value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i, message: 'Email inválido' },
           }}
           render={({ field }) => (
-            <Input label="Email" type="email" placeholder="tu@empresa.com" {...field} error={errors.email?.message} />
+            <Input
+              label="Email"
+              type="email"
+              placeholder="tu@empresa.com"
+              {...field}
+              error={errors.email?.message}
+            />
           )}
         />
       </div>
@@ -191,7 +227,9 @@ export const PlataformaContactForm = () => {
               type="tel"
               placeholder="Número"
               value={field.value || ''}
-              onChange={(e: React.ChangeEvent<HTMLInputElement>) => field.onChange(e.target.value.replace(/\D/g, ''))}
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                field.onChange(e.target.value.replace(/\D/g, ''))
+              }
               error={errors.whatsapp?.message}
               leftElement={
                 <SimpleCountrySelect
@@ -271,9 +309,14 @@ export const PlataformaContactForm = () => {
 
       <p className="text-xs text-slate-500 mb-5">
         Al enviar, aceptas los{' '}
-        <Link href="/term" className="text-brand-primary font-semibold hover:underline">Términos</Link>{' '}
+        <Link href="/term" className="text-brand-primary font-semibold hover:underline">
+          Términos
+        </Link>{' '}
         y la{' '}
-        <Link href="/privacy" className="text-brand-primary font-semibold hover:underline">Política de Privacidad</Link>.
+        <Link href="/privacy" className="text-brand-primary font-semibold hover:underline">
+          Política de Privacidad
+        </Link>
+        .
       </p>
 
       <Button
