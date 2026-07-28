@@ -8,7 +8,7 @@ export const AutopistasWhySena = () => {
     {
       title: 'Experiencia en industrias críticas y de alto volumen transaccional',
       description:
-        'Respaldados por Recsa, con más de 40 años de trayectoria en cobranza corporativa y presencia en 15 países de Latinoamérica.',
+        'Entendemos los estándares de compliance y la operación a gran escala que exigen los concesionarios de infraestructura.',
     },
     {
       title: 'Tecnología escalable combinada con criterio humano experto',

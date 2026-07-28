@@ -88,7 +88,7 @@ export const BeautyBenefits = () => {
     {
       title: 'Respaldo de expertos',
       description:
-        'Equipo de Recsa con presencia en 15 países de LATAM. Para casos complejos que requieren criterio humano.',
+        'Nuestro equipo humano de Sena entra en los casos complejos que requieren criterio humano.',
       icon: (
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path

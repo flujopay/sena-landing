@@ -269,16 +269,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: 'text',
-            text: 'El proceso está respaldado por ',
-          },
-          {
-            type: 'link',
-            text: 'Recsa',
-            href: 'https://recsa.com',
-          },
-          {
-            type: 'text',
-            text: ', con más de 40 años de experiencia en cobranza en 15 países de LATAM. Más de 146 millones de gestiones mensuales. Saben cómo hablar con quien no paga -- sin romper la relación comercial.',
+            text: 'El proceso está respaldado por el equipo humano de Sena. Saben cómo hablar con quien no paga -- sin romper la relación comercial.',
           },
         ],
       },
@@ -370,16 +361,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: 'text',
-            text: 'Si la política no existió desde el principio, la deuda se acumula. En ese punto, el equipo interno rara vez tiene el tiempo, el proceso o la experiencia para recuperarla sin poner en riesgo la relación comercial. Ahí es donde entra Recupera: gestión especializada de deuda activa, con el respaldo de ',
-          },
-          {
-            type: 'link',
-            text: 'Recsa',
-            href: 'https://recsa.com',
-          },
-          {
-            type: 'text',
-            text: ' y más de 40 años de experiencia en cobranza en 15 países de LATAM.',
+            text: 'Si la política no existió desde el principio, la deuda se acumula. En ese punto, el equipo interno rara vez tiene el tiempo, el proceso o la experiencia para recuperarla sin poner en riesgo la relación comercial. Ahí es donde entra Recupera: gestión especializada de deuda activa, con el respaldo del equipo humano de Sena.',
           },
         ],
       },
@@ -470,16 +452,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: 'text',
-            text: 'Sena combina una plataforma de automatización multicanal -- WhatsApp, email, SMS -- con el respaldo del equipo humano de ',
-          },
-          {
-            type: 'link',
-            text: 'Recsa',
-            href: 'https://recsa.com',
-          },
-          {
-            type: 'text',
-            text: ': más de 40 años de experiencia en cobranza, presencia en 15 países de LATAM y más de 146 millones de gestiones mensuales. Cuando la tecnología no es suficiente, entra el criterio humano.',
+            text: 'Sena combina una plataforma de automatización multicanal -- WhatsApp, email, SMS -- con el respaldo del equipo humano de Sena. Cuando la tecnología no es suficiente, entra el criterio humano.',
           },
         ],
       },
