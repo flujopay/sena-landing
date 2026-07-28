@@ -59,7 +59,6 @@ export const PricingPlans = () => {
         'Todo lo de Growth, más:',
         'Volumen ilimitado',
         'API completa',
-        // "Integración con Recsa",
         'Gestión humana especializada',
         'Multi-tenant y white label',
         'SLA garantizado',

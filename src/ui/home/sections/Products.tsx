@@ -74,7 +74,7 @@ export const Products = () => {
         label: 'Recupera deuda\nvencida',
         title: 'Pagas solo si recuperamos.',
         description:
-          'Facturas vencidas de más de 60 días. El equipo Recsa las gestiona y solo te cobramos si recuperamos el dinero. Sin ticket mínimo.',
+          'Facturas vencidas de más de 60 días. El equipo de Sena las gestiona y solo te cobramos si recuperamos el dinero. Sin ticket mínimo.',
         cta: 'Iniciar recupero',
         image: AssetImage.recuperaGirl,
         onCtaClick: () => {

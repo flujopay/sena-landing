@@ -217,16 +217,10 @@ export const PlataformaPage = () => {
           </div>
         </section>
 
-        {/* Trust signals — Recsa prominente */}
+        {/* Trust signals */}
         <section className="bg-white py-10 border-y border-border-default">
           <div className="max-w-[1280px] mx-auto px-4">
             <div className="flex flex-col items-center gap-5">
-              <div className="flex items-center gap-3">
-                <Image src={AssetImage.byRecsa} alt="Respaldado por Recsa" className="h-8 w-auto" />
-                <span className="text-text-secondary text-sm">
-                  40 años de experiencia en cobranza en Chile y LATAM
-                </span>
-              </div>
               <div className="flex flex-wrap justify-center gap-5">
                 {[
                   'Sin contrato de largo plazo',

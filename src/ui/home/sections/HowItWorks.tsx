@@ -52,7 +52,7 @@ export const HowItWorks = () => {
         title: '4. Recupera',
         subtitle: 'Equipo humano especializado en recuperación de deuda.',
         description:
-          'Cuando hace falta entra el equipo humano de Recsa, quienes cuidando tu marca y relación con el cliente, realizan las gestiones de recupero, lo que llevamos haciendo por más de 40 años.',
+          'Cuando hace falta entra el equipo humano de Sena, quienes cuidando tu marca y relación con el cliente, realizan las gestiones de recupero.',
       },
       {
         key: 'Concilia' as const,

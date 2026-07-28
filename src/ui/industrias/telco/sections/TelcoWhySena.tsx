@@ -8,7 +8,7 @@ export const TelcoWhySena = () => {
     {
       title: 'Experiencia comprobada en industrias críticas y reguladas',
       description:
-        'Respaldados por Recsa, con más de 40 años de trayectoria en cobranza corporativa y presencia en 15 países de Latinoamérica.',
+        'Entendemos los estándares de compliance y las relaciones contractuales de largo plazo que exige el sector telecom.',
     },
     {
       title: 'Tecnología escalable combinada con criterio humano experto',

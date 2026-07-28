@@ -89,9 +89,8 @@ export const KeyFeatures = () => {
       title: 'Gestión humana\nespecializada',
       description: (
         <p>
-          Cuando la automatización no basta, entra el{' '}
-          <span className="text-black font-bold">equipo experto de Recsa</span> para gestionar los casos
-          complejos que requieren criterio humano.
+          Cuando la automatización no basta, entra nuestro equipo experto para gestionar los casos complejos
+          que requieren criterio humano.
         </p>
       ),
       icon: (

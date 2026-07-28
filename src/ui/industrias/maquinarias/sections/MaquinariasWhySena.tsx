@@ -8,7 +8,7 @@ export const MaquinariasWhySena = () => {
     {
       title: 'Equipo con experiencia en el sector',
       description:
-        'Recsa, nuestra empresa matriz, lleva décadas trabajando con industrias de equipamiento, construcción y minería en toda Latinoamérica.',
+        'Entendemos los ciclos de venta y cobro de equipamiento, construcción y minería: facturas de alto valor con procesos de aprobación distintos a un retail tradicional.',
     },
     {
       title: 'Tecnología + criterio humano',
