@@ -4,7 +4,7 @@ type Props = {
   orangeItalicText: string
 }
 
-export const SectionHeroTitle = ({ bgColor = 'bg-[#3771d1]', whiteText, orangeItalicText }: Props) => {
+export const SectionHeroTitle = ({ bgColor = 'bg-brand-primary', whiteText, orangeItalicText }: Props) => {
   return (
     <section
       className={`${bgColor} flex items-center justify-center pt-12 mb-8 max-w-[1280px] mx-auto pb-24`}

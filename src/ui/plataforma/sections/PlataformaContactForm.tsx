@@ -29,6 +29,7 @@ type FormData = {
 
 export const PlataformaContactForm = () => {
   const [isLoading, setIsLoading] = useState(false)
+  const [submitError, setSubmitError] = useState('')
   const { data: countries = [] } = useCountries()
   const { ipCurrency } = useCurrencyStore()
   const router = useRouter()
@@ -105,9 +106,10 @@ export const PlataformaContactForm = () => {
 
   const onSubmit = async (data: FormData) => {
     setIsLoading(true)
+    setSubmitError('')
     const telefono = (countrySelect || '') + data.whatsapp
     try {
-      await fetch('/api/lead', {
+      const res = await fetch('/api/lead', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -127,7 +129,13 @@ export const PlataformaContactForm = () => {
           fbclid: fbclid ?? undefined,
           landingPage: window.location.href,
         }),
-      }).catch(() => {})
+      })
+      const json = await res.json().catch(() => ({ ok: false }))
+      if (!res.ok || !json.ok) {
+        setSubmitError('No pudimos registrar tu solicitud. Intenta de nuevo o escríbenos por WhatsApp.')
+        setIsLoading(false)
+        return
+      }
 
       if (window.gtag) {
         window.gtag('event', 'completar_formulario', { product: 'plataforma' })
@@ -137,6 +145,7 @@ export const PlataformaContactForm = () => {
 
       router.push('/plataforma/gracias')
     } catch {
+      setSubmitError('No pudimos registrar tu solicitud. Intenta de nuevo o escríbenos por WhatsApp.')
       setIsLoading(false)
     }
   }
@@ -156,7 +165,7 @@ export const PlataformaContactForm = () => {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="w-full rounded-2xl bg-white shadow-sm border border-slate-100 p-6 md:p-8"
+      className="w-full rounded-2xl bg-white shadow-sm border border-border-default p-6 md:p-8"
     >
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
         <Controller
@@ -261,7 +270,7 @@ export const PlataformaContactForm = () => {
                   className={`min-h-[44px] px-5 py-2 rounded-full border-2 text-sm font-semibold transition-colors ${
                     field.value === op.value
                       ? 'border-brand-primary bg-brand-primary text-white'
-                      : 'border-slate-200 bg-white text-slate-700 hover:border-brand-primary'
+                      : 'border-border-default bg-white text-text-primary hover:border-brand-primary'
                   }`}
                 >
                   {op.label}
@@ -293,7 +302,7 @@ export const PlataformaContactForm = () => {
                   className={`min-h-[44px] px-5 py-2 rounded-full border-2 text-sm font-semibold transition-colors ${
                     field.value === op.value
                       ? 'border-brand-primary bg-brand-primary text-white'
-                      : 'border-slate-200 bg-white text-slate-700 hover:border-brand-primary'
+                      : 'border-border-default bg-white text-text-primary hover:border-brand-primary'
                   }`}
                 >
                   {op.label}
@@ -307,7 +316,7 @@ export const PlataformaContactForm = () => {
         )}
       </div>
 
-      <p className="text-xs text-slate-500 mb-5">
+      <p className="text-xs text-text-secondary mb-5">
         Al enviar, aceptas los{' '}
         <Link href="/term" className="text-brand-primary font-semibold hover:underline">
           Términos
@@ -318,6 +327,8 @@ export const PlataformaContactForm = () => {
         </Link>
         .
       </p>
+
+      {submitError && <p className="text-red-500 text-sm mb-4">{submitError}</p>}
 
       <Button
         type="submit"

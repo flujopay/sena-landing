@@ -32,7 +32,7 @@ export const VideoModal: React.FC<VideoModalProps> = ({ videoSrc, title, descrip
             onClick={hideModal}
           />
         </div>
-        <p className="text-[#4B5675] text-md leading-[16px]">{description}</p>
+        <p className="text-text-secondary text-md leading-[16px]">{description}</p>
       </div>
       <div className="flex-1 rounded-xl overflow-hidden shadow-lg relative bg-white min-h-[315px] flex items-center justify-center">
         {isLoading && (
@@ -94,7 +94,7 @@ export const VideoModal: React.FC<VideoModalProps> = ({ videoSrc, title, descrip
         </video>
       </div>
       <div className="flex items-center justify-between gap-2">
-        <p className="text-[#4B5675] text-md leading-[16px]">
+        <p className="text-text-secondary text-md leading-[16px]">
           <span className="font-bold">Sena</span>, el arte de cobrar bien
         </p>
         <Button text="Agenda tu demo" onClick={onRedirectHubspot} />

@@ -56,7 +56,7 @@ const renderContentBlock = (block: any, index: number) => {
       return (
         <blockquote
           key={index}
-          className="border-l-4 border-brand-secondary pl-4 italic text-gray-700 my-6 bg-gray-50 py-4"
+          className="border-l-4 border-brand-secondary pl-4 italic text-text-primary my-6 bg-gray-50 py-4"
         >
           {block.text}
         </blockquote>
@@ -131,13 +131,13 @@ export const SinglePostPage = ({ post }: { post: BlogPost }) => {
         <div className="max-w-[900px] mx-auto">
           <Link
             href="/blog"
-            className="text-sm text-gray-500 flex gap-1 items-center mb-4 hover:text-brand-primary transition"
+            className="text-sm text-text-secondary flex gap-1 items-center mb-4 hover:text-brand-primary transition"
           >
             <ArrowLeft className="w-3 h-3" /> Regresar al Blog
           </Link>
 
           <h1 className="text-4xl md:text-5xl font-bold text-brand-primary mb-4">{post.title}</h1>
-          <div className="flex gap-2 items-center text-sm text-gray-500 mb-6 flex-wrap">
+          <div className="flex gap-2 items-center text-sm text-text-secondary mb-6 flex-wrap">
             {post.tags.map((tag, idx) => (
               <span
                 key={idx}
@@ -166,16 +166,16 @@ export const SinglePostPage = ({ post }: { post: BlogPost }) => {
         </div>
 
         {/* Contenido */}
-        <div className="max-w-[900px] mx-auto text-[17px] leading-relaxed text-slate-700 space-y-6">
+        <div className="max-w-[900px] mx-auto text-[17px] leading-relaxed text-text-primary space-y-6">
           {post.content.map((block, index) => renderContentBlock(block, index))}
         </div>
 
         {/* Call to action */}
-        <div className="max-w-[900px] mx-auto mt-24 bg-[#f9f9f9] border border-gray-200 rounded-2xl p-8 text-center shadow-sm">
+        <div className="max-w-[900px] mx-auto mt-24 bg-surface-secondary border border-border-default rounded-2xl p-8 text-center shadow-sm">
           <h3 className="text-brand-primary text-2xl font-bold mb-2">
             ¿Quieres recibir más artículos como este?
           </h3>
-          <p className="text-gray-600 mb-6">
+          <p className="text-text-secondary mb-6">
             Suscríbete para estar al tanto de lo nuevo en gestión, productividad y tecnología B2B.
           </p>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
@@ -184,7 +184,7 @@ export const SinglePostPage = ({ post }: { post: BlogPost }) => {
               placeholder="Tu correo electrónico"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="px-4 pt-2.5 pb-2 border border-gray-300 rounded-full w-full sm:w-[300px]"
+              className="px-4 pt-2.5 pb-2 border border-border-default rounded-full w-full sm:w-[300px]"
             />
             <Button size="md" text="Suscribirme" variant={'primaryFilled'} className="text-md" />
           </div>
@@ -199,7 +199,7 @@ export const SinglePostPage = ({ post }: { post: BlogPost }) => {
                 <Link
                   href={`/blog/${rel.slug}`}
                   key={rel.id}
-                  className="border border-gray-200 rounded-2xl hover:shadow-lg transition"
+                  className="border border-border-default rounded-2xl hover:shadow-lg transition"
                 >
                   <Image
                     src={rel.image}
@@ -220,7 +220,7 @@ export const SinglePostPage = ({ post }: { post: BlogPost }) => {
                       ))}
                     </div>
                     <p className="text-brand-primary font-semibold mb-1 line-clamp-2">{rel.title}</p>
-                    <p className="text-sm text-gray-600">{rel.date}</p>
+                    <p className="text-sm text-text-secondary">{rel.date}</p>
                   </div>
                 </Link>
               ))}

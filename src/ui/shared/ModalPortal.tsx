@@ -78,7 +78,7 @@ export const ModalPortal: React.FC<Props> = ({ modal, handleClose, isCloseBackgr
 
   const modalContentClassName = nonBlocking
     ? // No bloqueante: no aplicamos la animación centrada
-      `bg-white rounded-xl shadow-lg relative flex flex-col border border-[#F1F1F4] ${contentClassName || ''}`
+      `bg-white rounded-xl shadow-lg relative flex flex-col border border-border-default ${contentClassName || ''}`
     : slideFrom
       ? // Panel lateral: con border radius completo
         `bg-white rounded-xl shadow-lg relative flex flex-col h-full ${contentClassName || ''}`
@@ -95,9 +95,9 @@ export const ModalPortal: React.FC<Props> = ({ modal, handleClose, isCloseBackgr
       <div style={modalStyle} className={modalContentClassName}>
         {showHeader && (
           <div
-            className={`${title ? 'border-b border-[#F1F1F4] ' : ''} p-3 flex justify-between w-full items-center ${contentTitleClassName || ''}`}
+            className={`${title ? 'border-b border-border-default ' : ''} p-3 flex justify-between w-full items-center ${contentTitleClassName || ''}`}
           >
-            <div className="text-[16px] font-semibold text-[#071437] w-full truncate">{title}</div>
+            <div className="text-[16px] font-semibold text-text-primary w-full truncate">{title}</div>
             {showCloseButton && (
               <div className="p-[7px]">
                 <AssetIcon.plus

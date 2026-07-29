@@ -42,7 +42,7 @@ const variantStyles: Record<ButtonVariant, string> = {
   secondaryOutlined:
     'border border-3 border-brand-secondary text-brand-secondary hover:bg-brand-secondary/10 focus:ring-brand-secondary',
 
-  ghost: 'text-gray-700 hover:bg-gray-100 focus:ring-gray-400',
+  ghost: 'text-text-primary hover:bg-gray-100 focus:ring-gray-400',
 
   link: 'text-blue-600 underline-offset-4 hover:underline focus:ring-blue-600',
 }

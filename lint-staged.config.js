@@ -1,8 +1,8 @@
 module.exports = {
   'src/**/*.{ts,tsx,js,jsx}': (filenames) => [
-    `yarn eslint --fix ${filenames.join(' ')}`,
-    `yarn prettier --write ${filenames.join(' ')}`,
+    `npx eslint --fix ${filenames.join(' ')}`,
+    `npx prettier --write ${filenames.join(' ')}`,
   ],
 
-  '**/*.json': (filenames) => `yarn prettier --write ${filenames.join(' ')}`,
+  '**/*.json': (filenames) => `npx prettier --write ${filenames.join(' ')}`,
 }

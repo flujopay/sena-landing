@@ -38,7 +38,7 @@ const PRODUCTS = [
 export const ProductsEcosystem = ({ active }: { active: 'plataforma' | 'recupera' | 'opera' }) => (
   <section className="bg-white border-y border-slate-100 py-10">
     <div className="max-w-[1280px] mx-auto px-4">
-      <p className="text-center text-xs font-bold uppercase tracking-widest text-slate-400 mb-6">
+      <p className="text-center text-xs font-bold uppercase tracking-widest text-text-disabled mb-6">
         El ecosistema completo de cobranza de Sena
       </p>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
@@ -57,7 +57,7 @@ export const ProductsEcosystem = ({ active }: { active: 'plataforma' | 'recupera
                 {p.tag}
               </span>
               <p className="font-extrabold text-brand-primary-dark text-base mb-1">{p.label}</p>
-              <p className="text-slate-500 text-sm leading-relaxed mb-4">{p.desc}</p>
+              <p className="text-text-secondary text-sm leading-relaxed mb-4">{p.desc}</p>
               {isActive ? (
                 <span className="text-xs text-brand-primary font-semibold">Estás aquí</span>
               ) : (

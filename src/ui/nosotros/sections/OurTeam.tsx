@@ -63,8 +63,8 @@ export const OurTeam = () => {
                   <div className="w-full h-full bg-blue-400" />
                 )}
               </div>
-              <h3 className="text-[10px] md:text-sm font-bold text-gray-900 uppercase">{member.name}</h3>
-              <p className="text-[10px] md:text-sm text-gray-600 italic">{member.role}</p>
+              <h3 className="text-[10px] md:text-sm font-bold text-text-primary uppercase">{member.name}</h3>
+              <p className="text-[10px] md:text-sm text-text-secondary italic">{member.role}</p>
             </div>
           ))}
         </div>

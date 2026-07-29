@@ -18,7 +18,7 @@ export const PlanCard = ({ plan }: { plan: TPlan }) => {
   const isEnterprise = plan.variant === 'enterprise'
 
   return (
-    <div className="relative rounded-3xl border border-[#EDEDED] bg-[#F9F9F9] shadow-md px-6 py-8 h-full flex flex-col">
+    <div className="relative rounded-3xl border border-border-default bg-surface-secondary shadow-md px-6 py-8 h-full flex flex-col">
       {/* Header */}
       <div className="flex flex-col">
         <div className="flex items-start gap-2">
@@ -64,9 +64,9 @@ export const PlanCard = ({ plan }: { plan: TPlan }) => {
 
       {/* Features */}
       <div className="mt-6 flex-1">
-        {isGrowth && <p className="text-xs text-slate-500 mb-2">Todo lo de Starter, más:</p>}
-        {isEnterprise && <p className="text-xs text-slate-500 mb-2">Todo lo de Growth, más:</p>}
-        <ul className="flex flex-col gap-2 text-sm text-slate-700">
+        {isGrowth && <p className="text-xs text-text-secondary mb-2">Todo lo de Starter, más:</p>}
+        {isEnterprise && <p className="text-xs text-text-secondary mb-2">Todo lo de Growth, más:</p>}
+        <ul className="flex flex-col gap-2 text-sm text-text-primary">
           {plan.features
             .filter((f) => !f.startsWith('Todo lo de'))
             .map((f) => (

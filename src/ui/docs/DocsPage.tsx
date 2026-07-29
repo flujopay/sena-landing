@@ -10,7 +10,7 @@ const Badge = ({ children, color = 'blue' }: { children: ReactNode; color?: Badg
     green: 'bg-green-100 text-green-700',
     purple: 'bg-purple-100 text-purple-700',
     orange: 'bg-[#f6793a]/10 text-[#f6793a]',
-    gray: 'bg-gray-100 text-gray-600',
+    gray: 'bg-gray-100 text-text-secondary',
     indigo: 'bg-[#2270D0]/10 text-[#2270D0]',
   }
   return (
@@ -42,19 +42,22 @@ const InfoBox = ({
 }
 
 const SectionHeader = ({ num, title, subtitle }: { num: number; title: string; subtitle?: string }) => (
-  <div className="flex items-center gap-4 mb-8 pb-4 border-b-2 border-gray-200">
+  <div className="flex items-center gap-4 mb-8 pb-4 border-b-2 border-border-default">
     <div className="w-11 h-11 rounded-xl bg-[#2270D0] text-white flex items-center justify-center text-lg font-bold shrink-0">
       {num}
     </div>
     <div>
-      <h2 className="text-2xl font-bold text-gray-900">{title}</h2>
-      {subtitle && <p className="text-sm text-gray-500 mt-0.5">{subtitle}</p>}
+      <h2 className="text-2xl font-bold text-text-primary">{title}</h2>
+      {subtitle && <p className="text-sm text-text-secondary mt-0.5">{subtitle}</p>}
     </div>
   </div>
 )
 
 const H3 = ({ children, id }: { children: ReactNode; id?: string }) => (
-  <h3 id={id} className="text-base font-semibold text-gray-900 mt-8 mb-3 pl-3 border-l-4 border-[#2270D0]">
+  <h3
+    id={id}
+    className="text-base font-semibold text-text-primary mt-8 mb-3 pl-3 border-l-4 border-[#2270D0]"
+  >
     {children}
   </h3>
 )
@@ -64,7 +67,7 @@ const H4 = ({ children }: { children: ReactNode }) => (
 )
 
 const Table = ({ heads, rows }: { heads: string[]; rows: ReactNode[][] }) => (
-  <div className="overflow-x-auto my-4 rounded-lg border border-gray-200">
+  <div className="overflow-x-auto my-4 rounded-lg border border-border-default">
     <table className="w-full text-sm">
       <thead>
         <tr>
@@ -82,7 +85,7 @@ const Table = ({ heads, rows }: { heads: string[]; rows: ReactNode[][] }) => (
         {rows.map((row, i) => (
           <tr key={i} className={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
             {row.map((cell, j) => (
-              <td key={j} className="px-4 py-2.5 border-b border-gray-100 text-gray-700 align-top">
+              <td key={j} className="px-4 py-2.5 border-b border-border-default text-text-primary align-top">
                 {cell}
               </td>
             ))}
@@ -94,7 +97,7 @@ const Table = ({ heads, rows }: { heads: string[]; rows: ReactNode[][] }) => (
 )
 
 const PropsTable = ({ rows }: { rows: [string, string, string][] }) => (
-  <div className="overflow-x-auto my-3 rounded-lg border border-gray-200">
+  <div className="overflow-x-auto my-3 rounded-lg border border-border-default">
     <table className="w-full text-sm">
       <thead>
         <tr>
@@ -110,10 +113,10 @@ const PropsTable = ({ rows }: { rows: [string, string, string][] }) => (
       </thead>
       <tbody>
         {rows.map(([prop, type, desc], i) => (
-          <tr key={i} className="border-b border-gray-100">
+          <tr key={i} className="border-b border-border-default">
             <td className="px-3 py-2 font-mono text-xs text-[#2270D0]">{prop}</td>
-            <td className="px-3 py-2 text-gray-500 font-mono text-xs">{type}</td>
-            <td className="px-3 py-2 text-gray-700">{desc}</td>
+            <td className="px-3 py-2 text-text-secondary font-mono text-xs">{type}</td>
+            <td className="px-3 py-2 text-text-primary">{desc}</td>
           </tr>
         ))}
       </tbody>
@@ -128,12 +131,12 @@ const CodeBlock = ({ children }: { children: ReactNode }) => (
 )
 
 const Card = ({ icon, title, desc }: { icon: string; title: string; desc: string }) => (
-  <div className="border border-gray-200 rounded-xl p-4 bg-gray-50 hover:border-[#2270D0]/40 hover:shadow-sm transition-all">
+  <div className="border border-border-default rounded-xl p-4 bg-gray-50 hover:border-[#2270D0]/40 hover:shadow-sm transition-all">
     <div className="w-9 h-9 bg-[#2270D0]/10 rounded-lg flex items-center justify-center text-xl mb-3">
       {icon}
     </div>
-    <h4 className="font-semibold text-gray-900 text-sm mb-1">{title}</h4>
-    <p className="text-xs text-gray-500 leading-relaxed">{desc}</p>
+    <h4 className="font-semibold text-text-primary text-sm mb-1">{title}</h4>
+    <p className="text-xs text-text-secondary leading-relaxed">{desc}</p>
   </div>
 )
 
@@ -148,7 +151,10 @@ const CardGrid = ({ items }: { items: { icon: string; title: string; desc: strin
 const DocList = ({ items }: { items: ReactNode[] }) => (
   <ul className="my-3 space-y-1">
     {items.map((it, i) => (
-      <li key={i} className="flex gap-2 text-sm text-gray-700 py-1.5 border-b border-gray-100 last:border-0">
+      <li
+        key={i}
+        className="flex gap-2 text-sm text-text-primary py-1.5 border-b border-border-default last:border-0"
+      >
         <span className="text-[#2270D0] mt-0.5 shrink-0">▸</span>
         <span>{it}</span>
       </li>
@@ -158,12 +164,12 @@ const DocList = ({ items }: { items: ReactNode[] }) => (
 
 const TwoCol = ({ left, right }: { left: ReactNode; right: ReactNode }) => (
   <div className="grid grid-cols-2 gap-4 my-4">
-    <div className="bg-gray-50 border border-gray-200 rounded-xl p-4">{left}</div>
-    <div className="bg-gray-50 border border-gray-200 rounded-xl p-4">{right}</div>
+    <div className="bg-gray-50 border border-border-default rounded-xl p-4">{left}</div>
+    <div className="bg-gray-50 border border-border-default rounded-xl p-4">{right}</div>
   </div>
 )
 
-const Divider = () => <hr className="border-t-2 border-gray-100 my-12" />
+const Divider = () => <hr className="border-t-2 border-border-default my-12" />
 
 const Inline = ({ children }: { children: ReactNode }) => (
   <code className="bg-[#2270D0]/10 text-[#2270D0] px-1.5 py-0.5 rounded text-xs font-mono">{children}</code>
@@ -227,12 +233,12 @@ const sections = [
     subtitle: 'Visión general del proyecto frontend de Sena',
     content: () => (
       <>
-        <p className="text-gray-700 text-sm leading-relaxed mb-4">
+        <p className="text-text-primary text-sm leading-relaxed mb-4">
           Sena es una plataforma web diseñada para optimizar la gestión financiera y operativa de empresas en
           Latinoamérica. Su frontend fue construido con un enfoque en rendimiento, personalización y
           escalabilidad, permitiendo adaptarse a las necesidades de cada cliente y región.
         </p>
-        <p className="text-gray-700 text-sm leading-relaxed mb-4">
+        <p className="text-text-primary text-sm leading-relaxed mb-4">
           La interfaz es completamente responsiva, soporta múltiples idiomas y variantes regionales, y está
           preparada para operar con grandes volúmenes de datos sin sacrificar la experiencia del usuario.
         </p>
@@ -297,7 +303,7 @@ const sections = [
     subtitle: 'Arquitectura híbrida: feature + type',
     content: () => (
       <>
-        <p className="text-sm text-gray-700 mb-4">
+        <p className="text-sm text-text-primary mb-4">
           El proyecto sigue una arquitectura híbrida que combina organización por funcionalidad (feature) y
           por tipo.
         </p>
@@ -347,7 +353,7 @@ const sections = [
     content: () => (
       <>
         <H3>Configuración de Axios</H3>
-        <p className="text-sm text-gray-700 mb-3">
+        <p className="text-sm text-text-primary mb-3">
           <strong>config.tsx</strong> centraliza y exporta las URLs base de cada API.{' '}
           <strong>index.tsx</strong> configura los interceptores de respuesta:
         </p>
@@ -400,7 +406,7 @@ const sections = [
     content: () => (
       <>
         <H3>Estructura de assets</H3>
-        <p className="text-sm text-gray-700 mb-3">
+        <p className="text-sm text-text-primary mb-3">
           Todos los recursos estáticos se centralizan en la carpeta <Inline>src/assets/</Inline> y se exportan
           como módulos TypeScript para garantizar tipado y trazabilidad.
         </p>
@@ -454,7 +460,7 @@ const sections = [
           left={
             <>
               <H4>Modal Bloqueante</H4>
-              <p className="text-xs text-gray-600">
+              <p className="text-xs text-text-secondary">
                 El fondo queda bloqueado. El usuario debe cerrar el modal para continuar interactuando.
               </p>
             </>
@@ -462,7 +468,7 @@ const sections = [
           right={
             <>
               <H4>Modal Flotante</H4>
-              <p className="text-xs text-gray-600">
+              <p className="text-xs text-text-secondary">
                 No bloquea la interacción. Soporta posicionamiento personalizado.
               </p>
             </>
@@ -581,7 +587,7 @@ const sections = [
           left={
             <>
               <H4>✅ Context API de React</H4>
-              <p className="text-xs text-gray-600 mb-3">Para estado que cambia con poca frecuencia.</p>
+              <p className="text-xs text-text-secondary mb-3">Para estado que cambia con poca frecuencia.</p>
               <p className="text-xs font-semibold text-green-700 mb-1">Ventajas</p>
               <DocList
                 items={[
@@ -603,7 +609,7 @@ const sections = [
           right={
             <>
               <H4>⚡ Zustand Store</H4>
-              <p className="text-xs text-gray-600 mb-3">Para estados de alta frecuencia de cambio.</p>
+              <p className="text-xs text-text-secondary mb-3">Para estados de alta frecuencia de cambio.</p>
               <p className="text-xs font-semibold text-green-700 mb-1">Ventajas</p>
               <DocList
                 items={[
@@ -642,7 +648,7 @@ const sections = [
           ]}
         />
         <H3>8.2 GlobalTypesItemsContext</H3>
-        <p className="text-sm text-gray-700 mb-3">
+        <p className="text-sm text-text-primary mb-3">
           Provee todas las listas y variables globales usadas en selectores, filtros y formularios.
         </p>
         <Table
@@ -660,7 +666,7 @@ const sections = [
           ]}
         />
         <H3>8.3 TableColumnsContext</H3>
-        <p className="text-sm text-gray-700 mb-3">
+        <p className="text-sm text-text-primary mb-3">
           Centraliza columnas, filtros y visibilidad por defecto para todas las tablas.
         </p>
         <div className="flex flex-wrap gap-2 my-3">
@@ -737,11 +743,11 @@ const sections = [
     content: () => (
       <>
         <H3>10.1 Login</H3>
-        <p className="text-sm text-gray-700 mb-3">
+        <p className="text-sm text-text-primary mb-3">
           Esquema de <strong>token + refresh token</strong> para validar la identidad del usuario.
         </p>
-        <div className="bg-gray-50 border border-gray-200 rounded-xl p-4 my-3">
-          <ol className="space-y-2 text-sm text-gray-700 list-decimal list-inside">
+        <div className="bg-gray-50 border border-border-default rounded-xl p-4 my-3">
+          <ol className="space-y-2 text-sm text-text-primary list-decimal list-inside">
             <li>El usuario ingresa email y contraseña.</li>
             <li>Se validan los datos con React Hook Form antes de enviar.</li>
             <li>Se realiza la petición de autenticación al backend.</li>
@@ -760,7 +766,7 @@ const sections = [
           ]}
         />
         <H3>10.3 Onboarding</H3>
-        <p className="text-sm text-gray-700">
+        <p className="text-sm text-text-primary">
           Proceso guiado de configuración inicial (Step1–Step8) con validación progresiva, selector de
           calendario y configuración de SII/SUNAT. El estado se gestiona mediante{' '}
           <Inline>OnboardingContext</Inline>.
@@ -839,7 +845,7 @@ const sections = [
           ]}
         />
         <H3>12.2 Clasificación Contable en 3 Niveles</H3>
-        <div className="flex items-center gap-3 flex-wrap justify-center my-4 p-4 bg-gray-50 border border-gray-200 rounded-xl">
+        <div className="flex items-center gap-3 flex-wrap justify-center my-4 p-4 bg-gray-50 border border-border-default rounded-xl">
           {[
             {
               color: 'border-[#2270D0] bg-[#2270D0]/10',
@@ -863,9 +869,9 @@ const sections = [
             <div key={i} className="flex items-center gap-3">
               <div className={`border-2 ${n.color} rounded-xl px-5 py-3 text-center`}>
                 <div className={`text-xs font-bold uppercase tracking-wider ${n.tc} mb-1`}>{n.label}</div>
-                <div className="text-sm font-bold text-gray-900">{n.title}</div>
+                <div className="text-sm font-bold text-text-primary">{n.title}</div>
               </div>
-              {i < 2 && <span className="text-gray-400 text-xl">→</span>}
+              {i < 2 && <span className="text-text-disabled text-xl">→</span>}
             </div>
           ))}
         </div>
@@ -1106,8 +1112,8 @@ const sections = [
               {i + 1}
             </div>
             <div>
-              <h4 className="font-semibold text-gray-900 text-sm mb-1">{item.title}</h4>
-              <p className="text-sm text-gray-500">{item.desc}</p>
+              <h4 className="font-semibold text-text-primary text-sm mb-1">{item.title}</h4>
+              <p className="text-sm text-text-secondary">{item.desc}</p>
             </div>
           </div>
         ))}
@@ -1171,9 +1177,9 @@ export const DocsPage = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 font-sans">
-      <div className="max-w-7xl mx-auto flex">
+      <div className="max-w-[1280px] mx-auto flex">
         {/* SIDEBAR */}
-        <aside className="hidden lg:block w-64 shrink-0 sticky top-[72px] h-[calc(100vh-72px)] overflow-y-auto bg-white border-r border-gray-200 py-6">
+        <aside className="hidden lg:block w-64 shrink-0 sticky top-[72px] h-[calc(100vh-72px)] overflow-y-auto bg-white border-r border-border-default py-6">
           {tocSections.map((sec) => (
             <div key={sec.label} className="mb-4 px-4">
               <p className="text-xs font-bold text-[#2270D0] uppercase tracking-wider mb-2">{sec.label}</p>
@@ -1189,8 +1195,8 @@ export const DocsPage = () => {
                       activeItem === item
                         ? 'bg-[#2270D0]/10 text-[#2270D0] font-semibold'
                         : isSubItem
-                          ? 'text-gray-400 hover:text-gray-700 hover:bg-gray-50'
-                          : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
+                          ? 'text-text-disabled hover:text-text-primary hover:bg-gray-50'
+                          : 'text-text-secondary hover:text-text-primary hover:bg-gray-50'
                     }`}
                   >
                     {item.trim()}
@@ -1233,7 +1239,7 @@ export const DocsPage = () => {
           <current.content />
 
           {/* PREV / NEXT */}
-          <div className="flex justify-between mt-12 pt-6 border-t border-gray-200">
+          <div className="flex justify-between mt-12 pt-6 border-t border-border-default">
             <button
               onClick={() => {
                 if (currentIdx > 0) {
@@ -1244,7 +1250,7 @@ export const DocsPage = () => {
                 }
               }}
               disabled={currentIdx === 0}
-              className="flex items-center gap-2 text-sm text-gray-500 hover:text-[#2270D0] disabled:opacity-30 transition-colors"
+              className="flex items-center gap-2 text-sm text-text-secondary hover:text-[#2270D0] disabled:opacity-30 transition-colors"
             >
               ← {currentIdx > 0 ? sections[currentIdx - 1].title : ''}
             </button>
@@ -1258,7 +1264,7 @@ export const DocsPage = () => {
                 }
               }}
               disabled={currentIdx === sections.length - 1}
-              className="flex items-center gap-2 text-sm text-gray-500 hover:text-[#2270D0] disabled:opacity-30 transition-colors"
+              className="flex items-center gap-2 text-sm text-text-secondary hover:text-[#2270D0] disabled:opacity-30 transition-colors"
             >
               {currentIdx < sections.length - 1 ? sections[currentIdx + 1].title : ''} →
             </button>

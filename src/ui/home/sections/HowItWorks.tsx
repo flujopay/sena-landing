@@ -93,7 +93,7 @@ export const HowItWorks = () => {
   const hasVideo = Boolean((active as any).video)
 
   return (
-    <section id="como-funciona" className="bg-[#F9F9F9] pt-28 ">
+    <section id="como-funciona" className="bg-surface-secondary pt-28 ">
       <div className="max-w-[1280px] mx-auto">
         <div className="px-4 md:px-12 text-left">
           <div className="flex justify-start">
@@ -127,7 +127,7 @@ export const HowItWorks = () => {
               })}
             </div>
 
-            <div className="mt-6 md:mt-8 rounded-xl bg-[#EDEDED]">
+            <div className="mt-6 md:mt-8 rounded-xl bg-border-default">
               <div className="p-6 md:p-10 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                 <div className="bg-linear-to-br from-slate-50 to-slate-100 rounded-xl h-56 md:h-80 flex items-center justify-center justify-self-center w-full max-w-xl shadow-lg">
                   <div
