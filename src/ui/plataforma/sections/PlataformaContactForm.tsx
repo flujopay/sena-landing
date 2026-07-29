@@ -29,6 +29,7 @@ type FormData = {
 
 export const PlataformaContactForm = () => {
   const [isLoading, setIsLoading] = useState(false)
+  const [submitError, setSubmitError] = useState('')
   const { data: countries = [] } = useCountries()
   const { ipCurrency } = useCurrencyStore()
   const router = useRouter()
@@ -105,9 +106,10 @@ export const PlataformaContactForm = () => {
 
   const onSubmit = async (data: FormData) => {
     setIsLoading(true)
+    setSubmitError('')
     const telefono = (countrySelect || '') + data.whatsapp
     try {
-      await fetch('/api/lead', {
+      const res = await fetch('/api/lead', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -127,7 +129,13 @@ export const PlataformaContactForm = () => {
           fbclid: fbclid ?? undefined,
           landingPage: window.location.href,
         }),
-      }).catch(() => {})
+      })
+      const json = await res.json().catch(() => ({ ok: false }))
+      if (!res.ok || !json.ok) {
+        setSubmitError('No pudimos registrar tu solicitud. Intenta de nuevo o escríbenos por WhatsApp.')
+        setIsLoading(false)
+        return
+      }
 
       if (window.gtag) {
         window.gtag('event', 'completar_formulario', { product: 'plataforma' })
@@ -137,6 +145,7 @@ export const PlataformaContactForm = () => {
 
       router.push('/plataforma/gracias')
     } catch {
+      setSubmitError('No pudimos registrar tu solicitud. Intenta de nuevo o escríbenos por WhatsApp.')
       setIsLoading(false)
     }
   }
@@ -318,6 +327,8 @@ export const PlataformaContactForm = () => {
         </Link>
         .
       </p>
+
+      {submitError && <p className="text-red-500 text-sm mb-4">{submitError}</p>}
 
       <Button
         type="submit"
