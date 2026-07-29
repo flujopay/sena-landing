@@ -9,6 +9,7 @@ import { Hero } from './sections/Hero'
 import { HowItWorks } from './sections/HowItWorks'
 import { KeyFeatures } from './sections/KeyFeatures/KeyFeatures'
 import { PricingPlans } from './sections/PricingPlans/PricingPlans'
+import { PortfolioAnalyzerCTA } from './sections/PortfolioAnalyzerCTA'
 import { Products } from './sections/Products'
 
 export const HomePage = () => {
@@ -40,6 +41,7 @@ export const HomePage = () => {
         <Products />
         <KeyFeatures />
         <HowItWorks />
+        <PortfolioAnalyzerCTA />
         <PricingPlans />
         <CallToAction />
         <Footer />
