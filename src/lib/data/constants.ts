@@ -42,7 +42,7 @@ export const FOOTER_DESCUBRIR = [
   },
   {
     label: 'Opera',
-    href: 'https://opera.somossena.com',
+    href: 'https://agente.somossena.com',
     type: 'external' as const,
     disabled: false,
   },

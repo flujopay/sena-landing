@@ -488,7 +488,7 @@ export const Header = ({ variant }: Props) => {
     }
 
     if (tab === 'opera') {
-      window.location.href = 'https://opera.somossena.com'
+      window.location.href = 'https://agente.somossena.com'
       return
     }
 

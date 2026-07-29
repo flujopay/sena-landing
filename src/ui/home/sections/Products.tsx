@@ -90,7 +90,7 @@ export const Products = () => {
         cta: 'Solicitar propuesta',
         image: AssetImage.cobra,
         onCtaClick: () => {
-          window.location.href = 'https://opera.somossena.com'
+          window.location.href = 'https://agente.somossena.com'
         },
       },
     ],
