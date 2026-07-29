@@ -24,7 +24,6 @@ export const CONTACT_INFO = {
 export const FOOTER_EMPRESA = [
   { label: 'Sobre nosotros', href: '/nosotros', type: 'redirect' as const, disabled: false },
   { label: 'Documentación', href: '/docs', type: 'redirect' as const, disabled: false },
-  { label: 'Sobre Recsa', href: 'https://recsa.com/nosotros/', type: 'external' as const, disabled: true },
   { label: 'FAQs', href: '#', type: 'redirect' as const, disabled: true },
 ]
 
@@ -65,4 +64,5 @@ export const FOOTER_LEGAL = [
   { label: 'Términos y condiciones', href: '/term', type: 'redirect' as const, disabled: false },
   { label: 'Políticas de privacidad', href: '/privacy', type: 'redirect' as const, disabled: false },
   { label: 'Actualizar configuración de cookies', href: '#', type: 'redirect' as const, disabled: true },
+  { label: 'Servicios de Tecnología Flujolink S.A.', href: '#', type: 'redirect' as const, disabled: true },
 ]

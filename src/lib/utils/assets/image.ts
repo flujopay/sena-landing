@@ -14,7 +14,6 @@ import home3 from '@/public/images/home3.png'
 import home4 from '@/public/images/home4.png'
 import logoBlack from '@/public/images/logo_black.png'
 import logoBlanco from '@/public/images/logo_blanco.png'
-import mapLatamRecsa from '@/public/images/mapLatamRecsa.png'
 import maruzLogo from '@/public/images/maruz_logo.png'
 import nosotros1 from '@/public/images/nosotros1.png'
 import nosotros2 from '@/public/images/nosotros2.png'
@@ -53,5 +52,4 @@ export class AssetImage {
   static autogestion = autogestion
   static recuperaGirl = recuperaGirl
   static byRecsa = byRecsa
-  static mapLatamRecsa = mapLatamRecsa
 }

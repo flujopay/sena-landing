@@ -107,7 +107,11 @@ export const PlataformaPage = () => {
                 size="lg"
                 onClick={() => {
                   const el = document.getElementById('como-funciona')
-                  if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.pageYOffset - 72, behavior: 'smooth' })
+                  if (el)
+                    window.scrollTo({
+                      top: el.getBoundingClientRect().top + window.pageYOffset - 72,
+                      behavior: 'smooth',
+                    })
                 }}
                 className="w-full sm:w-auto min-h-[48px] border border-slate-300"
               />
@@ -143,9 +147,7 @@ export const PlataformaPage = () => {
             <h2 className="text-brand-primary-dark text-2xl md:text-3xl font-extrabold text-center mb-2">
               ¿Te suena esto?
             </h2>
-            <p className="text-slate-500 text-center mb-10">
-              El dinero está. Solo que no está disponible.
-            </p>
+            <p className="text-slate-500 text-center mb-10">El dinero está. Solo que no está disponible.</p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
               {[
                 {
@@ -210,14 +212,10 @@ export const PlataformaPage = () => {
           </div>
         </section>
 
-        {/* Trust signals — Recsa prominente */}
+        {/* Trust signals */}
         <section className="bg-white py-10 border-y border-slate-100">
           <div className="max-w-[1280px] mx-auto px-4">
             <div className="flex flex-col items-center gap-5">
-              <div className="flex items-center gap-3">
-                <Image src={AssetImage.byRecsa} alt="Respaldado por Recsa" className="h-8 w-auto" />
-                <span className="text-slate-500 text-sm">40 años de experiencia en cobranza en Chile y LATAM</span>
-              </div>
               <div className="flex flex-wrap justify-center gap-5">
                 {[
                   'Sin contrato de largo plazo',
@@ -249,19 +247,28 @@ export const PlataformaPage = () => {
                   ))}
                 </div>
                 <p className="text-slate-700 text-lg leading-relaxed mb-6 italic">
-                  "Automatizamos por completo la conciliación entre pagos y facturas. Pasamos de 1.000 a más de 10.000 conciliaciones mensuales, con trazabilidad y aprobación en tiempo real. Es un cambio que no tiene vuelta atrás."
+                  "Automatizamos por completo la conciliación entre pagos y facturas. Pasamos de 1.000 a más
+                  de 10.000 conciliaciones mensuales, con trazabilidad y aprobación en tiempo real. Es un
+                  cambio que no tiene vuelta atrás."
                 </p>
                 <div className="flex items-center justify-between border-t border-slate-100 pt-5">
                   <div>
                     <p className="font-bold text-brand-primary-dark text-sm">Osvaldo Cáceres</p>
-                    <p className="text-slate-500 text-xs mt-0.5">KAM, RECSA · Cliente Sena Plataforma hace más de un año</p>
+                    <p className="text-slate-500 text-xs mt-0.5">
+                      KAM, RECSA · Cliente Sena Plataforma hace más de un año
+                    </p>
                   </div>
                   <Image src={AssetImage.byRecsa} alt="RECSA" className="h-7 w-auto opacity-70" />
                 </div>
               </div>
               <p className="text-center text-xs text-slate-400 mt-4">
                 ¿Quieres ver más casos?{' '}
-                <Link href="/" target="_blank" rel="noopener noreferrer" className="text-brand-primary hover:underline font-medium">
+                <Link
+                  href="/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-brand-primary hover:underline font-medium"
+                >
                   Conoce Sena →
                 </Link>
               </p>
@@ -275,8 +282,7 @@ export const PlataformaPage = () => {
             <div className="max-w-xl mx-auto">
               <div className="text-center mb-8">
                 <h2 className="text-brand-primary-dark text-2xl md:text-4xl font-extrabold mb-3">
-                  Agenda tu demo de{' '}
-                  <span className="text-brand-primary">30 minutos</span>
+                  Agenda tu demo de <span className="text-brand-primary">30 minutos</span>
                 </h2>
                 <p className="text-slate-500">
                   Sin compromiso. Te mostramos cómo funciona con tu cartera real.
