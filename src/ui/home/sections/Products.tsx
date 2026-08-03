@@ -3,66 +3,68 @@ import { AssetImage } from '@/lib/utils/assets/image'
 import Button from '@/ui/shared/Button'
 import Image, { StaticImageData } from 'next/image'
 import { useSearchParams } from 'next/navigation'
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 
-type ProductKey = 'autogestion' | 'recuperacion' | 'opera'
+type ProductKey = 'autogestion' | 'opera' | 'recuperacion'
 
-const ProductCard = ({
-  label,
-  title,
-  description,
-  cta,
-  image,
-  productKey,
-  onCtaClick,
-}: {
-  label: string
-  title: string
+type Product = {
+  key: ProductKey
+  /** Quién opera la cobranza en esta modalidad — el eje que diferencia las tres. */
+  eyebrow: string
+  name: string
+  promise: string
   description: string
+  fit: string
   cta: string
   image: StaticImageData
-  productKey: ProductKey
   onCtaClick: () => void
-}) => (
-  <div className="rounded-2xl overflow-hidden">
-    <p className="font-bold text-xl text-left py-4">{label}</p>
-    <div className="bg-brand-primary p-4 rounded-t-2xl">
-      <div className="bg-white rounded-2xl h-40 flex items-center justify-center overflow-visible relative">
-        {productKey === 'recuperacion' ? (
-          <>
-            <div className="w-[85%] h-full rounded-xl overflow-hidden">
-              <Image src={AssetImage.home3} alt={title} className="w-full h-full object-cover object-top" />
-            </div>
-            <div className="absolute bottom-0 right-0 w-16 h-[80%] rounded-lg overflow-hidden shadow-xl border-2 border-white">
-              <Image
-                src={AssetImage.conciliatorNavbar}
-                alt="Dashboard"
-                className="w-full h-full object-cover"
-              />
-            </div>
-          </>
-        ) : (
-          <Image src={image} alt={title} className="w-full h-full object-cover" />
-        )}
+}
+
+const ProductCard = ({ product, highlighted }: { product: Product; highlighted: boolean }) => (
+  <div
+    className={`flex flex-col bg-surface-default rounded-2xl overflow-hidden border transition-shadow ${
+      highlighted
+        ? 'border-brand-secondary ring-2 ring-brand-secondary shadow-lg'
+        : 'border-border-default shadow-sm'
+    }`}
+  >
+    <div className="bg-brand-primary p-4">
+      <div className="bg-surface-default rounded-xl h-40 overflow-hidden">
+        <Image src={product.image} alt={product.name} className="w-full h-full object-cover" />
       </div>
     </div>
-    <div className="p-4 bg-white">
-      <p className="text-black font-extrabold text-sm">{title}</p>
-      <p className="text-text-primary mt-2 text-sm leading-5">{description}</p>
-      <Button text={cta} className="mt-4" size="sm" onClick={onCtaClick} />
+
+    <div className="flex flex-col grow p-5">
+      <span className="self-start rounded-full bg-brand-secondary/10 text-brand-secondary text-xs font-bold px-3 py-1">
+        {product.eyebrow}
+      </span>
+
+      <p className="mt-3 font-canaro text-brand-primary-dark text-2xl font-extrabold">{product.name}</p>
+
+      <p className="mt-2 text-black font-bold text-sm leading-5">{product.promise}</p>
+
+      <p className="mt-2 text-text-primary text-sm leading-5">{product.description}</p>
+
+      <p className="mt-4 text-text-secondary text-xs leading-5">
+        <span className="font-bold text-brand-primary-dark">Para ti si:</span> {product.fit}
+      </p>
+
+      <Button text={product.cta} className="mt-5 self-start" size="sm" onClick={product.onCtaClick} />
     </div>
   </div>
 )
 
 export const Products = () => {
-  const products = useMemo(
+  const products = useMemo<Product[]>(
     () => [
       {
-        key: 'autogestion' as const,
-        label: 'Plataforma de\nautogestión',
-        title: 'Visibilidad total. Cobros automáticos.',
+        key: 'autogestion',
+        eyebrow: 'Operas tú',
+        name: 'Plataforma Sena',
+        promise: 'Todo el ciclo de cobranza, ordenado en una sola plataforma.',
         description:
-          'Dashboard unificado de tu cartera, recordatorios multicanal y conciliación sin reemplazar tu tech stack. Primer resultado en 30 días.',
+          'Tu equipo opera con mejor tecnología: cartera unificada, recordatorios multicanal y conciliación, sin reemplazar tu ERP. Primer cobro automatizado operando en 30 días.',
+        fit: 'tienes un equipo administrativo o financiero que hoy cobra con planillas y mensajes sueltos.',
         cta: 'Agenda una demo',
         image: AssetImage.autogestion,
         onCtaClick: () => {
@@ -70,27 +72,31 @@ export const Products = () => {
         },
       },
       {
-        key: 'recuperacion' as const,
-        label: 'Recupera deuda\nvencida',
-        title: 'Pagas solo si recuperamos.',
+        key: 'opera',
+        eyebrow: 'Operamos por ti',
+        name: 'Ópera',
+        promise: 'El equipo de cobranza que tu empresa no tiene, operando por ti.',
         description:
-          'Facturas vencidas de más de 60 días. El equipo de Sena las gestiona y solo te cobramos si recuperamos el dinero. Sin ticket mínimo.',
+          'Análisis, estrategia, ejecución y monitoreo. Tú solo ves los resultados. El análisis inicial de tu cartera es gratuito.',
+        fit: 'no tienes equipo de cobranza y quieres delegar el problema completo.',
+        cta: 'Cotizar para mi empresa',
+        image: AssetImage.cobra,
+        onCtaClick: () => {
+          window.location.href = 'https://agente.somossena.com'
+        },
+      },
+      {
+        key: 'recuperacion',
+        eyebrow: 'Solo lo vencido',
+        name: 'Recupera',
+        promise: 'Solo nos pagas si recuperamos.',
+        description:
+          'Tienes facturas vencidas que no has podido cobrar. Nosotros las recuperamos: 15% sobre lo cobrado, sin ticket mínimo.',
+        fit: 'tienes facturas antiguas detenidas y buscas una salida prejudicial.',
         cta: 'Iniciar recupero',
         image: AssetImage.recuperaGirl,
         onCtaClick: () => {
           window.open('https://recupera.somossena.com', '_self')
-        },
-      },
-      {
-        key: 'opera' as const,
-        label: 'Opera,\ncobranza delegada',
-        title: 'El equipo de cobranza que tu empresa no tiene.',
-        description:
-          'Tu empresa no tiene un equipo dedicado a cobrar. El nuestro opera por ti: gestión, seguimiento y resultados. Tú solo ves los números.',
-        cta: 'Solicitar propuesta',
-        image: AssetImage.cobra,
-        onCtaClick: () => {
-          window.location.href = 'https://opera.somossena.com'
         },
       },
     ],
@@ -99,143 +105,52 @@ export const Products = () => {
 
   const searchParams = useSearchParams()
   const tabParam = searchParams.get('tab')
+  const sectionRef = useRef<HTMLElement>(null)
 
-  const [activeKey, setActiveKey] = useState<ProductKey>(() => {
-    if (tabParam === 'recuperacion') return 'recuperacion'
-    if (tabParam === 'opera') return 'opera'
-    return 'autogestion'
-  })
-  const active = products.find((p) => p.key === activeKey) ?? products[0]
-  const activeIndex = products.findIndex((p) => p.key === activeKey)
+  // Las tres modalidades se muestran siempre. `highlighted` solo destaca una cuando se llega
+  // por deep-link (?tab=) o desde el menú del header, que emite `sena:product-tab`.
+  const [highlighted, setHighlighted] = useState<ProductKey | null>(null)
+
+  const isProductKey = (value: string | null): value is ProductKey =>
+    value === 'autogestion' || value === 'opera' || value === 'recuperacion'
 
   useEffect(() => {
-    if (tabParam === 'autogestion' || tabParam === 'recuperacion' || tabParam === 'opera') {
-      setActiveKey(tabParam)
+    if (isProductKey(tabParam)) {
+      setHighlighted(tabParam)
+      sectionRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
     }
   }, [tabParam])
 
   useEffect(() => {
     const handler = (e: Event) => {
       const tab = (e as CustomEvent).detail
-      if (tab === 'autogestion' || tab === 'recuperacion' || tab === 'opera') {
-        setActiveKey(tab)
+      if (isProductKey(tab)) {
+        setHighlighted(tab)
+        sectionRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
       }
     }
     window.addEventListener('sena:product-tab', handler)
     return () => window.removeEventListener('sena:product-tab', handler)
   }, [])
 
-  const segmentHeight = 100 / products.length
-
   return (
-    <section id="productos" className="max-w-[1280px] mx-auto pt-28">
-      {/* Mobile Layout */}
-      <div className="md:hidden bg-surface-secondary px-4 py-10">
-        <p className="text-left text-brand-primary-dark text-2xl sm:text-4xl font-extrabold tracking-wide mb-6">
-          Nuestros
-          <br />
-          productos
-        </p>
-        <div className="flex flex-col gap-6 px-2">
-          {products.map((p) => (
-            <ProductCard
-              key={p.key}
-              label={p.label}
-              title={p.title}
-              description={p.description}
-              cta={p.cta}
-              image={p.image}
-              productKey={p.key}
-              onCtaClick={p.onCtaClick}
-            />
-          ))}
+    <section id="productos" ref={sectionRef} className="max-w-[1280px] mx-auto pt-28 scroll-mt-24">
+      <div className="bg-surface-secondary px-4 py-10 md:rounded-3xl md:p-10">
+        <div className="max-w-3xl">
+          <p className="font-adobe text-brand-primary-dark text-2xl sm:text-4xl font-black">
+            Tres formas de trabajar con Sena
+            <span className="text-brand-secondary font-caslon">.</span>
+          </p>
+          <p className="font-adobe text-black mt-3 text-lg leading-6">
+            La misma operación de cobranza, con el nivel de delegación que tu empresa necesita. Opera tú,
+            delega en nuestro equipo o recupera lo que ya venció.
+          </p>
         </div>
-      </div>
 
-      {/* Desktop Layout */}
-      <div className="hidden md:block bg-surface-secondary rounded-3xl p-6 md:p-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
-          <div className="flex flex-col gap-6">
-            <p className="text-left text-brand-primary-dark font-extrabold tracking-wide text-xl sm:text-4xl">
-              Nuestros
-              <br />
-              productos
-            </p>
-
-            <div className="flex gap-6">
-              <div className="relative w-1">
-                <div className="absolute left-0 top-0 h-full w-1 rounded bg-slate-300" />
-                <div
-                  className="absolute left-0 top-0 w-1 rounded bg-brand-secondary transition-all duration-300"
-                  style={{
-                    height: `${segmentHeight}%`,
-                    transform: `translateY(${activeIndex * 100}%)`,
-                  }}
-                />
-              </div>
-
-              <div className="flex flex-col gap-6">
-                {products.map((p) => {
-                  const isActive = p.key === activeKey
-                  return (
-                    <button
-                      key={p.key}
-                      type="button"
-                      onClick={() => setActiveKey(p.key)}
-                      className="text-left cursor-pointer"
-                    >
-                      <p
-                        className={
-                          isActive
-                            ? 'text-black font-bold text-3xl leading-tight whitespace-pre-line'
-                            : 'text-text-disabled font-bold text-3xl leading-tight whitespace-pre-line'
-                        }
-                      >
-                        {p.label}
-                      </p>
-                    </button>
-                  )
-                })}
-              </div>
-            </div>
-          </div>
-
-          <div className="bg-white rounded-2xl overflow-hidden shadow-sm">
-            <div className="bg-brand-primary p-6 md:p-8">
-              {activeKey === 'recuperacion' ? (
-                <div className="bg-white w-[80%] mx-auto rounded-xl h-48 md:h-56 flex items-center justify-center overflow-visible relative">
-                  <div className="w-[160px] ml-16 h-full rounded-xl overflow-hidden">
-                    <Image
-                      src={AssetImage.home3}
-                      alt={active.title}
-                      className="w-full h-full object-cover object-top"
-                    />
-                  </div>
-                  <div className="absolute bottom-4 -right-10 w-22 h-48 rounded-lg overflow-hidden shadow-xl border-2 border-white">
-                    <Image
-                      src={AssetImage.conciliatorNavbar}
-                      alt="Dashboard"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                </div>
-              ) : (
-                <div className="bg-white rounded-xl h-48 md:h-56 flex items-center justify-center overflow-visible relative">
-                  <Image
-                    src={active.image}
-                    alt={active.title}
-                    className="w-full h-full object-cover rounded-xl"
-                  />
-                </div>
-              )}
-            </div>
-
-            <div className="p-6 md:p-8 bg-slate-100">
-              <p className="text-black font-extrabold">{active.title}</p>
-              <p className="text-text-primary mt-2 leading-5">{active.description}</p>
-              <Button text={active.cta} className="mt-5" onClick={active.onCtaClick} />
-            </div>
-          </div>
+        <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+          {products.map((p) => (
+            <ProductCard key={p.key} product={p} highlighted={highlighted === p.key} />
+          ))}
         </div>
       </div>
     </section>

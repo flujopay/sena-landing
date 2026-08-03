@@ -17,9 +17,9 @@ export const dynamic = 'force-dynamic'
 export const metadata: Metadata = {
   title: 'Sena - El arte de cobrar bien',
   description:
-    'Optimiza tu gestión de cobranza y pagos de facturas con Sena, el CRM B2B que simplifica procesos, mejora la eficiencia y acelera tus ingresos.',
+    'Sena cubre todo el ciclo de cobranza B2B: opéralo tú en nuestra plataforma, delégalo en nuestro equipo o recupera facturas vencidas pagando solo si recuperamos.',
   keywords:
-    'CRM cobranza, pagos B2B, facturación, gestión de pagos, CRM empresas, automatización de cobranza, Sena',
+    'cobranza B2B, cobranza externalizada, recuperación de cartera, CRM cobranza, pagos B2B, gestión de pagos, automatización de cobranza, Sena',
   authors: [{ name: 'Sena' }],
   robots: { index: true, follow: true },
   metadataBase: new URL('https://www.somossena.com'),
@@ -28,13 +28,13 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Sena - El arte de cobrar bien',
     description:
-      'Optimiza tu gestión de cobranza y pagos de facturas con Sena, el CRM B2B que simplifica procesos.',
+      'Todo el ciclo de cobranza B2B: opéralo tú en la plataforma, delégalo en nuestro equipo o recupera lo vencido.',
     images: ['https://somossena.com/sena-crm-lite.jpg'],
   },
   openGraph: {
     title: 'Sena - El arte de cobrar bien',
     description:
-      'Con Sena, simplifica y acelera la gestión de tus cobros y pagos. Una solución para empresas enfocada en eficiencia y resultados.',
+      'Sena cubre el ciclo completo de cobranza B2B, de la factura emitida al pago conciliado. En una sola plataforma o como servicio gestionado.',
     type: 'website',
     url: 'https://somossena.com',
     images: ['https://somossena.com/sena-crm-lite.jpg'],
@@ -95,7 +95,7 @@ export default async function RootLayout({
           </noscript>
         </head>
         <body
-          className={`${canaroFont.variable} ${adobeCleanFont.variable} ${caslonFont.variable} antialiased font-adobe bg-surface-default`}
+          className={`${canaroFont.variable} ${adobeCleanFont.variable} ${caslonFont.variable} antialiased font-adobe`}
         >
           <Script id="disable-debugger" strategy="beforeInteractive">
             {`

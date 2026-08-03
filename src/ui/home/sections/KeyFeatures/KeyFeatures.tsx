@@ -89,8 +89,9 @@ export const KeyFeatures = () => {
       title: 'Gestión humana\nespecializada',
       description: (
         <p>
-          Cuando la automatización no basta, entra nuestro equipo experto para gestionar los casos complejos
-          que requieren criterio humano.
+          Cuando la automatización no basta, entran nuestros{' '}
+          <span className="text-black font-bold">especialistas en recuperación</span> para gestionar los casos
+          complejos que requieren criterio humano.
         </p>
       ),
       icon: (
@@ -112,16 +113,31 @@ export const KeyFeatures = () => {
       ),
     },
     {
-      title: 'Arquitectura\nescalable',
+      title: 'Trazabilidad y\nlímites de contacto',
       description: (
         <p>
-          Una solución pensada para startups, pymes y grandes empresas, que se{' '}
-          <span className="text-black font-bold">adapta a tu volumen</span>, complejidad y etapa de negocio.
+          Cada gestión queda <span className="text-black font-bold">registrada y auditable</span>. El motor
+          limita la frecuencia de contacto por cliente y campaña, para cobrar dentro del marco legal sin
+          saturar la relación.
         </p>
       ),
       icon: (
         <Icon>
-          <AssetIcon.architecture width="24" height="24" color="white" />
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M12 3L19 6V11.5C19 15.5 15.9 18.9 12 20C8.1 18.9 5 15.5 5 11.5V6L12 3Z"
+              stroke="currentColor"
+              strokeWidth="1.8"
+              strokeLinejoin="round"
+            />
+            <path
+              d="M9 11.5L11.2 13.7L15 9.9"
+              stroke="currentColor"
+              strokeWidth="1.8"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
         </Icon>
       ),
     },
@@ -133,7 +149,7 @@ export const KeyFeatures = () => {
         <TitleDescripction
           title="Funcionalidades"
           subtitle="claves"
-          description="Un sistema completo que combina automatización, control y criterio humano."
+          description="La misma infraestructura opera las tres modalidades: automatización, control y criterio humano."
         />
       </div>
 
