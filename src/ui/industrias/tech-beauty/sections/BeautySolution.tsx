@@ -41,7 +41,7 @@ export const BeautySolution = () => {
     {
       title: 'Recupera',
       description:
-        'Cuando la automatización no basta, nuestro equipo humano especializado interviene. 40+ años de experiencia cuidando marcas mientras recupera pagos.',
+        'Cuando la automatización no basta, nuestro equipo de especialistas interviene. 40+ años de experiencia cuidando marcas mientras recupera pagos.',
       icon: (
         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
