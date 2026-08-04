@@ -18,6 +18,7 @@ import maruzLogo from '@/public/images/maruz_logo.png'
 import nosotros1 from '@/public/images/nosotros1.png'
 import nosotros2 from '@/public/images/nosotros2.png'
 import proweldLogo from '@/public/images/proweld_logo.png'
+import recsaLogo from '@/public/images/recsa_logo.png'
 import recuperaGirl from '@/public/images/recupera_girl.jpeg'
 import rioSena from '@/public/images/rio_sena.jpg'
 import senaLogoOrange from '@/public/images/sena_logo_orange.png'
@@ -41,6 +42,7 @@ export class AssetImage {
   static maruzLogo = maruzLogo
   static aomLogo = aomLogo
   static topSpaceLogo = topSpaceLogo
+  static recsaLogo = recsaLogo
   static home3 = home3
   static logoBlanco = logoBlanco
   static nosotros2 = nosotros2

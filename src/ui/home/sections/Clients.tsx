@@ -37,6 +37,11 @@ const clients = [
     name: 'AOM',
     logo: AssetImage.aomLogo.src,
   },
+  {
+    id: 8,
+    name: 'Recsa',
+    logo: AssetImage.recsaLogo.src,
+  },
 ]
 
 export const Clients = () => {
