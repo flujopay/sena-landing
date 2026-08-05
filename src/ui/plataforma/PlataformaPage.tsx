@@ -263,6 +263,7 @@ export const PlataformaPage = () => {
                       KAM, RECSA · Cliente Sena Plataforma hace más de un año
                     </p>
                   </div>
+                  <Image src={AssetImage.byRecsa} alt="RECSA" className="h-7 w-auto opacity-70" />
                 </div>
               </div>
               <p className="text-center text-xs text-text-disabled mt-4">
