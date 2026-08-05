@@ -369,21 +369,21 @@ export const Header = ({ variant }: Props) => {
     () => [
       {
         id: 1,
-        name: 'Plataforma de autogestión',
-        description: 'Cobros automáticos, recordatorios y seguimiento.',
+        name: 'Plataforma Sena',
+        description: 'Operas tú: cartera unificada, recordatorios y conciliación.',
         tab: 'autogestion',
       },
       {
         id: 2,
-        name: 'Recupera',
-        description: 'Gestión humana + estrategia para recuperar cartera.',
-        tab: 'recuperacion',
+        name: 'Ópera',
+        description: 'Operamos por ti: el equipo de cobranza que tu empresa no tiene.',
+        tab: 'opera',
       },
       {
         id: 3,
-        name: 'Opera',
-        description: 'El equipo de cobranza que tu empresa no tiene.',
-        tab: 'opera',
+        name: 'Recupera',
+        description: 'Solo lo vencido: pagas solo si recuperamos.',
+        tab: 'recuperacion',
       },
     ],
     []
@@ -488,7 +488,7 @@ export const Header = ({ variant }: Props) => {
     }
 
     if (tab === 'opera') {
-      window.location.href = 'https://opera.somossena.com'
+      window.location.href = 'https://agente.somossena.com'
       return
     }
 

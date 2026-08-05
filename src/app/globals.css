@@ -39,6 +39,22 @@
   --shadow-dropdown:       0 18px 60px rgba(0, 0, 0, 0.12);
 }
 
+/*
+ * La identidad de Sena es solo clara: secciones en blanco/#F9F9F9 y texto en azul marino.
+ * Sin esto, el navegador oscurece el lienzo cuando el sistema está en modo oscuro y los
+ * títulos y descripciones de sección (text-black, text-brand-primary-dark) quedan ilegibles
+ * porque no viven dentro de una tarjeta con fondo propio.
+ */
+:root {
+  color-scheme: only light;
+}
+
+html,
+body {
+  background-color: #ffffff;
+  color: #000000;
+}
+
 .btn-floating-whatsapp {
   width: 60px;
   height: 60px;

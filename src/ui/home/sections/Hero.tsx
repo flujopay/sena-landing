@@ -60,10 +60,10 @@ export const Hero = () => {
             </span>
           </h1>
           <p className="font-adobe text-black text-xl max-w-[90%]">
-            Sena es una plataforma web de <span className="font-bold">gestión de cuentas por cobrar</span> que
-            incluye un servicio de cobranza. Sena te ayuda a{' '}
-            <span className="font-bold">ordenar, automatizar y recuperar pagos</span> combinando tecnología,
-            inteligencia artificial y personas expertas.
+            Sena cubre <span className="font-bold">todo el ciclo de cobranza</span>, de la factura emitida al
+            pago conciliado. Opéralo tú en nuestra plataforma o{' '}
+            <span className="font-bold">delégalo completo</span> a nuestro equipo: IA para lo temprano,
+            especialistas humanos para lo difícil, sin romper la relación con tus clientes.
           </p>
         </div>
         <div className="w-[40%] flex justify-end">
@@ -74,12 +74,12 @@ export const Hero = () => {
       <div className="md:flex hidden flex-row items-start gap-2 mt-4">
         <Button text="Agenda una demo" size="md" className="text-xl" onClick={onRedirectHubspot} />
         <Button
-          text="Ver cómo funciona"
+          text="Ver las 3 opciones"
           variant="primaryDarkOutlined"
           size="md"
           className="text-xl"
           onClick={() => {
-            const element = document.getElementById('como-funciona')
+            const element = document.getElementById('productos')
             if (element) {
               element.scrollIntoView({ behavior: 'smooth', block: 'start' })
             }
@@ -104,10 +104,10 @@ export const Hero = () => {
             {/* Descripción + Imagen en fila */}
             <div className="flex flex-row gap-2">
               <p className="font-adobe text-black text-md xs:text-xs flex-1">
-                Sena es una plataforma web de <span className="font-bold">gestión de cuentas por cobrar</span>{' '}
-                que incluye un servicio de cobranza. Sena te ayuda a{' '}
-                <span className="font-bold">ordenar, automatizar y recuperar pagos</span> combinando
-                tecnología, inteligencia artificial y personas expertas.
+                Sena cubre <span className="font-bold">todo el ciclo de cobranza</span>, de la factura emitida
+                al pago conciliado. Opéralo tú en nuestra plataforma o{' '}
+                <span className="font-bold">delégalo completo</span> a nuestro equipo: IA para lo temprano,
+                especialistas humanos para lo difícil.
               </p>
             </div>
           </div>
@@ -123,18 +123,25 @@ export const Hero = () => {
         <div className="flex flex-row items-start gap-2">
           <Button text="Agenda una demo" size="sm" className="text-xs" onClick={onRedirectHubspot} />
           <Button
-            text="Ver cómo funciona"
+            text="Ver las 3 opciones"
             variant="primaryDarkOutlined"
             size="sm"
             className="text-xs"
             onClick={() => {
-              const element = document.getElementById('como-funciona')
+              const element = document.getElementById('productos')
               if (element) {
                 element.scrollIntoView({ behavior: 'smooth', block: 'start' })
               }
             }}
           />
         </div>
+      </div>
+
+      <div className="py-3 mt-4 md:mt-0">
+        <p className="text-slate-500 text-xs md:text-sm text-left md:text-right">
+          Más de <span className="font-bold text-brand-secondary">40 años</span> de experiencia operativa en
+          cobranza: 146 millones de gestiones al mes en 15 países de Latinoamérica.
+        </p>
       </div>
     </div>
   )
