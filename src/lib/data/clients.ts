@@ -17,11 +17,6 @@ export const clients = [
   //   logo: AssetImage.telefonicaLogo.src,
   // },
   {
-    id: 5,
-    name: 'Top Space',
-    logo: AssetImage.topSpaceLogo.src,
-  },
-  {
     id: 6,
     name: 'Maruz',
     logo: AssetImage.maruzLogo.src,
