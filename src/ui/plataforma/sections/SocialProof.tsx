@@ -25,20 +25,6 @@ export const SocialProof = () => {
             ))}
           </div>
         </div>
-
-        <style jsx>{`
-          @keyframes logo-marquee-scroll {
-            from {
-              transform: translateX(0);
-            }
-            to {
-              transform: translateX(-50%);
-            }
-          }
-          .animate-logo-marquee {
-            animation: logo-marquee-scroll 25s linear infinite;
-          }
-        `}</style>
       </div>
     </section>
   )
