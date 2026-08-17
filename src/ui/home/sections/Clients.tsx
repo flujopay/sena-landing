@@ -3,19 +3,14 @@ import { LogoSlider } from '@/ui/shared/LogoSlider'
 
 const clients = [
   {
+    id: 0,
+    name: "L'Oréal",
+    logo: AssetImage.lorealLogo.src,
+  },
+  {
     id: 1,
     name: 'Científica Andina',
     logo: AssetImage.cientificaLogo.src,
-  },
-  {
-    id: 2,
-    name: 'Proweld',
-    logo: AssetImage.proweldLogo.src,
-  },
-  {
-    id: 3,
-    name: 'Aquarius Consulting',
-    logo: AssetImage.aquariusConsultingLogo.src,
   },
   // {
   //   id: 4,
