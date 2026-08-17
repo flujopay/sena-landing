@@ -1,13 +1,4 @@
-import { AssetImage } from '@/lib/utils/assets/image'
-
-const clients = [
-  { name: "L'Oréal", logo: AssetImage.lorealLogo.src },
-  { name: 'Científica Andina', logo: AssetImage.cientificaLogo.src },
-  { name: 'Top Space', logo: AssetImage.topSpaceLogo.src },
-  { name: 'Maruz', logo: AssetImage.maruzLogo.src },
-  { name: 'AOM', logo: AssetImage.aomLogo.src },
-  { name: 'Recsa', logo: AssetImage.recsaLogo.src },
-]
+import { clients } from '@/lib/data/clients'
 
 const track = [...clients, ...clients]
 
