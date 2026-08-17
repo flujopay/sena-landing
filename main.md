@@ -183,9 +183,8 @@ _"Desde startups hasta empresas establecidas, tenemos el plan perfecto para ti."
 
 _"Nuestra trayectoria y nuestros clientes nos avalan."_
 
+- L'Oréal
 - Cientifica Andina
-- Proweld
-- Aquarius Consulting
 - Top Space
 - Maruz
 - AOM

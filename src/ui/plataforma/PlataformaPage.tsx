@@ -7,6 +7,7 @@ import Link from 'next/link'
 import { Suspense, useEffect, useState } from 'react'
 import { ArrowRight, CheckCircle, BarChart2, Zap, Eye, Quote } from 'lucide-react'
 import { PlataformaContactForm } from './sections/PlataformaContactForm'
+import { SocialProof } from './sections/SocialProof'
 import { ProductsEcosystem } from '@/ui/shared/ProductsEcosystem'
 
 const StickyMobileCTA = () => {
@@ -140,6 +141,8 @@ export const PlataformaPage = () => {
             </div>
           </div>
         </section>
+
+        <SocialProof />
 
         {/* Pain points — agitación */}
         <section className="bg-white py-12 md:py-16">
