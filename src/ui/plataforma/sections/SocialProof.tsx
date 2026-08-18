@@ -20,7 +20,7 @@ export const SocialProof = () => {
                 key={`${client.name}-${index}`}
                 src={client.logo}
                 alt={client.name}
-                className="h-8 md:h-10 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300 flex-shrink-0"
+                className="h-10 md:h-12 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300 flex-shrink-0"
               />
             ))}
           </div>
