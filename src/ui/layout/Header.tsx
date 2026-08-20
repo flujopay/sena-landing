@@ -483,12 +483,12 @@ export const Header = ({ variant }: Props) => {
     setOpenProducts(false)
 
     if (tab === 'recuperacion') {
-      window.location.href = 'https://recupera.somossena.com/'
+      router.push('/recupera')
       return
     }
 
     if (tab === 'opera') {
-      window.location.href = 'https://agente.somossena.com'
+      router.push('/opera')
       return
     }
 
