@@ -9,6 +9,7 @@ type LeadPayload = {
   telefono: string
   facturas_pendientes: string
   alguien_cobrando: string
+  producto?: 'Plataforma' | 'Recupera' | 'Opera'
   utmSource?: string
   utmMedium?: string
   utmCampaign?: string
@@ -84,6 +85,7 @@ async function findContactByEmail(token: string, email: string): Promise<string 
 }
 
 async function upsertContact(token: string, body: LeadPayload): Promise<string> {
+  const producto = body.producto ?? 'Plataforma'
   const prioridad = calcPrioridad(body.facturas_pendientes, body.alguien_cobrando)
   const origen = mapOrigen(body.utmSource, body.gclid, body.fbclid)
   const fuente = body.gclid ? 'Google Ads' : body.fbclid ? 'Meta Ads' : body.utmSource ? 'Ads' : 'Orgánico'
@@ -104,7 +106,7 @@ async function upsertContact(token: string, body: LeadPayload): Promise<string> 
     sena_intencion: calcSenaIntencion(prioridad),
     facturas_pendientes: body.facturas_pendientes,
     alguien_cobrando: normalizeCobrando(body.alguien_cobrando),
-    sena_contexto: `Lead landing Plataforma. Facturas: ${body.facturas_pendientes}. Cobrando: ${body.alguien_cobrando}. Prioridad auto: ${prioridad}. Origen: ${origen}.`,
+    sena_contexto: `Lead landing ${producto}. Facturas: ${body.facturas_pendientes}. Cobrando: ${body.alguien_cobrando}. Prioridad auto: ${prioridad}. Origen: ${origen}.`,
   }
 
   if (body.gclid) properties.gclid = body.gclid
@@ -142,6 +144,7 @@ async function upsertContact(token: string, body: LeadPayload): Promise<string> 
 }
 
 async function createDeal(token: string, contactId: string, body: LeadPayload): Promise<void> {
+  const producto = body.producto ?? 'Plataforma'
   const prioridad = calcPrioridad(body.facturas_pendientes, body.alguien_cobrando)
 
   const res = await fetch(`${HS_API}/crm/v3/objects/deals`, {
@@ -149,7 +152,7 @@ async function createDeal(token: string, contactId: string, body: LeadPayload): 
     headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
     body: JSON.stringify({
       properties: {
-        dealname: `Plataforma — ${body.empresa}`,
+        dealname: `${producto} — ${body.empresa}`,
         dealstage: 'appointmentscheduled',
         pipeline: 'default',
         hubspot_owner_id: OWNER_FRANCISCO,
@@ -207,7 +210,7 @@ async function sendMetaCapi(body: LeadPayload): Promise<void> {
             action_source: 'website',
             user_data: userData,
             custom_data: {
-              content_name: 'plataforma',
+              content_name: (body.producto ?? 'Plataforma').toLowerCase(),
               utm_source: body.utmSource,
               utm_campaign: body.utmCampaign,
             },
