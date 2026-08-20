@@ -5,9 +5,18 @@ import { AssetImage } from '@/lib/utils/assets/image'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Suspense, useEffect, useState } from 'react'
-import { ArrowRight, CheckCircle, BarChart2, Zap, Eye, Quote } from 'lucide-react'
-import { PlataformaContactForm } from './sections/PlataformaContactForm'
-import { SocialProof } from './sections/SocialProof'
+import {
+  ArrowRight,
+  CheckCircle,
+  Calendar,
+  MessageCircleOff,
+  DollarSign,
+  FileSearch,
+  Users,
+  TrendingUp,
+} from 'lucide-react'
+import { RecuperaContactForm } from './sections/RecuperaContactForm'
+import { SocialProof } from '@/ui/plataforma/sections/SocialProof'
 import { ProductsEcosystem } from '@/ui/shared/ProductsEcosystem'
 
 const StickyMobileCTA = () => {
@@ -37,14 +46,14 @@ const StickyMobileCTA = () => {
         onClick={scrollToForm}
         className="w-full flex items-center justify-center gap-2 bg-brand-primary text-white font-bold py-3.5 px-6 rounded-xl text-base active:scale-[0.98] transition-transform"
       >
-        Agenda demo gratuito
+        Solicita Evaluación Gratuita
         <ArrowRight className="h-5 w-5" />
       </button>
     </div>
   )
 }
 
-export const PlataformaPage = () => {
+export const RecuperaPage = () => {
   const scrollToForm = () => {
     const el = document.getElementById('contacto')
     if (!el) return
@@ -69,7 +78,7 @@ export const PlataformaPage = () => {
             onClick={scrollToForm}
             className="md:hidden flex items-center gap-1.5 bg-brand-primary text-white text-sm font-bold px-4 py-2 rounded-lg active:scale-[0.97] transition-transform"
           >
-            Solicitar demo
+            Solicitar evaluación
             <ArrowRight className="h-4 w-4" />
           </button>
         </div>
@@ -80,22 +89,21 @@ export const PlataformaPage = () => {
         <section className="max-w-[1280px] mx-auto px-4 py-12 md:py-20">
           <div className="max-w-3xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 bg-brand-primary/10 text-brand-primary-dark text-xs font-bold px-3 py-1.5 rounded-full mb-6">
-              Software de cobranza B2B para empresas en Chile
+              Empresa de cobranza B2B con publicación DICOM en Chile
             </div>
 
             <h1 className="font-canaro text-brand-primary-dark text-3xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-4">
-              Automatiza tu cobranza B2B.{' '}
-              <span className="text-brand-primary">Visibilidad total de tu cartera.</span>
+              Recupera tu cartera vencida.{' '}
+              <span className="text-brand-primary">Pagas solo si lo logramos.</span>
             </h1>
 
             <p className="text-text-secondary text-base md:text-xl leading-relaxed mb-8 max-w-2xl mx-auto">
-              Gestiona cuentas por cobrar, envía recordatorios automáticos y consolida tu cartera sin
-              reemplazar tu tech stack. Primer resultado en 30 días.
+              Sin costo fijo, sin riesgo. Solo pagas un porcentaje sobre lo que efectivamente recuperamos.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 justify-center mb-12">
               <Button
-                text="Agenda demo gratuito"
+                text="Solicita Evaluación Gratuita"
                 variant="secondaryFilled"
                 size="lg"
                 onClick={scrollToForm}
@@ -121,21 +129,21 @@ export const PlataformaPage = () => {
             {/* Stats bar */}
             <div className="grid grid-cols-3 gap-4 bg-white rounded-2xl shadow-lg p-6 max-w-2xl mx-auto">
               <div className="text-center">
-                <div className="text-2xl md:text-3xl font-extrabold text-brand-primary mb-1">30 días</div>
+                <div className="text-2xl md:text-3xl font-extrabold text-brand-primary mb-1">+85%</div>
                 <div className="text-text-secondary text-xs md:text-sm font-medium leading-tight">
-                  Primer resultado
+                  Tasa de recuperación
                 </div>
               </div>
               <div className="text-center border-x border-border-default">
-                <div className="text-2xl md:text-3xl font-extrabold text-brand-primary mb-1">+85%</div>
+                <div className="text-2xl md:text-3xl font-extrabold text-brand-primary mb-1">15%</div>
                 <div className="text-text-secondary text-xs md:text-sm font-medium leading-tight">
-                  Tasa de recupero
+                  Comisión, solo si recuperamos
                 </div>
               </div>
               <div className="text-center">
-                <div className="text-2xl md:text-3xl font-extrabold text-brand-primary mb-1">0</div>
+                <div className="text-2xl md:text-3xl font-extrabold text-brand-primary mb-1">$0</div>
                 <div className="text-text-secondary text-xs md:text-sm font-medium leading-tight">
-                  Cambios a tu stack
+                  Costo inicial
                 </div>
               </div>
             </div>
@@ -144,31 +152,31 @@ export const PlataformaPage = () => {
 
         <SocialProof />
 
-        {/* Pain points — agitación */}
+        {/* Casos de uso — agitación */}
         <section className="bg-white py-12 md:py-16">
           <div className="max-w-[1280px] mx-auto px-4">
             <h2 className="text-brand-primary-dark text-2xl md:text-3xl font-extrabold text-center mb-2">
-              ¿Te suena esto?
+              ¿Tu empresa está en alguno de estos casos?
             </h2>
             <p className="text-text-secondary text-center mb-10">
-              El dinero está. Solo que no está disponible.
+              Si tu cartera vencida se acumula, hay una forma de recuperarla sin arriesgar nada.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
               {[
                 {
-                  icon: <BarChart2 className="h-6 w-6 text-brand-primary" />,
-                  title: 'Capital atrapado',
-                  desc: 'Tienes cartera vencida de más de 60 días y no sabes exactamente cuánto ni de quién.',
+                  icon: <Calendar className="h-6 w-6 text-brand-primary" />,
+                  title: 'Facturas +90 días vencidas',
+                  desc: 'Clientes corporativos con pagos atrasados que requieren negociación profesional.',
                 },
                 {
-                  icon: <Eye className="h-6 w-6 text-brand-primary" />,
-                  title: 'Cobranza a ciegas',
-                  desc: 'Tu equipo gestiona en Excel o Sheets. Nadie es el dueño del proceso y las cosas se pierden.',
+                  icon: <MessageCircleOff className="h-6 w-6 text-brand-primary" />,
+                  title: 'Deudores que no responden',
+                  desc: 'Clientes que dejaron de responder. La publicación en DICOM reactiva la conversación.',
                 },
                 {
-                  icon: <Zap className="h-6 w-6 text-brand-primary" />,
-                  title: 'Decisiones sin datos',
-                  desc: 'No puedes saber qué clientes van a pagar, cuáles necesitan acción urgente ni tu flujo real.',
+                  icon: <DollarSign className="h-6 w-6 text-brand-primary" />,
+                  title: 'Facturas de alto valor sin gestión activa',
+                  desc: 'Cuando el monto justifica externalizar con especialistas que trabajan solo a contingencia.',
                 },
               ].map((item) => (
                 <div key={item.title} className="bg-slate-50 rounded-2xl p-6 border border-border-default">
@@ -183,28 +191,31 @@ export const PlataformaPage = () => {
           </div>
         </section>
 
-        {/* How it works */}
+        {/* Cómo funciona */}
         <section id="como-funciona" className="py-12 md:py-16">
           <div className="max-w-[1280px] mx-auto px-4">
             <h2 className="text-brand-primary-dark text-2xl md:text-3xl font-extrabold text-center mb-10">
-              Cómo Sena resuelve cada dolor
+              ¿Cómo recuperamos tu cartera?
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
               {[
                 {
+                  icon: <FileSearch className="h-6 w-6 text-brand-primary" />,
                   step: '01',
-                  title: 'Visibilidad total',
-                  desc: 'Dashboard unificado de toda tu cartera. Sabes quién debe, cuánto y hace cuánto. En tiempo real.',
+                  title: 'Evaluación Gratuita',
+                  desc: 'Analizamos tu cartera y priorizamos casos según probabilidad de recuperación. Resultado en 24-48 horas.',
                 },
                 {
+                  icon: <Users className="h-6 w-6 text-brand-primary" />,
                   step: '02',
-                  title: 'Cobranza automática',
-                  desc: 'Recordatorios por WhatsApp, email y llamada. El sistema aprende qué canal funciona con cada cliente.',
+                  title: 'Gestión Humana + IA',
+                  desc: 'Contactamos a tus deudores, con publicación DICOM cuando corresponde. Preservamos la relación donde es posible.',
                 },
                 {
+                  icon: <TrendingUp className="h-6 w-6 text-brand-primary" />,
                   step: '03',
-                  title: 'Conciliación sin fricción',
-                  desc: 'Se integra con tu ERP o facturador. Sin reemplazar nada. Funcional en días, no meses.',
+                  title: 'Recuperación + Dashboard',
+                  desc: 'Pagos directos a tu cuenta. Dashboard en tiempo real con progreso y proyecciones.',
                 },
               ].map((item) => (
                 <div
@@ -225,61 +236,15 @@ export const PlataformaPage = () => {
           <div className="max-w-[1280px] mx-auto px-4">
             <div className="flex flex-col items-center gap-5">
               <div className="flex flex-wrap justify-center gap-5">
-                {[
-                  'Sin contrato de largo plazo',
-                  'Implementación en días',
-                  'Soporte en español',
-                  'Datos 100% en Chile',
-                ].map((item) => (
-                  <div key={item} className="flex items-center gap-2 text-text-secondary text-sm">
-                    <CheckCircle className="h-4 w-4 text-brand-primary shrink-0" />
-                    <span>{item}</span>
-                  </div>
-                ))}
+                {['Sin costo inicial', 'Sin compromiso', 'Respuesta en 24h', 'Modelo 100% contingente'].map(
+                  (item) => (
+                    <div key={item} className="flex items-center gap-2 text-text-secondary text-sm">
+                      <CheckCircle className="h-4 w-4 text-brand-primary shrink-0" />
+                      <span>{item}</span>
+                    </div>
+                  )
+                )}
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Testimonial — Osvaldo Cáceres, RECSA */}
-        <section className="py-12 md:py-16 bg-surface-secondary">
-          <div className="max-w-[1280px] mx-auto px-4">
-            <div className="max-w-2xl mx-auto">
-              <div className="bg-white rounded-2xl p-8 shadow-sm border border-border-default relative">
-                <Quote className="absolute top-6 right-6 h-8 w-8 text-brand-primary/10" />
-                <div className="flex gap-1 mb-5">
-                  {[...Array(5)].map((_, i) => (
-                    <svg key={i} className="h-4 w-4 text-yellow-400 fill-yellow-400" viewBox="0 0 20 20">
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
-                  ))}
-                </div>
-                <p className="text-text-primary text-lg leading-relaxed mb-6 italic">
-                  "Automatizamos por completo la conciliación entre pagos y facturas. Pasamos de 1.000 a más
-                  de 10.000 conciliaciones mensuales, con trazabilidad y aprobación en tiempo real. Es un
-                  cambio que no tiene vuelta atrás."
-                </p>
-                <div className="flex items-center justify-between border-t border-border-default pt-5">
-                  <div>
-                    <p className="font-bold text-brand-primary-dark text-sm">Osvaldo Cáceres</p>
-                    <p className="text-text-secondary text-xs mt-0.5">
-                      KAM, RECSA · Cliente Sena Plataforma hace más de un año
-                    </p>
-                  </div>
-                  <Image src={AssetImage.byRecsa} alt="RECSA" className="h-7 w-auto opacity-70" />
-                </div>
-              </div>
-              <p className="text-center text-xs text-text-disabled mt-4">
-                ¿Quieres ver más casos?{' '}
-                <Link
-                  href="/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-brand-primary hover:underline font-medium"
-                >
-                  Conoce Sena →
-                </Link>
-              </p>
             </div>
           </div>
         </section>
@@ -290,21 +255,19 @@ export const PlataformaPage = () => {
             <div className="max-w-xl mx-auto">
               <div className="text-center mb-8">
                 <h2 className="text-brand-primary-dark text-2xl md:text-4xl font-extrabold mb-3">
-                  Agenda tu demo de <span className="text-brand-primary">30 minutos</span>
+                  Evalúa tu cartera <span className="text-brand-primary">gratis</span>
                 </h2>
-                <p className="text-text-secondary">
-                  Sin compromiso. Te mostramos cómo funciona con tu cartera real.
-                </p>
+                <p className="text-text-secondary">Sin compromiso. Resultado en 24-48 horas.</p>
               </div>
               <Suspense>
-                <PlataformaContactForm />
+                <RecuperaContactForm />
               </Suspense>
             </div>
           </div>
         </section>
       </main>
 
-      <ProductsEcosystem active="plataforma" />
+      <ProductsEcosystem active="recupera" />
 
       {/* Footer minimal */}
       <footer className="bg-white border-t border-border-default py-6 px-4">

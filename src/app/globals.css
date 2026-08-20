@@ -80,6 +80,19 @@ body {
   scale: 1.05;
 }
 
+/* Las landings de producto (plataforma/recupera/opera) muestran una barra de
+   CTA fija de ancho completo en mobile. El botón de WhatsApp (z-index 9998)
+   queda encima y tapa esa barra — y no hay hueco vertical libre para
+   reubicarlo sin taparse con el widget de NinoChat (fijo a 100px del fondo,
+   ver offsetBottom en NinoChatInit) o con el contenido de la página. En estas
+   landings de conversión única, la propia barra de CTA ya cumple ese rol, así
+   que ocultamos WhatsApp en mobile en vez de competir por el mismo espacio. */
+@media (max-width: 767px) {
+  body:has(.sena-sticky-mobile-cta) .btn-floating-whatsapp {
+    display: none;
+  }
+}
+
 .btn-floating-whatsapp svg {
   width: 100%;
   height: 100%;

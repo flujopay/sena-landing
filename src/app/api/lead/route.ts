@@ -9,6 +9,7 @@ type LeadPayload = {
   telefono: string
   facturas_pendientes: string
   alguien_cobrando: string
+  producto?: 'Plataforma' | 'Recupera' | 'Opera'
   utmSource?: string
   utmMedium?: string
   utmCampaign?: string
@@ -21,8 +22,14 @@ type LeadPayload = {
 
 const HS_API = 'https://api.hubapi.com'
 const OWNER_FRANCISCO = '89319447'
-const PRODUCT_LIST_ID = '362'
 const INTERES_DEL_PRODUCTO = 'Cuentas por Cobrar'
+
+// ILS IDs (v3) de las listas "Leads <Producto>" en HubSpot — distintos de los IDs v1 de la UI.
+const PRODUCT_LIST_ID: Record<'Plataforma' | 'Recupera' | 'Opera', string> = {
+  Plataforma: '362',
+  Recupera: '363',
+  Opera: '364',
+}
 
 // utm_source → valor del enum origen en HubSpot
 function mapOrigen(utmSource?: string, gclid?: string, fbclid?: string): string {
@@ -84,6 +91,7 @@ async function findContactByEmail(token: string, email: string): Promise<string 
 }
 
 async function upsertContact(token: string, body: LeadPayload): Promise<string> {
+  const producto = body.producto ?? 'Plataforma'
   const prioridad = calcPrioridad(body.facturas_pendientes, body.alguien_cobrando)
   const origen = mapOrigen(body.utmSource, body.gclid, body.fbclid)
   const fuente = body.gclid ? 'Google Ads' : body.fbclid ? 'Meta Ads' : body.utmSource ? 'Ads' : 'Orgánico'
@@ -104,7 +112,7 @@ async function upsertContact(token: string, body: LeadPayload): Promise<string> 
     sena_intencion: calcSenaIntencion(prioridad),
     facturas_pendientes: body.facturas_pendientes,
     alguien_cobrando: normalizeCobrando(body.alguien_cobrando),
-    sena_contexto: `Lead landing Plataforma. Facturas: ${body.facturas_pendientes}. Cobrando: ${body.alguien_cobrando}. Prioridad auto: ${prioridad}. Origen: ${origen}.`,
+    sena_contexto: `Lead landing ${producto}. Facturas: ${body.facturas_pendientes}. Cobrando: ${body.alguien_cobrando}. Prioridad auto: ${prioridad}. Origen: ${origen}.`,
   }
 
   if (body.gclid) properties.gclid = body.gclid
@@ -142,6 +150,7 @@ async function upsertContact(token: string, body: LeadPayload): Promise<string> 
 }
 
 async function createDeal(token: string, contactId: string, body: LeadPayload): Promise<void> {
+  const producto = body.producto ?? 'Plataforma'
   const prioridad = calcPrioridad(body.facturas_pendientes, body.alguien_cobrando)
 
   const res = await fetch(`${HS_API}/crm/v3/objects/deals`, {
@@ -149,7 +158,7 @@ async function createDeal(token: string, contactId: string, body: LeadPayload): 
     headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
     body: JSON.stringify({
       properties: {
-        dealname: `Plataforma — ${body.empresa}`,
+        dealname: `${producto} — ${body.empresa}`,
         dealstage: 'appointmentscheduled',
         pipeline: 'default',
         hubspot_owner_id: OWNER_FRANCISCO,
@@ -170,8 +179,12 @@ async function createDeal(token: string, contactId: string, body: LeadPayload): 
   })
 }
 
-async function addToList(token: string, contactId: string): Promise<void> {
-  const res = await fetch(`${HS_API}/crm/v3/lists/${PRODUCT_LIST_ID}/memberships/add`, {
+async function addToList(
+  token: string,
+  contactId: string,
+  producto: 'Plataforma' | 'Recupera' | 'Opera'
+): Promise<void> {
+  const res = await fetch(`${HS_API}/crm/v3/lists/${PRODUCT_LIST_ID[producto]}/memberships/add`, {
     method: 'PUT',
     headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
     body: JSON.stringify([contactId]),
@@ -207,7 +220,7 @@ async function sendMetaCapi(body: LeadPayload): Promise<void> {
             action_source: 'website',
             user_data: userData,
             custom_data: {
-              content_name: 'plataforma',
+              content_name: (body.producto ?? 'Plataforma').toLowerCase(),
               utm_source: body.utmSource,
               utm_campaign: body.utmCampaign,
             },
@@ -246,11 +259,17 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'Email inválido' }, { status: 400 })
   }
 
+  const PRODUCTOS_VALIDOS = ['Plataforma', 'Recupera', 'Opera'] as const
+  if (body.producto && !PRODUCTOS_VALIDOS.includes(body.producto)) {
+    body.producto = undefined
+  }
+
   const capiPromise = sendMetaCapi(body)
 
   try {
     const contactId = await upsertContact(token, body)
-    await Promise.all([createDeal(token, contactId, body), addToList(token, contactId)])
+    const producto = body.producto ?? 'Plataforma'
+    await Promise.all([createDeal(token, contactId, body), addToList(token, contactId, producto)])
     await capiPromise
     return NextResponse.json({ ok: true })
   } catch (err) {

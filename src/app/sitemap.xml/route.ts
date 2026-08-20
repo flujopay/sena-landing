@@ -5,6 +5,9 @@ export async function GET() {
 
   const pages = [
     { path: '', priority: '1.0' },
+    { path: 'plataforma', priority: '0.9' },
+    { path: 'recupera', priority: '0.9' },
+    { path: 'opera', priority: '0.9' },
     { path: 'term', priority: '0.8' },
     { path: 'privacy', priority: '0.8' },
     { path: 'nosotros', priority: '0.8' },
