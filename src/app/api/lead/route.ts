@@ -249,6 +249,11 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'Email inválido' }, { status: 400 })
   }
 
+  const PRODUCTOS_VALIDOS = ['Plataforma', 'Recupera', 'Opera'] as const
+  if (body.producto && !PRODUCTOS_VALIDOS.includes(body.producto)) {
+    body.producto = undefined
+  }
+
   const capiPromise = sendMetaCapi(body)
 
   try {
