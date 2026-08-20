@@ -19,9 +19,8 @@ const PRODUCTS = [
     tag: 'Operamos por ti',
     desc: 'El equipo de cobranza que tu empresa no tiene. Nosotros operamos, tú ves los resultados.',
     cta: 'Ver Ópera',
-    href: 'https://agente.somossena.com',
+    href: '/opera',
     color: 'bg-violet-50 text-violet-800',
-    external: true,
   },
   {
     slug: 'recupera',
@@ -29,9 +28,8 @@ const PRODUCTS = [
     tag: 'Solo lo vencido',
     desc: 'Facturas vencidas que no has podido cobrar. Pagas solo si recuperamos, sin ticket mínimo.',
     cta: 'Ver Recupera',
-    href: 'https://recupera.somossena.com',
+    href: '/recupera',
     color: 'bg-emerald-50 text-emerald-800',
-    external: true,
   },
 ]
 
@@ -63,8 +61,6 @@ export const ProductsEcosystem = ({ active }: { active: 'plataforma' | 'recupera
               ) : (
                 <Link
                   href={p.href}
-                  target={p.external ? '_blank' : undefined}
-                  rel={p.external ? 'noopener noreferrer' : undefined}
                   className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-primary hover:text-brand-primary-dark transition-colors"
                 >
                   {p.cta}
