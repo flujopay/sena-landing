@@ -78,13 +78,16 @@ export default async function RootLayout({
                 url: 'https://www.somossena.com',
                 logo: 'https://www.somossena.com/sena-crm-lite.jpg',
                 description:
-                  'Empresa de cobranza B2B para Latinoamérica. Cubre el ciclo completo de cuentas por cobrar en tres modalidades: Plataforma Sena (software que opera la propia empresa), Ópera (servicio gestionado por el equipo de Sena) y Recupera (recuperación de facturas vencidas con éxito del 15%).',
+                  'Empresa de cobranza B2B con operación en Latinoamérica. Cubre el ciclo completo de cuentas por cobrar en tres modalidades: Plataforma Sena (la empresa opera su propia cobranza con la tecnología de Sena), Ópera (servicio gestionado: el equipo de Sena gobierna la operación de cobranza sobre una cartera de clientes a escala) y Recupera (recuperación de facturas ya vencidas, con éxito del 15% y sin fee fijo).',
                 slogan: 'El arte de cobrar bien',
                 areaServed: [
                   { '@type': 'Country', name: 'Chile' },
                   { '@type': 'Country', name: 'Perú' },
+                  { '@type': 'Country', name: 'Colombia' },
+                  { '@type': 'Country', name: 'México' },
                 ],
                 knowsAbout: [
+                  'cobranza externalizada a escala',
                   'cobranza B2B',
                   'cuentas por cobrar',
                   'recuperación de cartera vencida',
@@ -96,7 +99,7 @@ export default async function RootLayout({
                   '@type': 'ContactPoint',
                   contactType: 'sales',
                   email: 'hola@somossena.com',
-                  areaServed: ['CL', 'PE'],
+                  areaServed: ['CL', 'PE', 'CO', 'MX'],
                   availableLanguage: ['Spanish'],
                 },
               }),

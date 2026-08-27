@@ -23,10 +23,10 @@ export const PrivacyContent = () => {
             </p>
             <p className="leading-relaxed mt-3">
               Sena es una plataforma SaaS B2B especializada en gestión de cuentas por cobrar (AR) y cuentas
-              por pagar (AP), respaldada por Recsa. Sena respeta la privacidad de sus usuarios y clientes, y
-              se compromete a proteger la información personal y confidencial recopilada por medio de las
-              interacciones de los Usuarios con el sitio web www.somossena.com, sus subdominios, aplicaciones,
-              plataformas SaaS y servicios asociados.
+              por pagar (AP), parte del Grupo Altas Cumbres. Sena respeta la privacidad de sus usuarios y
+              clientes, y se compromete a proteger la información personal y confidencial recopilada por medio
+              de las interacciones de los Usuarios con el sitio web www.somossena.com, sus subdominios,
+              aplicaciones, plataformas SaaS y servicios asociados.
             </p>
             <p className="leading-relaxed mt-3">
               El Usuario, al utilizar los servicios de Sena, autoriza expresamente a Sena para tratar y
