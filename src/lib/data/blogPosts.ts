@@ -1453,12 +1453,15 @@ export const blogPosts: BlogPost[] = [
       },
     ],
   },
+  // REORIENTADO 2026-08-26: el título, el slug y la bajada pasaron del lado del deudor
+  // al del acreedor. EL CUERPO TODAVÍA INSTRUYE AL DEUDOR paso a paso — hay que
+  // reescribirlo antes de publicar, o el post promete una cosa y entrega otra.
   {
     id: 20,
-    slug: 'descubre-como-salir-de-infocorp-consultar-tus-deudas-y-limpiar-tu-historial-financiero-para-recuperar-acceso-a-credito',
-    title: '¿Cómo salir de Infocorp y limpiar tu historial crediticio? ',
+    slug: 'como-saber-si-tu-cliente-te-va-a-pagar-antes-de-venderle-a-credito',
+    title: 'Cómo saber si tu cliente te va a pagar antes de venderle a crédito',
     intro:
-      'Estar en Infocorp representa una de las mayores preocupaciones para personas y pymes que buscan acceder a créditos, financiamiento o cerrar contratos importantes. Un historial negativo puede convertirse en un obstáculo significativo, pero no es permanente. Con los pasos adecuados, es posible salir de Infocorp, limpiar tu historial crediticio y recuperar la confianza financiera. En este artículo explicaremos cómo funciona este sistema, qué acciones tomar y qué alternativas existen para evitar reincidencias.',
+      'Vender a crédito es una decisión de riesgo y casi siempre se toma a ciegas. Cuando la factura vence y el cliente no paga, el problema ya no tiene arreglo barato: quedó plata comprometida en una venta que no debiste aprobar en esas condiciones. En este artículo revisamos qué señales puedes mirar antes de dar el crédito, qué te dice y qué no te dice el historial comercial de una empresa, y cómo ordenar la decisión para que no dependa del olfato de quien vende.',
     date: '20 de enero 2026',
     tags: ['Blog'],
     image: AssetImageBlog.blog_20_main.src,
@@ -2013,12 +2016,15 @@ export const blogPosts: BlogPost[] = [
       },
     ],
   },
+  // REORIENTADO 2026-08-26: mismo caso que el id 20. La bajada anterior enseñaba a la
+  // pyme a subir SU propio score; ahora habla de leer el score DEL CLIENTE.
+  // EL CUERPO SIGUE ESCRITO PARA EL DEUDOR: reescribir antes de publicar.
   {
     id: 21,
-    slug: 'mejora-el-score-crediticio-de-tu-pyme-en-90-dias-con-estas-tacticas-efectivas-y-accede-a-mejores-oportunidades-financieras',
-    title: 'Score crediticio para pymes: 7 tácticas para subirlo en 90 días',
+    slug: 'score-crediticio-de-clientes-que-mirar-antes-de-aprobar-una-venta-a-credito',
+    title: 'Score crediticio de tus clientes: qué mirar antes de aprobar una venta a crédito',
     intro:
-      'El score crediticio se ha convertido en una de las métricas más influyentes a la hora de evaluar la solidez financiera de una empresa. Para una pyme, un puntaje bajo puede significar el cierre de puertas a nuevas oportunidades de crédito, proveedores desconfiados o incluso mayores tasas de interés. Sin embargo, mejorar este indicador no es una tarea imposible. Con disciplina, estrategia y acciones enfocadas, es posible subir el score crediticio de una pyme en tan solo 90 días.',
+      'El score crediticio de una empresa resume su comportamiento de pago en un número, y por eso es tentador tratarlo como un semáforo. No lo es. Un score sirve para ordenar una conversación sobre riesgo, no para reemplazarla. Revisamos qué mide realmente, en qué casos un puntaje bajo no significa que el cliente no vaya a pagarte, y cómo usarlo junto a lo que ya sabes de tu propia cartera para decidir cuánto crédito das y en qué condiciones.',
     date: '23 de enero 2026',
     tags: ['Blog'],
     image: AssetImageBlog.blog_21_main.src,
