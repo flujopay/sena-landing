@@ -19,6 +19,7 @@ export async function generateMetadata({ params }: { params: Params }) {
   return {
     title: post.title,
     description: post.intro,
+    alternates: { canonical: `https://www.somossena.com/blog/${post.slug}` },
     openGraph: {
       title: post.title,
       description: post.intro,

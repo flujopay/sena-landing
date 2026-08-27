@@ -59,6 +59,63 @@ export default async function RootLayout({
       <html lang="es" dir="ltr">
         <GoogleTagManager gtmId="GTM-5W7F9MSP" />
         <head>
+          {/*
+            Identidad de la organizacion para buscadores y motores de respuesta.
+            El nombre "Sena" compite con el SENA de Colombia, con Sena Technologies
+            (intercomunicadores de moto) y con el rio Sena: sin estas senales el motor
+            no resuelve la marca. Medido el 2026-08-26.
+          */}
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                '@context': 'https://schema.org',
+                '@type': 'Organization',
+                '@id': 'https://www.somossena.com/#organization',
+                name: 'Sena',
+                alternateName: ['Sena Cobranza', 'Sena LATAM', 'somossena'],
+                legalName: 'Servicios de Tecnología Flujolink SpA',
+                url: 'https://www.somossena.com',
+                logo: 'https://www.somossena.com/sena-crm-lite.jpg',
+                description:
+                  'Empresa de cobranza B2B para Latinoamérica. Cubre el ciclo completo de cuentas por cobrar en tres modalidades: Plataforma Sena (software que opera la propia empresa), Ópera (servicio gestionado por el equipo de Sena) y Recupera (recuperación de facturas vencidas con éxito del 15%).',
+                slogan: 'El arte de cobrar bien',
+                areaServed: [
+                  { '@type': 'Country', name: 'Chile' },
+                  { '@type': 'Country', name: 'Perú' },
+                ],
+                knowsAbout: [
+                  'cobranza B2B',
+                  'cuentas por cobrar',
+                  'recuperación de cartera vencida',
+                  'cobranza externalizada',
+                  'automatización de cobranza',
+                ],
+                sameAs: ['https://www.linkedin.com/company/sena-latam/'],
+                contactPoint: {
+                  '@type': 'ContactPoint',
+                  contactType: 'sales',
+                  email: 'hola@somossena.com',
+                  areaServed: ['CL', 'PE'],
+                  availableLanguage: ['Spanish'],
+                },
+              }),
+            }}
+          />
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                '@context': 'https://schema.org',
+                '@type': 'WebSite',
+                '@id': 'https://www.somossena.com/#website',
+                name: 'Sena',
+                url: 'https://www.somossena.com',
+                inLanguage: 'es-CL',
+                publisher: { '@id': 'https://www.somossena.com/#organization' },
+              }),
+            }}
+          />
           {/* Google Ads — Plataforma (AW-17962976949) */}
           <Script
             src="https://www.googletagmanager.com/gtag/js?id=AW-17962976949"
