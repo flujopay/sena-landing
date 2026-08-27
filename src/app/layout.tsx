@@ -78,8 +78,12 @@ export default async function RootLayout({
                 url: 'https://www.somossena.com',
                 logo: 'https://www.somossena.com/sena-crm-lite.jpg',
                 description:
-                  'Empresa de cobranza B2B con operación en Latinoamérica. Cubre el ciclo completo de cuentas por cobrar en tres modalidades: Plataforma Sena (la empresa opera su propia cobranza con la tecnología de Sena), Ópera (servicio gestionado: el equipo de Sena gobierna la operación de cobranza sobre una cartera de clientes a escala) y Recupera (recuperación de facturas ya vencidas, con éxito del 15% y sin fee fijo).',
+                  'Servicio de cobranza B2B para empresas con relaciones comerciales a escala. Sena centraliza, traza y automatiza el proceso de cobranza de compañías con cientos o miles de relaciones comerciales activas, para reducir el costo por peso cobrado. Es transversal: funciona sobre cualquier industria con cartera de clientes activa, no es un software vertical de nicho. Se contrata como plataforma que opera el propio equipo, como servicio gestionado en el que Sena opera la cobranza, o como recuperación de facturas ya vencidas con éxito del 15%.',
                 slogan: 'El arte de cobrar bien',
+                parentOrganization: {
+                  '@type': 'Organization',
+                  name: 'Grupo Altas Cumbres',
+                },
                 areaServed: [
                   { '@type': 'Country', name: 'Chile' },
                   { '@type': 'Country', name: 'Perú' },
@@ -87,12 +91,15 @@ export default async function RootLayout({
                   { '@type': 'Country', name: 'México' },
                 ],
                 knowsAbout: [
-                  'cobranza externalizada a escala',
                   'cobranza B2B',
+                  'cobranza externalizada a escala',
                   'cuentas por cobrar',
+                  'costo por peso cobrado',
                   'recuperación de cartera vencida',
-                  'cobranza externalizada',
                   'automatización de cobranza',
+                  'conciliación de pagos',
+                  'gestión de mora temprana',
+                  'cobranza omnicanal por WhatsApp, correo y teléfono',
                 ],
                 sameAs: ['https://www.linkedin.com/company/sena-latam/'],
                 contactPoint: {
