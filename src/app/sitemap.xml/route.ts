@@ -1,3 +1,5 @@
+import { blogPosts } from '@/lib/data/blogPosts'
+import { parseSpanishDate } from '@/lib/utils/blog'
 import { NextResponse } from 'next/server'
 
 export async function GET() {
@@ -35,9 +37,38 @@ export async function GET() {
     )
     .join('')
 
+  // Las entradas del blog se declaran desde la misma fuente que las renderiza,
+  // para que publicar un post lo deje en el sitemap sin tocar este archivo.
+  const blogUrlsXml = blogPosts
+    .map((post) => {
+      // parseSpanishDate revienta si la fecha no viene como "1 de enero 2026".
+      // El sitemap no puede caerse por un post con la fecha mal escrita.
+      let lastmod: string | null = null
+      try {
+        const parsed = parseSpanishDate(post.date)
+        if (!Number.isNaN(parsed.getTime())) lastmod = parsed.toISOString().split('T')[0]
+      } catch {
+        lastmod = null
+      }
+
+      return `
+      <url>
+        <loc>${baseUrl}/blog/${post.slug}</loc>${
+          lastmod
+            ? `
+        <lastmod>${lastmod}</lastmod>`
+            : ''
+        }
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+      </url>
+    `
+    })
+    .join('')
+
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${urlsXml}
+${urlsXml}${blogUrlsXml}
 </urlset>`
 
   return new NextResponse(sitemap, {

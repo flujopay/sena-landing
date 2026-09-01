@@ -59,6 +59,74 @@ export default async function RootLayout({
       <html lang="es" dir="ltr">
         <GoogleTagManager gtmId="GTM-5W7F9MSP" />
         <head>
+          {/*
+            Identidad de la organizacion para buscadores y motores de respuesta.
+            El nombre "Sena" compite con el SENA de Colombia, con Sena Technologies
+            (intercomunicadores de moto) y con el rio Sena: sin estas senales el motor
+            no resuelve la marca. Medido el 2026-08-26.
+          */}
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                '@context': 'https://schema.org',
+                '@type': 'Organization',
+                '@id': 'https://www.somossena.com/#organization',
+                name: 'Sena',
+                alternateName: ['Sena Cobranza', 'Sena LATAM', 'somossena'],
+                legalName: 'Servicios de Tecnología Flujolink SpA',
+                url: 'https://www.somossena.com',
+                logo: 'https://www.somossena.com/sena-crm-lite.jpg',
+                description:
+                  'Servicio de cobranza B2B para empresas con relaciones comerciales a escala. Sena centraliza, traza y automatiza el proceso de cobranza de compañías con cientos o miles de relaciones comerciales activas, para reducir el costo por peso cobrado. Es transversal: funciona sobre cualquier industria con cartera de clientes activa, no es un software vertical de nicho. Se contrata como plataforma que opera el propio equipo, como servicio gestionado en el que Sena opera la cobranza, o como recuperación de facturas ya vencidas con éxito del 15%.',
+                slogan: 'El arte de cobrar bien',
+                parentOrganization: {
+                  '@type': 'Organization',
+                  name: 'Grupo Altas Cumbres',
+                },
+                areaServed: [
+                  { '@type': 'Country', name: 'Chile' },
+                  { '@type': 'Country', name: 'Perú' },
+                  { '@type': 'Country', name: 'Colombia' },
+                  { '@type': 'Country', name: 'México' },
+                  { '@type': 'Country', name: 'Ecuador' },
+                ],
+                knowsAbout: [
+                  'cobranza B2B',
+                  'cobranza externalizada a escala',
+                  'cuentas por cobrar',
+                  'costo por peso cobrado',
+                  'recuperación de cartera vencida',
+                  'automatización de cobranza',
+                  'conciliación de pagos',
+                  'gestión de mora temprana',
+                  'cobranza omnicanal por WhatsApp, correo y teléfono',
+                ],
+                sameAs: ['https://www.linkedin.com/company/sena-latam/'],
+                contactPoint: {
+                  '@type': 'ContactPoint',
+                  contactType: 'sales',
+                  email: 'hola@somossena.com',
+                  areaServed: ['CL', 'PE', 'CO', 'MX', 'EC'],
+                  availableLanguage: ['Spanish'],
+                },
+              }),
+            }}
+          />
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                '@context': 'https://schema.org',
+                '@type': 'WebSite',
+                '@id': 'https://www.somossena.com/#website',
+                name: 'Sena',
+                url: 'https://www.somossena.com',
+                inLanguage: 'es-CL',
+                publisher: { '@id': 'https://www.somossena.com/#organization' },
+              }),
+            }}
+          />
           {/* Google Ads — Plataforma (AW-17962976949) */}
           <Script
             src="https://www.googletagmanager.com/gtag/js?id=AW-17962976949"
