@@ -1554,8 +1554,14 @@ export const blogPosts: BlogPost[] = [
             { type: 'bold', text: 'Historial externo: ' },
             {
               type: 'text',
-              text: 'existen diversas herramientas que sirven de termómetro para evaluar qué tan buen pagador puede ser un cliente. Es lo que se conoce como score crediticio.',
+              text: 'existen diversas herramientas que sirven de termómetro para evaluar qué tan buen pagador puede ser un cliente. Es lo que se conoce como ',
             },
+            {
+              type: 'link',
+              text: 'score crediticio',
+              href: '/blog/score-crediticio-de-clientes-que-mirar',
+            },
+            { type: 'text', text: '.' },
           ],
           [
             { type: 'bold', text: 'Tu propia data de pago: ' },
@@ -1646,25 +1652,38 @@ export const blogPosts: BlogPost[] = [
       },
     ],
   },
-  // REORIENTADO 2026-08-26: mismo caso que el id 20. La bajada anterior enseñaba a la
-  // pyme a subir SU propio score; ahora habla de leer el score DEL CLIENTE.
-  // EL CUERPO SIGUE ESCRITO PARA EL DEUDOR: reescribir antes de publicar.
   {
     id: 21,
-    slug: 'score-crediticio-de-clientes-que-mirar-antes-de-aprobar-una-venta-a-credito',
+    slug: 'score-crediticio-de-clientes-que-mirar',
     title: 'Score crediticio de tus clientes: qué mirar antes de aprobar una venta a crédito',
     intro:
-      'El score crediticio de una empresa resume su comportamiento de pago en un número, y por eso es tentador tratarlo como un semáforo. No lo es. Un score sirve para ordenar una conversación sobre riesgo, no para reemplazarla. Revisamos qué mide realmente, en qué casos un puntaje bajo no significa que el cliente no vaya a pagarte, y cómo usarlo junto a lo que ya sabes de tu propia cartera para decidir cuánto crédito das y en qué condiciones.',
-    date: '23 de enero 2026',
-    tags: ['Blog'],
+      'Corres el score de un cliente nuevo y sale un número bajo. ¿Le vendes o no? Un score crediticio no es un semáforo: es una probabilidad construida sobre historial pasado, y un resultado bajo no significa que tu cliente no te vaya a pagar. Revisamos qué mide realmente, por qué un puntaje bajo puede tener explicación, y cómo cruzarlo con lo que ya sabes de tu propia cartera para decidir cuánto crédito das y en qué condiciones.',
+    date: '26 de agosto 2026',
+    tags: ['Blog', 'Riesgo crediticio'],
     image: AssetImageBlog.blog_21_main.src,
+    faq: [
+      {
+        question: '¿El score que entrega Sena es de empresas, de personas naturales, o ambos?',
+        answer: 'Ambos. Podemos entregar score tanto de personas naturales como de empresas.',
+      },
+      {
+        question: '¿Viene dentro del Plan Core?',
+        answer:
+          'Sí. Entregamos score crediticio de proveedores externos como parte de la operación de cobranza. El volumen de consultas y las condiciones los definimos según tu industria y tu modelo de negocio.',
+      },
+      {
+        question: '¿Mi cliente se entera si consulto su score?',
+        answer:
+          'No se le notifica: consultar un score no genera ningún aviso a tu cliente. En Sena cuidamos la relación comercial de nuestros clientes con sus clientes, y el score sirve para decidir mejor, no para presionar.',
+      },
+    ],
     content: [
       {
         type: 'paragraph',
         fragments: [
           {
             type: 'text',
-            text: 'El score crediticio se ha convertido en una de las métricas más influyentes a la hora de evaluar la solidez financiera de una empresa. Para una pyme, un puntaje bajo puede significar el cierre de puertas a nuevas oportunidades de crédito, proveedores desconfiados o incluso mayores tasas de interés. Sin embargo, mejorar este indicador no es una tarea imposible. Con disciplina, estrategia y acciones enfocadas, es posible subir el score crediticio de una pyme en tan solo 90 días.',
+            text: 'Tomaste una excelente decisión: utilizar un score crediticio para evaluar la salud comercial de tus clientes. Corres el score para un cliente nuevo. Obtienes un número bajo. ¿Qué haces? ¿Le vendes a ese cliente?',
           },
         ],
       },
@@ -1673,42 +1692,39 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: 'text',
-            text: 'En este artículo se presentan siete tácticas prácticas para lograrlo.',
+            text: 'El score crediticio es un instrumento que mide el riesgo financiero de una empresa basado en su historial y que busca predecir su comportamiento de pago futuro, estableciendo una probabilidad de incumplimiento o de quiebra, según la herramienta.',
           },
         ],
       },
       {
-        type: 'subtitle',
-        text: '¿Qué es el score crediticio de una pyme y por qué importa?',
+        type: 'paragraph',
+        fragments: [{ type: 'text', text: 'El score se compone de dos ventanas de tiempo:' }],
+      },
+      {
+        type: 'list',
+        items: [
+          [
+            { type: 'bold', text: 'Retrospectiva: ' },
+            {
+              type: 'text',
+              text: 'dependiendo de la herramienta, pueden analizar 12 a 24 meses, o incluso años en caso de que la empresa presente causas judiciales.',
+            },
+          ],
+          [
+            { type: 'bold', text: 'Predictiva: ' },
+            {
+              type: 'text',
+              text: 'en base a modelos estadísticos se pronostica un comportamiento de pago para los próximos meses. A la vez se hace una actualización periódica, en ciclos dinámicos que dependen de la industria en la que operas.',
+            },
+          ],
+        ],
       },
       {
         type: 'paragraph',
         fragments: [
           {
             type: 'text',
-            text: 'El score crediticio es una calificación que refleja el nivel de riesgo de una empresa. Se calcula con base en el historial de pagos, la cantidad de obligaciones vigentes y la capacidad de respuesta financiera.',
-          },
-        ],
-      },
-      {
-        type: 'paragraph',
-        fragments: [
-          {
-            type: 'text',
-            text: 'En la práctica, este puntaje es consultado por bancos antes de otorgar préstamos, por proveedores al definir plazos de pago y hasta por aliados estratégicos antes de firmar un contrato. Un score bajo se interpreta como una alerta de incumplimiento, mientras que un score alto abre puertas a mejores condiciones de financiamiento y confianza comercial.',
-          },
-        ],
-      },
-      {
-        type: 'subtitle',
-        text: 'Diagnóstico inicial: conoce tu puntaje actual',
-      },
-      {
-        type: 'paragraph',
-        fragments: [
-          {
-            type: 'text',
-            text: 'Antes de mejorar tu puntaje, es indispensable saber en qué punto estás. Para ello puedes:',
+            text: 'Un buen score crediticio debe considerar el historial de pagos, el nivel de endeudamiento, los datos demográficos y la antigüedad de la empresa, incluyendo además cualquier registro público que pueda impactar la gestión de sus facturas.',
           },
         ],
       },
@@ -1717,7 +1733,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: 'text',
-            text: 'Solicitar un reporte crediticio empresarial en centrales de riesgo como Equifax o TransUnion.',
+            text: 'Conviene tener presente la escala del fenómeno: aproximadamente la mitad de las ventas B2B a crédito presentan atraso (Atradius Payment Practices Barometer). El atraso es la norma, no la excepción, y por eso un score bajo no se lee como veredicto.',
           },
         ],
       },
@@ -1726,7 +1742,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: 'text',
-            text: 'Revisar en la Superintendencia de Banca, Seguros y AFP (SBS) si operas en Perú.',
+            text: 'Dado que el score es una probabilidad, un resultado bajo no implica que no te vaya a pagar. Existen diversos motivos por los cuales un cliente puede tener un score bajo: empresa nueva, giro estacional o una disputa comercial, por ejemplo.',
           },
         ],
       },
@@ -1735,296 +1751,41 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: 'text',
-            text: 'Consultar con tu banco o institución financiera si ofrecen evaluaciones internas de tu empresa.',
-          },
-        ],
-      },
-      {
-        type: 'paragraph',
-        fragments: [
-          {
-            type: 'text',
-            text: 'Este diagnóstico no solo muestra tu score actual, también detalla deudas vencidas, antigüedad de la cartera y patrones de pago. Con esta información, podrás definir prioridades claras.',
-          },
-        ],
-      },
-      {
-        type: 'subtitle',
-        text: '7 tácticas para mejorar el score crediticio en 90 días',
-      },
-      {
-        type: 'paragraph',
-        fragments: [
-          {
-            type: 'bold',
-            text: '1. Paga tus facturas y créditos a tiempo',
-          },
-        ],
-      },
-      {
-        type: 'paragraph',
-        fragments: [
-          {
-            type: 'text',
-            text: 'El factor que más pesa en la evaluación crediticia es la puntualidad de los pagos. Una factura vencida, aunque sea pequeña, puede arrastrar tu score hacia abajo. Programa alertas o automatiza recordatorios para evitar retrasos.',
-          },
-        ],
-      },
-      {
-        type: 'paragraph',
-        fragments: [
-          {
-            type: 'bold',
-            text: '2. Renegocia deudas vencidas y busca acuerdos formales',
-          },
-        ],
-      },
-      {
-        type: 'paragraph',
-        fragments: [
-          {
-            type: 'text',
-            text: 'Si tu empresa atraviesa problemas de liquidez, no ignores la deuda. Contacta a la entidad acreedora y plantea una reestructuración. Los acuerdos de pago reflejados en el historial son mejor vistos que los impagos prolongados.',
-          },
-        ],
-      },
-      {
-        type: 'paragraph',
-        fragments: [
-          {
-            type: 'bold',
-            text: '3. Evita sobregirar tus líneas de crédito',
-          },
-        ],
-      },
-      {
-        type: 'paragraph',
-        fragments: [
-          {
-            type: 'text',
-            text: 'Tener acceso a financiamiento no significa usarlo al 100%. Lo ideal es mantener el uso de líneas de crédito por debajo del 50%. Esto muestra control y reduce el nivel de riesgo percibido por bancos y proveedores.',
-          },
-        ],
-      },
-      {
-        type: 'paragraph',
-        fragments: [
-          {
-            type: 'link',
-            text: '4. Centraliza tu gestión financiera',
-            href: '',
-          },
-        ],
-      },
-      {
-        type: 'paragraph',
-        fragments: [
-          {
-            type: 'text',
-            text: 'El desorden es un enemigo silencioso. Muchas pymes dependen de Excel y WhatsApp para controlar pagos y cobranzas, lo cual genera errores. Implementar un ERP o una plataforma de cobranza inteligente permite tener una visión clara y ordenada de todas las cuentas.',
-          },
-        ],
-      },
-      {
-        type: 'paragraph',
-        fragments: [
-          {
-            type: 'bold',
-            text: '5. Separa cuentas personales de las empresariales',
-          },
-        ],
-      },
-      {
-        type: 'paragraph',
-        fragments: [
-          {
-            type: 'text',
-            text: 'Uno de los errores más comunes es mezclar ingresos del negocio con gastos personales. Esta práctica distorsiona el flujo de caja y genera retrasos en pagos empresariales. Abrir cuentas exclusivas para la pyme aporta claridad y transparencia.',
-          },
-        ],
-      },
-      {
-        type: 'paragraph',
-        fragments: [
-          {
-            type: 'bold',
-            text: '6. Diversifica tus fuentes de financiamiento',
-          },
-        ],
-      },
-      {
-        type: 'paragraph',
-        fragments: [
-          {
-            type: 'text',
-            text: 'Depender de un solo banco o proveedor puede ser riesgoso. Abrir líneas de crédito en distintas instituciones muestra estabilidad y fortalece tu reputación financiera. Además, te da mayor flexibilidad para enfrentar imprevistos.',
-          },
-        ],
-      },
-      {
-        type: 'paragraph',
-        fragments: [
-          {
-            type: 'link',
-            text: '7. Usa herramientas de cobranza como Sena',
-            href: 'http://www.somossena.com',
-          },
-        ],
-      },
-      {
-        type: 'paragraph',
-        fragments: [
-          {
-            type: 'text',
-            text: 'La liquidez depende en gran medida de que tus clientes paguen a tiempo. Con Sena, puedes:',
-          },
-        ],
-      },
-      {
-        type: 'paragraph',
-        fragments: [
-          {
-            type: 'text',
-            text: 'Automatizar recordatorios de pago por correo, SMS o WhatsApp.',
-          },
-        ],
-      },
-      {
-        type: 'paragraph',
-        fragments: [
-          {
-            type: 'text',
-            text: 'Segmentar clientes según nivel de morosidad.',
-          },
-        ],
-      },
-      {
-        type: 'paragraph',
-        fragments: [
-          {
-            type: 'text',
-            text: 'Obtener un dashboard en tiempo real con indicadores como DSO y antigüedad de cartera.',
-          },
-        ],
-      },
-      {
-        type: 'paragraph',
-        fragments: [
-          {
-            type: 'text',
-            text: 'Reducir tareas manuales que consumen tiempo y aumentan el riesgo de errores.',
-          },
-        ],
-      },
-      {
-        type: 'paragraph',
-        fragments: [
-          {
-            type: 'text',
-            text: 'Un flujo de caja estable gracias a una gestión de cobranza profesional impacta directamente en la mejora del score crediticio.',
-          },
-        ],
-      },
-      {
-        type: 'subtitle',
-        text: 'Cómo la cobranza impacta en tu historial financiero',
-      },
-      {
-        type: 'paragraph',
-        fragments: [
-          {
-            type: 'text',
-            text: 'Muchas pymes creen que el score crediticio solo depende de pagar préstamos bancarios. En realidad, el puntaje refleja la salud financiera integral de la empresa, y la cobranza juega un rol clave.',
-          },
-        ],
-      },
-      {
-        type: 'paragraph',
-        fragments: [
-          {
-            type: 'text',
-            text: 'Un mal manejo de cuentas por cobrar provoca atrasos en el pago de proveedores, sobregiros y deudas acumuladas. Todo esto afecta el score. En cambio, cuando el flujo de caja es estable gracias a recordatorios automáticos y segmentación de clientes, la empresa gana liquidez y puede cumplir puntualmente con sus obligaciones.',
-          },
-        ],
-      },
-      {
-        type: 'paragraph',
-        fragments: [
-          {
-            type: 'text',
-            text: `Ejemplo real: Una pyme de servicios de consultoría redujo en 30% su DSO (días promedio de cobranza) al implementar Sena. En tres meses, pasó de un score "riesgoso" a "aceptable" y obtuvo la aprobación de una nueva línea de crédito para expandirse.`,
-          },
-        ],
-      },
-      {
-        type: 'paragraph',
-        fragments: [
-          {
-            type: 'bold',
-            text: 'Recursos adicionales para monitorear tu score',
-          },
-        ],
-      },
-      {
-        type: 'paragraph',
-        fragments: [
-          {
-            type: 'text',
-            text: 'Equifax - Reportes crediticios',
-          },
-        ],
-      },
-      {
-        type: 'paragraph',
-        fragments: [
-          {
-            type: 'text',
-            text: 'Superintendencia de Banca, Seguros y AFP (SBS) - Perú',
-          },
-        ],
-      },
-      {
-        type: 'paragraph',
-        fragments: [
-          {
-            type: 'text',
-            text: 'TransUnion - Informes empresariales',
-          },
-        ],
-      },
-      {
-        type: 'subtitle',
-        text: 'Consultar periódicamente tu score ayuda a detectar problemas antes de que se conviertan en obstáculos para el crecimiento.',
-      },
-      {
-        type: 'paragraph',
-        fragments: [
-          {
-            type: 'text',
-            text: 'El score crediticio pymes no es estático, puede mejorar rápidamente con disciplina y estrategias claras. Pagar puntualmente, renegociar deudas, mantener un control financiero ordenado y usar herramientas de cobranza profesional son pasos que marcan la diferencia.',
-          },
-        ],
-      },
-      {
-        type: 'paragraph',
-        fragments: [
-          {
-            type: 'text',
-            text: 'Recuerda: tu score es el espejo de la salud de tu empresa. Un buen puntaje abre puertas a crédito, confianza y crecimiento sostenido.',
-          },
-        ],
-      },
-      {
-        type: 'paragraph',
-        fragments: [
-          {
-            type: 'text',
-            text: '¿Quieres fortalecer el flujo de caja de tu pyme? ',
+            text: 'Y si tu cliente ya te compra, la información que tienes tú puede ser mucho más valiosa que la que entrega un score crediticio. Aquí es donde se vuelve estratégico juntar ambas fuentes. Antes de eso conviene tener ordenada la decisión de crédito: lo desarrollamos en ',
           },
           {
             type: 'link',
-            text: 'Conversemos.',
-            href: 'https://meetings.hubspot.com/francisco502',
+            text: 'Cómo saber si tu cliente te va a pagar antes de venderle a crédito',
+            href: '/blog/como-saber-si-tu-cliente-te-va-a-pagar',
+          },
+          { type: 'text', text: '.' },
+        ],
+      },
+      { type: 'title', text: '¿Qué hago si el score de mi cliente es bajo?' },
+      {
+        type: 'paragraph',
+        fragments: [
+          {
+            type: 'text',
+            text: 'Con toda la data que tienes, te podemos ayudar a cruzar el score crediticio externo con tu propia data de pago y fijar límites por tramo.',
+          },
+        ],
+      },
+      {
+        type: 'paragraph',
+        fragments: [
+          {
+            type: 'text',
+            text: 'Si el score te dio bajo pero tu data muestra buen comportamiento de pago, puedes seguir vendiendo con resguardos: crédito a más corto plazo, un tope al monto de la próxima venta, o un porcentaje de pago adelantado cuando se trata de clientes nuevos.',
+          },
+        ],
+      },
+      {
+        type: 'paragraph',
+        fragments: [
+          {
+            type: 'text',
+            text: '¿Te gustaría optimizar el uso que le das a tu información de cobranza? Contáctanos o agenda una demo y lo revisamos contigo.',
           },
         ],
       },

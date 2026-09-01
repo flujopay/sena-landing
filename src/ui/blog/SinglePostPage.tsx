@@ -35,6 +35,19 @@ const renderContentBlock = (block: any, index: number) => {
               return <strong key={i}>{frag.text}</strong>
             }
             if (frag.type === 'link') {
+              // Los enlaces internos no abren pestaña nueva: son navegación del sitio,
+              // y así el enlace entre artículos se comporta como tal.
+              if (frag.href?.startsWith('/')) {
+                return (
+                  <Link
+                    key={i}
+                    href={frag.href}
+                    className="text-brand-primary underline hover:text-brand-primary-dark"
+                  >
+                    {frag.text}
+                  </Link>
+                )
+              }
               return (
                 <a
                   key={i}
@@ -76,6 +89,13 @@ const renderContentBlock = (block: any, index: number) => {
                     return <strong key={j}>{frag.text}</strong>
                   }
                   if (frag.type === 'link') {
+                    if (frag.href?.startsWith('/')) {
+                      return (
+                        <Link key={j} href={frag.href} className="text-brand-primary underline">
+                          {frag.text}
+                        </Link>
+                      )
+                    }
                     return (
                       <a
                         key={j}
