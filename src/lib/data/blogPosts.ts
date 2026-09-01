@@ -1453,38 +1453,39 @@ export const blogPosts: BlogPost[] = [
       },
     ],
   },
-  // REORIENTADO 2026-08-26: el título, el slug y la bajada pasaron del lado del deudor
-  // al del acreedor. EL CUERPO TODAVÍA INSTRUYE AL DEUDOR paso a paso — hay que
-  // reescribirlo antes de publicar, o el post promete una cosa y entrega otra.
   {
     id: 20,
-    slug: 'como-saber-si-tu-cliente-te-va-a-pagar-antes-de-venderle-a-credito',
+    slug: 'como-saber-si-tu-cliente-te-va-a-pagar',
     title: 'Cómo saber si tu cliente te va a pagar antes de venderle a crédito',
     intro:
-      'Vender a crédito es una decisión de riesgo y casi siempre se toma a ciegas. Cuando la factura vence y el cliente no paga, el problema ya no tiene arreglo barato: quedó plata comprometida en una venta que no debiste aprobar en esas condiciones. En este artículo revisamos qué señales puedes mirar antes de dar el crédito, qué te dice y qué no te dice el historial comercial de una empresa, y cómo ordenar la decisión para que no dependa del olfato de quien vende.',
-    date: '20 de enero 2026',
-    tags: ['Blog'],
+      'Vender a crédito es una decisión de riesgo y casi siempre se toma a ciegas. Con certeza no vas a saber si tu cliente te va a pagar, pero sí puedes reducir la incertidumbre con el historial externo, tu propia data de pago y las condiciones del trato. En este artículo revisamos qué señales mirar antes de dar el crédito, qué te dice y qué no te dice cada una, y cómo ordenar la decisión para que no dependa del olfato de quien vende.',
+    date: '26 de agosto 2026',
+    tags: ['Blog', 'Riesgo crediticio'],
     image: AssetImageBlog.blog_20_main.src,
+    faq: [
+      {
+        question: '¿Puedo consultar el historial comercial de una empresa antes de venderle?',
+        answer:
+          'Sí. Existen proveedores externos de score crediticio y reportes comerciales de empresas. En Sena nos conectamos con terceros para entregar ese servicio dentro de la operación de cobranza.',
+      },
+      {
+        question: '¿Qué hago si un cliente que ya me compra empieza a atrasarse?',
+        answer:
+          'Lo ideal es que te reúnas lo antes posible con tu cliente para evaluar qué está pasando y, de ser necesario, restringir una próxima venta a crédito.',
+      },
+      {
+        question: '¿Conviene pedir garantías o acortar el plazo?',
+        answer:
+          'Que se pidan garantías depende de la industria. Lo que sí conviene es acortar los plazos cuando un cliente no está respetando los plazos de pago acordados.',
+      },
+    ],
     content: [
       {
         type: 'paragraph',
         fragments: [
           {
             type: 'text',
-            text: 'Estar en Infocorp representa una de las mayores preocupaciones para personas y pymes que buscan acceder a créditos, financiamiento o cerrar contratos importantes. Un historial negativo puede convertirse en un obstáculo significativo, pero no es permanente. Con los pasos adecuados, es posible salir de Infocorp, limpiar tu historial crediticio y recuperar la confianza financiera. En este artículo explicaremos cómo funciona este sistema, qué acciones tomar y qué alternativas existen para evitar reincidencias.',
-          },
-        ],
-      },
-      {
-        type: 'subtitle',
-        text: '¿Qué significa estar en Infocorp y por qué afecta tu crédito?',
-      },
-      {
-        type: 'paragraph',
-        fragments: [
-          {
-            type: 'text',
-            text: 'Infocorp es una central de riesgo que opera en Perú y pertenece a Equifax. Es el nombre más conocido en ese país para referirse al registro de deudas.',
+            text: 'La cobranza comienza mucho antes del vencimiento de la factura. Comienza cuando debes decidir a quién le vendes tu producto o servicio. Es decir, la mora no se produce cuando el cliente no paga, se produce cuando le vendiste en condiciones que no debiste aprobar.',
           },
         ],
       },
@@ -1493,7 +1494,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: 'text',
-            text: 'En otros países de Latinoamérica existen sistemas similares, pero con distintos nombres:',
+            text: '¿Quién es el responsable de esta decisión? ¿O de entregar y mantener la información actualizada para poder tomarla?',
           },
         ],
       },
@@ -1502,7 +1503,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: 'text',
-            text: 'Chile → DICOM (Equifax Chile).',
+            text: 'Si tu cliente te va a pagar, no lo sabrás con certeza. Lo que sí puedes hacer es reducir la incertidumbre a través de un historial externo, tu propia data de pago y las condiciones del trato.',
           },
         ],
       },
@@ -1511,7 +1512,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: 'text',
-            text: 'Colombia → Datacrédito y TransUnion.',
+            text: 'El área de finanzas, riesgo, cobranza y comercial: todas tienen algo que ver en este proceso. Y si no está bien estructurado, termina sin un responsable claro, perjudicando la caja y el resultado de la empresa.',
           },
         ],
       },
@@ -1520,7 +1521,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: 'text',
-            text: 'México → Buró de Crédito y Círculo de Crédito.',
+            text: 'El DSO promedio en B2B es de 50 a 60 días (PwC Working Capital Study). Ese plazo no es el problema: el problema es lo que se suma después del vencimiento, y eso sí depende de decisiones que tomaste antes de vender.',
           },
         ],
       },
@@ -1529,28 +1530,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: 'text',
-            text: 'Argentina → Veraz (Equifax Argentina).',
-          },
-        ],
-      },
-      {
-        type: 'subtitle',
-        text: `Entonces, cuando hablamos de "Infocorp" nos referimos específicamente al contexto peruano.`,
-      },
-      {
-        type: 'paragraph',
-        fragments: [
-          {
-            type: 'text',
-            text: 'Estar en Infocorp no siempre implica que seas un mal pagador, pero sí indica que existe información financiera relevante sobre ti o tu empresa. Infocorp, gestionado en Perú por ',
-          },
-          {
-            type: 'bold',
-            text: 'Equifax',
-          },
-          {
-            type: 'text',
-            text: ', es una central de riesgo que recopila datos de deudas vencidas y obligaciones financieras de personas y compañías.',
+            text: 'Cobrar bien empieza en la decisión de vender. Eso requiere que las empresas tengan datos pero, por sobre todo, información valiosa que las ayude a decidir. Luego esa información debe estar disponible en el momento en que se define si se le da crédito o no a un cliente.',
           },
         ],
       },
@@ -1559,308 +1539,35 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: 'text',
-            text: 'Cuando apareces en este registro, tu reputación crediticia se ve comprometida. Para los bancos, proveedores o inversionistas, tu nombre en Infocorp puede ser interpretado como una alerta de riesgo. Esto puede traducirse en dificultades para obtener préstamos, líneas de crédito, leasing u otros productos financieros.',
+            text: 'El área comercial tiene incentivos para vender, y hay que cuidar que esos incentivos estén alineados con los riesgos y la tolerancia definidos por el área financiera.',
           },
         ],
       },
       {
         type: 'paragraph',
-        fragments: [
-          {
-            type: 'text',
-            text: 'Además, muchas empresas B2B también consultan Infocorp antes de cerrar contratos. Si tienes una pyme y estás reportado, el acceso a nuevos clientes o socios podría verse afectado.',
-          },
-        ],
-      },
-      {
-        type: 'subtitle',
-        text: 'Cómo saber si tienes deuda en Infocorp',
-      },
-      {
-        type: 'paragraph',
-        fragments: [
-          {
-            type: 'text',
-            text: 'El primer paso para mejorar tu situación es ',
-          },
-          {
-            type: 'bold',
-            text: 'verificar si realmente tienes deudas registradas',
-          },
-          {
-            type: 'text',
-            text: '. Mucha gente ni siquiera sabe que está reportada hasta que un banco le niega un préstamo.',
-          },
-        ],
-      },
-      {
-        type: 'paragraph',
-        fragments: [
-          {
-            type: 'text',
-            text: 'Para consultar tu estado en Infocorp:',
-          },
-        ],
-      },
-      {
-        type: 'paragraph',
-        fragments: [
-          {
-            type: 'text',
-            text: '1. ',
-          },
-          {
-            type: 'bold',
-            text: 'Solicita tu reporte online en Equifax',
-          },
-          {
-            type: 'text',
-            text: ': la plataforma ofrece versiones gratuitas y de pago con más detalle.',
-          },
-        ],
-      },
-      {
-        type: 'paragraph',
-        fragments: [
-          {
-            type: 'text',
-            text: '2. ',
-          },
-          {
-            type: 'bold',
-            text: 'Consulta en la SBS (Superintendencia de Banca, Seguros y AFP)',
-          },
-          {
-            type: 'text',
-            text: ': permite acceder a tu reporte crediticio consolidado.',
-          },
-        ],
-      },
-      {
-        type: 'paragraph',
-        fragments: [
-          {
-            type: 'text',
-            text: '3. ',
-          },
-          {
-            type: 'bold',
-            text: 'Usa plataformas autorizadas',
-          },
-          {
-            type: 'text',
-            text: ': existen servicios digitales que ofrecen reportes integrados de deudas y pagos atrasados.',
-          },
-        ],
-      },
-      {
-        type: 'paragraph',
-        fragments: [
-          {
-            type: 'text',
-            text: 'Saber ',
-          },
-          {
-            type: 'bold',
-            text: 'cómo identificar si tienes deuda en Infocorp',
-          },
-          {
-            type: 'text',
-            text: ' es clave, porque solo con esa información podrás planear una estrategia de salida.',
-          },
-        ],
-      },
-      {
-        type: 'subtitle',
-        text: 'Pasos prácticos para salir de Infocorp',
-      },
-      {
-        type: 'paragraph',
-        fragments: [
-          {
-            type: 'text',
-            text: 'Salir de Infocorp no ocurre de la noche a la mañana, pero con un plan ordenado sí es totalmente alcanzable.',
-          },
-        ],
-      },
-      {
-        type: 'paragraph',
-        fragments: [
-          {
-            type: 'text',
-            text: '1. ',
-          },
-          {
-            type: 'bold',
-            text: 'Identifica las deudas vigentes',
-          },
-          {
-            type: 'text',
-            text: ': revisa cada obligación y define cuáles están vencidas.',
-          },
-        ],
-      },
-      {
-        type: 'paragraph',
-        fragments: [
-          {
-            type: 'text',
-            text: '2. ',
-          },
-          {
-            type: 'bold',
-            text: 'Negocia o paga la deuda',
-          },
-          {
-            type: 'text',
-            text: ': si puedes pagar, hazlo lo antes posible. Si no, acércate al acreedor para refinanciar o reestructurar.',
-          },
-        ],
-      },
-      {
-        type: 'paragraph',
-        fragments: [
-          {
-            type: 'text',
-            text: '3. ',
-          },
-          {
-            type: 'bold',
-            text: 'Solicita constancia de pago',
-          },
-          {
-            type: 'text',
-            text: ': cada vez que liquides una deuda, pide un documento que lo respalde.',
-          },
-        ],
-      },
-      {
-        type: 'paragraph',
-        fragments: [
-          {
-            type: 'text',
-            text: '4. ',
-          },
-          {
-            type: 'bold',
-            text: 'Haz seguimiento a la actualización',
-          },
-          {
-            type: 'text',
-            text: ': las entidades actualizan sus reportes periódicamente, pero conviene confirmar que tu historial quede limpio.',
-          },
-        ],
-      },
-      {
-        type: 'paragraph',
-        fragments: [
-          {
-            type: 'text',
-            text: '5. ',
-          },
-          {
-            type: 'bold',
-            text: 'Mantén comunicación constante',
-          },
-          {
-            type: 'text',
-            text: ': si hay errores o deudas ya canceladas que siguen apareciendo, reclama directamente a Infocorp o a la SBS.',
-          },
-        ],
-      },
-      {
-        type: 'subtitle',
-        text: 'Estrategias para limpiar tu historial crediticio',
-      },
-      {
-        type: 'paragraph',
-        fragments: [
-          {
-            type: 'text',
-            text: 'La paciencia es importante, pero también existen ',
-          },
-          {
-            type: 'bold',
-            text: 'acciones que aceleran el proceso',
-          },
-          {
-            type: 'text',
-            text: ':',
-          },
-        ],
-      },
-      {
-        type: 'list',
-        items: [
-          'Presentar la constancia de pago directamente en Infocorp para que el registro se actualice con mayor rapidez.',
-          'Solicitar a la entidad financiera que comunique el levantamiento de la deuda en el menor plazo posible.',
-          'Revisar periódicamente tu historial crediticio para confirmar que la información sea correcta.',
-        ],
-      },
-      {
-        type: 'paragraph',
-        fragments: [
-          {
-            type: 'text',
-            text: 'Además, no olvides que tu historial no solo se compone de deudas impagas: tener servicios o créditos en curso que pagues puntualmente ayuda a mejorar tu score y a demostrar que eres un cliente confiable.',
-          },
-        ],
-      },
-      {
-        type: 'subtitle',
-        text: 'Cómo evitar volver a caer en Infocorp',
-      },
-      {
-        type: 'paragraph',
-        fragments: [
-          {
-            type: 'text',
-            text: 'Salir de Infocorp es un alivio, pero nadie quiere repetir la experiencia. Para mantener tu historial limpio, tanto a nivel personal como empresarial, conviene adoptar ciertas prácticas:',
-          },
-        ],
+        fragments: [{ type: 'text', text: 'La mayoría de las empresas cuentan con la siguiente data:' }],
       },
       {
         type: 'list',
         items: [
           [
-            {
-              type: 'bold',
-              text: 'Llevar un control de tus obligaciones',
-            },
+            { type: 'bold', text: 'Historial externo: ' },
             {
               type: 'text',
-              text: ': usa un calendario o recordatorios automáticos.',
+              text: 'existen diversas herramientas que sirven de termómetro para evaluar qué tan buen pagador puede ser un cliente. Es lo que se conoce como score crediticio.',
             },
           ],
           [
-            {
-              type: 'bold',
-              text: 'Separar las finanzas personales de las del negocio',
-            },
-            {
-              type: 'text',
-              text: ': mezclar cuentas suele generar desorden.',
-            },
+            { type: 'bold', text: 'Tu propia data de pago: ' },
+            { type: 'text', text: 'todo el historial que ya tienes con ese cliente.' },
           ],
           [
-            {
-              type: 'bold',
-              text: 'No depender del Excel y WhatsApp',
-            },
-            {
-              type: 'text',
-              text: ': si manejas una pyme, estos métodos se vuelven insuficientes con el tiempo.',
-            },
+            { type: 'bold', text: 'Antigüedad de la relación: ' },
+            { type: 'text', text: 'si es una relación construida y estable, o algo de corto plazo.' },
           ],
           [
-            {
-              type: 'bold',
-              text: 'Implementar un sistema de cobranza profesional:',
-            },
-            {
-              type: 'text',
-              text: ' evita retrasos y falta de liquidez en tu empresa.',
-            },
+            { type: 'bold', text: 'Concentración: ' },
+            { type: 'text', text: 'qué tan relevante es ese cliente para tu cartera.' },
           ],
         ],
       },
@@ -1869,61 +1576,17 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: 'text',
-            text: 'Aquí es donde soluciones como ',
-          },
-          {
-            type: 'link',
-            text: 'Sena',
-            href: 'https://meetings.hubspot.com/francisco502',
-          },
-          {
-            type: 'text',
-            text: ' marcan la diferencia. Esta plataforma SaaS permite:',
+            text: 'Ninguna de esas señales dice si va a pagar. Reducen el riesgo, pero no lo eliminan. Tampoco son muy útiles por separado, sobre todo cuando un ejecutivo comercial debe tomar una decisión en una visita a terreno: tiene al cliente en frente y está esperando una respuesta.',
           },
         ],
       },
-      {
-        type: 'list',
-        items: [
-          'Automatizar recordatorios de cobro y pagos.',
-          'Centralizar comunicaciones en un solo dashboard.',
-          'Monitorear indicadores como DSO o antigüedad de cartera en tiempo real.',
-          'Reducir la carga operativa del equipo financiero con flujos inteligentes.',
-        ],
-      },
+      { type: 'title', text: 'Cómo ordenar la decisión de crédito' },
       {
         type: 'paragraph',
         fragments: [
           {
             type: 'text',
-            text: 'El resultado es simple: más liquidez, menos morosidad y menor riesgo de volver a ser reportado en Infocorp.',
-          },
-        ],
-      },
-      {
-        type: 'subtitle',
-        text: 'Caso práctico: una pyme que salió de Infocorp',
-      },
-      {
-        type: 'paragraph',
-        fragments: [
-          {
-            type: 'text',
-            text: 'Imagina una empresa de servicios logísticos con más de 300 facturas al mes. Durante años manejó la cobranza con hojas de Excel y mensajes por WhatsApp. Poco a poco, la falta de control la llevó a acumular clientes morosos y deudas propias, hasta terminar en Infocorp.',
-          },
-        ],
-      },
-      {
-        type: 'paragraph',
-        fragments: [
-          {
-            type: 'link',
-            text: 'Al implementar Sena',
-            href: '',
-          },
-          {
-            type: 'text',
-            text: ', logró:',
+            text: 'Para evitar que esta decisión dependa del olfato del encargado comercial en terreno, las empresas deberían considerar estos tres elementos:',
           },
         ],
       },
@@ -1931,63 +1594,35 @@ export const blogPosts: BlogPost[] = [
         type: 'list',
         items: [
           [
+            { type: 'bold', text: 'Criterio escrito: ' },
             {
               type: 'text',
-              text: 'Reducir en un 33% el ',
-            },
-            {
-              type: 'bold',
-              text: 'DSO (Days Sales Outstanding)',
-            },
-            {
-              type: 'text',
-              text: '.',
+              text: 'debe haber un proceso de otorgamiento de crédito establecido por el área financiera. Ese documento define las reglas, los períodos de revisión, las excepciones y los responsables.',
             },
           ],
-          'Recuperar flujo de caja perdido con recordatorios automáticos y segmentados.',
-          'Evitar que nuevas facturas se atrasaran gracias a notificaciones preventivas.',
+          [
+            { type: 'bold', text: 'Tramos de crédito: ' },
+            {
+              type: 'text',
+              text: 'dentro del mismo proceso debe estar la regla de tramos, que dependerá de la industria, el tamaño de la empresa y el modelo de negocio. Lo esperable es que mientras más nueva sea la relación comercial, menor sea el otorgamiento de crédito. Se pueden establecer excepciones, por ejemplo si se trata de una gran empresa o de algún criterio excepcional.',
+            },
+          ],
+          [
+            { type: 'bold', text: 'Matriz RACI: ' },
+            {
+              type: 'text',
+              text: 'responsable, aprobador, consultado e informado. Independiente de la versión que uses, lo relevante es tener claro quién cuida la regla, quién ejecuta el otorgamiento y a quién se le puede pedir una evaluación particular. Parte importante del proceso es saber quiénes interactúan cuando se requiere una revisión o una aprobación.',
+            },
+          ],
         ],
       },
+      { type: 'title', text: '¿Qué pasa cuando vendes a crédito sin revisar?' },
       {
         type: 'paragraph',
         fragments: [
           {
             type: 'text',
-            text: 'En menos de seis meses, la pyme salió de Infocorp y recuperó su capacidad de financiamiento.',
-          },
-        ],
-      },
-      {
-        type: 'subtitle',
-        text: 'Recursos útiles para consultar y mantener tu historial limpio',
-      },
-      {
-        type: 'list',
-        items: [
-          'Superintendencia de Banca, Seguros y AFP (SBS) - Perú',
-          'Infocorp Equifax',
-          'Recuperación de créditos MYPE - Ministerio de Producción',
-        ],
-      },
-      {
-        type: 'paragraph',
-        fragments: [
-          {
-            type: 'text',
-            text: 'Estos portales ofrecen información oficial para revisar tu historial y conocer programas de apoyo financiero.',
-          },
-        ],
-      },
-      {
-        type: 'subtitle',
-        text: 'Reflexión final',
-      },
-      {
-        type: 'paragraph',
-        fragments: [
-          {
-            type: 'text',
-            text: 'Estar en Infocorp no es el fin del mundo, pero sí una señal de alerta. Salir requiere disciplina y acción: consulta tu estado, negocia tus deudas, solicita constancias y mantén un seguimiento constante.',
+            text: 'Uno de los casos más habituales en que nuestros clientes solicitan score crediticio es la venta directa. Han tenido casos de estafa, mal comportamiento de pago e incertidumbre con la entrega de crédito. Se caracterizan por ser empresas con gran cantidad de clientes, donde es difícil hacer una revisión completa sin las herramientas digitales adecuadas.',
           },
         ],
       },
@@ -1996,7 +1631,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: 'text',
-            text: 'Lo más importante, sin embargo, es prevenir. Con una gestión financiera ordenada y herramientas profesionales como Sena, no solo puedes limpiar tu historial, sino también evitar volver a caer.',
+            text: 'En Sena facilitamos la conexión a esas herramientas y, además, entregamos un panel de control con el estado actual de tus ventas y facturas, que te permite actuar a tiempo.',
           },
         ],
       },
@@ -2005,12 +1640,7 @@ export const blogPosts: BlogPost[] = [
         fragments: [
           {
             type: 'text',
-            text: '¿Quieres que tu pyme crezca sin preocuparse por la morosidad? ',
-          },
-          {
-            type: 'link',
-            text: 'Descubre cómo Sena puede ayudarte.',
-            href: 'https://meetings.hubspot.com/francisco502',
+            text: 'Contáctanos o agenda una demo: revisamos tu industria y los desafíos de tu cobranza, y definimos contigo el mejor sistema para tus facturas impagas.',
           },
         ],
       },

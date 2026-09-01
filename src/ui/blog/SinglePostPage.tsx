@@ -170,6 +170,21 @@ export const SinglePostPage = ({ post }: { post: BlogPost }) => {
           {post.content.map((block, index) => renderContentBlock(block, index))}
         </div>
 
+        {/* Preguntas frecuentes — misma fuente que el JSON-LD FAQPage de la página */}
+        {post.faq && post.faq.length > 0 && (
+          <div className="max-w-[900px] mx-auto mt-16 text-[17px] leading-relaxed text-text-primary">
+            <h2 className="text-3xl font-bold text-brand-primary mt-8 mb-4">Preguntas frecuentes</h2>
+            <dl className="space-y-6">
+              {post.faq.map((item, idx) => (
+                <div key={idx}>
+                  <dt className="font-semibold text-brand-primary-dark mb-1">{item.question}</dt>
+                  <dd className="m-0">{item.answer}</dd>
+                </div>
+              ))}
+            </dl>
+          </div>
+        )}
+
         {/* Call to action */}
         <div className="max-w-[900px] mx-auto mt-24 bg-surface-secondary border border-border-default rounded-2xl p-8 text-center shadow-sm">
           <h3 className="text-brand-primary text-2xl font-bold mb-2">
