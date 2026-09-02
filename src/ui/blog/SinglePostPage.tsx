@@ -35,6 +35,19 @@ const renderContentBlock = (block: any, index: number) => {
               return <strong key={i}>{frag.text}</strong>
             }
             if (frag.type === 'link') {
+              // Los enlaces internos no abren pestaña nueva: son navegación del sitio,
+              // y así el enlace entre artículos se comporta como tal.
+              if (frag.href?.startsWith('/')) {
+                return (
+                  <Link
+                    key={i}
+                    href={frag.href}
+                    className="text-brand-primary underline hover:text-brand-primary-dark"
+                  >
+                    {frag.text}
+                  </Link>
+                )
+              }
               return (
                 <a
                   key={i}
@@ -76,6 +89,13 @@ const renderContentBlock = (block: any, index: number) => {
                     return <strong key={j}>{frag.text}</strong>
                   }
                   if (frag.type === 'link') {
+                    if (frag.href?.startsWith('/')) {
+                      return (
+                        <Link key={j} href={frag.href} className="text-brand-primary underline">
+                          {frag.text}
+                        </Link>
+                      )
+                    }
                     return (
                       <a
                         key={j}
@@ -169,6 +189,21 @@ export const SinglePostPage = ({ post }: { post: BlogPost }) => {
         <div className="max-w-[900px] mx-auto text-[17px] leading-relaxed text-text-primary space-y-6">
           {post.content.map((block, index) => renderContentBlock(block, index))}
         </div>
+
+        {/* Preguntas frecuentes — misma fuente que el JSON-LD FAQPage de la página */}
+        {post.faq && post.faq.length > 0 && (
+          <div className="max-w-[900px] mx-auto mt-16 text-[17px] leading-relaxed text-text-primary">
+            <h2 className="text-3xl font-bold text-brand-primary mt-8 mb-4">Preguntas frecuentes</h2>
+            <dl className="space-y-6">
+              {post.faq.map((item, idx) => (
+                <div key={idx}>
+                  <dt className="font-semibold text-brand-primary-dark mb-1">{item.question}</dt>
+                  <dd className="m-0">{item.answer}</dd>
+                </div>
+              ))}
+            </dl>
+          </div>
+        )}
 
         {/* Call to action */}
         <div className="max-w-[900px] mx-auto mt-24 bg-surface-secondary border border-border-default rounded-2xl p-8 text-center shadow-sm">

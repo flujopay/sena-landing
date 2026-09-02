@@ -31,6 +31,11 @@ const PRODUCT_LIST_ID: Record<'Plataforma' | 'Recupera' | 'Opera', string> = {
   Opera: '364',
 }
 
+// Opciones válidas del enum `fuente_del_lead` en HubSpot. Mandar cualquier otro
+// valor devuelve 400 INVALID_OPTION y tumba el lead completo.
+const FUENTE_ADS = 'Ads'
+const FUENTE_ORGANICO = 'Orgánico'
+
 // utm_source → valor del enum origen en HubSpot
 function mapOrigen(utmSource?: string, gclid?: string, fbclid?: string): string {
   if (gclid) return 'Google'
@@ -40,6 +45,13 @@ function mapOrigen(utmSource?: string, gclid?: string, fbclid?: string): string 
   if (src === 'facebook' || src === 'meta' || src === 'fb') return 'Meta'
   if (src === 'linkedin') return 'LinkedIn'
   return 'Orgánico'
+}
+
+// Todo tráfico pagado (Google Ads, Meta Ads) cae en 'Ads' — el enum de HubSpot no
+// distingue plataforma. El detalle de la plataforma vive en `origen` y `gclid`/`fbclid`.
+export function mapFuente(utmSource?: string, gclid?: string, fbclid?: string): string {
+  if (gclid || fbclid || utmSource) return FUENTE_ADS
+  return FUENTE_ORGANICO
 }
 
 // Scoring A/B/C basado en tamaño de cartera + urgencia de cobro
@@ -90,11 +102,60 @@ async function findContactByEmail(token: string, email: string): Promise<string 
   return data.total > 0 ? data.results[0].id : null
 }
 
+// Propiedades de clasificación: útiles para reporting, pero nunca deben costar el lead.
+// Si HubSpot rechaza alguna por INVALID_OPTION, se reintenta sin ellas — los datos de
+// contacto (nombre, email, teléfono, empresa) sí se guardan.
+const CLASSIFICATION_PROPS = [
+  'origen',
+  'fuente_del_lead',
+  'interes_del_producto',
+  'tipo_de_origen',
+  'etapa_del_lead',
+  'sena_prioridad',
+  'sena_intencion',
+  'facturas_pendientes',
+  'alguien_cobrando',
+]
+
+async function writeContact(
+  token: string,
+  method: 'POST' | 'PATCH',
+  path: string,
+  properties: Record<string, string>
+): Promise<Response> {
+  const send = (props: Record<string, string>) =>
+    fetch(`${HS_API}${path}`, {
+      method,
+      headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
+      body: JSON.stringify({ properties: props }),
+    })
+
+  const res = await send(properties)
+  if (res.ok) return res
+
+  const err = await res
+    .clone()
+    .json()
+    .catch(() => ({}))
+  const invalidOption = (err as { errors?: { code?: string }[] }).errors?.some(
+    (e) => e.code === 'INVALID_OPTION'
+  )
+  if (!invalidOption) return res
+
+  const safe = Object.fromEntries(
+    Object.entries(properties).filter(([key]) => !CLASSIFICATION_PROPS.includes(key))
+  )
+  console.error(
+    `[HubSpot] INVALID_OPTION, reintentando sin propiedades de clasificación: ${JSON.stringify(err)}`
+  )
+  return send(safe)
+}
+
 async function upsertContact(token: string, body: LeadPayload): Promise<string> {
   const producto = body.producto ?? 'Plataforma'
   const prioridad = calcPrioridad(body.facturas_pendientes, body.alguien_cobrando)
   const origen = mapOrigen(body.utmSource, body.gclid, body.fbclid)
-  const fuente = body.gclid ? 'Google Ads' : body.fbclid ? 'Meta Ads' : body.utmSource ? 'Ads' : 'Orgánico'
+  const fuente = mapFuente(body.utmSource, body.gclid, body.fbclid)
 
   const properties: Record<string, string> = {
     firstname: body.nombre,
@@ -124,11 +185,7 @@ async function upsertContact(token: string, body: LeadPayload): Promise<string> 
   const existingId = await findContactByEmail(token, body.email)
 
   if (existingId) {
-    const res = await fetch(`${HS_API}/crm/v3/objects/contacts/${existingId}`, {
-      method: 'PATCH',
-      headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
-      body: JSON.stringify({ properties }),
-    })
+    const res = await writeContact(token, 'PATCH', `/crm/v3/objects/contacts/${existingId}`, properties)
     if (!res.ok) {
       const err = await res.json().catch(() => ({}))
       throw new Error(`PATCH contact failed: ${JSON.stringify(err)}`)
@@ -136,11 +193,7 @@ async function upsertContact(token: string, body: LeadPayload): Promise<string> 
     return existingId
   }
 
-  const res = await fetch(`${HS_API}/crm/v3/objects/contacts`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
-    body: JSON.stringify({ properties }),
-  })
+  const res = await writeContact(token, 'POST', '/crm/v3/objects/contacts', properties)
   if (!res.ok) {
     const err = await res.json().catch(() => ({}))
     throw new Error(`POST contact failed: ${JSON.stringify(err)}`)

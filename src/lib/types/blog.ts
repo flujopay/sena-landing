@@ -13,6 +13,11 @@ export type BlogContentBlock =
   | { type: 'list'; items: ListItem[] }
   | { type: 'image'; link: string }
 
+export interface BlogFaqItem {
+  question: string
+  answer: string
+}
+
 export interface BlogPost {
   id: number
   slug: string
@@ -22,5 +27,11 @@ export interface BlogPost {
   // author: string;
   tags: string[]
   image: string
+  /**
+   * Preguntas frecuentes del post. Fuente única: de acá salen tanto el bloque
+   * visible al final del artículo como el JSON-LD `FAQPage` que permite que los
+   * motores de respuesta extraigan y citen las respuestas. No duplicar en `content`.
+   */
+  faq?: BlogFaqItem[]
   content: BlogContentBlock[]
 }

@@ -6,7 +6,6 @@ User-agent: *
 Allow: /
 
 Sitemap: https://somossena.com/sitemap.xml
-LLMs: https://somossena.com/llms.txt
   `.trim()
 
   return new NextResponse(content, {
